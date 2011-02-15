@@ -1,4 +1,4 @@
-import sys, os, struct, mmap, datetime, re, glob
+import sys, os, struct, mmap, datetime, re, glob, optparse
 
 X,Y,Z,T=1,2,3,0
 
@@ -316,9 +316,9 @@ class ILDGPropField:
         if self.precision=='f': site_size=1152
         else: site_size=2304
         spinor_format=self.precision*(12*2) # 2 for complex
-        spinor_format='<'+self.precision_target*(12*2) # 2 for complex
+        spinor_format_out='<'+self.precision_target*(12*2) # 2 for complex
         if self.precision=='f': spinor_size=12*8
-        else: spinor_size=9*16
+        else: spinor_size=12*16
         nx=self.lattice_size[X]
         ny=self.lattice_size[Y]
         nz=self.lattice_size[Z]
@@ -330,15 +330,14 @@ class ILDGPropField:
         oheader=struct.pack(oheader_format,'File Type: MDP FIELD',
                             filename,datetime.datetime.now().isoformat(),
                             1325884739,4,1,nx,ny,nz,0,0,0,0,0,0,
-                            site_size,1*nx*ny*nz)
+                            spinor_size,1*nx*ny*nz)
         ooffset=struct.calcsize(oheader_format)
         offset=self.offset
         site=[0,0,0,0]        
         ifile.seek(offset)
         for p0 in range(n0):
-            ofile=open(filename+'%t%i' % p0,'wb')
+            ofile=open(filename[-4:]+'t%.4i.mdp' % p0,'wb')
             ofile.write(oheader)        
-
             print 'timeslice',p0,'...'
             for p1 in range(n1):
                 for p2 in range(n2):
@@ -348,14 +347,10 @@ class ILDGPropField:
                         p[self.site_order[1]]=p1 #Z
                         p[self.site_order[2]]=p2 #Y
                         p[self.site_order[3]]=p3 #X
-                        ofile.seek(ooffset+site_size*(p[Z]+nz*(p[Y]+ny*(p[X]))))
-                        for mu in self.link_order:
-                             site[mu]=struct.unpack(self.endianess+link_format,
-                                                    ifile.read(link_size))
-                        for mu in [T,X,Y,Z]:
-                            ofile.write(struct.pack(link_format_out,*site[mu])) # this needs to be fixed!!!
-                            for i,r in enumerate(site[mu]):
-                                if abs(r)>1: raise SyntaxError, "Invalid Format"
+                        data=struct.unpack(self.endianess+spinor_format,
+                                           ifile.read(spinor_size))
+                        ofile.seek(ooffset+spinor_size*(p[Z]+nz*(p[Y]+ny*(p[X]))))
+                        ofile.write(struct.pack(spinor_format_out,*data))
         print 'done'
 
 
@@ -551,30 +546,41 @@ class Nersc3x2Field:
                             ofile.write(struct.pack(link_format,*site[mu]))
                             if mu==T and p0+p1+p2+p3==0: print site[mu]
 
-def universal_converter(path, local=True):
-    files=[f for f in glob.glob(path) if not f[-4:]=='.mdp']
-    print ', '.join(files)
+def universal_converter(path, formats):
+    files=[f for f in glob.glob(path) if not f[-4:]=='.mdp']    
+    if not files: raise RuntimeError, "no files to be converted"
+    done=False
     for file in files:
-        print 'converting '+file
-        for format in [MilcField,
-                       ILDGField,
-                       ILDGField,
-                       QioField,
-                       Nersc3x3Field,
-                       Nersc3x2Field
-                       ]:
+        print 'trying to convert '+file
+        for format in formats:
             try:
-                done=False
-                if local:
-                    ofile=file[file.rfind('/')+1:]+'.mdp'
-                else:
-                    ofile=file+'.mdp'
+                ofile=file+'.mdp'
                 format(open(file,'rb')).convert(ofile)
                 done=True
                 break
             except Exception, e:
                 print e
-        if not done: print 'ERROR... skipping!'
+        if not done:
+            print 'ERROR... skipping!'
+    if not done: raise RuntimeError, "failure to convert "+file
 
-if __name__=='__main__':
-    universal_converter(sys.argv[1])
+formats = (
+    ('gauge-milc',MilcField),
+    ('gauge-qio',MilcField),
+    ('gauge-lime',ILDGField),
+    ('gauge-ildg',ILDGField),
+    ('gauge-nersc3x3',Nersc3x3Field),
+    ('gauge-nersc3x2',Nersc3x2Field),
+    ('prop-ildg',ILDGPropField),
+    )
+
+def main():
+    usage = "usage: %prog [options] path"
+    parser = optparse.OptionParser(usage=usage)
+    parser.add_option("-f", "--format", dest="format", default="ALL",
+                      help="any of the supported formats (%s)" % ','.join(f[0] for f in formats))
+    (options, args) = parser.parse_args()
+    fomats = [f[1] for f in formats if options.format in ('ALL',f[0])]
+    universal_converter(args[0],formats)
+
+if __name__=='__main__': main()
