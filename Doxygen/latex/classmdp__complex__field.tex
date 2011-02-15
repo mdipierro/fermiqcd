@@ -1,0 +1,203 @@
+\hypertarget{classmdp__complex__field}{
+\section{mdp\_\-complex\_\-field Class Reference}
+\label{classmdp__complex__field}\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}}
+}
+
+
+field of complex numbers or vectors of complex numbers  
+
+
+{\ttfamily \#include $<$mdp\_\-complex\_\-field.h$>$}Inheritance diagram for mdp\_\-complex\_\-field::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.37931cm]{classmdp__complex__field}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmdp__complex__field_aa629a99588ce79fe33fafb6db4f8226a}{mdp\_\-complex\_\-field} ()
+\item 
+\hyperlink{classmdp__complex__field_a26b3b0f65609dd18e7438329ff651fd1}{mdp\_\-complex\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&lattice, int n=1)
+\item 
+\hyperlink{classmdp__complex__field_a68da5a2521de552a614831c39a14930a}{mdp\_\-complex\_\-field} (const \hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&other)
+\item 
+void \hyperlink{classmdp__complex__field_ad2b736ae31e3ee1f955c10f6ad40928f}{operator=} (const \hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&psi)
+\item 
+void \hyperlink{classmdp__complex__field_a530256e46fe46c7422cbba8381891636}{operator$\ast$=} (const \hyperlink{classmdp__complex}{mdp\_\-complex} alpha)
+\item 
+void \hyperlink{classmdp__complex__field_ab204658a9026e7936b8725ad4f3172ef}{operator/=} (const \hyperlink{classmdp__complex}{mdp\_\-complex} alpha)
+\item 
+void \hyperlink{classmdp__complex__field_af890e25006822910f411ce10ba7dfc7a}{operator$\ast$=} (const \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} alpha)
+\item 
+void \hyperlink{classmdp__complex__field_a0d2bffa4819135c1ef77c0c9fb22504e}{operator/=} (const \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} alpha)
+\item 
+void \hyperlink{classmdp__complex__field_a2278eac1ee19b8ca1c3c6b7319f6525d}{operator+=} (\hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&psi)
+\item 
+void \hyperlink{classmdp__complex__field_a0385e35ddfd532f15e817dcac1adf212}{operator-\/=} (\hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&psi)
+\item 
+bool \hyperlink{classmdp__complex__field_a27b6db7d432105f65b42c970ea340482}{save\_\-as\_\-float} (string filename, int processIO=0, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} max\_\-buffer\_\-size=1024, bool load\_\-header=true, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} skip\_\-bytes=0)
+\item 
+bool \hyperlink{classmdp__complex__field_a41ca79e9686143c660588426dc71dd0b}{load\_\-as\_\-float} (string filename, int processIO=0, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} max\_\-buffer\_\-size=1024, bool load\_\-header=true, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} skip\_\-bytes=0)
+\item 
+bool \hyperlink{classmdp__complex__field_ae7c4fe41d81ce71b9d1527b15916391f}{load\_\-as\_\-double} (string filename, int processIO=0, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} max\_\-buffer\_\-size=1024, bool load\_\-header=true, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} skip\_\-bytes=0)
+\item 
+bool \hyperlink{classmdp__complex__field_aa6357291a82fe4209f7b3a7ecce3ca78}{save\_\-as\_\-double} (string filename, int processIO=0, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} max\_\-buffer\_\-size=1024, bool load\_\-header=true, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} skip\_\-bytes=0)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{classmdp__complex__field_a81ccdc6212b7084b9fe17249438abe6e}{norm\_\-square} (\hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&psi, int parity=\hyperlink{mdp__global__vars_8h_a4c9de81f2de5a74b588107b6c0afb9ee}{EVENODD})
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \hyperlink{classmdp__complex__field_a7a6ea38341405f2cc4e771b33b4ea38f}{scalar\_\-product} (\hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&psi, \hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&chi, int parity=\hyperlink{mdp__global__vars_8h_a4c9de81f2de5a74b588107b6c0afb9ee}{EVENODD})
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{classmdp__complex__field_a0d9771f5d1f057270e5568519a796a0c}{real\_\-scalar\_\-product} (\hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&psi, \hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&chi, int parity=\hyperlink{mdp__global__vars_8h_a4c9de81f2de5a74b588107b6c0afb9ee}{EVENODD})
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{classmdp__complex__field_a0671bd0b418f625c07f3ba9135e26b12}{imag\_\-scalar\_\-product} (\hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&psi, \hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&chi, int parity=\hyperlink{mdp__global__vars_8h_a4c9de81f2de5a74b588107b6c0afb9ee}{EVENODD})
+\item 
+void \hyperlink{classmdp__complex__field_adebe165924543c988d0c7e86da4b2eb3}{mdp\_\-add\_\-scaled\_\-field} (\hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&psi, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} alpha, \hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&chi, int parity=\hyperlink{mdp__global__vars_8h_a4c9de81f2de5a74b588107b6c0afb9ee}{EVENODD})
+\item 
+void \hyperlink{classmdp__complex__field_aeb331a3604fa5d1e30e726958e2cc21f}{mdp\_\-add\_\-scaled\_\-field} (\hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&psi, \hyperlink{classmdp__complex}{mdp\_\-complex} alpha, \hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&chi, int parity=\hyperlink{mdp__global__vars_8h_a4c9de81f2de5a74b588107b6c0afb9ee}{EVENODD})
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \hyperlink{classmdp__complex__field_a11f474ce79caba1227bcf83b2be3424c}{operator$\ast$} (\hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&psi, \hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&chi)
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{classmdp__complex__field_a0936375b6edd3f01728d16ac38c76c32}{relative\_\-residue} (\hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&p, \hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field} \&q, int parity=\hyperlink{mdp__global__vars_8h_a4c9de81f2de5a74b588107b6c0afb9ee}{EVENODD})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+field of complex numbers or vectors of complex numbers Example: \begin{DoxyVerb}
+///    int box[]={10,10,10};
+///    mdp_lattice lattice(3,box);
+///    mdp_complex_field psi(lattice,10);
+///    mdp_site x(lattice);
+///    forallsites(x)
+///      for(int i=0; i<10; i++)
+///         psi(x,i)=0.0+0.0*I;
+/// \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmdp__complex__field_aa629a99588ce79fe33fafb6db4f8226a}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}}
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{mdp\_\-complex\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-complex\_\-field::mdp\_\-complex\_\-field ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_aa629a99588ce79fe33fafb6db4f8226a}
+\hypertarget{classmdp__complex__field_a26b3b0f65609dd18e7438329ff651fd1}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}}
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{mdp\_\-complex\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-complex\_\-field::mdp\_\-complex\_\-field ({\bf mdp\_\-lattice} \& {\em lattice}, \/  int {\em n} = {\ttfamily 1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_a26b3b0f65609dd18e7438329ff651fd1}
+\hypertarget{classmdp__complex__field_a68da5a2521de552a614831c39a14930a}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}}
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{mdp\_\-complex\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-complex\_\-field::mdp\_\-complex\_\-field (const {\bf mdp\_\-complex\_\-field} \& {\em other})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_a68da5a2521de552a614831c39a14930a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__complex__field_ae7c4fe41d81ce71b9d1527b15916391f}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!load\_\-as\_\-double@{load\_\-as\_\-double}}
+\index{load\_\-as\_\-double@{load\_\-as\_\-double}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{load\_\-as\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}bool mdp\_\-complex\_\-field::load\_\-as\_\-double (string {\em filename}, \/  int {\em processIO} = {\ttfamily 0}, \/  {\bf mdp\_\-int} {\em max\_\-buffer\_\-size} = {\ttfamily 1024}, \/  bool {\em load\_\-header} = {\ttfamily true}, \/  {\bf mdp\_\-int} {\em skip\_\-bytes} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_ae7c4fe41d81ce71b9d1527b15916391f}
+\hypertarget{classmdp__complex__field_a41ca79e9686143c660588426dc71dd0b}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!load\_\-as\_\-float@{load\_\-as\_\-float}}
+\index{load\_\-as\_\-float@{load\_\-as\_\-float}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{load\_\-as\_\-float}]{\setlength{\rightskip}{0pt plus 5cm}bool mdp\_\-complex\_\-field::load\_\-as\_\-float (string {\em filename}, \/  int {\em processIO} = {\ttfamily 0}, \/  {\bf mdp\_\-int} {\em max\_\-buffer\_\-size} = {\ttfamily 1024}, \/  bool {\em load\_\-header} = {\ttfamily true}, \/  {\bf mdp\_\-int} {\em skip\_\-bytes} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_a41ca79e9686143c660588426dc71dd0b}
+\hypertarget{classmdp__complex__field_af890e25006822910f411ce10ba7dfc7a}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-complex\_\-field::operator$\ast$= (const {\bf mdp\_\-real} {\em alpha})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_af890e25006822910f411ce10ba7dfc7a}
+\hypertarget{classmdp__complex__field_a530256e46fe46c7422cbba8381891636}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-complex\_\-field::operator$\ast$= (const {\bf mdp\_\-complex} {\em alpha})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_a530256e46fe46c7422cbba8381891636}
+\hypertarget{classmdp__complex__field_a2278eac1ee19b8ca1c3c6b7319f6525d}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-complex\_\-field::operator+= ({\bf mdp\_\-complex\_\-field} \& {\em psi})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_a2278eac1ee19b8ca1c3c6b7319f6525d}
+\hypertarget{classmdp__complex__field_a0385e35ddfd532f15e817dcac1adf212}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-complex\_\-field::operator-\/= ({\bf mdp\_\-complex\_\-field} \& {\em psi})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_a0385e35ddfd532f15e817dcac1adf212}
+\hypertarget{classmdp__complex__field_a0d2bffa4819135c1ef77c0c9fb22504e}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-complex\_\-field::operator/= (const {\bf mdp\_\-real} {\em alpha})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_a0d2bffa4819135c1ef77c0c9fb22504e}
+\hypertarget{classmdp__complex__field_ab204658a9026e7936b8725ad4f3172ef}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-complex\_\-field::operator/= (const {\bf mdp\_\-complex} {\em alpha})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_ab204658a9026e7936b8725ad4f3172ef}
+\hypertarget{classmdp__complex__field_ad2b736ae31e3ee1f955c10f6ad40928f}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!operator=@{operator=}}
+\index{operator=@{operator=}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-complex\_\-field::operator= (const {\bf mdp\_\-complex\_\-field} \& {\em psi})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_ad2b736ae31e3ee1f955c10f6ad40928f}
+
+
+Reimplemented in \hyperlink{classfermi__field_abfaaf9b43f054fde18eaef3d80b1edf4}{fermi\_\-field}, \hyperlink{classgauge__field_a1006054965a512e4dd06ca8c0b5c5d28}{gauge\_\-field}, and \hyperlink{classstaggered__field_a5320371c9d4b87255c578e5b41684e48}{staggered\_\-field}.\hypertarget{classmdp__complex__field_aa6357291a82fe4209f7b3a7ecce3ca78}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!save\_\-as\_\-double@{save\_\-as\_\-double}}
+\index{save\_\-as\_\-double@{save\_\-as\_\-double}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{save\_\-as\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}bool mdp\_\-complex\_\-field::save\_\-as\_\-double (string {\em filename}, \/  int {\em processIO} = {\ttfamily 0}, \/  {\bf mdp\_\-int} {\em max\_\-buffer\_\-size} = {\ttfamily 1024}, \/  bool {\em load\_\-header} = {\ttfamily true}, \/  {\bf mdp\_\-int} {\em skip\_\-bytes} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_aa6357291a82fe4209f7b3a7ecce3ca78}
+\hypertarget{classmdp__complex__field_a27b6db7d432105f65b42c970ea340482}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!save\_\-as\_\-float@{save\_\-as\_\-float}}
+\index{save\_\-as\_\-float@{save\_\-as\_\-float}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{save\_\-as\_\-float}]{\setlength{\rightskip}{0pt plus 5cm}bool mdp\_\-complex\_\-field::save\_\-as\_\-float (string {\em filename}, \/  int {\em processIO} = {\ttfamily 0}, \/  {\bf mdp\_\-int} {\em max\_\-buffer\_\-size} = {\ttfamily 1024}, \/  bool {\em load\_\-header} = {\ttfamily true}, \/  {\bf mdp\_\-int} {\em skip\_\-bytes} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__complex__field_a27b6db7d432105f65b42c970ea340482}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classmdp__complex__field_a0671bd0b418f625c07f3ba9135e26b12}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!imag\_\-scalar\_\-product@{imag\_\-scalar\_\-product}}
+\index{imag\_\-scalar\_\-product@{imag\_\-scalar\_\-product}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{imag\_\-scalar\_\-product}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-real} imag\_\-scalar\_\-product ({\bf mdp\_\-complex\_\-field} \& {\em psi}, \/  {\bf mdp\_\-complex\_\-field} \& {\em chi}, \/  int {\em parity} = {\ttfamily {\bf EVENODD}})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__complex__field_a0671bd0b418f625c07f3ba9135e26b12}
+\hypertarget{classmdp__complex__field_aeb331a3604fa5d1e30e726958e2cc21f}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!mdp\_\-add\_\-scaled\_\-field@{mdp\_\-add\_\-scaled\_\-field}}
+\index{mdp\_\-add\_\-scaled\_\-field@{mdp\_\-add\_\-scaled\_\-field}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{mdp\_\-add\_\-scaled\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-add\_\-scaled\_\-field ({\bf mdp\_\-complex\_\-field} \& {\em psi}, \/  {\bf mdp\_\-complex} {\em alpha}, \/  {\bf mdp\_\-complex\_\-field} \& {\em chi}, \/  int {\em parity} = {\ttfamily {\bf EVENODD}})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__complex__field_aeb331a3604fa5d1e30e726958e2cc21f}
+\hypertarget{classmdp__complex__field_adebe165924543c988d0c7e86da4b2eb3}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!mdp\_\-add\_\-scaled\_\-field@{mdp\_\-add\_\-scaled\_\-field}}
+\index{mdp\_\-add\_\-scaled\_\-field@{mdp\_\-add\_\-scaled\_\-field}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{mdp\_\-add\_\-scaled\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-add\_\-scaled\_\-field ({\bf mdp\_\-complex\_\-field} \& {\em psi}, \/  {\bf mdp\_\-real} {\em alpha}, \/  {\bf mdp\_\-complex\_\-field} \& {\em chi}, \/  int {\em parity} = {\ttfamily {\bf EVENODD}})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__complex__field_adebe165924543c988d0c7e86da4b2eb3}
+\hypertarget{classmdp__complex__field_a81ccdc6212b7084b9fe17249438abe6e}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!norm\_\-square@{norm\_\-square}}
+\index{norm\_\-square@{norm\_\-square}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{norm\_\-square}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-real} norm\_\-square ({\bf mdp\_\-complex\_\-field} \& {\em psi}, \/  int {\em parity} = {\ttfamily {\bf EVENODD}})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__complex__field_a81ccdc6212b7084b9fe17249438abe6e}
+\hypertarget{classmdp__complex__field_a11f474ce79caba1227bcf83b2be3424c}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex} operator$\ast$ ({\bf mdp\_\-complex\_\-field} \& {\em psi}, \/  {\bf mdp\_\-complex\_\-field} \& {\em chi})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__complex__field_a11f474ce79caba1227bcf83b2be3424c}
+\hypertarget{classmdp__complex__field_a0d9771f5d1f057270e5568519a796a0c}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!real\_\-scalar\_\-product@{real\_\-scalar\_\-product}}
+\index{real\_\-scalar\_\-product@{real\_\-scalar\_\-product}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{real\_\-scalar\_\-product}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-real} real\_\-scalar\_\-product ({\bf mdp\_\-complex\_\-field} \& {\em psi}, \/  {\bf mdp\_\-complex\_\-field} \& {\em chi}, \/  int {\em parity} = {\ttfamily {\bf EVENODD}})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__complex__field_a0d9771f5d1f057270e5568519a796a0c}
+\hypertarget{classmdp__complex__field_a0936375b6edd3f01728d16ac38c76c32}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!relative\_\-residue@{relative\_\-residue}}
+\index{relative\_\-residue@{relative\_\-residue}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{relative\_\-residue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-real} relative\_\-residue ({\bf mdp\_\-complex\_\-field} \& {\em p}, \/  {\bf mdp\_\-complex\_\-field} \& {\em q}, \/  int {\em parity} = {\ttfamily {\bf EVENODD}})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__complex__field_a0936375b6edd3f01728d16ac38c76c32}
+\hypertarget{classmdp__complex__field_a7a6ea38341405f2cc4e771b33b4ea38f}{
+\index{mdp\_\-complex\_\-field@{mdp\_\-complex\_\-field}!scalar\_\-product@{scalar\_\-product}}
+\index{scalar\_\-product@{scalar\_\-product}!mdp_complex_field@{mdp\_\-complex\_\-field}}
+\subsubsection[{scalar\_\-product}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex} scalar\_\-product ({\bf mdp\_\-complex\_\-field} \& {\em psi}, \/  {\bf mdp\_\-complex\_\-field} \& {\em chi}, \/  int {\em parity} = {\ttfamily {\bf EVENODD}})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__complex__field_a7a6ea38341405f2cc4e771b33b4ea38f}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__complex__field_8h}{mdp\_\-complex\_\-field.h}\end{DoxyCompactItemize}

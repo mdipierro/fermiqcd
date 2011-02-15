@@ -1,0 +1,44 @@
+\hypertarget{fermiqcd___m_i_l_c___i_o_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-MILC\_\-IO.h File Reference}
+\label{fermiqcd___m_i_l_c___i_o_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-MILC\_\-IO.h@{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-MILC\_\-IO.h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{fermiqcd___m_i_l_c___i_o_8h_a4a943243a1b567f2efbd35edb10d2f92}{milc\_\-read\_\-as\_\-float\_\-noswitch} (FILE $\ast$fp, void $\ast$data, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} psize, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} header\_\-size, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} position, const \hyperlink{classmdp__lattice}{mdp\_\-lattice} \&lattice)
+\item 
+bool \hyperlink{fermiqcd___m_i_l_c___i_o_8h_af4651d462fa69d1e6bb265439a344245}{milc\_\-read\_\-as\_\-float\_\-switch} (FILE $\ast$fp, void $\ast$data, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} psize, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} header\_\-size, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} position, const \hyperlink{classmdp__lattice}{mdp\_\-lattice} \&lattice)
+\item 
+bool \hyperlink{fermiqcd___m_i_l_c___i_o_8h_aff016a9a0d72d286fa425dc2b6af7dcd}{load\_\-milc} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, string filename, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} max\_\-buffer\_\-size=128, int processIO=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+Functions to read a MILC gauge configuration without conversion
+
+Distributed under GPL2 License
+
+Created with support from the US Department of Energy 
+
+\subsection{Function Documentation}
+\hypertarget{fermiqcd___m_i_l_c___i_o_8h_aff016a9a0d72d286fa425dc2b6af7dcd}{
+\index{fermiqcd\_\-MILC\_\-IO.h@{fermiqcd\_\-MILC\_\-IO.h}!load\_\-milc@{load\_\-milc}}
+\index{load\_\-milc@{load\_\-milc}!fermiqcd_MILC_IO.h@{fermiqcd\_\-MILC\_\-IO.h}}
+\subsubsection[{load\_\-milc}]{\setlength{\rightskip}{0pt plus 5cm}bool load\_\-milc ({\bf gauge\_\-field} \& {\em U}, \/  string {\em filename}, \/  {\bf mdp\_\-int} {\em max\_\-buffer\_\-size} = {\ttfamily 128}, \/  int {\em processIO} = {\ttfamily 0})}}
+\label{fermiqcd___m_i_l_c___i_o_8h_aff016a9a0d72d286fa425dc2b6af7dcd}
+\hypertarget{fermiqcd___m_i_l_c___i_o_8h_a4a943243a1b567f2efbd35edb10d2f92}{
+\index{fermiqcd\_\-MILC\_\-IO.h@{fermiqcd\_\-MILC\_\-IO.h}!milc\_\-read\_\-as\_\-float\_\-noswitch@{milc\_\-read\_\-as\_\-float\_\-noswitch}}
+\index{milc\_\-read\_\-as\_\-float\_\-noswitch@{milc\_\-read\_\-as\_\-float\_\-noswitch}!fermiqcd_MILC_IO.h@{fermiqcd\_\-MILC\_\-IO.h}}
+\subsubsection[{milc\_\-read\_\-as\_\-float\_\-noswitch}]{\setlength{\rightskip}{0pt plus 5cm}bool milc\_\-read\_\-as\_\-float\_\-noswitch (FILE $\ast$ {\em fp}, \/  void $\ast$ {\em data}, \/  {\bf mdp\_\-int} {\em psize}, \/  {\bf mdp\_\-int} {\em header\_\-size}, \/  {\bf mdp\_\-int} {\em position}, \/  const {\bf mdp\_\-lattice} \& {\em lattice})}}
+\label{fermiqcd___m_i_l_c___i_o_8h_a4a943243a1b567f2efbd35edb10d2f92}
+\hypertarget{fermiqcd___m_i_l_c___i_o_8h_af4651d462fa69d1e6bb265439a344245}{
+\index{fermiqcd\_\-MILC\_\-IO.h@{fermiqcd\_\-MILC\_\-IO.h}!milc\_\-read\_\-as\_\-float\_\-switch@{milc\_\-read\_\-as\_\-float\_\-switch}}
+\index{milc\_\-read\_\-as\_\-float\_\-switch@{milc\_\-read\_\-as\_\-float\_\-switch}!fermiqcd_MILC_IO.h@{fermiqcd\_\-MILC\_\-IO.h}}
+\subsubsection[{milc\_\-read\_\-as\_\-float\_\-switch}]{\setlength{\rightskip}{0pt plus 5cm}bool milc\_\-read\_\-as\_\-float\_\-switch (FILE $\ast$ {\em fp}, \/  void $\ast$ {\em data}, \/  {\bf mdp\_\-int} {\em psize}, \/  {\bf mdp\_\-int} {\em header\_\-size}, \/  {\bf mdp\_\-int} {\em position}, \/  const {\bf mdp\_\-lattice} \& {\em lattice})}}
+\label{fermiqcd___m_i_l_c___i_o_8h_af4651d462fa69d1e6bb265439a344245}

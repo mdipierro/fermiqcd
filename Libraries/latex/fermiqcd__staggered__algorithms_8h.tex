@@ -1,0 +1,79 @@
+\hypertarget{fermiqcd__staggered__algorithms_8h}{
+\section{/Users/mdipierro/Desktop/SciDac/development/Libraries/fermiqcd\_\-staggered\_\-algorithms.h File Reference}
+\label{fermiqcd__staggered__algorithms_8h}\index{/Users/mdipierro/Desktop/SciDac/development/Libraries/fermiqcd\_\-staggered\_\-algorithms.h@{/Users/mdipierro/Desktop/SciDac/development/Libraries/fermiqcd\_\-staggered\_\-algorithms.h}}
+}
+
+
+This graph shows which files directly or indirectly include this file:\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{fermiqcd__staggered__algorithms_8h_488eb1dbe5147b72ac507eebab7740b8}{
+void \hyperlink{fermiqcd__staggered__algorithms_8h_488eb1dbe5147b72ac507eebab7740b8}{mul\_\-Q} (\hyperlink{classstaggered__field}{staggered\_\-field} \&psi\_\-out, \hyperlink{classstaggered__field}{staggered\_\-field} \&psi\_\-in, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, int parity=EVENODD)}
+\label{fermiqcd__staggered__algorithms_8h_488eb1dbe5147b72ac507eebab7740b8}
+
+\begin{CompactList}\small\item\em Executes current Staggered/Asqtad action. \item\end{CompactList}\item 
+\hypertarget{fermiqcd__staggered__algorithms_8h_43d87d3ef66904e11cc1df7f497f3aaa}{
+\hyperlink{classinversion__stats}{inversion\_\-stats} \hyperlink{fermiqcd__staggered__algorithms_8h_43d87d3ef66904e11cc1df7f497f3aaa}{mul\_\-invQ} (\hyperlink{classstaggered__field}{staggered\_\-field} \&psi\_\-out, \hyperlink{classstaggered__field}{staggered\_\-field} \&psi\_\-in, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, mdp\_\-real absolute\_\-precision=staggered\_\-inversion\_\-precision, mdp\_\-real relative\_\-precision=0, int max\_\-steps=2000)}
+\label{fermiqcd__staggered__algorithms_8h_43d87d3ef66904e11cc1df7f497f3aaa}
+
+\begin{CompactList}\small\item\em Executes current Staggered/Asqtad inverter. \item\end{CompactList}\item 
+\hyperlink{classmdp__array}{mdp\_\-array}$<$ mdp\_\-real, 1 $>$ \hyperlink{fermiqcd__staggered__algorithms_8h_7c4a56e5762ee0ad9b2d91606922f8f8}{lepage\_\-coefficients} (mdp\_\-real plaquette, char type\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{fermiqcd__staggered__algorithms_8h_7dee43eedb8e3f166d0a6ffb81dd19f5}{lepage\_\-improved\_\-links} (\hyperlink{classgauge__field}{gauge\_\-field} \&V, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classmdp__array}{mdp\_\-array}$<$ mdp\_\-real, 1 $>$ c, int project=false)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+\hypertarget{fermiqcd__staggered__algorithms_8h_c7d0456e43213aa9b1e9f49586bd64fb}{
+void($\ast$ \hyperlink{fermiqcd__staggered__algorithms_8h_c7d0456e43213aa9b1e9f49586bd64fb}{default\_\-staggered\_\-action} )(\hyperlink{classstaggered__field}{staggered\_\-field} \&, \hyperlink{classstaggered__field}{staggered\_\-field} \&, \hyperlink{classgauge__field}{gauge\_\-field} \&, \hyperlink{classcoefficients}{coefficients} \&, int) = StaggeredAsqtadActionFast::mul\_\-Q}
+\label{fermiqcd__staggered__algorithms_8h_c7d0456e43213aa9b1e9f49586bd64fb}
+
+\begin{CompactList}\small\item\em Pointer to current Staggered/Asqtad action. \item\end{CompactList}\item 
+\hypertarget{fermiqcd__staggered__algorithms_8h_e48b83bfa0c10441b937dadfcd22904e}{
+\hyperlink{classinversion__stats}{inversion\_\-stats}($\ast$ \hyperlink{fermiqcd__staggered__algorithms_8h_e48b83bfa0c10441b937dadfcd22904e}{default\_\-staggered\_\-inverter} )(\hyperlink{classstaggered__field}{staggered\_\-field} \&, \hyperlink{classstaggered__field}{staggered\_\-field} \&, \hyperlink{classgauge__field}{gauge\_\-field} \&, \hyperlink{classcoefficients}{coefficients} \&, mdp\_\-real, mdp\_\-real, int) = \&(BiCGStab::inverter$<$\hyperlink{classstaggered__field}{staggered\_\-field},\hyperlink{classgauge__field}{gauge\_\-field}$>$)}
+\label{fermiqcd__staggered__algorithms_8h_e48b83bfa0c10441b937dadfcd22904e}
+
+\begin{CompactList}\small\item\em Pointer to current Staggered/Asqtad inverter. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Version:]3-1-2005 \end{Desc}
+\begin{Desc}
+\item[Author:]Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$\end{Desc}
+Various stuff for staggered fermions
+
+This file is copyrighted by Massimo Di Pierro Read attached license in file fermiqcd\_\-license.pdf This file cannot be distributed without file fermiqcd\_\-license.pdf 
+
+\subsection{Function Documentation}
+\hypertarget{fermiqcd__staggered__algorithms_8h_7c4a56e5762ee0ad9b2d91606922f8f8}{
+\index{fermiqcd\_\-staggered\_\-algorithms.h@{fermiqcd\_\-staggered\_\-algorithms.h}!lepage\_\-coefficients@{lepage\_\-coefficients}}
+\index{lepage\_\-coefficients@{lepage\_\-coefficients}!fermiqcd_staggered_algorithms.h@{fermiqcd\_\-staggered\_\-algorithms.h}}
+\subsubsection[{lepage\_\-coefficients}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-array}$<$mdp\_\-real,1$>$ lepage\_\-coefficients (mdp\_\-real {\em plaquette}, \/  char {\em type}\mbox{[}$\,$\mbox{]})}}
+\label{fermiqcd__staggered__algorithms_8h_7c4a56e5762ee0ad9b2d91606922f8f8}
+
+
+Takes a plaquette and a type of action and returns a 1D array with weights of paths required to build fat links for the action \begin{Desc}
+\item[See also:]\hyperlink{fermiqcd__staggered__algorithms_8h_7dee43eedb8e3f166d0a6ffb81dd19f5}{lepage\_\-improved\_\-links()} \end{Desc}
+\hypertarget{fermiqcd__staggered__algorithms_8h_7dee43eedb8e3f166d0a6ffb81dd19f5}{
+\index{fermiqcd\_\-staggered\_\-algorithms.h@{fermiqcd\_\-staggered\_\-algorithms.h}!lepage\_\-improved\_\-links@{lepage\_\-improved\_\-links}}
+\index{lepage\_\-improved\_\-links@{lepage\_\-improved\_\-links}!fermiqcd_staggered_algorithms.h@{fermiqcd\_\-staggered\_\-algorithms.h}}
+\subsubsection[{lepage\_\-improved\_\-links}]{\setlength{\rightskip}{0pt plus 5cm}void lepage\_\-improved\_\-links ({\bf gauge\_\-field} \& {\em V}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf mdp\_\-array}$<$ mdp\_\-real, 1 $>$ {\em c}, \/  int {\em project} = {\tt false})}}
+\label{fermiqcd__staggered__algorithms_8h_7dee43eedb8e3f166d0a6ffb81dd19f5}
+
+
+Takes a gauge field U and a set of \hyperlink{classcoefficients}{coefficients} as computed by \hyperlink{fermiqcd__staggered__algorithms_8h_7c4a56e5762ee0ad9b2d91606922f8f8}{lepage\_\-coefficients()} and fills the gauge field V with fat links and Long links
+
+Example: 
+
+\footnotesize\begin{verbatim}
+/// gauge_field U(lattice,nc);
+/// gauge_field V(lattice,nc);
+/// U.load("myfield");
+/// float p=1.0; // the average plaquette
+/// lepage_improved_links(V,U,lepage_coefficients(p,"Full"),false);
+/// /// now use V instead of U for staggered actions and inverters
+/// \end{verbatim}
+\normalsize
+ Note that the type of action can be\begin{itemize}
+\item \char`\"{}Full\char`\"{} for full as asqtad\item \char`\"{}Staple+Naik\char`\"{}\item \char`\"{}Fat3\char`\"{}\item \char`\"{}Fat5\char`\"{}\item \char`\"{}Fat7\char`\"{} Also note that if project==true the fat links are projected back to SU(nc) \end{itemize}

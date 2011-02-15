@@ -1,0 +1,95 @@
+\hypertarget{classstaggered__propagator}{
+\section{staggered\_\-propagator Class Reference}
+\label{classstaggered__propagator}\index{staggered\_\-propagator@{staggered\_\-propagator}}
+}
+
+
+staggared quark propagator  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-staggered\_\-propagator.h$>$}Inheritance diagram for staggered\_\-propagator::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classstaggered__propagator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstaggered__propagator_ad2abd9534d09d4f0af54a53ed4e092c6}{staggered\_\-propagator} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&mylattice, int nc\_\-)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classstaggered__propagator_ae5c5d6720631c30938b09de4d3331e7f}{operator()} (site x, int a)
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classstaggered__propagator_aed9bbdd906e6e68f806a895c5e1bd2d8}{operator()} (site x, int a, int i, int j)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classstaggered__propagator_a1f2816b7b6b4f9b6779224fcdd0d6aff}{nc}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classstaggered__propagator_a7849b2db88d889afda04b4ee01476b64}{generate} (\hyperlink{classstaggered__propagator}{staggered\_\-propagator} \&S, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} absolute\_\-precision=\hyperlink{fermiqcd__default__parameters_8h_ab11c95dc923c6bfd349bd67af277d59d}{fermi\_\-inversion\_\-precision}, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} relative\_\-precision=0, int max\_\-steps=2000, void($\ast$smf)(\hyperlink{classstaggered__field}{staggered\_\-field} \&, \hyperlink{classgauge__field}{gauge\_\-field} \&)=0, int comp=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+staggared quark propagator On a (2n) dimensional lattice this makes 3$\ast$(2$^\wedge$n) sources at the vertices of the hypercube at the origin of the lattice and inverts the Staggered/Asqtad action on them.
+
+Example: \begin{DoxyVerb}
+/// mdp_gauge U(lattice,nc);
+/// staggered_propagator S(lattice,nc);
+/// mdp_site x(lattice);
+/// mdp_site y(lattice);
+/// coefficients coeff;
+/// coeff["mass"]=1.0;
+/// generate(S,U,coeff);
+/// for(int i=0; i<(int) pow(2,lattice.ndim); i++) {
+///    x=binary2versor(a);
+///    cout << "source at:" << x << "\nprop:\n"; 
+///    forallsites(y) cout << S(x,a) << endl;
+/// }
+/// \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstaggered__propagator_ad2abd9534d09d4f0af54a53ed4e092c6}{
+\index{staggered\_\-propagator@{staggered\_\-propagator}!staggered\_\-propagator@{staggered\_\-propagator}}
+\index{staggered\_\-propagator@{staggered\_\-propagator}!staggered_propagator@{staggered\_\-propagator}}
+\subsubsection[{staggered\_\-propagator}]{\setlength{\rightskip}{0pt plus 5cm}staggered\_\-propagator::staggered\_\-propagator ({\bf mdp\_\-lattice} \& {\em mylattice}, \/  int {\em nc\_\-})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__propagator_ad2abd9534d09d4f0af54a53ed4e092c6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstaggered__propagator_aed9bbdd906e6e68f806a895c5e1bd2d8}{
+\index{staggered\_\-propagator@{staggered\_\-propagator}!operator()@{operator()}}
+\index{operator()@{operator()}!staggered_propagator@{staggered\_\-propagator}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex}\& staggered\_\-propagator::operator() (site {\em x}, \/  int {\em a}, \/  int {\em i}, \/  int {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__propagator_aed9bbdd906e6e68f806a895c5e1bd2d8}
+\hypertarget{classstaggered__propagator_ae5c5d6720631c30938b09de4d3331e7f}{
+\index{staggered\_\-propagator@{staggered\_\-propagator}!operator()@{operator()}}
+\index{operator()@{operator()}!staggered_propagator@{staggered\_\-propagator}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} staggered\_\-propagator::operator() (site {\em x}, \/  int {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__propagator_ae5c5d6720631c30938b09de4d3331e7f}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classstaggered__propagator_a7849b2db88d889afda04b4ee01476b64}{
+\index{staggered\_\-propagator@{staggered\_\-propagator}!generate@{generate}}
+\index{generate@{generate}!staggered_propagator@{staggered\_\-propagator}}
+\subsubsection[{generate}]{\setlength{\rightskip}{0pt plus 5cm}void generate ({\bf staggered\_\-propagator} \& {\em S}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  {\bf mdp\_\-real} {\em absolute\_\-precision} = {\ttfamily {\bf fermi\_\-inversion\_\-precision}}, \/  {\bf mdp\_\-real} {\em relative\_\-precision} = {\ttfamily 0}, \/  int {\em max\_\-steps} = {\ttfamily 2000}, \/  void($\ast$)({\bf staggered\_\-field} \&, {\bf gauge\_\-field} \&) {\em smf} = {\ttfamily 0}, \/  int {\em comp} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classstaggered__propagator_a7849b2db88d889afda04b4ee01476b64}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classstaggered__propagator_a1f2816b7b6b4f9b6779224fcdd0d6aff}{
+\index{staggered\_\-propagator@{staggered\_\-propagator}!nc@{nc}}
+\index{nc@{nc}!staggered_propagator@{staggered\_\-propagator}}
+\subsubsection[{nc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf staggered\_\-propagator::nc}}}
+\label{classstaggered__propagator_a1f2816b7b6b4f9b6779224fcdd0d6aff}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__staggered__propagator_8h}{fermiqcd\_\-staggered\_\-propagator.h}\end{DoxyCompactItemize}

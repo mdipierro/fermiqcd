@@ -1,0 +1,90 @@
+\hypertarget{mdp_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/mdp.h File Reference}
+\label{mdp_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/mdp.h@{/Users/mdipierro/fermiqcd/development/Libraries/mdp.h}}
+}
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$fstream$>$}\par
+{\ttfamily \#include $<$cstdio$>$}\par
+{\ttfamily \#include $<$cstdlib$>$}\par
+{\ttfamily \#include $<$cmath$>$}\par
+{\ttfamily \#include $<$cstring$>$}\par
+{\ttfamily \#include $<$ctime$>$}\par
+{\ttfamily \#include $<$cassert$>$}\par
+{\ttfamily \#include $<$typeinfo$>$}\par
+{\ttfamily \#include $<$malloc.h$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include $<$deque$>$}\par
+{\ttfamily \#include $<$climits$>$}\par
+{\ttfamily \#include \char`\"{}glob.h\char`\"{}}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$sys/time.h$>$}\par
+{\ttfamily \#include $<$sys/file.h$>$}\par
+{\ttfamily \#include $<$sys/types.h$>$}\par
+{\ttfamily \#include $<$sys/stat.h$>$}\par
+{\ttfamily \#include $<$sys/socket.h$>$}\par
+{\ttfamily \#include $<$fcntl.h$>$}\par
+{\ttfamily \#include \char`\"{}mdp\_\-version.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-macros.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-global\_\-vars.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-dynalloc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-endianess\_\-converter.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-timer.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-complex.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-delta.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-array.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-matrix.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-log.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-psim.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-communicator.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-prng.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-jackboot.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-topologies.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-partitionings.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-lattice.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-vector.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-site.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-field.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-utils.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-postscript.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-field\_\-update.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-field\_\-load.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-field\_\-save.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-field\_\-save\_\-vtk.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-save\_\-partitioning\_\-vtk.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-mod2sign.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-permutations.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-complex\_\-field.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-matrix\_\-field.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-vector\_\-field.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-nmatrix\_\-field.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-compatibility\_\-macros.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-prompt.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-measure.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-matrix\_\-test.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mdp\_\-field\_\-test.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{mdp_8h_a600eaf353befc174637855795f12d258}{endl}~\char`\"{}$\backslash$n\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+Includes all mdp\_\-$\ast$.h header files
+
+Licensed under GPL2 license Read attached license in file mdp\_\-license.pdf This file cannot be distributed without file mdp\_\-license.pdf 
+
+\subsection{Define Documentation}
+\hypertarget{mdp_8h_a600eaf353befc174637855795f12d258}{
+\index{mdp.h@{mdp.h}!endl@{endl}}
+\index{endl@{endl}!mdp.h@{mdp.h}}
+\subsubsection[{endl}]{\setlength{\rightskip}{0pt plus 5cm}\#define endl~\char`\"{}$\backslash$n\char`\"{}}}
+\label{mdp_8h_a600eaf353befc174637855795f12d258}

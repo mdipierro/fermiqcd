@@ -1,0 +1,92 @@
+\hypertarget{fermiqcd__sdwf__algorithms_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-sdwf\_\-algorithms.h File Reference}
+\label{fermiqcd__sdwf__algorithms_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-sdwf\_\-algorithms.h@{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-sdwf\_\-algorithms.h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fermiqcd__sdwf__algorithms_8h_a0b5787450d95d16a5f924e1ff477c74e}{project} (\hyperlink{classstaggered__field}{staggered\_\-field} \&psi, \hyperlink{classsdwf__field}{sdwf\_\-field} \&chi, \hyperlink{classgauge__field}{gauge\_\-field} \&U)
+\item 
+void \hyperlink{fermiqcd__sdwf__algorithms_8h_aeb7e2cb1b161ec03b0e50cf595f856da}{project} (\hyperlink{classstaggered__field}{staggered\_\-field} \&psi, \hyperlink{classsdwf__field}{sdwf\_\-field} \&chi, \hyperlink{classgauge__field}{gauge\_\-field} \&U, int sign, int L)
+\item 
+void \hyperlink{fermiqcd__sdwf__algorithms_8h_aae6a3ea6a75ef72a43afced529e06141}{project} (\hyperlink{classsdwf__field}{sdwf\_\-field} \&chi, \hyperlink{classstaggered__field}{staggered\_\-field} \&psi, \hyperlink{classgauge__field}{gauge\_\-field} \&U)
+\item 
+void \hyperlink{fermiqcd__sdwf__algorithms_8h_a97c94a1521d56a1aa43c3729e16ef812}{mul\_\-Q} (\hyperlink{classsdwf__field}{sdwf\_\-field} \&psi\_\-out, \hyperlink{classsdwf__field}{sdwf\_\-field} \&psi\_\-in, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, int parity=\hyperlink{mdp__global__vars_8h_a4c9de81f2de5a74b588107b6c0afb9ee}{EVENODD})
+\item 
+\hyperlink{classinversion__stats}{inversion\_\-stats} \hyperlink{fermiqcd__sdwf__algorithms_8h_a33187cfa7c14fa4a095c5c96bdf10a65}{mul\_\-invQ} (\hyperlink{classsdwf__field}{sdwf\_\-field} \&psi\_\-out, \hyperlink{classsdwf__field}{sdwf\_\-field} \&psi\_\-in, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} absolute\_\-precision=\hyperlink{fermiqcd__default__parameters_8h_ab987d3497c70948b4dcdf3b7f1094e27}{sdwf\_\-inversion\_\-precision}, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} relative\_\-precision=0, int max\_\-steps=2000)
+\item 
+void \hyperlink{fermiqcd__sdwf__algorithms_8h_a5e38a0e48ff17f38c25ecde1d1163a2a}{compute\_\-swirls\_\-field} (\hyperlink{classgauge__field}{gauge\_\-field} \&U)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{fermiqcd__sdwf__algorithms_8h_aeb45a221aaad6215eceaa955097bfc37}{MDP\_\-SDWF\_\-SGN} = 1.0
+\item 
+void($\ast$ \hyperlink{fermiqcd__sdwf__algorithms_8h_a16fcd9089a0724f0a0c3e52ac4ad769d}{default\_\-sdwf\_\-action} )(\hyperlink{classsdwf__field}{sdwf\_\-field} \&, \hyperlink{classsdwf__field}{sdwf\_\-field} \&, \hyperlink{classgauge__field}{gauge\_\-field} \&, \hyperlink{classcoefficients}{coefficients} \&, int) = SDWFActionSlow::mul\_\-Q
+\item 
+\hyperlink{classinversion__stats}{inversion\_\-stats}($\ast$ \hyperlink{fermiqcd__sdwf__algorithms_8h_a7d2cdaa000ba9ca77219ca0b2f5668fd}{default\_\-sdwf\_\-inverter} )(\hyperlink{classsdwf__field}{sdwf\_\-field} \&, \hyperlink{classsdwf__field}{sdwf\_\-field} \&, \hyperlink{classgauge__field}{gauge\_\-field} \&, \hyperlink{classcoefficients}{coefficients} \&, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real}, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real}, int) = BiConjugateGradientStabilizedInverter$<$\hyperlink{classsdwf__field}{sdwf\_\-field},\hyperlink{classgauge__field}{gauge\_\-field}$>$
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+WORK IN PROGRESS
+
+Distributed under GPL2 License
+
+Created with support from the US Department of Energy 
+
+\subsection{Function Documentation}
+\hypertarget{fermiqcd__sdwf__algorithms_8h_a5e38a0e48ff17f38c25ecde1d1163a2a}{
+\index{fermiqcd\_\-sdwf\_\-algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}!compute\_\-swirls\_\-field@{compute\_\-swirls\_\-field}}
+\index{compute\_\-swirls\_\-field@{compute\_\-swirls\_\-field}!fermiqcd_sdwf_algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}}
+\subsubsection[{compute\_\-swirls\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}void compute\_\-swirls\_\-field ({\bf gauge\_\-field} \& {\em U})}}
+\label{fermiqcd__sdwf__algorithms_8h_a5e38a0e48ff17f38c25ecde1d1163a2a}
+\hypertarget{fermiqcd__sdwf__algorithms_8h_a33187cfa7c14fa4a095c5c96bdf10a65}{
+\index{fermiqcd\_\-sdwf\_\-algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}!mul\_\-invQ@{mul\_\-invQ}}
+\index{mul\_\-invQ@{mul\_\-invQ}!fermiqcd_sdwf_algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}}
+\subsubsection[{mul\_\-invQ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf inversion\_\-stats} mul\_\-invQ ({\bf sdwf\_\-field} \& {\em psi\_\-out}, \/  {\bf sdwf\_\-field} \& {\em psi\_\-in}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  {\bf mdp\_\-real} {\em absolute\_\-precision} = {\ttfamily {\bf sdwf\_\-inversion\_\-precision}}, \/  {\bf mdp\_\-real} {\em relative\_\-precision} = {\ttfamily 0}, \/  int {\em max\_\-steps} = {\ttfamily 2000})}}
+\label{fermiqcd__sdwf__algorithms_8h_a33187cfa7c14fa4a095c5c96bdf10a65}
+\hypertarget{fermiqcd__sdwf__algorithms_8h_a97c94a1521d56a1aa43c3729e16ef812}{
+\index{fermiqcd\_\-sdwf\_\-algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}!mul\_\-Q@{mul\_\-Q}}
+\index{mul\_\-Q@{mul\_\-Q}!fermiqcd_sdwf_algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}}
+\subsubsection[{mul\_\-Q}]{\setlength{\rightskip}{0pt plus 5cm}void mul\_\-Q ({\bf sdwf\_\-field} \& {\em psi\_\-out}, \/  {\bf sdwf\_\-field} \& {\em psi\_\-in}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  int {\em parity} = {\ttfamily {\bf EVENODD}})}}
+\label{fermiqcd__sdwf__algorithms_8h_a97c94a1521d56a1aa43c3729e16ef812}
+\hypertarget{fermiqcd__sdwf__algorithms_8h_aae6a3ea6a75ef72a43afced529e06141}{
+\index{fermiqcd\_\-sdwf\_\-algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}!project@{project}}
+\index{project@{project}!fermiqcd_sdwf_algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}}
+\subsubsection[{project}]{\setlength{\rightskip}{0pt plus 5cm}void project ({\bf sdwf\_\-field} \& {\em chi}, \/  {\bf staggered\_\-field} \& {\em psi}, \/  {\bf gauge\_\-field} \& {\em U})}}
+\label{fermiqcd__sdwf__algorithms_8h_aae6a3ea6a75ef72a43afced529e06141}
+\hypertarget{fermiqcd__sdwf__algorithms_8h_aeb7e2cb1b161ec03b0e50cf595f856da}{
+\index{fermiqcd\_\-sdwf\_\-algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}!project@{project}}
+\index{project@{project}!fermiqcd_sdwf_algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}}
+\subsubsection[{project}]{\setlength{\rightskip}{0pt plus 5cm}void project ({\bf staggered\_\-field} \& {\em psi}, \/  {\bf sdwf\_\-field} \& {\em chi}, \/  {\bf gauge\_\-field} \& {\em U}, \/  int {\em sign}, \/  int {\em L})}}
+\label{fermiqcd__sdwf__algorithms_8h_aeb7e2cb1b161ec03b0e50cf595f856da}
+\hypertarget{fermiqcd__sdwf__algorithms_8h_a0b5787450d95d16a5f924e1ff477c74e}{
+\index{fermiqcd\_\-sdwf\_\-algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}!project@{project}}
+\index{project@{project}!fermiqcd_sdwf_algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}}
+\subsubsection[{project}]{\setlength{\rightskip}{0pt plus 5cm}void project ({\bf staggered\_\-field} \& {\em psi}, \/  {\bf sdwf\_\-field} \& {\em chi}, \/  {\bf gauge\_\-field} \& {\em U})}}
+\label{fermiqcd__sdwf__algorithms_8h_a0b5787450d95d16a5f924e1ff477c74e}
+
+
+\subsection{Variable Documentation}
+\hypertarget{fermiqcd__sdwf__algorithms_8h_a16fcd9089a0724f0a0c3e52ac4ad769d}{
+\index{fermiqcd\_\-sdwf\_\-algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}!default\_\-sdwf\_\-action@{default\_\-sdwf\_\-action}}
+\index{default\_\-sdwf\_\-action@{default\_\-sdwf\_\-action}!fermiqcd_sdwf_algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}}
+\subsubsection[{default\_\-sdwf\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf default\_\-sdwf\_\-action})({\bf sdwf\_\-field} \&, {\bf sdwf\_\-field} \&, {\bf gauge\_\-field} \&, {\bf coefficients} \&, int) = SDWFActionSlow::mul\_\-Q}}
+\label{fermiqcd__sdwf__algorithms_8h_a16fcd9089a0724f0a0c3e52ac4ad769d}
+\hypertarget{fermiqcd__sdwf__algorithms_8h_a7d2cdaa000ba9ca77219ca0b2f5668fd}{
+\index{fermiqcd\_\-sdwf\_\-algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}!default\_\-sdwf\_\-inverter@{default\_\-sdwf\_\-inverter}}
+\index{default\_\-sdwf\_\-inverter@{default\_\-sdwf\_\-inverter}!fermiqcd_sdwf_algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}}
+\subsubsection[{default\_\-sdwf\_\-inverter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf inversion\_\-stats}($\ast$ {\bf default\_\-sdwf\_\-inverter})({\bf sdwf\_\-field} \&, {\bf sdwf\_\-field} \&, {\bf gauge\_\-field} \&, {\bf coefficients} \&, {\bf mdp\_\-real}, {\bf mdp\_\-real}, int) = BiConjugateGradientStabilizedInverter$<${\bf sdwf\_\-field},{\bf gauge\_\-field}$>$}}
+\label{fermiqcd__sdwf__algorithms_8h_a7d2cdaa000ba9ca77219ca0b2f5668fd}
+\hypertarget{fermiqcd__sdwf__algorithms_8h_aeb45a221aaad6215eceaa955097bfc37}{
+\index{fermiqcd\_\-sdwf\_\-algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}!MDP\_\-SDWF\_\-SGN@{MDP\_\-SDWF\_\-SGN}}
+\index{MDP\_\-SDWF\_\-SGN@{MDP\_\-SDWF\_\-SGN}!fermiqcd_sdwf_algorithms.h@{fermiqcd\_\-sdwf\_\-algorithms.h}}
+\subsubsection[{MDP\_\-SDWF\_\-SGN}]{\setlength{\rightskip}{0pt plus 5cm}const double {\bf MDP\_\-SDWF\_\-SGN} = 1.0}}
+\label{fermiqcd__sdwf__algorithms_8h_aeb45a221aaad6215eceaa955097bfc37}

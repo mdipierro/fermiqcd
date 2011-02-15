@@ -1,0 +1,1674 @@
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Namespace List}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{11}{chapter.5}
+\contentsline {section}{\numberline {5.1}cleanup\_\discretionary {-}{}{}cpp Namespace Reference}{11}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Function Documentation}{11}{subsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.1}cleanup\_\discretionary {-}{}{}cpp}{11}{subsubsection.5.1.1.1}
+\contentsline {section}{\numberline {5.2}searchandreplace Namespace Reference}{12}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Variable Documentation}{12}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}choice}{12}{subsubsection.5.2.1.1}
+\contentsline {subsubsection}{\numberline {5.2.1.2}file}{12}{subsubsection.5.2.1.2}
+\contentsline {subsubsection}{\numberline {5.2.1.3}line}{12}{subsubsection.5.2.1.3}
+\contentsline {subsubsection}{\numberline {5.2.1.4}s}{12}{subsubsection.5.2.1.4}
+\contentsline {subsubsection}{\numberline {5.2.1.5}sin}{12}{subsubsection.5.2.1.5}
+\contentsline {subsubsection}{\numberline {5.2.1.6}sout}{12}{subsubsection.5.2.1.6}
+\contentsline {section}{\numberline {5.3}searchandreplace2 Namespace Reference}{13}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Variable Documentation}{13}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}c}{13}{subsubsection.5.3.1.1}
+\contentsline {subsubsection}{\numberline {5.3.1.2}choice}{13}{subsubsection.5.3.1.2}
+\contentsline {subsubsection}{\numberline {5.3.1.3}file}{13}{subsubsection.5.3.1.3}
+\contentsline {subsubsection}{\numberline {5.3.1.4}line}{13}{subsubsection.5.3.1.4}
+\contentsline {subsubsection}{\numberline {5.3.1.5}line2}{13}{subsubsection.5.3.1.5}
+\contentsline {subsubsection}{\numberline {5.3.1.6}s}{13}{subsubsection.5.3.1.6}
+\contentsline {chapter}{\numberline {6}Class Documentation}{15}{chapter.6}
+\contentsline {section}{\numberline {6.1}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double Struct Reference}{15}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Member Data Documentation}{15}{subsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.1.1}c1}{15}{subsubsection.6.1.1.1}
+\contentsline {subsubsection}{\numberline {6.1.1.2}c2}{15}{subsubsection.6.1.1.2}
+\contentsline {section}{\numberline {6.2}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float Struct Reference}{16}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Member Data Documentation}{16}{subsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.1.1}c1}{16}{subsubsection.6.2.1.1}
+\contentsline {subsubsection}{\numberline {6.2.1.2}c2}{16}{subsubsection.6.2.1.2}
+\contentsline {subsubsection}{\numberline {6.2.1.3}c3}{16}{subsubsection.6.2.1.3}
+\contentsline {subsubsection}{\numberline {6.2.1.4}c4}{16}{subsubsection.6.2.1.4}
+\contentsline {section}{\numberline {6.3}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}int Struct Reference}{17}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Member Data Documentation}{17}{subsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.1.1}c1}{17}{subsubsection.6.3.1.1}
+\contentsline {subsubsection}{\numberline {6.3.1.2}c2}{17}{subsubsection.6.3.1.2}
+\contentsline {subsubsection}{\numberline {6.3.1.3}c3}{17}{subsubsection.6.3.1.3}
+\contentsline {subsubsection}{\numberline {6.3.1.4}c4}{17}{subsubsection.6.3.1.4}
+\contentsline {section}{\numberline {6.4}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}spinor Struct Reference}{18}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Member Data Documentation}{18}{subsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.1.1}c1}{18}{subsubsection.6.4.1.1}
+\contentsline {subsubsection}{\numberline {6.4.1.2}c2}{18}{subsubsection.6.4.1.2}
+\contentsline {subsubsection}{\numberline {6.4.1.3}c3}{18}{subsubsection.6.4.1.3}
+\contentsline {subsubsection}{\numberline {6.4.1.4}c4}{18}{subsubsection.6.4.1.4}
+\contentsline {section}{\numberline {6.5}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}su3 Struct Reference}{19}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Member Data Documentation}{19}{subsection.6.5.1}
+\contentsline {subsubsection}{\numberline {6.5.1.1}c11}{19}{subsubsection.6.5.1.1}
+\contentsline {subsubsection}{\numberline {6.5.1.2}c12}{19}{subsubsection.6.5.1.2}
+\contentsline {subsubsection}{\numberline {6.5.1.3}c13}{19}{subsubsection.6.5.1.3}
+\contentsline {subsubsection}{\numberline {6.5.1.4}c21}{19}{subsubsection.6.5.1.4}
+\contentsline {subsubsection}{\numberline {6.5.1.5}c22}{19}{subsubsection.6.5.1.5}
+\contentsline {subsubsection}{\numberline {6.5.1.6}c23}{19}{subsubsection.6.5.1.6}
+\contentsline {subsubsection}{\numberline {6.5.1.7}c31}{19}{subsubsection.6.5.1.7}
+\contentsline {subsubsection}{\numberline {6.5.1.8}c32}{19}{subsubsection.6.5.1.8}
+\contentsline {subsubsection}{\numberline {6.5.1.9}c33}{19}{subsubsection.6.5.1.9}
+\contentsline {section}{\numberline {6.6}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}su3\_\discretionary {-}{}{}vector Struct Reference}{20}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Member Data Documentation}{20}{subsection.6.6.1}
+\contentsline {subsubsection}{\numberline {6.6.1.1}c1}{20}{subsubsection.6.6.1.1}
+\contentsline {subsubsection}{\numberline {6.6.1.2}c2}{20}{subsubsection.6.6.1.2}
+\contentsline {subsubsection}{\numberline {6.6.1.3}c3}{20}{subsubsection.6.6.1.3}
+\contentsline {section}{\numberline {6.7}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}vector Struct Reference}{21}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Member Data Documentation}{21}{subsection.6.7.1}
+\contentsline {subsubsection}{\numberline {6.7.1.1}c1}{21}{subsubsection.6.7.1.1}
+\contentsline {subsubsection}{\numberline {6.7.1.2}c2}{21}{subsubsection.6.7.1.2}
+\contentsline {subsubsection}{\numberline {6.7.1.3}c3}{21}{subsubsection.6.7.1.3}
+\contentsline {section}{\numberline {6.8}ApeSmearing Class Reference}{22}{section.6.8}
+\contentsline {subsection}{\numberline {6.8.1}Member Function Documentation}{22}{subsection.6.8.1}
+\contentsline {subsubsection}{\numberline {6.8.1.1}smear}{22}{subsubsection.6.8.1.1}
+\contentsline {section}{\numberline {6.9}BiCGStab Class Reference}{23}{section.6.9}
+\contentsline {subsection}{\numberline {6.9.1}Detailed Description}{23}{subsection.6.9.1}
+\contentsline {subsection}{\numberline {6.9.2}Member Function Documentation}{23}{subsection.6.9.2}
+\contentsline {subsubsection}{\numberline {6.9.2.1}inverter}{23}{subsubsection.6.9.2.1}
+\contentsline {section}{\numberline {6.10}BiCGStabVtk Class Reference}{24}{section.6.10}
+\contentsline {subsection}{\numberline {6.10.1}Detailed Description}{24}{subsection.6.10.1}
+\contentsline {subsection}{\numberline {6.10.2}Member Function Documentation}{24}{subsection.6.10.2}
+\contentsline {subsubsection}{\numberline {6.10.2.1}inverter}{24}{subsubsection.6.10.2.1}
+\contentsline {section}{\numberline {6.11}CG2 Class Reference}{25}{section.6.11}
+\contentsline {subsection}{\numberline {6.11.1}Detailed Description}{25}{subsection.6.11.1}
+\contentsline {subsection}{\numberline {6.11.2}Member Function Documentation}{25}{subsection.6.11.2}
+\contentsline {subsubsection}{\numberline {6.11.2.1}inverter}{25}{subsubsection.6.11.2.1}
+\contentsline {section}{\numberline {6.12}coefficients Class Reference}{26}{section.6.12}
+\contentsline {subsection}{\numberline {6.12.1}Detailed Description}{26}{subsection.6.12.1}
+\contentsline {subsection}{\numberline {6.12.2}Member Function Documentation}{26}{subsection.6.12.2}
+\contentsline {subsubsection}{\numberline {6.12.2.1}has\_\discretionary {-}{}{}key}{26}{subsubsection.6.12.2.1}
+\contentsline {section}{\numberline {6.13}dwfermi\_\discretionary {-}{}{}field Class Reference}{27}{section.6.13}
+\contentsline {subsection}{\numberline {6.13.1}Detailed Description}{27}{subsection.6.13.1}
+\contentsline {subsection}{\numberline {6.13.2}Constructor \& Destructor Documentation}{28}{subsection.6.13.2}
+\contentsline {subsubsection}{\numberline {6.13.2.1}dwfermi\_\discretionary {-}{}{}field}{28}{subsubsection.6.13.2.1}
+\contentsline {subsubsection}{\numberline {6.13.2.2}dwfermi\_\discretionary {-}{}{}field}{28}{subsubsection.6.13.2.2}
+\contentsline {subsubsection}{\numberline {6.13.2.3}dwfermi\_\discretionary {-}{}{}field}{28}{subsubsection.6.13.2.3}
+\contentsline {subsection}{\numberline {6.13.3}Member Function Documentation}{28}{subsection.6.13.3}
+\contentsline {subsubsection}{\numberline {6.13.3.1}allocate\_\discretionary {-}{}{}dwfermi\_\discretionary {-}{}{}field}{28}{subsubsection.6.13.3.1}
+\contentsline {subsubsection}{\numberline {6.13.3.2}operator()}{28}{subsubsection.6.13.3.2}
+\contentsline {subsubsection}{\numberline {6.13.3.3}operator()}{28}{subsubsection.6.13.3.3}
+\contentsline {subsubsection}{\numberline {6.13.3.4}operator()}{28}{subsubsection.6.13.3.4}
+\contentsline {subsubsection}{\numberline {6.13.3.5}operator()}{28}{subsubsection.6.13.3.5}
+\contentsline {subsubsection}{\numberline {6.13.3.6}operator=}{28}{subsubsection.6.13.3.6}
+\contentsline {subsection}{\numberline {6.13.4}Member Data Documentation}{28}{subsection.6.13.4}
+\contentsline {subsubsection}{\numberline {6.13.4.1}L5}{28}{subsubsection.6.13.4.1}
+\contentsline {subsubsection}{\numberline {6.13.4.2}nc}{28}{subsubsection.6.13.4.2}
+\contentsline {subsubsection}{\numberline {6.13.4.3}nspin}{28}{subsubsection.6.13.4.3}
+\contentsline {section}{\numberline {6.14}DWFermiActionFast Class Reference}{29}{section.6.14}
+\contentsline {subsection}{\numberline {6.14.1}Detailed Description}{29}{subsection.6.14.1}
+\contentsline {subsection}{\numberline {6.14.2}Member Function Documentation}{29}{subsection.6.14.2}
+\contentsline {subsubsection}{\numberline {6.14.2.1}mul\_\discretionary {-}{}{}Q}{29}{subsubsection.6.14.2.1}
+\contentsline {section}{\numberline {6.15}DWFermiActionSlow Class Reference}{30}{section.6.15}
+\contentsline {subsection}{\numberline {6.15.1}Detailed Description}{30}{subsection.6.15.1}
+\contentsline {subsection}{\numberline {6.15.2}Member Function Documentation}{30}{subsection.6.15.2}
+\contentsline {subsubsection}{\numberline {6.15.2.1}mul\_\discretionary {-}{}{}Q}{30}{subsubsection.6.15.2.1}
+\contentsline {section}{\numberline {6.16}em\_\discretionary {-}{}{}field Class Reference}{31}{section.6.16}
+\contentsline {subsection}{\numberline {6.16.1}Detailed Description}{31}{subsection.6.16.1}
+\contentsline {subsection}{\numberline {6.16.2}Constructor \& Destructor Documentation}{32}{subsection.6.16.2}
+\contentsline {subsubsection}{\numberline {6.16.2.1}em\_\discretionary {-}{}{}field}{32}{subsubsection.6.16.2.1}
+\contentsline {subsubsection}{\numberline {6.16.2.2}em\_\discretionary {-}{}{}field}{32}{subsubsection.6.16.2.2}
+\contentsline {subsubsection}{\numberline {6.16.2.3}em\_\discretionary {-}{}{}field}{32}{subsubsection.6.16.2.3}
+\contentsline {subsection}{\numberline {6.16.3}Member Function Documentation}{32}{subsection.6.16.3}
+\contentsline {subsubsection}{\numberline {6.16.3.1}allocate\_\discretionary {-}{}{}em\_\discretionary {-}{}{}field}{32}{subsubsection.6.16.3.1}
+\contentsline {subsubsection}{\numberline {6.16.3.2}operator()}{32}{subsubsection.6.16.3.2}
+\contentsline {subsubsection}{\numberline {6.16.3.3}operator()}{32}{subsubsection.6.16.3.3}
+\contentsline {subsubsection}{\numberline {6.16.3.4}operator()}{32}{subsubsection.6.16.3.4}
+\contentsline {subsubsection}{\numberline {6.16.3.5}ordered\_\discretionary {-}{}{}index}{32}{subsubsection.6.16.3.5}
+\contentsline {subsection}{\numberline {6.16.4}Member Data Documentation}{32}{subsection.6.16.4}
+\contentsline {subsubsection}{\numberline {6.16.4.1}nc}{32}{subsubsection.6.16.4.1}
+\contentsline {subsubsection}{\numberline {6.16.4.2}ndim}{32}{subsubsection.6.16.4.2}
+\contentsline {subsubsection}{\numberline {6.16.4.3}nem}{32}{subsubsection.6.16.4.3}
+\contentsline {section}{\numberline {6.17}fermi\_\discretionary {-}{}{}field Class Reference}{33}{section.6.17}
+\contentsline {subsection}{\numberline {6.17.1}Detailed Description}{33}{subsection.6.17.1}
+\contentsline {subsection}{\numberline {6.17.2}Constructor \& Destructor Documentation}{34}{subsection.6.17.2}
+\contentsline {subsubsection}{\numberline {6.17.2.1}fermi\_\discretionary {-}{}{}field}{34}{subsubsection.6.17.2.1}
+\contentsline {subsubsection}{\numberline {6.17.2.2}fermi\_\discretionary {-}{}{}field}{34}{subsubsection.6.17.2.2}
+\contentsline {subsubsection}{\numberline {6.17.2.3}fermi\_\discretionary {-}{}{}field}{34}{subsubsection.6.17.2.3}
+\contentsline {subsection}{\numberline {6.17.3}Member Function Documentation}{34}{subsection.6.17.3}
+\contentsline {subsubsection}{\numberline {6.17.3.1}allocate\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}field}{34}{subsubsection.6.17.3.1}
+\contentsline {subsubsection}{\numberline {6.17.3.2}operator()}{34}{subsubsection.6.17.3.2}
+\contentsline {subsubsection}{\numberline {6.17.3.3}operator()}{34}{subsubsection.6.17.3.3}
+\contentsline {subsubsection}{\numberline {6.17.3.4}operator()}{34}{subsubsection.6.17.3.4}
+\contentsline {subsubsection}{\numberline {6.17.3.5}operator()}{34}{subsubsection.6.17.3.5}
+\contentsline {subsubsection}{\numberline {6.17.3.6}operator=}{34}{subsubsection.6.17.3.6}
+\contentsline {subsubsection}{\numberline {6.17.3.7}operator=}{34}{subsubsection.6.17.3.7}
+\contentsline {subsection}{\numberline {6.17.4}Member Data Documentation}{34}{subsection.6.17.4}
+\contentsline {subsubsection}{\numberline {6.17.4.1}nc}{34}{subsubsection.6.17.4.1}
+\contentsline {subsubsection}{\numberline {6.17.4.2}nspin}{34}{subsubsection.6.17.4.2}
+\contentsline {section}{\numberline {6.18}fermi\_\discretionary {-}{}{}propagator Class Reference}{35}{section.6.18}
+\contentsline {subsection}{\numberline {6.18.1}Detailed Description}{35}{subsection.6.18.1}
+\contentsline {subsection}{\numberline {6.18.2}Constructor \& Destructor Documentation}{36}{subsection.6.18.2}
+\contentsline {subsubsection}{\numberline {6.18.2.1}fermi\_\discretionary {-}{}{}propagator}{36}{subsubsection.6.18.2.1}
+\contentsline {subsubsection}{\numberline {6.18.2.2}fermi\_\discretionary {-}{}{}propagator}{36}{subsubsection.6.18.2.2}
+\contentsline {subsection}{\numberline {6.18.3}Member Function Documentation}{36}{subsection.6.18.3}
+\contentsline {subsubsection}{\numberline {6.18.3.1}allocate\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}propagator}{36}{subsubsection.6.18.3.1}
+\contentsline {subsubsection}{\numberline {6.18.3.2}operator()}{36}{subsubsection.6.18.3.2}
+\contentsline {subsubsection}{\numberline {6.18.3.3}operator()}{36}{subsubsection.6.18.3.3}
+\contentsline {subsection}{\numberline {6.18.4}Friends And Related Function Documentation}{36}{subsection.6.18.4}
+\contentsline {subsubsection}{\numberline {6.18.4.1}generate}{36}{subsubsection.6.18.4.1}
+\contentsline {subsection}{\numberline {6.18.5}Member Data Documentation}{36}{subsection.6.18.5}
+\contentsline {subsubsection}{\numberline {6.18.5.1}nc}{36}{subsubsection.6.18.5.1}
+\contentsline {subsubsection}{\numberline {6.18.5.2}nspin}{36}{subsubsection.6.18.5.2}
+\contentsline {section}{\numberline {6.19}FermiCloverActionFast Class Reference}{37}{section.6.19}
+\contentsline {subsection}{\numberline {6.19.1}Detailed Description}{37}{subsection.6.19.1}
+\contentsline {subsection}{\numberline {6.19.2}Member Function Documentation}{37}{subsection.6.19.2}
+\contentsline {subsubsection}{\numberline {6.19.2.1}mul\_\discretionary {-}{}{}Q}{37}{subsubsection.6.19.2.1}
+\contentsline {section}{\numberline {6.20}FermiCloverActionSlow Class Reference}{38}{section.6.20}
+\contentsline {subsection}{\numberline {6.20.1}Detailed Description}{38}{subsection.6.20.1}
+\contentsline {subsection}{\numberline {6.20.2}Member Function Documentation}{38}{subsection.6.20.2}
+\contentsline {subsubsection}{\numberline {6.20.2.1}mul\_\discretionary {-}{}{}Q}{38}{subsubsection.6.20.2.1}
+\contentsline {section}{\numberline {6.21}gauge\_\discretionary {-}{}{}field Class Reference}{39}{section.6.21}
+\contentsline {subsection}{\numberline {6.21.1}Detailed Description}{39}{subsection.6.21.1}
+\contentsline {subsection}{\numberline {6.21.2}Constructor \& Destructor Documentation}{40}{subsection.6.21.2}
+\contentsline {subsubsection}{\numberline {6.21.2.1}gauge\_\discretionary {-}{}{}field}{40}{subsubsection.6.21.2.1}
+\contentsline {subsubsection}{\numberline {6.21.2.2}gauge\_\discretionary {-}{}{}field}{40}{subsubsection.6.21.2.2}
+\contentsline {subsubsection}{\numberline {6.21.2.3}gauge\_\discretionary {-}{}{}field}{40}{subsubsection.6.21.2.3}
+\contentsline {subsection}{\numberline {6.21.3}Member Function Documentation}{40}{subsection.6.21.3}
+\contentsline {subsubsection}{\numberline {6.21.3.1}allocate\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}field}{40}{subsubsection.6.21.3.1}
+\contentsline {subsubsection}{\numberline {6.21.3.2}operator()}{40}{subsubsection.6.21.3.2}
+\contentsline {subsubsection}{\numberline {6.21.3.3}operator()}{40}{subsubsection.6.21.3.3}
+\contentsline {subsubsection}{\numberline {6.21.3.4}operator()}{40}{subsubsection.6.21.3.4}
+\contentsline {subsubsection}{\numberline {6.21.3.5}operator()}{40}{subsubsection.6.21.3.5}
+\contentsline {subsubsection}{\numberline {6.21.3.6}operator()}{40}{subsubsection.6.21.3.6}
+\contentsline {subsubsection}{\numberline {6.21.3.7}operator()}{40}{subsubsection.6.21.3.7}
+\contentsline {subsubsection}{\numberline {6.21.3.8}operator()}{40}{subsubsection.6.21.3.8}
+\contentsline {subsubsection}{\numberline {6.21.3.9}operator=}{40}{subsubsection.6.21.3.9}
+\contentsline {subsection}{\numberline {6.21.4}Member Data Documentation}{40}{subsection.6.21.4}
+\contentsline {subsubsection}{\numberline {6.21.4.1}em}{40}{subsubsection.6.21.4.1}
+\contentsline {subsubsection}{\numberline {6.21.4.2}i\_\discretionary {-}{}{}jump}{40}{subsubsection.6.21.4.2}
+\contentsline {subsubsection}{\numberline {6.21.4.3}long\_\discretionary {-}{}{}links}{40}{subsubsection.6.21.4.3}
+\contentsline {subsubsection}{\numberline {6.21.4.4}nc}{40}{subsubsection.6.21.4.4}
+\contentsline {subsubsection}{\numberline {6.21.4.5}ndim}{40}{subsubsection.6.21.4.5}
+\contentsline {subsubsection}{\numberline {6.21.4.6}swirls}{40}{subsubsection.6.21.4.6}
+\contentsline {section}{\numberline {6.22}gauge\_\discretionary {-}{}{}stats Class Reference}{41}{section.6.22}
+\contentsline {subsection}{\numberline {6.22.1}Detailed Description}{41}{subsection.6.22.1}
+\contentsline {section}{\numberline {6.23}GaugeFixing Class Reference}{42}{section.6.23}
+\contentsline {subsection}{\numberline {6.23.1}Detailed Description}{42}{subsection.6.23.1}
+\contentsline {subsection}{\numberline {6.23.2}Member Function Documentation}{42}{subsection.6.23.2}
+\contentsline {subsubsection}{\numberline {6.23.2.1}fix}{42}{subsubsection.6.23.2.1}
+\contentsline {subsubsection}{\numberline {6.23.2.2}hit}{43}{subsubsection.6.23.2.2}
+\contentsline {subsubsection}{\numberline {6.23.2.3}z3\_\discretionary {-}{}{}fix}{43}{subsubsection.6.23.2.3}
+\contentsline {subsection}{\numberline {6.23.3}Member Data Documentation}{43}{subsection.6.23.3}
+\contentsline {subsubsection}{\numberline {6.23.3.1}Coulomb}{43}{subsubsection.6.23.3.1}
+\contentsline {subsubsection}{\numberline {6.23.3.2}Landau}{43}{subsubsection.6.23.3.2}
+\contentsline {section}{\numberline {6.24}gaugefixing\_\discretionary {-}{}{}stats Class Reference}{44}{section.6.24}
+\contentsline {subsection}{\numberline {6.24.1}Detailed Description}{44}{subsection.6.24.1}
+\contentsline {subsection}{\numberline {6.24.2}Member Data Documentation}{44}{subsection.6.24.2}
+\contentsline {subsubsection}{\numberline {6.24.2.1}action}{44}{subsubsection.6.24.2.1}
+\contentsline {subsubsection}{\numberline {6.24.2.2}max\_\discretionary {-}{}{}steps}{44}{subsubsection.6.24.2.2}
+\contentsline {subsubsection}{\numberline {6.24.2.3}precision}{44}{subsubsection.6.24.2.3}
+\contentsline {subsubsection}{\numberline {6.24.2.4}steps}{44}{subsubsection.6.24.2.4}
+\contentsline {subsubsection}{\numberline {6.24.2.5}target\_\discretionary {-}{}{}precision}{44}{subsubsection.6.24.2.5}
+\contentsline {section}{\numberline {6.25}HMC$<$ GaugeClass, FermiClass $>$ Class Template Reference}{45}{section.6.25}
+\contentsline {subsection}{\numberline {6.25.1}Constructor \& Destructor Documentation}{46}{subsection.6.25.1}
+\contentsline {subsubsection}{\numberline {6.25.1.1}HMC}{46}{subsubsection.6.25.1.1}
+\contentsline {subsubsection}{\numberline {6.25.1.2}$\sim $HMC}{46}{subsubsection.6.25.1.2}
+\contentsline {subsection}{\numberline {6.25.2}Member Function Documentation}{46}{subsection.6.25.2}
+\contentsline {subsubsection}{\numberline {6.25.2.1}acceptance\_\discretionary {-}{}{}rate}{46}{subsubsection.6.25.2.1}
+\contentsline {subsubsection}{\numberline {6.25.2.2}compute\_\discretionary {-}{}{}action}{46}{subsubsection.6.25.2.2}
+\contentsline {subsubsection}{\numberline {6.25.2.3}compute\_\discretionary {-}{}{}effective\_\discretionary {-}{}{}links}{46}{subsubsection.6.25.2.3}
+\contentsline {subsubsection}{\numberline {6.25.2.4}compute\_\discretionary {-}{}{}fermion\_\discretionary {-}{}{}forces}{46}{subsubsection.6.25.2.4}
+\contentsline {subsubsection}{\numberline {6.25.2.5}compute\_\discretionary {-}{}{}fields\_\discretionary {-}{}{}evolution}{46}{subsubsection.6.25.2.5}
+\contentsline {subsubsection}{\numberline {6.25.2.6}compute\_\discretionary {-}{}{}force}{46}{subsubsection.6.25.2.6}
+\contentsline {subsubsection}{\numberline {6.25.2.7}compute\_\discretionary {-}{}{}gaussian\_\discretionary {-}{}{}momenta}{46}{subsubsection.6.25.2.7}
+\contentsline {subsubsection}{\numberline {6.25.2.8}compute\_\discretionary {-}{}{}kinetic\_\discretionary {-}{}{}energy}{46}{subsubsection.6.25.2.8}
+\contentsline {subsubsection}{\numberline {6.25.2.9}initialize}{46}{subsubsection.6.25.2.9}
+\contentsline {subsubsection}{\numberline {6.25.2.10}set\_\discretionary {-}{}{}gaussian}{46}{subsubsection.6.25.2.10}
+\contentsline {subsubsection}{\numberline {6.25.2.11}spinor}{46}{subsubsection.6.25.2.11}
+\contentsline {subsubsection}{\numberline {6.25.2.12}step}{46}{subsubsection.6.25.2.12}
+\contentsline {subsection}{\numberline {6.25.3}Member Data Documentation}{47}{subsection.6.25.3}
+\contentsline {subsubsection}{\numberline {6.25.3.1}accepted}{47}{subsubsection.6.25.3.1}
+\contentsline {subsubsection}{\numberline {6.25.3.2}ANTISYMMETRIC}{47}{subsubsection.6.25.3.2}
+\contentsline {subsubsection}{\numberline {6.25.3.3}bs}{47}{subsubsection.6.25.3.3}
+\contentsline {subsubsection}{\numberline {6.25.3.4}bs\_\discretionary {-}{}{}old}{47}{subsubsection.6.25.3.4}
+\contentsline {subsubsection}{\numberline {6.25.3.5}coeff}{47}{subsubsection.6.25.3.5}
+\contentsline {subsubsection}{\numberline {6.25.3.6}dimrep}{47}{subsubsection.6.25.3.6}
+\contentsline {subsubsection}{\numberline {6.25.3.7}fs}{47}{subsubsection.6.25.3.7}
+\contentsline {subsubsection}{\numberline {6.25.3.8}fs\_\discretionary {-}{}{}old}{47}{subsubsection.6.25.3.8}
+\contentsline {subsubsection}{\numberline {6.25.3.9}FUNDAMENTAL}{47}{subsubsection.6.25.3.9}
+\contentsline {subsubsection}{\numberline {6.25.3.10}lambda}{47}{subsubsection.6.25.3.10}
+\contentsline {subsubsection}{\numberline {6.25.3.11}S}{47}{subsubsection.6.25.3.11}
+\contentsline {subsubsection}{\numberline {6.25.3.12}s\_\discretionary {-}{}{}old}{47}{subsubsection.6.25.3.12}
+\contentsline {subsubsection}{\numberline {6.25.3.13}steps}{47}{subsubsection.6.25.3.13}
+\contentsline {subsubsection}{\numberline {6.25.3.14}SYMMETRIC}{47}{subsubsection.6.25.3.14}
+\contentsline {section}{\numberline {6.26}ImprovedGaugeAction Class Reference}{48}{section.6.26}
+\contentsline {subsection}{\numberline {6.26.1}Detailed Description}{48}{subsection.6.26.1}
+\contentsline {subsection}{\numberline {6.26.2}Member Function Documentation}{48}{subsection.6.26.2}
+\contentsline {subsubsection}{\numberline {6.26.2.1}heatbath}{48}{subsubsection.6.26.2.1}
+\contentsline {section}{\numberline {6.27}ImprovedGaugeActionSSE2 Class Reference}{49}{section.6.27}
+\contentsline {subsection}{\numberline {6.27.1}Detailed Description}{49}{subsection.6.27.1}
+\contentsline {subsection}{\numberline {6.27.2}Member Function Documentation}{49}{subsection.6.27.2}
+\contentsline {subsubsection}{\numberline {6.27.2.1}heatbath}{49}{subsubsection.6.27.2.1}
+\contentsline {section}{\numberline {6.28}Instanton4D Class Reference}{50}{section.6.28}
+\contentsline {subsection}{\numberline {6.28.1}Constructor \& Destructor Documentation}{50}{subsection.6.28.1}
+\contentsline {subsubsection}{\numberline {6.28.1.1}Instanton4D}{50}{subsubsection.6.28.1.1}
+\contentsline {subsection}{\numberline {6.28.2}Member Function Documentation}{50}{subsection.6.28.2}
+\contentsline {subsubsection}{\numberline {6.28.2.1}operator()}{50}{subsubsection.6.28.2.1}
+\contentsline {subsection}{\numberline {6.28.3}Member Data Documentation}{50}{subsection.6.28.3}
+\contentsline {subsubsection}{\numberline {6.28.3.1}charge}{50}{subsubsection.6.28.3.1}
+\contentsline {subsubsection}{\numberline {6.28.3.2}eta}{50}{subsubsection.6.28.3.2}
+\contentsline {subsubsection}{\numberline {6.28.3.3}lambda}{50}{subsubsection.6.28.3.3}
+\contentsline {subsubsection}{\numberline {6.28.3.4}nc}{50}{subsubsection.6.28.3.4}
+\contentsline {subsubsection}{\numberline {6.28.3.5}p}{50}{subsubsection.6.28.3.5}
+\contentsline {subsubsection}{\numberline {6.28.3.6}sub\_\discretionary {-}{}{}i}{50}{subsubsection.6.28.3.6}
+\contentsline {subsubsection}{\numberline {6.28.3.7}sub\_\discretionary {-}{}{}j}{50}{subsubsection.6.28.3.7}
+\contentsline {section}{\numberline {6.29}inversion\_\discretionary {-}{}{}stats Class Reference}{51}{section.6.29}
+\contentsline {subsection}{\numberline {6.29.1}Detailed Description}{51}{subsection.6.29.1}
+\contentsline {subsection}{\numberline {6.29.2}Member Data Documentation}{51}{subsection.6.29.2}
+\contentsline {subsubsection}{\numberline {6.29.2.1}absolute\_\discretionary {-}{}{}precision}{51}{subsubsection.6.29.2.1}
+\contentsline {subsubsection}{\numberline {6.29.2.2}max\_\discretionary {-}{}{}steps}{51}{subsubsection.6.29.2.2}
+\contentsline {subsubsection}{\numberline {6.29.2.3}mul\_\discretionary {-}{}{}Q\_\discretionary {-}{}{}steps}{51}{subsubsection.6.29.2.3}
+\contentsline {subsubsection}{\numberline {6.29.2.4}relative\_\discretionary {-}{}{}precision}{51}{subsubsection.6.29.2.4}
+\contentsline {subsubsection}{\numberline {6.29.2.5}residue}{51}{subsubsection.6.29.2.5}
+\contentsline {subsubsection}{\numberline {6.29.2.6}steps}{51}{subsubsection.6.29.2.6}
+\contentsline {subsubsection}{\numberline {6.29.2.7}target\_\discretionary {-}{}{}absolute\_\discretionary {-}{}{}precision}{51}{subsubsection.6.29.2.7}
+\contentsline {subsubsection}{\numberline {6.29.2.8}target\_\discretionary {-}{}{}relative\_\discretionary {-}{}{}precision}{51}{subsubsection.6.29.2.8}
+\contentsline {subsubsection}{\numberline {6.29.2.9}time}{51}{subsubsection.6.29.2.9}
+\contentsline {section}{\numberline {6.30}Lanczos$<$ fieldT $>$ Class Template Reference}{52}{section.6.30}
+\contentsline {subsection}{\numberline {6.30.1}Detailed Description}{52}{subsection.6.30.1}
+\contentsline {subsection}{\numberline {6.30.2}Member Function Documentation}{52}{subsection.6.30.2}
+\contentsline {subsubsection}{\numberline {6.30.2.1}step}{52}{subsubsection.6.30.2.1}
+\contentsline {section}{\numberline {6.31}mdp\_\discretionary {-}{}{}array$<$ T, nc\_\discretionary {-}{}{} $>$ Class Template Reference}{53}{section.6.31}
+\contentsline {subsection}{\numberline {6.31.1}Detailed Description}{53}{subsection.6.31.1}
+\contentsline {subsection}{\numberline {6.31.2}Constructor \& Destructor Documentation}{55}{subsection.6.31.2}
+\contentsline {subsubsection}{\numberline {6.31.2.1}mdp\_\discretionary {-}{}{}array}{55}{subsubsection.6.31.2.1}
+\contentsline {subsubsection}{\numberline {6.31.2.2}mdp\_\discretionary {-}{}{}array}{55}{subsubsection.6.31.2.2}
+\contentsline {subsubsection}{\numberline {6.31.2.3}mdp\_\discretionary {-}{}{}array}{55}{subsubsection.6.31.2.3}
+\contentsline {subsubsection}{\numberline {6.31.2.4}mdp\_\discretionary {-}{}{}array}{55}{subsubsection.6.31.2.4}
+\contentsline {subsubsection}{\numberline {6.31.2.5}mdp\_\discretionary {-}{}{}array}{55}{subsubsection.6.31.2.5}
+\contentsline {subsubsection}{\numberline {6.31.2.6}$\sim $mdp\_\discretionary {-}{}{}array}{55}{subsubsection.6.31.2.6}
+\contentsline {subsection}{\numberline {6.31.3}Member Function Documentation}{55}{subsection.6.31.3}
+\contentsline {subsubsection}{\numberline {6.31.3.1}address}{55}{subsubsection.6.31.3.1}
+\contentsline {subsubsection}{\numberline {6.31.3.2}dimension}{55}{subsubsection.6.31.3.2}
+\contentsline {subsubsection}{\numberline {6.31.3.3}dimension}{55}{subsubsection.6.31.3.3}
+\contentsline {subsubsection}{\numberline {6.31.3.4}length}{55}{subsubsection.6.31.3.4}
+\contentsline {subsubsection}{\numberline {6.31.3.5}length}{55}{subsubsection.6.31.3.5}
+\contentsline {subsubsection}{\numberline {6.31.3.6}ndim}{55}{subsubsection.6.31.3.6}
+\contentsline {subsubsection}{\numberline {6.31.3.7}operator()}{55}{subsubsection.6.31.3.7}
+\contentsline {subsubsection}{\numberline {6.31.3.8}operator()}{55}{subsubsection.6.31.3.8}
+\contentsline {subsubsection}{\numberline {6.31.3.9}operator=}{55}{subsubsection.6.31.3.9}
+\contentsline {subsubsection}{\numberline {6.31.3.10}operator[]}{55}{subsubsection.6.31.3.10}
+\contentsline {subsubsection}{\numberline {6.31.3.11}operator[]}{55}{subsubsection.6.31.3.11}
+\contentsline {subsubsection}{\numberline {6.31.3.12}size}{55}{subsubsection.6.31.3.12}
+\contentsline {subsubsection}{\numberline {6.31.3.13}size}{55}{subsubsection.6.31.3.13}
+\contentsline {subsubsection}{\numberline {6.31.3.14}size\_\discretionary {-}{}{}address}{55}{subsubsection.6.31.3.14}
+\contentsline {subsection}{\numberline {6.31.4}Friends And Related Function Documentation}{55}{subsection.6.31.4}
+\contentsline {subsubsection}{\numberline {6.31.4.1}applytoall}{55}{subsubsection.6.31.4.1}
+\contentsline {subsubsection}{\numberline {6.31.4.2}applytoall}{55}{subsubsection.6.31.4.2}
+\contentsline {subsubsection}{\numberline {6.31.4.3}operator$\ast $}{55}{subsubsection.6.31.4.3}
+\contentsline {subsubsection}{\numberline {6.31.4.4}operator+}{55}{subsubsection.6.31.4.4}
+\contentsline {subsubsection}{\numberline {6.31.4.5}operator-\/}{55}{subsubsection.6.31.4.5}
+\contentsline {subsubsection}{\numberline {6.31.4.6}operator$<$$<$}{55}{subsubsection.6.31.4.6}
+\contentsline {subsubsection}{\numberline {6.31.4.7}prepare}{55}{subsubsection.6.31.4.7}
+\contentsline {section}{\numberline {6.32}mdp\_\discretionary {-}{}{}communicator Class Reference}{57}{section.6.32}
+\contentsline {subsection}{\numberline {6.32.1}Detailed Description}{58}{subsection.6.32.1}
+\contentsline {subsection}{\numberline {6.32.2}Constructor \& Destructor Documentation}{58}{subsection.6.32.2}
+\contentsline {subsubsection}{\numberline {6.32.2.1}mdp\_\discretionary {-}{}{}communicator}{58}{subsubsection.6.32.2.1}
+\contentsline {subsection}{\numberline {6.32.3}Member Function Documentation}{58}{subsection.6.32.3}
+\contentsline {subsubsection}{\numberline {6.32.3.1}abort}{58}{subsubsection.6.32.3.1}
+\contentsline {subsubsection}{\numberline {6.32.3.2}add}{59}{subsubsection.6.32.3.2}
+\contentsline {subsubsection}{\numberline {6.32.3.3}add}{59}{subsubsection.6.32.3.3}
+\contentsline {subsubsection}{\numberline {6.32.3.4}add}{59}{subsubsection.6.32.3.4}
+\contentsline {subsubsection}{\numberline {6.32.3.5}add}{59}{subsubsection.6.32.3.5}
+\contentsline {subsubsection}{\numberline {6.32.3.6}add}{59}{subsubsection.6.32.3.6}
+\contentsline {subsubsection}{\numberline {6.32.3.7}add}{59}{subsubsection.6.32.3.7}
+\contentsline {subsubsection}{\numberline {6.32.3.8}add}{59}{subsubsection.6.32.3.8}
+\contentsline {subsubsection}{\numberline {6.32.3.9}add}{59}{subsubsection.6.32.3.9}
+\contentsline {subsubsection}{\numberline {6.32.3.10}add}{59}{subsubsection.6.32.3.10}
+\contentsline {subsubsection}{\numberline {6.32.3.11}add}{59}{subsubsection.6.32.3.11}
+\contentsline {subsubsection}{\numberline {6.32.3.12}add}{59}{subsubsection.6.32.3.12}
+\contentsline {subsubsection}{\numberline {6.32.3.13}add}{59}{subsubsection.6.32.3.13}
+\contentsline {subsubsection}{\numberline {6.32.3.14}add}{59}{subsubsection.6.32.3.14}
+\contentsline {subsubsection}{\numberline {6.32.3.15}add}{59}{subsubsection.6.32.3.15}
+\contentsline {subsubsection}{\numberline {6.32.3.16}add}{59}{subsubsection.6.32.3.16}
+\contentsline {subsubsection}{\numberline {6.32.3.17}barrier}{59}{subsubsection.6.32.3.17}
+\contentsline {subsubsection}{\numberline {6.32.3.18}broadcast}{59}{subsubsection.6.32.3.18}
+\contentsline {subsubsection}{\numberline {6.32.3.19}broadcast}{59}{subsubsection.6.32.3.19}
+\contentsline {subsubsection}{\numberline {6.32.3.20}close\_\discretionary {-}{}{}wormholes}{59}{subsubsection.6.32.3.20}
+\contentsline {subsubsection}{\numberline {6.32.3.21}get}{60}{subsubsection.6.32.3.21}
+\contentsline {subsubsection}{\numberline {6.32.3.22}get}{60}{subsubsection.6.32.3.22}
+\contentsline {subsubsection}{\numberline {6.32.3.23}me}{60}{subsubsection.6.32.3.23}
+\contentsline {subsubsection}{\numberline {6.32.3.24}nproc}{60}{subsubsection.6.32.3.24}
+\contentsline {subsubsection}{\numberline {6.32.3.25}open\_\discretionary {-}{}{}wormholes}{60}{subsubsection.6.32.3.25}
+\contentsline {subsubsection}{\numberline {6.32.3.26}print\_\discretionary {-}{}{}stats}{60}{subsubsection.6.32.3.26}
+\contentsline {subsubsection}{\numberline {6.32.3.27}put}{60}{subsubsection.6.32.3.27}
+\contentsline {subsubsection}{\numberline {6.32.3.28}put}{60}{subsubsection.6.32.3.28}
+\contentsline {subsubsection}{\numberline {6.32.3.29}put}{60}{subsubsection.6.32.3.29}
+\contentsline {subsubsection}{\numberline {6.32.3.30}put}{60}{subsubsection.6.32.3.30}
+\contentsline {subsubsection}{\numberline {6.32.3.31}reset\_\discretionary {-}{}{}time}{60}{subsubsection.6.32.3.31}
+\contentsline {subsubsection}{\numberline {6.32.3.32}tag}{60}{subsubsection.6.32.3.32}
+\contentsline {subsubsection}{\numberline {6.32.3.33}time}{60}{subsubsection.6.32.3.33}
+\contentsline {subsubsection}{\numberline {6.32.3.34}wait}{60}{subsubsection.6.32.3.34}
+\contentsline {subsubsection}{\numberline {6.32.3.35}wait}{60}{subsubsection.6.32.3.35}
+\contentsline {subsection}{\numberline {6.32.4}Member Data Documentation}{60}{subsection.6.32.4}
+\contentsline {subsubsection}{\numberline {6.32.4.1}comm\_\discretionary {-}{}{}time}{60}{subsubsection.6.32.4.1}
+\contentsline {section}{\numberline {6.33}mdp\_\discretionary {-}{}{}complex Class Reference}{61}{section.6.33}
+\contentsline {subsection}{\numberline {6.33.1}Detailed Description}{62}{subsection.6.33.1}
+\contentsline {subsection}{\numberline {6.33.2}Constructor \& Destructor Documentation}{64}{subsection.6.33.2}
+\contentsline {subsubsection}{\numberline {6.33.2.1}mdp\_\discretionary {-}{}{}complex}{64}{subsubsection.6.33.2.1}
+\contentsline {subsubsection}{\numberline {6.33.2.2}mdp\_\discretionary {-}{}{}complex}{64}{subsubsection.6.33.2.2}
+\contentsline {subsection}{\numberline {6.33.3}Member Function Documentation}{64}{subsection.6.33.3}
+\contentsline {subsubsection}{\numberline {6.33.3.1}imag}{64}{subsubsection.6.33.3.1}
+\contentsline {subsubsection}{\numberline {6.33.3.2}imag}{64}{subsubsection.6.33.3.2}
+\contentsline {subsubsection}{\numberline {6.33.3.3}operator!=}{64}{subsubsection.6.33.3.3}
+\contentsline {subsubsection}{\numberline {6.33.3.4}operator$\ast $=}{64}{subsubsection.6.33.3.4}
+\contentsline {subsubsection}{\numberline {6.33.3.5}operator$\ast $=}{64}{subsubsection.6.33.3.5}
+\contentsline {subsubsection}{\numberline {6.33.3.6}operator+=}{64}{subsubsection.6.33.3.6}
+\contentsline {subsubsection}{\numberline {6.33.3.7}operator+=}{64}{subsubsection.6.33.3.7}
+\contentsline {subsubsection}{\numberline {6.33.3.8}operator-\/=}{64}{subsubsection.6.33.3.8}
+\contentsline {subsubsection}{\numberline {6.33.3.9}operator-\/=}{64}{subsubsection.6.33.3.9}
+\contentsline {subsubsection}{\numberline {6.33.3.10}operator/=}{64}{subsubsection.6.33.3.10}
+\contentsline {subsubsection}{\numberline {6.33.3.11}operator/=}{64}{subsubsection.6.33.3.11}
+\contentsline {subsubsection}{\numberline {6.33.3.12}operator==}{64}{subsubsection.6.33.3.12}
+\contentsline {subsubsection}{\numberline {6.33.3.13}real}{64}{subsubsection.6.33.3.13}
+\contentsline {subsubsection}{\numberline {6.33.3.14}real}{64}{subsubsection.6.33.3.14}
+\contentsline {subsection}{\numberline {6.33.4}Friends And Related Function Documentation}{64}{subsection.6.33.4}
+\contentsline {subsubsection}{\numberline {6.33.4.1}abs}{64}{subsubsection.6.33.4.1}
+\contentsline {subsubsection}{\numberline {6.33.4.2}arg}{64}{subsubsection.6.33.4.2}
+\contentsline {subsubsection}{\numberline {6.33.4.3}conj}{64}{subsubsection.6.33.4.3}
+\contentsline {subsubsection}{\numberline {6.33.4.4}cos}{64}{subsubsection.6.33.4.4}
+\contentsline {subsubsection}{\numberline {6.33.4.5}exp}{64}{subsubsection.6.33.4.5}
+\contentsline {subsubsection}{\numberline {6.33.4.6}imag}{64}{subsubsection.6.33.4.6}
+\contentsline {subsubsection}{\numberline {6.33.4.7}operator+}{64}{subsubsection.6.33.4.7}
+\contentsline {subsubsection}{\numberline {6.33.4.8}operator-\/}{64}{subsubsection.6.33.4.8}
+\contentsline {subsubsection}{\numberline {6.33.4.9}phase}{64}{subsubsection.6.33.4.9}
+\contentsline {subsubsection}{\numberline {6.33.4.10}pow}{64}{subsubsection.6.33.4.10}
+\contentsline {subsubsection}{\numberline {6.33.4.11}real}{64}{subsubsection.6.33.4.11}
+\contentsline {subsubsection}{\numberline {6.33.4.12}sin}{64}{subsubsection.6.33.4.12}
+\contentsline {subsubsection}{\numberline {6.33.4.13}sqrt}{64}{subsubsection.6.33.4.13}
+\contentsline {subsubsection}{\numberline {6.33.4.14}times\_\discretionary {-}{}{}i}{64}{subsubsection.6.33.4.14}
+\contentsline {subsubsection}{\numberline {6.33.4.15}times\_\discretionary {-}{}{}minus\_\discretionary {-}{}{}i}{64}{subsubsection.6.33.4.15}
+\contentsline {subsection}{\numberline {6.33.5}Member Data Documentation}{64}{subsection.6.33.5}
+\contentsline {subsubsection}{\numberline {6.33.5.1}im}{64}{subsubsection.6.33.5.1}
+\contentsline {subsubsection}{\numberline {6.33.5.2}re}{64}{subsubsection.6.33.5.2}
+\contentsline {section}{\numberline {6.34}mdp\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}field Class Reference}{66}{section.6.34}
+\contentsline {subsection}{\numberline {6.34.1}Detailed Description}{66}{subsection.6.34.1}
+\contentsline {subsection}{\numberline {6.34.2}Constructor \& Destructor Documentation}{67}{subsection.6.34.2}
+\contentsline {subsubsection}{\numberline {6.34.2.1}mdp\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}field}{67}{subsubsection.6.34.2.1}
+\contentsline {subsubsection}{\numberline {6.34.2.2}mdp\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}field}{67}{subsubsection.6.34.2.2}
+\contentsline {subsubsection}{\numberline {6.34.2.3}mdp\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}field}{67}{subsubsection.6.34.2.3}
+\contentsline {subsection}{\numberline {6.34.3}Member Function Documentation}{67}{subsection.6.34.3}
+\contentsline {subsubsection}{\numberline {6.34.3.1}load\_\discretionary {-}{}{}as\_\discretionary {-}{}{}double}{67}{subsubsection.6.34.3.1}
+\contentsline {subsubsection}{\numberline {6.34.3.2}load\_\discretionary {-}{}{}as\_\discretionary {-}{}{}float}{67}{subsubsection.6.34.3.2}
+\contentsline {subsubsection}{\numberline {6.34.3.3}operator$\ast $=}{67}{subsubsection.6.34.3.3}
+\contentsline {subsubsection}{\numberline {6.34.3.4}operator$\ast $=}{67}{subsubsection.6.34.3.4}
+\contentsline {subsubsection}{\numberline {6.34.3.5}operator+=}{67}{subsubsection.6.34.3.5}
+\contentsline {subsubsection}{\numberline {6.34.3.6}operator-\/=}{67}{subsubsection.6.34.3.6}
+\contentsline {subsubsection}{\numberline {6.34.3.7}operator/=}{67}{subsubsection.6.34.3.7}
+\contentsline {subsubsection}{\numberline {6.34.3.8}operator/=}{67}{subsubsection.6.34.3.8}
+\contentsline {subsubsection}{\numberline {6.34.3.9}operator=}{67}{subsubsection.6.34.3.9}
+\contentsline {subsubsection}{\numberline {6.34.3.10}save\_\discretionary {-}{}{}as\_\discretionary {-}{}{}double}{68}{subsubsection.6.34.3.10}
+\contentsline {subsubsection}{\numberline {6.34.3.11}save\_\discretionary {-}{}{}as\_\discretionary {-}{}{}float}{68}{subsubsection.6.34.3.11}
+\contentsline {subsection}{\numberline {6.34.4}Friends And Related Function Documentation}{68}{subsection.6.34.4}
+\contentsline {subsubsection}{\numberline {6.34.4.1}imag\_\discretionary {-}{}{}scalar\_\discretionary {-}{}{}product}{68}{subsubsection.6.34.4.1}
+\contentsline {subsubsection}{\numberline {6.34.4.2}mdp\_\discretionary {-}{}{}add\_\discretionary {-}{}{}scaled\_\discretionary {-}{}{}field}{68}{subsubsection.6.34.4.2}
+\contentsline {subsubsection}{\numberline {6.34.4.3}mdp\_\discretionary {-}{}{}add\_\discretionary {-}{}{}scaled\_\discretionary {-}{}{}field}{68}{subsubsection.6.34.4.3}
+\contentsline {subsubsection}{\numberline {6.34.4.4}norm\_\discretionary {-}{}{}square}{68}{subsubsection.6.34.4.4}
+\contentsline {subsubsection}{\numberline {6.34.4.5}operator$\ast $}{68}{subsubsection.6.34.4.5}
+\contentsline {subsubsection}{\numberline {6.34.4.6}real\_\discretionary {-}{}{}scalar\_\discretionary {-}{}{}product}{68}{subsubsection.6.34.4.6}
+\contentsline {subsubsection}{\numberline {6.34.4.7}relative\_\discretionary {-}{}{}residue}{68}{subsubsection.6.34.4.7}
+\contentsline {subsubsection}{\numberline {6.34.4.8}scalar\_\discretionary {-}{}{}product}{68}{subsubsection.6.34.4.8}
+\contentsline {section}{\numberline {6.35}mdp\_\discretionary {-}{}{}field$<$ T $>$ Class Template Reference}{69}{section.6.35}
+\contentsline {subsection}{\numberline {6.35.1}Detailed Description}{71}{subsection.6.35.1}
+\contentsline {subsection}{\numberline {6.35.2}Constructor \& Destructor Documentation}{71}{subsection.6.35.2}
+\contentsline {subsubsection}{\numberline {6.35.2.1}mdp\_\discretionary {-}{}{}field}{71}{subsubsection.6.35.2.1}
+\contentsline {subsubsection}{\numberline {6.35.2.2}mdp\_\discretionary {-}{}{}field}{71}{subsubsection.6.35.2.2}
+\contentsline {subsubsection}{\numberline {6.35.2.3}mdp\_\discretionary {-}{}{}field}{71}{subsubsection.6.35.2.3}
+\contentsline {subsubsection}{\numberline {6.35.2.4}$\sim $mdp\_\discretionary {-}{}{}field}{71}{subsubsection.6.35.2.4}
+\contentsline {subsection}{\numberline {6.35.3}Member Function Documentation}{71}{subsection.6.35.3}
+\contentsline {subsubsection}{\numberline {6.35.3.1}address}{71}{subsubsection.6.35.3.1}
+\contentsline {subsubsection}{\numberline {6.35.3.2}allocate\_\discretionary {-}{}{}field}{71}{subsubsection.6.35.3.2}
+\contentsline {subsubsection}{\numberline {6.35.3.3}allocated}{71}{subsubsection.6.35.3.3}
+\contentsline {subsubsection}{\numberline {6.35.3.4}deallocate\_\discretionary {-}{}{}field}{71}{subsubsection.6.35.3.4}
+\contentsline {subsubsection}{\numberline {6.35.3.5}deallocate\_\discretionary {-}{}{}memory}{72}{subsubsection.6.35.3.5}
+\contentsline {subsubsection}{\numberline {6.35.3.6}field\_\discretionary {-}{}{}size}{72}{subsubsection.6.35.3.6}
+\contentsline {subsubsection}{\numberline {6.35.3.7}file\_\discretionary {-}{}{}size}{72}{subsubsection.6.35.3.7}
+\contentsline {subsubsection}{\numberline {6.35.3.8}fill\_\discretionary {-}{}{}header}{72}{subsubsection.6.35.3.8}
+\contentsline {subsubsection}{\numberline {6.35.3.9}global\_\discretionary {-}{}{}size}{72}{subsubsection.6.35.3.9}
+\contentsline {subsubsection}{\numberline {6.35.3.10}lattice}{72}{subsubsection.6.35.3.10}
+\contentsline {subsubsection}{\numberline {6.35.3.11}load}{72}{subsubsection.6.35.3.11}
+\contentsline {subsubsection}{\numberline {6.35.3.12}operator()}{72}{subsubsection.6.35.3.12}
+\contentsline {subsubsection}{\numberline {6.35.3.13}operator()}{72}{subsubsection.6.35.3.13}
+\contentsline {subsubsection}{\numberline {6.35.3.14}operator$\ast $=}{72}{subsubsection.6.35.3.14}
+\contentsline {subsubsection}{\numberline {6.35.3.15}operator+=}{72}{subsubsection.6.35.3.15}
+\contentsline {subsubsection}{\numberline {6.35.3.16}operator-\/=}{72}{subsubsection.6.35.3.16}
+\contentsline {subsubsection}{\numberline {6.35.3.17}operator/=}{72}{subsubsection.6.35.3.17}
+\contentsline {subsubsection}{\numberline {6.35.3.18}operator=}{72}{subsubsection.6.35.3.18}
+\contentsline {subsubsection}{\numberline {6.35.3.19}operator=}{73}{subsubsection.6.35.3.19}
+\contentsline {subsubsection}{\numberline {6.35.3.20}operator[]}{73}{subsubsection.6.35.3.20}
+\contentsline {subsubsection}{\numberline {6.35.3.21}operator[]}{73}{subsubsection.6.35.3.21}
+\contentsline {subsubsection}{\numberline {6.35.3.22}physical\_\discretionary {-}{}{}address}{73}{subsubsection.6.35.3.22}
+\contentsline {subsubsection}{\numberline {6.35.3.23}physical\_\discretionary {-}{}{}local\_\discretionary {-}{}{}start}{73}{subsubsection.6.35.3.23}
+\contentsline {subsubsection}{\numberline {6.35.3.24}physical\_\discretionary {-}{}{}local\_\discretionary {-}{}{}stop}{73}{subsubsection.6.35.3.24}
+\contentsline {subsubsection}{\numberline {6.35.3.25}physical\_\discretionary {-}{}{}size}{73}{subsubsection.6.35.3.25}
+\contentsline {subsubsection}{\numberline {6.35.3.26}reset\_\discretionary {-}{}{}field}{73}{subsubsection.6.35.3.26}
+\contentsline {subsubsection}{\numberline {6.35.3.27}save}{73}{subsubsection.6.35.3.27}
+\contentsline {subsubsection}{\numberline {6.35.3.28}save\_\discretionary {-}{}{}vtk}{73}{subsubsection.6.35.3.28}
+\contentsline {subsubsection}{\numberline {6.35.3.29}shift}{73}{subsubsection.6.35.3.29}
+\contentsline {subsubsection}{\numberline {6.35.3.30}size\_\discretionary {-}{}{}per\_\discretionary {-}{}{}site}{74}{subsubsection.6.35.3.30}
+\contentsline {subsubsection}{\numberline {6.35.3.31}switch\_\discretionary {-}{}{}endianess\_\discretionary {-}{}{}4bytes}{74}{subsubsection.6.35.3.31}
+\contentsline {subsubsection}{\numberline {6.35.3.32}switch\_\discretionary {-}{}{}endianess\_\discretionary {-}{}{}8bytes}{74}{subsubsection.6.35.3.32}
+\contentsline {subsubsection}{\numberline {6.35.3.33}update}{74}{subsubsection.6.35.3.33}
+\contentsline {subsubsection}{\numberline {6.35.3.34}where\_\discretionary {-}{}{}global}{74}{subsubsection.6.35.3.34}
+\contentsline {subsection}{\numberline {6.35.4}Member Data Documentation}{74}{subsection.6.35.4}
+\contentsline {subsubsection}{\numberline {6.35.4.1}field\_\discretionary {-}{}{}components}{74}{subsubsection.6.35.4.1}
+\contentsline {subsubsection}{\numberline {6.35.4.2}header}{74}{subsubsection.6.35.4.2}
+\contentsline {subsubsection}{\numberline {6.35.4.3}m}{74}{subsubsection.6.35.4.3}
+\contentsline {subsubsection}{\numberline {6.35.4.4}ptr}{74}{subsubsection.6.35.4.4}
+\contentsline {subsubsection}{\numberline {6.35.4.5}size}{74}{subsubsection.6.35.4.5}
+\contentsline {subsubsection}{\numberline {6.35.4.6}Tsize}{74}{subsubsection.6.35.4.6}
+\contentsline {section}{\numberline {6.36}mdp\_\discretionary {-}{}{}field\_\discretionary {-}{}{}file\_\discretionary {-}{}{}header Class Reference}{75}{section.6.36}
+\contentsline {subsection}{\numberline {6.36.1}Detailed Description}{75}{subsection.6.36.1}
+\contentsline {subsection}{\numberline {6.36.2}Constructor \& Destructor Documentation}{75}{subsection.6.36.2}
+\contentsline {subsubsection}{\numberline {6.36.2.1}mdp\_\discretionary {-}{}{}field\_\discretionary {-}{}{}file\_\discretionary {-}{}{}header}{75}{subsubsection.6.36.2.1}
+\contentsline {subsection}{\numberline {6.36.3}Member Function Documentation}{75}{subsection.6.36.3}
+\contentsline {subsubsection}{\numberline {6.36.3.1}reset}{75}{subsubsection.6.36.3.1}
+\contentsline {subsubsection}{\numberline {6.36.3.2}set\_\discretionary {-}{}{}time}{75}{subsubsection.6.36.3.2}
+\contentsline {subsection}{\numberline {6.36.4}Friends And Related Function Documentation}{75}{subsection.6.36.4}
+\contentsline {subsubsection}{\numberline {6.36.4.1}switch\_\discretionary {-}{}{}header\_\discretionary {-}{}{}endianess}{75}{subsubsection.6.36.4.1}
+\contentsline {subsection}{\numberline {6.36.5}Member Data Documentation}{76}{subsection.6.36.5}
+\contentsline {subsubsection}{\numberline {6.36.5.1}box}{76}{subsubsection.6.36.5.1}
+\contentsline {subsubsection}{\numberline {6.36.5.2}bytes\_\discretionary {-}{}{}per\_\discretionary {-}{}{}site}{76}{subsubsection.6.36.5.2}
+\contentsline {subsubsection}{\numberline {6.36.5.3}creation\_\discretionary {-}{}{}date}{76}{subsubsection.6.36.5.3}
+\contentsline {subsubsection}{\numberline {6.36.5.4}endianess}{76}{subsubsection.6.36.5.4}
+\contentsline {subsubsection}{\numberline {6.36.5.5}file\_\discretionary {-}{}{}id}{76}{subsubsection.6.36.5.5}
+\contentsline {subsubsection}{\numberline {6.36.5.6}ndim}{76}{subsubsection.6.36.5.6}
+\contentsline {subsubsection}{\numberline {6.36.5.7}program\_\discretionary {-}{}{}version}{76}{subsubsection.6.36.5.7}
+\contentsline {subsubsection}{\numberline {6.36.5.8}sites}{76}{subsubsection.6.36.5.8}
+\contentsline {section}{\numberline {6.37}mdp\_\discretionary {-}{}{}jackboot Class Reference}{77}{section.6.37}
+\contentsline {subsection}{\numberline {6.37.1}Detailed Description}{77}{subsection.6.37.1}
+\contentsline {subsection}{\numberline {6.37.2}Constructor \& Destructor Documentation}{78}{subsection.6.37.2}
+\contentsline {subsubsection}{\numberline {6.37.2.1}mdp\_\discretionary {-}{}{}jackboot}{78}{subsubsection.6.37.2.1}
+\contentsline {subsubsection}{\numberline {6.37.2.2}mdp\_\discretionary {-}{}{}jackboot}{78}{subsubsection.6.37.2.2}
+\contentsline {subsubsection}{\numberline {6.37.2.3}$\sim $mdp\_\discretionary {-}{}{}jackboot}{78}{subsubsection.6.37.2.3}
+\contentsline {subsection}{\numberline {6.37.3}Member Function Documentation}{78}{subsection.6.37.3}
+\contentsline {subsubsection}{\numberline {6.37.3.1}address}{78}{subsubsection.6.37.3.1}
+\contentsline {subsubsection}{\numberline {6.37.3.2}b\_\discretionary {-}{}{}err}{78}{subsubsection.6.37.3.2}
+\contentsline {subsubsection}{\numberline {6.37.3.3}dimension}{78}{subsubsection.6.37.3.3}
+\contentsline {subsubsection}{\numberline {6.37.3.4}j\_\discretionary {-}{}{}err}{78}{subsubsection.6.37.3.4}
+\contentsline {subsubsection}{\numberline {6.37.3.5}makesample}{78}{subsubsection.6.37.3.5}
+\contentsline {subsubsection}{\numberline {6.37.3.6}mean}{78}{subsubsection.6.37.3.6}
+\contentsline {subsubsection}{\numberline {6.37.3.7}operator()}{78}{subsubsection.6.37.3.7}
+\contentsline {subsubsection}{\numberline {6.37.3.8}operator()}{78}{subsubsection.6.37.3.8}
+\contentsline {subsubsection}{\numberline {6.37.3.9}plain}{78}{subsubsection.6.37.3.9}
+\contentsline {subsection}{\numberline {6.37.4}Friends And Related Function Documentation}{78}{subsection.6.37.4}
+\contentsline {subsubsection}{\numberline {6.37.4.1}mdp\_\discretionary {-}{}{}jackboot\_\discretionary {-}{}{}plain}{78}{subsubsection.6.37.4.1}
+\contentsline {subsection}{\numberline {6.37.5}Member Data Documentation}{78}{subsection.6.37.5}
+\contentsline {subsubsection}{\numberline {6.37.5.1}conf}{78}{subsubsection.6.37.5.1}
+\contentsline {subsubsection}{\numberline {6.37.5.2}f}{78}{subsubsection.6.37.5.2}
+\contentsline {subsubsection}{\numberline {6.37.5.3}handle}{78}{subsubsection.6.37.5.3}
+\contentsline {subsubsection}{\numberline {6.37.5.4}m}{78}{subsubsection.6.37.5.4}
+\contentsline {subsubsection}{\numberline {6.37.5.5}narg}{78}{subsubsection.6.37.5.5}
+\contentsline {subsubsection}{\numberline {6.37.5.6}nconf}{78}{subsubsection.6.37.5.6}
+\contentsline {section}{\numberline {6.38}mdp\_\discretionary {-}{}{}lattice Class Reference}{79}{section.6.38}
+\contentsline {subsection}{\numberline {6.38.1}Detailed Description}{80}{subsection.6.38.1}
+\contentsline {subsection}{\numberline {6.38.2}Constructor \& Destructor Documentation}{81}{subsection.6.38.2}
+\contentsline {subsubsection}{\numberline {6.38.2.1}mdp\_\discretionary {-}{}{}lattice}{81}{subsubsection.6.38.2.1}
+\contentsline {subsubsection}{\numberline {6.38.2.2}mdp\_\discretionary {-}{}{}lattice}{81}{subsubsection.6.38.2.2}
+\contentsline {subsubsection}{\numberline {6.38.2.3}mdp\_\discretionary {-}{}{}lattice}{81}{subsubsection.6.38.2.3}
+\contentsline {subsubsection}{\numberline {6.38.2.4}$\sim $mdp\_\discretionary {-}{}{}lattice}{81}{subsubsection.6.38.2.4}
+\contentsline {subsection}{\numberline {6.38.3}Member Function Documentation}{81}{subsection.6.38.3}
+\contentsline {subsubsection}{\numberline {6.38.3.1}allocate\_\discretionary {-}{}{}lattice}{81}{subsubsection.6.38.3.1}
+\contentsline {subsubsection}{\numberline {6.38.3.2}allocate\_\discretionary {-}{}{}lattice}{81}{subsubsection.6.38.3.2}
+\contentsline {subsubsection}{\numberline {6.38.3.3}compute\_\discretionary {-}{}{}parity}{82}{subsubsection.6.38.3.3}
+\contentsline {subsubsection}{\numberline {6.38.3.4}deallocate\_\discretionary {-}{}{}memory}{82}{subsubsection.6.38.3.4}
+\contentsline {subsubsection}{\numberline {6.38.3.5}global}{82}{subsubsection.6.38.3.5}
+\contentsline {subsubsection}{\numberline {6.38.3.6}global\_\discretionary {-}{}{}coordinate}{82}{subsubsection.6.38.3.6}
+\contentsline {subsubsection}{\numberline {6.38.3.7}global\_\discretionary {-}{}{}coordinate}{82}{subsubsection.6.38.3.7}
+\contentsline {subsubsection}{\numberline {6.38.3.8}global\_\discretionary {-}{}{}volume}{82}{subsubsection.6.38.3.8}
+\contentsline {subsubsection}{\numberline {6.38.3.9}initialize\_\discretionary {-}{}{}random}{82}{subsubsection.6.38.3.9}
+\contentsline {subsubsection}{\numberline {6.38.3.10}local}{82}{subsubsection.6.38.3.10}
+\contentsline {subsubsection}{\numberline {6.38.3.11}local\_\discretionary {-}{}{}volume}{82}{subsubsection.6.38.3.11}
+\contentsline {subsubsection}{\numberline {6.38.3.12}move\_\discretionary {-}{}{}down}{82}{subsubsection.6.38.3.12}
+\contentsline {subsubsection}{\numberline {6.38.3.13}move\_\discretionary {-}{}{}up}{82}{subsubsection.6.38.3.13}
+\contentsline {subsubsection}{\numberline {6.38.3.14}n\_\discretionary {-}{}{}dimensions}{82}{subsubsection.6.38.3.14}
+\contentsline {subsubsection}{\numberline {6.38.3.15}n\_\discretionary {-}{}{}directions}{82}{subsubsection.6.38.3.15}
+\contentsline {subsubsection}{\numberline {6.38.3.16}random}{82}{subsubsection.6.38.3.16}
+\contentsline {subsubsection}{\numberline {6.38.3.17}site\_\discretionary {-}{}{}parity}{83}{subsubsection.6.38.3.17}
+\contentsline {subsubsection}{\numberline {6.38.3.18}size}{83}{subsubsection.6.38.3.18}
+\contentsline {subsubsection}{\numberline {6.38.3.19}size}{83}{subsubsection.6.38.3.19}
+\contentsline {subsubsection}{\numberline {6.38.3.20}start\_\discretionary {-}{}{}index}{85}{subsubsection.6.38.3.20}
+\contentsline {subsubsection}{\numberline {6.38.3.21}stop\_\discretionary {-}{}{}index}{85}{subsubsection.6.38.3.21}
+\contentsline {subsection}{\numberline {6.38.4}Member Data Documentation}{85}{subsection.6.38.4}
+\contentsline {subsubsection}{\numberline {6.38.4.1}co}{85}{subsubsection.6.38.4.1}
+\contentsline {subsubsection}{\numberline {6.38.4.2}dw}{85}{subsubsection.6.38.4.2}
+\contentsline {subsubsection}{\numberline {6.38.4.3}gl}{85}{subsubsection.6.38.4.3}
+\contentsline {subsubsection}{\numberline {6.38.4.4}len\_\discretionary {-}{}{}to\_\discretionary {-}{}{}send}{85}{subsubsection.6.38.4.4}
+\contentsline {subsubsection}{\numberline {6.38.4.5}lg}{85}{subsubsection.6.38.4.5}
+\contentsline {subsubsection}{\numberline {6.38.4.6}lg\_\discretionary {-}{}{}file}{85}{subsubsection.6.38.4.6}
+\contentsline {subsubsection}{\numberline {6.38.4.7}local\_\discretionary {-}{}{}random\_\discretionary {-}{}{}generator}{85}{subsubsection.6.38.4.7}
+\contentsline {subsubsection}{\numberline {6.38.4.8}ndim}{85}{subsubsection.6.38.4.8}
+\contentsline {subsubsection}{\numberline {6.38.4.9}ndir}{85}{subsubsection.6.38.4.9}
+\contentsline {subsubsection}{\numberline {6.38.4.10}neighbour}{85}{subsubsection.6.38.4.10}
+\contentsline {subsubsection}{\numberline {6.38.4.11}next\_\discretionary {-}{}{}next}{85}{subsubsection.6.38.4.11}
+\contentsline {subsubsection}{\numberline {6.38.4.12}nvol}{85}{subsubsection.6.38.4.12}
+\contentsline {subsubsection}{\numberline {6.38.4.13}nvol\_\discretionary {-}{}{}gl}{85}{subsubsection.6.38.4.13}
+\contentsline {subsubsection}{\numberline {6.38.4.14}nvol\_\discretionary {-}{}{}in}{85}{subsubsection.6.38.4.14}
+\contentsline {subsubsection}{\numberline {6.38.4.15}nx}{85}{subsubsection.6.38.4.15}
+\contentsline {subsubsection}{\numberline {6.38.4.16}parity}{85}{subsubsection.6.38.4.16}
+\contentsline {subsubsection}{\numberline {6.38.4.17}start}{85}{subsubsection.6.38.4.17}
+\contentsline {subsubsection}{\numberline {6.38.4.18}stop}{85}{subsubsection.6.38.4.18}
+\contentsline {subsubsection}{\numberline {6.38.4.19}to\_\discretionary {-}{}{}send}{85}{subsubsection.6.38.4.19}
+\contentsline {subsubsection}{\numberline {6.38.4.20}up}{85}{subsubsection.6.38.4.20}
+\contentsline {subsubsection}{\numberline {6.38.4.21}wh}{85}{subsubsection.6.38.4.21}
+\contentsline {subsubsection}{\numberline {6.38.4.22}where}{85}{subsubsection.6.38.4.22}
+\contentsline {section}{\numberline {6.39}mdp\_\discretionary {-}{}{}log Class Reference}{87}{section.6.39}
+\contentsline {subsection}{\numberline {6.39.1}Detailed Description}{87}{subsection.6.39.1}
+\contentsline {subsection}{\numberline {6.39.2}Constructor \& Destructor Documentation}{87}{subsection.6.39.2}
+\contentsline {subsubsection}{\numberline {6.39.2.1}mdp\_\discretionary {-}{}{}log}{87}{subsubsection.6.39.2.1}
+\contentsline {subsection}{\numberline {6.39.3}Member Function Documentation}{87}{subsection.6.39.3}
+\contentsline {subsubsection}{\numberline {6.39.3.1}abort}{87}{subsubsection.6.39.3.1}
+\contentsline {subsubsection}{\numberline {6.39.3.2}begin\_\discretionary {-}{}{}function}{88}{subsubsection.6.39.3.2}
+\contentsline {subsubsection}{\numberline {6.39.3.3}connect}{88}{subsubsection.6.39.3.3}
+\contentsline {subsubsection}{\numberline {6.39.3.4}connect}{88}{subsubsection.6.39.3.4}
+\contentsline {subsubsection}{\numberline {6.39.3.5}end\_\discretionary {-}{}{}function}{88}{subsubsection.6.39.3.5}
+\contentsline {subsubsection}{\numberline {6.39.3.6}error\_\discretionary {-}{}{}message}{88}{subsubsection.6.39.3.6}
+\contentsline {subsubsection}{\numberline {6.39.3.7}operator$<$$<$}{88}{subsubsection.6.39.3.7}
+\contentsline {subsubsection}{\numberline {6.39.3.8}set\_\discretionary {-}{}{}level}{88}{subsubsection.6.39.3.8}
+\contentsline {subsection}{\numberline {6.39.4}Member Data Documentation}{88}{subsection.6.39.4}
+\contentsline {subsubsection}{\numberline {6.39.4.1}print}{88}{subsubsection.6.39.4.1}
+\contentsline {section}{\numberline {6.40}mdp\_\discretionary {-}{}{}matrix Class Reference}{89}{section.6.40}
+\contentsline {subsection}{\numberline {6.40.1}Detailed Description}{90}{subsection.6.40.1}
+\contentsline {subsection}{\numberline {6.40.2}Constructor \& Destructor Documentation}{92}{subsection.6.40.2}
+\contentsline {subsubsection}{\numberline {6.40.2.1}mdp\_\discretionary {-}{}{}matrix}{92}{subsubsection.6.40.2.1}
+\contentsline {subsubsection}{\numberline {6.40.2.2}mdp\_\discretionary {-}{}{}matrix}{92}{subsubsection.6.40.2.2}
+\contentsline {subsubsection}{\numberline {6.40.2.3}mdp\_\discretionary {-}{}{}matrix}{92}{subsubsection.6.40.2.3}
+\contentsline {subsubsection}{\numberline {6.40.2.4}mdp\_\discretionary {-}{}{}matrix}{92}{subsubsection.6.40.2.4}
+\contentsline {subsubsection}{\numberline {6.40.2.5}$\sim $mdp\_\discretionary {-}{}{}matrix}{92}{subsubsection.6.40.2.5}
+\contentsline {subsection}{\numberline {6.40.3}Member Function Documentation}{92}{subsection.6.40.3}
+\contentsline {subsubsection}{\numberline {6.40.3.1}address}{92}{subsubsection.6.40.3.1}
+\contentsline {subsubsection}{\numberline {6.40.3.2}allocate}{92}{subsubsection.6.40.3.2}
+\contentsline {subsubsection}{\numberline {6.40.3.3}colmax}{92}{subsubsection.6.40.3.3}
+\contentsline {subsubsection}{\numberline {6.40.3.4}cols}{92}{subsubsection.6.40.3.4}
+\contentsline {subsubsection}{\numberline {6.40.3.5}deallocate}{92}{subsubsection.6.40.3.5}
+\contentsline {subsubsection}{\numberline {6.40.3.6}dimension}{92}{subsubsection.6.40.3.6}
+\contentsline {subsubsection}{\numberline {6.40.3.7}operator()}{92}{subsubsection.6.40.3.7}
+\contentsline {subsubsection}{\numberline {6.40.3.8}operator()}{92}{subsubsection.6.40.3.8}
+\contentsline {subsubsection}{\numberline {6.40.3.9}operator()}{92}{subsubsection.6.40.3.9}
+\contentsline {subsubsection}{\numberline {6.40.3.10}operator$\ast $=}{92}{subsubsection.6.40.3.10}
+\contentsline {subsubsection}{\numberline {6.40.3.11}operator$\ast $=}{92}{subsubsection.6.40.3.11}
+\contentsline {subsubsection}{\numberline {6.40.3.12}operator$\ast $=}{92}{subsubsection.6.40.3.12}
+\contentsline {subsubsection}{\numberline {6.40.3.13}operator+=}{92}{subsubsection.6.40.3.13}
+\contentsline {subsubsection}{\numberline {6.40.3.14}operator+=}{92}{subsubsection.6.40.3.14}
+\contentsline {subsubsection}{\numberline {6.40.3.15}operator+=}{92}{subsubsection.6.40.3.15}
+\contentsline {subsubsection}{\numberline {6.40.3.16}operator-\/=}{92}{subsubsection.6.40.3.16}
+\contentsline {subsubsection}{\numberline {6.40.3.17}operator-\/=}{92}{subsubsection.6.40.3.17}
+\contentsline {subsubsection}{\numberline {6.40.3.18}operator-\/=}{92}{subsubsection.6.40.3.18}
+\contentsline {subsubsection}{\numberline {6.40.3.19}operator/=}{92}{subsubsection.6.40.3.19}
+\contentsline {subsubsection}{\numberline {6.40.3.20}operator/=}{92}{subsubsection.6.40.3.20}
+\contentsline {subsubsection}{\numberline {6.40.3.21}operator/=}{92}{subsubsection.6.40.3.21}
+\contentsline {subsubsection}{\numberline {6.40.3.22}operator=}{92}{subsubsection.6.40.3.22}
+\contentsline {subsubsection}{\numberline {6.40.3.23}operator=}{92}{subsubsection.6.40.3.23}
+\contentsline {subsubsection}{\numberline {6.40.3.24}operator=}{92}{subsubsection.6.40.3.24}
+\contentsline {subsubsection}{\numberline {6.40.3.25}operator[]}{92}{subsubsection.6.40.3.25}
+\contentsline {subsubsection}{\numberline {6.40.3.26}operator[]}{92}{subsubsection.6.40.3.26}
+\contentsline {subsubsection}{\numberline {6.40.3.27}reallocate}{92}{subsubsection.6.40.3.27}
+\contentsline {subsubsection}{\numberline {6.40.3.28}rowmax}{92}{subsubsection.6.40.3.28}
+\contentsline {subsubsection}{\numberline {6.40.3.29}rows}{92}{subsubsection.6.40.3.29}
+\contentsline {subsubsection}{\numberline {6.40.3.30}size}{92}{subsubsection.6.40.3.30}
+\contentsline {subsection}{\numberline {6.40.4}Friends And Related Function Documentation}{92}{subsection.6.40.4}
+\contentsline {subsubsection}{\numberline {6.40.4.1}conj}{92}{subsubsection.6.40.4.1}
+\contentsline {subsubsection}{\numberline {6.40.4.2}cos}{92}{subsubsection.6.40.4.2}
+\contentsline {subsubsection}{\numberline {6.40.4.3}det}{92}{subsubsection.6.40.4.3}
+\contentsline {subsubsection}{\numberline {6.40.4.4}exp}{92}{subsubsection.6.40.4.4}
+\contentsline {subsubsection}{\numberline {6.40.4.5}hermitian}{92}{subsubsection.6.40.4.5}
+\contentsline {subsubsection}{\numberline {6.40.4.6}inv}{92}{subsubsection.6.40.4.6}
+\contentsline {subsubsection}{\numberline {6.40.4.7}log}{92}{subsubsection.6.40.4.7}
+\contentsline {subsubsection}{\numberline {6.40.4.8}max}{92}{subsubsection.6.40.4.8}
+\contentsline {subsubsection}{\numberline {6.40.4.9}mdp\_\discretionary {-}{}{}identity}{92}{subsubsection.6.40.4.9}
+\contentsline {subsubsection}{\numberline {6.40.4.10}mdp\_\discretionary {-}{}{}zero}{92}{subsubsection.6.40.4.10}
+\contentsline {subsubsection}{\numberline {6.40.4.11}operator$\ast $}{92}{subsubsection.6.40.4.11}
+\contentsline {subsubsection}{\numberline {6.40.4.12}operator$\ast $}{92}{subsubsection.6.40.4.12}
+\contentsline {subsubsection}{\numberline {6.40.4.13}operator$\ast $}{92}{subsubsection.6.40.4.13}
+\contentsline {subsubsection}{\numberline {6.40.4.14}operator$\ast $}{92}{subsubsection.6.40.4.14}
+\contentsline {subsubsection}{\numberline {6.40.4.15}operator$\ast $}{92}{subsubsection.6.40.4.15}
+\contentsline {subsubsection}{\numberline {6.40.4.16}operator+}{92}{subsubsection.6.40.4.16}
+\contentsline {subsubsection}{\numberline {6.40.4.17}operator+}{92}{subsubsection.6.40.4.17}
+\contentsline {subsubsection}{\numberline {6.40.4.18}operator+}{92}{subsubsection.6.40.4.18}
+\contentsline {subsubsection}{\numberline {6.40.4.19}operator+}{92}{subsubsection.6.40.4.19}
+\contentsline {subsubsection}{\numberline {6.40.4.20}operator+}{92}{subsubsection.6.40.4.20}
+\contentsline {subsubsection}{\numberline {6.40.4.21}operator+}{92}{subsubsection.6.40.4.21}
+\contentsline {subsubsection}{\numberline {6.40.4.22}operator-\/}{92}{subsubsection.6.40.4.22}
+\contentsline {subsubsection}{\numberline {6.40.4.23}operator-\/}{92}{subsubsection.6.40.4.23}
+\contentsline {subsubsection}{\numberline {6.40.4.24}operator-\/}{92}{subsubsection.6.40.4.24}
+\contentsline {subsubsection}{\numberline {6.40.4.25}operator-\/}{92}{subsubsection.6.40.4.25}
+\contentsline {subsubsection}{\numberline {6.40.4.26}operator-\/}{92}{subsubsection.6.40.4.26}
+\contentsline {subsubsection}{\numberline {6.40.4.27}operator-\/}{92}{subsubsection.6.40.4.27}
+\contentsline {subsubsection}{\numberline {6.40.4.28}operator/}{92}{subsubsection.6.40.4.28}
+\contentsline {subsubsection}{\numberline {6.40.4.29}operator/}{92}{subsubsection.6.40.4.29}
+\contentsline {subsubsection}{\numberline {6.40.4.30}operator/}{92}{subsubsection.6.40.4.30}
+\contentsline {subsubsection}{\numberline {6.40.4.31}operator/}{92}{subsubsection.6.40.4.31}
+\contentsline {subsubsection}{\numberline {6.40.4.32}operator/}{92}{subsubsection.6.40.4.32}
+\contentsline {subsubsection}{\numberline {6.40.4.33}pow}{92}{subsubsection.6.40.4.33}
+\contentsline {subsubsection}{\numberline {6.40.4.34}prepare}{92}{subsubsection.6.40.4.34}
+\contentsline {subsubsection}{\numberline {6.40.4.35}sin}{92}{subsubsection.6.40.4.35}
+\contentsline {subsubsection}{\numberline {6.40.4.36}submatrix}{92}{subsubsection.6.40.4.36}
+\contentsline {subsubsection}{\numberline {6.40.4.37}trace}{92}{subsubsection.6.40.4.37}
+\contentsline {subsubsection}{\numberline {6.40.4.38}transpose}{92}{subsubsection.6.40.4.38}
+\contentsline {section}{\numberline {6.41}mdp\_\discretionary {-}{}{}matrix\_\discretionary {-}{}{}field Class Reference}{94}{section.6.41}
+\contentsline {subsection}{\numberline {6.41.1}Detailed Description}{94}{subsection.6.41.1}
+\contentsline {subsection}{\numberline {6.41.2}Constructor \& Destructor Documentation}{95}{subsection.6.41.2}
+\contentsline {subsubsection}{\numberline {6.41.2.1}mdp\_\discretionary {-}{}{}matrix\_\discretionary {-}{}{}field}{95}{subsubsection.6.41.2.1}
+\contentsline {subsubsection}{\numberline {6.41.2.2}mdp\_\discretionary {-}{}{}matrix\_\discretionary {-}{}{}field}{95}{subsubsection.6.41.2.2}
+\contentsline {subsubsection}{\numberline {6.41.2.3}mdp\_\discretionary {-}{}{}matrix\_\discretionary {-}{}{}field}{95}{subsubsection.6.41.2.3}
+\contentsline {subsection}{\numberline {6.41.3}Member Function Documentation}{95}{subsection.6.41.3}
+\contentsline {subsubsection}{\numberline {6.41.3.1}allocate\_\discretionary {-}{}{}mdp\_\discretionary {-}{}{}matrix\_\discretionary {-}{}{}field}{95}{subsubsection.6.41.3.1}
+\contentsline {subsubsection}{\numberline {6.41.3.2}operator()}{95}{subsubsection.6.41.3.2}
+\contentsline {subsubsection}{\numberline {6.41.3.3}operator()}{95}{subsubsection.6.41.3.3}
+\contentsline {subsubsection}{\numberline {6.41.3.4}operator()}{95}{subsubsection.6.41.3.4}
+\contentsline {subsection}{\numberline {6.41.4}Member Data Documentation}{95}{subsection.6.41.4}
+\contentsline {subsubsection}{\numberline {6.41.4.1}columns}{95}{subsubsection.6.41.4.1}
+\contentsline {subsubsection}{\numberline {6.41.4.2}imax}{95}{subsubsection.6.41.4.2}
+\contentsline {subsubsection}{\numberline {6.41.4.3}rows}{95}{subsubsection.6.41.4.3}
+\contentsline {section}{\numberline {6.42}mdp\_\discretionary {-}{}{}measure Class Reference}{96}{section.6.42}
+\contentsline {subsection}{\numberline {6.42.1}Detailed Description}{97}{subsection.6.42.1}
+\contentsline {subsection}{\numberline {6.42.2}Constructor \& Destructor Documentation}{99}{subsection.6.42.2}
+\contentsline {subsubsection}{\numberline {6.42.2.1}mdp\_\discretionary {-}{}{}measure}{99}{subsubsection.6.42.2.1}
+\contentsline {subsubsection}{\numberline {6.42.2.2}mdp\_\discretionary {-}{}{}measure}{99}{subsubsection.6.42.2.2}
+\contentsline {subsection}{\numberline {6.42.3}Member Function Documentation}{99}{subsection.6.42.3}
+\contentsline {subsubsection}{\numberline {6.42.3.1}getmean}{99}{subsubsection.6.42.3.1}
+\contentsline {subsubsection}{\numberline {6.42.3.2}getmerr}{99}{subsubsection.6.42.3.2}
+\contentsline {subsubsection}{\numberline {6.42.3.3}getnum}{99}{subsubsection.6.42.3.3}
+\contentsline {subsubsection}{\numberline {6.42.3.4}operator$<$$<$}{99}{subsubsection.6.42.3.4}
+\contentsline {subsubsection}{\numberline {6.42.3.5}operator$>$$>$}{99}{subsubsection.6.42.3.5}
+\contentsline {subsubsection}{\numberline {6.42.3.6}reset}{99}{subsubsection.6.42.3.6}
+\contentsline {subsubsection}{\numberline {6.42.3.7}set}{99}{subsubsection.6.42.3.7}
+\contentsline {subsection}{\numberline {6.42.4}Friends And Related Function Documentation}{99}{subsection.6.42.4}
+\contentsline {subsubsection}{\numberline {6.42.4.1}cos}{99}{subsubsection.6.42.4.1}
+\contentsline {subsubsection}{\numberline {6.42.4.2}exp}{99}{subsubsection.6.42.4.2}
+\contentsline {subsubsection}{\numberline {6.42.4.3}log}{99}{subsubsection.6.42.4.3}
+\contentsline {subsubsection}{\numberline {6.42.4.4}operator$\ast $}{99}{subsubsection.6.42.4.4}
+\contentsline {subsubsection}{\numberline {6.42.4.5}operator$\ast $}{99}{subsubsection.6.42.4.5}
+\contentsline {subsubsection}{\numberline {6.42.4.6}operator$\ast $}{99}{subsubsection.6.42.4.6}
+\contentsline {subsubsection}{\numberline {6.42.4.7}operator+}{99}{subsubsection.6.42.4.7}
+\contentsline {subsubsection}{\numberline {6.42.4.8}operator+}{99}{subsubsection.6.42.4.8}
+\contentsline {subsubsection}{\numberline {6.42.4.9}operator+}{99}{subsubsection.6.42.4.9}
+\contentsline {subsubsection}{\numberline {6.42.4.10}operator-\/}{99}{subsubsection.6.42.4.10}
+\contentsline {subsubsection}{\numberline {6.42.4.11}operator-\/}{99}{subsubsection.6.42.4.11}
+\contentsline {subsubsection}{\numberline {6.42.4.12}operator-\/}{99}{subsubsection.6.42.4.12}
+\contentsline {subsubsection}{\numberline {6.42.4.13}operator/}{99}{subsubsection.6.42.4.13}
+\contentsline {subsubsection}{\numberline {6.42.4.14}operator/}{99}{subsubsection.6.42.4.14}
+\contentsline {subsubsection}{\numberline {6.42.4.15}operator/}{99}{subsubsection.6.42.4.15}
+\contentsline {subsubsection}{\numberline {6.42.4.16}pow}{99}{subsubsection.6.42.4.16}
+\contentsline {subsubsection}{\numberline {6.42.4.17}print}{99}{subsubsection.6.42.4.17}
+\contentsline {subsubsection}{\numberline {6.42.4.18}sin}{99}{subsubsection.6.42.4.18}
+\contentsline {subsection}{\numberline {6.42.5}Member Data Documentation}{99}{subsection.6.42.5}
+\contentsline {subsubsection}{\numberline {6.42.5.1}error}{99}{subsubsection.6.42.5.1}
+\contentsline {subsubsection}{\numberline {6.42.5.2}mean}{99}{subsubsection.6.42.5.2}
+\contentsline {subsubsection}{\numberline {6.42.5.3}num}{99}{subsubsection.6.42.5.3}
+\contentsline {section}{\numberline {6.43}mdp\_\discretionary {-}{}{}nmatrix\_\discretionary {-}{}{}field Class Reference}{101}{section.6.43}
+\contentsline {subsection}{\numberline {6.43.1}Detailed Description}{101}{subsection.6.43.1}
+\contentsline {subsection}{\numberline {6.43.2}Constructor \& Destructor Documentation}{102}{subsection.6.43.2}
+\contentsline {subsubsection}{\numberline {6.43.2.1}mdp\_\discretionary {-}{}{}nmatrix\_\discretionary {-}{}{}field}{102}{subsubsection.6.43.2.1}
+\contentsline {subsubsection}{\numberline {6.43.2.2}mdp\_\discretionary {-}{}{}nmatrix\_\discretionary {-}{}{}field}{102}{subsubsection.6.43.2.2}
+\contentsline {subsubsection}{\numberline {6.43.2.3}mdp\_\discretionary {-}{}{}nmatrix\_\discretionary {-}{}{}field}{102}{subsubsection.6.43.2.3}
+\contentsline {subsection}{\numberline {6.43.3}Member Function Documentation}{102}{subsection.6.43.3}
+\contentsline {subsubsection}{\numberline {6.43.3.1}allocate\_\discretionary {-}{}{}mdp\_\discretionary {-}{}{}nmatrix\_\discretionary {-}{}{}field}{102}{subsubsection.6.43.3.1}
+\contentsline {subsubsection}{\numberline {6.43.3.2}operator()}{102}{subsubsection.6.43.3.2}
+\contentsline {subsubsection}{\numberline {6.43.3.3}operator()}{102}{subsubsection.6.43.3.3}
+\contentsline {subsubsection}{\numberline {6.43.3.4}operator()}{102}{subsubsection.6.43.3.4}
+\contentsline {subsection}{\numberline {6.43.4}Member Data Documentation}{102}{subsection.6.43.4}
+\contentsline {subsubsection}{\numberline {6.43.4.1}columns}{102}{subsubsection.6.43.4.1}
+\contentsline {subsubsection}{\numberline {6.43.4.2}imax}{102}{subsubsection.6.43.4.2}
+\contentsline {subsubsection}{\numberline {6.43.4.3}imax2}{102}{subsubsection.6.43.4.3}
+\contentsline {subsubsection}{\numberline {6.43.4.4}matrices}{102}{subsubsection.6.43.4.4}
+\contentsline {subsubsection}{\numberline {6.43.4.5}rows}{102}{subsubsection.6.43.4.5}
+\contentsline {section}{\numberline {6.44}mdp\_\discretionary {-}{}{}nvector\_\discretionary {-}{}{}field Class Reference}{103}{section.6.44}
+\contentsline {subsection}{\numberline {6.44.1}Detailed Description}{103}{subsection.6.44.1}
+\contentsline {subsection}{\numberline {6.44.2}Constructor \& Destructor Documentation}{104}{subsection.6.44.2}
+\contentsline {subsubsection}{\numberline {6.44.2.1}mdp\_\discretionary {-}{}{}nvector\_\discretionary {-}{}{}field}{104}{subsubsection.6.44.2.1}
+\contentsline {subsubsection}{\numberline {6.44.2.2}mdp\_\discretionary {-}{}{}nvector\_\discretionary {-}{}{}field}{104}{subsubsection.6.44.2.2}
+\contentsline {subsubsection}{\numberline {6.44.2.3}mdp\_\discretionary {-}{}{}nvector\_\discretionary {-}{}{}field}{104}{subsubsection.6.44.2.3}
+\contentsline {subsection}{\numberline {6.44.3}Member Function Documentation}{104}{subsection.6.44.3}
+\contentsline {subsubsection}{\numberline {6.44.3.1}allocate\_\discretionary {-}{}{}mdp\_\discretionary {-}{}{}nvector\_\discretionary {-}{}{}field}{104}{subsubsection.6.44.3.1}
+\contentsline {subsubsection}{\numberline {6.44.3.2}operator()}{104}{subsubsection.6.44.3.2}
+\contentsline {subsubsection}{\numberline {6.44.3.3}operator()}{104}{subsubsection.6.44.3.3}
+\contentsline {subsubsection}{\numberline {6.44.3.4}operator()}{104}{subsubsection.6.44.3.4}
+\contentsline {subsection}{\numberline {6.44.4}Member Data Documentation}{104}{subsection.6.44.4}
+\contentsline {subsubsection}{\numberline {6.44.4.1}columns}{104}{subsubsection.6.44.4.1}
+\contentsline {subsubsection}{\numberline {6.44.4.2}imax}{104}{subsubsection.6.44.4.2}
+\contentsline {subsubsection}{\numberline {6.44.4.3}imax2}{104}{subsubsection.6.44.4.3}
+\contentsline {subsubsection}{\numberline {6.44.4.4}rows}{104}{subsubsection.6.44.4.4}
+\contentsline {section}{\numberline {6.45}mdp\_\discretionary {-}{}{}postscript Class Reference}{105}{section.6.45}
+\contentsline {subsection}{\numberline {6.45.1}Detailed Description}{105}{subsection.6.45.1}
+\contentsline {subsection}{\numberline {6.45.2}Member Enumeration Documentation}{106}{subsection.6.45.2}
+\contentsline {subsubsection}{\numberline {6.45.2.1}"@5}{106}{subsubsection.6.45.2.1}
+\contentsline {subsection}{\numberline {6.45.3}Constructor \& Destructor Documentation}{108}{subsection.6.45.3}
+\contentsline {subsubsection}{\numberline {6.45.3.1}mdp\_\discretionary {-}{}{}postscript}{108}{subsubsection.6.45.3.1}
+\contentsline {subsubsection}{\numberline {6.45.3.2}mdp\_\discretionary {-}{}{}postscript}{108}{subsubsection.6.45.3.2}
+\contentsline {subsubsection}{\numberline {6.45.3.3}$\sim $mdp\_\discretionary {-}{}{}postscript}{108}{subsubsection.6.45.3.3}
+\contentsline {subsection}{\numberline {6.45.4}Member Function Documentation}{108}{subsection.6.45.4}
+\contentsline {subsubsection}{\numberline {6.45.4.1}arc}{108}{subsubsection.6.45.4.1}
+\contentsline {subsubsection}{\numberline {6.45.4.2}box}{108}{subsubsection.6.45.4.2}
+\contentsline {subsubsection}{\numberline {6.45.4.3}circle}{108}{subsubsection.6.45.4.3}
+\contentsline {subsubsection}{\numberline {6.45.4.4}close}{108}{subsubsection.6.45.4.4}
+\contentsline {subsubsection}{\numberline {6.45.4.5}color}{108}{subsubsection.6.45.4.5}
+\contentsline {subsubsection}{\numberline {6.45.4.6}font}{108}{subsubsection.6.45.4.6}
+\contentsline {subsubsection}{\numberline {6.45.4.7}line}{108}{subsubsection.6.45.4.7}
+\contentsline {subsubsection}{\numberline {6.45.4.8}open}{108}{subsubsection.6.45.4.8}
+\contentsline {subsubsection}{\numberline {6.45.4.9}pen}{108}{subsubsection.6.45.4.9}
+\contentsline {subsubsection}{\numberline {6.45.4.10}print}{108}{subsubsection.6.45.4.10}
+\contentsline {subsubsection}{\numberline {6.45.4.11}size}{108}{subsubsection.6.45.4.11}
+\contentsline {subsection}{\numberline {6.45.5}Member Data Documentation}{108}{subsection.6.45.5}
+\contentsline {subsubsection}{\numberline {6.45.5.1}alpha}{108}{subsubsection.6.45.5.1}
+\contentsline {subsubsection}{\numberline {6.45.5.2}c0}{108}{subsubsection.6.45.5.2}
+\contentsline {subsubsection}{\numberline {6.45.5.3}c1}{108}{subsubsection.6.45.5.3}
+\contentsline {subsubsection}{\numberline {6.45.5.4}c2}{108}{subsubsection.6.45.5.4}
+\contentsline {subsubsection}{\numberline {6.45.5.5}fp}{108}{subsubsection.6.45.5.5}
+\contentsline {subsubsection}{\numberline {6.45.5.6}scale}{108}{subsubsection.6.45.5.6}
+\contentsline {subsubsection}{\numberline {6.45.5.7}X0}{108}{subsubsection.6.45.5.7}
+\contentsline {subsubsection}{\numberline {6.45.5.8}X1}{108}{subsubsection.6.45.5.8}
+\contentsline {subsubsection}{\numberline {6.45.5.9}Y0}{108}{subsubsection.6.45.5.9}
+\contentsline {subsubsection}{\numberline {6.45.5.10}Y1}{108}{subsubsection.6.45.5.10}
+\contentsline {subsubsection}{\numberline {6.45.5.11}Z0}{108}{subsubsection.6.45.5.11}
+\contentsline {subsubsection}{\numberline {6.45.5.12}Z1}{108}{subsubsection.6.45.5.12}
+\contentsline {section}{\numberline {6.46}mdp\_\discretionary {-}{}{}prng Class Reference}{110}{section.6.46}
+\contentsline {subsection}{\numberline {6.46.1}Detailed Description}{110}{subsection.6.46.1}
+\contentsline {subsection}{\numberline {6.46.2}Constructor \& Destructor Documentation}{110}{subsection.6.46.2}
+\contentsline {subsubsection}{\numberline {6.46.2.1}mdp\_\discretionary {-}{}{}prng}{110}{subsubsection.6.46.2.1}
+\contentsline {subsection}{\numberline {6.46.3}Member Function Documentation}{110}{subsection.6.46.3}
+\contentsline {subsubsection}{\numberline {6.46.3.1}distribution}{110}{subsubsection.6.46.3.1}
+\contentsline {subsubsection}{\numberline {6.46.3.2}gaussian}{111}{subsubsection.6.46.3.2}
+\contentsline {subsubsection}{\numberline {6.46.3.3}initialize}{111}{subsubsection.6.46.3.3}
+\contentsline {subsubsection}{\numberline {6.46.3.4}plain}{111}{subsubsection.6.46.3.4}
+\contentsline {subsubsection}{\numberline {6.46.3.5}skip}{111}{subsubsection.6.46.3.5}
+\contentsline {subsubsection}{\numberline {6.46.3.6}SU}{111}{subsubsection.6.46.3.6}
+\contentsline {section}{\numberline {6.47}mdp\_\discretionary {-}{}{}prng\_\discretionary {-}{}{}sfmt Class Reference}{112}{section.6.47}
+\contentsline {subsection}{\numberline {6.47.1}Member Function Documentation}{112}{subsection.6.47.1}
+\contentsline {subsubsection}{\numberline {6.47.1.1}initialize}{112}{subsubsection.6.47.1.1}
+\contentsline {subsubsection}{\numberline {6.47.1.2}plain}{112}{subsubsection.6.47.1.2}
+\contentsline {section}{\numberline {6.48}mdp\_\discretionary {-}{}{}psim Class Reference}{113}{section.6.48}
+\contentsline {subsection}{\numberline {6.48.1}Detailed Description}{113}{subsection.6.48.1}
+\contentsline {subsection}{\numberline {6.48.2}Constructor \& Destructor Documentation}{116}{subsection.6.48.2}
+\contentsline {subsubsection}{\numberline {6.48.2.1}mdp\_\discretionary {-}{}{}psim}{116}{subsubsection.6.48.2.1}
+\contentsline {subsubsection}{\numberline {6.48.2.2}mdp\_\discretionary {-}{}{}psim}{116}{subsubsection.6.48.2.2}
+\contentsline {subsubsection}{\numberline {6.48.2.3}$\sim $mdp\_\discretionary {-}{}{}psim}{116}{subsubsection.6.48.2.3}
+\contentsline {subsection}{\numberline {6.48.3}Member Function Documentation}{116}{subsection.6.48.3}
+\contentsline {subsubsection}{\numberline {6.48.3.1}add}{116}{subsubsection.6.48.3.1}
+\contentsline {subsubsection}{\numberline {6.48.3.2}barrier}{116}{subsubsection.6.48.3.2}
+\contentsline {subsubsection}{\numberline {6.48.3.3}broadcast}{116}{subsubsection.6.48.3.3}
+\contentsline {subsubsection}{\numberline {6.48.3.4}broadcast}{116}{subsubsection.6.48.3.4}
+\contentsline {subsubsection}{\numberline {6.48.3.5}collect}{116}{subsubsection.6.48.3.5}
+\contentsline {subsubsection}{\numberline {6.48.3.6}combine}{116}{subsubsection.6.48.3.6}
+\contentsline {subsubsection}{\numberline {6.48.3.7}id}{116}{subsubsection.6.48.3.7}
+\contentsline {subsubsection}{\numberline {6.48.3.8}log}{116}{subsubsection.6.48.3.8}
+\contentsline {subsubsection}{\numberline {6.48.3.9}nprocs}{116}{subsubsection.6.48.3.9}
+\contentsline {subsubsection}{\numberline {6.48.3.10}parse\_\discretionary {-}{}{}argv\_\discretionary {-}{}{}logfile}{116}{subsubsection.6.48.3.10}
+\contentsline {subsubsection}{\numberline {6.48.3.11}parse\_\discretionary {-}{}{}argv\_\discretionary {-}{}{}nprocs}{116}{subsubsection.6.48.3.11}
+\contentsline {subsubsection}{\numberline {6.48.3.12}parse\_\discretionary {-}{}{}argv\_\discretionary {-}{}{}verbatim}{116}{subsubsection.6.48.3.12}
+\contentsline {subsubsection}{\numberline {6.48.3.13}recv}{116}{subsubsection.6.48.3.13}
+\contentsline {subsubsection}{\numberline {6.48.3.14}recv}{116}{subsubsection.6.48.3.14}
+\contentsline {subsubsection}{\numberline {6.48.3.15}send}{116}{subsubsection.6.48.3.15}
+\contentsline {subsubsection}{\numberline {6.48.3.16}send}{116}{subsubsection.6.48.3.16}
+\contentsline {subsubsection}{\numberline {6.48.3.17}setCommTimeout}{116}{subsubsection.6.48.3.17}
+\contentsline {section}{\numberline {6.49}MDP\_\discretionary {-}{}{}SFMT19937 Class Reference}{118}{section.6.49}
+\contentsline {subsection}{\numberline {6.49.1}Constructor \& Destructor Documentation}{118}{subsection.6.49.1}
+\contentsline {subsubsection}{\numberline {6.49.1.1}MDP\_\discretionary {-}{}{}SFMT19937}{118}{subsubsection.6.49.1.1}
+\contentsline {subsection}{\numberline {6.49.2}Member Function Documentation}{118}{subsection.6.49.2}
+\contentsline {subsubsection}{\numberline {6.49.2.1}uniform}{118}{subsubsection.6.49.2.1}
+\contentsline {section}{\numberline {6.50}mdp\_\discretionary {-}{}{}site Class Reference}{119}{section.6.50}
+\contentsline {subsection}{\numberline {6.50.1}Detailed Description}{120}{subsection.6.50.1}
+\contentsline {subsection}{\numberline {6.50.2}Constructor \& Destructor Documentation}{120}{subsection.6.50.2}
+\contentsline {subsubsection}{\numberline {6.50.2.1}mdp\_\discretionary {-}{}{}site}{120}{subsubsection.6.50.2.1}
+\contentsline {subsubsection}{\numberline {6.50.2.2}mdp\_\discretionary {-}{}{}site}{120}{subsubsection.6.50.2.2}
+\contentsline {subsubsection}{\numberline {6.50.2.3}mdp\_\discretionary {-}{}{}site}{121}{subsubsection.6.50.2.3}
+\contentsline {subsubsection}{\numberline {6.50.2.4}mdp\_\discretionary {-}{}{}site}{121}{subsubsection.6.50.2.4}
+\contentsline {subsection}{\numberline {6.50.3}Member Function Documentation}{121}{subsection.6.50.3}
+\contentsline {subsubsection}{\numberline {6.50.3.1}global\_\discretionary {-}{}{}index}{121}{subsubsection.6.50.3.1}
+\contentsline {subsubsection}{\numberline {6.50.3.2}hop}{121}{subsubsection.6.50.3.2}
+\contentsline {subsubsection}{\numberline {6.50.3.3}is\_\discretionary {-}{}{}equal}{121}{subsubsection.6.50.3.3}
+\contentsline {subsubsection}{\numberline {6.50.3.4}is\_\discretionary {-}{}{}here}{121}{subsubsection.6.50.3.4}
+\contentsline {subsubsection}{\numberline {6.50.3.5}is\_\discretionary {-}{}{}in}{121}{subsubsection.6.50.3.5}
+\contentsline {subsubsection}{\numberline {6.50.3.6}is\_\discretionary {-}{}{}in\_\discretionary {-}{}{}boundary}{121}{subsubsection.6.50.3.6}
+\contentsline {subsubsection}{\numberline {6.50.3.7}lattice}{121}{subsubsection.6.50.3.7}
+\contentsline {subsubsection}{\numberline {6.50.3.8}local\_\discretionary {-}{}{}index}{121}{subsubsection.6.50.3.8}
+\contentsline {subsubsection}{\numberline {6.50.3.9}next}{122}{subsubsection.6.50.3.9}
+\contentsline {subsubsection}{\numberline {6.50.3.10}on}{122}{subsubsection.6.50.3.10}
+\contentsline {subsubsection}{\numberline {6.50.3.11}operator!=}{122}{subsubsection.6.50.3.11}
+\contentsline {subsubsection}{\numberline {6.50.3.12}operator!=}{122}{subsubsection.6.50.3.12}
+\contentsline {subsubsection}{\numberline {6.50.3.13}operator()}{122}{subsubsection.6.50.3.13}
+\contentsline {subsubsection}{\numberline {6.50.3.14}operator+}{122}{subsubsection.6.50.3.14}
+\contentsline {subsubsection}{\numberline {6.50.3.15}operator+}{122}{subsubsection.6.50.3.15}
+\contentsline {subsubsection}{\numberline {6.50.3.16}operator-\/}{122}{subsubsection.6.50.3.16}
+\contentsline {subsubsection}{\numberline {6.50.3.17}operator-\/}{122}{subsubsection.6.50.3.17}
+\contentsline {subsubsection}{\numberline {6.50.3.18}operator=}{122}{subsubsection.6.50.3.18}
+\contentsline {subsubsection}{\numberline {6.50.3.19}operator=}{122}{subsubsection.6.50.3.19}
+\contentsline {subsubsection}{\numberline {6.50.3.20}operator=}{122}{subsubsection.6.50.3.20}
+\contentsline {subsubsection}{\numberline {6.50.3.21}operator=}{122}{subsubsection.6.50.3.21}
+\contentsline {subsubsection}{\numberline {6.50.3.22}operator==}{122}{subsubsection.6.50.3.22}
+\contentsline {subsubsection}{\numberline {6.50.3.23}operator==}{122}{subsubsection.6.50.3.23}
+\contentsline {subsubsection}{\numberline {6.50.3.24}parity}{122}{subsubsection.6.50.3.24}
+\contentsline {subsubsection}{\numberline {6.50.3.25}set}{123}{subsubsection.6.50.3.25}
+\contentsline {subsubsection}{\numberline {6.50.3.26}set\_\discretionary {-}{}{}global}{123}{subsubsection.6.50.3.26}
+\contentsline {subsubsection}{\numberline {6.50.3.27}set\_\discretionary {-}{}{}local}{123}{subsubsection.6.50.3.27}
+\contentsline {subsubsection}{\numberline {6.50.3.28}start}{123}{subsubsection.6.50.3.28}
+\contentsline {subsection}{\numberline {6.50.4}Friends And Related Function Documentation}{123}{subsection.6.50.4}
+\contentsline {subsubsection}{\numberline {6.50.4.1}on\_\discretionary {-}{}{}which\_\discretionary {-}{}{}process}{123}{subsubsection.6.50.4.1}
+\contentsline {subsubsection}{\numberline {6.50.4.2}site2binary}{123}{subsubsection.6.50.4.2}
+\contentsline {subsection}{\numberline {6.50.5}Member Data Documentation}{123}{subsection.6.50.5}
+\contentsline {subsubsection}{\numberline {6.50.5.1}idx}{123}{subsubsection.6.50.5.1}
+\contentsline {section}{\numberline {6.51}mdp\_\discretionary {-}{}{}vector Class Reference}{124}{section.6.51}
+\contentsline {subsection}{\numberline {6.51.1}Detailed Description}{124}{subsection.6.51.1}
+\contentsline {subsection}{\numberline {6.51.2}Constructor \& Destructor Documentation}{124}{subsection.6.51.2}
+\contentsline {subsubsection}{\numberline {6.51.2.1}mdp\_\discretionary {-}{}{}vector}{124}{subsubsection.6.51.2.1}
+\contentsline {subsubsection}{\numberline {6.51.2.2}mdp\_\discretionary {-}{}{}vector}{124}{subsubsection.6.51.2.2}
+\contentsline {subsection}{\numberline {6.51.3}Member Data Documentation}{124}{subsection.6.51.3}
+\contentsline {subsubsection}{\numberline {6.51.3.1}x}{124}{subsubsection.6.51.3.1}
+\contentsline {section}{\numberline {6.52}mdp\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}field Class Reference}{125}{section.6.52}
+\contentsline {subsection}{\numberline {6.52.1}Detailed Description}{125}{subsection.6.52.1}
+\contentsline {subsection}{\numberline {6.52.2}Constructor \& Destructor Documentation}{126}{subsection.6.52.2}
+\contentsline {subsubsection}{\numberline {6.52.2.1}mdp\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}field}{126}{subsubsection.6.52.2.1}
+\contentsline {subsubsection}{\numberline {6.52.2.2}mdp\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}field}{126}{subsubsection.6.52.2.2}
+\contentsline {subsubsection}{\numberline {6.52.2.3}mdp\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}field}{126}{subsubsection.6.52.2.3}
+\contentsline {subsection}{\numberline {6.52.3}Member Function Documentation}{126}{subsection.6.52.3}
+\contentsline {subsubsection}{\numberline {6.52.3.1}allocate\_\discretionary {-}{}{}mdp\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}field}{126}{subsubsection.6.52.3.1}
+\contentsline {subsubsection}{\numberline {6.52.3.2}operator()}{126}{subsubsection.6.52.3.2}
+\contentsline {subsubsection}{\numberline {6.52.3.3}operator()}{126}{subsubsection.6.52.3.3}
+\contentsline {subsubsection}{\numberline {6.52.3.4}operator()}{126}{subsubsection.6.52.3.4}
+\contentsline {subsection}{\numberline {6.52.4}Member Data Documentation}{126}{subsection.6.52.4}
+\contentsline {subsubsection}{\numberline {6.52.4.1}columns}{126}{subsubsection.6.52.4.1}
+\contentsline {subsubsection}{\numberline {6.52.4.2}imax}{126}{subsubsection.6.52.4.2}
+\contentsline {subsubsection}{\numberline {6.52.4.3}rows}{126}{subsubsection.6.52.4.3}
+\contentsline {section}{\numberline {6.53}MinRes Class Reference}{127}{section.6.53}
+\contentsline {subsection}{\numberline {6.53.1}Detailed Description}{127}{subsection.6.53.1}
+\contentsline {subsection}{\numberline {6.53.2}Member Function Documentation}{127}{subsection.6.53.2}
+\contentsline {subsubsection}{\numberline {6.53.2.1}inverter}{127}{subsubsection.6.53.2.1}
+\contentsline {section}{\numberline {6.54}MinResVtk Class Reference}{128}{section.6.54}
+\contentsline {subsection}{\numberline {6.54.1}Detailed Description}{128}{subsection.6.54.1}
+\contentsline {subsection}{\numberline {6.54.2}Member Function Documentation}{128}{subsection.6.54.2}
+\contentsline {subsubsection}{\numberline {6.54.2.1}inverter}{128}{subsubsection.6.54.2.1}
+\contentsline {section}{\numberline {6.55}phase\_\discretionary {-}{}{}field Class Reference}{129}{section.6.55}
+\contentsline {subsection}{\numberline {6.55.1}Constructor \& Destructor Documentation}{129}{subsection.6.55.1}
+\contentsline {subsubsection}{\numberline {6.55.1.1}phase\_\discretionary {-}{}{}field}{129}{subsubsection.6.55.1.1}
+\contentsline {subsection}{\numberline {6.55.2}Member Function Documentation}{129}{subsection.6.55.2}
+\contentsline {subsubsection}{\numberline {6.55.2.1}component}{129}{subsubsection.6.55.2.1}
+\contentsline {subsubsection}{\numberline {6.55.2.2}compute}{129}{subsubsection.6.55.2.2}
+\contentsline {section}{\numberline {6.56}sdwf\_\discretionary {-}{}{}field Class Reference}{130}{section.6.56}
+\contentsline {subsection}{\numberline {6.56.1}Detailed Description}{130}{subsection.6.56.1}
+\contentsline {subsection}{\numberline {6.56.2}Constructor \& Destructor Documentation}{131}{subsection.6.56.2}
+\contentsline {subsubsection}{\numberline {6.56.2.1}sdwf\_\discretionary {-}{}{}field}{131}{subsubsection.6.56.2.1}
+\contentsline {subsubsection}{\numberline {6.56.2.2}sdwf\_\discretionary {-}{}{}field}{131}{subsubsection.6.56.2.2}
+\contentsline {subsection}{\numberline {6.56.3}Member Function Documentation}{131}{subsection.6.56.3}
+\contentsline {subsubsection}{\numberline {6.56.3.1}chiral\_\discretionary {-}{}{}phase}{131}{subsubsection.6.56.3.1}
+\contentsline {subsubsection}{\numberline {6.56.3.2}chiral\_\discretionary {-}{}{}phase2}{131}{subsubsection.6.56.3.2}
+\contentsline {subsubsection}{\numberline {6.56.3.3}chiral\_\discretionary {-}{}{}shift}{131}{subsubsection.6.56.3.3}
+\contentsline {subsubsection}{\numberline {6.56.3.4}component}{131}{subsubsection.6.56.3.4}
+\contentsline {subsubsection}{\numberline {6.56.3.5}eps}{131}{subsubsection.6.56.3.5}
+\contentsline {subsubsection}{\numberline {6.56.3.6}eta}{131}{subsubsection.6.56.3.6}
+\contentsline {subsubsection}{\numberline {6.56.3.7}operator()}{131}{subsubsection.6.56.3.7}
+\contentsline {subsubsection}{\numberline {6.56.3.8}operator()}{131}{subsubsection.6.56.3.8}
+\contentsline {subsubsection}{\numberline {6.56.3.9}operator()}{131}{subsubsection.6.56.3.9}
+\contentsline {subsubsection}{\numberline {6.56.3.10}operator=}{131}{subsubsection.6.56.3.10}
+\contentsline {subsubsection}{\numberline {6.56.3.11}type}{131}{subsubsection.6.56.3.11}
+\contentsline {subsection}{\numberline {6.56.4}Member Data Documentation}{131}{subsection.6.56.4}
+\contentsline {subsubsection}{\numberline {6.56.4.1}L5}{131}{subsubsection.6.56.4.1}
+\contentsline {subsubsection}{\numberline {6.56.4.2}nc}{131}{subsubsection.6.56.4.2}
+\contentsline {subsubsection}{\numberline {6.56.4.3}ndim}{131}{subsubsection.6.56.4.3}
+\contentsline {subsubsection}{\numberline {6.56.4.4}nspin}{131}{subsubsection.6.56.4.4}
+\contentsline {section}{\numberline {6.57}SDWFActionSlow Class Reference}{132}{section.6.57}
+\contentsline {subsection}{\numberline {6.57.1}Detailed Description}{132}{subsection.6.57.1}
+\contentsline {subsection}{\numberline {6.57.2}Member Function Documentation}{132}{subsection.6.57.2}
+\contentsline {subsubsection}{\numberline {6.57.2.1}mul\_\discretionary {-}{}{}Q}{132}{subsubsection.6.57.2.1}
+\contentsline {section}{\numberline {6.58}staggered\_\discretionary {-}{}{}field Class Reference}{133}{section.6.58}
+\contentsline {subsection}{\numberline {6.58.1}Detailed Description}{133}{subsection.6.58.1}
+\contentsline {subsection}{\numberline {6.58.2}Constructor \& Destructor Documentation}{134}{subsection.6.58.2}
+\contentsline {subsubsection}{\numberline {6.58.2.1}staggered\_\discretionary {-}{}{}field}{134}{subsubsection.6.58.2.1}
+\contentsline {subsubsection}{\numberline {6.58.2.2}staggered\_\discretionary {-}{}{}field}{134}{subsubsection.6.58.2.2}
+\contentsline {subsection}{\numberline {6.58.3}Member Function Documentation}{134}{subsection.6.58.3}
+\contentsline {subsubsection}{\numberline {6.58.3.1}component}{134}{subsubsection.6.58.3.1}
+\contentsline {subsubsection}{\numberline {6.58.3.2}eps}{134}{subsubsection.6.58.3.2}
+\contentsline {subsubsection}{\numberline {6.58.3.3}eta}{134}{subsubsection.6.58.3.3}
+\contentsline {subsubsection}{\numberline {6.58.3.4}operator()}{134}{subsubsection.6.58.3.4}
+\contentsline {subsubsection}{\numberline {6.58.3.5}operator()}{134}{subsubsection.6.58.3.5}
+\contentsline {subsubsection}{\numberline {6.58.3.6}operator()}{134}{subsubsection.6.58.3.6}
+\contentsline {subsubsection}{\numberline {6.58.3.7}operator=}{134}{subsubsection.6.58.3.7}
+\contentsline {subsubsection}{\numberline {6.58.3.8}operator=}{134}{subsubsection.6.58.3.8}
+\contentsline {subsubsection}{\numberline {6.58.3.9}type}{134}{subsubsection.6.58.3.9}
+\contentsline {subsection}{\numberline {6.58.4}Member Data Documentation}{134}{subsection.6.58.4}
+\contentsline {subsubsection}{\numberline {6.58.4.1}nc}{134}{subsubsection.6.58.4.1}
+\contentsline {subsubsection}{\numberline {6.58.4.2}ndim}{134}{subsubsection.6.58.4.2}
+\contentsline {subsubsection}{\numberline {6.58.4.3}nspin}{134}{subsubsection.6.58.4.3}
+\contentsline {section}{\numberline {6.59}staggered\_\discretionary {-}{}{}propagator Class Reference}{135}{section.6.59}
+\contentsline {subsection}{\numberline {6.59.1}Detailed Description}{135}{subsection.6.59.1}
+\contentsline {subsection}{\numberline {6.59.2}Constructor \& Destructor Documentation}{136}{subsection.6.59.2}
+\contentsline {subsubsection}{\numberline {6.59.2.1}staggered\_\discretionary {-}{}{}propagator}{136}{subsubsection.6.59.2.1}
+\contentsline {subsection}{\numberline {6.59.3}Member Function Documentation}{136}{subsection.6.59.3}
+\contentsline {subsubsection}{\numberline {6.59.3.1}operator()}{136}{subsubsection.6.59.3.1}
+\contentsline {subsubsection}{\numberline {6.59.3.2}operator()}{136}{subsubsection.6.59.3.2}
+\contentsline {subsection}{\numberline {6.59.4}Friends And Related Function Documentation}{136}{subsection.6.59.4}
+\contentsline {subsubsection}{\numberline {6.59.4.1}generate}{136}{subsubsection.6.59.4.1}
+\contentsline {subsection}{\numberline {6.59.5}Member Data Documentation}{136}{subsection.6.59.5}
+\contentsline {subsubsection}{\numberline {6.59.5.1}nc}{136}{subsubsection.6.59.5.1}
+\contentsline {section}{\numberline {6.60}StaggeredAsqtadActionFast Class Reference}{137}{section.6.60}
+\contentsline {subsection}{\numberline {6.60.1}Detailed Description}{137}{subsection.6.60.1}
+\contentsline {subsection}{\numberline {6.60.2}Member Function Documentation}{137}{subsection.6.60.2}
+\contentsline {subsubsection}{\numberline {6.60.2.1}mul\_\discretionary {-}{}{}Q}{137}{subsubsection.6.60.2.1}
+\contentsline {section}{\numberline {6.61}StaggeredAsqtadActionSlow Class Reference}{138}{section.6.61}
+\contentsline {subsection}{\numberline {6.61.1}Detailed Description}{138}{subsection.6.61.1}
+\contentsline {subsection}{\numberline {6.61.2}Member Function Documentation}{138}{subsection.6.61.2}
+\contentsline {subsubsection}{\numberline {6.61.2.1}mul\_\discretionary {-}{}{}Q}{138}{subsubsection.6.61.2.1}
+\contentsline {section}{\numberline {6.62}StaggeredBiCGUML Class Reference}{139}{section.6.62}
+\contentsline {subsection}{\numberline {6.62.1}Detailed Description}{139}{subsection.6.62.1}
+\contentsline {subsection}{\numberline {6.62.2}Member Function Documentation}{139}{subsection.6.62.2}
+\contentsline {subsubsection}{\numberline {6.62.2.1}inverter}{139}{subsubsection.6.62.2.1}
+\contentsline {section}{\numberline {6.63}SU\_\discretionary {-}{}{}Generators Class Reference}{140}{section.6.63}
+\contentsline {subsection}{\numberline {6.63.1}Constructor \& Destructor Documentation}{140}{subsection.6.63.1}
+\contentsline {subsubsection}{\numberline {6.63.1.1}SU\_\discretionary {-}{}{}Generators}{140}{subsubsection.6.63.1.1}
+\contentsline {subsection}{\numberline {6.63.2}Member Function Documentation}{140}{subsection.6.63.2}
+\contentsline {subsubsection}{\numberline {6.63.2.1}build\_\discretionary {-}{}{}matrix}{140}{subsubsection.6.63.2.1}
+\contentsline {subsection}{\numberline {6.63.3}Member Data Documentation}{140}{subsection.6.63.3}
+\contentsline {subsubsection}{\numberline {6.63.3.1}lambda}{140}{subsubsection.6.63.3.1}
+\contentsline {subsubsection}{\numberline {6.63.3.2}n}{140}{subsubsection.6.63.3.2}
+\contentsline {subsubsection}{\numberline {6.63.3.3}ngenerators}{140}{subsubsection.6.63.3.3}
+\contentsline {section}{\numberline {6.64}WilsonGaugeAction Class Reference}{141}{section.6.64}
+\contentsline {subsection}{\numberline {6.64.1}Detailed Description}{141}{subsection.6.64.1}
+\contentsline {subsection}{\numberline {6.64.2}Member Function Documentation}{141}{subsection.6.64.2}
+\contentsline {subsubsection}{\numberline {6.64.2.1}heatbath}{141}{subsubsection.6.64.2.1}
+\contentsline {subsubsection}{\numberline {6.64.2.2}heatbath\_\discretionary {-}{}{}SU2}{141}{subsubsection.6.64.2.2}
+\contentsline {section}{\numberline {6.65}WupperthalSmearing Class Reference}{142}{section.6.65}
+\contentsline {subsection}{\numberline {6.65.1}Detailed Description}{142}{subsection.6.65.1}
+\contentsline {subsection}{\numberline {6.65.2}Member Function Documentation}{142}{subsection.6.65.2}
+\contentsline {subsubsection}{\numberline {6.65.2.1}smear}{142}{subsubsection.6.65.2.1}
+\contentsline {chapter}{\numberline {7}File Documentation}{143}{chapter.7}
+\contentsline {section}{\numberline {7.1}/Users/mdipierro/fermiqcd/development/Libraries/average\_\discretionary {-}{}{}plaquette.cpp File Reference}{143}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Function Documentation}{143}{subsection.7.1.1}
+\contentsline {subsubsection}{\numberline {7.1.1.1}main}{143}{subsubsection.7.1.1.1}
+\contentsline {section}{\numberline {7.2}/Users/mdipierro/fermiqcd/development/Libraries/check\_\discretionary {-}{}{}cold.cpp File Reference}{144}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Function Documentation}{144}{subsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.1.1}main}{144}{subsubsection.7.2.1.1}
+\contentsline {section}{\numberline {7.3}/Users/mdipierro/fermiqcd/development/Libraries/cleanup\_\discretionary {-}{}{}cpp.py File Reference}{145}{section.7.3}
+\contentsline {section}{\numberline {7.4}/Users/mdipierro/fermiqcd/development/Libraries/cool\_\discretionary {-}{}{}and\_\discretionary {-}{}{}topological.cpp File Reference}{146}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Function Documentation}{146}{subsection.7.4.1}
+\contentsline {subsubsection}{\numberline {7.4.1.1}main}{146}{subsubsection.7.4.1.1}
+\contentsline {subsubsection}{\numberline {7.4.1.2}test\_\discretionary {-}{}{}gauge}{146}{subsubsection.7.4.1.2}
+\contentsline {section}{\numberline {7.5}/Users/mdipierro/fermiqcd/development/Libraries/cool\_\discretionary {-}{}{}and\_\discretionary {-}{}{}topological\_\discretionary {-}{}{}step\_\discretionary {-}{}{}by\_\discretionary {-}{}{}step.cpp File Reference}{147}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Function Documentation}{147}{subsection.7.5.1}
+\contentsline {subsubsection}{\numberline {7.5.1.1}main}{147}{subsubsection.7.5.1.1}
+\contentsline {subsubsection}{\numberline {7.5.1.2}test\_\discretionary {-}{}{}gauge}{147}{subsubsection.7.5.1.2}
+\contentsline {section}{\numberline {7.6}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd.h File Reference}{148}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Detailed Description}{149}{subsection.7.6.1}
+\contentsline {section}{\numberline {7.7}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}bicgstab\_\discretionary {-}{}{}inverter.h File Reference}{150}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{150}{subsection.7.7.1}
+\contentsline {subsection}{\numberline {7.7.2}Function Documentation}{150}{subsection.7.7.2}
+\contentsline {subsubsection}{\numberline {7.7.2.1}BiConjugateGradientStabilizedInverter}{150}{subsubsection.7.7.2.1}
+\contentsline {section}{\numberline {7.8}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}bicgstab\_\discretionary {-}{}{}inverter\_\discretionary {-}{}{}vtk.h File Reference}{151}{section.7.8}
+\contentsline {subsection}{\numberline {7.8.1}Function Documentation}{151}{subsection.7.8.1}
+\contentsline {subsubsection}{\numberline {7.8.1.1}BiConjugateGradientStabilizedInverterVtk}{151}{subsubsection.7.8.1.1}
+\contentsline {section}{\numberline {7.9}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}cg\_\discretionary {-}{}{}inverter.h File Reference}{152}{section.7.9}
+\contentsline {subsection}{\numberline {7.9.1}Detailed Description}{152}{subsection.7.9.1}
+\contentsline {section}{\numberline {7.10}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}check\_\discretionary {-}{}{}differences.h File Reference}{153}{section.7.10}
+\contentsline {subsection}{\numberline {7.10.1}Detailed Description}{153}{subsection.7.10.1}
+\contentsline {subsection}{\numberline {7.10.2}Function Documentation}{153}{subsection.7.10.2}
+\contentsline {subsubsection}{\numberline {7.10.2.1}check\_\discretionary {-}{}{}differences}{153}{subsubsection.7.10.2.1}
+\contentsline {section}{\numberline {7.11}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}coefficients.h File Reference}{154}{section.7.11}
+\contentsline {subsection}{\numberline {7.11.1}Detailed Description}{154}{subsection.7.11.1}
+\contentsline {subsection}{\numberline {7.11.2}Function Documentation}{154}{subsection.7.11.2}
+\contentsline {subsubsection}{\numberline {7.11.2.1}dagger}{154}{subsubsection.7.11.2.1}
+\contentsline {subsubsection}{\numberline {7.11.2.2}operator$<$$<$}{154}{subsubsection.7.11.2.2}
+\contentsline {section}{\numberline {7.12}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}default\_\discretionary {-}{}{}parameters.h File Reference}{155}{section.7.12}
+\contentsline {subsection}{\numberline {7.12.1}Detailed Description}{155}{subsection.7.12.1}
+\contentsline {subsection}{\numberline {7.12.2}Define Documentation}{156}{subsection.7.12.2}
+\contentsline {subsubsection}{\numberline {7.12.2.1}DAGGER}{156}{subsubsection.7.12.2.1}
+\contentsline {subsubsection}{\numberline {7.12.2.2}SPACE\_\discretionary {-}{}{}X}{156}{subsubsection.7.12.2.2}
+\contentsline {subsubsection}{\numberline {7.12.2.3}SPACE\_\discretionary {-}{}{}Y}{156}{subsubsection.7.12.2.3}
+\contentsline {subsubsection}{\numberline {7.12.2.4}SPACE\_\discretionary {-}{}{}Z}{156}{subsubsection.7.12.2.4}
+\contentsline {subsubsection}{\numberline {7.12.2.5}TIME}{156}{subsubsection.7.12.2.5}
+\contentsline {subsection}{\numberline {7.12.3}Variable Documentation}{156}{subsection.7.12.3}
+\contentsline {subsubsection}{\numberline {7.12.3.1}BiCGStabRestart}{156}{subsubsection.7.12.3.1}
+\contentsline {subsubsection}{\numberline {7.12.3.2}dwfermi\_\discretionary {-}{}{}inversion\_\discretionary {-}{}{}precision}{156}{subsubsection.7.12.3.2}
+\contentsline {subsubsection}{\numberline {7.12.3.3}fermi\_\discretionary {-}{}{}inversion\_\discretionary {-}{}{}precision}{156}{subsubsection.7.12.3.3}
+\contentsline {subsubsection}{\numberline {7.12.3.4}sdwf\_\discretionary {-}{}{}inversion\_\discretionary {-}{}{}precision}{156}{subsubsection.7.12.3.4}
+\contentsline {subsubsection}{\numberline {7.12.3.5}staggered\_\discretionary {-}{}{}inversion\_\discretionary {-}{}{}precision}{156}{subsubsection.7.12.3.5}
+\contentsline {section}{\numberline {7.13}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}dwfermi\_\discretionary {-}{}{}actions.h File Reference}{157}{section.7.13}
+\contentsline {subsection}{\numberline {7.13.1}Detailed Description}{157}{subsection.7.13.1}
+\contentsline {section}{\numberline {7.14}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}dwfermi\_\discretionary {-}{}{}actions\_\discretionary {-}{}{}sse2.h File Reference}{158}{section.7.14}
+\contentsline {section}{\numberline {7.15}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}dwfermi\_\discretionary {-}{}{}algorithms.h File Reference}{159}{section.7.15}
+\contentsline {subsection}{\numberline {7.15.1}Detailed Description}{159}{subsection.7.15.1}
+\contentsline {subsection}{\numberline {7.15.2}Function Documentation}{160}{subsection.7.15.2}
+\contentsline {subsubsection}{\numberline {7.15.2.1}mul\_\discretionary {-}{}{}invQ}{160}{subsubsection.7.15.2.1}
+\contentsline {subsubsection}{\numberline {7.15.2.2}mul\_\discretionary {-}{}{}Q}{160}{subsubsection.7.15.2.2}
+\contentsline {subsubsection}{\numberline {7.15.2.3}project}{160}{subsubsection.7.15.2.3}
+\contentsline {subsubsection}{\numberline {7.15.2.4}project}{160}{subsubsection.7.15.2.4}
+\contentsline {subsection}{\numberline {7.15.3}Variable Documentation}{160}{subsection.7.15.3}
+\contentsline {subsubsection}{\numberline {7.15.3.1}default\_\discretionary {-}{}{}dwfermi\_\discretionary {-}{}{}action}{160}{subsubsection.7.15.3.1}
+\contentsline {subsubsection}{\numberline {7.15.3.2}default\_\discretionary {-}{}{}dwfermi\_\discretionary {-}{}{}inverter}{160}{subsubsection.7.15.3.2}
+\contentsline {section}{\numberline {7.16}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}dwfermi\_\discretionary {-}{}{}field.h File Reference}{161}{section.7.16}
+\contentsline {subsection}{\numberline {7.16.1}Detailed Description}{161}{subsection.7.16.1}
+\contentsline {section}{\numberline {7.17}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}actions.h File Reference}{162}{section.7.17}
+\contentsline {subsection}{\numberline {7.17.1}Detailed Description}{162}{subsection.7.17.1}
+\contentsline {section}{\numberline {7.18}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}actions\_\discretionary {-}{}{}sse2.h File Reference}{163}{section.7.18}
+\contentsline {subsection}{\numberline {7.18.1}Detailed Description}{163}{subsection.7.18.1}
+\contentsline {section}{\numberline {7.19}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}algorithms.h File Reference}{164}{section.7.19}
+\contentsline {subsection}{\numberline {7.19.1}Detailed Description}{164}{subsection.7.19.1}
+\contentsline {subsection}{\numberline {7.19.2}Function Documentation}{165}{subsection.7.19.2}
+\contentsline {subsubsection}{\numberline {7.19.2.1}check\_\discretionary {-}{}{}inversion}{165}{subsubsection.7.19.2.1}
+\contentsline {subsubsection}{\numberline {7.19.2.2}mul\_\discretionary {-}{}{}invQ}{165}{subsubsection.7.19.2.2}
+\contentsline {subsubsection}{\numberline {7.19.2.3}mul\_\discretionary {-}{}{}Q}{165}{subsubsection.7.19.2.3}
+\contentsline {subsubsection}{\numberline {7.19.2.4}multiply\_\discretionary {-}{}{}by\_\discretionary {-}{}{}gamma5}{165}{subsubsection.7.19.2.4}
+\contentsline {subsection}{\numberline {7.19.3}Variable Documentation}{165}{subsection.7.19.3}
+\contentsline {subsubsection}{\numberline {7.19.3.1}default\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}action}{165}{subsubsection.7.19.3.1}
+\contentsline {subsubsection}{\numberline {7.19.3.2}default\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}inverter}{165}{subsubsection.7.19.3.2}
+\contentsline {section}{\numberline {7.20}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}field.h File Reference}{166}{section.7.20}
+\contentsline {subsection}{\numberline {7.20.1}Detailed Description}{166}{subsection.7.20.1}
+\contentsline {subsection}{\numberline {7.20.2}Function Documentation}{166}{subsection.7.20.2}
+\contentsline {subsubsection}{\numberline {7.20.2.1}print\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}field}{166}{subsubsection.7.20.2.1}
+\contentsline {section}{\numberline {7.21}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}propagator.h File Reference}{167}{section.7.21}
+\contentsline {subsection}{\numberline {7.21.1}Detailed Description}{167}{subsection.7.21.1}
+\contentsline {subsection}{\numberline {7.21.2}Function Documentation}{167}{subsection.7.21.2}
+\contentsline {subsubsection}{\numberline {7.21.2.1}print\_\discretionary {-}{}{}propagator}{167}{subsubsection.7.21.2.1}
+\contentsline {section}{\numberline {7.22}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}rotation.h File Reference}{168}{section.7.22}
+\contentsline {subsection}{\numberline {7.22.1}Function Documentation}{168}{subsection.7.22.1}
+\contentsline {subsubsection}{\numberline {7.22.1.1}rotate\_\discretionary {-}{}{}field}{168}{subsubsection.7.22.1.1}
+\contentsline {section}{\numberline {7.23}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}smearing.h File Reference}{169}{section.7.23}
+\contentsline {subsection}{\numberline {7.23.1}Detailed Description}{169}{subsection.7.23.1}
+\contentsline {subsection}{\numberline {7.23.2}Function Documentation}{169}{subsection.7.23.2}
+\contentsline {subsubsection}{\numberline {7.23.2.1}smearSink}{169}{subsubsection.7.23.2.1}
+\contentsline {section}{\numberline {7.24}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}fermilab\_\discretionary {-}{}{}action.h File Reference}{170}{section.7.24}
+\contentsline {subsection}{\numberline {7.24.1}Detailed Description}{170}{subsection.7.24.1}
+\contentsline {section}{\numberline {7.25}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}fermilab\_\discretionary {-}{}{}coefficients.h File Reference}{171}{section.7.25}
+\contentsline {subsection}{\numberline {7.25.1}Detailed Description}{171}{subsection.7.25.1}
+\contentsline {subsection}{\numberline {7.25.2}Function Documentation}{171}{subsection.7.25.2}
+\contentsline {subsubsection}{\numberline {7.25.2.1}for}{171}{subsubsection.7.25.2.1}
+\contentsline {subsubsection}{\numberline {7.25.2.2}M}{171}{subsubsection.7.25.2.2}
+\contentsline {subsection}{\numberline {7.25.3}Variable Documentation}{171}{subsection.7.25.3}
+\contentsline {subsubsection}{\numberline {7.25.3.1}M}{171}{subsubsection.7.25.3.1}
+\contentsline {subsubsection}{\numberline {7.25.3.2}SB}{171}{subsubsection.7.25.3.2}
+\contentsline {subsubsection}{\numberline {7.25.3.3}SE}{171}{subsubsection.7.25.3.3}
+\contentsline {section}{\numberline {7.26}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}ffts.h File Reference}{172}{section.7.26}
+\contentsline {subsection}{\numberline {7.26.1}Detailed Description}{172}{subsection.7.26.1}
+\contentsline {subsection}{\numberline {7.26.2}Function Documentation}{172}{subsection.7.26.2}
+\contentsline {subsubsection}{\numberline {7.26.2.1}dft}{172}{subsubsection.7.26.2.1}
+\contentsline {subsubsection}{\numberline {7.26.2.2}fermi\_\discretionary {-}{}{}field\_\discretionary {-}{}{}fft}{172}{subsubsection.7.26.2.2}
+\contentsline {subsubsection}{\numberline {7.26.2.3}fermi\_\discretionary {-}{}{}field\_\discretionary {-}{}{}fft}{172}{subsubsection.7.26.2.3}
+\contentsline {subsubsection}{\numberline {7.26.2.4}i2pow}{172}{subsubsection.7.26.2.4}
+\contentsline {section}{\numberline {7.27}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}gamma\_\discretionary {-}{}{}matrices.h File Reference}{173}{section.7.27}
+\contentsline {subsection}{\numberline {7.27.1}Detailed Description}{173}{subsection.7.27.1}
+\contentsline {subsection}{\numberline {7.27.2}Define Documentation}{174}{subsection.7.27.2}
+\contentsline {subsubsection}{\numberline {7.27.2.1}GAMMA\_\discretionary {-}{}{}MATRICES}{174}{subsubsection.7.27.2.1}
+\contentsline {subsection}{\numberline {7.27.3}Function Documentation}{174}{subsection.7.27.3}
+\contentsline {subsubsection}{\numberline {7.27.3.1}define\_\discretionary {-}{}{}base\_\discretionary {-}{}{}matrices}{174}{subsubsection.7.27.3.1}
+\contentsline {subsection}{\numberline {7.27.4}Variable Documentation}{176}{subsection.7.27.4}
+\contentsline {subsubsection}{\numberline {7.27.4.1}G16\_\discretionary {-}{}{}idx}{176}{subsubsection.7.27.4.1}
+\contentsline {subsubsection}{\numberline {7.27.4.2}G16\_\discretionary {-}{}{}val}{176}{subsubsection.7.27.4.2}
+\contentsline {subsubsection}{\numberline {7.27.4.3}Gamma}{176}{subsubsection.7.27.4.3}
+\contentsline {subsubsection}{\numberline {7.27.4.4}Gamma1}{176}{subsubsection.7.27.4.4}
+\contentsline {subsubsection}{\numberline {7.27.4.5}Gamma5}{176}{subsubsection.7.27.4.5}
+\contentsline {subsubsection}{\numberline {7.27.4.6}Gamma5\_\discretionary {-}{}{}idx}{176}{subsubsection.7.27.4.6}
+\contentsline {subsubsection}{\numberline {7.27.4.7}Gamma5\_\discretionary {-}{}{}idxr}{176}{subsubsection.7.27.4.7}
+\contentsline {subsubsection}{\numberline {7.27.4.8}Gamma5\_\discretionary {-}{}{}val}{176}{subsubsection.7.27.4.8}
+\contentsline {subsubsection}{\numberline {7.27.4.9}Gamma5\_\discretionary {-}{}{}valr}{176}{subsubsection.7.27.4.9}
+\contentsline {subsubsection}{\numberline {7.27.4.10}Gamma\_\discretionary {-}{}{}idx}{176}{subsubsection.7.27.4.10}
+\contentsline {subsubsection}{\numberline {7.27.4.11}Gamma\_\discretionary {-}{}{}idxr}{176}{subsubsection.7.27.4.11}
+\contentsline {subsubsection}{\numberline {7.27.4.12}Gamma\_\discretionary {-}{}{}val}{176}{subsubsection.7.27.4.12}
+\contentsline {subsubsection}{\numberline {7.27.4.13}Gamma\_\discretionary {-}{}{}valr}{176}{subsubsection.7.27.4.13}
+\contentsline {subsubsection}{\numberline {7.27.4.14}GammaxGamma5\_\discretionary {-}{}{}idx}{176}{subsubsection.7.27.4.14}
+\contentsline {subsubsection}{\numberline {7.27.4.15}GammaxGamma5\_\discretionary {-}{}{}idxr}{176}{subsubsection.7.27.4.15}
+\contentsline {subsubsection}{\numberline {7.27.4.16}GammaxGamma5\_\discretionary {-}{}{}val}{176}{subsubsection.7.27.4.16}
+\contentsline {subsubsection}{\numberline {7.27.4.17}GammaxGamma5\_\discretionary {-}{}{}valr}{176}{subsubsection.7.27.4.17}
+\contentsline {subsubsection}{\numberline {7.27.4.18}Lambda}{176}{subsubsection.7.27.4.18}
+\contentsline {subsubsection}{\numberline {7.27.4.19}Pleft}{176}{subsubsection.7.27.4.19}
+\contentsline {subsubsection}{\numberline {7.27.4.20}Pright}{176}{subsubsection.7.27.4.20}
+\contentsline {subsubsection}{\numberline {7.27.4.21}sigma}{176}{subsubsection.7.27.4.21}
+\contentsline {subsubsection}{\numberline {7.27.4.22}Sigma}{176}{subsubsection.7.27.4.22}
+\contentsline {subsubsection}{\numberline {7.27.4.23}Sigma\_\discretionary {-}{}{}idx}{176}{subsubsection.7.27.4.23}
+\contentsline {subsubsection}{\numberline {7.27.4.24}Sigma\_\discretionary {-}{}{}idxr}{176}{subsubsection.7.27.4.24}
+\contentsline {subsubsection}{\numberline {7.27.4.25}Sigma\_\discretionary {-}{}{}val}{176}{subsubsection.7.27.4.25}
+\contentsline {subsubsection}{\numberline {7.27.4.26}Sigma\_\discretionary {-}{}{}valr}{176}{subsubsection.7.27.4.26}
+\contentsline {section}{\numberline {7.28}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}actions.h File Reference}{177}{section.7.28}
+\contentsline {subsection}{\numberline {7.28.1}Detailed Description}{177}{subsection.7.28.1}
+\contentsline {section}{\numberline {7.29}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}actions\_\discretionary {-}{}{}sse2.h File Reference}{178}{section.7.29}
+\contentsline {subsection}{\numberline {7.29.1}Detailed Description}{178}{subsection.7.29.1}
+\contentsline {section}{\numberline {7.30}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}algorithms.h File Reference}{179}{section.7.30}
+\contentsline {subsection}{\numberline {7.30.1}Detailed Description}{179}{subsection.7.30.1}
+\contentsline {subsection}{\numberline {7.30.2}Function Documentation}{180}{subsection.7.30.2}
+\contentsline {subsubsection}{\numberline {7.30.2.1}average\_\discretionary {-}{}{}path}{180}{subsubsection.7.30.2.1}
+\contentsline {subsubsection}{\numberline {7.30.2.2}average\_\discretionary {-}{}{}plaquette}{180}{subsubsection.7.30.2.2}
+\contentsline {subsubsection}{\numberline {7.30.2.3}average\_\discretionary {-}{}{}plaquette}{180}{subsubsection.7.30.2.3}
+\contentsline {subsubsection}{\numberline {7.30.2.4}build\_\discretionary {-}{}{}path}{180}{subsubsection.7.30.2.4}
+\contentsline {subsubsection}{\numberline {7.30.2.5}check\_\discretionary {-}{}{}unitarity}{180}{subsubsection.7.30.2.5}
+\contentsline {subsubsection}{\numberline {7.30.2.6}compute\_\discretionary {-}{}{}em\_\discretionary {-}{}{}field}{180}{subsubsection.7.30.2.6}
+\contentsline {subsubsection}{\numberline {7.30.2.7}compute\_\discretionary {-}{}{}long\_\discretionary {-}{}{}links}{180}{subsubsection.7.30.2.7}
+\contentsline {subsubsection}{\numberline {7.30.2.8}copy\_\discretionary {-}{}{}path}{181}{subsubsection.7.30.2.8}
+\contentsline {subsubsection}{\numberline {7.30.2.9}invert\_\discretionary {-}{}{}path}{181}{subsubsection.7.30.2.9}
+\contentsline {subsubsection}{\numberline {7.30.2.10}project\_\discretionary {-}{}{}SU}{181}{subsubsection.7.30.2.10}
+\contentsline {subsubsection}{\numberline {7.30.2.11}rotate\_\discretionary {-}{}{}path}{181}{subsubsection.7.30.2.11}
+\contentsline {subsubsection}{\numberline {7.30.2.12}set\_\discretionary {-}{}{}antiperiodic\_\discretionary {-}{}{}phases}{181}{subsubsection.7.30.2.12}
+\contentsline {subsubsection}{\numberline {7.30.2.13}set\_\discretionary {-}{}{}cold}{181}{subsubsection.7.30.2.13}
+\contentsline {subsubsection}{\numberline {7.30.2.14}set\_\discretionary {-}{}{}hot}{181}{subsubsection.7.30.2.14}
+\contentsline {section}{\numberline {7.31}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}field.h File Reference}{182}{section.7.31}
+\contentsline {subsection}{\numberline {7.31.1}Detailed Description}{182}{subsection.7.31.1}
+\contentsline {section}{\numberline {7.32}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}fixing.h File Reference}{183}{section.7.32}
+\contentsline {subsection}{\numberline {7.32.1}Detailed Description}{183}{subsection.7.32.1}
+\contentsline {section}{\numberline {7.33}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}routines.h File Reference}{184}{section.7.33}
+\contentsline {subsection}{\numberline {7.33.1}Detailed Description}{184}{subsection.7.33.1}
+\contentsline {subsection}{\numberline {7.33.2}Function Documentation}{184}{subsection.7.33.2}
+\contentsline {subsubsection}{\numberline {7.33.2.1}plaquette}{184}{subsubsection.7.33.2.1}
+\contentsline {subsubsection}{\numberline {7.33.2.2}staple}{184}{subsubsection.7.33.2.2}
+\contentsline {subsubsection}{\numberline {7.33.2.3}staple}{184}{subsubsection.7.33.2.3}
+\contentsline {subsubsection}{\numberline {7.33.2.4}staple\_\discretionary {-}{}{}0i\_\discretionary {-}{}{}H}{184}{subsubsection.7.33.2.4}
+\contentsline {subsubsection}{\numberline {7.33.2.5}staple\_\discretionary {-}{}{}H}{184}{subsubsection.7.33.2.5}
+\contentsline {subsubsection}{\numberline {7.33.2.6}staple\_\discretionary {-}{}{}H}{184}{subsubsection.7.33.2.6}
+\contentsline {subsubsection}{\numberline {7.33.2.7}staple\_\discretionary {-}{}{}ij\_\discretionary {-}{}{}H}{184}{subsubsection.7.33.2.7}
+\contentsline {section}{\numberline {7.34}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}global\_\discretionary {-}{}{}vars.h File Reference}{185}{section.7.34}
+\contentsline {subsection}{\numberline {7.34.1}Detailed Description}{185}{subsection.7.34.1}
+\contentsline {subsection}{\numberline {7.34.2}Variable Documentation}{185}{subsection.7.34.2}
+\contentsline {subsubsection}{\numberline {7.34.2.1}shutup}{185}{subsubsection.7.34.2.1}
+\contentsline {subsubsection}{\numberline {7.34.2.2}shutup\_\discretionary {-}{}{}loops}{185}{subsubsection.7.34.2.2}
+\contentsline {section}{\numberline {7.35}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}hmc.h File Reference}{186}{section.7.35}
+\contentsline {section}{\numberline {7.36}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}ildg\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}reader.h File Reference}{187}{section.7.36}
+\contentsline {subsection}{\numberline {7.36.1}Function Documentation}{187}{subsection.7.36.1}
+\contentsline {subsubsection}{\numberline {7.36.1.1}ildg\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}reader}{187}{subsubsection.7.36.1.1}
+\contentsline {section}{\numberline {7.37}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}instanton4d.h File Reference}{188}{section.7.37}
+\contentsline {section}{\numberline {7.38}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}lanczos.h File Reference}{189}{section.7.38}
+\contentsline {subsection}{\numberline {7.38.1}Detailed Description}{189}{subsection.7.38.1}
+\contentsline {section}{\numberline {7.39}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}MILC\_\discretionary {-}{}{}IO.h File Reference}{190}{section.7.39}
+\contentsline {subsection}{\numberline {7.39.1}Detailed Description}{190}{subsection.7.39.1}
+\contentsline {subsection}{\numberline {7.39.2}Function Documentation}{190}{subsection.7.39.2}
+\contentsline {subsubsection}{\numberline {7.39.2.1}load\_\discretionary {-}{}{}milc}{190}{subsubsection.7.39.2.1}
+\contentsline {subsubsection}{\numberline {7.39.2.2}milc\_\discretionary {-}{}{}read\_\discretionary {-}{}{}as\_\discretionary {-}{}{}float\_\discretionary {-}{}{}noswitch}{190}{subsubsection.7.39.2.2}
+\contentsline {subsubsection}{\numberline {7.39.2.3}milc\_\discretionary {-}{}{}read\_\discretionary {-}{}{}as\_\discretionary {-}{}{}float\_\discretionary {-}{}{}switch}{190}{subsubsection.7.39.2.3}
+\contentsline {section}{\numberline {7.40}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}minres\_\discretionary {-}{}{}inverter.h File Reference}{191}{section.7.40}
+\contentsline {subsection}{\numberline {7.40.1}Detailed Description}{191}{subsection.7.40.1}
+\contentsline {subsection}{\numberline {7.40.2}Function Documentation}{191}{subsection.7.40.2}
+\contentsline {subsubsection}{\numberline {7.40.2.1}MinimumResidueInverter}{191}{subsubsection.7.40.2.1}
+\contentsline {section}{\numberline {7.41}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}minres\_\discretionary {-}{}{}inverter\_\discretionary {-}{}{}vtk.h File Reference}{192}{section.7.41}
+\contentsline {subsection}{\numberline {7.41.1}Function Documentation}{192}{subsection.7.41.1}
+\contentsline {subsubsection}{\numberline {7.41.1.1}MinimumResidueInverterVtk}{192}{subsubsection.7.41.1.1}
+\contentsline {section}{\numberline {7.42}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}sdwf\_\discretionary {-}{}{}actions.h File Reference}{193}{section.7.42}
+\contentsline {subsection}{\numberline {7.42.1}Detailed Description}{193}{subsection.7.42.1}
+\contentsline {section}{\numberline {7.43}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}sdwf\_\discretionary {-}{}{}algorithms.h File Reference}{194}{section.7.43}
+\contentsline {subsection}{\numberline {7.43.1}Detailed Description}{194}{subsection.7.43.1}
+\contentsline {subsection}{\numberline {7.43.2}Function Documentation}{195}{subsection.7.43.2}
+\contentsline {subsubsection}{\numberline {7.43.2.1}compute\_\discretionary {-}{}{}swirls\_\discretionary {-}{}{}field}{195}{subsubsection.7.43.2.1}
+\contentsline {subsubsection}{\numberline {7.43.2.2}mul\_\discretionary {-}{}{}invQ}{195}{subsubsection.7.43.2.2}
+\contentsline {subsubsection}{\numberline {7.43.2.3}mul\_\discretionary {-}{}{}Q}{195}{subsubsection.7.43.2.3}
+\contentsline {subsubsection}{\numberline {7.43.2.4}project}{195}{subsubsection.7.43.2.4}
+\contentsline {subsubsection}{\numberline {7.43.2.5}project}{195}{subsubsection.7.43.2.5}
+\contentsline {subsubsection}{\numberline {7.43.2.6}project}{195}{subsubsection.7.43.2.6}
+\contentsline {subsection}{\numberline {7.43.3}Variable Documentation}{195}{subsection.7.43.3}
+\contentsline {subsubsection}{\numberline {7.43.3.1}default\_\discretionary {-}{}{}sdwf\_\discretionary {-}{}{}action}{195}{subsubsection.7.43.3.1}
+\contentsline {subsubsection}{\numberline {7.43.3.2}default\_\discretionary {-}{}{}sdwf\_\discretionary {-}{}{}inverter}{195}{subsubsection.7.43.3.2}
+\contentsline {subsubsection}{\numberline {7.43.3.3}MDP\_\discretionary {-}{}{}SDWF\_\discretionary {-}{}{}SGN}{195}{subsubsection.7.43.3.3}
+\contentsline {section}{\numberline {7.44}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}sdwf\_\discretionary {-}{}{}field.h File Reference}{196}{section.7.44}
+\contentsline {subsection}{\numberline {7.44.1}Detailed Description}{196}{subsection.7.44.1}
+\contentsline {section}{\numberline {7.45}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}set\_\discretionary {-}{}{}random.h File Reference}{197}{section.7.45}
+\contentsline {subsection}{\numberline {7.45.1}Detailed Description}{197}{subsection.7.45.1}
+\contentsline {subsection}{\numberline {7.45.2}Function Documentation}{197}{subsection.7.45.2}
+\contentsline {subsubsection}{\numberline {7.45.2.1}set\_\discretionary {-}{}{}random}{197}{subsubsection.7.45.2.1}
+\contentsline {subsubsection}{\numberline {7.45.2.2}set\_\discretionary {-}{}{}wall\_\discretionary {-}{}{}random}{197}{subsubsection.7.45.2.2}
+\contentsline {subsubsection}{\numberline {7.45.2.3}set\_\discretionary {-}{}{}zero}{197}{subsubsection.7.45.2.3}
+\contentsline {section}{\numberline {7.46}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}sse.h File Reference}{198}{section.7.46}
+\contentsline {subsection}{\numberline {7.46.1}Detailed Description}{199}{subsection.7.46.1}
+\contentsline {subsection}{\numberline {7.46.2}Define Documentation}{200}{subsection.7.46.2}
+\contentsline {subsubsection}{\numberline {7.46.2.1}\_\discretionary {-}{}{}ASM}{200}{subsubsection.7.46.2.1}
+\contentsline {subsubsection}{\numberline {7.46.2.2}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}add\_\discretionary {-}{}{}16}{200}{subsubsection.7.46.2.2}
+\contentsline {subsubsection}{\numberline {7.46.2.3}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}add\_\discretionary {-}{}{}imag\_\discretionary {-}{}{}scalar\_\discretionary {-}{}{}product\_\discretionary {-}{}{}16}{200}{subsubsection.7.46.2.3}
+\contentsline {subsubsection}{\numberline {7.46.2.4}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}add\_\discretionary {-}{}{}multiply\_\discretionary {-}{}{}16}{200}{subsubsection.7.46.2.4}
+\contentsline {subsubsection}{\numberline {7.46.2.5}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}add\_\discretionary {-}{}{}norm\_\discretionary {-}{}{}square\_\discretionary {-}{}{}16}{200}{subsubsection.7.46.2.5}
+\contentsline {subsubsection}{\numberline {7.46.2.6}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}add\_\discretionary {-}{}{}real\_\discretionary {-}{}{}scalar\_\discretionary {-}{}{}product\_\discretionary {-}{}{}16}{200}{subsubsection.7.46.2.6}
+\contentsline {subsubsection}{\numberline {7.46.2.7}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}copy\_\discretionary {-}{}{}16}{200}{subsubsection.7.46.2.7}
+\contentsline {subsubsection}{\numberline {7.46.2.8}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}hermitian\_\discretionary {-}{}{}su3}{200}{subsubsection.7.46.2.8}
+\contentsline {subsubsection}{\numberline {7.46.2.9}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}load}{200}{subsubsection.7.46.2.9}
+\contentsline {subsubsection}{\numberline {7.46.2.10}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}load\_\discretionary {-}{}{}123}{200}{subsubsection.7.46.2.10}
+\contentsline {subsubsection}{\numberline {7.46.2.11}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}load\_\discretionary {-}{}{}up}{200}{subsubsection.7.46.2.11}
+\contentsline {subsubsection}{\numberline {7.46.2.12}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}load\_\discretionary {-}{}{}up\_\discretionary {-}{}{}123}{201}{subsubsection.7.46.2.12}
+\contentsline {subsubsection}{\numberline {7.46.2.13}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}multiply\_\discretionary {-}{}{}16}{201}{subsubsection.7.46.2.13}
+\contentsline {subsubsection}{\numberline {7.46.2.14}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}prefetch\_\discretionary {-}{}{}16}{201}{subsubsection.7.46.2.14}
+\contentsline {subsubsection}{\numberline {7.46.2.15}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}prefetch\_\discretionary {-}{}{}nta\_\discretionary {-}{}{}spinor}{201}{subsubsection.7.46.2.15}
+\contentsline {subsubsection}{\numberline {7.46.2.16}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}prefetch\_\discretionary {-}{}{}spinor}{201}{subsubsection.7.46.2.16}
+\contentsline {subsubsection}{\numberline {7.46.2.17}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}prefetch\_\discretionary {-}{}{}su3}{201}{subsubsection.7.46.2.17}
+\contentsline {subsubsection}{\numberline {7.46.2.18}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}store}{202}{subsubsection.7.46.2.18}
+\contentsline {subsubsection}{\numberline {7.46.2.19}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}store\_\discretionary {-}{}{}123}{202}{subsubsection.7.46.2.19}
+\contentsline {subsubsection}{\numberline {7.46.2.20}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}store\_\discretionary {-}{}{}up}{202}{subsubsection.7.46.2.20}
+\contentsline {subsubsection}{\numberline {7.46.2.21}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}store\_\discretionary {-}{}{}up\_\discretionary {-}{}{}123}{202}{subsubsection.7.46.2.21}
+\contentsline {subsubsection}{\numberline {7.46.2.22}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}su3\_\discretionary {-}{}{}inverse\_\discretionary {-}{}{}multiply}{202}{subsubsection.7.46.2.22}
+\contentsline {subsubsection}{\numberline {7.46.2.23}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}su3\_\discretionary {-}{}{}multiply}{202}{subsubsection.7.46.2.23}
+\contentsline {subsubsection}{\numberline {7.46.2.24}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}sub\_\discretionary {-}{}{}16}{202}{subsubsection.7.46.2.24}
+\contentsline {subsubsection}{\numberline {7.46.2.25}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}add}{202}{subsubsection.7.46.2.25}
+\contentsline {subsubsection}{\numberline {7.46.2.26}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}i\_\discretionary {-}{}{}mul}{203}{subsubsection.7.46.2.26}
+\contentsline {subsubsection}{\numberline {7.46.2.27}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}minus\_\discretionary {-}{}{}i\_\discretionary {-}{}{}mul}{203}{subsubsection.7.46.2.27}
+\contentsline {subsubsection}{\numberline {7.46.2.28}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}mul}{203}{subsubsection.7.46.2.28}
+\contentsline {subsubsection}{\numberline {7.46.2.29}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}mul\_\discretionary {-}{}{}complex}{203}{subsubsection.7.46.2.29}
+\contentsline {subsubsection}{\numberline {7.46.2.30}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}double\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}sub}{204}{subsubsection.7.46.2.30}
+\contentsline {subsubsection}{\numberline {7.46.2.31}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}pair\_\discretionary {-}{}{}load}{204}{subsubsection.7.46.2.31}
+\contentsline {subsubsection}{\numberline {7.46.2.32}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}pair\_\discretionary {-}{}{}load\_\discretionary {-}{}{}up}{204}{subsubsection.7.46.2.32}
+\contentsline {subsubsection}{\numberline {7.46.2.33}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}pair\_\discretionary {-}{}{}store}{205}{subsubsection.7.46.2.33}
+\contentsline {subsubsection}{\numberline {7.46.2.34}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}pair\_\discretionary {-}{}{}store\_\discretionary {-}{}{}up}{205}{subsubsection.7.46.2.34}
+\contentsline {subsubsection}{\numberline {7.46.2.35}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}prefetch\_\discretionary {-}{}{}spinor}{205}{subsubsection.7.46.2.35}
+\contentsline {subsubsection}{\numberline {7.46.2.36}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}prefetch\_\discretionary {-}{}{}su3}{205}{subsubsection.7.46.2.36}
+\contentsline {subsubsection}{\numberline {7.46.2.37}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}su3\_\discretionary {-}{}{}inverse\_\discretionary {-}{}{}multiply}{206}{subsubsection.7.46.2.37}
+\contentsline {subsubsection}{\numberline {7.46.2.38}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}su3\_\discretionary {-}{}{}multiply}{206}{subsubsection.7.46.2.38}
+\contentsline {subsubsection}{\numberline {7.46.2.39}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}add}{206}{subsubsection.7.46.2.39}
+\contentsline {subsubsection}{\numberline {7.46.2.40}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}addsub}{206}{subsubsection.7.46.2.40}
+\contentsline {subsubsection}{\numberline {7.46.2.41}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}i\_\discretionary {-}{}{}add}{206}{subsubsection.7.46.2.41}
+\contentsline {subsubsection}{\numberline {7.46.2.42}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}i\_\discretionary {-}{}{}addsub}{206}{subsubsection.7.46.2.42}
+\contentsline {subsubsection}{\numberline {7.46.2.43}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}i\_\discretionary {-}{}{}sub}{207}{subsubsection.7.46.2.43}
+\contentsline {subsubsection}{\numberline {7.46.2.44}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}i\_\discretionary {-}{}{}subadd}{207}{subsubsection.7.46.2.44}
+\contentsline {subsubsection}{\numberline {7.46.2.45}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}load}{207}{subsubsection.7.46.2.45}
+\contentsline {subsubsection}{\numberline {7.46.2.46}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}load\_\discretionary {-}{}{}up}{208}{subsubsection.7.46.2.46}
+\contentsline {subsubsection}{\numberline {7.46.2.47}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}mul}{208}{subsubsection.7.46.2.47}
+\contentsline {subsubsection}{\numberline {7.46.2.48}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}store}{208}{subsubsection.7.46.2.48}
+\contentsline {subsubsection}{\numberline {7.46.2.49}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}sub}{208}{subsubsection.7.46.2.49}
+\contentsline {subsubsection}{\numberline {7.46.2.50}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}subadd}{208}{subsubsection.7.46.2.50}
+\contentsline {subsubsection}{\numberline {7.46.2.51}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}xch}{209}{subsubsection.7.46.2.51}
+\contentsline {subsubsection}{\numberline {7.46.2.52}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}xch\_\discretionary {-}{}{}i\_\discretionary {-}{}{}add}{209}{subsubsection.7.46.2.52}
+\contentsline {subsubsection}{\numberline {7.46.2.53}\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}float\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}xch\_\discretionary {-}{}{}i\_\discretionary {-}{}{}sub}{209}{subsubsection.7.46.2.53}
+\contentsline {subsubsection}{\numberline {7.46.2.54}ALIGN16}{209}{subsubsection.7.46.2.54}
+\contentsline {subsubsection}{\numberline {7.46.2.55}ALIGN64}{209}{subsubsection.7.46.2.55}
+\contentsline {section}{\numberline {7.47}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}sse\_\discretionary {-}{}{}su3.h File Reference}{210}{section.7.47}
+\contentsline {subsection}{\numberline {7.47.1}Detailed Description}{210}{subsection.7.47.1}
+\contentsline {section}{\numberline {7.48}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}staggered\_\discretionary {-}{}{}actions.h File Reference}{211}{section.7.48}
+\contentsline {subsection}{\numberline {7.48.1}Detailed Description}{211}{subsection.7.48.1}
+\contentsline {section}{\numberline {7.49}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}staggered\_\discretionary {-}{}{}actions\_\discretionary {-}{}{}sse2.h File Reference}{212}{section.7.49}
+\contentsline {subsection}{\numberline {7.49.1}Detailed Description}{212}{subsection.7.49.1}
+\contentsline {section}{\numberline {7.50}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}staggered\_\discretionary {-}{}{}algorithms.h File Reference}{213}{section.7.50}
+\contentsline {subsection}{\numberline {7.50.1}Detailed Description}{213}{subsection.7.50.1}
+\contentsline {subsection}{\numberline {7.50.2}Function Documentation}{213}{subsection.7.50.2}
+\contentsline {subsubsection}{\numberline {7.50.2.1}lepage\_\discretionary {-}{}{}coefficients}{213}{subsubsection.7.50.2.1}
+\contentsline {subsubsection}{\numberline {7.50.2.2}lepage\_\discretionary {-}{}{}improved\_\discretionary {-}{}{}links}{214}{subsubsection.7.50.2.2}
+\contentsline {subsubsection}{\numberline {7.50.2.3}mul\_\discretionary {-}{}{}invQ}{214}{subsubsection.7.50.2.3}
+\contentsline {subsubsection}{\numberline {7.50.2.4}mul\_\discretionary {-}{}{}Q}{214}{subsubsection.7.50.2.4}
+\contentsline {subsubsection}{\numberline {7.50.2.5}Omega4x4}{214}{subsubsection.7.50.2.5}
+\contentsline {subsubsection}{\numberline {7.50.2.6}staggered\_\discretionary {-}{}{}rephase}{214}{subsubsection.7.50.2.6}
+\contentsline {subsection}{\numberline {7.50.3}Variable Documentation}{214}{subsection.7.50.3}
+\contentsline {subsubsection}{\numberline {7.50.3.1}default\_\discretionary {-}{}{}staggered\_\discretionary {-}{}{}action}{214}{subsubsection.7.50.3.1}
+\contentsline {subsubsection}{\numberline {7.50.3.2}default\_\discretionary {-}{}{}staggered\_\discretionary {-}{}{}inverter}{215}{subsubsection.7.50.3.2}
+\contentsline {section}{\numberline {7.51}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}staggered\_\discretionary {-}{}{}field.h File Reference}{216}{section.7.51}
+\contentsline {subsection}{\numberline {7.51.1}Detailed Description}{216}{subsection.7.51.1}
+\contentsline {section}{\numberline {7.52}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}staggered\_\discretionary {-}{}{}mesons.h File Reference}{217}{section.7.52}
+\contentsline {subsection}{\numberline {7.52.1}Detailed Description}{217}{subsection.7.52.1}
+\contentsline {subsection}{\numberline {7.52.2}Function Documentation}{218}{subsection.7.52.2}
+\contentsline {subsubsection}{\numberline {7.52.2.1}GoldstonBoson\_\discretionary {-}{}{}5x5}{218}{subsubsection.7.52.2.1}
+\contentsline {subsubsection}{\numberline {7.52.2.2}make\_\discretionary {-}{}{}meson}{218}{subsubsection.7.52.2.2}
+\contentsline {subsubsection}{\numberline {7.52.2.3}operator\_\discretionary {-}{}{}staggered\_\discretionary {-}{}{}meson}{218}{subsubsection.7.52.2.3}
+\contentsline {subsection}{\numberline {7.52.3}Variable Documentation}{218}{subsection.7.52.3}
+\contentsline {subsubsection}{\numberline {7.52.3.1}local\_\discretionary {-}{}{}source}{218}{subsubsection.7.52.3.1}
+\contentsline {subsubsection}{\numberline {7.52.3.2}wall\_\discretionary {-}{}{}source}{218}{subsubsection.7.52.3.2}
+\contentsline {section}{\numberline {7.53}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}staggered\_\discretionary {-}{}{}propagator.h File Reference}{219}{section.7.53}
+\contentsline {subsection}{\numberline {7.53.1}Detailed Description}{219}{subsection.7.53.1}
+\contentsline {section}{\numberline {7.54}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}staggered\_\discretionary {-}{}{}uml\_\discretionary {-}{}{}inverter.h File Reference}{220}{section.7.54}
+\contentsline {subsection}{\numberline {7.54.1}Detailed Description}{220}{subsection.7.54.1}
+\contentsline {section}{\numberline {7.55}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}su\_\discretionary {-}{}{}generators.h File Reference}{221}{section.7.55}
+\contentsline {subsection}{\numberline {7.55.1}Detailed Description}{221}{subsection.7.55.1}
+\contentsline {section}{\numberline {7.56}/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\discretionary {-}{}{}topological\_\discretionary {-}{}{}charge.h File Reference}{222}{section.7.56}
+\contentsline {subsection}{\numberline {7.56.1}Function Documentation}{222}{subsection.7.56.1}
+\contentsline {subsubsection}{\numberline {7.56.1.1}compute\_\discretionary {-}{}{}em\_\discretionary {-}{}{}notrace\_\discretionary {-}{}{}field}{222}{subsubsection.7.56.1.1}
+\contentsline {subsubsection}{\numberline {7.56.1.2}topological\_\discretionary {-}{}{}charge}{222}{subsubsection.7.56.1.2}
+\contentsline {subsubsection}{\numberline {7.56.1.3}topological\_\discretionary {-}{}{}charge\_\discretionary {-}{}{}vtk}{222}{subsubsection.7.56.1.3}
+\contentsline {section}{\numberline {7.57}/Users/mdipierro/fermiqcd/development/Libraries/make\_\discretionary {-}{}{}actions.cpp File Reference}{223}{section.7.57}
+\contentsline {subsection}{\numberline {7.57.1}Function Documentation}{223}{subsection.7.57.1}
+\contentsline {subsubsection}{\numberline {7.57.1.1}main}{223}{subsubsection.7.57.1.1}
+\contentsline {subsubsection}{\numberline {7.57.1.2}test\_\discretionary {-}{}{}dwfermi}{223}{subsubsection.7.57.1.2}
+\contentsline {subsubsection}{\numberline {7.57.1.3}test\_\discretionary {-}{}{}fermi}{223}{subsubsection.7.57.1.3}
+\contentsline {subsubsection}{\numberline {7.57.1.4}test\_\discretionary {-}{}{}gauge}{223}{subsubsection.7.57.1.4}
+\contentsline {subsubsection}{\numberline {7.57.1.5}test\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}improved}{223}{subsubsection.7.57.1.5}
+\contentsline {subsubsection}{\numberline {7.57.1.6}test\_\discretionary {-}{}{}staggered}{223}{subsubsection.7.57.1.6}
+\contentsline {section}{\numberline {7.58}/Users/mdipierro/fermiqcd/development/Libraries/make\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}pion\_\discretionary {-}{}{}noprop.cpp File Reference}{224}{section.7.58}
+\contentsline {subsection}{\numberline {7.58.1}Function Documentation}{224}{subsection.7.58.1}
+\contentsline {subsubsection}{\numberline {7.58.1.1}main}{224}{subsubsection.7.58.1.1}
+\contentsline {section}{\numberline {7.59}/Users/mdipierro/fermiqcd/development/Libraries/make\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}pion\_\discretionary {-}{}{}prop.cpp File Reference}{225}{section.7.59}
+\contentsline {subsection}{\numberline {7.59.1}Function Documentation}{225}{subsection.7.59.1}
+\contentsline {subsubsection}{\numberline {7.59.1.1}main}{225}{subsubsection.7.59.1.1}
+\contentsline {section}{\numberline {7.60}/Users/mdipierro/fermiqcd/development/Libraries/make\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}vmeson\_\discretionary {-}{}{}noprop.cpp File Reference}{226}{section.7.60}
+\contentsline {subsection}{\numberline {7.60.1}Function Documentation}{226}{subsection.7.60.1}
+\contentsline {subsubsection}{\numberline {7.60.1.1}main}{226}{subsubsection.7.60.1.1}
+\contentsline {section}{\numberline {7.61}/Users/mdipierro/fermiqcd/development/Libraries/make\_\discretionary {-}{}{}fermi\_\discretionary {-}{}{}vmeson\_\discretionary {-}{}{}prop.cpp File Reference}{227}{section.7.61}
+\contentsline {subsection}{\numberline {7.61.1}Function Documentation}{227}{subsection.7.61.1}
+\contentsline {subsubsection}{\numberline {7.61.1.1}main}{227}{subsubsection.7.61.1.1}
+\contentsline {section}{\numberline {7.62}/Users/mdipierro/fermiqcd/development/Libraries/make\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}cold.cpp File Reference}{228}{section.7.62}
+\contentsline {subsection}{\numberline {7.62.1}Function Documentation}{228}{subsection.7.62.1}
+\contentsline {subsubsection}{\numberline {7.62.1.1}main}{228}{subsubsection.7.62.1.1}
+\contentsline {section}{\numberline {7.63}/Users/mdipierro/fermiqcd/development/Libraries/make\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}configurations.cpp File Reference}{229}{section.7.63}
+\contentsline {subsection}{\numberline {7.63.1}Function Documentation}{229}{subsection.7.63.1}
+\contentsline {subsubsection}{\numberline {7.63.1.1}main}{229}{subsubsection.7.63.1.1}
+\contentsline {section}{\numberline {7.64}/Users/mdipierro/fermiqcd/development/Libraries/make\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}hot.cpp File Reference}{230}{section.7.64}
+\contentsline {subsection}{\numberline {7.64.1}Function Documentation}{230}{subsection.7.64.1}
+\contentsline {subsubsection}{\numberline {7.64.1.1}main}{230}{subsubsection.7.64.1.1}
+\contentsline {section}{\numberline {7.65}/Users/mdipierro/fermiqcd/development/Libraries/make\_\discretionary {-}{}{}improved\_\discretionary {-}{}{}gauge\_\discretionary {-}{}{}configurations.cpp File Reference}{231}{section.7.65}
+\contentsline {subsection}{\numberline {7.65.1}Function Documentation}{231}{subsection.7.65.1}
+\contentsline {subsubsection}{\numberline {7.65.1.1}main}{231}{subsubsection.7.65.1.1}
+\contentsline {section}{\numberline {7.66}/Users/mdipierro/fermiqcd/development/Libraries/make\_\discretionary {-}{}{}plaquettes.cpp File Reference}{232}{section.7.66}
+\contentsline {subsection}{\numberline {7.66.1}Function Documentation}{232}{subsection.7.66.1}
+\contentsline {subsubsection}{\numberline {7.66.1.1}main}{232}{subsubsection.7.66.1.1}
+\contentsline {section}{\numberline {7.67}/Users/mdipierro/fermiqcd/development/Libraries/mdp.h File Reference}{233}{section.7.67}
+\contentsline {subsection}{\numberline {7.67.1}Detailed Description}{234}{subsection.7.67.1}
+\contentsline {subsection}{\numberline {7.67.2}Define Documentation}{235}{subsection.7.67.2}
+\contentsline {subsubsection}{\numberline {7.67.2.1}endl}{235}{subsubsection.7.67.2.1}
+\contentsline {section}{\numberline {7.68}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}array.h File Reference}{236}{section.7.68}
+\contentsline {subsection}{\numberline {7.68.1}Detailed Description}{236}{subsection.7.68.1}
+\contentsline {section}{\numberline {7.69}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}communicator.h File Reference}{237}{section.7.69}
+\contentsline {subsection}{\numberline {7.69.1}Detailed Description}{237}{subsection.7.69.1}
+\contentsline {subsection}{\numberline {7.69.2}Typedef Documentation}{238}{subsection.7.69.2}
+\contentsline {subsubsection}{\numberline {7.69.2.1}mdp\_\discretionary {-}{}{}request}{238}{subsubsection.7.69.2.1}
+\contentsline {subsection}{\numberline {7.69.3}Function Documentation}{238}{subsection.7.69.3}
+\contentsline {subsubsection}{\numberline {7.69.3.1}\_\discretionary {-}{}{}mpi\_\discretionary {-}{}{}error\_\discretionary {-}{}{}message}{238}{subsubsection.7.69.3.1}
+\contentsline {subsubsection}{\numberline {7.69.3.2}begin\_\discretionary {-}{}{}function}{238}{subsubsection.7.69.3.2}
+\contentsline {subsubsection}{\numberline {7.69.3.3}end\_\discretionary {-}{}{}function}{238}{subsubsection.7.69.3.3}
+\contentsline {subsection}{\numberline {7.69.4}Variable Documentation}{238}{subsection.7.69.4}
+\contentsline {subsubsection}{\numberline {7.69.4.1}mdp}{238}{subsubsection.7.69.4.1}
+\contentsline {subsubsection}{\numberline {7.69.4.2}mpi}{238}{subsubsection.7.69.4.2}
+\contentsline {section}{\numberline {7.70}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}compatibility\_\discretionary {-}{}{}macros.h File Reference}{239}{section.7.70}
+\contentsline {subsection}{\numberline {7.70.1}Detailed Description}{239}{subsection.7.70.1}
+\contentsline {subsection}{\numberline {7.70.2}Define Documentation}{240}{subsection.7.70.2}
+\contentsline {subsubsection}{\numberline {7.70.2.1}Complex}{240}{subsubsection.7.70.2.1}
+\contentsline {subsubsection}{\numberline {7.70.2.2}DynamicArray}{240}{subsubsection.7.70.2.2}
+\contentsline {subsubsection}{\numberline {7.70.2.3}generic\_\discretionary {-}{}{}field}{240}{subsubsection.7.70.2.3}
+\contentsline {subsubsection}{\numberline {7.70.2.4}generic\_\discretionary {-}{}{}lattice}{240}{subsubsection.7.70.2.4}
+\contentsline {subsubsection}{\numberline {7.70.2.5}JackBoot}{240}{subsubsection.7.70.2.5}
+\contentsline {subsubsection}{\numberline {7.70.2.6}Matrix}{240}{subsubsection.7.70.2.6}
+\contentsline {subsubsection}{\numberline {7.70.2.7}Matrix\_\discretionary {-}{}{}field}{240}{subsubsection.7.70.2.7}
+\contentsline {subsubsection}{\numberline {7.70.2.8}mdp\_\discretionary {-}{}{}random\_\discretionary {-}{}{}generator}{240}{subsubsection.7.70.2.8}
+\contentsline {subsubsection}{\numberline {7.70.2.9}Measure}{240}{subsubsection.7.70.2.9}
+\contentsline {subsubsection}{\numberline {7.70.2.10}myreal}{240}{subsubsection.7.70.2.10}
+\contentsline {subsubsection}{\numberline {7.70.2.11}NMatrix\_\discretionary {-}{}{}field}{240}{subsubsection.7.70.2.11}
+\contentsline {subsubsection}{\numberline {7.70.2.12}Random}{240}{subsubsection.7.70.2.12}
+\contentsline {subsubsection}{\numberline {7.70.2.13}site}{240}{subsubsection.7.70.2.13}
+\contentsline {subsubsection}{\numberline {7.70.2.14}Vector\_\discretionary {-}{}{}field}{240}{subsubsection.7.70.2.14}
+\contentsline {section}{\numberline {7.71}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}complex.h File Reference}{241}{section.7.71}
+\contentsline {subsection}{\numberline {7.71.1}Detailed Description}{242}{subsection.7.71.1}
+\contentsline {subsection}{\numberline {7.71.2}Function Documentation}{244}{subsection.7.71.2}
+\contentsline {subsubsection}{\numberline {7.71.2.1}abs2}{244}{subsubsection.7.71.2.1}
+\contentsline {subsubsection}{\numberline {7.71.2.2}operator$\ast $}{244}{subsubsection.7.71.2.2}
+\contentsline {subsubsection}{\numberline {7.71.2.3}operator$\ast $}{244}{subsubsection.7.71.2.3}
+\contentsline {subsubsection}{\numberline {7.71.2.4}operator$\ast $}{244}{subsubsection.7.71.2.4}
+\contentsline {subsubsection}{\numberline {7.71.2.5}operator$\ast $}{244}{subsubsection.7.71.2.5}
+\contentsline {subsubsection}{\numberline {7.71.2.6}operator$\ast $}{244}{subsubsection.7.71.2.6}
+\contentsline {subsubsection}{\numberline {7.71.2.7}operator$\ast $}{244}{subsubsection.7.71.2.7}
+\contentsline {subsubsection}{\numberline {7.71.2.8}operator$\ast $}{244}{subsubsection.7.71.2.8}
+\contentsline {subsubsection}{\numberline {7.71.2.9}operator+}{244}{subsubsection.7.71.2.9}
+\contentsline {subsubsection}{\numberline {7.71.2.10}operator+}{244}{subsubsection.7.71.2.10}
+\contentsline {subsubsection}{\numberline {7.71.2.11}operator+}{244}{subsubsection.7.71.2.11}
+\contentsline {subsubsection}{\numberline {7.71.2.12}operator+}{244}{subsubsection.7.71.2.12}
+\contentsline {subsubsection}{\numberline {7.71.2.13}operator+}{244}{subsubsection.7.71.2.13}
+\contentsline {subsubsection}{\numberline {7.71.2.14}operator+}{244}{subsubsection.7.71.2.14}
+\contentsline {subsubsection}{\numberline {7.71.2.15}operator+}{244}{subsubsection.7.71.2.15}
+\contentsline {subsubsection}{\numberline {7.71.2.16}operator-\/}{244}{subsubsection.7.71.2.16}
+\contentsline {subsubsection}{\numberline {7.71.2.17}operator-\/}{244}{subsubsection.7.71.2.17}
+\contentsline {subsubsection}{\numberline {7.71.2.18}operator-\/}{244}{subsubsection.7.71.2.18}
+\contentsline {subsubsection}{\numberline {7.71.2.19}operator-\/}{244}{subsubsection.7.71.2.19}
+\contentsline {subsubsection}{\numberline {7.71.2.20}operator-\/}{244}{subsubsection.7.71.2.20}
+\contentsline {subsubsection}{\numberline {7.71.2.21}operator-\/}{244}{subsubsection.7.71.2.21}
+\contentsline {subsubsection}{\numberline {7.71.2.22}operator-\/}{244}{subsubsection.7.71.2.22}
+\contentsline {subsubsection}{\numberline {7.71.2.23}operator/}{244}{subsubsection.7.71.2.23}
+\contentsline {subsubsection}{\numberline {7.71.2.24}operator/}{244}{subsubsection.7.71.2.24}
+\contentsline {subsubsection}{\numberline {7.71.2.25}operator/}{244}{subsubsection.7.71.2.25}
+\contentsline {subsubsection}{\numberline {7.71.2.26}operator/}{244}{subsubsection.7.71.2.26}
+\contentsline {subsubsection}{\numberline {7.71.2.27}operator/}{244}{subsubsection.7.71.2.27}
+\contentsline {subsubsection}{\numberline {7.71.2.28}operator/}{244}{subsubsection.7.71.2.28}
+\contentsline {subsubsection}{\numberline {7.71.2.29}operator/}{244}{subsubsection.7.71.2.29}
+\contentsline {subsubsection}{\numberline {7.71.2.30}operator$<$$<$}{244}{subsubsection.7.71.2.30}
+\contentsline {subsection}{\numberline {7.71.3}Variable Documentation}{244}{subsection.7.71.3}
+\contentsline {subsubsection}{\numberline {7.71.3.1}I}{244}{subsubsection.7.71.3.1}
+\contentsline {section}{\numberline {7.72}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}complex\_\discretionary {-}{}{}field.h File Reference}{245}{section.7.72}
+\contentsline {subsection}{\numberline {7.72.1}Detailed Description}{245}{subsection.7.72.1}
+\contentsline {subsection}{\numberline {7.72.2}Function Documentation}{245}{subsection.7.72.2}
+\contentsline {subsubsection}{\numberline {7.72.2.1}mdp\_\discretionary {-}{}{}read\_\discretionary {-}{}{}double\_\discretionary {-}{}{}as\_\discretionary {-}{}{}float}{245}{subsubsection.7.72.2.1}
+\contentsline {subsubsection}{\numberline {7.72.2.2}mdp\_\discretionary {-}{}{}read\_\discretionary {-}{}{}float\_\discretionary {-}{}{}as\_\discretionary {-}{}{}double}{245}{subsubsection.7.72.2.2}
+\contentsline {subsubsection}{\numberline {7.72.2.3}mdp\_\discretionary {-}{}{}write\_\discretionary {-}{}{}double\_\discretionary {-}{}{}as\_\discretionary {-}{}{}float}{245}{subsubsection.7.72.2.3}
+\contentsline {subsubsection}{\numberline {7.72.2.4}mdp\_\discretionary {-}{}{}write\_\discretionary {-}{}{}float\_\discretionary {-}{}{}as\_\discretionary {-}{}{}double}{245}{subsubsection.7.72.2.4}
+\contentsline {section}{\numberline {7.73}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}delta.h File Reference}{246}{section.7.73}
+\contentsline {subsection}{\numberline {7.73.1}Detailed Description}{246}{subsection.7.73.1}
+\contentsline {subsection}{\numberline {7.73.2}Function Documentation}{246}{subsection.7.73.2}
+\contentsline {subsubsection}{\numberline {7.73.2.1}delta}{246}{subsubsection.7.73.2.1}
+\contentsline {section}{\numberline {7.74}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}deprecatedIO.h File Reference}{247}{section.7.74}
+\contentsline {subsection}{\numberline {7.74.1}Detailed Description}{247}{subsection.7.74.1}
+\contentsline {section}{\numberline {7.75}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}dynalloc.h File Reference}{248}{section.7.75}
+\contentsline {subsection}{\numberline {7.75.1}Detailed Description}{248}{subsection.7.75.1}
+\contentsline {subsection}{\numberline {7.75.2}Function Documentation}{248}{subsection.7.75.2}
+\contentsline {subsubsection}{\numberline {7.75.2.1}operator delete}{248}{subsubsection.7.75.2.1}
+\contentsline {subsubsection}{\numberline {7.75.2.2}operator delete[]}{248}{subsubsection.7.75.2.2}
+\contentsline {subsubsection}{\numberline {7.75.2.3}operator new}{248}{subsubsection.7.75.2.3}
+\contentsline {subsubsection}{\numberline {7.75.2.4}operator new[]}{248}{subsubsection.7.75.2.4}
+\contentsline {section}{\numberline {7.76}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}endianess\_\discretionary {-}{}{}converter.h File Reference}{249}{section.7.76}
+\contentsline {subsection}{\numberline {7.76.1}Detailed Description}{249}{subsection.7.76.1}
+\contentsline {subsection}{\numberline {7.76.2}Function Documentation}{249}{subsection.7.76.2}
+\contentsline {subsubsection}{\numberline {7.76.2.1}switch\_\discretionary {-}{}{}endianess\_\discretionary {-}{}{}byte4}{249}{subsubsection.7.76.2.1}
+\contentsline {subsubsection}{\numberline {7.76.2.2}switch\_\discretionary {-}{}{}endianess\_\discretionary {-}{}{}byte8}{249}{subsubsection.7.76.2.2}
+\contentsline {section}{\numberline {7.77}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}field.h File Reference}{250}{section.7.77}
+\contentsline {subsection}{\numberline {7.77.1}Detailed Description}{250}{subsection.7.77.1}
+\contentsline {section}{\numberline {7.78}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}field\_\discretionary {-}{}{}load.h File Reference}{251}{section.7.78}
+\contentsline {subsection}{\numberline {7.78.1}Detailed Description}{251}{subsection.7.78.1}
+\contentsline {subsection}{\numberline {7.78.2}Function Documentation}{251}{subsection.7.78.2}
+\contentsline {subsubsection}{\numberline {7.78.2.1}mdp\_\discretionary {-}{}{}default\_\discretionary {-}{}{}user\_\discretionary {-}{}{}read}{251}{subsubsection.7.78.2.1}
+\contentsline {section}{\numberline {7.79}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}field\_\discretionary {-}{}{}save.h File Reference}{252}{section.7.79}
+\contentsline {subsection}{\numberline {7.79.1}Detailed Description}{252}{subsection.7.79.1}
+\contentsline {subsection}{\numberline {7.79.2}Function Documentation}{252}{subsection.7.79.2}
+\contentsline {subsubsection}{\numberline {7.79.2.1}mdp\_\discretionary {-}{}{}default\_\discretionary {-}{}{}user\_\discretionary {-}{}{}write}{252}{subsubsection.7.79.2.1}
+\contentsline {section}{\numberline {7.80}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}field\_\discretionary {-}{}{}save\_\discretionary {-}{}{}vtk.h File Reference}{253}{section.7.80}
+\contentsline {subsection}{\numberline {7.80.1}Function Documentation}{253}{subsection.7.80.1}
+\contentsline {subsubsection}{\numberline {7.80.1.1}cumulate\_\discretionary {-}{}{}field}{253}{subsubsection.7.80.1.1}
+\contentsline {section}{\numberline {7.81}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}field\_\discretionary {-}{}{}test.h File Reference}{254}{section.7.81}
+\contentsline {subsection}{\numberline {7.81.1}Detailed Description}{254}{subsection.7.81.1}
+\contentsline {subsection}{\numberline {7.81.2}Function Documentation}{254}{subsection.7.81.2}
+\contentsline {subsubsection}{\numberline {7.81.2.1}mdp\_\discretionary {-}{}{}field\_\discretionary {-}{}{}test}{254}{subsubsection.7.81.2.1}
+\contentsline {section}{\numberline {7.82}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}field\_\discretionary {-}{}{}update.h File Reference}{255}{section.7.82}
+\contentsline {subsection}{\numberline {7.82.1}Detailed Description}{255}{subsection.7.82.1}
+\contentsline {section}{\numberline {7.83}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}fitting\_\discretionary {-}{}{}functions.h File Reference}{256}{section.7.83}
+\contentsline {subsection}{\numberline {7.83.1}Detailed Description}{256}{subsection.7.83.1}
+\contentsline {subsection}{\numberline {7.83.2}Typedef Documentation}{256}{subsection.7.83.2}
+\contentsline {subsubsection}{\numberline {7.83.2.1}BLM\_\discretionary {-}{}{}function}{256}{subsubsection.7.83.2.1}
+\contentsline {subsection}{\numberline {7.83.3}Function Documentation}{256}{subsection.7.83.3}
+\contentsline {subsubsection}{\numberline {7.83.3.1}BaesyanLevenbergMarquardt}{256}{subsubsection.7.83.3.1}
+\contentsline {subsubsection}{\numberline {7.83.3.2}BLMaux}{257}{subsubsection.7.83.3.2}
+\contentsline {subsubsection}{\numberline {7.83.3.3}golden\_\discretionary {-}{}{}rule}{257}{subsubsection.7.83.3.3}
+\contentsline {subsubsection}{\numberline {7.83.3.4}linear\_\discretionary {-}{}{}fit}{257}{subsubsection.7.83.3.4}
+\contentsline {section}{\numberline {7.84}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}global\_\discretionary {-}{}{}vars.h File Reference}{258}{section.7.84}
+\contentsline {subsection}{\numberline {7.84.1}Detailed Description}{258}{subsection.7.84.1}
+\contentsline {subsection}{\numberline {7.84.2}Typedef Documentation}{259}{subsection.7.84.2}
+\contentsline {subsubsection}{\numberline {7.84.2.1}mdp\_\discretionary {-}{}{}int}{259}{subsubsection.7.84.2.1}
+\contentsline {subsubsection}{\numberline {7.84.2.2}mdp\_\discretionary {-}{}{}real}{259}{subsubsection.7.84.2.2}
+\contentsline {subsubsection}{\numberline {7.84.2.3}uint}{259}{subsubsection.7.84.2.3}
+\contentsline {subsection}{\numberline {7.84.3}Function Documentation}{259}{subsection.7.84.3}
+\contentsline {subsubsection}{\numberline {7.84.3.1}\_\discretionary {-}{}{}mpi\_\discretionary {-}{}{}error\_\discretionary {-}{}{}message}{259}{subsubsection.7.84.3.1}
+\contentsline {subsection}{\numberline {7.84.4}Variable Documentation}{259}{subsection.7.84.4}
+\contentsline {subsubsection}{\numberline {7.84.4.1}\_\discretionary {-}{}{}NprocMax\_\discretionary {-}{}{}}{259}{subsubsection.7.84.4.1}
+\contentsline {subsubsection}{\numberline {7.84.4.2}EVEN}{259}{subsubsection.7.84.4.2}
+\contentsline {subsubsection}{\numberline {7.84.4.3}EVENODD}{259}{subsubsection.7.84.4.3}
+\contentsline {subsubsection}{\numberline {7.84.4.4}mdp\_\discretionary {-}{}{}local\_\discretionary {-}{}{}endianess}{259}{subsubsection.7.84.4.4}
+\contentsline {subsubsection}{\numberline {7.84.4.5}mdp\_\discretionary {-}{}{}precision}{259}{subsubsection.7.84.4.5}
+\contentsline {subsubsection}{\numberline {7.84.4.6}mdp\_\discretionary {-}{}{}program\_\discretionary {-}{}{}name}{259}{subsubsection.7.84.4.6}
+\contentsline {subsubsection}{\numberline {7.84.4.7}mdp\_\discretionary {-}{}{}random\_\discretionary {-}{}{}seed\_\discretionary {-}{}{}filename}{259}{subsubsection.7.84.4.7}
+\contentsline {subsubsection}{\numberline {7.84.4.8}mdp\_\discretionary {-}{}{}shutup}{259}{subsubsection.7.84.4.8}
+\contentsline {subsubsection}{\numberline {7.84.4.9}ODD}{259}{subsubsection.7.84.4.9}
+\contentsline {subsubsection}{\numberline {7.84.4.10}Pi}{259}{subsubsection.7.84.4.10}
+\contentsline {subsubsection}{\numberline {7.84.4.11}PRECISION}{259}{subsubsection.7.84.4.11}
+\contentsline {section}{\numberline {7.85}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}header.h File Reference}{260}{section.7.85}
+\contentsline {subsection}{\numberline {7.85.1}Detailed Description}{260}{subsection.7.85.1}
+\contentsline {section}{\numberline {7.86}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}jackboot.h File Reference}{261}{section.7.86}
+\contentsline {subsection}{\numberline {7.86.1}Detailed Description}{261}{subsection.7.86.1}
+\contentsline {subsection}{\numberline {7.86.2}Function Documentation}{261}{subsection.7.86.2}
+\contentsline {subsubsection}{\numberline {7.86.2.1}mdp\_\discretionary {-}{}{}jackboot\_\discretionary {-}{}{}plain}{261}{subsubsection.7.86.2.1}
+\contentsline {section}{\numberline {7.87}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}lattice.h File Reference}{262}{section.7.87}
+\contentsline {subsection}{\numberline {7.87.1}Detailed Description}{262}{subsection.7.87.1}
+\contentsline {subsection}{\numberline {7.87.2}Define Documentation}{262}{subsection.7.87.2}
+\contentsline {subsubsection}{\numberline {7.87.2.1}MDP\_\discretionary {-}{}{}LATTICE}{262}{subsubsection.7.87.2.1}
+\contentsline {subsection}{\numberline {7.87.3}Variable Documentation}{262}{subsection.7.87.3}
+\contentsline {subsubsection}{\numberline {7.87.3.1}NOWHERE}{262}{subsubsection.7.87.3.1}
+\contentsline {section}{\numberline {7.88}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}log.h File Reference}{263}{section.7.88}
+\contentsline {subsection}{\numberline {7.88.1}Detailed Description}{263}{subsection.7.88.1}
+\contentsline {section}{\numberline {7.89}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}macros.h File Reference}{264}{section.7.89}
+\contentsline {subsection}{\numberline {7.89.1}Detailed Description}{264}{subsection.7.89.1}
+\contentsline {subsection}{\numberline {7.89.2}Define Documentation}{264}{subsection.7.89.2}
+\contentsline {subsubsection}{\numberline {7.89.2.1}CHECK\_\discretionary {-}{}{}ALL}{264}{subsubsection.7.89.2.1}
+\contentsline {subsubsection}{\numberline {7.89.2.2}error}{264}{subsubsection.7.89.2.2}
+\contentsline {subsubsection}{\numberline {7.89.2.3}FALSE}{265}{subsubsection.7.89.2.3}
+\contentsline {subsubsection}{\numberline {7.89.2.4}forallsites}{265}{subsubsection.7.89.2.4}
+\contentsline {subsubsection}{\numberline {7.89.2.5}forallsitesandcopies}{265}{subsubsection.7.89.2.5}
+\contentsline {subsubsection}{\numberline {7.89.2.6}forallsitesandcopiesofparity}{265}{subsubsection.7.89.2.6}
+\contentsline {subsubsection}{\numberline {7.89.2.7}forallsitesofparity}{265}{subsubsection.7.89.2.7}
+\contentsline {subsubsection}{\numberline {7.89.2.8}INCLUDE\_\discretionary {-}{}{}DEPRECATED\_\discretionary {-}{}{}IO}{265}{subsubsection.7.89.2.8}
+\contentsline {subsubsection}{\numberline {7.89.2.9}MDP\_\discretionary {-}{}{}MPI}{265}{subsubsection.7.89.2.9}
+\contentsline {subsubsection}{\numberline {7.89.2.10}ME}{265}{subsubsection.7.89.2.10}
+\contentsline {subsubsection}{\numberline {7.89.2.11}Nproc}{265}{subsubsection.7.89.2.11}
+\contentsline {subsubsection}{\numberline {7.89.2.12}TRUE}{265}{subsubsection.7.89.2.12}
+\contentsline {section}{\numberline {7.90}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}matrix.h File Reference}{266}{section.7.90}
+\contentsline {subsection}{\numberline {7.90.1}Detailed Description}{267}{subsection.7.90.1}
+\contentsline {subsection}{\numberline {7.90.2}Function Documentation}{269}{subsection.7.90.2}
+\contentsline {subsubsection}{\numberline {7.90.2.1}conj}{269}{subsubsection.7.90.2.1}
+\contentsline {subsubsection}{\numberline {7.90.2.2}cos}{269}{subsubsection.7.90.2.2}
+\contentsline {subsubsection}{\numberline {7.90.2.3}det}{269}{subsubsection.7.90.2.3}
+\contentsline {subsubsection}{\numberline {7.90.2.4}exp}{269}{subsubsection.7.90.2.4}
+\contentsline {subsubsection}{\numberline {7.90.2.5}hermitian}{269}{subsubsection.7.90.2.5}
+\contentsline {subsubsection}{\numberline {7.90.2.6}inv}{269}{subsubsection.7.90.2.6}
+\contentsline {subsubsection}{\numberline {7.90.2.7}log}{269}{subsubsection.7.90.2.7}
+\contentsline {subsubsection}{\numberline {7.90.2.8}max}{269}{subsubsection.7.90.2.8}
+\contentsline {subsubsection}{\numberline {7.90.2.9}mdp\_\discretionary {-}{}{}identity}{269}{subsubsection.7.90.2.9}
+\contentsline {subsubsection}{\numberline {7.90.2.10}mdp\_\discretionary {-}{}{}zero}{269}{subsubsection.7.90.2.10}
+\contentsline {subsubsection}{\numberline {7.90.2.11}operator$\ast $}{269}{subsubsection.7.90.2.11}
+\contentsline {subsubsection}{\numberline {7.90.2.12}operator$\ast $}{269}{subsubsection.7.90.2.12}
+\contentsline {subsubsection}{\numberline {7.90.2.13}operator$\ast $}{269}{subsubsection.7.90.2.13}
+\contentsline {subsubsection}{\numberline {7.90.2.14}operator$\ast $}{269}{subsubsection.7.90.2.14}
+\contentsline {subsubsection}{\numberline {7.90.2.15}operator$\ast $}{269}{subsubsection.7.90.2.15}
+\contentsline {subsubsection}{\numberline {7.90.2.16}operator+}{269}{subsubsection.7.90.2.16}
+\contentsline {subsubsection}{\numberline {7.90.2.17}operator+}{269}{subsubsection.7.90.2.17}
+\contentsline {subsubsection}{\numberline {7.90.2.18}operator+}{269}{subsubsection.7.90.2.18}
+\contentsline {subsubsection}{\numberline {7.90.2.19}operator+}{269}{subsubsection.7.90.2.19}
+\contentsline {subsubsection}{\numberline {7.90.2.20}operator+}{269}{subsubsection.7.90.2.20}
+\contentsline {subsubsection}{\numberline {7.90.2.21}operator+}{269}{subsubsection.7.90.2.21}
+\contentsline {subsubsection}{\numberline {7.90.2.22}operator-\/}{269}{subsubsection.7.90.2.22}
+\contentsline {subsubsection}{\numberline {7.90.2.23}operator-\/}{269}{subsubsection.7.90.2.23}
+\contentsline {subsubsection}{\numberline {7.90.2.24}operator-\/}{269}{subsubsection.7.90.2.24}
+\contentsline {subsubsection}{\numberline {7.90.2.25}operator-\/}{269}{subsubsection.7.90.2.25}
+\contentsline {subsubsection}{\numberline {7.90.2.26}operator-\/}{269}{subsubsection.7.90.2.26}
+\contentsline {subsubsection}{\numberline {7.90.2.27}operator-\/}{269}{subsubsection.7.90.2.27}
+\contentsline {subsubsection}{\numberline {7.90.2.28}operator/}{269}{subsubsection.7.90.2.28}
+\contentsline {subsubsection}{\numberline {7.90.2.29}operator/}{269}{subsubsection.7.90.2.29}
+\contentsline {subsubsection}{\numberline {7.90.2.30}operator/}{269}{subsubsection.7.90.2.30}
+\contentsline {subsubsection}{\numberline {7.90.2.31}operator/}{269}{subsubsection.7.90.2.31}
+\contentsline {subsubsection}{\numberline {7.90.2.32}operator$<$$<$}{269}{subsubsection.7.90.2.32}
+\contentsline {subsubsection}{\numberline {7.90.2.33}pow}{269}{subsubsection.7.90.2.33}
+\contentsline {subsubsection}{\numberline {7.90.2.34}prepare}{269}{subsubsection.7.90.2.34}
+\contentsline {subsubsection}{\numberline {7.90.2.35}print}{269}{subsubsection.7.90.2.35}
+\contentsline {subsubsection}{\numberline {7.90.2.36}sin}{269}{subsubsection.7.90.2.36}
+\contentsline {subsubsection}{\numberline {7.90.2.37}submatrix}{269}{subsubsection.7.90.2.37}
+\contentsline {subsubsection}{\numberline {7.90.2.38}trace}{269}{subsubsection.7.90.2.38}
+\contentsline {subsubsection}{\numberline {7.90.2.39}transpose}{269}{subsubsection.7.90.2.39}
+\contentsline {section}{\numberline {7.91}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}matrix\_\discretionary {-}{}{}field.h File Reference}{270}{section.7.91}
+\contentsline {subsection}{\numberline {7.91.1}Detailed Description}{270}{subsection.7.91.1}
+\contentsline {section}{\numberline {7.92}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}matrix\_\discretionary {-}{}{}test.h File Reference}{271}{section.7.92}
+\contentsline {subsection}{\numberline {7.92.1}Detailed Description}{271}{subsection.7.92.1}
+\contentsline {subsection}{\numberline {7.92.2}Function Documentation}{271}{subsection.7.92.2}
+\contentsline {subsubsection}{\numberline {7.92.2.1}mdp\_\discretionary {-}{}{}matrix\_\discretionary {-}{}{}test}{271}{subsubsection.7.92.2.1}
+\contentsline {section}{\numberline {7.93}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}measure.h File Reference}{272}{section.7.93}
+\contentsline {subsection}{\numberline {7.93.1}Detailed Description}{272}{subsection.7.93.1}
+\contentsline {section}{\numberline {7.94}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}mod2sign.h File Reference}{273}{section.7.94}
+\contentsline {subsection}{\numberline {7.94.1}Detailed Description}{273}{subsection.7.94.1}
+\contentsline {subsection}{\numberline {7.94.2}Function Documentation}{273}{subsection.7.94.2}
+\contentsline {subsubsection}{\numberline {7.94.2.1}mdp\_\discretionary {-}{}{}mod2sign}{273}{subsubsection.7.94.2.1}
+\contentsline {section}{\numberline {7.95}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}nmatrix\_\discretionary {-}{}{}field.h File Reference}{274}{section.7.95}
+\contentsline {subsection}{\numberline {7.95.1}Detailed Description}{274}{subsection.7.95.1}
+\contentsline {section}{\numberline {7.96}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}nvector\_\discretionary {-}{}{}field.h File Reference}{275}{section.7.96}
+\contentsline {subsection}{\numberline {7.96.1}Detailed Description}{275}{subsection.7.96.1}
+\contentsline {section}{\numberline {7.97}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}partitionings.h File Reference}{276}{section.7.97}
+\contentsline {subsection}{\numberline {7.97.1}Detailed Description}{276}{subsection.7.97.1}
+\contentsline {subsection}{\numberline {7.97.2}Function Documentation}{276}{subsection.7.97.2}
+\contentsline {subsubsection}{\numberline {7.97.2.1}default\_\discretionary {-}{}{}partitioning}{276}{subsubsection.7.97.2.1}
+\contentsline {subsubsection}{\numberline {7.97.2.2}default\_\discretionary {-}{}{}partitioning0}{276}{subsubsection.7.97.2.2}
+\contentsline {section}{\numberline {7.98}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}permutations.h File Reference}{277}{section.7.98}
+\contentsline {subsection}{\numberline {7.98.1}Detailed Description}{277}{subsection.7.98.1}
+\contentsline {subsection}{\numberline {7.98.2}Function Documentation}{277}{subsection.7.98.2}
+\contentsline {subsubsection}{\numberline {7.98.2.1}mdp\_\discretionary {-}{}{}permutation}{277}{subsubsection.7.98.2.1}
+\contentsline {subsubsection}{\numberline {7.98.2.2}mdp\_\discretionary {-}{}{}permutation\_\discretionary {-}{}{}sort}{277}{subsubsection.7.98.2.2}
+\contentsline {subsubsection}{\numberline {7.98.2.3}mdp\_\discretionary {-}{}{}permutations}{277}{subsubsection.7.98.2.3}
+\contentsline {section}{\numberline {7.99}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}postscript.h File Reference}{278}{section.7.99}
+\contentsline {subsection}{\numberline {7.99.1}Detailed Description}{278}{subsection.7.99.1}
+\contentsline {section}{\numberline {7.100}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}prng.h File Reference}{279}{section.7.100}
+\contentsline {subsection}{\numberline {7.100.1}Detailed Description}{279}{subsection.7.100.1}
+\contentsline {subsection}{\numberline {7.100.2}Variable Documentation}{279}{subsection.7.100.2}
+\contentsline {subsubsection}{\numberline {7.100.2.1}mdp\_\discretionary {-}{}{}random}{279}{subsubsection.7.100.2.1}
+\contentsline {section}{\numberline {7.101}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}prng\_\discretionary {-}{}{}sfmt.h File Reference}{280}{section.7.101}
+\contentsline {subsection}{\numberline {7.101.1}Define Documentation}{280}{subsection.7.101.1}
+\contentsline {subsubsection}{\numberline {7.101.1.1}MSK1}{280}{subsubsection.7.101.1.1}
+\contentsline {subsubsection}{\numberline {7.101.1.2}MSK2}{280}{subsubsection.7.101.1.2}
+\contentsline {subsubsection}{\numberline {7.101.1.3}MSK3}{280}{subsubsection.7.101.1.3}
+\contentsline {subsubsection}{\numberline {7.101.1.4}MSK4}{280}{subsubsection.7.101.1.4}
+\contentsline {subsubsection}{\numberline {7.101.1.5}PARITY1}{280}{subsubsection.7.101.1.5}
+\contentsline {subsubsection}{\numberline {7.101.1.6}PARITY2}{280}{subsubsection.7.101.1.6}
+\contentsline {subsubsection}{\numberline {7.101.1.7}PARITY3}{280}{subsubsection.7.101.1.7}
+\contentsline {subsubsection}{\numberline {7.101.1.8}PARITY4}{280}{subsubsection.7.101.1.8}
+\contentsline {section}{\numberline {7.102}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}prompt.h File Reference}{281}{section.7.102}
+\contentsline {subsection}{\numberline {7.102.1}Detailed Description}{281}{subsection.7.102.1}
+\contentsline {subsection}{\numberline {7.102.2}Function Documentation}{281}{subsection.7.102.2}
+\contentsline {subsubsection}{\numberline {7.102.2.1}prompt}{281}{subsubsection.7.102.2.1}
+\contentsline {subsubsection}{\numberline {7.102.2.2}val}{281}{subsubsection.7.102.2.2}
+\contentsline {subsection}{\numberline {7.102.3}Variable Documentation}{281}{subsection.7.102.3}
+\contentsline {subsubsection}{\numberline {7.102.3.1}STD\_\discretionary {-}{}{}INPUT}{281}{subsubsection.7.102.3.1}
+\contentsline {subsubsection}{\numberline {7.102.3.2}STD\_\discretionary {-}{}{}INPUT\_\discretionary {-}{}{}FILE}{281}{subsubsection.7.102.3.2}
+\contentsline {section}{\numberline {7.103}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}psim.h File Reference}{282}{section.7.103}
+\contentsline {subsection}{\numberline {7.103.1}Detailed Description}{282}{subsection.7.103.1}
+\contentsline {section}{\numberline {7.104}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}save\_\discretionary {-}{}{}partitioning\_\discretionary {-}{}{}vtk.h File Reference}{283}{section.7.104}
+\contentsline {subsection}{\numberline {7.104.1}Function Documentation}{283}{subsection.7.104.1}
+\contentsline {subsubsection}{\numberline {7.104.1.1}save\_\discretionary {-}{}{}partitioning\_\discretionary {-}{}{}vtk}{283}{subsubsection.7.104.1.1}
+\contentsline {section}{\numberline {7.105}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}sfmt.cpp File Reference}{284}{section.7.105}
+\contentsline {subsection}{\numberline {7.105.1}Define Documentation}{285}{subsection.7.105.1}
+\contentsline {subsubsection}{\numberline {7.105.1.1}MSK1}{285}{subsubsection.7.105.1.1}
+\contentsline {subsubsection}{\numberline {7.105.1.2}MSK2}{285}{subsubsection.7.105.1.2}
+\contentsline {subsubsection}{\numberline {7.105.1.3}MSK3}{285}{subsubsection.7.105.1.3}
+\contentsline {subsubsection}{\numberline {7.105.1.4}MSK4}{285}{subsubsection.7.105.1.4}
+\contentsline {subsubsection}{\numberline {7.105.1.5}PARITY1}{285}{subsubsection.7.105.1.5}
+\contentsline {subsubsection}{\numberline {7.105.1.6}PARITY2}{285}{subsubsection.7.105.1.6}
+\contentsline {subsubsection}{\numberline {7.105.1.7}PARITY3}{285}{subsubsection.7.105.1.7}
+\contentsline {subsubsection}{\numberline {7.105.1.8}PARITY4}{285}{subsubsection.7.105.1.8}
+\contentsline {subsection}{\numberline {7.105.2}Function Documentation}{285}{subsection.7.105.2}
+\contentsline {subsubsection}{\numberline {7.105.2.1}main}{285}{subsubsection.7.105.2.1}
+\contentsline {section}{\numberline {7.106}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}site.h File Reference}{286}{section.7.106}
+\contentsline {subsection}{\numberline {7.106.1}Detailed Description}{286}{subsection.7.106.1}
+\contentsline {subsection}{\numberline {7.106.2}Function Documentation}{286}{subsection.7.106.2}
+\contentsline {subsubsection}{\numberline {7.106.2.1}in\_\discretionary {-}{}{}block}{286}{subsubsection.7.106.2.1}
+\contentsline {subsubsection}{\numberline {7.106.2.2}on\_\discretionary {-}{}{}which\_\discretionary {-}{}{}process}{286}{subsubsection.7.106.2.2}
+\contentsline {subsubsection}{\numberline {7.106.2.3}operator$<$$<$}{286}{subsubsection.7.106.2.3}
+\contentsline {section}{\numberline {7.107}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}swap.h File Reference}{287}{section.7.107}
+\contentsline {subsection}{\numberline {7.107.1}Detailed Description}{287}{subsection.7.107.1}
+\contentsline {subsection}{\numberline {7.107.2}Function Documentation}{287}{subsection.7.107.2}
+\contentsline {subsubsection}{\numberline {7.107.2.1}swap}{287}{subsubsection.7.107.2.1}
+\contentsline {subsubsection}{\numberline {7.107.2.2}swap}{287}{subsubsection.7.107.2.2}
+\contentsline {section}{\numberline {7.108}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}timer.h File Reference}{288}{section.7.108}
+\contentsline {subsection}{\numberline {7.108.1}Detailed Description}{288}{subsection.7.108.1}
+\contentsline {subsection}{\numberline {7.108.2}Function Documentation}{288}{subsection.7.108.2}
+\contentsline {subsubsection}{\numberline {7.108.2.1}getcpuusage}{288}{subsubsection.7.108.2.1}
+\contentsline {subsubsection}{\numberline {7.108.2.2}getname}{288}{subsubsection.7.108.2.2}
+\contentsline {subsubsection}{\numberline {7.108.2.3}walltime}{288}{subsubsection.7.108.2.3}
+\contentsline {section}{\numberline {7.109}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}topologies.h File Reference}{289}{section.7.109}
+\contentsline {subsection}{\numberline {7.109.1}Detailed Description}{289}{subsection.7.109.1}
+\contentsline {subsection}{\numberline {7.109.2}Function Documentation}{289}{subsection.7.109.2}
+\contentsline {subsubsection}{\numberline {7.109.2.1}box\_\discretionary {-}{}{}topology}{289}{subsubsection.7.109.2.1}
+\contentsline {subsubsection}{\numberline {7.109.2.2}moebious\_\discretionary {-}{}{}topolgy}{289}{subsubsection.7.109.2.2}
+\contentsline {subsubsection}{\numberline {7.109.2.3}torus\_\discretionary {-}{}{}topology}{289}{subsubsection.7.109.2.3}
+\contentsline {section}{\numberline {7.110}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}utils.h File Reference}{290}{section.7.110}
+\contentsline {subsection}{\numberline {7.110.1}Detailed Description}{290}{subsection.7.110.1}
+\contentsline {subsection}{\numberline {7.110.2}Function Documentation}{290}{subsection.7.110.2}
+\contentsline {subsubsection}{\numberline {7.110.2.1}get\_\discretionary {-}{}{}info}{290}{subsubsection.7.110.2.1}
+\contentsline {subsubsection}{\numberline {7.110.2.2}glob}{290}{subsubsection.7.110.2.2}
+\contentsline {subsubsection}{\numberline {7.110.2.3}is\_\discretionary {-}{}{}file}{290}{subsubsection.7.110.2.3}
+\contentsline {subsubsection}{\numberline {7.110.2.4}latest\_\discretionary {-}{}{}file}{290}{subsubsection.7.110.2.4}
+\contentsline {subsubsection}{\numberline {7.110.2.5}mail}{290}{subsubsection.7.110.2.5}
+\contentsline {subsubsection}{\numberline {7.110.2.6}mail\_\discretionary {-}{}{}file}{290}{subsubsection.7.110.2.6}
+\contentsline {subsubsection}{\numberline {7.110.2.7}next\_\discretionary {-}{}{}to\_\discretionary {-}{}{}latest\_\discretionary {-}{}{}file}{290}{subsubsection.7.110.2.7}
+\contentsline {subsubsection}{\numberline {7.110.2.8}tostring}{290}{subsubsection.7.110.2.8}
+\contentsline {subsubsection}{\numberline {7.110.2.9}tostring}{290}{subsubsection.7.110.2.9}
+\contentsline {section}{\numberline {7.111}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}vector.h File Reference}{291}{section.7.111}
+\contentsline {subsection}{\numberline {7.111.1}Detailed Description}{291}{subsection.7.111.1}
+\contentsline {subsection}{\numberline {7.111.2}Function Documentation}{291}{subsection.7.111.2}
+\contentsline {subsubsection}{\numberline {7.111.2.1}binary2versor}{291}{subsubsection.7.111.2.1}
+\contentsline {subsubsection}{\numberline {7.111.2.2}vector2binary}{291}{subsubsection.7.111.2.2}
+\contentsline {subsubsection}{\numberline {7.111.2.3}versor2binary}{291}{subsubsection.7.111.2.3}
+\contentsline {section}{\numberline {7.112}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}vector\_\discretionary {-}{}{}field.h File Reference}{292}{section.7.112}
+\contentsline {subsection}{\numberline {7.112.1}Detailed Description}{292}{subsection.7.112.1}
+\contentsline {section}{\numberline {7.113}/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\discretionary {-}{}{}version.h File Reference}{293}{section.7.113}
+\contentsline {subsection}{\numberline {7.113.1}Detailed Description}{293}{subsection.7.113.1}
+\contentsline {subsection}{\numberline {7.113.2}Variable Documentation}{293}{subsection.7.113.2}
+\contentsline {subsubsection}{\numberline {7.113.2.1}mdp\_\discretionary {-}{}{}version}{293}{subsubsection.7.113.2.1}
+\contentsline {section}{\numberline {7.114}/Users/mdipierro/fermiqcd/development/Libraries/searchandreplace.py File Reference}{294}{section.7.114}
+\contentsline {section}{\numberline {7.115}/Users/mdipierro/fermiqcd/development/Libraries/searchandreplace2.py File Reference}{295}{section.7.115}

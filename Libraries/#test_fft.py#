@@ -1,0 +1,7 @@
+#include "fermiqcd.h"
+
+int main(int argc, char** argv) {
+    mdp.open_wormholes
+
+    return 0;
+}

@@ -1,0 +1,45 @@
+\hypertarget{classmdp__jackboot}{
+\section{mdp\_\-jackboot Class Reference}
+\label{classmdp__jackboot}\index{mdp\_\-jackboot@{mdp\_\-jackboot}}
+}
+coniatiner class for jackknife and boostrap analysis  
+
+
+{\tt \#include $<$mdp\_\-jackboot.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classmdp__jackboot_528121e64281ffc30843b720f7c6354a}{
+\hyperlink{classmdp__jackboot_528121e64281ffc30843b720f7c6354a}{mdp\_\-jackboot} (int nconf\_\-, int narg\_\-=1)}
+\label{classmdp__jackboot_528121e64281ffc30843b720f7c6354a}
+
+\begin{CompactList}\small\item\em allocate container for nconf\_\- datasets of nargs\_\- numbers each \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+coniatiner class for jackknife and boostrap analysis 
+
+Example: 
+
+\footnotesize\begin{verbatim}
+///    mdp_jackboot jb(10,2);
+///    for(int k=0; k<10; k++) {       
+///       jb(k,0)=mdp_random.plain();
+///       jb(k,1)=mdp_random.plain();
+///    }
+///    jb.plain(0);
+///    cout << "mean of jb(k,0) =" << mean() << endl;
+///    cout << "jackknife of mean jb(k,0) =" << j_err() << endl;
+///    cout << "boostrap of mean jb(k,0) =" << b_err() << endl;
+///    jb.plain(1);
+///    cout << "mean of jb(k,1) =" << mean() << endl;
+///    cout << "jackknife of mean jb(k,1) =" << j_err() << endl;
+///    cout << "boostrap of mean jb(k,1) =" << b_err() << endl;
+/// \end{verbatim}
+\normalsize
+ 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{mdp__jackboot_8h}{mdp\_\-jackboot.h}\end{CompactItemize}

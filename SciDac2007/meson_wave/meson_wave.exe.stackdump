@@ -1,0 +1,10 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=00436F68
+eax=00000340 ebx=00000000 ecx=00000064 edx=005228C0 esi=00000000 edi=00000000
+ebp=0022EEC8 esp=0022A150 program=e:\mdipierro-system\current\MyResearch\FermiQCD\Version_3.4b\SciDAC\meson_wave.exe, pid 5868, thread main
+cs=001B ds=0023 es=0023 fs=003B gs=0000 ss=0023
+Stack trace:
+Frame     Function  Args
+0022EEC8  00436F68  (00000001, 6115E71C, 00520090, 77DDDB0D)
+0022EF78  61005BC8  (0022EFD0, 0022EFC0, 00000004, 00000000)
+0022FF88  61005EB3  (00000000, 00000000, 00000000, 00000000)
+End of stack trace

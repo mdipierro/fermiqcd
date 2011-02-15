@@ -1,0 +1,38 @@
+\hypertarget{class_fermi_clover_action_slow}{
+\section{FermiCloverActionSlow Class Reference}
+\label{class_fermi_clover_action_slow}\index{FermiCloverActionSlow@{FermiCloverActionSlow}}
+}
+Wilson/Clover action (SLOW: DO NOT USE IN PRODUCTION).  
+
+
+{\tt \#include $<$fermiqcd\_\-fermi\_\-actions.h$>$}
+
+
+
+\subsection{Detailed Description}
+Wilson/Clover action (SLOW: DO NOT USE IN PRODUCTION). 
+
+Example: 
+
+\footnotesize\begin{verbatim}
+/// gauge_field U(lattice,nc);
+/// fermi_field psi(lattice,nc);
+/// fermi_field chi(lattice,nc);
+/// coefficients coeff;
+/// coeff["kappa_s"]=0.11;
+/// coeff["kappa_t"]=0.11;
+/// coeff["r_s"]=1.0;
+/// coeff["r_t"]=1.0;
+/// coeff["c_{sw}"]=1.0;
+/// coeff["c_E"]=1.0;
+/// coeff["c_B"]=1.0;
+/// default_fermi_action=FermiCloverActionSlow::mul_Q;
+/// if(coeff["c_{sw}"]!=0) compute_em_field(U);
+/// mul_Q(chi,psi,U,coeff);
+/// \end{verbatim}
+\normalsize
+ Note that mul\_\-Q(chi,psi,U,coeff) reads $ \chi=(/\!\!\!D[U]+m)\psi $ 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{fermiqcd__fermi__actions_8h}{fermiqcd\_\-fermi\_\-actions.h}\end{CompactItemize}

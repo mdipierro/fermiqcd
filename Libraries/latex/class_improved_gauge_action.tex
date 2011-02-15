@@ -1,0 +1,51 @@
+\hypertarget{class_improved_gauge_action}{
+\section{ImprovedGaugeAction Class Reference}
+\label{class_improved_gauge_action}\index{ImprovedGaugeAction@{ImprovedGaugeAction}}
+}
+the $ O(a^2)$ Improved Gauge Action  
+
+
+{\tt \#include $<$fermiqcd\_\-gauge\_\-actions.h$>$}
+
+Inherits \hyperlink{class_wilson_gauge_action}{WilsonGaugeAction}.
+
+Collaboration diagram for ImprovedGaugeAction:
+
+\subsection{Detailed Description}
+the $ O(a^2)$ Improved Gauge Action 
+
+Example using the MILC improved action: 
+
+\footnotesize\begin{verbatim}
+///    int ns=2, steps=10;
+///    gauge_field U(lattice,nc);
+///    coefficients gauge;
+///    U.load("myfield.0000");
+///    gauge["beta"]=6.0;
+///    gauge["zeta"]=1.0; // MUST BE ONE
+///    gauge["u_t"]=1.0;
+///    gauge["u_s"]=1.0;
+///    ImprovedGaugeAction::heatbath(U,gauge,steps,"MILC");
+///    U.save("myfield.0001");
+/// \end{verbatim}
+\normalsize
+ Example using the Morningstar unisotropic improved action: 
+
+\footnotesize\begin{verbatim}
+///    int ns=2, steps=10;
+///    gauge_field U(lattice,nc);
+///    coefficients gauge;
+///    U.load("myfield.0000");
+///    gauge["beta"]=6.0;
+///    gauge["zeta"]=1.0; // CAN BE != ONE
+///    gauge["u_t"]=1.0;
+///    gauge["u_s"]=1.0;
+///    ImprovedGaugeAction::heatbath(U,gauge,steps,"Morningstar");
+///    U.save("myfield.0001");
+/// \end{verbatim}
+\normalsize
+ 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{fermiqcd__gauge__actions_8h}{fermiqcd\_\-gauge\_\-actions.h}\end{CompactItemize}

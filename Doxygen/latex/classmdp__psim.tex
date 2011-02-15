@@ -1,0 +1,186 @@
+\hypertarget{classmdp__psim}{
+\section{mdp\_\-psim Class Reference}
+\label{classmdp__psim}\index{mdp\_\-psim@{mdp\_\-psim}}
+}
+
+
+Parallel SIMulator used by class \hyperlink{classmdp__communicator}{mdp\_\-communicator}.  
+
+
+{\ttfamily \#include $<$mdp\_\-psim.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmdp__psim_aa3fd4da678b802e5f0d53787bec3f331}{mdp\_\-psim} (int processCount, string logFileName=\char`\"{}.psim.log\char`\"{}, int verbatim=0)
+\item 
+\hyperlink{classmdp__psim_af5320c53d620c8c66f1842cd6b546bf6}{mdp\_\-psim} (int argc, char $\ast$$\ast$argv)
+\item 
+virtual \hyperlink{classmdp__psim_ac6b26c66968872c6f6d71dff2bf0527f}{$\sim$mdp\_\-psim} ()
+\item 
+void \hyperlink{classmdp__psim_ab3b24379c623c72635210d348399414e}{log} (string message, int level=2)
+\item 
+int \hyperlink{classmdp__psim_add120eb0aa77a4b73d0844eda58b0570}{id} ()
+\item 
+int \hyperlink{classmdp__psim_a6377b54cc52e570452c048e5a97b8030}{nprocs} ()
+\item 
+void \hyperlink{classmdp__psim_a1bbcfd250b4df9520ae4ff07fefe9204}{setCommTimeout} (unsigned int commTimeout)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{classmdp__psim_afe56014848f9405cc17cb772635e1aa5}{send} (int destProcessID, string dataTag, T \&dataToSend)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{classmdp__psim_ad4f411191257a13fc36ef6ac40332638}{send} (int destProcessID, string dataTag, T $\ast$pdataToSend, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} dataSize)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{classmdp__psim_a66099a8f714c4377ea4040a78b206983}{recv} (int sourceProcessID, string dataTag, T \&dataToReceive)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{classmdp__psim_a1007797bc1b823b5f7f9bde424ed8765}{recv} (int sourceProcessID, string dataTag, T $\ast$pdataToReceive, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} dataSize)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{classmdp__psim_a5bc9df8615a06e02b78114ac10e9b5dd}{broadcast} (int sourceProcessID, T \&data)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{classmdp__psim_a97a76aa0dac23f5da0dea00dcaa6b568}{broadcast} (int sourceProcessID, T $\ast$data, int dataSize)
+\item 
+{\footnotesize template$<$class T $>$ }\\vector$<$ T $>$ \hyperlink{classmdp__psim_a8efbb5617c3e3420dbf65bc245a0a5b5}{collect} (int dest, T \&data)
+\item 
+{\footnotesize template$<$class T $>$ }\\vector$<$ T $>$ \hyperlink{classmdp__psim_a8fb8fc943240328daedc8fade15fed9a}{combine} (T \&data)
+\item 
+void \hyperlink{classmdp__psim_a3eb8abda43cf50aacc0c18fdecff8d9d}{barrier} ()
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{classmdp__psim_a1506ab965569ee72e802616b827d896a}{add} (T \&item)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classmdp__psim_a6f8125eea8f0f0bbd54304db894be50d}{parse\_\-argv\_\-nprocs} (int argc, char $\ast$$\ast$argv)
+\item 
+static string \hyperlink{classmdp__psim_ae6815490edb20ce0d984be55c1fed4f7}{parse\_\-argv\_\-logfile} (int argc, char $\ast$$\ast$argv)
+\item 
+static int \hyperlink{classmdp__psim_acb1e64aadc39fa7deeb4e87b36f7cd3c}{parse\_\-argv\_\-verbatim} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Parallel SIMulator used by class \hyperlink{classmdp__communicator}{mdp\_\-communicator}. Attention: under MDP and/or FermiQCD this is already Instantiated inside class \hyperlink{classmdp__communicator}{mdp\_\-communicator}.
+
+Example: \begin{DoxyVerb}
+/// int main(int argc, char** argv) {
+///    mdp_psim node(argc,argv);
+///    int a=3, b=0;
+///    if(node.id()==0) node.send(1,a);
+///    if(node.id()==1) { node.recv(0,b); cout << b << endl;
+///    return 0;
+/// }
+/// \end{DoxyVerb}
+ Compile with \begin{DoxyVerb}
+///    g++ [filename] -o a.out
+/// \end{DoxyVerb}
+ and run with \begin{DoxyVerb}
+///    ./a.out -PSIM_NPROCS=2
+/// \end{DoxyVerb}
+ Output should be 3. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmdp__psim_aa3fd4da678b802e5f0d53787bec3f331}{
+\index{mdp\_\-psim@{mdp\_\-psim}!mdp\_\-psim@{mdp\_\-psim}}
+\index{mdp\_\-psim@{mdp\_\-psim}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{mdp\_\-psim}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-psim::mdp\_\-psim (int {\em processCount}, \/  string {\em logFileName} = {\ttfamily \char`\"{}.psim.log\char`\"{}}, \/  int {\em verbatim} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_aa3fd4da678b802e5f0d53787bec3f331}
+\hypertarget{classmdp__psim_af5320c53d620c8c66f1842cd6b546bf6}{
+\index{mdp\_\-psim@{mdp\_\-psim}!mdp\_\-psim@{mdp\_\-psim}}
+\index{mdp\_\-psim@{mdp\_\-psim}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{mdp\_\-psim}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-psim::mdp\_\-psim (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_af5320c53d620c8c66f1842cd6b546bf6}
+\hypertarget{classmdp__psim_ac6b26c66968872c6f6d71dff2bf0527f}{
+\index{mdp\_\-psim@{mdp\_\-psim}!$\sim$mdp\_\-psim@{$\sim$mdp\_\-psim}}
+\index{$\sim$mdp\_\-psim@{$\sim$mdp\_\-psim}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{$\sim$mdp\_\-psim}]{\setlength{\rightskip}{0pt plus 5cm}virtual mdp\_\-psim::$\sim$mdp\_\-psim ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmdp__psim_ac6b26c66968872c6f6d71dff2bf0527f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__psim_a1506ab965569ee72e802616b827d896a}{
+\index{mdp\_\-psim@{mdp\_\-psim}!add@{add}}
+\index{add@{add}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T mdp\_\-psim::add (T \& {\em item})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_a1506ab965569ee72e802616b827d896a}
+\hypertarget{classmdp__psim_a3eb8abda43cf50aacc0c18fdecff8d9d}{
+\index{mdp\_\-psim@{mdp\_\-psim}!barrier@{barrier}}
+\index{barrier@{barrier}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{barrier}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-psim::barrier ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_a3eb8abda43cf50aacc0c18fdecff8d9d}
+\hypertarget{classmdp__psim_a97a76aa0dac23f5da0dea00dcaa6b568}{
+\index{mdp\_\-psim@{mdp\_\-psim}!broadcast@{broadcast}}
+\index{broadcast@{broadcast}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{broadcast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void mdp\_\-psim::broadcast (int {\em sourceProcessID}, \/  T $\ast$ {\em data}, \/  int {\em dataSize})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_a97a76aa0dac23f5da0dea00dcaa6b568}
+\hypertarget{classmdp__psim_a5bc9df8615a06e02b78114ac10e9b5dd}{
+\index{mdp\_\-psim@{mdp\_\-psim}!broadcast@{broadcast}}
+\index{broadcast@{broadcast}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{broadcast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void mdp\_\-psim::broadcast (int {\em sourceProcessID}, \/  T \& {\em data})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_a5bc9df8615a06e02b78114ac10e9b5dd}
+\hypertarget{classmdp__psim_a8efbb5617c3e3420dbf65bc245a0a5b5}{
+\index{mdp\_\-psim@{mdp\_\-psim}!collect@{collect}}
+\index{collect@{collect}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{collect}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ vector$<$T$>$ mdp\_\-psim::collect (int {\em dest}, \/  T \& {\em data})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_a8efbb5617c3e3420dbf65bc245a0a5b5}
+\hypertarget{classmdp__psim_a8fb8fc943240328daedc8fade15fed9a}{
+\index{mdp\_\-psim@{mdp\_\-psim}!combine@{combine}}
+\index{combine@{combine}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{combine}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ vector$<$T$>$ mdp\_\-psim::combine (T \& {\em data})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_a8fb8fc943240328daedc8fade15fed9a}
+\hypertarget{classmdp__psim_add120eb0aa77a4b73d0844eda58b0570}{
+\index{mdp\_\-psim@{mdp\_\-psim}!id@{id}}
+\index{id@{id}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int mdp\_\-psim::id ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_add120eb0aa77a4b73d0844eda58b0570}
+\hypertarget{classmdp__psim_ab3b24379c623c72635210d348399414e}{
+\index{mdp\_\-psim@{mdp\_\-psim}!log@{log}}
+\index{log@{log}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-psim::log (string {\em message}, \/  int {\em level} = {\ttfamily 2})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_ab3b24379c623c72635210d348399414e}
+\hypertarget{classmdp__psim_a6377b54cc52e570452c048e5a97b8030}{
+\index{mdp\_\-psim@{mdp\_\-psim}!nprocs@{nprocs}}
+\index{nprocs@{nprocs}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{nprocs}]{\setlength{\rightskip}{0pt plus 5cm}int mdp\_\-psim::nprocs ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_a6377b54cc52e570452c048e5a97b8030}
+\hypertarget{classmdp__psim_ae6815490edb20ce0d984be55c1fed4f7}{
+\index{mdp\_\-psim@{mdp\_\-psim}!parse\_\-argv\_\-logfile@{parse\_\-argv\_\-logfile}}
+\index{parse\_\-argv\_\-logfile@{parse\_\-argv\_\-logfile}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{parse\_\-argv\_\-logfile}]{\setlength{\rightskip}{0pt plus 5cm}static string mdp\_\-psim::parse\_\-argv\_\-logfile (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{classmdp__psim_ae6815490edb20ce0d984be55c1fed4f7}
+\hypertarget{classmdp__psim_a6f8125eea8f0f0bbd54304db894be50d}{
+\index{mdp\_\-psim@{mdp\_\-psim}!parse\_\-argv\_\-nprocs@{parse\_\-argv\_\-nprocs}}
+\index{parse\_\-argv\_\-nprocs@{parse\_\-argv\_\-nprocs}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{parse\_\-argv\_\-nprocs}]{\setlength{\rightskip}{0pt plus 5cm}static int mdp\_\-psim::parse\_\-argv\_\-nprocs (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{classmdp__psim_a6f8125eea8f0f0bbd54304db894be50d}
+\hypertarget{classmdp__psim_acb1e64aadc39fa7deeb4e87b36f7cd3c}{
+\index{mdp\_\-psim@{mdp\_\-psim}!parse\_\-argv\_\-verbatim@{parse\_\-argv\_\-verbatim}}
+\index{parse\_\-argv\_\-verbatim@{parse\_\-argv\_\-verbatim}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{parse\_\-argv\_\-verbatim}]{\setlength{\rightskip}{0pt plus 5cm}static int mdp\_\-psim::parse\_\-argv\_\-verbatim (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{classmdp__psim_acb1e64aadc39fa7deeb4e87b36f7cd3c}
+\hypertarget{classmdp__psim_a1007797bc1b823b5f7f9bde424ed8765}{
+\index{mdp\_\-psim@{mdp\_\-psim}!recv@{recv}}
+\index{recv@{recv}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{recv}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void mdp\_\-psim::recv (int {\em sourceProcessID}, \/  string {\em dataTag}, \/  T $\ast$ {\em pdataToReceive}, \/  {\bf mdp\_\-int} {\em dataSize})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_a1007797bc1b823b5f7f9bde424ed8765}
+\hypertarget{classmdp__psim_a66099a8f714c4377ea4040a78b206983}{
+\index{mdp\_\-psim@{mdp\_\-psim}!recv@{recv}}
+\index{recv@{recv}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{recv}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void mdp\_\-psim::recv (int {\em sourceProcessID}, \/  string {\em dataTag}, \/  T \& {\em dataToReceive})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_a66099a8f714c4377ea4040a78b206983}
+\hypertarget{classmdp__psim_ad4f411191257a13fc36ef6ac40332638}{
+\index{mdp\_\-psim@{mdp\_\-psim}!send@{send}}
+\index{send@{send}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void mdp\_\-psim::send (int {\em destProcessID}, \/  string {\em dataTag}, \/  T $\ast$ {\em pdataToSend}, \/  {\bf mdp\_\-int} {\em dataSize})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_ad4f411191257a13fc36ef6ac40332638}
+\hypertarget{classmdp__psim_afe56014848f9405cc17cb772635e1aa5}{
+\index{mdp\_\-psim@{mdp\_\-psim}!send@{send}}
+\index{send@{send}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void mdp\_\-psim::send (int {\em destProcessID}, \/  string {\em dataTag}, \/  T \& {\em dataToSend})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_afe56014848f9405cc17cb772635e1aa5}
+\hypertarget{classmdp__psim_a1bbcfd250b4df9520ae4ff07fefe9204}{
+\index{mdp\_\-psim@{mdp\_\-psim}!setCommTimeout@{setCommTimeout}}
+\index{setCommTimeout@{setCommTimeout}!mdp_psim@{mdp\_\-psim}}
+\subsubsection[{setCommTimeout}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-psim::setCommTimeout (unsigned int {\em commTimeout})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__psim_a1bbcfd250b4df9520ae4ff07fefe9204}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__psim_8h}{mdp\_\-psim.h}\end{DoxyCompactItemize}

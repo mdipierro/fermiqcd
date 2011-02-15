@@ -1,0 +1,113 @@
+\hypertarget{classmdp__lattice}{
+\section{mdp\_\-lattice Class Reference}
+\label{classmdp__lattice}\index{mdp\_\-lattice@{mdp\_\-lattice}}
+}
+distributed lattice object  
+
+
+{\tt \#include $<$mdp\_\-lattice.h$>$}
+
+Collaboration diagram for mdp\_\-lattice:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classmdp__lattice_2a5e64934c300b14f60a05ddf4f0c73d}{mdp\_\-lattice} (int ndim\_\-, int nx\_\-\mbox{[}$\,$\mbox{]}, int($\ast$where\_\-)(int $\ast$, int, int $\ast$)=default\_\-partitioning0, void($\ast$neighbour\_\-)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$)=torus\_\-topology, long random\_\-seed\_\-=0, int next\_\-next\_\-=1, bool local\_\-random\_\-=true)
+\item 
+\hypertarget{classmdp__lattice_0f0cbe241c45ddb8c002bce59ea15cef}{
+\hyperlink{classmdp__lattice_0f0cbe241c45ddb8c002bce59ea15cef}{mdp\_\-lattice} (int ndim\_\-, int ndir\_\-, int nx\_\-\mbox{[}$\,$\mbox{]}, int($\ast$where\_\-)(int $\ast$, int, int $\ast$)=default\_\-partitioning0, void($\ast$neighbour\_\-)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$)=torus\_\-topology, long random\_\-seed\_\-=0, int next\_\-next\_\-=1, bool local\_\-random\_\-=true)}
+\label{classmdp__lattice_0f0cbe241c45ddb8c002bce59ea15cef}
+
+\begin{CompactList}\small\item\em for weird stuff \item\end{CompactList}\item 
+void \hyperlink{classmdp__lattice_b98e2af8a05ed69c4b6df4a632fa01ce}{allocate\_\-lattice} (int ndim\_\-, int nx\_\-\mbox{[}$\,$\mbox{]}, int($\ast$where\_\-)(int $\ast$, int, int $\ast$)=default\_\-partitioning0, void($\ast$neighbour\_\-)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$)=torus\_\-topology, long random\_\-seed\_\-=0, int next\_\-next\_\-=1, bool local\_\-random\_\-=true)
+\item 
+\hypertarget{classmdp__lattice_879165fc018bd9c5dca6128d533f3e64}{
+void \hyperlink{classmdp__lattice_879165fc018bd9c5dca6128d533f3e64}{allocate\_\-lattice} (int ndim\_\-, int ndir\_\-, int nx\_\-\mbox{[}$\,$\mbox{]}, int($\ast$where\_\-)(int $\ast$, int, int $\ast$)=default\_\-partitioning0, void($\ast$neighbour\_\-)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$)=torus\_\-topology, long random\_\-seed\_\-=0, int next\_\-next\_\-=1, bool local\_\-random\_\-=true)}
+\label{classmdp__lattice_879165fc018bd9c5dca6128d533f3e64}
+
+\begin{CompactList}\small\item\em for weird stuff \item\end{CompactList}\item 
+\hypertarget{classmdp__lattice_f5407cf7f7d5eded3870abf0515e110d}{
+void \hyperlink{classmdp__lattice_f5407cf7f7d5eded3870abf0515e110d}{deallocate\_\-memory} ()}
+\label{classmdp__lattice_f5407cf7f7d5eded3870abf0515e110d}
+
+\begin{CompactList}\small\item\em dynamically deallocate a lattice \item\end{CompactList}\item 
+\hypertarget{classmdp__lattice_7e99975b0536e5f46acc8b72778c077f}{
+int \hyperlink{classmdp__lattice_7e99975b0536e5f46acc8b72778c077f}{n\_\-dimensions} () const }
+\label{classmdp__lattice_7e99975b0536e5f46acc8b72778c077f}
+
+\begin{CompactList}\small\item\em number of dimensions of the lattice (deprecated\_\- \item\end{CompactList}\item 
+\hypertarget{classmdp__lattice_a8452324840f85cf188ce7fffe488d98}{
+int \hyperlink{classmdp__lattice_a8452324840f85cf188ce7fffe488d98}{n\_\-directions} () const }
+\label{classmdp__lattice_a8452324840f85cf188ce7fffe488d98}
+
+\begin{CompactList}\small\item\em number of directions one can move on the lattice; usually same as ndim \item\end{CompactList}\item 
+\hypertarget{classmdp__lattice_91010f274b1b287bad36f8de1e4d960f}{
+long \hyperlink{classmdp__lattice_91010f274b1b287bad36f8de1e4d960f}{size} () const }
+\label{classmdp__lattice_91010f274b1b287bad36f8de1e4d960f}
+
+\begin{CompactList}\small\item\em number of sites of the lattice \item\end{CompactList}\item 
+\hypertarget{classmdp__lattice_f412af0a9aad0b3bfb28675e6c352080}{
+long \hyperlink{classmdp__lattice_f412af0a9aad0b3bfb28675e6c352080}{size} (const int mu) const }
+\label{classmdp__lattice_f412af0a9aad0b3bfb28675e6c352080}
+
+\begin{CompactList}\small\item\em size of the lattice in direction mu \item\end{CompactList}\item 
+\hypertarget{classmdp__lattice_bf640fbe2fb09dcb7f269d7693f60eee}{
+long \hyperlink{classmdp__lattice_bf640fbe2fb09dcb7f269d7693f60eee}{local\_\-volume} () const }
+\label{classmdp__lattice_bf640fbe2fb09dcb7f269d7693f60eee}
+
+\begin{CompactList}\small\item\em number of lattice sites stored locally by current process \item\end{CompactList}\item 
+\hypertarget{classmdp__lattice_4c737d351298f82b26c6a6fbf29b0932}{
+long \hyperlink{classmdp__lattice_4c737d351298f82b26c6a6fbf29b0932}{global\_\-volume} () const }
+\label{classmdp__lattice_4c737d351298f82b26c6a6fbf29b0932}
+
+\begin{CompactList}\small\item\em total lattice volume (deprecated) \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+distributed lattice object 
+
+Example: 
+
+\footnotesize\begin{verbatim}
+///    int box[]={3,3,3};
+///    int seed=0, border_width=1;
+///    mdp_lattice lattice(3,box,default_partitioning0,
+///                        torus_topology,seed,border_width);
+///    mdp_site x(lattice);
+///    forallsites(x)
+///      cout << lattice.random(x).plain() << endl;
+/// \end{verbatim}
+\normalsize
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmdp__lattice_2a5e64934c300b14f60a05ddf4f0c73d}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!mdp\_\-lattice@{mdp\_\-lattice}}
+\index{mdp\_\-lattice@{mdp\_\-lattice}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{mdp\_\-lattice}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-lattice::mdp\_\-lattice (int {\em ndim\_\-}, \/  int {\em nx\_\-}\mbox{[}$\,$\mbox{]}, \/  int($\ast$)(int $\ast$, int, int $\ast$) {\em where\_\-} = {\tt default\_\-partitioning0}, \/  void($\ast$)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$) {\em neighbour\_\-} = {\tt torus\_\-topology}, \/  long {\em random\_\-seed\_\-} = {\tt 0}, \/  int {\em next\_\-next\_\-} = {\tt 1}, \/  bool {\em local\_\-random\_\-} = {\tt true})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_2a5e64934c300b14f60a05ddf4f0c73d}
+
+
+declares a lattice object \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em ndim\_\-}]dimensions of the lattice \item[{\em nx\_\-}]size of the lattice \item[{\em where}]pointer to a partitioning function  neighbour\_\- pointer to a topology function. \item[{\em random\_\-seed\_\-}]seed to be used by the parallel prng \item[{\em next\_\-next\_\-}]size of the buffer between neighbour processes \item[{\em local\_\-random\_\-}]true is local random generator is required \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__lattice_b98e2af8a05ed69c4b6df4a632fa01ce}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!allocate\_\-lattice@{allocate\_\-lattice}}
+\index{allocate\_\-lattice@{allocate\_\-lattice}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{allocate\_\-lattice}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-lattice::allocate\_\-lattice (int {\em ndim\_\-}, \/  int {\em nx\_\-}\mbox{[}$\,$\mbox{]}, \/  int($\ast$)(int $\ast$, int, int $\ast$) {\em where\_\-} = {\tt default\_\-partitioning0}, \/  void($\ast$)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$) {\em neighbour\_\-} = {\tt torus\_\-topology}, \/  long {\em random\_\-seed\_\-} = {\tt 0}, \/  int {\em next\_\-next\_\-} = {\tt 1}, \/  bool {\em local\_\-random\_\-} = {\tt true})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_b98e2af8a05ed69c4b6df4a632fa01ce}
+
+
+reallocate a lattice dynamically \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em ndim\_\-}]dimensions of the lattice \item[{\em nx\_\-}]size of the lattice \item[{\em where}]pointer to a partitioning function  neighbour\_\- pointer to a topology function. \item[{\em random\_\-seed\_\-}]seed to be used by the parallel prng \item[{\em next\_\-next\_\-}]size of the buffer between neighbour processes \item[{\em local\_\-random\_\-}]true is local random generator is required \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{mdp__lattice_8h}{mdp\_\-lattice.h}\end{CompactItemize}

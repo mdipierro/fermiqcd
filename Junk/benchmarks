@@ -1,0 +1,49 @@
+on P4 3GHz
+
+float 1 process 1 node
+Wilson Min Res TIME=9.83861e-06
+Wilson BiCGStab TIME=1.98027e-05
+Wilson SSE Min Res TIME=1.98423e-06
+Wilson SSE BiCGStab TIME=4.16167e-06
+Clover Min Res TIME=8.7601e-06
+Clover BiCGStab TIME=1.76346e-05
+Clover SSE Min Res TIME=1.79527e-06
+Clover SSE BiCGStab TIME=3.70985e-06
+Staggered Min Res TIME=1.42677e-06
+Staggered BiCGStab TIME=2.95002e-06
+Staggered BiCGStabUML TIME=1.89531e-06
+Staggered SSE Min Res TIME=7.88825e-07
+Staggered SSE BiCGStab TIME=1.63019e-06
+Staggered SSE BiCGStabUML TIME=1.14599e-06
+Asqtad Min Res TIME=3.73859e-06
+Asqtad BiCGStab TIME=7.65312e-06
+Asqtad BiCGStabUML TIME=4.70519e-06
+Asqtad SSE Min Res TIME=2.46866e-06
+Asqtad SSE BiCGStab TIME=5.01805e-06
+Asqtad SSE BiCGStabUML TIME=3.1421e-06
+
+double 1 process 1 node
+Wilson Min Res TIME=6.84338e-06
+Wilson BiCGStab TIME=1.38783e-05
+Wilson SSE Min Res TIME=2.07512e-06
+Wilson SSE BiCGStab TIME=4.42597e-06
+Clover Min Res TIME=1.20827e-05
+Clover BiCGStab TIME=2.49091e-05
+Clover SSE Min Res TIME=2.81929e-06
+Clover SSE BiCGStab TIME=6.07548e-06
+Staggered Min Res TIME=1.71131e-06
+Staggered BiCGStab TIME=3.56218e-06
+Staggered SSE BiCGStabUML TIME=2.08626e-06
+Staggered SSE Min Res TIME=1.0109e-06
+Staggered SSE BiCGStab TIME=2.11916e-06
+Staggered SSE BiCGStabUML TIME=1.34539e-06
+Asqtad Min Res TIME=4.29697e-06
+Asqtad BiCGStab TIME=8.79619e-06
+Asqtad SSE BiCGStabUML TIME=5.24468e-06
+Asqtad SSE Min Res TIME=2.83924e-06
+Asqtad SSE BiCGStab TIME=6.61196e-06
+Asqtad SSE BiCGStabUML TIME=3.81188e-06
+
+
+
+

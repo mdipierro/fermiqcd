@@ -1,0 +1,39 @@
+\hypertarget{class_staggered_asqtad_action_fast}{
+\section{StaggeredAsqtadActionFast Class Reference}
+\label{class_staggered_asqtad_action_fast}\index{StaggeredAsqtadActionFast@{StaggeredAsqtadActionFast}}
+}
+
+
+Staggered/Asqtad action.  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-staggered\_\-actions.h$>$}\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_staggered_asqtad_action_fast_a0935fc01782fc453823fbabfe24aa2be}{mul\_\-Q} (\hyperlink{classstaggered__field}{staggered\_\-field} \&chi\_\-out, \hyperlink{classstaggered__field}{staggered\_\-field} \&chi\_\-in, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, int parity=\hyperlink{mdp__global__vars_8h_a4c9de81f2de5a74b588107b6c0afb9ee}{EVENODD})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Staggered/Asqtad action. Example: \begin{DoxyVerb}
+/// gauge_field U(lattice,nc);
+/// staggered_field psi(lattice,nc);
+/// staggered_field chi(lattice,nc);
+/// coefficients coeff;
+/// coeff["mass"]=2.0;
+/// default_staggered_action=StaggeredAsqtadActionFast::mul_Q;
+/// mul_Q(chi,psi,U,coeff);
+/// \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_staggered_asqtad_action_fast_a0935fc01782fc453823fbabfe24aa2be}{
+\index{StaggeredAsqtadActionFast@{StaggeredAsqtadActionFast}!mul\_\-Q@{mul\_\-Q}}
+\index{mul\_\-Q@{mul\_\-Q}!StaggeredAsqtadActionFast@{StaggeredAsqtadActionFast}}
+\subsubsection[{mul\_\-Q}]{\setlength{\rightskip}{0pt plus 5cm}static void StaggeredAsqtadActionFast::mul\_\-Q ({\bf staggered\_\-field} \& {\em chi\_\-out}, \/  {\bf staggered\_\-field} \& {\em chi\_\-in}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  int {\em parity} = {\ttfamily {\bf EVENODD}})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_staggered_asqtad_action_fast_a0935fc01782fc453823fbabfe24aa2be}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__staggered__actions_8h}{fermiqcd\_\-staggered\_\-actions.h}\end{DoxyCompactItemize}

@@ -1,0 +1,134 @@
+\hypertarget{classfermi__field}{
+\section{fermi\_\-field Class Reference}
+\label{classfermi__field}\index{fermi\_\-field@{fermi\_\-field}}
+}
+
+
+wilson fermionic field  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-fermi\_\-field.h$>$}Inheritance diagram for fermi\_\-field::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classfermi__field}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfermi__field_acaad044954df881d59d08b8b118b20e2}{fermi\_\-field} ()
+\item 
+\hyperlink{classfermi__field_a74efc2481ac9e64071680ebad9e93569}{fermi\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int nc\_\-, int nspin\_\-=4)
+\item 
+void \hyperlink{classfermi__field_a4c185655183158f2f68edf3588d551d2}{allocate\_\-fermi\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int nc\_\-, int nspin\_\-=4)
+\item 
+\hyperlink{classfermi__field_a91ca1df3aa4c49140191cee2816ab320}{fermi\_\-field} (const \hyperlink{classfermi__field}{fermi\_\-field} \&chi)
+\item 
+void \hyperlink{classfermi__field_abfaaf9b43f054fde18eaef3d80b1edf4}{operator=} (const \hyperlink{classfermi__field}{fermi\_\-field} \&chi)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classfermi__field_a51ed4094b715fe01490b027513b49861}{operator()} (site x)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classfermi__field_adbdc4231bf39f4d4d350471d587b0bd0}{operator()} (site x, int a)
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classfermi__field_a4f277f994dedde0d25448bb2f2a57b52}{operator()} (site x, int a, int i)
+\item 
+const \hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classfermi__field_a9850eef1de12386a50b0ce8c28507573}{operator()} (site x, int a, int i) const 
+\item 
+void \hyperlink{classfermi__field_a1fb7ce7e54f45a334ee55dc7250aba89}{operator=} (\hyperlink{classmdp__complex}{mdp\_\-complex} a)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classfermi__field_a664546510ce0d76d234d6526c3c0282b}{nspin}
+\item 
+int \hyperlink{classfermi__field_a10875de82035b0689d0229ea80c8f089}{nc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+wilson fermionic field Example: \begin{DoxyVerb}
+/// fermi_field psi(lattice,nc);
+/// mdp_site x(lattice);
+/// forallsites(x)
+///    for(int spin=0; spin<4; spin++)
+///      for(int i=0; i<nc; i++)
+///        psi(x,spin,i)=0.0+0.0*I;
+/// \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classfermi__field_acaad044954df881d59d08b8b118b20e2}{
+\index{fermi\_\-field@{fermi\_\-field}!fermi\_\-field@{fermi\_\-field}}
+\index{fermi\_\-field@{fermi\_\-field}!fermi_field@{fermi\_\-field}}
+\subsubsection[{fermi\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}fermi\_\-field::fermi\_\-field ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__field_acaad044954df881d59d08b8b118b20e2}
+\hypertarget{classfermi__field_a74efc2481ac9e64071680ebad9e93569}{
+\index{fermi\_\-field@{fermi\_\-field}!fermi\_\-field@{fermi\_\-field}}
+\index{fermi\_\-field@{fermi\_\-field}!fermi_field@{fermi\_\-field}}
+\subsubsection[{fermi\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}fermi\_\-field::fermi\_\-field ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em nc\_\-}, \/  int {\em nspin\_\-} = {\ttfamily 4})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__field_a74efc2481ac9e64071680ebad9e93569}
+\hypertarget{classfermi__field_a91ca1df3aa4c49140191cee2816ab320}{
+\index{fermi\_\-field@{fermi\_\-field}!fermi\_\-field@{fermi\_\-field}}
+\index{fermi\_\-field@{fermi\_\-field}!fermi_field@{fermi\_\-field}}
+\subsubsection[{fermi\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}fermi\_\-field::fermi\_\-field (const {\bf fermi\_\-field} \& {\em chi})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__field_a91ca1df3aa4c49140191cee2816ab320}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classfermi__field_a4c185655183158f2f68edf3588d551d2}{
+\index{fermi\_\-field@{fermi\_\-field}!allocate\_\-fermi\_\-field@{allocate\_\-fermi\_\-field}}
+\index{allocate\_\-fermi\_\-field@{allocate\_\-fermi\_\-field}!fermi_field@{fermi\_\-field}}
+\subsubsection[{allocate\_\-fermi\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}void fermi\_\-field::allocate\_\-fermi\_\-field ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em nc\_\-}, \/  int {\em nspin\_\-} = {\ttfamily 4})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__field_a4c185655183158f2f68edf3588d551d2}
+\hypertarget{classfermi__field_a9850eef1de12386a50b0ce8c28507573}{
+\index{fermi\_\-field@{fermi\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!fermi_field@{fermi\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mdp\_\-complex}\& fermi\_\-field::operator() (site {\em x}, \/  int {\em a}, \/  int {\em i}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__field_a9850eef1de12386a50b0ce8c28507573}
+\hypertarget{classfermi__field_a4f277f994dedde0d25448bb2f2a57b52}{
+\index{fermi\_\-field@{fermi\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!fermi_field@{fermi\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex}\& fermi\_\-field::operator() (site {\em x}, \/  int {\em a}, \/  int {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__field_a4f277f994dedde0d25448bb2f2a57b52}
+\hypertarget{classfermi__field_adbdc4231bf39f4d4d350471d587b0bd0}{
+\index{fermi\_\-field@{fermi\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!fermi_field@{fermi\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} fermi\_\-field::operator() (site {\em x}, \/  int {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__field_adbdc4231bf39f4d4d350471d587b0bd0}
+\hypertarget{classfermi__field_a51ed4094b715fe01490b027513b49861}{
+\index{fermi\_\-field@{fermi\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!fermi_field@{fermi\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} fermi\_\-field::operator() (site {\em x})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__field_a51ed4094b715fe01490b027513b49861}
+\hypertarget{classfermi__field_a1fb7ce7e54f45a334ee55dc7250aba89}{
+\index{fermi\_\-field@{fermi\_\-field}!operator=@{operator=}}
+\index{operator=@{operator=}!fermi_field@{fermi\_\-field}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void fermi\_\-field::operator= ({\bf mdp\_\-complex} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__field_a1fb7ce7e54f45a334ee55dc7250aba89}
+
+
+Reimplemented from \hyperlink{classmdp__field_a24364bce6444668661a0688632af87ec}{mdp\_\-field$<$ mdp\_\-complex $>$}.\hypertarget{classfermi__field_abfaaf9b43f054fde18eaef3d80b1edf4}{
+\index{fermi\_\-field@{fermi\_\-field}!operator=@{operator=}}
+\index{operator=@{operator=}!fermi_field@{fermi\_\-field}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void fermi\_\-field::operator= (const {\bf fermi\_\-field} \& {\em chi})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__field_abfaaf9b43f054fde18eaef3d80b1edf4}
+
+
+Reimplemented from \hyperlink{classmdp__complex__field_ad2b736ae31e3ee1f955c10f6ad40928f}{mdp\_\-complex\_\-field}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classfermi__field_a10875de82035b0689d0229ea80c8f089}{
+\index{fermi\_\-field@{fermi\_\-field}!nc@{nc}}
+\index{nc@{nc}!fermi_field@{fermi\_\-field}}
+\subsubsection[{nc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf fermi\_\-field::nc}}}
+\label{classfermi__field_a10875de82035b0689d0229ea80c8f089}
+\hypertarget{classfermi__field_a664546510ce0d76d234d6526c3c0282b}{
+\index{fermi\_\-field@{fermi\_\-field}!nspin@{nspin}}
+\index{nspin@{nspin}!fermi_field@{fermi\_\-field}}
+\subsubsection[{nspin}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf fermi\_\-field::nspin}}}
+\label{classfermi__field_a664546510ce0d76d234d6526c3c0282b}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__fermi__field_8h}{fermiqcd\_\-fermi\_\-field.h}\end{DoxyCompactItemize}

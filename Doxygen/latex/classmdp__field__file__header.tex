@@ -1,0 +1,124 @@
+\hypertarget{classmdp__field__file__header}{
+\section{mdp\_\-field\_\-file\_\-header Class Reference}
+\label{classmdp__field__file__header}\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}}
+}
+
+
+header for field file IO  
+
+
+{\ttfamily \#include $<$mdp\_\-field.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmdp__field__file__header_ab097916f6edf2141bf8219384c5c2d95}{mdp\_\-field\_\-file\_\-header} ()
+\item 
+void \hyperlink{classmdp__field__file__header_a818d41240687af568d930b91ac687299}{reset} ()
+\item 
+void \hyperlink{classmdp__field__file__header_a6f944ea85e7d6176900139768098844a}{set\_\-time} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{classmdp__field__file__header_ab1b8a05b7908871a5cedff9e0bfc33fa}{file\_\-id} \mbox{[}60\mbox{]}
+\item 
+char \hyperlink{classmdp__field__file__header_abb1bd41d1e209241fb85b0996fed9765}{program\_\-version} \mbox{[}60\mbox{]}
+\item 
+char \hyperlink{classmdp__field__file__header_abc00b44219d97450f858530e2f357bd5}{creation\_\-date} \mbox{[}60\mbox{]}
+\item 
+uint32\_\-t \hyperlink{classmdp__field__file__header_aabc93969ba727e3e368608e21767a8d1}{endianess}
+\item 
+int32\_\-t \hyperlink{classmdp__field__file__header_a530fb61672665d9fc563d5c25c14aafb}{ndim}
+\item 
+int32\_\-t \hyperlink{classmdp__field__file__header_a4354675f8beac1523480de46d3441357}{box} \mbox{[}10\mbox{]}
+\item 
+int32\_\-t \hyperlink{classmdp__field__file__header_a904de1a1c617f55536ea6961693646f2}{bytes\_\-per\_\-site}
+\item 
+int32\_\-t \hyperlink{classmdp__field__file__header_a428a51466f48e613f85f9f9875a726bc}{sites}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classmdp__field__file__header_ab3818e6c0a7da0722f0157d14ef19e06}{switch\_\-header\_\-endianess} (\hyperlink{classmdp__field__file__header}{mdp\_\-field\_\-file\_\-header} \&header)
+\begin{DoxyCompactList}\small\item\em tries to swicth the endianess of the numerical members of the header \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+header for field file IO Used to store the binary file haeader that precedes the data When storing an object of class mdp\_\-field$<$$>$ in a file 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmdp__field__file__header_ab097916f6edf2141bf8219384c5c2d95}{
+\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}!mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}}
+\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}!mdp_field_file_header@{mdp\_\-field\_\-file\_\-header}}
+\subsubsection[{mdp\_\-field\_\-file\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-field\_\-file\_\-header::mdp\_\-field\_\-file\_\-header ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field__file__header_ab097916f6edf2141bf8219384c5c2d95}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__field__file__header_a818d41240687af568d930b91ac687299}{
+\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}!reset@{reset}}
+\index{reset@{reset}!mdp_field_file_header@{mdp\_\-field\_\-file\_\-header}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-field\_\-file\_\-header::reset ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field__file__header_a818d41240687af568d930b91ac687299}
+\hypertarget{classmdp__field__file__header_a6f944ea85e7d6176900139768098844a}{
+\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}!set\_\-time@{set\_\-time}}
+\index{set\_\-time@{set\_\-time}!mdp_field_file_header@{mdp\_\-field\_\-file\_\-header}}
+\subsubsection[{set\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-field\_\-file\_\-header::set\_\-time ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field__file__header_a6f944ea85e7d6176900139768098844a}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classmdp__field__file__header_ab3818e6c0a7da0722f0157d14ef19e06}{
+\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}!switch\_\-header\_\-endianess@{switch\_\-header\_\-endianess}}
+\index{switch\_\-header\_\-endianess@{switch\_\-header\_\-endianess}!mdp_field_file_header@{mdp\_\-field\_\-file\_\-header}}
+\subsubsection[{switch\_\-header\_\-endianess}]{\setlength{\rightskip}{0pt plus 5cm}bool switch\_\-header\_\-endianess ({\bf mdp\_\-field\_\-file\_\-header} \& {\em header})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__field__file__header_ab3818e6c0a7da0722f0157d14ef19e06}
+
+
+tries to swicth the endianess of the numerical members of the header 
+
+\subsection{Member Data Documentation}
+\hypertarget{classmdp__field__file__header_a4354675f8beac1523480de46d3441357}{
+\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}!box@{box}}
+\index{box@{box}!mdp_field_file_header@{mdp\_\-field\_\-file\_\-header}}
+\subsubsection[{box}]{\setlength{\rightskip}{0pt plus 5cm}int32\_\-t {\bf mdp\_\-field\_\-file\_\-header::box}\mbox{[}10\mbox{]}}}
+\label{classmdp__field__file__header_a4354675f8beac1523480de46d3441357}
+\hypertarget{classmdp__field__file__header_a904de1a1c617f55536ea6961693646f2}{
+\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}!bytes\_\-per\_\-site@{bytes\_\-per\_\-site}}
+\index{bytes\_\-per\_\-site@{bytes\_\-per\_\-site}!mdp_field_file_header@{mdp\_\-field\_\-file\_\-header}}
+\subsubsection[{bytes\_\-per\_\-site}]{\setlength{\rightskip}{0pt plus 5cm}int32\_\-t {\bf mdp\_\-field\_\-file\_\-header::bytes\_\-per\_\-site}}}
+\label{classmdp__field__file__header_a904de1a1c617f55536ea6961693646f2}
+\hypertarget{classmdp__field__file__header_abc00b44219d97450f858530e2f357bd5}{
+\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}!creation\_\-date@{creation\_\-date}}
+\index{creation\_\-date@{creation\_\-date}!mdp_field_file_header@{mdp\_\-field\_\-file\_\-header}}
+\subsubsection[{creation\_\-date}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf mdp\_\-field\_\-file\_\-header::creation\_\-date}\mbox{[}60\mbox{]}}}
+\label{classmdp__field__file__header_abc00b44219d97450f858530e2f357bd5}
+\hypertarget{classmdp__field__file__header_aabc93969ba727e3e368608e21767a8d1}{
+\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}!endianess@{endianess}}
+\index{endianess@{endianess}!mdp_field_file_header@{mdp\_\-field\_\-file\_\-header}}
+\subsubsection[{endianess}]{\setlength{\rightskip}{0pt plus 5cm}uint32\_\-t {\bf mdp\_\-field\_\-file\_\-header::endianess}}}
+\label{classmdp__field__file__header_aabc93969ba727e3e368608e21767a8d1}
+\hypertarget{classmdp__field__file__header_ab1b8a05b7908871a5cedff9e0bfc33fa}{
+\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}!file\_\-id@{file\_\-id}}
+\index{file\_\-id@{file\_\-id}!mdp_field_file_header@{mdp\_\-field\_\-file\_\-header}}
+\subsubsection[{file\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf mdp\_\-field\_\-file\_\-header::file\_\-id}\mbox{[}60\mbox{]}}}
+\label{classmdp__field__file__header_ab1b8a05b7908871a5cedff9e0bfc33fa}
+\hypertarget{classmdp__field__file__header_a530fb61672665d9fc563d5c25c14aafb}{
+\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}!ndim@{ndim}}
+\index{ndim@{ndim}!mdp_field_file_header@{mdp\_\-field\_\-file\_\-header}}
+\subsubsection[{ndim}]{\setlength{\rightskip}{0pt plus 5cm}int32\_\-t {\bf mdp\_\-field\_\-file\_\-header::ndim}}}
+\label{classmdp__field__file__header_a530fb61672665d9fc563d5c25c14aafb}
+\hypertarget{classmdp__field__file__header_abb1bd41d1e209241fb85b0996fed9765}{
+\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}!program\_\-version@{program\_\-version}}
+\index{program\_\-version@{program\_\-version}!mdp_field_file_header@{mdp\_\-field\_\-file\_\-header}}
+\subsubsection[{program\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf mdp\_\-field\_\-file\_\-header::program\_\-version}\mbox{[}60\mbox{]}}}
+\label{classmdp__field__file__header_abb1bd41d1e209241fb85b0996fed9765}
+\hypertarget{classmdp__field__file__header_a428a51466f48e613f85f9f9875a726bc}{
+\index{mdp\_\-field\_\-file\_\-header@{mdp\_\-field\_\-file\_\-header}!sites@{sites}}
+\index{sites@{sites}!mdp_field_file_header@{mdp\_\-field\_\-file\_\-header}}
+\subsubsection[{sites}]{\setlength{\rightskip}{0pt plus 5cm}int32\_\-t {\bf mdp\_\-field\_\-file\_\-header::sites}}}
+\label{classmdp__field__file__header_a428a51466f48e613f85f9f9875a726bc}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__field_8h}{mdp\_\-field.h}\end{DoxyCompactItemize}

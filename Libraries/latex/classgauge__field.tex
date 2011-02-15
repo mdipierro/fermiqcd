@@ -1,0 +1,38 @@
+\hypertarget{classgauge__field}{
+\section{gauge\_\-field Class Reference}
+\label{classgauge__field}\index{gauge\_\-field@{gauge\_\-field}}
+}
+the gauge field for any SU(n)  
+
+
+{\tt \#include $<$fermiqcd\_\-gauge\_\-field.h$>$}
+
+Inherits \hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field}.
+
+Collaboration diagram for gauge\_\-field:
+
+\subsection{Detailed Description}
+the gauge field for any SU(n) 
+
+Example: 
+
+\footnotesize\begin{verbatim}
+///    int nc=3; 
+///    int box[]={10,8,8,8};
+///    mdp_lattice lattice(4,box);
+///    gauge_field U(lattice,nc);
+///    mdp_site x(lattice);
+///    // set_cold(U);
+///    forallsites(x)
+///       for(int mu=0; mu<U.ndim; mu++)
+///          U(x,mu)=1;
+///    U.update(); // synchronization
+///    U.save("myfield");
+///    U.load("myfield");
+/// \end{verbatim}
+\normalsize
+ Note that U(x,mu) is $ \exp{iaA_{\mu}} $ and it is a color matrix in SU(nc). $a$ is the lattice spacing. 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{fermiqcd__gauge__field_8h}{fermiqcd\_\-gauge\_\-field.h}\end{CompactItemize}

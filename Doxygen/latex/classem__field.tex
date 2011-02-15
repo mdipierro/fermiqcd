@@ -1,0 +1,128 @@
+\hypertarget{classem__field}{
+\section{em\_\-field Class Reference}
+\label{classem__field}\index{em\_\-field@{em\_\-field}}
+}
+
+
+the chromo-\/electr-\/magnetic field for any SU(n)  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-gauge\_\-field.h$>$}Inheritance diagram for em\_\-field::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classem__field}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classem__field_a919bf7292d3c2748663f48d325ea2fa3}{em\_\-field} ()
+\item 
+\hyperlink{classem__field_a15c0bc41753d8728c251f51b48e0f1ea}{em\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int nc\_\-)
+\item 
+\hyperlink{classem__field_ab061ffebdbd768362b56121237c1ac80}{em\_\-field} (\hyperlink{classem__field}{em\_\-field} \&em)
+\item 
+void \hyperlink{classem__field_ae4f6727d2b31a8d7eec93bf3506c92fb}{allocate\_\-em\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int nc\_\-)
+\item 
+int \hyperlink{classem__field_a3f93a7ad7324b58e5554ac996fa12282}{ordered\_\-index} (int mu, int nu) const 
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classem__field_a4afce0ed26593545c4a61892880823bc}{operator()} (site x, int mu, int nu)
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classem__field_ab5063637e3b890ae95ea46b8458c6fc7}{operator()} (site x, int mu, int nu, int i, int j)
+\item 
+const \hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classem__field_a68b499892a9404f8b469677e28506180}{operator()} (site x, int mu, int nu, int i, int j) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classem__field_ad35fcd68bba9a301d34ceabc76f08226}{ndim}
+\item 
+int \hyperlink{classem__field_ab6fc146b5a94cf5961a133e55f832cd4}{nc}
+\item 
+int \hyperlink{classem__field_ab0049c2b2edc267a93c9299aecede037}{nem}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the chromo-\/electr-\/magnetic field for any SU(n) Example: \begin{DoxyVerb}
+///    int nc=3; 
+///    int box[]={10,8,8,8};
+///    mdp_lattice lattice(4,box);
+///    gauge_field U(lattice,nc);
+///    mdp_site x(lattice);
+///    U.load("myfield");
+///    compute_em_field(U);
+///    forallsites(x)
+///      for(int mu=0; mu<U.ndim; mu++)
+///        for(int nu=mu+1; nu<U.ndim; nu++)
+///          cout << U.em(x,mu,nu) << endl;
+/// \end{DoxyVerb}
+ Note that U.em(x,mu,nu) is $ a^2 G_{\mu\nu} $ and it is a color matrix in SU(nc). $a$ is the lattice spacing. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classem__field_a919bf7292d3c2748663f48d325ea2fa3}{
+\index{em\_\-field@{em\_\-field}!em\_\-field@{em\_\-field}}
+\index{em\_\-field@{em\_\-field}!em_field@{em\_\-field}}
+\subsubsection[{em\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}em\_\-field::em\_\-field ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classem__field_a919bf7292d3c2748663f48d325ea2fa3}
+\hypertarget{classem__field_a15c0bc41753d8728c251f51b48e0f1ea}{
+\index{em\_\-field@{em\_\-field}!em\_\-field@{em\_\-field}}
+\index{em\_\-field@{em\_\-field}!em_field@{em\_\-field}}
+\subsubsection[{em\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}em\_\-field::em\_\-field ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em nc\_\-})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classem__field_a15c0bc41753d8728c251f51b48e0f1ea}
+\hypertarget{classem__field_ab061ffebdbd768362b56121237c1ac80}{
+\index{em\_\-field@{em\_\-field}!em\_\-field@{em\_\-field}}
+\index{em\_\-field@{em\_\-field}!em_field@{em\_\-field}}
+\subsubsection[{em\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}em\_\-field::em\_\-field ({\bf em\_\-field} \& {\em em})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classem__field_ab061ffebdbd768362b56121237c1ac80}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classem__field_ae4f6727d2b31a8d7eec93bf3506c92fb}{
+\index{em\_\-field@{em\_\-field}!allocate\_\-em\_\-field@{allocate\_\-em\_\-field}}
+\index{allocate\_\-em\_\-field@{allocate\_\-em\_\-field}!em_field@{em\_\-field}}
+\subsubsection[{allocate\_\-em\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}void em\_\-field::allocate\_\-em\_\-field ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em nc\_\-})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classem__field_ae4f6727d2b31a8d7eec93bf3506c92fb}
+\hypertarget{classem__field_a68b499892a9404f8b469677e28506180}{
+\index{em\_\-field@{em\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!em_field@{em\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mdp\_\-complex}\& em\_\-field::operator() (site {\em x}, \/  int {\em mu}, \/  int {\em nu}, \/  int {\em i}, \/  int {\em j}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classem__field_a68b499892a9404f8b469677e28506180}
+\hypertarget{classem__field_ab5063637e3b890ae95ea46b8458c6fc7}{
+\index{em\_\-field@{em\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!em_field@{em\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex}\& em\_\-field::operator() (site {\em x}, \/  int {\em mu}, \/  int {\em nu}, \/  int {\em i}, \/  int {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classem__field_ab5063637e3b890ae95ea46b8458c6fc7}
+\hypertarget{classem__field_a4afce0ed26593545c4a61892880823bc}{
+\index{em\_\-field@{em\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!em_field@{em\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} em\_\-field::operator() (site {\em x}, \/  int {\em mu}, \/  int {\em nu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classem__field_a4afce0ed26593545c4a61892880823bc}
+\hypertarget{classem__field_a3f93a7ad7324b58e5554ac996fa12282}{
+\index{em\_\-field@{em\_\-field}!ordered\_\-index@{ordered\_\-index}}
+\index{ordered\_\-index@{ordered\_\-index}!em_field@{em\_\-field}}
+\subsubsection[{ordered\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}int em\_\-field::ordered\_\-index (int {\em mu}, \/  int {\em nu}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classem__field_a3f93a7ad7324b58e5554ac996fa12282}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classem__field_ab6fc146b5a94cf5961a133e55f832cd4}{
+\index{em\_\-field@{em\_\-field}!nc@{nc}}
+\index{nc@{nc}!em_field@{em\_\-field}}
+\subsubsection[{nc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf em\_\-field::nc}}}
+\label{classem__field_ab6fc146b5a94cf5961a133e55f832cd4}
+\hypertarget{classem__field_ad35fcd68bba9a301d34ceabc76f08226}{
+\index{em\_\-field@{em\_\-field}!ndim@{ndim}}
+\index{ndim@{ndim}!em_field@{em\_\-field}}
+\subsubsection[{ndim}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf em\_\-field::ndim}}}
+\label{classem__field_ad35fcd68bba9a301d34ceabc76f08226}
+\hypertarget{classem__field_ab0049c2b2edc267a93c9299aecede037}{
+\index{em\_\-field@{em\_\-field}!nem@{nem}}
+\index{nem@{nem}!em_field@{em\_\-field}}
+\subsubsection[{nem}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf em\_\-field::nem}}}
+\label{classem__field_ab0049c2b2edc267a93c9299aecede037}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__gauge__field_8h}{fermiqcd\_\-gauge\_\-field.h}\end{DoxyCompactItemize}

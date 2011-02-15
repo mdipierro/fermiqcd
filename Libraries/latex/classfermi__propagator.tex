@@ -1,0 +1,60 @@
+\hypertarget{classfermi__propagator}{
+\section{fermi\_\-propagator Class Reference}
+\label{classfermi__propagator}\index{fermi\_\-propagator@{fermi\_\-propagator}}
+}
+a Wilson/Clover quark propagator (all 12 components)  
+
+
+{\tt \#include $<$fermiqcd\_\-fermi\_\-propagator.h$>$}
+
+Inherits \hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field}.
+
+Collaboration diagram for fermi\_\-propagator:\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+void \hyperlink{classfermi__propagator_0b3730ff1e1058f1e13b537d429c7333}{generate} (\hyperlink{classfermi__propagator}{fermi\_\-propagator} \&S, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, mdp\_\-real absolute\_\-precision=fermi\_\-inversion\_\-precision, mdp\_\-real relative\_\-precision=0, int max\_\-steps=2000, void($\ast$smf)(\hyperlink{classfermi__field}{fermi\_\-field} \&, \hyperlink{classgauge__field}{gauge\_\-field} \&, \hyperlink{classcoefficients}{coefficients} \&)=0, \hyperlink{classcoefficients}{coefficients} smear\_\-coeff=\hyperlink{classcoefficients}{coefficients}(), int comp=0)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+a Wilson/Clover quark propagator (all 12 components) 
+
+Example of how to make a pion: 
+
+\footnotesize\begin{verbatim}
+/// gauge_field U(lattice,nc);
+/// U.load("myfield");
+/// fermi_propagator S(lattice,nc);
+/// coefficients quark;
+/// quark["kappa"]=1.12;
+/// generate(S,U,quark);
+/// vector<float> sum(U.lattice.size(TIME));
+/// forallsites(x) 
+///   for(int alpha=0; alpha<4; alpha++)
+///     for(int beta=0; beta<4; beta++)
+///        sum(x(0))+=real(trace(S(x,alpha,beta)*
+///                   hermitian(S(x,beta,alpha))));
+/// \end{verbatim}
+\normalsize
+ Note that S(x,alpha,beta,i,j) is $ \left<0|\bar q^i_\alpha(x), q^j_\beta(0)|\right> $ 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classfermi__propagator_0b3730ff1e1058f1e13b537d429c7333}{
+\index{fermi\_\-propagator@{fermi\_\-propagator}!generate@{generate}}
+\index{generate@{generate}!fermi_propagator@{fermi\_\-propagator}}
+\subsubsection[{generate}]{\setlength{\rightskip}{0pt plus 5cm}void generate ({\bf fermi\_\-propagator} \& {\em S}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  mdp\_\-real {\em absolute\_\-precision} = {\tt fermi\_\-inversion\_\-precision}, \/  mdp\_\-real {\em relative\_\-precision} = {\tt 0}, \/  int {\em max\_\-steps} = {\tt 2000}, \/  void($\ast$)({\bf fermi\_\-field} \&, {\bf gauge\_\-field} \&, {\bf coefficients} \&) {\em smf} = {\tt 0}, \/  {\bf coefficients} {\em smear\_\-coeff} = {\tt {\bf coefficients}()}, \/  int {\em comp} = {\tt 0})\hspace{0.3cm}{\tt  \mbox{[}friend\mbox{]}}}}
+\label{classfermi__propagator_0b3730ff1e1058f1e13b537d429c7333}
+
+
+makes the quark propagator
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em S}]the output propagator \item[{\em U}]the input gauge configuration \item[{\em coeff}]the parameters to be passed to the action \item[{\em absolute\_\-precision}]the target absolute precision for inversion \item[{\em relative\_\-precision}]the target relative precision for invcersion \item[{\em max\_\-steps}]the max number of steps in inversion \item[{\em smf}]pointer to smearing function (smear sources) \item[{\em smear\_\-coeff}]parameters for smearing \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{fermiqcd__fermi__propagator_8h}{fermiqcd\_\-fermi\_\-propagator.h}\end{CompactItemize}

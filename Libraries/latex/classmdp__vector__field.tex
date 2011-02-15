@@ -1,0 +1,40 @@
+\hypertarget{classmdp__vector__field}{
+\section{mdp\_\-vector\_\-field Class Reference}
+\label{classmdp__vector__field}\index{mdp\_\-vector\_\-field@{mdp\_\-vector\_\-field}}
+}
+a field of vectors of complex numbers  
+
+
+{\tt \#include $<$mdp\_\-vector\_\-field.h$>$}
+
+Inherits \hyperlink{classmdp__field}{mdp\_\-field$<$ mdp\_\-complex $>$}.
+
+Collaboration diagram for mdp\_\-vector\_\-field:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classmdp__vector__field_a50ba6cb67e5978d0e362b70ea703164}{
+\hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classmdp__vector__field_a50ba6cb67e5978d0e362b70ea703164}{operator()} (\hyperlink{classmdp__site}{mdp\_\-site} x, int i)}
+\label{classmdp__vector__field_a50ba6cb67e5978d0e362b70ea703164}
+
+\begin{CompactList}\small\item\em returns component i of the vector of objects T stored at site x \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+a field of vectors of complex numbers 
+
+Example: 
+
+\footnotesize\begin{verbatim}
+///    int box[]={10,10,10};
+///    mdp_lattice lattice(3,box);
+///    mdp_vector_field h(lattice,10);
+///    mdp_site x(lattice);
+///    forallsites(x)
+///      h(x)=0.0+0.0*I;
+/// \end{verbatim}
+\normalsize
+ 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{mdp__vector__field_8h}{mdp\_\-vector\_\-field.h}\end{CompactItemize}

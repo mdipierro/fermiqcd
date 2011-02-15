@@ -1,0 +1,40 @@
+\hypertarget{class_lanczos}{
+\section{Lanczos$<$ fieldT $>$ Class Template Reference}
+\label{class_lanczos}\index{Lanczos@{Lanczos}}
+}
+
+
+\hyperlink{class_lanczos}{Lanczos} algorithms.  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-lanczos.h$>$}\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classmdp__complex}{mdp\_\-complex} \hyperlink{class_lanczos_a955801bdbd7665b16d35b60de725636e}{step} (fieldT \&psi, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, bool force=false, bool output\_\-check=false)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class fieldT$>$ class Lanczos$<$ fieldT $>$}
+
+\hyperlink{class_lanczos}{Lanczos} algorithms. Example: \begin{DoxyVerb}
+/// mdp_gauge U(lattice,nc);
+/// fermi_field psi(lattice,nc);
+/// coefficients coeff;
+/// coeff["kappa"]=1.12;
+/// for(int k=0; k<100; k++)
+///    mdp << Lanczos::step(psi,U,coeff) << endl;
+/// \end{DoxyVerb}
+ return mdp\_\-complex(alpha,eta) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_lanczos_a955801bdbd7665b16d35b60de725636e}{
+\index{Lanczos@{Lanczos}!step@{step}}
+\index{step@{step}!Lanczos@{Lanczos}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class fieldT $>$ static {\bf mdp\_\-complex} {\bf Lanczos}$<$ fieldT $>$::step (fieldT \& {\em psi}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  bool {\em force} = {\ttfamily false}, \/  bool {\em output\_\-check} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_lanczos_a955801bdbd7665b16d35b60de725636e}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__lanczos_8h}{fermiqcd\_\-lanczos.h}\end{DoxyCompactItemize}

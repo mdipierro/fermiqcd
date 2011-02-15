@@ -1,0 +1,45 @@
+\hypertarget{classmdp__psim}{
+\section{mdp\_\-psim Class Reference}
+\label{classmdp__psim}\index{mdp\_\-psim@{mdp\_\-psim}}
+}
+Parallel SIMulator used by class \hyperlink{classmdp__communicator}{mdp\_\-communicator}.  
+
+
+{\tt \#include $<$mdp\_\-psim.h$>$}
+
+
+
+\subsection{Detailed Description}
+Parallel SIMulator used by class \hyperlink{classmdp__communicator}{mdp\_\-communicator}. 
+
+Attention: under MDP and/or FermiQCD this is already Instantiated inside class \hyperlink{classmdp__communicator}{mdp\_\-communicator}.
+
+Example: 
+
+\footnotesize\begin{verbatim}
+/// int main(int argc, char** argv) {
+///    mdp_psim node(argc,argv);
+///    int a=3, b=0;
+///    if(node.id()==0) node.send(1,a);
+///    if(node.id()==1) { node.recv(0,b); cout << b << endl;
+///    return 0;
+/// }
+/// \end{verbatim}
+\normalsize
+ Compile with 
+
+\footnotesize\begin{verbatim}
+///    g++ [filename] -o a.out
+/// \end{verbatim}
+\normalsize
+ and run with 
+
+\footnotesize\begin{verbatim}
+///    ./a.out -PSIM_NPROCS=2
+/// \end{verbatim}
+\normalsize
+ Output should be 3. 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{mdp__psim_8h}{mdp\_\-psim.h}\end{CompactItemize}

@@ -1,0 +1,188 @@
+\hypertarget{classmdp__jackboot}{
+\section{mdp\_\-jackboot Class Reference}
+\label{classmdp__jackboot}\index{mdp\_\-jackboot@{mdp\_\-jackboot}}
+}
+
+
+coniatiner class for jackknife and boostrap analysis  
+
+
+{\ttfamily \#include $<$mdp\_\-jackboot.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmdp__jackboot_a7cb2ed899f90ecc23bd0a4eecf15e8d9}{mdp\_\-jackboot} ()
+\item 
+\hyperlink{classmdp__jackboot_a528121e64281ffc30843b720f7c6354a}{mdp\_\-jackboot} (int nconf\_\-, int narg\_\-=1)
+\begin{DoxyCompactList}\small\item\em allocate container for nconf\_\- datasets of nargs\_\- numbers each \item\end{DoxyCompactList}\item 
+void \hyperlink{classmdp__jackboot_a452de46122e421b055d02c381fc88c58}{dimension} (int nconf\_\-, int narg\_\-=1)
+\item 
+virtual \hyperlink{classmdp__jackboot_aff3993d59a2c97e449e79da8dfdbbe86}{$\sim$mdp\_\-jackboot} ()
+\item 
+float $\ast$ \hyperlink{classmdp__jackboot_a0eac202baa5532ede856af6f616ab9d9}{address} (int \hyperlink{classmdp__jackboot_ae84ce36555fb3089989232ca91d80e15}{conf})
+\item 
+float \& \hyperlink{classmdp__jackboot_a7533621a114d565f0c26bcc3ca0df1bb}{operator()} (int present\_\-conf, int arg)
+\item 
+float \& \hyperlink{classmdp__jackboot_a1bfb073e7933a0ff34d8f50743e1d695}{operator()} (int arg)
+\item 
+void \hyperlink{classmdp__jackboot_a56e5206388f943a9fee3d4d2eea3b2ae}{plain} (int i)
+\item 
+void \hyperlink{classmdp__jackboot_add5b0171b18a4befe8e526aaf5b30477}{makesample} (int $\ast$p, int nboot)
+\item 
+float \hyperlink{classmdp__jackboot_ae1d3c643754c88be40ac1957ac4db685}{mean} ()
+\item 
+float \hyperlink{classmdp__jackboot_aa594e64f4e7155684e2d23f1f7ba2b5d}{j\_\-err} ()
+\item 
+float \hyperlink{classmdp__jackboot_a4d4841252e62815d7242cb440c6e49c0}{b\_\-err} (int nboot=100)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float($\ast$ \hyperlink{classmdp__jackboot_a5cb1c13dadb2d351c217925f2ba0748e}{f} )(float $\ast$, void $\ast$)
+\item 
+int \hyperlink{classmdp__jackboot_a584457952e56b7deb3bea2f7b1f801d2}{nconf}
+\item 
+int \hyperlink{classmdp__jackboot_a455155a1460bacf19f95a3c1a3732714}{narg}
+\item 
+int \hyperlink{classmdp__jackboot_ae84ce36555fb3089989232ca91d80e15}{conf}
+\item 
+float $\ast$ \hyperlink{classmdp__jackboot_a8f586ad6739906a0d3c8c1aba3a9886b}{m}
+\item 
+void $\ast$ \hyperlink{classmdp__jackboot_acb66568807fa4180f1c55c05d87e8cca}{handle}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classmdp__jackboot_ad5b6e252253804e3e371008fbad7b43a}{mdp\_\-jackboot\_\-plain} (float $\ast$x, void $\ast$a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+coniatiner class for jackknife and boostrap analysis Example: \begin{DoxyVerb}
+///    mdp_jackboot jb(10,2);
+///    for(int k=0; k<10; k++) {       
+///       jb(k,0)=mdp_random.plain();
+///       jb(k,1)=mdp_random.plain();
+///    }
+///    jb.plain(0);
+///    cout << "mean of jb(k,0) =" << mean() << endl;
+///    cout << "jackknife of mean jb(k,0) =" << j_err() << endl;
+///    cout << "boostrap of mean jb(k,0) =" << b_err() << endl;
+///    jb.plain(1);
+///    cout << "mean of jb(k,1) =" << mean() << endl;
+///    cout << "jackknife of mean jb(k,1) =" << j_err() << endl;
+///    cout << "boostrap of mean jb(k,1) =" << b_err() << endl;
+/// \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmdp__jackboot_a7cb2ed899f90ecc23bd0a4eecf15e8d9}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!mdp\_\-jackboot@{mdp\_\-jackboot}}
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{mdp\_\-jackboot}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-jackboot::mdp\_\-jackboot ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__jackboot_a7cb2ed899f90ecc23bd0a4eecf15e8d9}
+\hypertarget{classmdp__jackboot_a528121e64281ffc30843b720f7c6354a}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!mdp\_\-jackboot@{mdp\_\-jackboot}}
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{mdp\_\-jackboot}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-jackboot::mdp\_\-jackboot (int {\em nconf\_\-}, \/  int {\em narg\_\-} = {\ttfamily 1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__jackboot_a528121e64281ffc30843b720f7c6354a}
+
+
+allocate container for nconf\_\- datasets of nargs\_\- numbers each \hypertarget{classmdp__jackboot_aff3993d59a2c97e449e79da8dfdbbe86}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!$\sim$mdp\_\-jackboot@{$\sim$mdp\_\-jackboot}}
+\index{$\sim$mdp\_\-jackboot@{$\sim$mdp\_\-jackboot}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{$\sim$mdp\_\-jackboot}]{\setlength{\rightskip}{0pt plus 5cm}virtual mdp\_\-jackboot::$\sim$mdp\_\-jackboot ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmdp__jackboot_aff3993d59a2c97e449e79da8dfdbbe86}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__jackboot_a0eac202baa5532ede856af6f616ab9d9}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!address@{address}}
+\index{address@{address}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{address}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ mdp\_\-jackboot::address (int {\em conf})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__jackboot_a0eac202baa5532ede856af6f616ab9d9}
+\hypertarget{classmdp__jackboot_a4d4841252e62815d7242cb440c6e49c0}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!b\_\-err@{b\_\-err}}
+\index{b\_\-err@{b\_\-err}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{b\_\-err}]{\setlength{\rightskip}{0pt plus 5cm}float mdp\_\-jackboot::b\_\-err (int {\em nboot} = {\ttfamily 100})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__jackboot_a4d4841252e62815d7242cb440c6e49c0}
+\hypertarget{classmdp__jackboot_a452de46122e421b055d02c381fc88c58}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!dimension@{dimension}}
+\index{dimension@{dimension}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{dimension}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-jackboot::dimension (int {\em nconf\_\-}, \/  int {\em narg\_\-} = {\ttfamily 1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__jackboot_a452de46122e421b055d02c381fc88c58}
+\hypertarget{classmdp__jackboot_aa594e64f4e7155684e2d23f1f7ba2b5d}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!j\_\-err@{j\_\-err}}
+\index{j\_\-err@{j\_\-err}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{j\_\-err}]{\setlength{\rightskip}{0pt plus 5cm}float mdp\_\-jackboot::j\_\-err ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__jackboot_aa594e64f4e7155684e2d23f1f7ba2b5d}
+\hypertarget{classmdp__jackboot_add5b0171b18a4befe8e526aaf5b30477}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!makesample@{makesample}}
+\index{makesample@{makesample}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{makesample}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-jackboot::makesample (int $\ast$ {\em p}, \/  int {\em nboot})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__jackboot_add5b0171b18a4befe8e526aaf5b30477}
+\hypertarget{classmdp__jackboot_ae1d3c643754c88be40ac1957ac4db685}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!mean@{mean}}
+\index{mean@{mean}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{mean}]{\setlength{\rightskip}{0pt plus 5cm}float mdp\_\-jackboot::mean ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__jackboot_ae1d3c643754c88be40ac1957ac4db685}
+\hypertarget{classmdp__jackboot_a1bfb073e7933a0ff34d8f50743e1d695}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!operator()@{operator()}}
+\index{operator()@{operator()}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}float\& mdp\_\-jackboot::operator() (int {\em arg})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__jackboot_a1bfb073e7933a0ff34d8f50743e1d695}
+\hypertarget{classmdp__jackboot_a7533621a114d565f0c26bcc3ca0df1bb}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!operator()@{operator()}}
+\index{operator()@{operator()}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}float\& mdp\_\-jackboot::operator() (int {\em present\_\-conf}, \/  int {\em arg})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__jackboot_a7533621a114d565f0c26bcc3ca0df1bb}
+\hypertarget{classmdp__jackboot_a56e5206388f943a9fee3d4d2eea3b2ae}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!plain@{plain}}
+\index{plain@{plain}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{plain}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-jackboot::plain (int {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__jackboot_a56e5206388f943a9fee3d4d2eea3b2ae}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classmdp__jackboot_ad5b6e252253804e3e371008fbad7b43a}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!mdp\_\-jackboot\_\-plain@{mdp\_\-jackboot\_\-plain}}
+\index{mdp\_\-jackboot\_\-plain@{mdp\_\-jackboot\_\-plain}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{mdp\_\-jackboot\_\-plain}]{\setlength{\rightskip}{0pt plus 5cm}float mdp\_\-jackboot\_\-plain (float $\ast$ {\em x}, \/  void $\ast$ {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__jackboot_ad5b6e252253804e3e371008fbad7b43a}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmdp__jackboot_ae84ce36555fb3089989232ca91d80e15}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!conf@{conf}}
+\index{conf@{conf}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{conf}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mdp\_\-jackboot::conf}}}
+\label{classmdp__jackboot_ae84ce36555fb3089989232ca91d80e15}
+\hypertarget{classmdp__jackboot_a5cb1c13dadb2d351c217925f2ba0748e}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!f@{f}}
+\index{f@{f}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}float($\ast$ {\bf mdp\_\-jackboot::f})(float $\ast$, void $\ast$)}}
+\label{classmdp__jackboot_a5cb1c13dadb2d351c217925f2ba0748e}
+\hypertarget{classmdp__jackboot_acb66568807fa4180f1c55c05d87e8cca}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!handle@{handle}}
+\index{handle@{handle}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf mdp\_\-jackboot::handle}}}
+\label{classmdp__jackboot_acb66568807fa4180f1c55c05d87e8cca}
+\hypertarget{classmdp__jackboot_a8f586ad6739906a0d3c8c1aba3a9886b}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!m@{m}}
+\index{m@{m}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{m}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ {\bf mdp\_\-jackboot::m}}}
+\label{classmdp__jackboot_a8f586ad6739906a0d3c8c1aba3a9886b}
+\hypertarget{classmdp__jackboot_a455155a1460bacf19f95a3c1a3732714}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!narg@{narg}}
+\index{narg@{narg}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{narg}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mdp\_\-jackboot::narg}}}
+\label{classmdp__jackboot_a455155a1460bacf19f95a3c1a3732714}
+\hypertarget{classmdp__jackboot_a584457952e56b7deb3bea2f7b1f801d2}{
+\index{mdp\_\-jackboot@{mdp\_\-jackboot}!nconf@{nconf}}
+\index{nconf@{nconf}!mdp_jackboot@{mdp\_\-jackboot}}
+\subsubsection[{nconf}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mdp\_\-jackboot::nconf}}}
+\label{classmdp__jackboot_a584457952e56b7deb3bea2f7b1f801d2}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__jackboot_8h}{mdp\_\-jackboot.h}\end{DoxyCompactItemize}

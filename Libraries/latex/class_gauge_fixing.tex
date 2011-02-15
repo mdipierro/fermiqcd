@@ -1,0 +1,49 @@
+\hypertarget{class_gauge_fixing}{
+\section{GaugeFixing Class Reference}
+\label{class_gauge_fixing}\index{GaugeFixing@{GaugeFixing}}
+}
+the main gaugefixing algorithm  
+
+
+{\tt \#include $<$fermiqcd\_\-gauge\_\-fixing.h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static \hyperlink{classgaugefixing__stats}{gaugefixing\_\-stats} \hyperlink{class_gauge_fixing_71359f7c7bd14c3c5d548cbf7e6793c5}{fix} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, int mu=0, int max\_\-steps=1, mdp\_\-real target\_\-precision=1e-5, mdp\_\-real overrelaxation\_\-boost=1, bool z3=false)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+the main gaugefixing algorithm 
+
+Example: 
+
+\footnotesize\begin{verbatim}
+///    gauge_field U(lattice,nc);
+///    gaugefixing_stats stats;
+///    U.load("myfield");
+///    stats=GaugeFixing::fix(U,GaugeFixing::Coulomb,100);
+///    U.save("myfield_gaugefixed");
+/// \end{verbatim}
+\normalsize
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gauge_fixing_71359f7c7bd14c3c5d548cbf7e6793c5}{
+\index{GaugeFixing@{GaugeFixing}!fix@{fix}}
+\index{fix@{fix}!GaugeFixing@{GaugeFixing}}
+\subsubsection[{fix}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf gaugefixing\_\-stats} GaugeFixing::fix ({\bf gauge\_\-field} \& {\em U}, \/  int {\em mu} = {\tt 0}, \/  int {\em max\_\-steps} = {\tt 1}, \/  mdp\_\-real {\em target\_\-precision} = {\tt 1e-5}, \/  mdp\_\-real {\em overrelaxation\_\-boost} = {\tt 1}, \/  bool {\em z3} = {\tt false})\hspace{0.3cm}{\tt  \mbox{[}inline, static\mbox{]}}}}
+\label{class_gauge_fixing_71359f7c7bd14c3c5d548cbf7e6793c5}
+
+
+performs the gauge fixing \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em U}]the gauge field \item[{\em mu}]= GaugeFixing::Coulomb or GaugeFixing::Landau or other direction \item[{\em max\_\-steps}]maximum number of gaugefixing steps \item[{\em parget\_\-precision}]precision in gaugefixing \item[{\em overrelaxation\_\-boost}]\item[{\em z3}]if set to true fixes residual Z(n) symmatry due to lattice torus topology \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{fermiqcd__gauge__fixing_8h}{fermiqcd\_\-gauge\_\-fixing.h}\end{CompactItemize}

@@ -1,0 +1,60 @@
+\hypertarget{classmdp__prng}{
+\section{mdp\_\-prng Class Reference}
+\label{classmdp__prng}\index{mdp\_\-prng@{mdp\_\-prng}}
+}
+Marsaglia's random number generator (same as UKQCD).  
+
+
+{\tt \#include $<$mdp\_\-prng.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classmdp__prng_261360660403dcd1a76305a8644b6a2d}{
+float \hyperlink{classmdp__prng_261360660403dcd1a76305a8644b6a2d}{plain} ()}
+\label{classmdp__prng_261360660403dcd1a76305a8644b6a2d}
+
+\begin{CompactList}\small\item\em return a uniform random number in (0,1) \item\end{CompactList}\item 
+\hypertarget{classmdp__prng_df372628df14ef01302472264a7f26d8}{
+float \hyperlink{classmdp__prng_df372628df14ef01302472264a7f26d8}{gaussian} (float sigma=1)}
+\label{classmdp__prng_df372628df14ef01302472264a7f26d8}
+
+\begin{CompactList}\small\item\em returns a gaussian random number \item\end{CompactList}\item 
+\hypertarget{classmdp__prng_2ba8807aa153b9b222d6d724da06dfdd}{
+double \hyperlink{classmdp__prng_2ba8807aa153b9b222d6d724da06dfdd}{distribution} (float($\ast$fp)(float, void $\ast$), void $\ast$a=0)}
+\label{classmdp__prng_2ba8807aa153b9b222d6d724da06dfdd}
+
+\begin{CompactList}\small\item\em draws a random float in (0,1) from a distribution using accept-reject \item\end{CompactList}\item 
+\hypertarget{classmdp__prng_348d0a778f0c1e3dd71e163bad950936}{
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__prng_348d0a778f0c1e3dd71e163bad950936}{SU} (int n)}
+\label{classmdp__prng_348d0a778f0c1e3dd71e163bad950936}
+
+\begin{CompactList}\small\item\em returns a random SU(n) matrix using Cabibbo-Marinari \item\end{CompactList}\item 
+\hypertarget{classmdp__prng_6214a2e9ed4d3da1e61544501e710999}{
+void \hyperlink{classmdp__prng_6214a2e9ed4d3da1e61544501e710999}{skip} (int n)}
+\label{classmdp__prng_6214a2e9ed4d3da1e61544501e710999}
+
+\begin{CompactList}\small\item\em skip n numbers from the sequence \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Marsaglia's random number generator (same as UKQCD). 
+
+You should not instantiate this class because:\begin{itemize}
+\item there is a global object mdp\_\-random\item each field \char`\"{}lattice\char`\"{} has a parallel generator \char`\"{}lattice.random(x)\char`\"{} Example: 
+
+\footnotesize\begin{verbatim}
+///    // print a uniform number in (0,1)
+///    cout << mdp_random.plain() << endl;
+///    // print a gaussian number
+///    cout << mdp_random.gaussian() << endl;
+///    // print a random SU(10) matrix
+///    cout << mdp_random.SU(10) << endl;
+/// \end{verbatim}
+\normalsize
+ \end{itemize}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{mdp__prng_8h}{mdp\_\-prng.h}\end{CompactItemize}

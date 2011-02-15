@@ -1,0 +1,96 @@
+\hypertarget{fermiqcd__fermi__algorithms_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-fermi\_\-algorithms.h File Reference}
+\label{fermiqcd__fermi__algorithms_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-fermi\_\-algorithms.h@{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-fermi\_\-algorithms.h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fermiqcd__fermi__algorithms_8h_a96c52f990c5198131f211858de4e34e3}{multiply\_\-by\_\-gamma5} (\hyperlink{classfermi__field}{fermi\_\-field} \&r, \hyperlink{classfermi__field}{fermi\_\-field} \&s)
+\begin{DoxyCompactList}\small\item\em r(x,alpha,i) = Gamma5(alpha,beta) $\ast$ s(x,beta,i) \item\end{DoxyCompactList}\item 
+void \hyperlink{fermiqcd__fermi__algorithms_8h_aea9ab5572df48adcbfe726881033b9b5}{mul\_\-Q} (\hyperlink{classfermi__field}{fermi\_\-field} \&psi\_\-out, \hyperlink{classfermi__field}{fermi\_\-field} \&psi\_\-in, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, int parity=\hyperlink{mdp__global__vars_8h_a4c9de81f2de5a74b588107b6c0afb9ee}{EVENODD})
+\begin{DoxyCompactList}\small\item\em Calls the current Wilson/Clover action. \item\end{DoxyCompactList}\item 
+\hyperlink{classinversion__stats}{inversion\_\-stats} \hyperlink{fermiqcd__fermi__algorithms_8h_a08f2dd58e150767f1457309f400b860e}{mul\_\-invQ} (\hyperlink{classfermi__field}{fermi\_\-field} \&psi\_\-out, \hyperlink{classfermi__field}{fermi\_\-field} \&psi\_\-in, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} absolute\_\-precision=\hyperlink{fermiqcd__default__parameters_8h_ab11c95dc923c6bfd349bd67af277d59d}{fermi\_\-inversion\_\-precision}, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} relative\_\-precision=0, int max\_\-steps=2000)
+\begin{DoxyCompactList}\small\item\em Executes the current Wilson/Clover inverter. \item\end{DoxyCompactList}\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{fermiqcd__fermi__algorithms_8h_afcb44574a7920934e47a2c656e65c666}{check\_\-inversion} (\hyperlink{classfermi__field}{fermi\_\-field} \&phi, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff)
+\begin{DoxyCompactList}\small\item\em Checks that inversion is working. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+void($\ast$ \hyperlink{fermiqcd__fermi__algorithms_8h_a031121893ccfb8b423afc74855837f81}{default\_\-fermi\_\-action} )(\hyperlink{classfermi__field}{fermi\_\-field} \&, \hyperlink{classfermi__field}{fermi\_\-field} \&, \hyperlink{classgauge__field}{gauge\_\-field} \&, \hyperlink{classcoefficients}{coefficients} \&, int) = FermiCloverActionFast::mul\_\-Q
+\begin{DoxyCompactList}\small\item\em Pointer to the current Wilson/Clover action. \item\end{DoxyCompactList}\item 
+\hyperlink{classinversion__stats}{inversion\_\-stats}($\ast$ \hyperlink{fermiqcd__fermi__algorithms_8h_a4b9873faae44ed788d8c2925f5428535}{default\_\-fermi\_\-inverter} )(\hyperlink{classfermi__field}{fermi\_\-field} \&, \hyperlink{classfermi__field}{fermi\_\-field} \&, \hyperlink{classgauge__field}{gauge\_\-field} \&, \hyperlink{classcoefficients}{coefficients} \&, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real}, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real}, int) = \&(MinRes::inverter$<$\hyperlink{classfermi__field}{fermi\_\-field},\hyperlink{classgauge__field}{gauge\_\-field}$>$)
+\begin{DoxyCompactList}\small\item\em Pointer to the current Wilson/Clover inverter. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+Various algorithms for Wilson fermions
+
+Distributed under GPL2 License
+
+Created with support from the US Department of Energy
+
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+class for building a single instanton gauge configuration
+
+Distributed under GPL2 License
+
+Created with support from the US Department of Energy 
+
+\subsection{Function Documentation}
+\hypertarget{fermiqcd__fermi__algorithms_8h_afcb44574a7920934e47a2c656e65c666}{
+\index{fermiqcd\_\-fermi\_\-algorithms.h@{fermiqcd\_\-fermi\_\-algorithms.h}!check\_\-inversion@{check\_\-inversion}}
+\index{check\_\-inversion@{check\_\-inversion}!fermiqcd_fermi_algorithms.h@{fermiqcd\_\-fermi\_\-algorithms.h}}
+\subsubsection[{check\_\-inversion}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-real} check\_\-inversion ({\bf fermi\_\-field} \& {\em phi}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff})}}
+\label{fermiqcd__fermi__algorithms_8h_afcb44574a7920934e47a2c656e65c666}
+
+
+Checks that inversion is working. \hypertarget{fermiqcd__fermi__algorithms_8h_a08f2dd58e150767f1457309f400b860e}{
+\index{fermiqcd\_\-fermi\_\-algorithms.h@{fermiqcd\_\-fermi\_\-algorithms.h}!mul\_\-invQ@{mul\_\-invQ}}
+\index{mul\_\-invQ@{mul\_\-invQ}!fermiqcd_fermi_algorithms.h@{fermiqcd\_\-fermi\_\-algorithms.h}}
+\subsubsection[{mul\_\-invQ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf inversion\_\-stats} mul\_\-invQ ({\bf fermi\_\-field} \& {\em psi\_\-out}, \/  {\bf fermi\_\-field} \& {\em psi\_\-in}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  {\bf mdp\_\-real} {\em absolute\_\-precision} = {\ttfamily {\bf fermi\_\-inversion\_\-precision}}, \/  {\bf mdp\_\-real} {\em relative\_\-precision} = {\ttfamily 0}, \/  int {\em max\_\-steps} = {\ttfamily 2000})}}
+\label{fermiqcd__fermi__algorithms_8h_a08f2dd58e150767f1457309f400b860e}
+
+
+Executes the current Wilson/Clover inverter. \hypertarget{fermiqcd__fermi__algorithms_8h_aea9ab5572df48adcbfe726881033b9b5}{
+\index{fermiqcd\_\-fermi\_\-algorithms.h@{fermiqcd\_\-fermi\_\-algorithms.h}!mul\_\-Q@{mul\_\-Q}}
+\index{mul\_\-Q@{mul\_\-Q}!fermiqcd_fermi_algorithms.h@{fermiqcd\_\-fermi\_\-algorithms.h}}
+\subsubsection[{mul\_\-Q}]{\setlength{\rightskip}{0pt plus 5cm}void mul\_\-Q ({\bf fermi\_\-field} \& {\em psi\_\-out}, \/  {\bf fermi\_\-field} \& {\em psi\_\-in}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  int {\em parity} = {\ttfamily {\bf EVENODD}})}}
+\label{fermiqcd__fermi__algorithms_8h_aea9ab5572df48adcbfe726881033b9b5}
+
+
+Calls the current Wilson/Clover action. \hypertarget{fermiqcd__fermi__algorithms_8h_a96c52f990c5198131f211858de4e34e3}{
+\index{fermiqcd\_\-fermi\_\-algorithms.h@{fermiqcd\_\-fermi\_\-algorithms.h}!multiply\_\-by\_\-gamma5@{multiply\_\-by\_\-gamma5}}
+\index{multiply\_\-by\_\-gamma5@{multiply\_\-by\_\-gamma5}!fermiqcd_fermi_algorithms.h@{fermiqcd\_\-fermi\_\-algorithms.h}}
+\subsubsection[{multiply\_\-by\_\-gamma5}]{\setlength{\rightskip}{0pt plus 5cm}void multiply\_\-by\_\-gamma5 ({\bf fermi\_\-field} \& {\em r}, \/  {\bf fermi\_\-field} \& {\em s})}}
+\label{fermiqcd__fermi__algorithms_8h_a96c52f990c5198131f211858de4e34e3}
+
+
+r(x,alpha,i) = Gamma5(alpha,beta) $\ast$ s(x,beta,i) 
+
+\subsection{Variable Documentation}
+\hypertarget{fermiqcd__fermi__algorithms_8h_a031121893ccfb8b423afc74855837f81}{
+\index{fermiqcd\_\-fermi\_\-algorithms.h@{fermiqcd\_\-fermi\_\-algorithms.h}!default\_\-fermi\_\-action@{default\_\-fermi\_\-action}}
+\index{default\_\-fermi\_\-action@{default\_\-fermi\_\-action}!fermiqcd_fermi_algorithms.h@{fermiqcd\_\-fermi\_\-algorithms.h}}
+\subsubsection[{default\_\-fermi\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf default\_\-fermi\_\-action})({\bf fermi\_\-field} \&, {\bf fermi\_\-field} \&, {\bf gauge\_\-field} \&, {\bf coefficients} \&, int) = FermiCloverActionFast::mul\_\-Q}}
+\label{fermiqcd__fermi__algorithms_8h_a031121893ccfb8b423afc74855837f81}
+
+
+Pointer to the current Wilson/Clover action. \hypertarget{fermiqcd__fermi__algorithms_8h_a4b9873faae44ed788d8c2925f5428535}{
+\index{fermiqcd\_\-fermi\_\-algorithms.h@{fermiqcd\_\-fermi\_\-algorithms.h}!default\_\-fermi\_\-inverter@{default\_\-fermi\_\-inverter}}
+\index{default\_\-fermi\_\-inverter@{default\_\-fermi\_\-inverter}!fermiqcd_fermi_algorithms.h@{fermiqcd\_\-fermi\_\-algorithms.h}}
+\subsubsection[{default\_\-fermi\_\-inverter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf inversion\_\-stats}($\ast$ {\bf default\_\-fermi\_\-inverter})({\bf fermi\_\-field} \&, {\bf fermi\_\-field} \&, {\bf gauge\_\-field} \&, {\bf coefficients} \&, {\bf mdp\_\-real}, {\bf mdp\_\-real}, int) = \&(MinRes::inverter$<${\bf fermi\_\-field},{\bf gauge\_\-field}$>$)}}
+\label{fermiqcd__fermi__algorithms_8h_a4b9873faae44ed788d8c2925f5428535}
+
+
+Pointer to the current Wilson/Clover inverter. 

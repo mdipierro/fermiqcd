@@ -1,0 +1,52 @@
+\hypertarget{class_wilson_gauge_action}{
+\section{WilsonGaugeAction Class Reference}
+\label{class_wilson_gauge_action}\index{WilsonGaugeAction@{WilsonGaugeAction}}
+}
+
+
+the Wilson Gauge Action  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-gauge\_\-actions.h$>$}Inheritance diagram for WilsonGaugeAction::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_wilson_gauge_action}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_wilson_gauge_action_a95c910d9c558320e8a55ff04f330d02d}{heatbath\_\-SU2} (\hyperlink{classmdp__prng}{mdp\_\-prng} \&random, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} beta\_\-eff, \hyperlink{classmdp__complex}{mdp\_\-complex} $\ast$a)
+\item 
+static \hyperlink{classgauge__stats}{gauge\_\-stats} \hyperlink{class_wilson_gauge_action_a0e5aefe5e3c15f35d0fbcd8e6269b919}{heatbath} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, int n\_\-iter=1)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the Wilson Gauge Action Example: \begin{DoxyVerb}
+///    int ns=2, steps=10;
+///    gauge_field U(lattice,nc);
+///    coefficients gauge;
+///    U.load("myfield.0000");
+///    gauge["beta"]=6.0;
+///    ImprovedGaugeAction::heatbath(U,gauge,steps);
+///    U.save("myfield.0001");
+/// \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_wilson_gauge_action_a0e5aefe5e3c15f35d0fbcd8e6269b919}{
+\index{WilsonGaugeAction@{WilsonGaugeAction}!heatbath@{heatbath}}
+\index{heatbath@{heatbath}!WilsonGaugeAction@{WilsonGaugeAction}}
+\subsubsection[{heatbath}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf gauge\_\-stats} WilsonGaugeAction::heatbath ({\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  int {\em n\_\-iter} = {\ttfamily 1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_wilson_gauge_action_a0e5aefe5e3c15f35d0fbcd8e6269b919}
+\hypertarget{class_wilson_gauge_action_a95c910d9c558320e8a55ff04f330d02d}{
+\index{WilsonGaugeAction@{WilsonGaugeAction}!heatbath\_\-SU2@{heatbath\_\-SU2}}
+\index{heatbath\_\-SU2@{heatbath\_\-SU2}!WilsonGaugeAction@{WilsonGaugeAction}}
+\subsubsection[{heatbath\_\-SU2}]{\setlength{\rightskip}{0pt plus 5cm}static void WilsonGaugeAction::heatbath\_\-SU2 ({\bf mdp\_\-prng} \& {\em random}, \/  {\bf mdp\_\-real} {\em beta\_\-eff}, \/  {\bf mdp\_\-complex} $\ast$ {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_wilson_gauge_action_a95c910d9c558320e8a55ff04f330d02d}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__gauge__actions_8h}{fermiqcd\_\-gauge\_\-actions.h}\end{DoxyCompactItemize}

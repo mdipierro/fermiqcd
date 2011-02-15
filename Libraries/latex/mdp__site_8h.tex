@@ -1,0 +1,45 @@
+\hypertarget{mdp__site_8h}{
+\section{/Users/mdipierro/Desktop/SciDac/development/Libraries/mdp\_\-site.h File Reference}
+\label{mdp__site_8h}\index{/Users/mdipierro/Desktop/SciDac/development/Libraries/mdp\_\-site.h@{/Users/mdipierro/Desktop/SciDac/development/Libraries/mdp\_\-site.h}}
+}
+
+
+This graph shows which files directly or indirectly include this file:\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{classmdp__site}{mdp\_\-site}
+\begin{CompactList}\small\item\em site object to loop on a lattice \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{mdp__site_8h_1d3df9392ae5ee7afba0e31262069a08}{on\_\-which\_\-process} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int x0=0, int x1=0, int x2=0, int x3=0, int x4=0, int x5=0, int x6=0, int x7=0, int x8=0, int x9=0)
+\item 
+int \hyperlink{mdp__site_8h_fa1947bb4f8ac9ca03ac44222c17374f}{in\_\-block} (\hyperlink{classmdp__site}{mdp\_\-site} x)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Version:]3-1-2005 \end{Desc}
+\begin{Desc}
+\item[Author:]Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$\end{Desc}
+Contains delcaration of class \hyperlink{classmdp__site}{mdp\_\-site} for complex numbers
+
+Licensed under GPL2 license Read attached license in file mdp\_\-license.pdf This file cannot be distributed without file mdp\_\-license.pdf 
+
+\subsection{Function Documentation}
+\hypertarget{mdp__site_8h_fa1947bb4f8ac9ca03ac44222c17374f}{
+\index{mdp\_\-site.h@{mdp\_\-site.h}!in\_\-block@{in\_\-block}}
+\index{in\_\-block@{in\_\-block}!mdp_site.h@{mdp\_\-site.h}}
+\subsubsection[{in\_\-block}]{\setlength{\rightskip}{0pt plus 5cm}int in\_\-block ({\bf mdp\_\-site} {\em x})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{mdp__site_8h_fa1947bb4f8ac9ca03ac44222c17374f}
+
+
+When compiled with TWISTED\_\-BOUNDARY the \hyperlink{classmdp__site}{mdp\_\-site} class keeps track of sites that moved around the boundary of the torus topology. this function Returns false if this is one such site, true otherwise. \hypertarget{mdp__site_8h_1d3df9392ae5ee7afba0e31262069a08}{
+\index{mdp\_\-site.h@{mdp\_\-site.h}!on\_\-which\_\-process@{on\_\-which\_\-process}}
+\index{on\_\-which\_\-process@{on\_\-which\_\-process}!mdp_site.h@{mdp\_\-site.h}}
+\subsubsection[{on\_\-which\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}int on\_\-which\_\-process ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em x0} = {\tt 0}, \/  int {\em x1} = {\tt 0}, \/  int {\em x2} = {\tt 0}, \/  int {\em x3} = {\tt 0}, \/  int {\em x4} = {\tt 0}, \/  int {\em x5} = {\tt 0}, \/  int {\em x6} = {\tt 0}, \/  int {\em x7} = {\tt 0}, \/  int {\em x8} = {\tt 0}, \/  int {\em x9} = {\tt 0})}}
+\label{mdp__site_8h_1d3df9392ae5ee7afba0e31262069a08}
+
+
+checks which process of the lattice a stores locally the site of coordinates x0,x1,x2,...,x9 to be used before calling \hyperlink{classmdp__site_241eb259576cbe7354d1ff714d22416c}{mdp\_\-site::set()} (note: prototyping of friend functions is required by some compilers) 

@@ -1,0 +1,31 @@
+\hypertarget{class_staggered_asqtad_action_slow}{
+\section{StaggeredAsqtadActionSlow Class Reference}
+\label{class_staggered_asqtad_action_slow}\index{StaggeredAsqtadActionSlow@{StaggeredAsqtadActionSlow}}
+}
+Staggered/Asqtad action (SLOW: DO NOT USE IN PRODUCTION).  
+
+
+{\tt \#include $<$fermiqcd\_\-staggered\_\-actions.h$>$}
+
+
+
+\subsection{Detailed Description}
+Staggered/Asqtad action (SLOW: DO NOT USE IN PRODUCTION). 
+
+Example: 
+
+\footnotesize\begin{verbatim}
+/// gauge_field U(lattice,nc);
+/// staggered_field psi(lattice,nc);
+/// staggered_field chi(lattice,nc);
+/// coefficients coeff;
+/// coeff["mass"]=2.0;
+/// default_staggered_action=StaggeredAsqtadActionSlow::mul_Q;
+/// mul_Q(chi,psi,U,coeff);
+/// \end{verbatim}
+\normalsize
+ Note that mul\_\-Q(chi,psi,U,coeff) reads $ \chi=(/\!\!\!D[U]+m)\psi $ 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{fermiqcd__staggered__actions_8h}{fermiqcd\_\-staggered\_\-actions.h}\end{CompactItemize}

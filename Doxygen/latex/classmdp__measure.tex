@@ -1,0 +1,256 @@
+\hypertarget{classmdp__measure}{
+\section{mdp\_\-measure Class Reference}
+\label{classmdp__measure}\index{mdp\_\-measure@{mdp\_\-measure}}
+}
+
+
+implements error propagation  
+
+
+{\ttfamily \#include $<$mdp\_\-measure.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classmdp__measure_af4311b3d6f7aeedd30df26c805df74d9}{getnum} ()
+\item 
+float \hyperlink{classmdp__measure_a6ac1b96bc356ea6b614a672b06dab833}{getmean} ()
+\item 
+float \hyperlink{classmdp__measure_a7661cd0bdff2e5f4a2054ef5c3446cb1}{getmerr} ()
+\item 
+\hyperlink{classmdp__measure_a27caa03e148574a5e3e13b587212bc6a}{mdp\_\-measure} ()
+\item 
+\hyperlink{classmdp__measure_a861159da4e045611fa06b937c63d91ab}{mdp\_\-measure} (float mean\_\-, float error\_\-, int num\_\-=1)
+\item 
+void \hyperlink{classmdp__measure_ae03b11fdcba09eefb70134030b863cf6}{reset} ()
+\item 
+void \hyperlink{classmdp__measure_a5f6d47b2303eea323f511019404621a2}{set} (float x, float dx, int i=1)
+\item 
+void \hyperlink{classmdp__measure_ad1714e31ad9a1473c05f4aeeab9634e4}{operator$<$$<$} (float x)
+\item 
+void \hyperlink{classmdp__measure_a3d8873e8abbae44011ddcd69d23e0c9d}{operator$>$$>$} (float \&x)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classmdp__measure_aca5ab38b4f8c43639b2754947c4e4b25}{num}
+\item 
+float \hyperlink{classmdp__measure_a105996437f8864a761c17dfa308a73f0}{mean}
+\item 
+float \hyperlink{classmdp__measure_ac0e564a7fdfa4785e8ca77569a2c37e4}{error}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_a1550c5a752f0e131323a0571cb75a1ed}{operator+} (\hyperlink{classmdp__measure}{mdp\_\-measure} a, \hyperlink{classmdp__measure}{mdp\_\-measure} b)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_a4b29a5d9a8875501a415f73167d8c1ad}{operator-\/} (\hyperlink{classmdp__measure}{mdp\_\-measure} a, \hyperlink{classmdp__measure}{mdp\_\-measure} b)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_a51d0c9145c4abafae65590ed2076a438}{operator$\ast$} (\hyperlink{classmdp__measure}{mdp\_\-measure} a, \hyperlink{classmdp__measure}{mdp\_\-measure} b)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_a662fb1d8c18de9dc82182a67a082f24d}{operator/} (\hyperlink{classmdp__measure}{mdp\_\-measure} a, \hyperlink{classmdp__measure}{mdp\_\-measure} b)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_a46628db42ccf7c2dd255a4babe524da2}{operator+} (float a, \hyperlink{classmdp__measure}{mdp\_\-measure} b)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_ad0854fb690a3213c1263755d4cfbeb29}{operator-\/} (float a, \hyperlink{classmdp__measure}{mdp\_\-measure} b)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_a6d162e2b91ef6637df21622f658e13b9}{operator$\ast$} (float a, \hyperlink{classmdp__measure}{mdp\_\-measure} b)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_acac38148dfa66a6b1c40a18896778bbb}{operator/} (float a, \hyperlink{classmdp__measure}{mdp\_\-measure} b)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_aa394587b2c7e09685b687bcc2b78f9ba}{operator+} (\hyperlink{classmdp__measure}{mdp\_\-measure} a, float b)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_aa1d61cccc59a965eedf6ecb2fb877ea0}{operator-\/} (\hyperlink{classmdp__measure}{mdp\_\-measure} a, float b)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_aa5dcdce1ad85ba147460781e805dae6d}{operator$\ast$} (\hyperlink{classmdp__measure}{mdp\_\-measure} a, float b)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_ae62ef8561fd82d07834885f6c7569a23}{operator/} (\hyperlink{classmdp__measure}{mdp\_\-measure} a, float b)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_aa27ae5954c296694bf711dbec8fb312a}{exp} (\hyperlink{classmdp__measure}{mdp\_\-measure} a)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_a4762a50b84b4f961dd46f2bb395b2506}{log} (\hyperlink{classmdp__measure}{mdp\_\-measure} a)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_adcca585e0856bb912b8069aaf56f9d95}{pow} (\hyperlink{classmdp__measure}{mdp\_\-measure} a, float b)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_a7889df6f1c1f8cfd6cb9aa0a3f9a2ec9}{sin} (\hyperlink{classmdp__measure}{mdp\_\-measure} a)
+\item 
+\hyperlink{classmdp__measure}{mdp\_\-measure} \hyperlink{classmdp__measure_af1f3876a19982932b4c6a1011f049350}{cos} (\hyperlink{classmdp__measure}{mdp\_\-measure} a)
+\item 
+void \hyperlink{classmdp__measure_a2974468f862cb8c3fe0a0034a4bd2e08}{print} (\hyperlink{classmdp__measure}{mdp\_\-measure} a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+implements error propagation Example: \begin{DoxyVerb}
+///    mdp_measure m;
+///    // store 10 measurements
+///    for(int i=0; i<10; i++) 
+///       m << 3.0+mdp_random.gaussian(2.0);
+///    m=sin(exp(m)+m);
+///    cout << m.getmean() << "+/-" << m.geterr() << endl;
+/// \end{DoxyVerb}
+ Assumes gaussian error propagation 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmdp__measure_a27caa03e148574a5e3e13b587212bc6a}{
+\index{mdp\_\-measure@{mdp\_\-measure}!mdp\_\-measure@{mdp\_\-measure}}
+\index{mdp\_\-measure@{mdp\_\-measure}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{mdp\_\-measure}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-measure::mdp\_\-measure ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__measure_a27caa03e148574a5e3e13b587212bc6a}
+\hypertarget{classmdp__measure_a861159da4e045611fa06b937c63d91ab}{
+\index{mdp\_\-measure@{mdp\_\-measure}!mdp\_\-measure@{mdp\_\-measure}}
+\index{mdp\_\-measure@{mdp\_\-measure}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{mdp\_\-measure}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-measure::mdp\_\-measure (float {\em mean\_\-}, \/  float {\em error\_\-}, \/  int {\em num\_\-} = {\ttfamily 1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__measure_a861159da4e045611fa06b937c63d91ab}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__measure_a6ac1b96bc356ea6b614a672b06dab833}{
+\index{mdp\_\-measure@{mdp\_\-measure}!getmean@{getmean}}
+\index{getmean@{getmean}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{getmean}]{\setlength{\rightskip}{0pt plus 5cm}float mdp\_\-measure::getmean ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__measure_a6ac1b96bc356ea6b614a672b06dab833}
+\hypertarget{classmdp__measure_a7661cd0bdff2e5f4a2054ef5c3446cb1}{
+\index{mdp\_\-measure@{mdp\_\-measure}!getmerr@{getmerr}}
+\index{getmerr@{getmerr}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{getmerr}]{\setlength{\rightskip}{0pt plus 5cm}float mdp\_\-measure::getmerr ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__measure_a7661cd0bdff2e5f4a2054ef5c3446cb1}
+\hypertarget{classmdp__measure_af4311b3d6f7aeedd30df26c805df74d9}{
+\index{mdp\_\-measure@{mdp\_\-measure}!getnum@{getnum}}
+\index{getnum@{getnum}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{getnum}]{\setlength{\rightskip}{0pt plus 5cm}int mdp\_\-measure::getnum ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__measure_af4311b3d6f7aeedd30df26c805df74d9}
+\hypertarget{classmdp__measure_ad1714e31ad9a1473c05f4aeeab9634e4}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-measure::operator$<$$<$ (float {\em x})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__measure_ad1714e31ad9a1473c05f4aeeab9634e4}
+\hypertarget{classmdp__measure_a3d8873e8abbae44011ddcd69d23e0c9d}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-measure::operator$>$$>$ (float \& {\em x})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__measure_a3d8873e8abbae44011ddcd69d23e0c9d}
+\hypertarget{classmdp__measure_ae03b11fdcba09eefb70134030b863cf6}{
+\index{mdp\_\-measure@{mdp\_\-measure}!reset@{reset}}
+\index{reset@{reset}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-measure::reset ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__measure_ae03b11fdcba09eefb70134030b863cf6}
+\hypertarget{classmdp__measure_a5f6d47b2303eea323f511019404621a2}{
+\index{mdp\_\-measure@{mdp\_\-measure}!set@{set}}
+\index{set@{set}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-measure::set (float {\em x}, \/  float {\em dx}, \/  int {\em i} = {\ttfamily 1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__measure_a5f6d47b2303eea323f511019404621a2}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classmdp__measure_af1f3876a19982932b4c6a1011f049350}{
+\index{mdp\_\-measure@{mdp\_\-measure}!cos@{cos}}
+\index{cos@{cos}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{cos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} cos ({\bf mdp\_\-measure} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_af1f3876a19982932b4c6a1011f049350}
+\hypertarget{classmdp__measure_aa27ae5954c296694bf711dbec8fb312a}{
+\index{mdp\_\-measure@{mdp\_\-measure}!exp@{exp}}
+\index{exp@{exp}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{exp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} exp ({\bf mdp\_\-measure} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_aa27ae5954c296694bf711dbec8fb312a}
+\hypertarget{classmdp__measure_a4762a50b84b4f961dd46f2bb395b2506}{
+\index{mdp\_\-measure@{mdp\_\-measure}!log@{log}}
+\index{log@{log}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} log ({\bf mdp\_\-measure} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_a4762a50b84b4f961dd46f2bb395b2506}
+\hypertarget{classmdp__measure_aa5dcdce1ad85ba147460781e805dae6d}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} operator$\ast$ ({\bf mdp\_\-measure} {\em a}, \/  float {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_aa5dcdce1ad85ba147460781e805dae6d}
+\hypertarget{classmdp__measure_a6d162e2b91ef6637df21622f658e13b9}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} operator$\ast$ (float {\em a}, \/  {\bf mdp\_\-measure} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_a6d162e2b91ef6637df21622f658e13b9}
+\hypertarget{classmdp__measure_a51d0c9145c4abafae65590ed2076a438}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} operator$\ast$ ({\bf mdp\_\-measure} {\em a}, \/  {\bf mdp\_\-measure} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_a51d0c9145c4abafae65590ed2076a438}
+\hypertarget{classmdp__measure_aa394587b2c7e09685b687bcc2b78f9ba}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator+@{operator+}}
+\index{operator+@{operator+}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} operator+ ({\bf mdp\_\-measure} {\em a}, \/  float {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_aa394587b2c7e09685b687bcc2b78f9ba}
+\hypertarget{classmdp__measure_a46628db42ccf7c2dd255a4babe524da2}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator+@{operator+}}
+\index{operator+@{operator+}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} operator+ (float {\em a}, \/  {\bf mdp\_\-measure} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_a46628db42ccf7c2dd255a4babe524da2}
+\hypertarget{classmdp__measure_a1550c5a752f0e131323a0571cb75a1ed}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator+@{operator+}}
+\index{operator+@{operator+}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} operator+ ({\bf mdp\_\-measure} {\em a}, \/  {\bf mdp\_\-measure} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_a1550c5a752f0e131323a0571cb75a1ed}
+\hypertarget{classmdp__measure_aa1d61cccc59a965eedf6ecb2fb877ea0}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} operator-\/ ({\bf mdp\_\-measure} {\em a}, \/  float {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_aa1d61cccc59a965eedf6ecb2fb877ea0}
+\hypertarget{classmdp__measure_ad0854fb690a3213c1263755d4cfbeb29}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} operator-\/ (float {\em a}, \/  {\bf mdp\_\-measure} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_ad0854fb690a3213c1263755d4cfbeb29}
+\hypertarget{classmdp__measure_a4b29a5d9a8875501a415f73167d8c1ad}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} operator-\/ ({\bf mdp\_\-measure} {\em a}, \/  {\bf mdp\_\-measure} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_a4b29a5d9a8875501a415f73167d8c1ad}
+\hypertarget{classmdp__measure_ae62ef8561fd82d07834885f6c7569a23}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator/@{operator/}}
+\index{operator/@{operator/}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} operator/ ({\bf mdp\_\-measure} {\em a}, \/  float {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_ae62ef8561fd82d07834885f6c7569a23}
+\hypertarget{classmdp__measure_acac38148dfa66a6b1c40a18896778bbb}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator/@{operator/}}
+\index{operator/@{operator/}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} operator/ (float {\em a}, \/  {\bf mdp\_\-measure} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_acac38148dfa66a6b1c40a18896778bbb}
+\hypertarget{classmdp__measure_a662fb1d8c18de9dc82182a67a082f24d}{
+\index{mdp\_\-measure@{mdp\_\-measure}!operator/@{operator/}}
+\index{operator/@{operator/}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} operator/ ({\bf mdp\_\-measure} {\em a}, \/  {\bf mdp\_\-measure} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_a662fb1d8c18de9dc82182a67a082f24d}
+\hypertarget{classmdp__measure_adcca585e0856bb912b8069aaf56f9d95}{
+\index{mdp\_\-measure@{mdp\_\-measure}!pow@{pow}}
+\index{pow@{pow}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{pow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} pow ({\bf mdp\_\-measure} {\em a}, \/  float {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_adcca585e0856bb912b8069aaf56f9d95}
+\hypertarget{classmdp__measure_a2974468f862cb8c3fe0a0034a4bd2e08}{
+\index{mdp\_\-measure@{mdp\_\-measure}!print@{print}}
+\index{print@{print}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void print ({\bf mdp\_\-measure} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_a2974468f862cb8c3fe0a0034a4bd2e08}
+\hypertarget{classmdp__measure_a7889df6f1c1f8cfd6cb9aa0a3f9a2ec9}{
+\index{mdp\_\-measure@{mdp\_\-measure}!sin@{sin}}
+\index{sin@{sin}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{sin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-measure} sin ({\bf mdp\_\-measure} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__measure_a7889df6f1c1f8cfd6cb9aa0a3f9a2ec9}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmdp__measure_ac0e564a7fdfa4785e8ca77569a2c37e4}{
+\index{mdp\_\-measure@{mdp\_\-measure}!error@{error}}
+\index{error@{error}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf mdp\_\-measure::error}}}
+\label{classmdp__measure_ac0e564a7fdfa4785e8ca77569a2c37e4}
+\hypertarget{classmdp__measure_a105996437f8864a761c17dfa308a73f0}{
+\index{mdp\_\-measure@{mdp\_\-measure}!mean@{mean}}
+\index{mean@{mean}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{mean}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf mdp\_\-measure::mean}}}
+\label{classmdp__measure_a105996437f8864a761c17dfa308a73f0}
+\hypertarget{classmdp__measure_aca5ab38b4f8c43639b2754947c4e4b25}{
+\index{mdp\_\-measure@{mdp\_\-measure}!num@{num}}
+\index{num@{num}!mdp_measure@{mdp\_\-measure}}
+\subsubsection[{num}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mdp\_\-measure::num}}}
+\label{classmdp__measure_aca5ab38b4f8c43639b2754947c4e4b25}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__measure_8h}{mdp\_\-measure.h}\end{DoxyCompactItemize}

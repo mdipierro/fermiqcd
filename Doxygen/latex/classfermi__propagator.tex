@@ -1,0 +1,119 @@
+\hypertarget{classfermi__propagator}{
+\section{fermi\_\-propagator Class Reference}
+\label{classfermi__propagator}\index{fermi\_\-propagator@{fermi\_\-propagator}}
+}
+
+
+a Wilson/Clover quark propagator (all 12 components)  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-fermi\_\-propagator.h$>$}Inheritance diagram for fermi\_\-propagator::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classfermi__propagator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfermi__propagator_a55bbd357d5ffd3b57f835dab4a06d261}{fermi\_\-propagator} ()
+\item 
+\hyperlink{classfermi__propagator_a41b0242793ca3da9ec2e67cdc05a9149}{fermi\_\-propagator} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&mylattice, int nc\_\-, int nspin\_\-=4)
+\item 
+void \hyperlink{classfermi__propagator_a8ee1c8631f83f4e4876eff6253c41954}{allocate\_\-fermi\_\-propagator} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&mylattice, int nc\_\-, int nspin\_\-=4)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classfermi__propagator_afb016830eaa4959a21901d5895adb4bc}{operator()} (site x, int a, int b)
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classfermi__propagator_a8552fbd45ff1fd6b450353713dc21bcd}{operator()} (site x, int a, int b, int i, int j)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classfermi__propagator_a5eae6edf77379e878f84281aa9e32316}{nspin}
+\item 
+int \hyperlink{classfermi__propagator_a75d862433489db5a07b2ced97c21f9cc}{nc}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classfermi__propagator_a0b3730ff1e1058f1e13b537d429c7333}{generate} (\hyperlink{classfermi__propagator}{fermi\_\-propagator} \&S, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} absolute\_\-precision=\hyperlink{fermiqcd__default__parameters_8h_ab11c95dc923c6bfd349bd67af277d59d}{fermi\_\-inversion\_\-precision}, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} relative\_\-precision=0, int max\_\-steps=2000, void($\ast$smf)(\hyperlink{classfermi__field}{fermi\_\-field} \&, \hyperlink{classgauge__field}{gauge\_\-field} \&, \hyperlink{classcoefficients}{coefficients} \&)=0, \hyperlink{classcoefficients}{coefficients} smear\_\-coeff=\hyperlink{classcoefficients}{coefficients}(), int comp=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a Wilson/Clover quark propagator (all 12 components) Example of how to make a pion: \begin{DoxyVerb}
+/// gauge_field U(lattice,nc);
+/// U.load("myfield");
+/// fermi_propagator S(lattice,nc);
+/// coefficients quark;
+/// quark["kappa"]=1.12;
+/// generate(S,U,quark);
+/// vector<float> sum(U.lattice.size(TIME));
+/// forallsites(x) 
+///   for(int alpha=0; alpha<4; alpha++)
+///     for(int beta=0; beta<4; beta++)
+///        sum(x(0))+=real(trace(S(x,alpha,beta)*
+///                   hermitian(S(x,beta,alpha))));
+/// \end{DoxyVerb}
+ Note that S(x,alpha,beta,i,j) is $ \left<0|\bar q^i_\alpha(x), q^j_\beta(0)|\right> $ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classfermi__propagator_a55bbd357d5ffd3b57f835dab4a06d261}{
+\index{fermi\_\-propagator@{fermi\_\-propagator}!fermi\_\-propagator@{fermi\_\-propagator}}
+\index{fermi\_\-propagator@{fermi\_\-propagator}!fermi_propagator@{fermi\_\-propagator}}
+\subsubsection[{fermi\_\-propagator}]{\setlength{\rightskip}{0pt plus 5cm}fermi\_\-propagator::fermi\_\-propagator ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__propagator_a55bbd357d5ffd3b57f835dab4a06d261}
+\hypertarget{classfermi__propagator_a41b0242793ca3da9ec2e67cdc05a9149}{
+\index{fermi\_\-propagator@{fermi\_\-propagator}!fermi\_\-propagator@{fermi\_\-propagator}}
+\index{fermi\_\-propagator@{fermi\_\-propagator}!fermi_propagator@{fermi\_\-propagator}}
+\subsubsection[{fermi\_\-propagator}]{\setlength{\rightskip}{0pt plus 5cm}fermi\_\-propagator::fermi\_\-propagator ({\bf mdp\_\-lattice} \& {\em mylattice}, \/  int {\em nc\_\-}, \/  int {\em nspin\_\-} = {\ttfamily 4})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__propagator_a41b0242793ca3da9ec2e67cdc05a9149}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classfermi__propagator_a8ee1c8631f83f4e4876eff6253c41954}{
+\index{fermi\_\-propagator@{fermi\_\-propagator}!allocate\_\-fermi\_\-propagator@{allocate\_\-fermi\_\-propagator}}
+\index{allocate\_\-fermi\_\-propagator@{allocate\_\-fermi\_\-propagator}!fermi_propagator@{fermi\_\-propagator}}
+\subsubsection[{allocate\_\-fermi\_\-propagator}]{\setlength{\rightskip}{0pt plus 5cm}void fermi\_\-propagator::allocate\_\-fermi\_\-propagator ({\bf mdp\_\-lattice} \& {\em mylattice}, \/  int {\em nc\_\-}, \/  int {\em nspin\_\-} = {\ttfamily 4})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__propagator_a8ee1c8631f83f4e4876eff6253c41954}
+\hypertarget{classfermi__propagator_a8552fbd45ff1fd6b450353713dc21bcd}{
+\index{fermi\_\-propagator@{fermi\_\-propagator}!operator()@{operator()}}
+\index{operator()@{operator()}!fermi_propagator@{fermi\_\-propagator}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex}\& fermi\_\-propagator::operator() (site {\em x}, \/  int {\em a}, \/  int {\em b}, \/  int {\em i}, \/  int {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__propagator_a8552fbd45ff1fd6b450353713dc21bcd}
+\hypertarget{classfermi__propagator_afb016830eaa4959a21901d5895adb4bc}{
+\index{fermi\_\-propagator@{fermi\_\-propagator}!operator()@{operator()}}
+\index{operator()@{operator()}!fermi_propagator@{fermi\_\-propagator}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} fermi\_\-propagator::operator() (site {\em x}, \/  int {\em a}, \/  int {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classfermi__propagator_afb016830eaa4959a21901d5895adb4bc}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classfermi__propagator_a0b3730ff1e1058f1e13b537d429c7333}{
+\index{fermi\_\-propagator@{fermi\_\-propagator}!generate@{generate}}
+\index{generate@{generate}!fermi_propagator@{fermi\_\-propagator}}
+\subsubsection[{generate}]{\setlength{\rightskip}{0pt plus 5cm}void generate ({\bf fermi\_\-propagator} \& {\em S}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  {\bf mdp\_\-real} {\em absolute\_\-precision} = {\ttfamily {\bf fermi\_\-inversion\_\-precision}}, \/  {\bf mdp\_\-real} {\em relative\_\-precision} = {\ttfamily 0}, \/  int {\em max\_\-steps} = {\ttfamily 2000}, \/  void($\ast$)({\bf fermi\_\-field} \&, {\bf gauge\_\-field} \&, {\bf coefficients} \&) {\em smf} = {\ttfamily 0}, \/  {\bf coefficients} {\em smear\_\-coeff} = {\ttfamily {\bf coefficients}()}, \/  int {\em comp} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classfermi__propagator_a0b3730ff1e1058f1e13b537d429c7333}
+makes the quark propagator
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em S}]the output propagator \item[{\em U}]the input gauge configuration \item[{\em coeff}]the parameters to be passed to the action \item[{\em absolute\_\-precision}]the target absolute precision for inversion \item[{\em relative\_\-precision}]the target relative precision for invcersion \item[{\em max\_\-steps}]the max number of steps in inversion \item[{\em smf}]pointer to smearing function (smear sources) \item[{\em smear\_\-coeff}]parameters for smearing \end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classfermi__propagator_a75d862433489db5a07b2ced97c21f9cc}{
+\index{fermi\_\-propagator@{fermi\_\-propagator}!nc@{nc}}
+\index{nc@{nc}!fermi_propagator@{fermi\_\-propagator}}
+\subsubsection[{nc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf fermi\_\-propagator::nc}}}
+\label{classfermi__propagator_a75d862433489db5a07b2ced97c21f9cc}
+\hypertarget{classfermi__propagator_a5eae6edf77379e878f84281aa9e32316}{
+\index{fermi\_\-propagator@{fermi\_\-propagator}!nspin@{nspin}}
+\index{nspin@{nspin}!fermi_propagator@{fermi\_\-propagator}}
+\subsubsection[{nspin}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf fermi\_\-propagator::nspin}}}
+\label{classfermi__propagator_a5eae6edf77379e878f84281aa9e32316}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__fermi__propagator_8h}{fermiqcd\_\-fermi\_\-propagator.h}\end{DoxyCompactItemize}

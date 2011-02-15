@@ -1,0 +1,40 @@
+\hypertarget{class_d_w_fermi_action_fast}{
+\section{DWFermiActionFast Class Reference}
+\label{class_d_w_fermi_action_fast}\index{DWFermiActionFast@{DWFermiActionFast}}
+}
+
+
+domain wall action fast  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-dwfermi\_\-actions.h$>$}\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_d_w_fermi_action_fast_a52079bb2144dc7ef2f61c4916f9569ca}{mul\_\-Q} (\hyperlink{classdwfermi__field}{dwfermi\_\-field} \&psi\_\-out, \hyperlink{classdwfermi__field}{dwfermi\_\-field} \&psi\_\-in, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+domain wall action fast Notation from ref. hep-\/lat/0007038 Example: \begin{DoxyVerb}
+/// gauge_field U(lattice,nc);
+/// dwfermi_field psi(lattice,nc);
+/// dwfermi_field chi(lattice,nc);
+/// coefficients coeff;
+/// coeff["m_f"]=0.11; // fermion mass
+/// coeff["m_5"]=0.11; // mass in 5th dimension
+/// default_dwfermi_action=DWFermiActionFast::mul_Q;
+/// mul_Q(chi,psi,U,coeff);
+/// \end{DoxyVerb}
+ Note that mul\_\-Q(chi,psi,U,coeff) reads $ \chi=(/\!\!\!D[U]+m)\psi $ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_w_fermi_action_fast_a52079bb2144dc7ef2f61c4916f9569ca}{
+\index{DWFermiActionFast@{DWFermiActionFast}!mul\_\-Q@{mul\_\-Q}}
+\index{mul\_\-Q@{mul\_\-Q}!DWFermiActionFast@{DWFermiActionFast}}
+\subsubsection[{mul\_\-Q}]{\setlength{\rightskip}{0pt plus 5cm}static void DWFermiActionFast::mul\_\-Q ({\bf dwfermi\_\-field} \& {\em psi\_\-out}, \/  {\bf dwfermi\_\-field} \& {\em psi\_\-in}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_d_w_fermi_action_fast_a52079bb2144dc7ef2f61c4916f9569ca}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__dwfermi__actions_8h}{fermiqcd\_\-dwfermi\_\-actions.h}\end{DoxyCompactItemize}

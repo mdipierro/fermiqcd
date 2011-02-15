@@ -1,0 +1,73 @@
+\hypertarget{classmdp__communicator}{
+\section{mdp\_\-communicator Class Reference}
+\label{classmdp__communicator}\index{mdp\_\-communicator@{mdp\_\-communicator}}
+}
+DO NOT INSTANTIATE use object mdp instead.  
+
+
+{\tt \#include $<$mdp\_\-communicator.h$>$}
+
+Inherits \hyperlink{classmdp__log}{mdp\_\-log}.
+
+Collaboration diagram for mdp\_\-communicator:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classmdp__communicator_9c38d613d17973364b3121d8e8b03301}{
+\hyperlink{classmdp__communicator_9c38d613d17973364b3121d8e8b03301}{mdp\_\-communicator} ()}
+\label{classmdp__communicator_9c38d613d17973364b3121d8e8b03301}
+
+\begin{CompactList}\small\item\em time spent in communications \item\end{CompactList}\item 
+\hypertarget{classmdp__communicator_7e725836b00c3485cd02b3ad001cf6dd}{
+double \hyperlink{classmdp__communicator_7e725836b00c3485cd02b3ad001cf6dd}{time} ()}
+\label{classmdp__communicator_7e725836b00c3485cd02b3ad001cf6dd}
+
+\begin{CompactList}\small\item\em returns the time in seconds since call to \hyperlink{classmdp__communicator_f2c43869a689b8f1d020d4c4995b0cee}{mdp\_\-communicator::open\_\-wormholes} \item\end{CompactList}\item 
+void \hyperlink{classmdp__communicator_f2c43869a689b8f1d020d4c4995b0cee}{open\_\-wormholes} (int argc, char $\ast$$\ast$argv)
+\item 
+\hypertarget{classmdp__communicator_33ee55b0c67b1f63fd3a100e36fcc35e}{
+void \hyperlink{classmdp__communicator_33ee55b0c67b1f63fd3a100e36fcc35e}{print\_\-stats} ()}
+\label{classmdp__communicator_33ee55b0c67b1f63fd3a100e36fcc35e}
+
+\begin{CompactList}\small\item\em prints statistics about parallel processes \item\end{CompactList}\item 
+\hypertarget{classmdp__communicator_d9941f7db0a5a447e37e8372b15f83f9}{
+void \hyperlink{classmdp__communicator_d9941f7db0a5a447e37e8372b15f83f9}{close\_\-wormholes} ()}
+\label{classmdp__communicator_d9941f7db0a5a447e37e8372b15f83f9}
+
+\begin{CompactList}\small\item\em closes parallel communications \item\end{CompactList}\item 
+\hypertarget{classmdp__communicator_a601b7788f242a7f71b955a6bdf7e002}{
+void \hyperlink{classmdp__communicator_a601b7788f242a7f71b955a6bdf7e002}{abort} ()}
+\label{classmdp__communicator_a601b7788f242a7f71b955a6bdf7e002}
+
+\begin{CompactList}\small\item\em forces the process to exit(-1) \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+DO NOT INSTANTIATE use object mdp instead. 
+
+Example: 
+
+\footnotesize\begin{verbatim}
+/// int main(int argc, char**argv) {
+///    mdp.open_wormholes(argc,argv);
+///    // your code here
+///    mdp << 3.14 << endl;  // only process 0 prints
+///    mdp.close_wormholes();
+///    return 0;
+/// }
+/// \end{verbatim}
+\normalsize
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__communicator_f2c43869a689b8f1d020d4c4995b0cee}{
+\index{mdp\_\-communicator@{mdp\_\-communicator}!open\_\-wormholes@{open\_\-wormholes}}
+\index{open\_\-wormholes@{open\_\-wormholes}!mdp_communicator@{mdp\_\-communicator}}
+\subsubsection[{open\_\-wormholes}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-communicator::open\_\-wormholes (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__communicator_f2c43869a689b8f1d020d4c4995b0cee}
+
+
+starts communications parses command line argument for MPI or PSIM parameters 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{mdp__communicator_8h}{mdp\_\-communicator.h}\end{CompactItemize}

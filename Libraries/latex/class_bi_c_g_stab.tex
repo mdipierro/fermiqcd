@@ -1,0 +1,40 @@
+\hypertarget{class_bi_c_g_stab}{
+\section{BiCGStab Class Reference}
+\label{class_bi_c_g_stab}\index{BiCGStab@{BiCGStab}}
+}
+the stabilized biconjugate inverter  
+
+
+{\tt \#include $<$fermiqcd\_\-bicgstab\_\-inverter.h$>$}
+
+
+
+\subsection{Detailed Description}
+the stabilized biconjugate inverter 
+
+It inverts mul\_\-Q(psi\_\-out,psi\_\-in,U,coeff) iteratively \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em psi\_\-out}]the output field passed by reference \item[{\em psi\_\-in}]the input field passed by reference \item[{\em U}]the gauge field to be passed to mul\_\-Q \item[{\em coeff}]the gauge parameters to be passed to mul\_\-Q \item[{\em absolute\_\-precision}]the target absolute precision \item[{\em relative\_\-precision}]the target relative precision \item[{\em max\_\-steps}]the maximum number of steps\end{description}
+\end{Desc}
+Example: 
+
+\footnotesize\begin{verbatim}
+/// gauge_field U(lattice,nc);
+/// fermi_field psi(lattice,nc);
+/// fermi_field chi(lattice,nc);
+/// coefficinets coeff;
+/// coeff["kappa"]=1.12;
+/// U.load("myfield");
+/// psi.load("myfield_psi");
+/// default_fermi_inverter=BiCGStab::inverter<fermi_field,gauge_field>;
+/// default_fermi_action=FermiCloverActionSlow::mul_Q;
+/// mul_invQ(chi,psi,U,coeff);
+/// chi.save("myfield_chi");
+/// \end{verbatim}
+\normalsize
+ Note that mul\_\-invQ(chi,psi,U,coeff) reads $ \chi=(/\!\!\!D[U]+m)^{-1}\psi $ 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{fermiqcd__bicgstab__inverter_8h}{fermiqcd\_\-bicgstab\_\-inverter.h}\end{CompactItemize}

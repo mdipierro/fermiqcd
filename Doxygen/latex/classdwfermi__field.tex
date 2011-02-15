@@ -1,0 +1,134 @@
+\hypertarget{classdwfermi__field}{
+\section{dwfermi\_\-field Class Reference}
+\label{classdwfermi__field}\index{dwfermi\_\-field@{dwfermi\_\-field}}
+}
+
+
+domain wall fermionic field  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-dwfermi\_\-field.h$>$}Inheritance diagram for dwfermi\_\-field::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classdwfermi__field}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdwfermi__field_a3463b5fdc91d928f765eb4ee35601672}{dwfermi\_\-field} ()
+\item 
+\hyperlink{classdwfermi__field_aea31f2beacd9fbf84b10488566a63982}{dwfermi\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int L5\_\-, int nc\_\-, int nspin\_\-=4)
+\item 
+\hyperlink{classdwfermi__field_ae761300ce0a04ef58386ca3e58c7311c}{dwfermi\_\-field} (const \hyperlink{classdwfermi__field}{dwfermi\_\-field} \&psi)
+\item 
+void \hyperlink{classdwfermi__field_ab1e90f60aff705fd67fe54265511359c}{allocate\_\-dwfermi\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int L5\_\-, int nc\_\-, int nspin\_\-=4)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classdwfermi__field_a74ca9ee1a200f082bf816a306e0db58a}{operator()} (site x, int L5\_\-)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classdwfermi__field_adca7e6c16994ace10946016d8d6de943}{operator()} (site x, int L5\_\-, int a)
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classdwfermi__field_ac0d1e75f5248ce12c06e7fcb8add5948}{operator()} (site x, int L5\_\-, int a, int i)
+\item 
+const \hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classdwfermi__field_a38dcacb8755165fdfcb41622912f1863}{operator()} (site x, int L5\_\-, int a, int i) const 
+\item 
+void \hyperlink{classdwfermi__field_a80684935337a1c336bd81379787ba9f4}{operator=} (\hyperlink{classmdp__complex}{mdp\_\-complex} a)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classdwfermi__field_ac56aca6bd128b92467fdf7dca86535aa}{nspin}
+\item 
+int \hyperlink{classdwfermi__field_ab4c38d0b9f1016a5b121eced43a19370}{nc}
+\item 
+int \hyperlink{classdwfermi__field_a8bb8d2f33c7060b39da0563969b712a9}{L5}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+domain wall fermionic field Example: \begin{DoxyVerb}
+/// int L5=10; // size in 5th dimension 
+/// fermi_field psi(lattice,L5,nc);
+/// mdp_site x(lattice);
+/// forallsites(x)
+///    for(int k=0; k<L5; k++)
+///      for(int spin=0; spin<4; spin++)
+///        for(int i=0; i<nc; i++)
+///          psi(x,k,spin,i)=0.0+0.0*I;
+/// \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classdwfermi__field_a3463b5fdc91d928f765eb4ee35601672}{
+\index{dwfermi\_\-field@{dwfermi\_\-field}!dwfermi\_\-field@{dwfermi\_\-field}}
+\index{dwfermi\_\-field@{dwfermi\_\-field}!dwfermi_field@{dwfermi\_\-field}}
+\subsubsection[{dwfermi\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}dwfermi\_\-field::dwfermi\_\-field ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdwfermi__field_a3463b5fdc91d928f765eb4ee35601672}
+\hypertarget{classdwfermi__field_aea31f2beacd9fbf84b10488566a63982}{
+\index{dwfermi\_\-field@{dwfermi\_\-field}!dwfermi\_\-field@{dwfermi\_\-field}}
+\index{dwfermi\_\-field@{dwfermi\_\-field}!dwfermi_field@{dwfermi\_\-field}}
+\subsubsection[{dwfermi\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}dwfermi\_\-field::dwfermi\_\-field ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em L5\_\-}, \/  int {\em nc\_\-}, \/  int {\em nspin\_\-} = {\ttfamily 4})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdwfermi__field_aea31f2beacd9fbf84b10488566a63982}
+\hypertarget{classdwfermi__field_ae761300ce0a04ef58386ca3e58c7311c}{
+\index{dwfermi\_\-field@{dwfermi\_\-field}!dwfermi\_\-field@{dwfermi\_\-field}}
+\index{dwfermi\_\-field@{dwfermi\_\-field}!dwfermi_field@{dwfermi\_\-field}}
+\subsubsection[{dwfermi\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}dwfermi\_\-field::dwfermi\_\-field (const {\bf dwfermi\_\-field} \& {\em psi})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdwfermi__field_ae761300ce0a04ef58386ca3e58c7311c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classdwfermi__field_ab1e90f60aff705fd67fe54265511359c}{
+\index{dwfermi\_\-field@{dwfermi\_\-field}!allocate\_\-dwfermi\_\-field@{allocate\_\-dwfermi\_\-field}}
+\index{allocate\_\-dwfermi\_\-field@{allocate\_\-dwfermi\_\-field}!dwfermi_field@{dwfermi\_\-field}}
+\subsubsection[{allocate\_\-dwfermi\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}void dwfermi\_\-field::allocate\_\-dwfermi\_\-field ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em L5\_\-}, \/  int {\em nc\_\-}, \/  int {\em nspin\_\-} = {\ttfamily 4})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdwfermi__field_ab1e90f60aff705fd67fe54265511359c}
+\hypertarget{classdwfermi__field_a38dcacb8755165fdfcb41622912f1863}{
+\index{dwfermi\_\-field@{dwfermi\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!dwfermi_field@{dwfermi\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mdp\_\-complex}\& dwfermi\_\-field::operator() (site {\em x}, \/  int {\em L5\_\-}, \/  int {\em a}, \/  int {\em i}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdwfermi__field_a38dcacb8755165fdfcb41622912f1863}
+\hypertarget{classdwfermi__field_ac0d1e75f5248ce12c06e7fcb8add5948}{
+\index{dwfermi\_\-field@{dwfermi\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!dwfermi_field@{dwfermi\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex}\& dwfermi\_\-field::operator() (site {\em x}, \/  int {\em L5\_\-}, \/  int {\em a}, \/  int {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdwfermi__field_ac0d1e75f5248ce12c06e7fcb8add5948}
+\hypertarget{classdwfermi__field_adca7e6c16994ace10946016d8d6de943}{
+\index{dwfermi\_\-field@{dwfermi\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!dwfermi_field@{dwfermi\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} dwfermi\_\-field::operator() (site {\em x}, \/  int {\em L5\_\-}, \/  int {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdwfermi__field_adca7e6c16994ace10946016d8d6de943}
+\hypertarget{classdwfermi__field_a74ca9ee1a200f082bf816a306e0db58a}{
+\index{dwfermi\_\-field@{dwfermi\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!dwfermi_field@{dwfermi\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} dwfermi\_\-field::operator() (site {\em x}, \/  int {\em L5\_\-})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdwfermi__field_a74ca9ee1a200f082bf816a306e0db58a}
+\hypertarget{classdwfermi__field_a80684935337a1c336bd81379787ba9f4}{
+\index{dwfermi\_\-field@{dwfermi\_\-field}!operator=@{operator=}}
+\index{operator=@{operator=}!dwfermi_field@{dwfermi\_\-field}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void dwfermi\_\-field::operator= ({\bf mdp\_\-complex} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdwfermi__field_a80684935337a1c336bd81379787ba9f4}
+
+
+Reimplemented from \hyperlink{classmdp__field_a24364bce6444668661a0688632af87ec}{mdp\_\-field$<$ mdp\_\-complex $>$}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classdwfermi__field_a8bb8d2f33c7060b39da0563969b712a9}{
+\index{dwfermi\_\-field@{dwfermi\_\-field}!L5@{L5}}
+\index{L5@{L5}!dwfermi_field@{dwfermi\_\-field}}
+\subsubsection[{L5}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf dwfermi\_\-field::L5}}}
+\label{classdwfermi__field_a8bb8d2f33c7060b39da0563969b712a9}
+\hypertarget{classdwfermi__field_ab4c38d0b9f1016a5b121eced43a19370}{
+\index{dwfermi\_\-field@{dwfermi\_\-field}!nc@{nc}}
+\index{nc@{nc}!dwfermi_field@{dwfermi\_\-field}}
+\subsubsection[{nc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf dwfermi\_\-field::nc}}}
+\label{classdwfermi__field_ab4c38d0b9f1016a5b121eced43a19370}
+\hypertarget{classdwfermi__field_ac56aca6bd128b92467fdf7dca86535aa}{
+\index{dwfermi\_\-field@{dwfermi\_\-field}!nspin@{nspin}}
+\index{nspin@{nspin}!dwfermi_field@{dwfermi\_\-field}}
+\subsubsection[{nspin}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf dwfermi\_\-field::nspin}}}
+\label{classdwfermi__field_ac56aca6bd128b92467fdf7dca86535aa}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__dwfermi__field_8h}{fermiqcd\_\-dwfermi\_\-field.h}\end{DoxyCompactItemize}

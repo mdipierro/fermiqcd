@@ -1,0 +1,116 @@
+\hypertarget{classmdp__matrix__field}{
+\section{mdp\_\-matrix\_\-field Class Reference}
+\label{classmdp__matrix__field}\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}}
+}
+
+
+a field of matrices  
+
+
+{\ttfamily \#include $<$mdp\_\-matrix\_\-field.h$>$}Inheritance diagram for mdp\_\-matrix\_\-field::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classmdp__matrix__field}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmdp__matrix__field_adebb4692eba7a0f92450e227a1b28ca3}{mdp\_\-matrix\_\-field} ()
+\item 
+\hyperlink{classmdp__matrix__field_aadbe032bb53bdd590d21a19ec43ad2cd}{mdp\_\-matrix\_\-field} (\hyperlink{classmdp__matrix__field}{mdp\_\-matrix\_\-field} \&field)
+\item 
+\hyperlink{classmdp__matrix__field_a970b03a7754e8c1e402afc9596502098}{mdp\_\-matrix\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int i, int j)
+\item 
+void \hyperlink{classmdp__matrix__field_a468a38e8bc504fc7f21bdb333ca8630b}{allocate\_\-mdp\_\-matrix\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int i, int j)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix__field_ade5f9563b36bcdd98e5341a4a29059fc}{operator()} (\hyperlink{classmdp__site}{mdp\_\-site} x)
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classmdp__matrix__field_afdd2e11b6ab1b36f0bd6e354dbdefe42}{operator()} (\hyperlink{classmdp__site}{mdp\_\-site} x, int i, int j)
+\item 
+const \hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classmdp__matrix__field_a2a9dd3e66caef6fea9415aa8917e3ce9}{operator()} (\hyperlink{classmdp__site}{mdp\_\-site} x, int i, int j) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classmdp__matrix__field_ac19f5807ad30e73c0362753a6b04c491}{rows}
+\item 
+int \hyperlink{classmdp__matrix__field_aed230e738036a9f78c46089fe3710a53}{columns}
+\item 
+int \hyperlink{classmdp__matrix__field_a36e86a01ec41e2c0c67194091119c835}{imax}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a field of matrices Example: \begin{DoxyVerb}
+///    int box[]={10,10,10};
+///    mdp_lattice lattice(3,box);
+///    mdp_matrix_field h(lattice,5,5);
+///    mdp_site x(lattice);
+///    forallsites(x)
+///       h(x)=lattice.random(x).SU(5);
+/// \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmdp__matrix__field_adebb4692eba7a0f92450e227a1b28ca3}{
+\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}!mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}}
+\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}!mdp_matrix_field@{mdp\_\-matrix\_\-field}}
+\subsubsection[{mdp\_\-matrix\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-matrix\_\-field::mdp\_\-matrix\_\-field ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix__field_adebb4692eba7a0f92450e227a1b28ca3}
+\hypertarget{classmdp__matrix__field_aadbe032bb53bdd590d21a19ec43ad2cd}{
+\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}!mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}}
+\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}!mdp_matrix_field@{mdp\_\-matrix\_\-field}}
+\subsubsection[{mdp\_\-matrix\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-matrix\_\-field::mdp\_\-matrix\_\-field ({\bf mdp\_\-matrix\_\-field} \& {\em field})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix__field_aadbe032bb53bdd590d21a19ec43ad2cd}
+\hypertarget{classmdp__matrix__field_a970b03a7754e8c1e402afc9596502098}{
+\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}!mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}}
+\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}!mdp_matrix_field@{mdp\_\-matrix\_\-field}}
+\subsubsection[{mdp\_\-matrix\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-matrix\_\-field::mdp\_\-matrix\_\-field ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em i}, \/  int {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix__field_a970b03a7754e8c1e402afc9596502098}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__matrix__field_a468a38e8bc504fc7f21bdb333ca8630b}{
+\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}!allocate\_\-mdp\_\-matrix\_\-field@{allocate\_\-mdp\_\-matrix\_\-field}}
+\index{allocate\_\-mdp\_\-matrix\_\-field@{allocate\_\-mdp\_\-matrix\_\-field}!mdp_matrix_field@{mdp\_\-matrix\_\-field}}
+\subsubsection[{allocate\_\-mdp\_\-matrix\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-matrix\_\-field::allocate\_\-mdp\_\-matrix\_\-field ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em i}, \/  int {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix__field_a468a38e8bc504fc7f21bdb333ca8630b}
+\hypertarget{classmdp__matrix__field_a2a9dd3e66caef6fea9415aa8917e3ce9}{
+\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!mdp_matrix_field@{mdp\_\-matrix\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mdp\_\-complex}\& mdp\_\-matrix\_\-field::operator() ({\bf mdp\_\-site} {\em x}, \/  int {\em i}, \/  int {\em j}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix__field_a2a9dd3e66caef6fea9415aa8917e3ce9}
+\hypertarget{classmdp__matrix__field_afdd2e11b6ab1b36f0bd6e354dbdefe42}{
+\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!mdp_matrix_field@{mdp\_\-matrix\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex}\& mdp\_\-matrix\_\-field::operator() ({\bf mdp\_\-site} {\em x}, \/  int {\em i}, \/  int {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix__field_afdd2e11b6ab1b36f0bd6e354dbdefe42}
+\hypertarget{classmdp__matrix__field_ade5f9563b36bcdd98e5341a4a29059fc}{
+\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!mdp_matrix_field@{mdp\_\-matrix\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix\_\-field::operator() ({\bf mdp\_\-site} {\em x})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix__field_ade5f9563b36bcdd98e5341a4a29059fc}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmdp__matrix__field_aed230e738036a9f78c46089fe3710a53}{
+\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}!columns@{columns}}
+\index{columns@{columns}!mdp_matrix_field@{mdp\_\-matrix\_\-field}}
+\subsubsection[{columns}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mdp\_\-matrix\_\-field::columns}}}
+\label{classmdp__matrix__field_aed230e738036a9f78c46089fe3710a53}
+\hypertarget{classmdp__matrix__field_a36e86a01ec41e2c0c67194091119c835}{
+\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}!imax@{imax}}
+\index{imax@{imax}!mdp_matrix_field@{mdp\_\-matrix\_\-field}}
+\subsubsection[{imax}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mdp\_\-matrix\_\-field::imax}}}
+\label{classmdp__matrix__field_a36e86a01ec41e2c0c67194091119c835}
+\hypertarget{classmdp__matrix__field_ac19f5807ad30e73c0362753a6b04c491}{
+\index{mdp\_\-matrix\_\-field@{mdp\_\-matrix\_\-field}!rows@{rows}}
+\index{rows@{rows}!mdp_matrix_field@{mdp\_\-matrix\_\-field}}
+\subsubsection[{rows}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mdp\_\-matrix\_\-field::rows}}}
+\label{classmdp__matrix__field_ac19f5807ad30e73c0362753a6b04c491}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__matrix__field_8h}{mdp\_\-matrix\_\-field.h}\end{DoxyCompactItemize}

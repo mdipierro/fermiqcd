@@ -1,0 +1,164 @@
+\hypertarget{fermiqcd__gauge__algorithms_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-gauge\_\-algorithms.h File Reference}
+\label{fermiqcd__gauge__algorithms_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-gauge\_\-algorithms.h@{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-gauge\_\-algorithms.h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fermiqcd__gauge__algorithms_8h_a1623f6d40bb958eeab224cbd74506c3f}{set\_\-cold} (\hyperlink{classgauge__field}{gauge\_\-field} \&U)
+\begin{DoxyCompactList}\small\item\em make a cold gauge configuration \item\end{DoxyCompactList}\item 
+void \hyperlink{fermiqcd__gauge__algorithms_8h_a1f0c71e035fc292e682c2d2dfec11bc7}{set\_\-hot} (\hyperlink{classgauge__field}{gauge\_\-field} \&U)
+\begin{DoxyCompactList}\small\item\em Make a hot gauge configuration. \item\end{DoxyCompactList}\item 
+void \hyperlink{fermiqcd__gauge__algorithms_8h_a582dc09a0e34ac900d1625f73945938e}{check\_\-unitarity} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, double precision=\hyperlink{mdp__global__vars_8h_a523c970e33a3ab0867625009eb20e3b5}{PRECISION})
+\begin{DoxyCompactList}\small\item\em Check that gauge field is unitary within precision. \item\end{DoxyCompactList}\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{fermiqcd__gauge__algorithms_8h_ade01f9123f048b133b9974ef58290346}{average\_\-plaquette} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, int mu, int nu)
+\begin{DoxyCompactList}\small\item\em Compute average plaquette on plane mu-\/nu. \item\end{DoxyCompactList}\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{fermiqcd__gauge__algorithms_8h_a6591a01b8f711f6fbb85abefb815d1f5}{average\_\-plaquette} (\hyperlink{classgauge__field}{gauge\_\-field} \&U)
+\begin{DoxyCompactList}\small\item\em Compute average plaquette (all planes). \item\end{DoxyCompactList}\item 
+void \hyperlink{fermiqcd__gauge__algorithms_8h_a8845cb91f7433ce83eda096cd20fdf3a}{compute\_\-em\_\-field} (\hyperlink{classgauge__field}{gauge\_\-field} \&U)
+\begin{DoxyCompactList}\small\item\em Given a field U compute the chromo-\/eletro-\/magntic field U.em. \item\end{DoxyCompactList}\item 
+void \hyperlink{fermiqcd__gauge__algorithms_8h_ae83fdef17e268021ad319919dbb7e88c}{compute\_\-long\_\-links} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classgauge__field}{gauge\_\-field} \&V, int length=2)
+\item 
+void \hyperlink{fermiqcd__gauge__algorithms_8h_afa63d5ef4df246f895008777580c6bf1}{set\_\-antiperiodic\_\-phases} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, int mu=0, int check=true)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{fermiqcd__gauge__algorithms_8h_acebbe6202483aa5b8c1919210f722539}{project\_\-SU} (\hyperlink{classmdp__matrix}{mdp\_\-matrix} M, int nstep=1)
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \hyperlink{fermiqcd__gauge__algorithms_8h_a3ade101c81b957b72fb40eecabadaf97}{average\_\-path} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, int length, int d\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]})
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{fermiqcd__gauge__algorithms_8h_ad3ac8975dd254032f85ba0b138955868}{build\_\-path} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, site x, int length, int d\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]})
+\item 
+void \hyperlink{fermiqcd__gauge__algorithms_8h_adc552cc55b93fc7b12dcfe77ac02065c}{copy\_\-path} (int length, int d\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}, int c\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]})
+\item 
+void \hyperlink{fermiqcd__gauge__algorithms_8h_ab97a5d08ba54dd99ff17ce40364ffdec}{invert\_\-path} (int mu, int length, int d\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]})
+\item 
+void \hyperlink{fermiqcd__gauge__algorithms_8h_a534687c714937a8b6e5c235fe1b08f4a}{rotate\_\-path} (int angle, int mu, int nu, int length, int d\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+Various stuff for gauge field
+
+Distributed under GPL2 License
+
+Created with support from the US Department of Energy 
+
+\subsection{Function Documentation}
+\hypertarget{fermiqcd__gauge__algorithms_8h_a3ade101c81b957b72fb40eecabadaf97}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!average\_\-path@{average\_\-path}}
+\index{average\_\-path@{average\_\-path}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{average\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex} average\_\-path ({\bf gauge\_\-field} \& {\em U}, \/  int {\em length}, \/  int {\em d}\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]})}}
+\label{fermiqcd__gauge__algorithms_8h_a3ade101c81b957b72fb40eecabadaf97}
+Takes a field U and path d of length and compute the average of the path on the entire lattice. Assumes computation can be done locally for each site
+
+Example: \begin{DoxyVerb}
+///   int mu=0, nu=1;
+///   gauge_field U(lattice,nc);
+///   int d[][2]={{+1,mu},{+1,nu},{-1,mu},{-1,nu}}
+///   mdp << "plaquette=" << average_path(U,4,d) << endl;
+/// \end{DoxyVerb}
+ \hypertarget{fermiqcd__gauge__algorithms_8h_a6591a01b8f711f6fbb85abefb815d1f5}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!average\_\-plaquette@{average\_\-plaquette}}
+\index{average\_\-plaquette@{average\_\-plaquette}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{average\_\-plaquette}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-real} average\_\-plaquette ({\bf gauge\_\-field} \& {\em U})}}
+\label{fermiqcd__gauge__algorithms_8h_a6591a01b8f711f6fbb85abefb815d1f5}
+
+
+Compute average plaquette (all planes). \hypertarget{fermiqcd__gauge__algorithms_8h_ade01f9123f048b133b9974ef58290346}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!average\_\-plaquette@{average\_\-plaquette}}
+\index{average\_\-plaquette@{average\_\-plaquette}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{average\_\-plaquette}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-real} average\_\-plaquette ({\bf gauge\_\-field} \& {\em U}, \/  int {\em mu}, \/  int {\em nu})}}
+\label{fermiqcd__gauge__algorithms_8h_ade01f9123f048b133b9974ef58290346}
+
+
+Compute average plaquette on plane mu-\/nu. \hypertarget{fermiqcd__gauge__algorithms_8h_ad3ac8975dd254032f85ba0b138955868}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!build\_\-path@{build\_\-path}}
+\index{build\_\-path@{build\_\-path}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{build\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} build\_\-path ({\bf gauge\_\-field} \& {\em U}, \/  site {\em x}, \/  int {\em length}, \/  int {\em d}\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]})}}
+\label{fermiqcd__gauge__algorithms_8h_ad3ac8975dd254032f85ba0b138955868}
+Takes a field U, a site x, a path d of length and compute the product of links amdp\_\-int the path starting at x. Assumes computation can be done locally for each site
+
+Example: \begin{DoxyVerb}
+///   int mu=0, nu=1;
+///   gauge_field U(lattice,nc);
+///   int d[][2]={{+1,mu},{+1,nu},{-1,mu},{-1,nu}}
+///   forallsites(x)
+///      cout << "plaquette(x)=" << average_path(U,x,4,d) << endl;
+/// \end{DoxyVerb}
+ \hypertarget{fermiqcd__gauge__algorithms_8h_a582dc09a0e34ac900d1625f73945938e}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!check\_\-unitarity@{check\_\-unitarity}}
+\index{check\_\-unitarity@{check\_\-unitarity}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{check\_\-unitarity}]{\setlength{\rightskip}{0pt plus 5cm}void check\_\-unitarity ({\bf gauge\_\-field} \& {\em U}, \/  double {\em precision} = {\ttfamily {\bf PRECISION}})}}
+\label{fermiqcd__gauge__algorithms_8h_a582dc09a0e34ac900d1625f73945938e}
+
+
+Check that gauge field is unitary within precision. \hypertarget{fermiqcd__gauge__algorithms_8h_a8845cb91f7433ce83eda096cd20fdf3a}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!compute\_\-em\_\-field@{compute\_\-em\_\-field}}
+\index{compute\_\-em\_\-field@{compute\_\-em\_\-field}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{compute\_\-em\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}void compute\_\-em\_\-field ({\bf gauge\_\-field} \& {\em U})}}
+\label{fermiqcd__gauge__algorithms_8h_a8845cb91f7433ce83eda096cd20fdf3a}
+
+
+Given a field U compute the chromo-\/eletro-\/magntic field U.em. \hypertarget{fermiqcd__gauge__algorithms_8h_ae83fdef17e268021ad319919dbb7e88c}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!compute\_\-long\_\-links@{compute\_\-long\_\-links}}
+\index{compute\_\-long\_\-links@{compute\_\-long\_\-links}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{compute\_\-long\_\-links}]{\setlength{\rightskip}{0pt plus 5cm}void compute\_\-long\_\-links ({\bf gauge\_\-field} \& {\em U}, \/  {\bf gauge\_\-field} \& {\em V}, \/  int {\em length} = {\ttfamily 2})}}
+\label{fermiqcd__gauge__algorithms_8h_ae83fdef17e268021ad319919dbb7e88c}
+For use with asqtad staggered action Given field V makes a field U.long\_\-links where (if length==2) \begin{DoxyVerb}
+/// U.long_links(x,mu)=V(x,mu)*V(x+mu,mu);
+/// \end{DoxyVerb}
+ or (if length==3) \begin{DoxyVerb}
+/// U.long_links(x,mu)=V(x,mu)*V(x+mu,mu)*V((x+mu)+mu,mu);
+/// \end{DoxyVerb}
+ \hypertarget{fermiqcd__gauge__algorithms_8h_adc552cc55b93fc7b12dcfe77ac02065c}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!copy\_\-path@{copy\_\-path}}
+\index{copy\_\-path@{copy\_\-path}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{copy\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}void copy\_\-path (int {\em length}, \/  int {\em d}\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}, \/  int {\em c}\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]})}}
+\label{fermiqcd__gauge__algorithms_8h_adc552cc55b93fc7b12dcfe77ac02065c}
+\hypertarget{fermiqcd__gauge__algorithms_8h_ab97a5d08ba54dd99ff17ce40364ffdec}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!invert\_\-path@{invert\_\-path}}
+\index{invert\_\-path@{invert\_\-path}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{invert\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}void invert\_\-path (int {\em mu}, \/  int {\em length}, \/  int {\em d}\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]})}}
+\label{fermiqcd__gauge__algorithms_8h_ab97a5d08ba54dd99ff17ce40364ffdec}
+\hypertarget{fermiqcd__gauge__algorithms_8h_acebbe6202483aa5b8c1919210f722539}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!project\_\-SU@{project\_\-SU}}
+\index{project\_\-SU@{project\_\-SU}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{project\_\-SU}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} project\_\-SU ({\bf mdp\_\-matrix} {\em M}, \/  int {\em nstep} = {\ttfamily 1})}}
+\label{fermiqcd__gauge__algorithms_8h_acebbe6202483aa5b8c1919210f722539}
+takes a matrix M, performs a Cabibbo-\/Marinari cooling and returns the projected matrix \hypertarget{fermiqcd__gauge__algorithms_8h_a534687c714937a8b6e5c235fe1b08f4a}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!rotate\_\-path@{rotate\_\-path}}
+\index{rotate\_\-path@{rotate\_\-path}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{rotate\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}void rotate\_\-path (int {\em angle}, \/  int {\em mu}, \/  int {\em nu}, \/  int {\em length}, \/  int {\em d}\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]})}}
+\label{fermiqcd__gauge__algorithms_8h_a534687c714937a8b6e5c235fe1b08f4a}
+\hypertarget{fermiqcd__gauge__algorithms_8h_afa63d5ef4df246f895008777580c6bf1}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!set\_\-antiperiodic\_\-phases@{set\_\-antiperiodic\_\-phases}}
+\index{set\_\-antiperiodic\_\-phases@{set\_\-antiperiodic\_\-phases}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{set\_\-antiperiodic\_\-phases}]{\setlength{\rightskip}{0pt plus 5cm}void set\_\-antiperiodic\_\-phases ({\bf gauge\_\-field} \& {\em U}, \/  int {\em mu} = {\ttfamily 0}, \/  int {\em check} = {\ttfamily true})}}
+\label{fermiqcd__gauge__algorithms_8h_afa63d5ef4df246f895008777580c6bf1}
+To set antiperiodic boundary conditions on in direction mu \begin{DoxyVerb}
+///    gauge_field U(lattice,nc);
+///    // do heatbath on U
+///    set_antiperiodic_phases(U,mu,true);
+///    // use quarks (will have antiperiodic boundary conditions)
+///    set_antiperiodic_phases(U,mu,false);
+/// \end{DoxyVerb}
+ \hypertarget{fermiqcd__gauge__algorithms_8h_a1623f6d40bb958eeab224cbd74506c3f}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!set\_\-cold@{set\_\-cold}}
+\index{set\_\-cold@{set\_\-cold}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{set\_\-cold}]{\setlength{\rightskip}{0pt plus 5cm}void set\_\-cold ({\bf gauge\_\-field} \& {\em U})}}
+\label{fermiqcd__gauge__algorithms_8h_a1623f6d40bb958eeab224cbd74506c3f}
+
+
+make a cold gauge configuration \hypertarget{fermiqcd__gauge__algorithms_8h_a1f0c71e035fc292e682c2d2dfec11bc7}{
+\index{fermiqcd\_\-gauge\_\-algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}!set\_\-hot@{set\_\-hot}}
+\index{set\_\-hot@{set\_\-hot}!fermiqcd_gauge_algorithms.h@{fermiqcd\_\-gauge\_\-algorithms.h}}
+\subsubsection[{set\_\-hot}]{\setlength{\rightskip}{0pt plus 5cm}void set\_\-hot ({\bf gauge\_\-field} \& {\em U})}}
+\label{fermiqcd__gauge__algorithms_8h_a1f0c71e035fc292e682c2d2dfec11bc7}
+
+
+Make a hot gauge configuration. 

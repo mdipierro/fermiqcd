@@ -1,0 +1,10 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="mdp_communicator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="mdp_log",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmdp__log.html",tooltip="base class of class mdp_communicator (DO NOT INSTANTIATE)"];
+  Node3 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="nodes"];
+  Node3 [label="mdp_psim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmdp__psim.html",tooltip="Parallel SIMulator used by class mdp_communicator."];
+}

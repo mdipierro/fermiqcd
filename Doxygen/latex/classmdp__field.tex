@@ -1,0 +1,401 @@
+\hypertarget{classmdp__field}{
+\section{mdp\_\-field$<$ T $>$ Class Template Reference}
+\label{classmdp__field}\index{mdp\_\-field@{mdp\_\-field}}
+}
+
+
+most generic field object  
+
+
+{\ttfamily \#include $<$mdp\_\-field.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmdp__field_ab3e16ee58db96391a255579bc89d8535}{mdp\_\-field} ()
+\begin{DoxyCompactList}\small\item\em declare empty field (zero size) \item\end{DoxyCompactList}\item 
+\hyperlink{classmdp__field_aaae273c82d9b0931e31f7265d5ca2652}{mdp\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int n=1)
+\begin{DoxyCompactList}\small\item\em declares a field on lattice a and allocates a vector of n T at each site \item\end{DoxyCompactList}\item 
+\hyperlink{classmdp__field_a0f143d8cceb191d24cf72025091a03a9}{mdp\_\-field} (const \hyperlink{classmdp__field}{mdp\_\-field} \&field)
+\item 
+bool \hyperlink{classmdp__field_ad306195eb4961253cef69e5fb33bce69}{allocated} ()
+\begin{DoxyCompactList}\small\item\em checks if a field is allocated of has zero-\/size \item\end{DoxyCompactList}\item 
+void \hyperlink{classmdp__field_ab76ac5e0273aa3e1b5070fc3d7a0dc84}{allocate\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int n=0)
+\begin{DoxyCompactList}\small\item\em Allows dynamical allocation of a field that is not allocated. \item\end{DoxyCompactList}\item 
+void \hyperlink{classmdp__field_ad3ad6161829f9bf07fc4dd607d71e0ea}{fill\_\-header} ()
+\item 
+void \hyperlink{classmdp__field_a3c2b219b116a0bb1cb340c3e06c37657}{deallocate\_\-memory} ()
+\item 
+void \hyperlink{classmdp__field_aa581ac8278d31ed9dabbff2df49c7130}{reset\_\-field} ()
+\begin{DoxyCompactList}\small\item\em do not use, may cause memory leaks \item\end{DoxyCompactList}\item 
+void \hyperlink{classmdp__field_ab063254fe74b88b1c9cc9e0cbc843b4b}{deallocate\_\-field} ()
+\begin{DoxyCompactList}\small\item\em dynamically deallocate field \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classmdp__field_a98c85b56205d56d48ff740abb5d5cbb8}{$\sim$mdp\_\-field} ()
+\item 
+T \& \hyperlink{classmdp__field_a9eec94ee723253a196ccc4677832b4a0}{operator()} (\hyperlink{classmdp__site}{mdp\_\-site} x, int i=0)
+\begin{DoxyCompactList}\small\item\em returns component i of the vector of objects T stored at site x \item\end{DoxyCompactList}\item 
+T \& \hyperlink{classmdp__field_ab99b7a328e1fa4be857fe72d180b0b35}{operator()} (int idx, int i=0)
+\item 
+T $\ast$ \hyperlink{classmdp__field_a7dab126ffc90476401048cdf747077ef}{operator\mbox{[}$\,$\mbox{]}} (\hyperlink{classmdp__site}{mdp\_\-site} x)
+\begin{DoxyCompactList}\small\item\em retruns the address of the vector of objects T stored at site x \item\end{DoxyCompactList}\item 
+T \& \hyperlink{classmdp__field_a97c56a74600b0d408ec24a161c4e8643}{operator\mbox{[}$\,$\mbox{]}} (\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} i)
+\item 
+T $\ast$ \hyperlink{classmdp__field_ab2159a8078313482a60a08e6f3b81209}{address} (\hyperlink{classmdp__site}{mdp\_\-site} x, int i=0) const 
+\item 
+void \hyperlink{classmdp__field_a8ff0ae3336b70be5c58299322662275e}{shift} (int i, int mu)
+\item 
+void \hyperlink{classmdp__field_a3fd348984e7f37a5d85e18bb12212017}{operator=} (const \hyperlink{classmdp__field}{mdp\_\-field} \&a)
+\item 
+void \hyperlink{classmdp__field_a24364bce6444668661a0688632af87ec}{operator=} (const T a)
+\item 
+void \hyperlink{classmdp__field_a274d9e292a6adc1703a5ad585c99036e}{operator+=} (const \hyperlink{classmdp__field}{mdp\_\-field} \&a)
+\item 
+void \hyperlink{classmdp__field_a84b91b09eff5b553ea69bbcb0da9fbd4}{operator-\/=} (const \hyperlink{classmdp__field}{mdp\_\-field} \&a)
+\item 
+{\footnotesize template$<$class T2 $>$ }\\void \hyperlink{classmdp__field_a47e967ad0fd9e0ac3e4f106e2b9c9897}{operator$\ast$=} (const T2 a)
+\item 
+{\footnotesize template$<$class T2 $>$ }\\void \hyperlink{classmdp__field_a3d66759cffa9ddbb3d158551247e738f}{operator/=} (const T2 a)
+\item 
+\hyperlink{classmdp__lattice}{mdp\_\-lattice} \& \hyperlink{classmdp__field_a31b1149be220cdeeb72281163579f3bc}{lattice} () const 
+\begin{DoxyCompactList}\small\item\em returns by reference the lattice this field is defined on \item\end{DoxyCompactList}\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__field_a6eff9dbb7dd88313ae2294c0178c4c74}{field\_\-size} ()
+\begin{DoxyCompactList}\small\item\em returns the total memory in bytes occupied by the field \item\end{DoxyCompactList}\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__field_ac6e5d57963f865e92cc59c3e9943fb3d}{file\_\-size} ()
+\begin{DoxyCompactList}\small\item\em returns the total space in bytes required to store the field \item\end{DoxyCompactList}\item 
+int \hyperlink{classmdp__field_ac8422b94f444285b0d34748ed6b7c06f}{where\_\-global} (\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} i)
+\begin{DoxyCompactList}\small\item\em only used by \hyperlink{classmdp__field_a21ce8e89744a826abdc9f5325c714892}{mdp\_\-field::load()} and \hyperlink{classmdp__field_a66bbe9d66cc3ad2a5955282df3519471}{mdp\_\-field::save()} \item\end{DoxyCompactList}\item 
+void \hyperlink{classmdp__field_ac9f44455cd31baa03e00ca5b601f199c}{switch\_\-endianess\_\-4bytes} ()
+\item 
+void \hyperlink{classmdp__field_a8db821b09a101730bcbcf27ccd1a25f5}{switch\_\-endianess\_\-8bytes} ()
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__field_a4deb091e1da25d239e206ee8ff64ae11}{global\_\-size} ()
+\begin{DoxyCompactList}\small\item\em lattice size in units of sizeof(T) \item\end{DoxyCompactList}\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__field_a0f6da321ba9bdae3a571dbbe5087d799}{physical\_\-size} ()
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__field_a0fc58cc1e14667b4ad3638baab91f28a}{size\_\-per\_\-site} ()
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__field_a58b111a6f42e6b3807c6e333fc080020}{physical\_\-local\_\-start} (int i=2)
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__field_afc3c5a4aa6512d4b99f08ae58d7e50a7}{physical\_\-local\_\-stop} (int i=2)
+\item 
+T $\ast$ \hyperlink{classmdp__field_a345bb93496b3154b4349878d02ab0a2a}{physical\_\-address} (\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} i=0)
+\item 
+void \hyperlink{classmdp__field_a72b973da706841ea58dc728345d36795}{update} (int np=2, int d=-\/1, int \hyperlink{classmdp__field_a3dfa0ff545bed811ad055e46020bed7f}{size}=1)
+\item 
+bool \hyperlink{classmdp__field_a21ce8e89744a826abdc9f5325c714892}{load} (string filename, int processIO=0, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} max\_\-buffer\_\-size=1024, bool load\_\-header=true, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} skip\_\-bytes=0, bool($\ast$user\_\-read)(FILE $\ast$, void $\ast$, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int}, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int}, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int}, const \hyperlink{classmdp__lattice}{mdp\_\-lattice} \&)=0, bool try\_\-switch\_\-endianess=true)
+\begin{DoxyCompactList}\small\item\em Best way to load a field. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classmdp__field_a66bbe9d66cc3ad2a5955282df3519471}{save} (string filename, int processIO=0, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} max\_\-buffer\_\-size=1024, bool load\_\-header=true, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} skip\_\-bytes=0, bool($\ast$user\_\-write)(FILE $\ast$, void $\ast$, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int}, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int}, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int}, const \hyperlink{classmdp__lattice}{mdp\_\-lattice} \&)=0)
+\begin{DoxyCompactList}\small\item\em Best way to save a field. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classmdp__field_a8ad4d41e9c53df910f114031f84e0845}{save\_\-vtk} (string filename, int t=-\/1, int component=-\/1, int processIO=0, bool ASCII=false)
+\begin{DoxyCompactList}\small\item\em Best way to save a field. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmdp__field__file__header}{mdp\_\-field\_\-file\_\-header} \hyperlink{classmdp__field_a465dfc6a95fe7ca5016595550cd024d9}{header}
+\begin{DoxyCompactList}\small\item\em the field file header, contains data only if field was read from file \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmdp__lattice}{mdp\_\-lattice} $\ast$ \hyperlink{classmdp__field_aa3e7e522a6e3c47da7ff7075d71f6417}{ptr}
+\item 
+T $\ast$ \hyperlink{classmdp__field_a4d38ed40feef11c07d751fc276a498fc}{m}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__field_aece7eeb6754c5e2ec9f031e352eb6f1f}{Tsize}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__field_a3dfa0ff545bed811ad055e46020bed7f}{size}
+\item 
+int \hyperlink{classmdp__field_a090b0995fcfb15a9e9258b5721b685ba}{field\_\-components}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$ class mdp\_\-field$<$ T $>$}
+
+most generic field object Example: \begin{DoxyVerb}
+///    int box[]={10,10,10};
+///    mdp_lattice lattice(3,box);
+///    mdp_field<float> psi(lattice,10);
+///    mdp_site x(lattice);
+///    forallsites(x)
+///      for(int i=0; i<10; i++)
+///         psi(x,i)=0.0;
+///    psi.update(); // synchronization
+///    psi.save("myfield");
+///    psi.load("myfield");
+/// \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmdp__field_ab3e16ee58db96391a255579bc89d8535}{
+\index{mdp\_\-field@{mdp\_\-field}!mdp\_\-field@{mdp\_\-field}}
+\index{mdp\_\-field@{mdp\_\-field}!mdp_field@{mdp\_\-field}}
+\subsubsection[{mdp\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-field}$<$ T $>$::{\bf mdp\_\-field} ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_ab3e16ee58db96391a255579bc89d8535}
+
+
+declare empty field (zero size) \hypertarget{classmdp__field_aaae273c82d9b0931e31f7265d5ca2652}{
+\index{mdp\_\-field@{mdp\_\-field}!mdp\_\-field@{mdp\_\-field}}
+\index{mdp\_\-field@{mdp\_\-field}!mdp_field@{mdp\_\-field}}
+\subsubsection[{mdp\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-field}$<$ T $>$::{\bf mdp\_\-field} ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em n} = {\ttfamily 1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_aaae273c82d9b0931e31f7265d5ca2652}
+
+
+declares a field on lattice a and allocates a vector of n T at each site \hypertarget{classmdp__field_a0f143d8cceb191d24cf72025091a03a9}{
+\index{mdp\_\-field@{mdp\_\-field}!mdp\_\-field@{mdp\_\-field}}
+\index{mdp\_\-field@{mdp\_\-field}!mdp_field@{mdp\_\-field}}
+\subsubsection[{mdp\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-field}$<$ T $>$::{\bf mdp\_\-field} (const {\bf mdp\_\-field}$<$ T $>$ \& {\em field})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a0f143d8cceb191d24cf72025091a03a9}
+\hypertarget{classmdp__field_a98c85b56205d56d48ff740abb5d5cbb8}{
+\index{mdp\_\-field@{mdp\_\-field}!$\sim$mdp\_\-field@{$\sim$mdp\_\-field}}
+\index{$\sim$mdp\_\-field@{$\sim$mdp\_\-field}!mdp_field@{mdp\_\-field}}
+\subsubsection[{$\sim$mdp\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ virtual {\bf mdp\_\-field}$<$ T $>$::$\sim${\bf mdp\_\-field} ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmdp__field_a98c85b56205d56d48ff740abb5d5cbb8}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__field_ab2159a8078313482a60a08e6f3b81209}{
+\index{mdp\_\-field@{mdp\_\-field}!address@{address}}
+\index{address@{address}!mdp_field@{mdp\_\-field}}
+\subsubsection[{address}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf mdp\_\-field}$<$ T $>$::address ({\bf mdp\_\-site} {\em x}, \/  int {\em i} = {\ttfamily 0}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_ab2159a8078313482a60a08e6f3b81209}
+\hypertarget{classmdp__field_ab76ac5e0273aa3e1b5070fc3d7a0dc84}{
+\index{mdp\_\-field@{mdp\_\-field}!allocate\_\-field@{allocate\_\-field}}
+\index{allocate\_\-field@{allocate\_\-field}!mdp_field@{mdp\_\-field}}
+\subsubsection[{allocate\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf mdp\_\-field}$<$ T $>$::allocate\_\-field ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em n} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_ab76ac5e0273aa3e1b5070fc3d7a0dc84}
+
+
+Allows dynamical allocation of a field that is not allocated. \hypertarget{classmdp__field_ad306195eb4961253cef69e5fb33bce69}{
+\index{mdp\_\-field@{mdp\_\-field}!allocated@{allocated}}
+\index{allocated@{allocated}!mdp_field@{mdp\_\-field}}
+\subsubsection[{allocated}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf mdp\_\-field}$<$ T $>$::allocated ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_ad306195eb4961253cef69e5fb33bce69}
+
+
+checks if a field is allocated of has zero-\/size \hypertarget{classmdp__field_ab063254fe74b88b1c9cc9e0cbc843b4b}{
+\index{mdp\_\-field@{mdp\_\-field}!deallocate\_\-field@{deallocate\_\-field}}
+\index{deallocate\_\-field@{deallocate\_\-field}!mdp_field@{mdp\_\-field}}
+\subsubsection[{deallocate\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf mdp\_\-field}$<$ T $>$::deallocate\_\-field ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_ab063254fe74b88b1c9cc9e0cbc843b4b}
+
+
+dynamically deallocate field \hypertarget{classmdp__field_a3c2b219b116a0bb1cb340c3e06c37657}{
+\index{mdp\_\-field@{mdp\_\-field}!deallocate\_\-memory@{deallocate\_\-memory}}
+\index{deallocate\_\-memory@{deallocate\_\-memory}!mdp_field@{mdp\_\-field}}
+\subsubsection[{deallocate\_\-memory}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf mdp\_\-field}$<$ T $>$::deallocate\_\-memory ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a3c2b219b116a0bb1cb340c3e06c37657}
+\hypertarget{classmdp__field_a6eff9dbb7dd88313ae2294c0178c4c74}{
+\index{mdp\_\-field@{mdp\_\-field}!field\_\-size@{field\_\-size}}
+\index{field\_\-size@{field\_\-size}!mdp_field@{mdp\_\-field}}
+\subsubsection[{field\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-int} {\bf mdp\_\-field}$<$ T $>$::field\_\-size ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a6eff9dbb7dd88313ae2294c0178c4c74}
+
+
+returns the total memory in bytes occupied by the field \hypertarget{classmdp__field_ac6e5d57963f865e92cc59c3e9943fb3d}{
+\index{mdp\_\-field@{mdp\_\-field}!file\_\-size@{file\_\-size}}
+\index{file\_\-size@{file\_\-size}!mdp_field@{mdp\_\-field}}
+\subsubsection[{file\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-int} {\bf mdp\_\-field}$<$ T $>$::file\_\-size ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_ac6e5d57963f865e92cc59c3e9943fb3d}
+
+
+returns the total space in bytes required to store the field \hypertarget{classmdp__field_ad3ad6161829f9bf07fc4dd607d71e0ea}{
+\index{mdp\_\-field@{mdp\_\-field}!fill\_\-header@{fill\_\-header}}
+\index{fill\_\-header@{fill\_\-header}!mdp_field@{mdp\_\-field}}
+\subsubsection[{fill\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf mdp\_\-field}$<$ T $>$::fill\_\-header ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_ad3ad6161829f9bf07fc4dd607d71e0ea}
+\hypertarget{classmdp__field_a4deb091e1da25d239e206ee8ff64ae11}{
+\index{mdp\_\-field@{mdp\_\-field}!global\_\-size@{global\_\-size}}
+\index{global\_\-size@{global\_\-size}!mdp_field@{mdp\_\-field}}
+\subsubsection[{global\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-int} {\bf mdp\_\-field}$<$ T $>$::global\_\-size ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a4deb091e1da25d239e206ee8ff64ae11}
+
+
+lattice size in units of sizeof(T) \hypertarget{classmdp__field_a31b1149be220cdeeb72281163579f3bc}{
+\index{mdp\_\-field@{mdp\_\-field}!lattice@{lattice}}
+\index{lattice@{lattice}!mdp_field@{mdp\_\-field}}
+\subsubsection[{lattice}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-lattice}\& {\bf mdp\_\-field}$<$ T $>$::lattice () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a31b1149be220cdeeb72281163579f3bc}
+
+
+returns by reference the lattice this field is defined on \hypertarget{classmdp__field_a21ce8e89744a826abdc9f5325c714892}{
+\index{mdp\_\-field@{mdp\_\-field}!load@{load}}
+\index{load@{load}!mdp_field@{mdp\_\-field}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf mdp\_\-field}$<$ T $>$::load (string {\em filename}, \/  int {\em processIO} = {\ttfamily 0}, \/  {\bf mdp\_\-int} {\em max\_\-buffer\_\-size} = {\ttfamily 1024}, \/  bool {\em load\_\-header} = {\ttfamily true}, \/  {\bf mdp\_\-int} {\em skip\_\-bytes} = {\ttfamily 0}, \/  bool($\ast$)(FILE $\ast$, void $\ast$, {\bf mdp\_\-int}, {\bf mdp\_\-int}, {\bf mdp\_\-int}, const {\bf mdp\_\-lattice} \&) {\em user\_\-read} = {\ttfamily 0}, \/  bool {\em try\_\-switch\_\-endianess} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a21ce8e89744a826abdc9f5325c714892}
+
+
+Best way to load a field. \hypertarget{classmdp__field_ab99b7a328e1fa4be857fe72d180b0b35}{
+\index{mdp\_\-field@{mdp\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!mdp_field@{mdp\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T\& {\bf mdp\_\-field}$<$ T $>$::operator() (int {\em idx}, \/  int {\em i} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_ab99b7a328e1fa4be857fe72d180b0b35}
+\hypertarget{classmdp__field_a9eec94ee723253a196ccc4677832b4a0}{
+\index{mdp\_\-field@{mdp\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!mdp_field@{mdp\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T\& {\bf mdp\_\-field}$<$ T $>$::operator() ({\bf mdp\_\-site} {\em x}, \/  int {\em i} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a9eec94ee723253a196ccc4677832b4a0}
+
+
+returns component i of the vector of objects T stored at site x 
+
+Reimplemented in \hyperlink{classmdp__nmatrix__field_a389126da9ddf86d42b27d4d9d20245f8}{mdp\_\-nmatrix\_\-field}, \hyperlink{classmdp__nvector__field_afddf6115e2d88a72727d66949436d8ca}{mdp\_\-nvector\_\-field}, and \hyperlink{classmdp__vector__field_aa50ba6cb67e5978d0e362b70ea703164}{mdp\_\-vector\_\-field}.\hypertarget{classmdp__field_a47e967ad0fd9e0ac3e4f106e2b9c9897}{
+\index{mdp\_\-field@{mdp\_\-field}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!mdp_field@{mdp\_\-field}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ template$<$class T2 $>$ void {\bf mdp\_\-field}$<$ T $>$::operator$\ast$= (const T2 {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a47e967ad0fd9e0ac3e4f106e2b9c9897}
+\hypertarget{classmdp__field_a274d9e292a6adc1703a5ad585c99036e}{
+\index{mdp\_\-field@{mdp\_\-field}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!mdp_field@{mdp\_\-field}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf mdp\_\-field}$<$ T $>$::operator+= (const {\bf mdp\_\-field}$<$ T $>$ \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a274d9e292a6adc1703a5ad585c99036e}
+\hypertarget{classmdp__field_a84b91b09eff5b553ea69bbcb0da9fbd4}{
+\index{mdp\_\-field@{mdp\_\-field}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!mdp_field@{mdp\_\-field}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf mdp\_\-field}$<$ T $>$::operator-\/= (const {\bf mdp\_\-field}$<$ T $>$ \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a84b91b09eff5b553ea69bbcb0da9fbd4}
+\hypertarget{classmdp__field_a3d66759cffa9ddbb3d158551247e738f}{
+\index{mdp\_\-field@{mdp\_\-field}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!mdp_field@{mdp\_\-field}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ template$<$class T2 $>$ void {\bf mdp\_\-field}$<$ T $>$::operator/= (const T2 {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a3d66759cffa9ddbb3d158551247e738f}
+\hypertarget{classmdp__field_a24364bce6444668661a0688632af87ec}{
+\index{mdp\_\-field@{mdp\_\-field}!operator=@{operator=}}
+\index{operator=@{operator=}!mdp_field@{mdp\_\-field}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf mdp\_\-field}$<$ T $>$::operator= (const T {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a24364bce6444668661a0688632af87ec}
+
+
+Reimplemented in \hyperlink{classdwfermi__field_a80684935337a1c336bd81379787ba9f4}{dwfermi\_\-field}, \hyperlink{classfermi__field_a1fb7ce7e54f45a334ee55dc7250aba89}{fermi\_\-field}, \hyperlink{classsdwf__field_ac9bbccf6442b9f1a1a07b18fd2fe442c}{sdwf\_\-field}, and \hyperlink{classstaggered__field_ac3fee1898eaa4198744c5bc0cc969e2e}{staggered\_\-field}.\hypertarget{classmdp__field_a3fd348984e7f37a5d85e18bb12212017}{
+\index{mdp\_\-field@{mdp\_\-field}!operator=@{operator=}}
+\index{operator=@{operator=}!mdp_field@{mdp\_\-field}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf mdp\_\-field}$<$ T $>$::operator= (const {\bf mdp\_\-field}$<$ T $>$ \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a3fd348984e7f37a5d85e18bb12212017}
+\hypertarget{classmdp__field_a97c56a74600b0d408ec24a161c4e8643}{
+\index{mdp\_\-field@{mdp\_\-field}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!mdp_field@{mdp\_\-field}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T\& {\bf mdp\_\-field}$<$ T $>$::operator\mbox{[}$\,$\mbox{]} ({\bf mdp\_\-int} {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a97c56a74600b0d408ec24a161c4e8643}
+\hypertarget{classmdp__field_a7dab126ffc90476401048cdf747077ef}{
+\index{mdp\_\-field@{mdp\_\-field}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!mdp_field@{mdp\_\-field}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf mdp\_\-field}$<$ T $>$::operator\mbox{[}$\,$\mbox{]} ({\bf mdp\_\-site} {\em x})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a7dab126ffc90476401048cdf747077ef}
+
+
+retruns the address of the vector of objects T stored at site x \hypertarget{classmdp__field_a345bb93496b3154b4349878d02ab0a2a}{
+\index{mdp\_\-field@{mdp\_\-field}!physical\_\-address@{physical\_\-address}}
+\index{physical\_\-address@{physical\_\-address}!mdp_field@{mdp\_\-field}}
+\subsubsection[{physical\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf mdp\_\-field}$<$ T $>$::physical\_\-address ({\bf mdp\_\-int} {\em i} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a345bb93496b3154b4349878d02ab0a2a}
+\hypertarget{classmdp__field_a58b111a6f42e6b3807c6e333fc080020}{
+\index{mdp\_\-field@{mdp\_\-field}!physical\_\-local\_\-start@{physical\_\-local\_\-start}}
+\index{physical\_\-local\_\-start@{physical\_\-local\_\-start}!mdp_field@{mdp\_\-field}}
+\subsubsection[{physical\_\-local\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-int} {\bf mdp\_\-field}$<$ T $>$::physical\_\-local\_\-start (int {\em i} = {\ttfamily 2})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a58b111a6f42e6b3807c6e333fc080020}
+\hypertarget{classmdp__field_afc3c5a4aa6512d4b99f08ae58d7e50a7}{
+\index{mdp\_\-field@{mdp\_\-field}!physical\_\-local\_\-stop@{physical\_\-local\_\-stop}}
+\index{physical\_\-local\_\-stop@{physical\_\-local\_\-stop}!mdp_field@{mdp\_\-field}}
+\subsubsection[{physical\_\-local\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-int} {\bf mdp\_\-field}$<$ T $>$::physical\_\-local\_\-stop (int {\em i} = {\ttfamily 2})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_afc3c5a4aa6512d4b99f08ae58d7e50a7}
+\hypertarget{classmdp__field_a0f6da321ba9bdae3a571dbbe5087d799}{
+\index{mdp\_\-field@{mdp\_\-field}!physical\_\-size@{physical\_\-size}}
+\index{physical\_\-size@{physical\_\-size}!mdp_field@{mdp\_\-field}}
+\subsubsection[{physical\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-int} {\bf mdp\_\-field}$<$ T $>$::physical\_\-size ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a0f6da321ba9bdae3a571dbbe5087d799}
+\hypertarget{classmdp__field_aa581ac8278d31ed9dabbff2df49c7130}{
+\index{mdp\_\-field@{mdp\_\-field}!reset\_\-field@{reset\_\-field}}
+\index{reset\_\-field@{reset\_\-field}!mdp_field@{mdp\_\-field}}
+\subsubsection[{reset\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf mdp\_\-field}$<$ T $>$::reset\_\-field ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_aa581ac8278d31ed9dabbff2df49c7130}
+
+
+do not use, may cause memory leaks \hypertarget{classmdp__field_a66bbe9d66cc3ad2a5955282df3519471}{
+\index{mdp\_\-field@{mdp\_\-field}!save@{save}}
+\index{save@{save}!mdp_field@{mdp\_\-field}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf mdp\_\-field}$<$ T $>$::save (string {\em filename}, \/  int {\em processIO} = {\ttfamily 0}, \/  {\bf mdp\_\-int} {\em max\_\-buffer\_\-size} = {\ttfamily 1024}, \/  bool {\em load\_\-header} = {\ttfamily true}, \/  {\bf mdp\_\-int} {\em skip\_\-bytes} = {\ttfamily 0}, \/  bool($\ast$)(FILE $\ast$, void $\ast$, {\bf mdp\_\-int}, {\bf mdp\_\-int}, {\bf mdp\_\-int}, const {\bf mdp\_\-lattice} \&) {\em user\_\-write} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a66bbe9d66cc3ad2a5955282df3519471}
+
+
+Best way to save a field. \hypertarget{classmdp__field_a8ad4d41e9c53df910f114031f84e0845}{
+\index{mdp\_\-field@{mdp\_\-field}!save\_\-vtk@{save\_\-vtk}}
+\index{save\_\-vtk@{save\_\-vtk}!mdp_field@{mdp\_\-field}}
+\subsubsection[{save\_\-vtk}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf mdp\_\-field}$<$ T $>$::save\_\-vtk (string {\em filename}, \/  int {\em t} = {\ttfamily -\/1}, \/  int {\em component} = {\ttfamily -\/1}, \/  int {\em processIO} = {\ttfamily 0}, \/  bool {\em ASCII} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a8ad4d41e9c53df910f114031f84e0845}
+
+
+Best way to save a field. \hypertarget{classmdp__field_a8ff0ae3336b70be5c58299322662275e}{
+\index{mdp\_\-field@{mdp\_\-field}!shift@{shift}}
+\index{shift@{shift}!mdp_field@{mdp\_\-field}}
+\subsubsection[{shift}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf mdp\_\-field}$<$ T $>$::shift (int {\em i}, \/  int {\em mu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a8ff0ae3336b70be5c58299322662275e}
+shifts the entire fields in direction mu of i steps (i can be positive or negative) note that if i=1, field(x-\/mu) is assigned to field(x) function requires communication \hypertarget{classmdp__field_a0fc58cc1e14667b4ad3638baab91f28a}{
+\index{mdp\_\-field@{mdp\_\-field}!size\_\-per\_\-site@{size\_\-per\_\-site}}
+\index{size\_\-per\_\-site@{size\_\-per\_\-site}!mdp_field@{mdp\_\-field}}
+\subsubsection[{size\_\-per\_\-site}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-int} {\bf mdp\_\-field}$<$ T $>$::size\_\-per\_\-site ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a0fc58cc1e14667b4ad3638baab91f28a}
+\hypertarget{classmdp__field_ac9f44455cd31baa03e00ca5b601f199c}{
+\index{mdp\_\-field@{mdp\_\-field}!switch\_\-endianess\_\-4bytes@{switch\_\-endianess\_\-4bytes}}
+\index{switch\_\-endianess\_\-4bytes@{switch\_\-endianess\_\-4bytes}!mdp_field@{mdp\_\-field}}
+\subsubsection[{switch\_\-endianess\_\-4bytes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf mdp\_\-field}$<$ T $>$::switch\_\-endianess\_\-4bytes ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_ac9f44455cd31baa03e00ca5b601f199c}
+\hypertarget{classmdp__field_a8db821b09a101730bcbcf27ccd1a25f5}{
+\index{mdp\_\-field@{mdp\_\-field}!switch\_\-endianess\_\-8bytes@{switch\_\-endianess\_\-8bytes}}
+\index{switch\_\-endianess\_\-8bytes@{switch\_\-endianess\_\-8bytes}!mdp_field@{mdp\_\-field}}
+\subsubsection[{switch\_\-endianess\_\-8bytes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf mdp\_\-field}$<$ T $>$::switch\_\-endianess\_\-8bytes ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a8db821b09a101730bcbcf27ccd1a25f5}
+\hypertarget{classmdp__field_a72b973da706841ea58dc728345d36795}{
+\index{mdp\_\-field@{mdp\_\-field}!update@{update}}
+\index{update@{update}!mdp_field@{mdp\_\-field}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf mdp\_\-field}$<$ T $>$::update (int {\em np} = {\ttfamily 2}, \/  int {\em d} = {\ttfamily -\/1}, \/  int {\em ncomp} = {\ttfamily 1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_a72b973da706841ea58dc728345d36795}
+the most important communication function in MDP. it must be called after each field variables are modified. it restores the syncronization between parallel processes.
+
+The only communication function for a field object To be invoked every time field variables are assigned and Need to be sinchronized between the parallel processes \hypertarget{classmdp__field_ac8422b94f444285b0d34748ed6b7c06f}{
+\index{mdp\_\-field@{mdp\_\-field}!where\_\-global@{where\_\-global}}
+\index{where\_\-global@{where\_\-global}!mdp_field@{mdp\_\-field}}
+\subsubsection[{where\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ int {\bf mdp\_\-field}$<$ T $>$::where\_\-global ({\bf mdp\_\-int} {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__field_ac8422b94f444285b0d34748ed6b7c06f}
+
+
+only used by \hyperlink{classmdp__field_a21ce8e89744a826abdc9f5325c714892}{mdp\_\-field::load()} and \hyperlink{classmdp__field_a66bbe9d66cc3ad2a5955282df3519471}{mdp\_\-field::save()} 
+
+\subsection{Member Data Documentation}
+\hypertarget{classmdp__field_a090b0995fcfb15a9e9258b5721b685ba}{
+\index{mdp\_\-field@{mdp\_\-field}!field\_\-components@{field\_\-components}}
+\index{field\_\-components@{field\_\-components}!mdp_field@{mdp\_\-field}}
+\subsubsection[{field\_\-components}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ int {\bf mdp\_\-field}$<$ T $>$::{\bf field\_\-components}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmdp__field_a090b0995fcfb15a9e9258b5721b685ba}
+\hypertarget{classmdp__field_a465dfc6a95fe7ca5016595550cd024d9}{
+\index{mdp\_\-field@{mdp\_\-field}!header@{header}}
+\index{header@{header}!mdp_field@{mdp\_\-field}}
+\subsubsection[{header}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-field\_\-file\_\-header} {\bf mdp\_\-field}$<$ T $>$::{\bf header}}}
+\label{classmdp__field_a465dfc6a95fe7ca5016595550cd024d9}
+
+
+the field file header, contains data only if field was read from file \hypertarget{classmdp__field_a4d38ed40feef11c07d751fc276a498fc}{
+\index{mdp\_\-field@{mdp\_\-field}!m@{m}}
+\index{m@{m}!mdp_field@{mdp\_\-field}}
+\subsubsection[{m}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf mdp\_\-field}$<$ T $>$::{\bf m}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmdp__field_a4d38ed40feef11c07d751fc276a498fc}
+\hypertarget{classmdp__field_aa3e7e522a6e3c47da7ff7075d71f6417}{
+\index{mdp\_\-field@{mdp\_\-field}!ptr@{ptr}}
+\index{ptr@{ptr}!mdp_field@{mdp\_\-field}}
+\subsubsection[{ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-lattice}$\ast$ {\bf mdp\_\-field}$<$ T $>$::{\bf ptr}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmdp__field_aa3e7e522a6e3c47da7ff7075d71f6417}
+\hypertarget{classmdp__field_a3dfa0ff545bed811ad055e46020bed7f}{
+\index{mdp\_\-field@{mdp\_\-field}!size@{size}}
+\index{size@{size}!mdp_field@{mdp\_\-field}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-int} {\bf mdp\_\-field}$<$ T $>$::{\bf size}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmdp__field_a3dfa0ff545bed811ad055e46020bed7f}
+\hypertarget{classmdp__field_aece7eeb6754c5e2ec9f031e352eb6f1f}{
+\index{mdp\_\-field@{mdp\_\-field}!Tsize@{Tsize}}
+\index{Tsize@{Tsize}!mdp_field@{mdp\_\-field}}
+\subsubsection[{Tsize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf mdp\_\-int} {\bf mdp\_\-field}$<$ T $>$::{\bf Tsize}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classmdp__field_aece7eeb6754c5e2ec9f031e352eb6f1f}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__field_8h}{mdp\_\-field.h}\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__field__load_8h}{mdp\_\-field\_\-load.h}\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__field__save_8h}{mdp\_\-field\_\-save.h}\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__field__save__vtk_8h}{mdp\_\-field\_\-save\_\-vtk.h}\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__field__update_8h}{mdp\_\-field\_\-update.h}\end{DoxyCompactItemize}

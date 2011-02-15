@@ -1,0 +1,130 @@
+\hypertarget{mdp__macros_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-macros.h File Reference}
+\label{mdp__macros_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-macros.h@{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-macros.h}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{mdp__macros_8h_a861b28941052fee5a12635de75a47fce}{CHECK\_\-ALL}
+\item 
+\#define \hyperlink{mdp__macros_8h_ad3cbe6f8e3afb53e8f3563e6510ba822}{MDP\_\-MPI}
+\item 
+\#define \hyperlink{mdp__macros_8h_a9c1638f55404c55c4dd3460f29ade55e}{INCLUDE\_\-DEPRECATED\_\-IO}
+\item 
+\#define \hyperlink{mdp__macros_8h_a3f4f0463b31fc7420af5bc8b56d17e08}{forallsites}(x)~for(x.start(); x.is\_\-in(); x.next())
+\begin{DoxyCompactList}\small\item\em Loop on all local siltes of this process. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{mdp__macros_8h_af21645df600a9601916fdafab34df9be}{forallsitesofparity}(x, pofx)
+\item 
+\#define \hyperlink{mdp__macros_8h_a1752b2da0837bc094a6e499e37a826e2}{forallsitesandcopies}(x)~for(x.start(), x.idx=0; x.idx$<$x.lattice().nvol; x.idx++)
+\begin{DoxyCompactList}\small\item\em Loop on all sites stored by this process. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{mdp__macros_8h_a8cc602b6c5ac7e1caa3cd476f83b3854}{forallsitesandcopiesofparity}(x, pofx)
+\begin{DoxyCompactList}\small\item\em Loop on all sites stored by this process with given parity. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{mdp__macros_8h_adf8d34f3be20164c292bccfeb72898e5}{ME}~mpi.me()
+\begin{DoxyCompactList}\small\item\em Returns the unique id of this process. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{mdp__macros_8h_a48b6a21a37d4fd876c95b4a45674bfcf}{Nproc}~mpi.nproc()
+\begin{DoxyCompactList}\small\item\em Returns the total number of parallel processes for this job. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{mdp__macros_8h_aad98f1063a19a487b893f30ff375104e}{error}(a)~\_\-mpi\_\-error\_\-message(a,\_\-\_\-FILE\_\-\_\-, \_\-\_\-LINE\_\-\_\-);
+\begin{DoxyCompactList}\small\item\em Reports a runtime error and the line that caused it. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{mdp__macros_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}~true
+\item 
+\#define \hyperlink{mdp__macros_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}~false
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+Contains class mdp\_\-macros
+
+Licensed under GPL2 license Read attached license in file mdp\_\-license.pdf This file cannot be distributed without file mdp\_\-license.pdf 
+
+\subsection{Define Documentation}
+\hypertarget{mdp__macros_8h_a861b28941052fee5a12635de75a47fce}{
+\index{mdp\_\-macros.h@{mdp\_\-macros.h}!CHECK\_\-ALL@{CHECK\_\-ALL}}
+\index{CHECK\_\-ALL@{CHECK\_\-ALL}!mdp_macros.h@{mdp\_\-macros.h}}
+\subsubsection[{CHECK\_\-ALL}]{\setlength{\rightskip}{0pt plus 5cm}\#define CHECK\_\-ALL}}
+\label{mdp__macros_8h_a861b28941052fee5a12635de75a47fce}
+\hypertarget{mdp__macros_8h_aad98f1063a19a487b893f30ff375104e}{
+\index{mdp\_\-macros.h@{mdp\_\-macros.h}!error@{error}}
+\index{error@{error}!mdp_macros.h@{mdp\_\-macros.h}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}\#define error(a)~\_\-mpi\_\-error\_\-message(a,\_\-\_\-FILE\_\-\_\-, \_\-\_\-LINE\_\-\_\-);}}
+\label{mdp__macros_8h_aad98f1063a19a487b893f30ff375104e}
+
+
+Reports a runtime error and the line that caused it. \hypertarget{mdp__macros_8h_aa93f0eb578d23995850d61f7d61c55c1}{
+\index{mdp\_\-macros.h@{mdp\_\-macros.h}!FALSE@{FALSE}}
+\index{FALSE@{FALSE}!mdp_macros.h@{mdp\_\-macros.h}}
+\subsubsection[{FALSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FALSE~false}}
+\label{mdp__macros_8h_aa93f0eb578d23995850d61f7d61c55c1}
+\hypertarget{mdp__macros_8h_a3f4f0463b31fc7420af5bc8b56d17e08}{
+\index{mdp\_\-macros.h@{mdp\_\-macros.h}!forallsites@{forallsites}}
+\index{forallsites@{forallsites}!mdp_macros.h@{mdp\_\-macros.h}}
+\subsubsection[{forallsites}]{\setlength{\rightskip}{0pt plus 5cm}\#define forallsites(x)~for(x.start(); x.is\_\-in(); x.next())}}
+\label{mdp__macros_8h_a3f4f0463b31fc7420af5bc8b56d17e08}
+
+
+Loop on all local siltes of this process. \hypertarget{mdp__macros_8h_a1752b2da0837bc094a6e499e37a826e2}{
+\index{mdp\_\-macros.h@{mdp\_\-macros.h}!forallsitesandcopies@{forallsitesandcopies}}
+\index{forallsitesandcopies@{forallsitesandcopies}!mdp_macros.h@{mdp\_\-macros.h}}
+\subsubsection[{forallsitesandcopies}]{\setlength{\rightskip}{0pt plus 5cm}\#define forallsitesandcopies(x)~for(x.start(), x.idx=0; x.idx$<$x.lattice().nvol; x.idx++)}}
+\label{mdp__macros_8h_a1752b2da0837bc094a6e499e37a826e2}
+
+
+Loop on all sites stored by this process. \hypertarget{mdp__macros_8h_a8cc602b6c5ac7e1caa3cd476f83b3854}{
+\index{mdp\_\-macros.h@{mdp\_\-macros.h}!forallsitesandcopiesofparity@{forallsitesandcopiesofparity}}
+\index{forallsitesandcopiesofparity@{forallsitesandcopiesofparity}!mdp_macros.h@{mdp\_\-macros.h}}
+\subsubsection[{forallsitesandcopiesofparity}]{\setlength{\rightskip}{0pt plus 5cm}\#define forallsitesandcopiesofparity(x, \/  pofx)}}
+\label{mdp__macros_8h_a8cc602b6c5ac7e1caa3cd476f83b3854}
+{\bfseries Value:}
+\begin{DoxyCode}
+for(int __process=0; __process<Nproc; __process++)          \
+     for(x.start(), x.idx=x.lattice().start[__process][pofx % 2];           \
+         x.idx<x.lattice().stop[__process][(pofx+(pofx % 2))/2]; \
+         x.idx++)
+\end{DoxyCode}
+
+
+Loop on all sites stored by this process with given parity. \hypertarget{mdp__macros_8h_af21645df600a9601916fdafab34df9be}{
+\index{mdp\_\-macros.h@{mdp\_\-macros.h}!forallsitesofparity@{forallsitesofparity}}
+\index{forallsitesofparity@{forallsitesofparity}!mdp_macros.h@{mdp\_\-macros.h}}
+\subsubsection[{forallsitesofparity}]{\setlength{\rightskip}{0pt plus 5cm}\#define forallsitesofparity(x, \/  pofx)}}
+\label{mdp__macros_8h_af21645df600a9601916fdafab34df9be}
+{\bfseries Value:}
+\begin{DoxyCode}
+for(x.start(), x.idx=x.lattice().start[ME][pofx % 2];               \
+      x.idx<x.lattice().stop[ME][(pofx+(pofx % 2))/2];     \
+      x.idx++)
+\end{DoxyCode}
+Loop on all local sites of this process with given parity If pofx is EVENODD=2 then loops on even and odd sites \hypertarget{mdp__macros_8h_a9c1638f55404c55c4dd3460f29ade55e}{
+\index{mdp\_\-macros.h@{mdp\_\-macros.h}!INCLUDE\_\-DEPRECATED\_\-IO@{INCLUDE\_\-DEPRECATED\_\-IO}}
+\index{INCLUDE\_\-DEPRECATED\_\-IO@{INCLUDE\_\-DEPRECATED\_\-IO}!mdp_macros.h@{mdp\_\-macros.h}}
+\subsubsection[{INCLUDE\_\-DEPRECATED\_\-IO}]{\setlength{\rightskip}{0pt plus 5cm}\#define INCLUDE\_\-DEPRECATED\_\-IO}}
+\label{mdp__macros_8h_a9c1638f55404c55c4dd3460f29ade55e}
+\hypertarget{mdp__macros_8h_ad3cbe6f8e3afb53e8f3563e6510ba822}{
+\index{mdp\_\-macros.h@{mdp\_\-macros.h}!MDP\_\-MPI@{MDP\_\-MPI}}
+\index{MDP\_\-MPI@{MDP\_\-MPI}!mdp_macros.h@{mdp\_\-macros.h}}
+\subsubsection[{MDP\_\-MPI}]{\setlength{\rightskip}{0pt plus 5cm}\#define MDP\_\-MPI}}
+\label{mdp__macros_8h_ad3cbe6f8e3afb53e8f3563e6510ba822}
+\hypertarget{mdp__macros_8h_adf8d34f3be20164c292bccfeb72898e5}{
+\index{mdp\_\-macros.h@{mdp\_\-macros.h}!ME@{ME}}
+\index{ME@{ME}!mdp_macros.h@{mdp\_\-macros.h}}
+\subsubsection[{ME}]{\setlength{\rightskip}{0pt plus 5cm}\#define ME~mpi.me()}}
+\label{mdp__macros_8h_adf8d34f3be20164c292bccfeb72898e5}
+
+
+Returns the unique id of this process. \hypertarget{mdp__macros_8h_a48b6a21a37d4fd876c95b4a45674bfcf}{
+\index{mdp\_\-macros.h@{mdp\_\-macros.h}!Nproc@{Nproc}}
+\index{Nproc@{Nproc}!mdp_macros.h@{mdp\_\-macros.h}}
+\subsubsection[{Nproc}]{\setlength{\rightskip}{0pt plus 5cm}\#define Nproc~mpi.nproc()}}
+\label{mdp__macros_8h_a48b6a21a37d4fd876c95b4a45674bfcf}
+
+
+Returns the total number of parallel processes for this job. \hypertarget{mdp__macros_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{
+\index{mdp\_\-macros.h@{mdp\_\-macros.h}!TRUE@{TRUE}}
+\index{TRUE@{TRUE}!mdp_macros.h@{mdp\_\-macros.h}}
+\subsubsection[{TRUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define TRUE~true}}
+\label{mdp__macros_8h_aa8cecfc5c5c054d2875c03e77b7be15d}

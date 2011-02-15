@@ -1,0 +1,49 @@
+\hypertarget{fermiqcd__set__random_8h}{
+\section{/Users/mdipierro/Desktop/SciDac/development/Libraries/fermiqcd\_\-set\_\-random.h File Reference}
+\label{fermiqcd__set__random_8h}\index{/Users/mdipierro/Desktop/SciDac/development/Libraries/fermiqcd\_\-set\_\-random.h@{/Users/mdipierro/Desktop/SciDac/development/Libraries/fermiqcd\_\-set\_\-random.h}}
+}
+
+
+This graph shows which files directly or indirectly include this file:\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{fermiqcd__set__random_8h_0c547920377b1d67e12ab427dfb63edb}{set\_\-random} (generic\_\-field$<$ \hyperlink{classmdp__complex}{mdp\_\-complex} $>$ \&chi, int parity=EVENODD)
+\item 
+void \hyperlink{fermiqcd__set__random_8h_750cb400e428c9ecc7098ba38a9e1bb9}{set\_\-wall\_\-random} (generic\_\-field$<$ \hyperlink{classmdp__complex}{mdp\_\-complex} $>$ \&chi, int t=0, int parity=EVENODD)
+\item 
+void \hyperlink{fermiqcd__set__random_8h_73cda6a2083bb45493584aed7180aaab}{set\_\-zero} (generic\_\-field$<$ \hyperlink{classmdp__complex}{mdp\_\-complex} $>$ \&chi, int parity=EVENODD)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Version:]3-1-2005 \end{Desc}
+\begin{Desc}
+\item[Author:]Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$\end{Desc}
+Function to initialize fields
+
+This file is copyrighted by Massimo Di Pierro Read attached license in file fermiqcd\_\-license.pdf This file cannot be distributed without file fermiqcd\_\-license.pdf 
+
+\subsection{Function Documentation}
+\hypertarget{fermiqcd__set__random_8h_0c547920377b1d67e12ab427dfb63edb}{
+\index{fermiqcd\_\-set\_\-random.h@{fermiqcd\_\-set\_\-random.h}!set\_\-random@{set\_\-random}}
+\index{set\_\-random@{set\_\-random}!fermiqcd_set_random.h@{fermiqcd\_\-set\_\-random.h}}
+\subsubsection[{set\_\-random}]{\setlength{\rightskip}{0pt plus 5cm}void set\_\-random (generic\_\-field$<$ {\bf mdp\_\-complex} $>$ \& {\em chi}, \/  int {\em parity} = {\tt EVENODD})}}
+\label{fermiqcd__set__random_8h_0c547920377b1d67e12ab427dfb63edb}
+
+
+Set the complex field components of chi to be gaussian random numbers with mean=0 and sigma=1 (useful for stochastic propagators). can choose parity=EVEN, ODD or EVENODD \hypertarget{fermiqcd__set__random_8h_750cb400e428c9ecc7098ba38a9e1bb9}{
+\index{fermiqcd\_\-set\_\-random.h@{fermiqcd\_\-set\_\-random.h}!set\_\-wall\_\-random@{set\_\-wall\_\-random}}
+\index{set\_\-wall\_\-random@{set\_\-wall\_\-random}!fermiqcd_set_random.h@{fermiqcd\_\-set\_\-random.h}}
+\subsubsection[{set\_\-wall\_\-random}]{\setlength{\rightskip}{0pt plus 5cm}void set\_\-wall\_\-random (generic\_\-field$<$ {\bf mdp\_\-complex} $>$ \& {\em chi}, \/  int {\em t} = {\tt 0}, \/  int {\em parity} = {\tt EVENODD})}}
+\label{fermiqcd__set__random_8h_750cb400e428c9ecc7098ba38a9e1bb9}
+
+
+Set the complex field components of chi to be gaussian random numbers on the wall identified by t with mean=0 and sigma=1 (useful for stochastic propagators). can choose parity=EVEN, ODD or EVENODD attention! does not set to zero other timeslices!!! \hypertarget{fermiqcd__set__random_8h_73cda6a2083bb45493584aed7180aaab}{
+\index{fermiqcd\_\-set\_\-random.h@{fermiqcd\_\-set\_\-random.h}!set\_\-zero@{set\_\-zero}}
+\index{set\_\-zero@{set\_\-zero}!fermiqcd_set_random.h@{fermiqcd\_\-set\_\-random.h}}
+\subsubsection[{set\_\-zero}]{\setlength{\rightskip}{0pt plus 5cm}void set\_\-zero (generic\_\-field$<$ {\bf mdp\_\-complex} $>$ \& {\em chi}, \/  int {\em parity} = {\tt EVENODD})}}
+\label{fermiqcd__set__random_8h_73cda6a2083bb45493584aed7180aaab}
+
+
+Set the complex field components of chi tozero. can choose parity=EVEN, ODD or EVENODD 

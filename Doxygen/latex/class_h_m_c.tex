@@ -1,0 +1,232 @@
+\hypertarget{class_h_m_c}{
+\section{HMC$<$ GaugeClass, FermiClass $>$ Class Template Reference}
+\label{class_h_m_c}\index{HMC@{HMC}}
+}
+
+
+{\ttfamily \#include $<$fermiqcd\_\-hmc.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_h_m_c_aafdc157997f16364f023298ed1de48cb}{HMC} (GaugeClass \&U, FermiClass \&F, \hyperlink{classcoefficients}{coefficients} \&\hyperlink{class_h_m_c_aa7a373acc998a08fcdc2e86dc6084b7b}{coeff})
+\item 
+\hyperlink{class_h_m_c_add3a4a1409a737ccea8c7dae3760d0b3}{$\sim$HMC} ()
+\item 
+void \hyperlink{class_h_m_c_a97646bc15efc4db6c69e52f19f058ccd}{step} ()
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{class_h_m_c_a29d58281eca79c9fdc0f6160d4c61b53}{acceptance\_\-rate} ()
+\item 
+void \hyperlink{class_h_m_c_a796aa70365c8befa06b6e9a6064b332d}{initialize} ()
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{class_h_m_c_aaf6eb48e4a79b5c65b7fd80e9f34f072}{compute\_\-gaussian\_\-momenta} (GaugeClass \&U)
+\item 
+void \hyperlink{class_h_m_c_af2e951741710132d0bca8bc9d7fdd463}{set\_\-gaussian} (FermiClass \&F)
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{class_h_m_c_a278a4514882a4b585797364c6c7c1ba2}{compute\_\-kinetic\_\-energy} (GaugeClass \&p\_\-U, FermiClass \&p\_\-F)
+\item 
+void \hyperlink{class_h_m_c_a4d455373ccf133c6a7bb59c13bc6db32}{compute\_\-effective\_\-links} (GaugeClass \&U, GaugeClass \&V)
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{class_h_m_c_a28b4077c0a378abdbc3a75b27b6ec66c}{compute\_\-action} (GaugeClass \&U, GaugeClass \&V, FermiClass \&F)
+\item 
+void \hyperlink{class_h_m_c_aa91216c67c4304558aa47b9011abb9d2}{compute\_\-fields\_\-evolution} (GaugeClass \&U, GaugeClass \&p\_\-U, GaugeClass \&f\_\-U, FermiClass \&F, FermiClass \&p\_\-F, FermiClass \&f\_\-F)
+\item 
+void \hyperlink{class_h_m_c_a055e331f19f692a381f098e02f939e79}{compute\_\-force} (GaugeClass \&U, GaugeClass \&f\_\-U, FermiClass \&F, FermiClass \&f\_\-F)
+\item 
+void \hyperlink{class_h_m_c_a2e84b43878a9162a4370c6272f7db6ac}{compute\_\-fermion\_\-forces} (GaugeClass \&U, GaugeClass \&f\_\-U, FermiClass \&sol, FermiClass \&psol)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{class_h_m_c_a95adca9cab9649becfe31b5f346713d9}{spinor} (FermiClass \&psi, \hyperlink{classmdp__site}{mdp\_\-site} x, int b)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcoefficients}{coefficients} \hyperlink{class_h_m_c_aa7a373acc998a08fcdc2e86dc6084b7b}{coeff}
+\item 
+double \hyperlink{class_h_m_c_a940413017301b1520e4c6108a527c7c9}{bs}
+\item 
+double \hyperlink{class_h_m_c_a4146b7b06fcf3410b9bfda1c88c5fe39}{bs\_\-old}
+\item 
+double \hyperlink{class_h_m_c_ae7be326ed9dadc4876de7f60dd683e37}{fs}
+\item 
+double \hyperlink{class_h_m_c_a4f80874711a6599cb8c579dda6e088fb}{fs\_\-old}
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{class_h_m_c_a54ce598a989a71f3bfbb58057dcea2ed}{s\_\-old}
+\item 
+int \hyperlink{class_h_m_c_a64181f9b0ebb652e395799bae2c8bfc7}{dimrep}
+\item 
+int \hyperlink{class_h_m_c_a11cb072cbdfddf4f6f6055bc77ae6b3a}{accepted}
+\item 
+int \hyperlink{class_h_m_c_a0254c831e713cdad8e2bbec4c247c045}{steps}
+\item 
+vector$<$ \hyperlink{classmdp__matrix}{mdp\_\-matrix} $>$ \hyperlink{class_h_m_c_a6007dbb2f937f629bbf5253a915b18fa}{S}
+\item 
+vector$<$ \hyperlink{classmdp__matrix}{mdp\_\-matrix} $>$ \hyperlink{class_h_m_c_a49121fbbef9d15281bc5a045fa0d07ce}{lambda}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_h_m_c_a5fe0965bb8e3d1220f60979189e86357}{FUNDAMENTAL} = 0
+\item 
+static const int \hyperlink{class_h_m_c_adf96eacce9b78dfd329076b35b8544f5}{SYMMETRIC} = 1
+\item 
+static const int \hyperlink{class_h_m_c_a2be12d54de2a0c63f56f8a7168780f5d}{ANTISYMMETRIC} = 2
+\end{DoxyCompactItemize}
+\subsubsection*{template$<$class GaugeClass, class FermiClass$>$ class HMC$<$ GaugeClass, FermiClass $>$}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_h_m_c_aafdc157997f16364f023298ed1de48cb}{
+\index{HMC@{HMC}!HMC@{HMC}}
+\index{HMC@{HMC}!HMC@{HMC}}
+\subsubsection[{HMC}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf HMC} (GaugeClass \& {\em U}, \/  FermiClass \& {\em F}, \/  {\bf coefficients} \& {\em coeff})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_h_m_c_aafdc157997f16364f023298ed1de48cb}
+\hypertarget{class_h_m_c_add3a4a1409a737ccea8c7dae3760d0b3}{
+\index{HMC@{HMC}!$\sim$HMC@{$\sim$HMC}}
+\index{$\sim$HMC@{$\sim$HMC}!HMC@{HMC}}
+\subsubsection[{$\sim$HMC}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ {\bf HMC}$<$ GaugeClass, FermiClass $>$::$\sim${\bf HMC} ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_h_m_c_add3a4a1409a737ccea8c7dae3760d0b3}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_h_m_c_a29d58281eca79c9fdc0f6160d4c61b53}{
+\index{HMC@{HMC}!acceptance\_\-rate@{acceptance\_\-rate}}
+\index{acceptance\_\-rate@{acceptance\_\-rate}!HMC@{HMC}}
+\subsubsection[{acceptance\_\-rate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ {\bf mdp\_\-real} {\bf HMC}$<$ GaugeClass, FermiClass $>$::acceptance\_\-rate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_h_m_c_a29d58281eca79c9fdc0f6160d4c61b53}
+\hypertarget{class_h_m_c_a28b4077c0a378abdbc3a75b27b6ec66c}{
+\index{HMC@{HMC}!compute\_\-action@{compute\_\-action}}
+\index{compute\_\-action@{compute\_\-action}!HMC@{HMC}}
+\subsubsection[{compute\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ {\bf mdp\_\-real} {\bf HMC}$<$ GaugeClass, FermiClass $>$::compute\_\-action (GaugeClass \& {\em U}, \/  GaugeClass \& {\em V}, \/  FermiClass \& {\em F})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_h_m_c_a28b4077c0a378abdbc3a75b27b6ec66c}
+\hypertarget{class_h_m_c_a4d455373ccf133c6a7bb59c13bc6db32}{
+\index{HMC@{HMC}!compute\_\-effective\_\-links@{compute\_\-effective\_\-links}}
+\index{compute\_\-effective\_\-links@{compute\_\-effective\_\-links}!HMC@{HMC}}
+\subsubsection[{compute\_\-effective\_\-links}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ void {\bf HMC}$<$ GaugeClass, FermiClass $>$::compute\_\-effective\_\-links (GaugeClass \& {\em U}, \/  GaugeClass \& {\em V})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_h_m_c_a4d455373ccf133c6a7bb59c13bc6db32}
+\hypertarget{class_h_m_c_a2e84b43878a9162a4370c6272f7db6ac}{
+\index{HMC@{HMC}!compute\_\-fermion\_\-forces@{compute\_\-fermion\_\-forces}}
+\index{compute\_\-fermion\_\-forces@{compute\_\-fermion\_\-forces}!HMC@{HMC}}
+\subsubsection[{compute\_\-fermion\_\-forces}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ void {\bf HMC}$<$ GaugeClass, FermiClass $>$::compute\_\-fermion\_\-forces (GaugeClass \& {\em U}, \/  GaugeClass \& {\em f\_\-U}, \/  FermiClass \& {\em sol}, \/  FermiClass \& {\em psol})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_h_m_c_a2e84b43878a9162a4370c6272f7db6ac}
+\hypertarget{class_h_m_c_aa91216c67c4304558aa47b9011abb9d2}{
+\index{HMC@{HMC}!compute\_\-fields\_\-evolution@{compute\_\-fields\_\-evolution}}
+\index{compute\_\-fields\_\-evolution@{compute\_\-fields\_\-evolution}!HMC@{HMC}}
+\subsubsection[{compute\_\-fields\_\-evolution}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ void {\bf HMC}$<$ GaugeClass, FermiClass $>$::compute\_\-fields\_\-evolution (GaugeClass \& {\em U}, \/  GaugeClass \& {\em p\_\-U}, \/  GaugeClass \& {\em f\_\-U}, \/  FermiClass \& {\em F}, \/  FermiClass \& {\em p\_\-F}, \/  FermiClass \& {\em f\_\-F})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_h_m_c_aa91216c67c4304558aa47b9011abb9d2}
+\hypertarget{class_h_m_c_a055e331f19f692a381f098e02f939e79}{
+\index{HMC@{HMC}!compute\_\-force@{compute\_\-force}}
+\index{compute\_\-force@{compute\_\-force}!HMC@{HMC}}
+\subsubsection[{compute\_\-force}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ void {\bf HMC}$<$ GaugeClass, FermiClass $>$::compute\_\-force (GaugeClass \& {\em U}, \/  GaugeClass \& {\em f\_\-U}, \/  FermiClass \& {\em F}, \/  FermiClass \& {\em f\_\-F})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_h_m_c_a055e331f19f692a381f098e02f939e79}
+\hypertarget{class_h_m_c_aaf6eb48e4a79b5c65b7fd80e9f34f072}{
+\index{HMC@{HMC}!compute\_\-gaussian\_\-momenta@{compute\_\-gaussian\_\-momenta}}
+\index{compute\_\-gaussian\_\-momenta@{compute\_\-gaussian\_\-momenta}!HMC@{HMC}}
+\subsubsection[{compute\_\-gaussian\_\-momenta}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ {\bf mdp\_\-real} {\bf HMC}$<$ GaugeClass, FermiClass $>$::compute\_\-gaussian\_\-momenta (GaugeClass \& {\em U})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_h_m_c_aaf6eb48e4a79b5c65b7fd80e9f34f072}
+\hypertarget{class_h_m_c_a278a4514882a4b585797364c6c7c1ba2}{
+\index{HMC@{HMC}!compute\_\-kinetic\_\-energy@{compute\_\-kinetic\_\-energy}}
+\index{compute\_\-kinetic\_\-energy@{compute\_\-kinetic\_\-energy}!HMC@{HMC}}
+\subsubsection[{compute\_\-kinetic\_\-energy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ {\bf mdp\_\-real} {\bf HMC}$<$ GaugeClass, FermiClass $>$::compute\_\-kinetic\_\-energy (GaugeClass \& {\em p\_\-U}, \/  FermiClass \& {\em p\_\-F})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_h_m_c_a278a4514882a4b585797364c6c7c1ba2}
+\hypertarget{class_h_m_c_a796aa70365c8befa06b6e9a6064b332d}{
+\index{HMC@{HMC}!initialize@{initialize}}
+\index{initialize@{initialize}!HMC@{HMC}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ void {\bf HMC}$<$ GaugeClass, FermiClass $>$::initialize ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_h_m_c_a796aa70365c8befa06b6e9a6064b332d}
+\hypertarget{class_h_m_c_af2e951741710132d0bca8bc9d7fdd463}{
+\index{HMC@{HMC}!set\_\-gaussian@{set\_\-gaussian}}
+\index{set\_\-gaussian@{set\_\-gaussian}!HMC@{HMC}}
+\subsubsection[{set\_\-gaussian}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ void {\bf HMC}$<$ GaugeClass, FermiClass $>$::set\_\-gaussian (FermiClass \& {\em F})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_h_m_c_af2e951741710132d0bca8bc9d7fdd463}
+\hypertarget{class_h_m_c_a95adca9cab9649becfe31b5f346713d9}{
+\index{HMC@{HMC}!spinor@{spinor}}
+\index{spinor@{spinor}!HMC@{HMC}}
+\subsubsection[{spinor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ static {\bf mdp\_\-matrix} {\bf HMC}$<$ GaugeClass, FermiClass $>$::spinor (FermiClass \& {\em psi}, \/  {\bf mdp\_\-site} {\em x}, \/  int {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_h_m_c_a95adca9cab9649becfe31b5f346713d9}
+\hypertarget{class_h_m_c_a97646bc15efc4db6c69e52f19f058ccd}{
+\index{HMC@{HMC}!step@{step}}
+\index{step@{step}!HMC@{HMC}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ void {\bf HMC}$<$ GaugeClass, FermiClass $>$::step ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_h_m_c_a97646bc15efc4db6c69e52f19f058ccd}
+
+
+CHECKED UP TO HERE! 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_h_m_c_a11cb072cbdfddf4f6f6055bc77ae6b3a}{
+\index{HMC@{HMC}!accepted@{accepted}}
+\index{accepted@{accepted}!HMC@{HMC}}
+\subsubsection[{accepted}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ int {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf accepted}}}
+\label{class_h_m_c_a11cb072cbdfddf4f6f6055bc77ae6b3a}
+\hypertarget{class_h_m_c_a2be12d54de2a0c63f56f8a7168780f5d}{
+\index{HMC@{HMC}!ANTISYMMETRIC@{ANTISYMMETRIC}}
+\index{ANTISYMMETRIC@{ANTISYMMETRIC}!HMC@{HMC}}
+\subsubsection[{ANTISYMMETRIC}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ const int {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf ANTISYMMETRIC} = 2\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_h_m_c_a2be12d54de2a0c63f56f8a7168780f5d}
+\hypertarget{class_h_m_c_a940413017301b1520e4c6108a527c7c9}{
+\index{HMC@{HMC}!bs@{bs}}
+\index{bs@{bs}!HMC@{HMC}}
+\subsubsection[{bs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ double {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf bs}}}
+\label{class_h_m_c_a940413017301b1520e4c6108a527c7c9}
+\hypertarget{class_h_m_c_a4146b7b06fcf3410b9bfda1c88c5fe39}{
+\index{HMC@{HMC}!bs\_\-old@{bs\_\-old}}
+\index{bs\_\-old@{bs\_\-old}!HMC@{HMC}}
+\subsubsection[{bs\_\-old}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ double {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf bs\_\-old}}}
+\label{class_h_m_c_a4146b7b06fcf3410b9bfda1c88c5fe39}
+\hypertarget{class_h_m_c_aa7a373acc998a08fcdc2e86dc6084b7b}{
+\index{HMC@{HMC}!coeff@{coeff}}
+\index{coeff@{coeff}!HMC@{HMC}}
+\subsubsection[{coeff}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ {\bf coefficients} {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf coeff}}}
+\label{class_h_m_c_aa7a373acc998a08fcdc2e86dc6084b7b}
+\hypertarget{class_h_m_c_a64181f9b0ebb652e395799bae2c8bfc7}{
+\index{HMC@{HMC}!dimrep@{dimrep}}
+\index{dimrep@{dimrep}!HMC@{HMC}}
+\subsubsection[{dimrep}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ int {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf dimrep}}}
+\label{class_h_m_c_a64181f9b0ebb652e395799bae2c8bfc7}
+\hypertarget{class_h_m_c_ae7be326ed9dadc4876de7f60dd683e37}{
+\index{HMC@{HMC}!fs@{fs}}
+\index{fs@{fs}!HMC@{HMC}}
+\subsubsection[{fs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ double {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf fs}}}
+\label{class_h_m_c_ae7be326ed9dadc4876de7f60dd683e37}
+\hypertarget{class_h_m_c_a4f80874711a6599cb8c579dda6e088fb}{
+\index{HMC@{HMC}!fs\_\-old@{fs\_\-old}}
+\index{fs\_\-old@{fs\_\-old}!HMC@{HMC}}
+\subsubsection[{fs\_\-old}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ double {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf fs\_\-old}}}
+\label{class_h_m_c_a4f80874711a6599cb8c579dda6e088fb}
+\hypertarget{class_h_m_c_a5fe0965bb8e3d1220f60979189e86357}{
+\index{HMC@{HMC}!FUNDAMENTAL@{FUNDAMENTAL}}
+\index{FUNDAMENTAL@{FUNDAMENTAL}!HMC@{HMC}}
+\subsubsection[{FUNDAMENTAL}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ const int {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf FUNDAMENTAL} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_h_m_c_a5fe0965bb8e3d1220f60979189e86357}
+\hypertarget{class_h_m_c_a49121fbbef9d15281bc5a045fa0d07ce}{
+\index{HMC@{HMC}!lambda@{lambda}}
+\index{lambda@{lambda}!HMC@{HMC}}
+\subsubsection[{lambda}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ vector$<${\bf mdp\_\-matrix}$>$ {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf lambda}}}
+\label{class_h_m_c_a49121fbbef9d15281bc5a045fa0d07ce}
+\hypertarget{class_h_m_c_a6007dbb2f937f629bbf5253a915b18fa}{
+\index{HMC@{HMC}!S@{S}}
+\index{S@{S}!HMC@{HMC}}
+\subsubsection[{S}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ vector$<${\bf mdp\_\-matrix}$>$ {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf S}}}
+\label{class_h_m_c_a6007dbb2f937f629bbf5253a915b18fa}
+\hypertarget{class_h_m_c_a54ce598a989a71f3bfbb58057dcea2ed}{
+\index{HMC@{HMC}!s\_\-old@{s\_\-old}}
+\index{s\_\-old@{s\_\-old}!HMC@{HMC}}
+\subsubsection[{s\_\-old}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ {\bf mdp\_\-real} {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf s\_\-old}}}
+\label{class_h_m_c_a54ce598a989a71f3bfbb58057dcea2ed}
+\hypertarget{class_h_m_c_a0254c831e713cdad8e2bbec4c247c045}{
+\index{HMC@{HMC}!steps@{steps}}
+\index{steps@{steps}!HMC@{HMC}}
+\subsubsection[{steps}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ int {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf steps}}}
+\label{class_h_m_c_a0254c831e713cdad8e2bbec4c247c045}
+\hypertarget{class_h_m_c_adf96eacce9b78dfd329076b35b8544f5}{
+\index{HMC@{HMC}!SYMMETRIC@{SYMMETRIC}}
+\index{SYMMETRIC@{SYMMETRIC}!HMC@{HMC}}
+\subsubsection[{SYMMETRIC}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GaugeClass , class FermiClass $>$ const int {\bf HMC}$<$ GaugeClass, FermiClass $>$::{\bf SYMMETRIC} = 1\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_h_m_c_adf96eacce9b78dfd329076b35b8544f5}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__hmc_8h}{fermiqcd\_\-hmc.h}\end{DoxyCompactItemize}

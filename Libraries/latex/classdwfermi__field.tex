@@ -1,0 +1,34 @@
+\hypertarget{classdwfermi__field}{
+\section{dwfermi\_\-field Class Reference}
+\label{classdwfermi__field}\index{dwfermi\_\-field@{dwfermi\_\-field}}
+}
+domain wall fermionic field  
+
+
+{\tt \#include $<$fermiqcd\_\-dwfermi\_\-field.h$>$}
+
+Inherits \hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field}.
+
+Collaboration diagram for dwfermi\_\-field:
+
+\subsection{Detailed Description}
+domain wall fermionic field 
+
+Example: 
+
+\footnotesize\begin{verbatim}
+/// int L5=10; // size in 5th dimension 
+/// fermi_field psi(lattice,L5,nc);
+/// mdp_site x(lattice);
+/// forallsites(x)
+///    for(int k=0; k<L5; k++)
+///      for(int spin=0; spin<4; spin++)
+///        for(int i=0; i<nc; i++)
+///          psi(x,k,spin,i)=0.0+0.0*I;
+/// \end{verbatim}
+\normalsize
+ 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{fermiqcd__dwfermi__field_8h}{fermiqcd\_\-dwfermi\_\-field.h}\end{CompactItemize}

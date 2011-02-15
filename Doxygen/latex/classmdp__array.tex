@@ -1,0 +1,227 @@
+\hypertarget{classmdp__array}{
+\section{mdp\_\-array$<$ T, nc\_\- $>$ Class Template Reference}
+\label{classmdp__array}\index{mdp\_\-array@{mdp\_\-array}}
+}
+
+
+generic container for multidimensional arrays  
+
+
+{\ttfamily \#include $<$mdp\_\-array.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const int \& \hyperlink{classmdp__array_a20f4c81199739f0465af62c811cd60b7}{ndim} () const 
+\item 
+T $\ast$ \hyperlink{classmdp__array_a9b5419e65691954be0a3b6598a47366a}{address} ()
+\item 
+\hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} $\ast$ \hyperlink{classmdp__array_aee0c0b97d3f8bb9d3f8ecedb77d14e6d}{size\_\-address} ()
+\item 
+T \& \hyperlink{classmdp__array_acc0201400e730c01bd131696ff206aa6}{operator\mbox{[}$\,$\mbox{]}} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i)
+\item 
+const T \& \hyperlink{classmdp__array_a7c6f82ec888e82f3743529ac25d42627}{operator\mbox{[}$\,$\mbox{]}} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i) const 
+\item 
+\hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classmdp__array_a4856c3ff5dbeeb3479a531e0c505559f}{length} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i) const 
+\item 
+\hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classmdp__array_a5e8cd60cd274b3a0e9835b66c6d430e6}{length} () const 
+\item 
+\hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classmdp__array_adf2fd9006ccac4f6b1365d4018f3e513}{size} (\hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i) const 
+\item 
+\hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classmdp__array_a236c3497ad1e959070836746302448e8}{size} () const 
+\item 
+void \hyperlink{classmdp__array_a6a3d01021b01c27ea0a0cf43dd442ad5}{dimension} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} $\ast$p)
+\item 
+void \hyperlink{classmdp__array_a816b392dd8ab232c18818e6f186127aa}{dimension} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c0\_\-=1, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c1\_\-=1, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c2\_\-=1, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c3\_\-=1, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c4\_\-=1)
+\item 
+\hyperlink{classmdp__array_a231c442576ed1a88e333fb88bcedef41}{mdp\_\-array} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c0\_\-=1, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c1\_\-=1, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c2\_\-=1, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c3\_\-=1, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c4\_\-=1)
+\item 
+\hyperlink{classmdp__array_a7bdd0c532c8517bf46bceab7c48f3186}{mdp\_\-array} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} $\ast$p)
+\item 
+\hyperlink{classmdp__array_abf3b0ca804544eac3be7d8e499eeb089}{mdp\_\-array} (const T $\ast$m0, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c0\_\-=1, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c1\_\-=1, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c2\_\-=1, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c3\_\-=1, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c4\_\-=1)
+\item 
+\hyperlink{classmdp__array_a1932c8ea14f2fc8cb7343f9834154521}{mdp\_\-array} (const T $\ast$m0, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} $\ast$p)
+\item 
+\hyperlink{classmdp__array_af266114d51b7b0e038cb555ba02d83d4}{mdp\_\-array} (const \hyperlink{classmdp__array}{mdp\_\-array} \&a)
+\item 
+virtual \hyperlink{classmdp__array_a962dc25e9c53d9f6e215b0ef952fc96b}{$\sim$mdp\_\-array} ()
+\item 
+void \hyperlink{classmdp__array_a8f439abc20da235f12cd5d0ab4d7b56b}{operator=} (const \hyperlink{classmdp__array}{mdp\_\-array} \&a)
+\item 
+T \& \hyperlink{classmdp__array_a9e3a7e699387fb78562fb8d9c9ebea57}{operator()} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i0, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i1=0, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i2=0, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i3=0, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i4=0)
+\item 
+const T \& \hyperlink{classmdp__array_a9ddceeb1b33b80495ef45afb812c0012}{operator()} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i0, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i1=0, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i2=0, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i3=0, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i4=0) const 
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classmdp__array_a7c12113e8b61f3906ff4d15a6cc10fe2}{prepare} (const \hyperlink{classmdp__array}{mdp\_\-array} \&a)
+\item 
+\hyperlink{classmdp__array}{mdp\_\-array} \hyperlink{classmdp__array_a0456c0c6d5e305cc0799ceb7b8639539}{operator+} (const \hyperlink{classmdp__array}{mdp\_\-array} \&a, const \hyperlink{classmdp__array}{mdp\_\-array} \&b)
+\item 
+\hyperlink{classmdp__array}{mdp\_\-array} \hyperlink{classmdp__array_a97528690c485585f95cfad74e934e621}{operator-\/} (const \hyperlink{classmdp__array}{mdp\_\-array} \&a, const \hyperlink{classmdp__array}{mdp\_\-array} \&b)
+\item 
+{\footnotesize template$<$class T2 $>$ }\\\hyperlink{classmdp__array}{mdp\_\-array} \hyperlink{classmdp__array_a153656d696c7d05f5e61deb324e93132}{operator$\ast$} (T2 x, const \hyperlink{classmdp__array}{mdp\_\-array} \&a)
+\item 
+\hyperlink{classmdp__array}{mdp\_\-array} \hyperlink{classmdp__array_a720a0f3e6c74893b0bb90ddb85e2c7cf}{applytoall} (const \hyperlink{classmdp__array}{mdp\_\-array} \&a, T($\ast$fptr)(T, void $\ast$), void $\ast$x=0)
+\item 
+\hyperlink{classmdp__array}{mdp\_\-array} \hyperlink{classmdp__array_af47ee2aa085a0ca303f6eb960be0b257}{applytoall} (const \hyperlink{classmdp__array}{mdp\_\-array} \&a, const \hyperlink{classmdp__array}{mdp\_\-array} \&b, T($\ast$fptr)(T, T, void $\ast$), void $\ast$x=0)
+\item 
+ostream \& \hyperlink{classmdp__array_a5b84c698961f9276308a57923daf4458}{operator$<$$<$} (ostream \&os, const \hyperlink{classmdp__array}{mdp\_\-array} \&a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T, uint nc\_\-$>$ class mdp\_\-array$<$ T, nc\_\- $>$}
+
+generic container for multidimensional arrays Example: \begin{DoxyVerb}
+///    mdp_array<float,3> a(5,5,5);
+///    a(0,0,0)=3.15;
+/// \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmdp__array_a231c442576ed1a88e333fb88bcedef41}{
+\index{mdp\_\-array@{mdp\_\-array}!mdp\_\-array@{mdp\_\-array}}
+\index{mdp\_\-array@{mdp\_\-array}!mdp_array@{mdp\_\-array}}
+\subsubsection[{mdp\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf mdp\_\-array}$<$ T, nc\_\- $>$::{\bf mdp\_\-array} (const {\bf uint} {\em c0\_\-} = {\ttfamily 1}, \/  const {\bf uint} {\em c1\_\-} = {\ttfamily 1}, \/  const {\bf uint} {\em c2\_\-} = {\ttfamily 1}, \/  const {\bf uint} {\em c3\_\-} = {\ttfamily 1}, \/  const {\bf uint} {\em c4\_\-} = {\ttfamily 1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a231c442576ed1a88e333fb88bcedef41}
+\hypertarget{classmdp__array_a7bdd0c532c8517bf46bceab7c48f3186}{
+\index{mdp\_\-array@{mdp\_\-array}!mdp\_\-array@{mdp\_\-array}}
+\index{mdp\_\-array@{mdp\_\-array}!mdp_array@{mdp\_\-array}}
+\subsubsection[{mdp\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf mdp\_\-array}$<$ T, nc\_\- $>$::{\bf mdp\_\-array} (const {\bf uint} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a7bdd0c532c8517bf46bceab7c48f3186}
+\hypertarget{classmdp__array_abf3b0ca804544eac3be7d8e499eeb089}{
+\index{mdp\_\-array@{mdp\_\-array}!mdp\_\-array@{mdp\_\-array}}
+\index{mdp\_\-array@{mdp\_\-array}!mdp_array@{mdp\_\-array}}
+\subsubsection[{mdp\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf mdp\_\-array}$<$ T, nc\_\- $>$::{\bf mdp\_\-array} (const T $\ast$ {\em m0}, \/  const {\bf uint} {\em c0\_\-} = {\ttfamily 1}, \/  const {\bf uint} {\em c1\_\-} = {\ttfamily 1}, \/  const {\bf uint} {\em c2\_\-} = {\ttfamily 1}, \/  const {\bf uint} {\em c3\_\-} = {\ttfamily 1}, \/  const {\bf uint} {\em c4\_\-} = {\ttfamily 1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_abf3b0ca804544eac3be7d8e499eeb089}
+\hypertarget{classmdp__array_a1932c8ea14f2fc8cb7343f9834154521}{
+\index{mdp\_\-array@{mdp\_\-array}!mdp\_\-array@{mdp\_\-array}}
+\index{mdp\_\-array@{mdp\_\-array}!mdp_array@{mdp\_\-array}}
+\subsubsection[{mdp\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf mdp\_\-array}$<$ T, nc\_\- $>$::{\bf mdp\_\-array} (const T $\ast$ {\em m0}, \/  const {\bf uint} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a1932c8ea14f2fc8cb7343f9834154521}
+\hypertarget{classmdp__array_af266114d51b7b0e038cb555ba02d83d4}{
+\index{mdp\_\-array@{mdp\_\-array}!mdp\_\-array@{mdp\_\-array}}
+\index{mdp\_\-array@{mdp\_\-array}!mdp_array@{mdp\_\-array}}
+\subsubsection[{mdp\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf mdp\_\-array}$<$ T, nc\_\- $>$::{\bf mdp\_\-array} (const {\bf mdp\_\-array}$<$ T, nc\_\- $>$ \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_af266114d51b7b0e038cb555ba02d83d4}
+\hypertarget{classmdp__array_a962dc25e9c53d9f6e215b0ef952fc96b}{
+\index{mdp\_\-array@{mdp\_\-array}!$\sim$mdp\_\-array@{$\sim$mdp\_\-array}}
+\index{$\sim$mdp\_\-array@{$\sim$mdp\_\-array}!mdp_array@{mdp\_\-array}}
+\subsubsection[{$\sim$mdp\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ virtual {\bf mdp\_\-array}$<$ T, nc\_\- $>$::$\sim${\bf mdp\_\-array} ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmdp__array_a962dc25e9c53d9f6e215b0ef952fc96b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__array_a9b5419e65691954be0a3b6598a47366a}{
+\index{mdp\_\-array@{mdp\_\-array}!address@{address}}
+\index{address@{address}!mdp_array@{mdp\_\-array}}
+\subsubsection[{address}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ T$\ast$ {\bf mdp\_\-array}$<$ T, nc\_\- $>$::address ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a9b5419e65691954be0a3b6598a47366a}
+\hypertarget{classmdp__array_a816b392dd8ab232c18818e6f186127aa}{
+\index{mdp\_\-array@{mdp\_\-array}!dimension@{dimension}}
+\index{dimension@{dimension}!mdp_array@{mdp\_\-array}}
+\subsubsection[{dimension}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ void {\bf mdp\_\-array}$<$ T, nc\_\- $>$::dimension (const {\bf uint} {\em c0\_\-} = {\ttfamily 1}, \/  const {\bf uint} {\em c1\_\-} = {\ttfamily 1}, \/  const {\bf uint} {\em c2\_\-} = {\ttfamily 1}, \/  const {\bf uint} {\em c3\_\-} = {\ttfamily 1}, \/  const {\bf uint} {\em c4\_\-} = {\ttfamily 1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a816b392dd8ab232c18818e6f186127aa}
+\hypertarget{classmdp__array_a6a3d01021b01c27ea0a0cf43dd442ad5}{
+\index{mdp\_\-array@{mdp\_\-array}!dimension@{dimension}}
+\index{dimension@{dimension}!mdp_array@{mdp\_\-array}}
+\subsubsection[{dimension}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ void {\bf mdp\_\-array}$<$ T, nc\_\- $>$::dimension (const {\bf uint} $\ast$ {\em p})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a6a3d01021b01c27ea0a0cf43dd442ad5}
+\hypertarget{classmdp__array_a5e8cd60cd274b3a0e9835b66c6d430e6}{
+\index{mdp\_\-array@{mdp\_\-array}!length@{length}}
+\index{length@{length}!mdp_array@{mdp\_\-array}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf uint} {\bf mdp\_\-array}$<$ T, nc\_\- $>$::length () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a5e8cd60cd274b3a0e9835b66c6d430e6}
+\hypertarget{classmdp__array_a4856c3ff5dbeeb3479a531e0c505559f}{
+\index{mdp\_\-array@{mdp\_\-array}!length@{length}}
+\index{length@{length}!mdp_array@{mdp\_\-array}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf uint} {\bf mdp\_\-array}$<$ T, nc\_\- $>$::length (const {\bf uint} {\em i}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a4856c3ff5dbeeb3479a531e0c505559f}
+\hypertarget{classmdp__array_a20f4c81199739f0465af62c811cd60b7}{
+\index{mdp\_\-array@{mdp\_\-array}!ndim@{ndim}}
+\index{ndim@{ndim}!mdp_array@{mdp\_\-array}}
+\subsubsection[{ndim}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ const int\& {\bf mdp\_\-array}$<$ T, nc\_\- $>$::ndim () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a20f4c81199739f0465af62c811cd60b7}
+\hypertarget{classmdp__array_a9ddceeb1b33b80495ef45afb812c0012}{
+\index{mdp\_\-array@{mdp\_\-array}!operator()@{operator()}}
+\index{operator()@{operator()}!mdp_array@{mdp\_\-array}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ const T\& {\bf mdp\_\-array}$<$ T, nc\_\- $>$::operator() (const {\bf uint} {\em i0}, \/  const {\bf uint} {\em i1} = {\ttfamily 0}, \/  const {\bf uint} {\em i2} = {\ttfamily 0}, \/  const {\bf uint} {\em i3} = {\ttfamily 0}, \/  const {\bf uint} {\em i4} = {\ttfamily 0}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a9ddceeb1b33b80495ef45afb812c0012}
+\hypertarget{classmdp__array_a9e3a7e699387fb78562fb8d9c9ebea57}{
+\index{mdp\_\-array@{mdp\_\-array}!operator()@{operator()}}
+\index{operator()@{operator()}!mdp_array@{mdp\_\-array}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ T\& {\bf mdp\_\-array}$<$ T, nc\_\- $>$::operator() (const {\bf uint} {\em i0}, \/  const {\bf uint} {\em i1} = {\ttfamily 0}, \/  const {\bf uint} {\em i2} = {\ttfamily 0}, \/  const {\bf uint} {\em i3} = {\ttfamily 0}, \/  const {\bf uint} {\em i4} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a9e3a7e699387fb78562fb8d9c9ebea57}
+\hypertarget{classmdp__array_a8f439abc20da235f12cd5d0ab4d7b56b}{
+\index{mdp\_\-array@{mdp\_\-array}!operator=@{operator=}}
+\index{operator=@{operator=}!mdp_array@{mdp\_\-array}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ void {\bf mdp\_\-array}$<$ T, nc\_\- $>$::operator= (const {\bf mdp\_\-array}$<$ T, nc\_\- $>$ \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a8f439abc20da235f12cd5d0ab4d7b56b}
+\hypertarget{classmdp__array_a7c6f82ec888e82f3743529ac25d42627}{
+\index{mdp\_\-array@{mdp\_\-array}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!mdp_array@{mdp\_\-array}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ const T\& {\bf mdp\_\-array}$<$ T, nc\_\- $>$::operator\mbox{[}$\,$\mbox{]} (const {\bf uint} {\em i}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a7c6f82ec888e82f3743529ac25d42627}
+\hypertarget{classmdp__array_acc0201400e730c01bd131696ff206aa6}{
+\index{mdp\_\-array@{mdp\_\-array}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!mdp_array@{mdp\_\-array}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ T\& {\bf mdp\_\-array}$<$ T, nc\_\- $>$::operator\mbox{[}$\,$\mbox{]} (const {\bf uint} {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_acc0201400e730c01bd131696ff206aa6}
+\hypertarget{classmdp__array_a236c3497ad1e959070836746302448e8}{
+\index{mdp\_\-array@{mdp\_\-array}!size@{size}}
+\index{size@{size}!mdp_array@{mdp\_\-array}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf uint} {\bf mdp\_\-array}$<$ T, nc\_\- $>$::size () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_a236c3497ad1e959070836746302448e8}
+\hypertarget{classmdp__array_adf2fd9006ccac4f6b1365d4018f3e513}{
+\index{mdp\_\-array@{mdp\_\-array}!size@{size}}
+\index{size@{size}!mdp_array@{mdp\_\-array}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf uint} {\bf mdp\_\-array}$<$ T, nc\_\- $>$::size ({\bf uint} {\em i}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_adf2fd9006ccac4f6b1365d4018f3e513}
+\hypertarget{classmdp__array_aee0c0b97d3f8bb9d3f8ecedb77d14e6d}{
+\index{mdp\_\-array@{mdp\_\-array}!size\_\-address@{size\_\-address}}
+\index{size\_\-address@{size\_\-address}!mdp_array@{mdp\_\-array}}
+\subsubsection[{size\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf uint}$\ast$ {\bf mdp\_\-array}$<$ T, nc\_\- $>$::size\_\-address ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__array_aee0c0b97d3f8bb9d3f8ecedb77d14e6d}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classmdp__array_af47ee2aa085a0ca303f6eb960be0b257}{
+\index{mdp\_\-array@{mdp\_\-array}!applytoall@{applytoall}}
+\index{applytoall@{applytoall}!mdp_array@{mdp\_\-array}}
+\subsubsection[{applytoall}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf mdp\_\-array} applytoall (const {\bf mdp\_\-array}$<$ T, nc\_\- $>$ \& {\em a}, \/  const {\bf mdp\_\-array}$<$ T, nc\_\- $>$ \& {\em b}, \/  T($\ast$)(T, T, void $\ast$) {\em fptr}, \/  void $\ast$ {\em x} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__array_af47ee2aa085a0ca303f6eb960be0b257}
+\hypertarget{classmdp__array_a720a0f3e6c74893b0bb90ddb85e2c7cf}{
+\index{mdp\_\-array@{mdp\_\-array}!applytoall@{applytoall}}
+\index{applytoall@{applytoall}!mdp_array@{mdp\_\-array}}
+\subsubsection[{applytoall}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf mdp\_\-array} applytoall (const {\bf mdp\_\-array}$<$ T, nc\_\- $>$ \& {\em a}, \/  T($\ast$)(T, void $\ast$) {\em fptr}, \/  void $\ast$ {\em x} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__array_a720a0f3e6c74893b0bb90ddb85e2c7cf}
+\hypertarget{classmdp__array_a153656d696c7d05f5e61deb324e93132}{
+\index{mdp\_\-array@{mdp\_\-array}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!mdp_array@{mdp\_\-array}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ template$<$class T2 $>$ {\bf mdp\_\-array} operator$\ast$ (T2 {\em x}, \/  const {\bf mdp\_\-array}$<$ T, nc\_\- $>$ \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__array_a153656d696c7d05f5e61deb324e93132}
+\hypertarget{classmdp__array_a0456c0c6d5e305cc0799ceb7b8639539}{
+\index{mdp\_\-array@{mdp\_\-array}!operator+@{operator+}}
+\index{operator+@{operator+}!mdp_array@{mdp\_\-array}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf mdp\_\-array} operator+ (const {\bf mdp\_\-array}$<$ T, nc\_\- $>$ \& {\em a}, \/  const {\bf mdp\_\-array}$<$ T, nc\_\- $>$ \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__array_a0456c0c6d5e305cc0799ceb7b8639539}
+\hypertarget{classmdp__array_a97528690c485585f95cfad74e934e621}{
+\index{mdp\_\-array@{mdp\_\-array}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!mdp_array@{mdp\_\-array}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ {\bf mdp\_\-array} operator-\/ (const {\bf mdp\_\-array}$<$ T, nc\_\- $>$ \& {\em a}, \/  const {\bf mdp\_\-array}$<$ T, nc\_\- $>$ \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__array_a97528690c485585f95cfad74e934e621}
+\hypertarget{classmdp__array_a5b84c698961f9276308a57923daf4458}{
+\index{mdp\_\-array@{mdp\_\-array}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!mdp_array@{mdp\_\-array}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf mdp\_\-array}$<$ T, nc\_\- $>$ \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__array_a5b84c698961f9276308a57923daf4458}
+\hypertarget{classmdp__array_a7c12113e8b61f3906ff4d15a6cc10fe2}{
+\index{mdp\_\-array@{mdp\_\-array}!prepare@{prepare}}
+\index{prepare@{prepare}!mdp_array@{mdp\_\-array}}
+\subsubsection[{prepare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, uint nc\_\-$>$ void prepare (const {\bf mdp\_\-array}$<$ T, nc\_\- $>$ \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__array_a7c12113e8b61f3906ff4d15a6cc10fe2}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__array_8h}{mdp\_\-array.h}\end{DoxyCompactItemize}

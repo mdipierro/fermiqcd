@@ -1,0 +1,357 @@
+from optparse import *
+import numpy
+from scipy import stats
+import wx
+from matplotlib.axes import Subplot
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_agg import FigureCanvasAgg
+from matplotlib.backends.backend_ps import FigureCanvasPS
+from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg as \
+        FigureCanvasWx, NavigationToolbar2WxAgg as NavigationToolbar2Wx
+from matplotlib.colors import ColorConverter
+from matplotlib.colors import rgb2hex
+
+#from rpy import *
+import re, csv
+
+usage = "python iplot.py\n" \
+
+version = "iplotv1.0" \
+          "\n  Copyright (c) 2007 Massimo Di Pierro" \
+	  "\n  All rights reserved" \
+          "\n  License: GPL 3.0" \
+	  "\n\n  Written by Massimo Di Pierro <mdipierro@cs.depaul.edu>"
+
+description = "plot the output of ibootstrap.py"
+
+#r.library('Hmisc')
+
+def clean(text):
+    return re.sub('\W','',text)
+
+def get_name(filename):
+    return filename[:-4].replace('ibootstrap_','')
+
+def gen_plot(figure, plot_args):
+    figure.clear()
+    plot = plot_args[0](figure, *plot_args[1])
+    figure.add_subplot(plot, 111)
+    return plot
+
+def csv_items(filename):
+    return csv.reader(open(filename,'r'),delimiter=',', \
+            quoting=csv.QUOTE_NONNUMERIC)
+
+# Notice that I defer the actual generation of the plots, and just pass
+# along the function used to make them, along with some arguments. By convention
+# it is assumed the function takes a matplotlib figure, then those arguments.
+# Using a lambda would have been nicer, however due to the semantics of python
+# loops, specifically writing over the loop variables, by the time the lambda
+# was called many of its closure variables were overwritten
+
+class IPlot:
+    def __init__(self,filename,plot_type,items=[],output_prefix=''):
+        self.type=plot_type
+
+        self.output_prefix = output_prefix
+        self.figure = Figure((8.5, 11))
+        #self.figure = Figure((8.3,11.7))
+        if plot_type=='png':
+            self.canvas = FigureCanvasAgg(self.figure)
+            self.extension = '.png'
+        else:
+            self.canvas = FigureCanvasPS(self.figure)
+            self.extension = '.ps'
+        self.plots = {}
+
+        #if self.type=='quartz': r.quartz()
+	self.plot_raw_data(filename+'_raw_data.csv')
+        #self.plot_trails(filename+'_autocorrelations.csv')        
+        self.plot_trails(filename+'_trails.csv')
+	self.plot_samples(filename+'_samples.csv')
+	self.plot_min_mean_max(filename+'_min_mean_max.csv',items)
+        self.figure.clear()
+
+    def print_all(self):
+        def print_dict(d):
+            for name, val in d.items():
+                if isinstance(val, dict):
+                    print_dict(val)
+                else:
+                    self.print_plot(name, val)
+        print_dict(self.plots)
+
+    def print_plot(self, name, plot_args):
+        plot = gen_plot(self.figure, plot_args)
+        fname = self.output_prefix + name + self.extension
+        self.canvas.print_figure(fname, 72)
+        return fname
+
+    def setup_plot(self, figure, name, xlabel, ylabel):
+        plot = Subplot(figure, 111, axisbg='white', frameon='False')
+        #plot.set_axis_bg_color('#000000')
+        plot.set_title(name)
+        plot.set_xlabel(xlabel)
+        plot.set_ylabel(ylabel)
+        return plot
+
+    def make_error_bar(self,figure, name, xdata, ydata, errors, xlabel, ylabel):
+        plot = self.setup_plot(figure, name, xlabel, ylabel)
+        plot.errorbar(xdata, ydata, errors, fmt='ko', \
+                markerfacecolor=None)
+        return plot
+
+    def make_hist(self, figure, name, data, length, xlabel='x', ylabel='y'): # prob='T'
+        # be sure to add a 'rug', whatever that is
+        plot = self.setup_plot(figure, name, xlabel, ylabel)
+        plot.hist(data, length, facecolor='w', edgecolor='k')
+        return plot
+        #plot.set_xticks(data) # was not a good 'rug'
+
+    def make_plot(self, figure, name, xdata, ydata, xlabel='x', ylabel='y'): # type='p'
+        plot = self.setup_plot(figure, name, xlabel, ylabel)
+        plot.plot(xdata, ydata, 'k-', markerfacecolor=None)
+        return plot
+
+    def plot_raw_data(self,filename):
+        quants = {}
+        prefix = get_name(filename)
+        self.plots[prefix] = quants
+        for items in csv_items(filename):
+           plots = {}
+	   tag=items[0]
+
+           quants[prefix + '_' + tag] = plots
+
+           data=items[1:]
+           name = prefix + '_%s' % clean(tag)
+           plots[name] = self.make_plot, (name, range(len(data)), data, \
+                   'step', tag)
+           name = prefix +'_%s_hist' % clean(tag)
+           plots[name] = \
+                   self.make_hist, (name, data, len(data)/20, tag, \
+                        'frequency')
+           probs = []
+	   mu=numpy.mean(data)
+	   sd=numpy.std(data)
+           probs=[min(x,1-x) for x in [stats.norm.cdf((x-mu)/sd) for x in data]]
+           name = prefix + '_%s_probability' % clean(tag)
+           plots[name] = self.make_plot, (name, range(len(probs)), probs, \
+                   "step", "probability "+tag)
+
+    def plot_trails(self,filename):
+        quants = {}
+        prefix = get_name(filename)
+        self.plots[prefix] = quants
+	for items in csv_items(filename):
+	   tag=items[0]
+	   data=items[1:]
+           name = prefix + '_%s' % clean(tag)
+           quants[name] = self.make_plot, (name, range(len(data)), data, \
+                   'step', tag)
+
+    def plot_samples(self,filename):
+        quants = {}
+        prefix = get_name(filename)        
+        self.plots[prefix] = quants
+        for items in csv_items(filename):
+	   tag=items[0]
+	   data=items[1:]
+           name = prefix + '_%s_hist' % clean(tag)
+           quants[name] = self.make_hist, (name, data, len(data)/10, tag, \
+                   'frequency')
+	   #self.begin(filename[:-4]+'_%s_qq.ps' % clean(tag))
+	   #r.qqnorm(data,xlab=tag+' quantiles',main='')
+	   #r.qqline(data)
+	   #self.end()
+
+    def plot_min_mean_max(self,filename,xlab=['t']):
+	lines=list(csv_items(filename))
+	tags=lines[0] 
+	if not xlab or xlab[0]=='': xlab=[tags[1]]
+	index=-1
+	for i in range(1,len(tags)-3):
+	    if tags[i]==xlab[0]: index=i-1
+	if index<0:
+	    print 'error',xlab
+	    raise Exception
+	sets={}
+	for items in lines[1:]:
+	   tag=items[0]
+	   data=items[1:] 
+	   legend=""
+	   for i in range(1,len(tags)-3):
+	       if not tags[i] in xlab: legend+="%s=%g " % (tags[i],data[i-1])
+	   if not sets.has_key(legend):
+	       x,y,yminus,yplus=[],[],[],[]
+	       sets[legend]=(x,y,yminus,yplus)
+	   else:
+	       x,y,yminus,yplus=sets[legend]
+	   t=data[index]
+	   x.append(t)
+	   y.append(data[-2])
+	   yminus.append(data[-3])
+	   yplus.append(data[-1])
+	#v=r.FALSE
+        quants = {}
+        prefix = get_name(filename)        
+        self.plots[prefix] = quants
+	for legend in sets.keys():
+	   x,y,yminus,yplus=sets[legend]
+           # matplotlib takes offsets for errors, not absolute y positions
+           error_low = numpy.subtract(y, yminus)
+           error_high = numpy.subtract(yplus, y)
+           name = prefix +'_%s' % clean(legend)
+           quants[name] = self.make_error_bar, (name, x, y, [error_low, \
+                   error_high], tags[index+1], tags[0])
+	   #v=r.TRUE
+  
+def make_menu(iplot):
+    app = wx.PySimpleApp()
+    root = wx.Frame(None, -1, 'Iplot', size=(650, 100))
+
+    def to_wx_color(string_color):
+        rgb = ColorConverter().to_rgb(string_color)
+        return wx.Color(*[x * 255 for x in rgb])
+    def to_mpl_color(wxcolor):
+        return rgb2hex([float(x)/255.0 for x in wxcolor.Get()])
+
+    def show_plot(name, plot_args):
+        pwin = wx.Frame(root, -1, name)
+
+        print name
+        #iplot.figure.clear() #delaxes(plot)
+        figure = Figure(facecolor='#ffffff')
+        plot = gen_plot(figure, plot_args)
+        
+        #iplot.figure.clear()
+        #iplot.figure.add_axes(plot)
+
+        frame_box = wx.BoxSizer(wx.VERTICAL)
+        pwin.SetSizer(frame_box)
+
+        graph_panel = wx.Panel(pwin, -1, style=wx.SUNKEN_BORDER)
+        graph_vbox = wx.BoxSizer(wx.VERTICAL)
+        graph_panel.SetSizer(graph_vbox)
+
+        canvas = FigureCanvasWx(graph_panel, -1, figure)
+        canvas.draw()
+        graph_vbox.Add(canvas, 1, wx.ALL | wx.EXPAND)
+
+        toolbar = NavigationToolbar2Wx(canvas)
+        toolbar.Realize()
+        graph_vbox.Add(toolbar, 0, wx.LEFT | wx.EXPAND)
+        toolbar.update()
+        
+        edit_panel = wx.Panel(pwin, -1, style=wx.SUNKEN_BORDER)
+        edit_box = wx.GridSizer(4, 2)
+        edit_panel.SetSizer(edit_box)
+
+        grid_items = []
+        def make_entry(name, default, row):
+            grid_items.append((wx.StaticText(edit_panel, -1, name), 0, 0))
+            id = wx.NewId()
+            entry = wx.TextCtrl(edit_panel, id, default) #, size=(150, -1))
+            grid_items.append((entry, 1, wx.RIGHT | wx.EXPAND))
+            return entry
+        def set_attributes(*args):
+            plot.set_xlabel(xlabel_entry.GetValue())
+            plot.set_ylabel(ylabel_entry.GetValue())
+            plot.set_title(title_entry.GetValue())
+            plot.set_axis_bgcolor(background_entry.GetValue())
+            figure.set_facecolor(background_entry.GetValue())
+            canvas.draw()
+        
+        xlabel_entry = make_entry("X-Label", plot.xaxis.label.get_text(), 1)
+        ylabel_entry = make_entry("Y-Label", plot.yaxis.label.get_text(), 2)
+        title_entry = make_entry("Title", plot.title.get_text(), 3)
+        background_entry = make_entry("Background Color", \
+                plot.get_axis_bgcolor(), 4)
+        
+        def color_dialog(*args):
+            try:
+                wxcolor = to_wx_color(background_entry.GetValue())
+            except:
+                wxcolor = to_wx_color(plot.get_axis_bgcolor())
+            cdialog = wx.ColourDialog(None)
+            cdialog.GetColourData().SetColour(wxcolor)
+            if cdialog.ShowModal() == wx.ID_OK:
+                rgb = to_mpl_color(cdialog.GetColourData().GetColour())
+                background_entry.SetValue(rgb)
+         
+        id = wx.NewId()       
+        button = wx.Button(edit_panel, id, 'Color Select')
+        pwin.Bind(wx.EVT_BUTTON, color_dialog, id=id)
+        grid_items.append(button)
+        
+        id = wx.NewId()
+        button = wx.Button(edit_panel, id, 'Set')
+        pwin.Bind(wx.EVT_BUTTON, set_attributes, id=id)
+        grid_items.append(button)
+        edit_box.AddMany(grid_items)
+
+        frame_box.Add(edit_panel, 0, wx.RIGHT | wx.EXPAND, 5)
+        frame_box.Add(graph_panel, 1, wx.ALL | wx.EXPAND, 5)
+
+        pwin.Show(True)
+        pwin.Fit()
+
+    def bind_plot_menu(name, value, id):
+        root.Bind(wx.EVT_MENU, lambda e: show_plot(name, value), id=id)        
+
+    def set_menu(menu, d):
+        for name, val in d.items():
+            id = wx.NewId()
+            if isinstance(val, wx.Menu):
+                menu.AppendMenu(id, name, val)
+            else:
+                menu.Append(id, name)
+                bind_plot_menu(name, val, id)
+                #root.Bind(wx.EVT_MENU, lambda e: show_plot(name, val), id=id)
+
+    def make_dict_menu(d):
+        items = {}
+        for name, val in d.items():
+            if isinstance(val, dict):
+                submenu_items = make_dict_menu(val)
+                submenu = wx.Menu()
+                set_menu(submenu, submenu_items)
+                items[name] = submenu
+            else:
+                items[name] = val
+        return items
+
+    menu_items = make_dict_menu(iplot.plots)
+    menubar = wx.MenuBar()
+    for name, val in menu_items.items():
+        menubar.Append(val, name)
+    root.SetMenuBar(menubar)
+
+    root.Fit()
+    root.Show(True)
+    
+    app.MainLoop()
+
+def shell_iplot():
+    parser=OptionParser(usage,None,Option,version)
+    parser.description=description
+    parser.add_option('-d','--dest_prefix', default='', \
+            dest='dest_prefix', \
+	    help='the prefix used to build output filenames')
+    parser.add_option('-o','--origin_prefix', default='ibootstrap', \
+            dest='origin_prefix',
+	    help='the prefix used to build input filenames')
+    parser.add_option('-p','--plot_type',default='ps',dest='plot_type',
+		      help='ps or png')
+    parser.add_option('-v','--plot_variables',default='',dest='plot_variables',
+		      help='plotting variables')
+    parser.add_option('-b','--batch',default=False, action='store_true',
+            dest='batch', help='Batch print all plots')
+    (options, args) = parser.parse_args()
+    iplot=IPlot(options.origin_prefix,options.plot_type,options.plot_variables.split(','), output_prefix=options.dest_prefix)
+    if options.batch:
+        iplot.print_all()
+    else:
+        make_menu(iplot)
+
+if __name__=='__main__': shell_iplot()

@@ -1,0 +1,72 @@
+\hypertarget{fermiqcd__gauge__routines_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-gauge\_\-routines.h File Reference}
+\label{fermiqcd__gauge__routines_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-gauge\_\-routines.h@{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-gauge\_\-routines.h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{fermiqcd__gauge__routines_8h_ae0a67cc3f11d5b362a68f05242dc061c}{staple} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, register site x, int mu, int s1, int nu)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{fermiqcd__gauge__routines_8h_a3bbdef50eb32ff0cec7185cba3e7c4a1}{staple} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, register site x, int mu)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{fermiqcd__gauge__routines_8h_a164fe13abf9e8ffc442c02da0770d793}{staple\_\-H} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, register site x, int mu, int s1, int nu)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{fermiqcd__gauge__routines_8h_a2dd46dfeb89096fae5ba7fffc5f17518}{staple\_\-H} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, register site x, int mu)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{fermiqcd__gauge__routines_8h_a2e74ad13f9da672e9f206f2233d7bae5}{staple\_\-0i\_\-H} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, register site x, int mu)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{fermiqcd__gauge__routines_8h_af0f74053e5854ce7fd8ab648dd0f51ce}{staple\_\-ij\_\-H} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, register site x, int mu)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{fermiqcd__gauge__routines_8h_a6aef9b7f54849ddd5fab98fbb3ac4c61}{plaquette} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, site x, int mu, int nu)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+Various gauge multiplication routines (some call SSE/SSE2 macors)
+
+Distributed under GPL2 License
+
+Created with support from the US Department of Energy 
+
+\subsection{Function Documentation}
+\hypertarget{fermiqcd__gauge__routines_8h_a6aef9b7f54849ddd5fab98fbb3ac4c61}{
+\index{fermiqcd\_\-gauge\_\-routines.h@{fermiqcd\_\-gauge\_\-routines.h}!plaquette@{plaquette}}
+\index{plaquette@{plaquette}!fermiqcd_gauge_routines.h@{fermiqcd\_\-gauge\_\-routines.h}}
+\subsubsection[{plaquette}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} plaquette ({\bf gauge\_\-field} \& {\em U}, \/  site {\em x}, \/  int {\em mu}, \/  int {\em nu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{fermiqcd__gauge__routines_8h_a6aef9b7f54849ddd5fab98fbb3ac4c61}
+\hypertarget{fermiqcd__gauge__routines_8h_a3bbdef50eb32ff0cec7185cba3e7c4a1}{
+\index{fermiqcd\_\-gauge\_\-routines.h@{fermiqcd\_\-gauge\_\-routines.h}!staple@{staple}}
+\index{staple@{staple}!fermiqcd_gauge_routines.h@{fermiqcd\_\-gauge\_\-routines.h}}
+\subsubsection[{staple}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} staple ({\bf gauge\_\-field} \& {\em U}, \/  register site {\em x}, \/  int {\em mu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{fermiqcd__gauge__routines_8h_a3bbdef50eb32ff0cec7185cba3e7c4a1}
+\hypertarget{fermiqcd__gauge__routines_8h_ae0a67cc3f11d5b362a68f05242dc061c}{
+\index{fermiqcd\_\-gauge\_\-routines.h@{fermiqcd\_\-gauge\_\-routines.h}!staple@{staple}}
+\index{staple@{staple}!fermiqcd_gauge_routines.h@{fermiqcd\_\-gauge\_\-routines.h}}
+\subsubsection[{staple}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} staple ({\bf gauge\_\-field} \& {\em U}, \/  register site {\em x}, \/  int {\em mu}, \/  int {\em s1}, \/  int {\em nu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{fermiqcd__gauge__routines_8h_ae0a67cc3f11d5b362a68f05242dc061c}
+\hypertarget{fermiqcd__gauge__routines_8h_a2e74ad13f9da672e9f206f2233d7bae5}{
+\index{fermiqcd\_\-gauge\_\-routines.h@{fermiqcd\_\-gauge\_\-routines.h}!staple\_\-0i\_\-H@{staple\_\-0i\_\-H}}
+\index{staple\_\-0i\_\-H@{staple\_\-0i\_\-H}!fermiqcd_gauge_routines.h@{fermiqcd\_\-gauge\_\-routines.h}}
+\subsubsection[{staple\_\-0i\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} staple\_\-0i\_\-H ({\bf gauge\_\-field} \& {\em U}, \/  register site {\em x}, \/  int {\em mu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{fermiqcd__gauge__routines_8h_a2e74ad13f9da672e9f206f2233d7bae5}
+\hypertarget{fermiqcd__gauge__routines_8h_a2dd46dfeb89096fae5ba7fffc5f17518}{
+\index{fermiqcd\_\-gauge\_\-routines.h@{fermiqcd\_\-gauge\_\-routines.h}!staple\_\-H@{staple\_\-H}}
+\index{staple\_\-H@{staple\_\-H}!fermiqcd_gauge_routines.h@{fermiqcd\_\-gauge\_\-routines.h}}
+\subsubsection[{staple\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} staple\_\-H ({\bf gauge\_\-field} \& {\em U}, \/  register site {\em x}, \/  int {\em mu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{fermiqcd__gauge__routines_8h_a2dd46dfeb89096fae5ba7fffc5f17518}
+\hypertarget{fermiqcd__gauge__routines_8h_a164fe13abf9e8ffc442c02da0770d793}{
+\index{fermiqcd\_\-gauge\_\-routines.h@{fermiqcd\_\-gauge\_\-routines.h}!staple\_\-H@{staple\_\-H}}
+\index{staple\_\-H@{staple\_\-H}!fermiqcd_gauge_routines.h@{fermiqcd\_\-gauge\_\-routines.h}}
+\subsubsection[{staple\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} staple\_\-H ({\bf gauge\_\-field} \& {\em U}, \/  register site {\em x}, \/  int {\em mu}, \/  int {\em s1}, \/  int {\em nu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{fermiqcd__gauge__routines_8h_a164fe13abf9e8ffc442c02da0770d793}
+\hypertarget{fermiqcd__gauge__routines_8h_af0f74053e5854ce7fd8ab648dd0f51ce}{
+\index{fermiqcd\_\-gauge\_\-routines.h@{fermiqcd\_\-gauge\_\-routines.h}!staple\_\-ij\_\-H@{staple\_\-ij\_\-H}}
+\index{staple\_\-ij\_\-H@{staple\_\-ij\_\-H}!fermiqcd_gauge_routines.h@{fermiqcd\_\-gauge\_\-routines.h}}
+\subsubsection[{staple\_\-ij\_\-H}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} staple\_\-ij\_\-H ({\bf gauge\_\-field} \& {\em U}, \/  register site {\em x}, \/  int {\em mu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{fermiqcd__gauge__routines_8h_af0f74053e5854ce7fd8ab648dd0f51ce}

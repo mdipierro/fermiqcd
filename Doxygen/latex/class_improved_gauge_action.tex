@@ -1,0 +1,60 @@
+\hypertarget{class_improved_gauge_action}{
+\section{ImprovedGaugeAction Class Reference}
+\label{class_improved_gauge_action}\index{ImprovedGaugeAction@{ImprovedGaugeAction}}
+}
+
+
+the $ O(a^2)$ Improved Gauge Action  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-gauge\_\-actions.h$>$}Inheritance diagram for ImprovedGaugeAction::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_improved_gauge_action}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classgauge__stats}{gauge\_\-stats} \hyperlink{class_improved_gauge_action_a02e55d57665313eb939b9b6e77697680}{heatbath} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, int n\_\-iter=1, string model=\char`\"{}MILC\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the $ O(a^2)$ Improved Gauge Action Example using the MILC improved action: \begin{DoxyVerb}
+///    int ns=2, steps=10;
+///    gauge_field U(lattice,nc);
+///    coefficients gauge;
+///    U.load("myfield.0000");
+///    gauge["beta"]=6.0;
+///    gauge["zeta"]=1.0; // MUST BE ONE
+///    gauge["u_t"]=1.0;
+///    gauge["u_s"]=1.0;
+///    ImprovedGaugeAction::heatbath(U,gauge,steps,"MILC");
+///    U.save("myfield.0001");
+/// \end{DoxyVerb}
+ Example using the Morningstar unisotropic improved action: \begin{DoxyVerb}
+///    int ns=2, steps=10;
+///    gauge_field U(lattice,nc);
+///    coefficients gauge;
+///    U.load("myfield.0000");
+///    gauge["beta"]=6.0;
+///    gauge["zeta"]=1.0; // CAN BE != ONE
+///    gauge["u_t"]=1.0;
+///    gauge["u_s"]=1.0;
+///    ImprovedGaugeAction::heatbath(U,gauge,steps,"Morningstar");
+///    U.save("myfield.0001");
+/// \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_improved_gauge_action_a02e55d57665313eb939b9b6e77697680}{
+\index{ImprovedGaugeAction@{ImprovedGaugeAction}!heatbath@{heatbath}}
+\index{heatbath@{heatbath}!ImprovedGaugeAction@{ImprovedGaugeAction}}
+\subsubsection[{heatbath}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf gauge\_\-stats} ImprovedGaugeAction::heatbath ({\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  int {\em n\_\-iter} = {\ttfamily 1}, \/  string {\em model} = {\ttfamily \char`\"{}MILC\char`\"{}})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_improved_gauge_action_a02e55d57665313eb939b9b6e77697680}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__gauge__actions_8h}{fermiqcd\_\-gauge\_\-actions.h}\end{DoxyCompactItemize}

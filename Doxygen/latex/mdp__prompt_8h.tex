@@ -1,0 +1,57 @@
+\hypertarget{mdp__prompt_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-prompt.h File Reference}
+\label{mdp__prompt_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-prompt.h@{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-prompt.h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{mdp__prompt_8h_ad9eac72f1798a5f9194af627e142f7de}{val} (string s)
+\begin{DoxyCompactList}\small\item\em Converts string to float. \item\end{DoxyCompactList}\item 
+string \hyperlink{mdp__prompt_8h_a185d711470749f7244a325d5733c76b6}{prompt} (string filename, string variable, string def\_\-val=\char`\"{}0.0\char`\"{}, int p=0)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \hyperlink{mdp__prompt_8h_adc73b39f019bc6e51a1e950c0ec4c12b}{STD\_\-INPUT} \mbox{[}$\,$\mbox{]} = \char`\"{}\char`\"{}
+\item 
+const char \hyperlink{mdp__prompt_8h_a5a6346026015cf75af067985daa3f27f}{STD\_\-INPUT\_\-FILE} \mbox{[}$\,$\mbox{]} = \char`\"{}$<$stdin$>$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+Functions to parse user input of parameters in a way safe to parallel programs
+
+Licensed under GPL2 license Read attached license in file mdp\_\-license.pdf This file cannot be distributed without file mdp\_\-license.pdf 
+
+\subsection{Function Documentation}
+\hypertarget{mdp__prompt_8h_a185d711470749f7244a325d5733c76b6}{
+\index{mdp\_\-prompt.h@{mdp\_\-prompt.h}!prompt@{prompt}}
+\index{prompt@{prompt}!mdp_prompt.h@{mdp\_\-prompt.h}}
+\subsubsection[{prompt}]{\setlength{\rightskip}{0pt plus 5cm}string prompt (string {\em filename}, \/  string {\em variable}, \/  string {\em def\_\-val} = {\ttfamily \char`\"{}0.0\char`\"{}}, \/  int {\em p} = {\ttfamily 0})}}
+\label{mdp__prompt_8h_a185d711470749f7244a325d5733c76b6}
+Try prompt(\char`\"{}$<$stdin$>$\char`\"{},\char`\"{}VALUE\char`\"{},\char`\"{}4.0\char`\"{}) It will prompt the user for variable VALUE and take 4.0 as default \hypertarget{mdp__prompt_8h_ad9eac72f1798a5f9194af627e142f7de}{
+\index{mdp\_\-prompt.h@{mdp\_\-prompt.h}!val@{val}}
+\index{val@{val}!mdp_prompt.h@{mdp\_\-prompt.h}}
+\subsubsection[{val}]{\setlength{\rightskip}{0pt plus 5cm}double val (string {\em s})}}
+\label{mdp__prompt_8h_ad9eac72f1798a5f9194af627e142f7de}
+
+
+Converts string to float. 
+
+\subsection{Variable Documentation}
+\hypertarget{mdp__prompt_8h_adc73b39f019bc6e51a1e950c0ec4c12b}{
+\index{mdp\_\-prompt.h@{mdp\_\-prompt.h}!STD\_\-INPUT@{STD\_\-INPUT}}
+\index{STD\_\-INPUT@{STD\_\-INPUT}!mdp_prompt.h@{mdp\_\-prompt.h}}
+\subsubsection[{STD\_\-INPUT}]{\setlength{\rightskip}{0pt plus 5cm}const char {\bf STD\_\-INPUT}\mbox{[}$\,$\mbox{]} = \char`\"{}\char`\"{}}}
+\label{mdp__prompt_8h_adc73b39f019bc6e51a1e950c0ec4c12b}
+\hypertarget{mdp__prompt_8h_a5a6346026015cf75af067985daa3f27f}{
+\index{mdp\_\-prompt.h@{mdp\_\-prompt.h}!STD\_\-INPUT\_\-FILE@{STD\_\-INPUT\_\-FILE}}
+\index{STD\_\-INPUT\_\-FILE@{STD\_\-INPUT\_\-FILE}!mdp_prompt.h@{mdp\_\-prompt.h}}
+\subsubsection[{STD\_\-INPUT\_\-FILE}]{\setlength{\rightskip}{0pt plus 5cm}const char {\bf STD\_\-INPUT\_\-FILE}\mbox{[}$\,$\mbox{]} = \char`\"{}$<$stdin$>$\char`\"{}}}
+\label{mdp__prompt_8h_a5a6346026015cf75af067985daa3f27f}

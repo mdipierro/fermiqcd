@@ -1,0 +1,549 @@
+\hypertarget{classmdp__matrix}{
+\section{mdp\_\-matrix Class Reference}
+\label{classmdp__matrix}\index{mdp\_\-matrix@{mdp\_\-matrix}}
+}
+
+
+matrices of complex numbers  
+
+
+{\ttfamily \#include $<$mdp\_\-matrix.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classmdp__matrix_a1a9cef75d472f8e7ab0665de46321030}{allocate} ()
+\item 
+void \hyperlink{classmdp__matrix_aae11eac9a3c0f2c0cc05450a67924cda}{reallocate} ()
+\item 
+void \hyperlink{classmdp__matrix_a37512f689166e890038ec9688d3a171e}{deallocate} ()
+\item 
+void \hyperlink{classmdp__matrix_a980d0f0a42bb19ba9135a0bf97d85c76}{dimension} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint})
+\item 
+\hyperlink{classmdp__matrix_a54b72b2aaf4630fce237604942cf6b3d}{mdp\_\-matrix} ()
+\item 
+\hyperlink{classmdp__matrix_a8f70e8e0ad282c3f9c83ff0550eda677}{mdp\_\-matrix} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix_a943b6d355ac862b8592648275ba1639f}{mdp\_\-matrix} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} r, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c)
+\item 
+\hyperlink{classmdp__matrix_a743bde7a120b947e065c8fd7b658b163}{mdp\_\-matrix} (\hyperlink{classmdp__complex}{mdp\_\-complex} $\ast$z, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} r, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} c)
+\item 
+virtual \hyperlink{classmdp__matrix_a5c20b7431f6da6f54c381331f8a09c44}{$\sim$mdp\_\-matrix} ()
+\item 
+const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \& \hyperlink{classmdp__matrix_a5746a4a6feeaca44c8c9a02bd21e9d57}{operator=} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classmdp__matrix_af6008a99ddef98e8bbd072f624206a18}{operator\mbox{[}$\,$\mbox{]}} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i)
+\item 
+const \hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classmdp__matrix_abbfeb632d8fbd7467350e02221fbc892}{operator\mbox{[}$\,$\mbox{]}} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i) const 
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classmdp__matrix_a820c578eaf97324bec338827db42b8e6}{operator()} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} j)
+\item 
+const \hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classmdp__matrix_a0081ae88c0b89ec503ff7fe37d40a76d}{operator()} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i, const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} j) const 
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_aef809061e550a0587af45e098810c95e}{operator()} (const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i)
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} $\ast$ \hyperlink{classmdp__matrix_a557c3deb958c09b99f045df8d41a506e}{address} ()
+\item 
+const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classmdp__matrix_a4df62af650e443ed541f87e1ff6579fe}{rows} () const 
+\item 
+const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classmdp__matrix_a432ee1e1596f14d6b5899f857f5989e6}{cols} () const 
+\item 
+const \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classmdp__matrix_a5b2edbb37f2d2b54804b4259969827b2}{size} () const 
+\item 
+\hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classmdp__matrix_a4c0ca28e65a33c17fe8de9a67b19604c}{rowmax} () const 
+\item 
+\hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} \hyperlink{classmdp__matrix_a006f666092b7aea1180728216474d13e}{colmax} () const 
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a44177e84f9b728933675f171ac481a1c}{operator+=} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_aaceb320e98a01a83350685591657861f}{operator-\/=} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a08052286856ff5fe01cc3cbad6553eb2}{operator$\ast$=} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a0c1945c09ca3bea26e1096253b49a25d}{operator/=} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a1021c838b49375a54f533fa97e27b742}{operator+=} (\hyperlink{classmdp__complex}{mdp\_\-complex} a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a5512747a08a90de54f0291bb86fd3b53}{operator-\/=} (\hyperlink{classmdp__complex}{mdp\_\-complex} a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_abbab629aca4a06ab60a40087c3ddfe78}{operator$\ast$=} (\hyperlink{classmdp__complex}{mdp\_\-complex} a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_aab26bb8bce6bb9f9207e2776297c1f8d}{operator/=} (\hyperlink{classmdp__complex}{mdp\_\-complex} a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_ae2bc2fbd5f22c9a5255995710ca30c35}{operator+=} (\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a2b4c3da54d025ee8d8b48acfc8cc4702}{operator-\/=} (\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_ae933b4a3f23b00dcd22f0fcf4c80379d}{operator$\ast$=} (\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_abc83a95f12ed5f697213cf9d812a99cd}{operator/=} (\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} a)
+\item 
+void \hyperlink{classmdp__matrix_a3d8e6aca507fe6daada3b337ba2e027e}{operator=} (\hyperlink{classmdp__complex}{mdp\_\-complex} a)
+\item 
+void \hyperlink{classmdp__matrix_a87d932535b5e5b0f28943a76a867d983}{operator=} (\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} a)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classmdp__matrix_a9b5dd55d85b884176c25b3f0967285f0}{prepare} (\hyperlink{classmdp__matrix}{mdp\_\-matrix} \&)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_ac277f7b8abb06215be34e3db82ff6c0a}{operator+} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a6861cfe08a2620bce0a79c2528721884}{operator-\/} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a17f483c5cf65d00c950c21fb7e467a71}{operator+} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a60f405280a02350fdc22b1b8b86712c6}{operator-\/} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_acf7cf6445d6a42f2aa791bc1088a816f}{operator$\ast$} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a9966401a50b7969c45d1fc3e3290f404}{operator/} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a9c3c774b4ef0650ed3ede792dd8b9bcc}{operator+} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, \hyperlink{classmdp__complex}{mdp\_\-complex} b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_ad5af014fcf319974b767e466ebbe0a41}{operator-\/} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, \hyperlink{classmdp__complex}{mdp\_\-complex} b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a0fc0749acc8f2a3f26f0daf14797a9e5}{operator$\ast$} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, \hyperlink{classmdp__complex}{mdp\_\-complex} b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_afaf1606b270d6b334329a5cdf9a1c959}{operator/} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, \hyperlink{classmdp__complex}{mdp\_\-complex} b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a179b66f81eb9cc41cf4e47424fbb043a}{operator+} (\hyperlink{classmdp__complex}{mdp\_\-complex} a, const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a505c39c420588b8e6d1071a01509ed43}{operator-\/} (\hyperlink{classmdp__complex}{mdp\_\-complex} a, const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a99f6d1150215e2cb7b00de4b6aa04633}{operator$\ast$} (\hyperlink{classmdp__complex}{mdp\_\-complex} a, const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a5a1dfe012e3c2ab574f2c60f943b36e3}{operator/} (\hyperlink{classmdp__complex}{mdp\_\-complex} a, const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a2e4fb3c9d1e2be0e26120a1947eb895a}{operator+} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_aa6a8885aa8604478e5e4481e1f10d700}{operator-\/} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a8edf780fc5b5509630fda4dba30c8b87}{operator$\ast$} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_af30fb437e246a2f03a7b9c22a0e6624a}{operator/} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_ace32cb8f1638c0ff6917045e2d10f467}{operator+} (\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} a, const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a0034bcdf68e3b07c30b406e046401937}{operator-\/} (\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} a, const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a0518710232891fb4bded31598cc6cd5e}{operator$\ast$} (\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} a, const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a78e9bd78d0aa894b75fa5e92e195d327}{operator/} (\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} a, const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a01d58a336c980c060907abb7141eedee}{inv} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_aed471057fee36406313f0d6db8469981}{pow} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} b)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_af3a316cad42444877d4ab7e2a72c37c7}{exp} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a173074a62f14de569920183069485652}{log} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_ae7a9b12e9cedc3d6f274c9fe9eb44332}{sin} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_aba32e6f9246f9ebad76f6b5c4e696cea}{cos} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a6b60fadcf53631a262b63ffb5f0f56ea}{mdp\_\-identity} ()
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a1ba8b1ac1136a436607d0f7815868508}{mdp\_\-zero} ()
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{classmdp__matrix_a91537cc4584a782ada453ae45843ec0f}{max} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a28a3f69388892b5b30aad614ed75e375}{submatrix} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a, \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} i, \hyperlink{mdp__global__vars_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint} j)
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \hyperlink{classmdp__matrix_aed4c7d1f4639e8a8e7e435a617d59080}{det} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \hyperlink{classmdp__matrix_a5336fdab3a6eaa9888c91833f251f4e0}{trace} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a351ca320380dbd121764fa96d4f0f711}{hermitian} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_a271d6793f4231f7b290179bff594e8d1}{transpose} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__matrix_ae0dd178eaad795af699d595ca0ef5c37}{conj} (const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+matrices of complex numbers Example: \begin{DoxyVerb}
+///    mdp_matrix A,B;
+///    A.dimension(3,3);
+///    A(0,0)=A(1,1)=A(2,2)=A(1,2)=1.0+I/2;
+///    B=A+inv(A)+exp(A+5);
+/// \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmdp__matrix_a54b72b2aaf4630fce237604942cf6b3d}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!mdp\_\-matrix@{mdp\_\-matrix}}
+\index{mdp\_\-matrix@{mdp\_\-matrix}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{mdp\_\-matrix}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-matrix::mdp\_\-matrix ()}}
+\label{classmdp__matrix_a54b72b2aaf4630fce237604942cf6b3d}
+\hypertarget{classmdp__matrix_a8f70e8e0ad282c3f9c83ff0550eda677}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!mdp\_\-matrix@{mdp\_\-matrix}}
+\index{mdp\_\-matrix@{mdp\_\-matrix}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{mdp\_\-matrix}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-matrix::mdp\_\-matrix (const {\bf mdp\_\-matrix} \& {\em a})}}
+\label{classmdp__matrix_a8f70e8e0ad282c3f9c83ff0550eda677}
+\hypertarget{classmdp__matrix_a943b6d355ac862b8592648275ba1639f}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!mdp\_\-matrix@{mdp\_\-matrix}}
+\index{mdp\_\-matrix@{mdp\_\-matrix}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{mdp\_\-matrix}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-matrix::mdp\_\-matrix (const {\bf uint} {\em r}, \/  const {\bf uint} {\em c})}}
+\label{classmdp__matrix_a943b6d355ac862b8592648275ba1639f}
+\hypertarget{classmdp__matrix_a743bde7a120b947e065c8fd7b658b163}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!mdp\_\-matrix@{mdp\_\-matrix}}
+\index{mdp\_\-matrix@{mdp\_\-matrix}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{mdp\_\-matrix}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-matrix::mdp\_\-matrix ({\bf mdp\_\-complex} $\ast$ {\em z}, \/  const {\bf uint} {\em r}, \/  const {\bf uint} {\em c})}}
+\label{classmdp__matrix_a743bde7a120b947e065c8fd7b658b163}
+\hypertarget{classmdp__matrix_a5c20b7431f6da6f54c381331f8a09c44}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!$\sim$mdp\_\-matrix@{$\sim$mdp\_\-matrix}}
+\index{$\sim$mdp\_\-matrix@{$\sim$mdp\_\-matrix}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{$\sim$mdp\_\-matrix}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-matrix::$\sim$mdp\_\-matrix ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classmdp__matrix_a5c20b7431f6da6f54c381331f8a09c44}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__matrix_a557c3deb958c09b99f045df8d41a506e}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!address@{address}}
+\index{address@{address}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex} $\ast$ mdp\_\-matrix::address ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a557c3deb958c09b99f045df8d41a506e}
+\hypertarget{classmdp__matrix_a1a9cef75d472f8e7ab0665de46321030}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!allocate@{allocate}}
+\index{allocate@{allocate}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{allocate}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-matrix::allocate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a1a9cef75d472f8e7ab0665de46321030}
+\hypertarget{classmdp__matrix_a006f666092b7aea1180728216474d13e}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!colmax@{colmax}}
+\index{colmax@{colmax}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{colmax}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} mdp\_\-matrix::colmax () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a006f666092b7aea1180728216474d13e}
+\hypertarget{classmdp__matrix_a432ee1e1596f14d6b5899f857f5989e6}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!cols@{cols}}
+\index{cols@{cols}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{cols}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} mdp\_\-matrix::cols () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a432ee1e1596f14d6b5899f857f5989e6}
+\hypertarget{classmdp__matrix_a37512f689166e890038ec9688d3a171e}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{deallocate}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-matrix::deallocate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a37512f689166e890038ec9688d3a171e}
+\hypertarget{classmdp__matrix_a980d0f0a42bb19ba9135a0bf97d85c76}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!dimension@{dimension}}
+\index{dimension@{dimension}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{dimension}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-matrix::dimension (const {\bf uint} {\em a}, \/  const {\bf uint} {\em b})}}
+\label{classmdp__matrix_a980d0f0a42bb19ba9135a0bf97d85c76}
+\hypertarget{classmdp__matrix_aef809061e550a0587af45e098810c95e}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix::operator() (const {\bf uint} {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_aef809061e550a0587af45e098810c95e}
+\hypertarget{classmdp__matrix_a0081ae88c0b89ec503ff7fe37d40a76d}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mdp\_\-complex} \& mdp\_\-matrix::operator() (const {\bf uint} {\em i}, \/  const {\bf uint} {\em j}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a0081ae88c0b89ec503ff7fe37d40a76d}
+\hypertarget{classmdp__matrix_a820c578eaf97324bec338827db42b8e6}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex} \& mdp\_\-matrix::operator() (const {\bf uint} {\em i}, \/  const {\bf uint} {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a820c578eaf97324bec338827db42b8e6}
+\hypertarget{classmdp__matrix_ae933b4a3f23b00dcd22f0fcf4c80379d}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix::operator$\ast$= ({\bf mdp\_\-real} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_ae933b4a3f23b00dcd22f0fcf4c80379d}
+\hypertarget{classmdp__matrix_abbab629aca4a06ab60a40087c3ddfe78}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix::operator$\ast$= ({\bf mdp\_\-complex} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_abbab629aca4a06ab60a40087c3ddfe78}
+\hypertarget{classmdp__matrix_a08052286856ff5fe01cc3cbad6553eb2}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix::operator$\ast$= (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a08052286856ff5fe01cc3cbad6553eb2}
+\hypertarget{classmdp__matrix_ae2bc2fbd5f22c9a5255995710ca30c35}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix::operator+= ({\bf mdp\_\-real} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_ae2bc2fbd5f22c9a5255995710ca30c35}
+\hypertarget{classmdp__matrix_a1021c838b49375a54f533fa97e27b742}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix::operator+= ({\bf mdp\_\-complex} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a1021c838b49375a54f533fa97e27b742}
+\hypertarget{classmdp__matrix_a44177e84f9b728933675f171ac481a1c}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix::operator+= (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a44177e84f9b728933675f171ac481a1c}
+\hypertarget{classmdp__matrix_a2b4c3da54d025ee8d8b48acfc8cc4702}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix::operator-\/= ({\bf mdp\_\-real} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a2b4c3da54d025ee8d8b48acfc8cc4702}
+\hypertarget{classmdp__matrix_a5512747a08a90de54f0291bb86fd3b53}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix::operator-\/= ({\bf mdp\_\-complex} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a5512747a08a90de54f0291bb86fd3b53}
+\hypertarget{classmdp__matrix_aaceb320e98a01a83350685591657861f}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix::operator-\/= (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_aaceb320e98a01a83350685591657861f}
+\hypertarget{classmdp__matrix_abc83a95f12ed5f697213cf9d812a99cd}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix::operator/= ({\bf mdp\_\-real} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_abc83a95f12ed5f697213cf9d812a99cd}
+\hypertarget{classmdp__matrix_aab26bb8bce6bb9f9207e2776297c1f8d}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix::operator/= ({\bf mdp\_\-complex} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_aab26bb8bce6bb9f9207e2776297c1f8d}
+\hypertarget{classmdp__matrix_a0c1945c09ca3bea26e1096253b49a25d}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-matrix::operator/= (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a0c1945c09ca3bea26e1096253b49a25d}
+\hypertarget{classmdp__matrix_a87d932535b5e5b0f28943a76a867d983}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-matrix::operator= ({\bf mdp\_\-real} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a87d932535b5e5b0f28943a76a867d983}
+\hypertarget{classmdp__matrix_a3d8e6aca507fe6daada3b337ba2e027e}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-matrix::operator= ({\bf mdp\_\-complex} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a3d8e6aca507fe6daada3b337ba2e027e}
+\hypertarget{classmdp__matrix_a5746a4a6feeaca44c8c9a02bd21e9d57}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mdp\_\-matrix} \& mdp\_\-matrix::operator= (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a5746a4a6feeaca44c8c9a02bd21e9d57}
+\hypertarget{classmdp__matrix_abbfeb632d8fbd7467350e02221fbc892}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mdp\_\-complex} \& mdp\_\-matrix::operator\mbox{[}$\,$\mbox{]} (const {\bf uint} {\em i}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_abbfeb632d8fbd7467350e02221fbc892}
+\hypertarget{classmdp__matrix_af6008a99ddef98e8bbd072f624206a18}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex} \& mdp\_\-matrix::operator\mbox{[}$\,$\mbox{]} (const {\bf uint} {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_af6008a99ddef98e8bbd072f624206a18}
+\hypertarget{classmdp__matrix_aae11eac9a3c0f2c0cc05450a67924cda}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!reallocate@{reallocate}}
+\index{reallocate@{reallocate}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{reallocate}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-matrix::reallocate ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_aae11eac9a3c0f2c0cc05450a67924cda}
+\hypertarget{classmdp__matrix_a4c0ca28e65a33c17fe8de9a67b19604c}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!rowmax@{rowmax}}
+\index{rowmax@{rowmax}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{rowmax}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint} mdp\_\-matrix::rowmax () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a4c0ca28e65a33c17fe8de9a67b19604c}
+\hypertarget{classmdp__matrix_a4df62af650e443ed541f87e1ff6579fe}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!rows@{rows}}
+\index{rows@{rows}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{rows}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} mdp\_\-matrix::rows () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a4df62af650e443ed541f87e1ff6579fe}
+\hypertarget{classmdp__matrix_a5b2edbb37f2d2b54804b4259969827b2}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!size@{size}}
+\index{size@{size}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint} mdp\_\-matrix::size () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__matrix_a5b2edbb37f2d2b54804b4259969827b2}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classmdp__matrix_ae0dd178eaad795af699d595ca0ef5c37}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!conj@{conj}}
+\index{conj@{conj}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{conj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} conj (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_ae0dd178eaad795af699d595ca0ef5c37}
+\hypertarget{classmdp__matrix_aba32e6f9246f9ebad76f6b5c4e696cea}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!cos@{cos}}
+\index{cos@{cos}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{cos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} cos (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_aba32e6f9246f9ebad76f6b5c4e696cea}
+\hypertarget{classmdp__matrix_aed4c7d1f4639e8a8e7e435a617d59080}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!det@{det}}
+\index{det@{det}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{det}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex} det (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_aed4c7d1f4639e8a8e7e435a617d59080}
+\hypertarget{classmdp__matrix_af3a316cad42444877d4ab7e2a72c37c7}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!exp@{exp}}
+\index{exp@{exp}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{exp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} exp (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_af3a316cad42444877d4ab7e2a72c37c7}
+\hypertarget{classmdp__matrix_a351ca320380dbd121764fa96d4f0f711}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!hermitian@{hermitian}}
+\index{hermitian@{hermitian}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{hermitian}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} hermitian (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a351ca320380dbd121764fa96d4f0f711}
+\hypertarget{classmdp__matrix_a01d58a336c980c060907abb7141eedee}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!inv@{inv}}
+\index{inv@{inv}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{inv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} inv (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a01d58a336c980c060907abb7141eedee}
+\hypertarget{classmdp__matrix_a173074a62f14de569920183069485652}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!log@{log}}
+\index{log@{log}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} log (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a173074a62f14de569920183069485652}
+\hypertarget{classmdp__matrix_a91537cc4584a782ada453ae45843ec0f}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!max@{max}}
+\index{max@{max}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{max}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-real} max (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a91537cc4584a782ada453ae45843ec0f}
+\hypertarget{classmdp__matrix_a6b60fadcf53631a262b63ffb5f0f56ea}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!mdp\_\-identity@{mdp\_\-identity}}
+\index{mdp\_\-identity@{mdp\_\-identity}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{mdp\_\-identity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-identity ()\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a6b60fadcf53631a262b63ffb5f0f56ea}
+\hypertarget{classmdp__matrix_a1ba8b1ac1136a436607d0f7815868508}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!mdp\_\-zero@{mdp\_\-zero}}
+\index{mdp\_\-zero@{mdp\_\-zero}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{mdp\_\-zero}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-zero ()\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a1ba8b1ac1136a436607d0f7815868508}
+\hypertarget{classmdp__matrix_a0518710232891fb4bded31598cc6cd5e}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator$\ast$ ({\bf mdp\_\-real} {\em a}, \/  const {\bf mdp\_\-matrix} \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a0518710232891fb4bded31598cc6cd5e}
+\hypertarget{classmdp__matrix_a8edf780fc5b5509630fda4dba30c8b87}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator$\ast$ (const {\bf mdp\_\-matrix} \& {\em a}, \/  {\bf mdp\_\-real} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a8edf780fc5b5509630fda4dba30c8b87}
+\hypertarget{classmdp__matrix_a99f6d1150215e2cb7b00de4b6aa04633}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator$\ast$ ({\bf mdp\_\-complex} {\em a}, \/  const {\bf mdp\_\-matrix} \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a99f6d1150215e2cb7b00de4b6aa04633}
+\hypertarget{classmdp__matrix_a0fc0749acc8f2a3f26f0daf14797a9e5}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator$\ast$ (const {\bf mdp\_\-matrix} \& {\em a}, \/  {\bf mdp\_\-complex} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a0fc0749acc8f2a3f26f0daf14797a9e5}
+\hypertarget{classmdp__matrix_acf7cf6445d6a42f2aa791bc1088a816f}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator$\ast$ (const {\bf mdp\_\-matrix} \& {\em a}, \/  const {\bf mdp\_\-matrix} \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_acf7cf6445d6a42f2aa791bc1088a816f}
+\hypertarget{classmdp__matrix_ace32cb8f1638c0ff6917045e2d10f467}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator+ ({\bf mdp\_\-real} {\em a}, \/  const {\bf mdp\_\-matrix} \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_ace32cb8f1638c0ff6917045e2d10f467}
+\hypertarget{classmdp__matrix_a2e4fb3c9d1e2be0e26120a1947eb895a}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator+ (const {\bf mdp\_\-matrix} \& {\em a}, \/  {\bf mdp\_\-real} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a2e4fb3c9d1e2be0e26120a1947eb895a}
+\hypertarget{classmdp__matrix_a179b66f81eb9cc41cf4e47424fbb043a}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator+ ({\bf mdp\_\-complex} {\em a}, \/  const {\bf mdp\_\-matrix} \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a179b66f81eb9cc41cf4e47424fbb043a}
+\hypertarget{classmdp__matrix_a9c3c774b4ef0650ed3ede792dd8b9bcc}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator+ (const {\bf mdp\_\-matrix} \& {\em a}, \/  {\bf mdp\_\-complex} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a9c3c774b4ef0650ed3ede792dd8b9bcc}
+\hypertarget{classmdp__matrix_a17f483c5cf65d00c950c21fb7e467a71}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator+ (const {\bf mdp\_\-matrix} \& {\em a}, \/  const {\bf mdp\_\-matrix} \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a17f483c5cf65d00c950c21fb7e467a71}
+\hypertarget{classmdp__matrix_ac277f7b8abb06215be34e3db82ff6c0a}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator+ (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_ac277f7b8abb06215be34e3db82ff6c0a}
+\hypertarget{classmdp__matrix_a0034bcdf68e3b07c30b406e046401937}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator-\/ ({\bf mdp\_\-real} {\em a}, \/  const {\bf mdp\_\-matrix} \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a0034bcdf68e3b07c30b406e046401937}
+\hypertarget{classmdp__matrix_aa6a8885aa8604478e5e4481e1f10d700}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator-\/ (const {\bf mdp\_\-matrix} \& {\em a}, \/  {\bf mdp\_\-real} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_aa6a8885aa8604478e5e4481e1f10d700}
+\hypertarget{classmdp__matrix_a505c39c420588b8e6d1071a01509ed43}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator-\/ ({\bf mdp\_\-complex} {\em a}, \/  const {\bf mdp\_\-matrix} \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a505c39c420588b8e6d1071a01509ed43}
+\hypertarget{classmdp__matrix_ad5af014fcf319974b767e466ebbe0a41}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator-\/ (const {\bf mdp\_\-matrix} \& {\em a}, \/  {\bf mdp\_\-complex} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_ad5af014fcf319974b767e466ebbe0a41}
+\hypertarget{classmdp__matrix_a60f405280a02350fdc22b1b8b86712c6}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator-\/ (const {\bf mdp\_\-matrix} \& {\em a}, \/  const {\bf mdp\_\-matrix} \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a60f405280a02350fdc22b1b8b86712c6}
+\hypertarget{classmdp__matrix_a6861cfe08a2620bce0a79c2528721884}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator-\/ (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a6861cfe08a2620bce0a79c2528721884}
+\hypertarget{classmdp__matrix_a78e9bd78d0aa894b75fa5e92e195d327}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator/@{operator/}}
+\index{operator/@{operator/}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator/ ({\bf mdp\_\-real} {\em a}, \/  const {\bf mdp\_\-matrix} \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a78e9bd78d0aa894b75fa5e92e195d327}
+\hypertarget{classmdp__matrix_af30fb437e246a2f03a7b9c22a0e6624a}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator/@{operator/}}
+\index{operator/@{operator/}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator/ (const {\bf mdp\_\-matrix} \& {\em a}, \/  {\bf mdp\_\-real} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_af30fb437e246a2f03a7b9c22a0e6624a}
+\hypertarget{classmdp__matrix_a5a1dfe012e3c2ab574f2c60f943b36e3}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator/@{operator/}}
+\index{operator/@{operator/}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator/ ({\bf mdp\_\-complex} {\em a}, \/  const {\bf mdp\_\-matrix} \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a5a1dfe012e3c2ab574f2c60f943b36e3}
+\hypertarget{classmdp__matrix_afaf1606b270d6b334329a5cdf9a1c959}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator/@{operator/}}
+\index{operator/@{operator/}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator/ (const {\bf mdp\_\-matrix} \& {\em a}, \/  {\bf mdp\_\-complex} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_afaf1606b270d6b334329a5cdf9a1c959}
+\hypertarget{classmdp__matrix_a9966401a50b7969c45d1fc3e3290f404}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!operator/@{operator/}}
+\index{operator/@{operator/}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} operator/ (const {\bf mdp\_\-matrix} \& {\em a}, \/  const {\bf mdp\_\-matrix} \& {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a9966401a50b7969c45d1fc3e3290f404}
+\hypertarget{classmdp__matrix_aed471057fee36406313f0d6db8469981}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!pow@{pow}}
+\index{pow@{pow}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{pow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} pow (const {\bf mdp\_\-matrix} \& {\em a}, \/  {\bf uint} {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_aed471057fee36406313f0d6db8469981}
+\hypertarget{classmdp__matrix_a9b5dd55d85b884176c25b3f0967285f0}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!prepare@{prepare}}
+\index{prepare@{prepare}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{prepare}]{\setlength{\rightskip}{0pt plus 5cm}void prepare ({\bf mdp\_\-matrix} \&)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a9b5dd55d85b884176c25b3f0967285f0}
+\hypertarget{classmdp__matrix_ae7a9b12e9cedc3d6f274c9fe9eb44332}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!sin@{sin}}
+\index{sin@{sin}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{sin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} sin (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_ae7a9b12e9cedc3d6f274c9fe9eb44332}
+\hypertarget{classmdp__matrix_a28a3f69388892b5b30aad614ed75e375}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!submatrix@{submatrix}}
+\index{submatrix@{submatrix}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{submatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} submatrix (const {\bf mdp\_\-matrix} \& {\em a}, \/  {\bf uint} {\em i}, \/  {\bf uint} {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a28a3f69388892b5b30aad614ed75e375}
+\hypertarget{classmdp__matrix_a5336fdab3a6eaa9888c91833f251f4e0}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!trace@{trace}}
+\index{trace@{trace}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{trace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex} trace (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a5336fdab3a6eaa9888c91833f251f4e0}
+\hypertarget{classmdp__matrix_a271d6793f4231f7b290179bff594e8d1}{
+\index{mdp\_\-matrix@{mdp\_\-matrix}!transpose@{transpose}}
+\index{transpose@{transpose}!mdp_matrix@{mdp\_\-matrix}}
+\subsubsection[{transpose}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} transpose (const {\bf mdp\_\-matrix} \& {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classmdp__matrix_a271d6793f4231f7b290179bff594e8d1}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__matrix_8h}{mdp\_\-matrix.h}\end{DoxyCompactItemize}

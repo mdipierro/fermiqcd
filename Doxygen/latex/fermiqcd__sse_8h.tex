@@ -1,0 +1,876 @@
+\hypertarget{fermiqcd__sse_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-sse.h File Reference}
+\label{fermiqcd__sse_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-sse.h@{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-sse.h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__sse__float}{\_\-sse\_\-float}
+\item 
+struct \hyperlink{struct__sse__vector}{\_\-sse\_\-vector}
+\item 
+struct \hyperlink{struct__sse__int}{\_\-sse\_\-int}
+\item 
+struct \hyperlink{struct__sse__double}{\_\-sse\_\-double}
+\item 
+struct \hyperlink{struct__sse__su3}{\_\-sse\_\-su3}
+\item 
+struct \hyperlink{struct__sse__su3__vector}{\_\-sse\_\-su3\_\-vector}
+\item 
+struct \hyperlink{struct__sse__spinor}{\_\-sse\_\-spinor}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_af95298b7181f9b9484f4b76e794c8d25}{ALIGN16}~\_\-\_\-attribute\_\-\_\- ((aligned (16)))
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_add0fe9c1d1861e48a984a16af397f794}{ALIGN64}~\_\-\_\-attribute\_\-\_\- ((aligned (64)))
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_ab76b3e23315ffe745963f1379d57ce68}{\_\-ASM}~\_\-\_\-asm\_\-\_\- \_\-\_\-volatile\_\-\_\-
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a39d1019eefe518e8446337b8f6405ede}{\_\-sse\_\-float\_\-prefetch\_\-spinor}(addr)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a47fca2509fdf4d9a38b8bdd008916fb9}{\_\-sse\_\-float\_\-prefetch\_\-su3}(addr)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a89ed9f8a929e083f075e650eac53ab6f}{\_\-sse\_\-float\_\-pair\_\-load}(sl, sh)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a2626091d003f37722bc31f03920dcf2b}{\_\-sse\_\-float\_\-pair\_\-load\_\-up}(sl, sh)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a4809deb0aea58c09bf15dc5e43e165a7}{\_\-sse\_\-float\_\-pair\_\-store}(rl, rh)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a7522d8d99c9941d39cc4aabf1a79fc71}{\_\-sse\_\-float\_\-pair\_\-store\_\-up}(rl, rh)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_ac6207c3693f04b271e0486e489c6c736}{\_\-sse\_\-float\_\-vector\_\-load}(s)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a902ca73c17f3ad19ebe425eae3b9c284}{\_\-sse\_\-float\_\-vector\_\-load\_\-up}(s)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a3379bf0d56882b0aa71df5b392aa88cb}{\_\-sse\_\-float\_\-vector\_\-store}(r)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_ab6d58009e3bb551f890d0468ee26efd7}{\_\-sse\_\-float\_\-vector\_\-mul}(c)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a3c1de6d35246e8401b3a020e2e7ad160}{\_\-sse\_\-float\_\-vector\_\-add}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a3841eaed406e1958bb15c1c772b86e02}{\_\-sse\_\-float\_\-vector\_\-sub}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a2599067790898b92f448d5707de8e89b}{\_\-sse\_\-float\_\-vector\_\-addsub}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a01ac7613cfdf4c8b65c16ea6129f1b36}{\_\-sse\_\-float\_\-su3\_\-multiply}(u)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_acb27af6a60dd94d7344f615d9cd11bf8}{\_\-sse\_\-float\_\-su3\_\-inverse\_\-multiply}(u)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a677ae42c7b8743e264fe73c1ff51e257}{\_\-sse\_\-float\_\-vector\_\-subadd}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_ae75c3979d999243c6ba2ce7984ace7cb}{\_\-sse\_\-float\_\-vector\_\-i\_\-add}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a5d98ad185dd92a5e81078d07afea7491}{\_\-sse\_\-float\_\-vector\_\-i\_\-sub}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_acdc6ddeaa1a171adaa72792d5b885fab}{\_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-add}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a5cd831e5b224f2bd2f23b239e2b3fbba}{\_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-sub}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a4900c0520c3ed8d5c0946a1451b999bd}{\_\-sse\_\-float\_\-vector\_\-i\_\-addsub}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_ad802f660142988c9eac6485547879e8e}{\_\-sse\_\-float\_\-vector\_\-i\_\-subadd}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_aa82913b3e8b3066c62a2c0415ee4b841}{\_\-sse\_\-float\_\-vector\_\-xch}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a9786ce0d8299bddf5777ff6c33ad5026}{\_\-sse\_\-double\_\-prefetch\_\-16}(addr)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a20983a5e4d90be1afdf14f11e91e2039}{\_\-sse\_\-double\_\-prefetch\_\-spinor}(addr)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a846cab07707a83d24498cab0a39be806}{\_\-sse\_\-double\_\-prefetch\_\-nta\_\-spinor}(addr)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_ae4a7e54ab042a639498209fa6735cef1}{\_\-sse\_\-double\_\-prefetch\_\-su3}(addr)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_ad48760b820d66f659da8d4bed21d3c6c}{\_\-sse\_\-double\_\-load}(s)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_ab9f96d0181b2becc973b7098c6f7114d}{\_\-sse\_\-double\_\-load\_\-123}(c1, c2, c3)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a77b1612cdc4fe5dd51f326b3ba4605dd}{\_\-sse\_\-double\_\-load\_\-up}(s)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_acc781a8032ab32209445ed7e69842979}{\_\-sse\_\-double\_\-load\_\-up\_\-123}(c1, c2, c3)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a276c7d4ea3f500130b180c7ad7d39a68}{\_\-sse\_\-double\_\-store}(r)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a2361ea889ff31649aed23354fdcc2fd1}{\_\-sse\_\-double\_\-store\_\-123}(c1, c2, c3)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_aadba2b5005c172fa2afaf57cfd0a63c6}{\_\-sse\_\-double\_\-store\_\-up}(r)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_ac0337af9e969ea82b9690791e6299116}{\_\-sse\_\-double\_\-store\_\-up\_\-123}(c1, c2, c3)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_ada06a321870f503a6c57beb6de1cde95}{\_\-sse\_\-double\_\-vector\_\-mul}(c)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a7617c4568fd35f3a6b5e2db09997ef1a}{\_\-sse\_\-double\_\-vector\_\-mul\_\-complex}(x, y)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_ab99b789bbd9a667b716f6bf93a7fac37}{\_\-sse\_\-double\_\-vector\_\-add}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a3cda2e2813b26ddd08a40a3490876e94}{\_\-sse\_\-double\_\-vector\_\-sub}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_aca0ba24c0a2465df9af178793a1ca731}{\_\-sse\_\-double\_\-su3\_\-multiply}(u)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a1a06f53991962391009a128c6b4d6034}{\_\-sse\_\-double\_\-su3\_\-inverse\_\-multiply}(u)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_aeab2b893d385826939a636fb6a63e9b7}{\_\-sse\_\-double\_\-vector\_\-i\_\-mul}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a83fef1318f4c4849deebf0fa61f3711b}{\_\-sse\_\-double\_\-vector\_\-minus\_\-i\_\-mul}()
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a6082820fd50370d2b78d936fecde9700}{\_\-sse\_\-double\_\-add\_\-norm\_\-square\_\-16}(r, c)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_ae5819db8948f4fd897488882df176dd0}{\_\-sse\_\-double\_\-add\_\-real\_\-scalar\_\-product\_\-16}(r, s, c)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a6337fe00859c12c29b206bb9afcdc351}{\_\-sse\_\-double\_\-add\_\-imag\_\-scalar\_\-product\_\-16}(r, s, c)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_aca184a5473d050084117a04d2980d1d9}{\_\-sse\_\-double\_\-hermitian\_\-su3}(r, s)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a4f1797a6b3010e36991041a611f5fa25}{\_\-sse\_\-double\_\-copy\_\-16}(r, s)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_ac22892fcc3b02a39f7655294c9e94edb}{\_\-sse\_\-double\_\-add\_\-16}(r, s)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_af91333a50f2ad2e9919808fab1acb4a0}{\_\-sse\_\-double\_\-sub\_\-16}(r, s)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a49371bf42d6593229efee6787a827f88}{\_\-sse\_\-double\_\-add\_\-multiply\_\-16}(r, c, s)
+\item 
+\#define \hyperlink{fermiqcd__sse_8h_a6fb103ea364725253f20c13d41a95c60}{\_\-sse\_\-double\_\-multiply\_\-16}(r, c, s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Martin Luesher and Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+Basic actions for Wilson Fermions optimized in assembler 
+
+\subsection{Define Documentation}
+\hypertarget{fermiqcd__sse_8h_ab76b3e23315ffe745963f1379d57ce68}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-ASM@{\_\-ASM}}
+\index{\_\-ASM@{\_\-ASM}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-ASM}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-ASM~\_\-\_\-asm\_\-\_\- \_\-\_\-volatile\_\-\_\-}}
+\label{fermiqcd__sse_8h_ab76b3e23315ffe745963f1379d57ce68}
+\hypertarget{fermiqcd__sse_8h_ac22892fcc3b02a39f7655294c9e94edb}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-add\_\-16@{\_\-sse\_\-double\_\-add\_\-16}}
+\index{\_\-sse\_\-double\_\-add\_\-16@{\_\-sse\_\-double\_\-add\_\-16}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-add\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-add\_\-16(r, \/  s)}}
+\label{fermiqcd__sse_8h_ac22892fcc3b02a39f7655294c9e94edb}
+\hypertarget{fermiqcd__sse_8h_a6337fe00859c12c29b206bb9afcdc351}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-add\_\-imag\_\-scalar\_\-product\_\-16@{\_\-sse\_\-double\_\-add\_\-imag\_\-scalar\_\-product\_\-16}}
+\index{\_\-sse\_\-double\_\-add\_\-imag\_\-scalar\_\-product\_\-16@{\_\-sse\_\-double\_\-add\_\-imag\_\-scalar\_\-product\_\-16}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-add\_\-imag\_\-scalar\_\-product\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-add\_\-imag\_\-scalar\_\-product\_\-16(r, \/  s, \/  c)}}
+\label{fermiqcd__sse_8h_a6337fe00859c12c29b206bb9afcdc351}
+\hypertarget{fermiqcd__sse_8h_a49371bf42d6593229efee6787a827f88}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-add\_\-multiply\_\-16@{\_\-sse\_\-double\_\-add\_\-multiply\_\-16}}
+\index{\_\-sse\_\-double\_\-add\_\-multiply\_\-16@{\_\-sse\_\-double\_\-add\_\-multiply\_\-16}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-add\_\-multiply\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-add\_\-multiply\_\-16(r, \/  c, \/  s)}}
+\label{fermiqcd__sse_8h_a49371bf42d6593229efee6787a827f88}
+\hypertarget{fermiqcd__sse_8h_a6082820fd50370d2b78d936fecde9700}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-add\_\-norm\_\-square\_\-16@{\_\-sse\_\-double\_\-add\_\-norm\_\-square\_\-16}}
+\index{\_\-sse\_\-double\_\-add\_\-norm\_\-square\_\-16@{\_\-sse\_\-double\_\-add\_\-norm\_\-square\_\-16}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-add\_\-norm\_\-square\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-add\_\-norm\_\-square\_\-16(r, \/  c)}}
+\label{fermiqcd__sse_8h_a6082820fd50370d2b78d936fecde9700}
+\hypertarget{fermiqcd__sse_8h_ae5819db8948f4fd897488882df176dd0}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-add\_\-real\_\-scalar\_\-product\_\-16@{\_\-sse\_\-double\_\-add\_\-real\_\-scalar\_\-product\_\-16}}
+\index{\_\-sse\_\-double\_\-add\_\-real\_\-scalar\_\-product\_\-16@{\_\-sse\_\-double\_\-add\_\-real\_\-scalar\_\-product\_\-16}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-add\_\-real\_\-scalar\_\-product\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-add\_\-real\_\-scalar\_\-product\_\-16(r, \/  s, \/  c)}}
+\label{fermiqcd__sse_8h_ae5819db8948f4fd897488882df176dd0}
+\hypertarget{fermiqcd__sse_8h_a4f1797a6b3010e36991041a611f5fa25}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-copy\_\-16@{\_\-sse\_\-double\_\-copy\_\-16}}
+\index{\_\-sse\_\-double\_\-copy\_\-16@{\_\-sse\_\-double\_\-copy\_\-16}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-copy\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-copy\_\-16(r, \/  s)}}
+\label{fermiqcd__sse_8h_a4f1797a6b3010e36991041a611f5fa25}
+\hypertarget{fermiqcd__sse_8h_aca184a5473d050084117a04d2980d1d9}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-hermitian\_\-su3@{\_\-sse\_\-double\_\-hermitian\_\-su3}}
+\index{\_\-sse\_\-double\_\-hermitian\_\-su3@{\_\-sse\_\-double\_\-hermitian\_\-su3}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-hermitian\_\-su3}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-hermitian\_\-su3(r, \/  s)}}
+\label{fermiqcd__sse_8h_aca184a5473d050084117a04d2980d1d9}
+\hypertarget{fermiqcd__sse_8h_ad48760b820d66f659da8d4bed21d3c6c}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-load@{\_\-sse\_\-double\_\-load}}
+\index{\_\-sse\_\-double\_\-load@{\_\-sse\_\-double\_\-load}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-load(s)}}
+\label{fermiqcd__sse_8h_ad48760b820d66f659da8d4bed21d3c6c}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movapd %0, %%xmm0 \n\t" \
+      "movapd %1, %%xmm1 \n\t" \
+      "movapd %2, %%xmm2" \
+      : \
+      : \
+      "m" ((s).c1), \
+      "m" ((s).c2), \
+      "m" ((s).c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_ab9f96d0181b2becc973b7098c6f7114d}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-load\_\-123@{\_\-sse\_\-double\_\-load\_\-123}}
+\index{\_\-sse\_\-double\_\-load\_\-123@{\_\-sse\_\-double\_\-load\_\-123}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-load\_\-123}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-load\_\-123(c1, \/  c2, \/  c3)}}
+\label{fermiqcd__sse_8h_ab9f96d0181b2becc973b7098c6f7114d}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movapd %0, %%xmm0 \n\t" \
+      "movapd %1, %%xmm1 \n\t" \
+      "movapd %2, %%xmm2" \
+      : \
+      : \
+      "m" (c1), \
+      "m" (c2), \
+      "m" (c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a77b1612cdc4fe5dd51f326b3ba4605dd}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-load\_\-up@{\_\-sse\_\-double\_\-load\_\-up}}
+\index{\_\-sse\_\-double\_\-load\_\-up@{\_\-sse\_\-double\_\-load\_\-up}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-load\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-load\_\-up(s)}}
+\label{fermiqcd__sse_8h_a77b1612cdc4fe5dd51f326b3ba4605dd}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movapd %0, %%xmm3 \n\t" \
+      "movapd %1, %%xmm4 \n\t" \
+      "movapd %2, %%xmm5" \
+      : \
+      : \
+      "m" ((s).c1), \
+      "m" ((s).c2), \
+      "m" ((s).c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_acc781a8032ab32209445ed7e69842979}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-load\_\-up\_\-123@{\_\-sse\_\-double\_\-load\_\-up\_\-123}}
+\index{\_\-sse\_\-double\_\-load\_\-up\_\-123@{\_\-sse\_\-double\_\-load\_\-up\_\-123}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-load\_\-up\_\-123}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-load\_\-up\_\-123(c1, \/  c2, \/  c3)}}
+\label{fermiqcd__sse_8h_acc781a8032ab32209445ed7e69842979}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movapd %0, %%xmm3 \n\t" \
+      "movapd %1, %%xmm4 \n\t" \
+      "movapd %2, %%xmm5" \
+      : \
+      : \
+      "m" (c1), \
+      "m" (c2), \
+      "m" (c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a6fb103ea364725253f20c13d41a95c60}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-multiply\_\-16@{\_\-sse\_\-double\_\-multiply\_\-16}}
+\index{\_\-sse\_\-double\_\-multiply\_\-16@{\_\-sse\_\-double\_\-multiply\_\-16}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-multiply\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-multiply\_\-16(r, \/  c, \/  s)}}
+\label{fermiqcd__sse_8h_a6fb103ea364725253f20c13d41a95c60}
+\hypertarget{fermiqcd__sse_8h_a9786ce0d8299bddf5777ff6c33ad5026}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-prefetch\_\-16@{\_\-sse\_\-double\_\-prefetch\_\-16}}
+\index{\_\-sse\_\-double\_\-prefetch\_\-16@{\_\-sse\_\-double\_\-prefetch\_\-16}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-prefetch\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-prefetch\_\-16(addr)}}
+\label{fermiqcd__sse_8h_a9786ce0d8299bddf5777ff6c33ad5026}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("prefetcht0 %0" \
+      : \
+      : "m" (*(addr)))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a846cab07707a83d24498cab0a39be806}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-prefetch\_\-nta\_\-spinor@{\_\-sse\_\-double\_\-prefetch\_\-nta\_\-spinor}}
+\index{\_\-sse\_\-double\_\-prefetch\_\-nta\_\-spinor@{\_\-sse\_\-double\_\-prefetch\_\-nta\_\-spinor}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-prefetch\_\-nta\_\-spinor}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-prefetch\_\-nta\_\-spinor(addr)}}
+\label{fermiqcd__sse_8h_a846cab07707a83d24498cab0a39be806}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("prefetchnta %0 \n\t" \
+      "prefetchnta %1" \
+      : \
+      : \
+      "m" (*(((char*)(((unsigned int)(addr))&~0x7f)))), \
+      "m" (*(((char*)(((unsigned int)(addr))&~0x7f))+128)))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a20983a5e4d90be1afdf14f11e91e2039}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-prefetch\_\-spinor@{\_\-sse\_\-double\_\-prefetch\_\-spinor}}
+\index{\_\-sse\_\-double\_\-prefetch\_\-spinor@{\_\-sse\_\-double\_\-prefetch\_\-spinor}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-prefetch\_\-spinor}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-prefetch\_\-spinor(addr)}}
+\label{fermiqcd__sse_8h_a20983a5e4d90be1afdf14f11e91e2039}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("prefetcht0 %0 \n\t" \
+      "prefetcht0 %1" \
+      : \
+      : \
+      "m" (*(((char*)(((unsigned int)(addr))&~0x7f)))), \
+      "m" (*(((char*)(((unsigned int)(addr))&~0x7f))+128)))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_ae4a7e54ab042a639498209fa6735cef1}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-prefetch\_\-su3@{\_\-sse\_\-double\_\-prefetch\_\-su3}}
+\index{\_\-sse\_\-double\_\-prefetch\_\-su3@{\_\-sse\_\-double\_\-prefetch\_\-su3}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-prefetch\_\-su3}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-prefetch\_\-su3(addr)}}
+\label{fermiqcd__sse_8h_ae4a7e54ab042a639498209fa6735cef1}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("prefetcht0 %0 \n\t" \
+      "prefetcht0 %1" \
+      : \
+      : \
+      "m" (*(((char*)(((unsigned int)(addr))&~0x7f)))), \
+      "m" (*(((char*)(((unsigned int)(addr))&~0x7f))+128)))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a276c7d4ea3f500130b180c7ad7d39a68}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-store@{\_\-sse\_\-double\_\-store}}
+\index{\_\-sse\_\-double\_\-store@{\_\-sse\_\-double\_\-store}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-store}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-store(r)}}
+\label{fermiqcd__sse_8h_a276c7d4ea3f500130b180c7ad7d39a68}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movapd %%xmm0, %0 \n\t" \
+      "movapd %%xmm1, %1 \n\t" \
+      "movapd %%xmm2, %2" \
+      : \
+      "=m" ((r).c1), \
+      "=m" ((r).c2), \
+      "=m" ((r).c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a2361ea889ff31649aed23354fdcc2fd1}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-store\_\-123@{\_\-sse\_\-double\_\-store\_\-123}}
+\index{\_\-sse\_\-double\_\-store\_\-123@{\_\-sse\_\-double\_\-store\_\-123}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-store\_\-123}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-store\_\-123(c1, \/  c2, \/  c3)}}
+\label{fermiqcd__sse_8h_a2361ea889ff31649aed23354fdcc2fd1}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movapd %%xmm0, %0 \n\t" \
+      "movapd %%xmm1, %1 \n\t" \
+      "movapd %%xmm2, %2" \
+      : \
+      "=m" (c1), \
+      "=m" (c2), \
+      "=m" (c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_aadba2b5005c172fa2afaf57cfd0a63c6}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-store\_\-up@{\_\-sse\_\-double\_\-store\_\-up}}
+\index{\_\-sse\_\-double\_\-store\_\-up@{\_\-sse\_\-double\_\-store\_\-up}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-store\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-store\_\-up(r)}}
+\label{fermiqcd__sse_8h_aadba2b5005c172fa2afaf57cfd0a63c6}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movapd %%xmm3, %0 \n\t" \
+      "movapd %%xmm4, %1 \n\t" \
+      "movapd %%xmm5, %2" \
+      : \
+      "=m" ((r).c1), \
+      "=m" ((r).c2), \
+      "=m" ((r).c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_ac0337af9e969ea82b9690791e6299116}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-store\_\-up\_\-123@{\_\-sse\_\-double\_\-store\_\-up\_\-123}}
+\index{\_\-sse\_\-double\_\-store\_\-up\_\-123@{\_\-sse\_\-double\_\-store\_\-up\_\-123}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-store\_\-up\_\-123}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-store\_\-up\_\-123(c1, \/  c2, \/  c3)}}
+\label{fermiqcd__sse_8h_ac0337af9e969ea82b9690791e6299116}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movapd %%xmm3, %0 \n\t" \
+      "movapd %%xmm4, %1 \n\t" \
+      "movapd %%xmm5, %2" \
+      : \
+      "=m" (c1), \
+      "=m" (c2), \
+      "=m" (c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a1a06f53991962391009a128c6b4d6034}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-su3\_\-inverse\_\-multiply@{\_\-sse\_\-double\_\-su3\_\-inverse\_\-multiply}}
+\index{\_\-sse\_\-double\_\-su3\_\-inverse\_\-multiply@{\_\-sse\_\-double\_\-su3\_\-inverse\_\-multiply}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-su3\_\-inverse\_\-multiply}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-su3\_\-inverse\_\-multiply(u)}}
+\label{fermiqcd__sse_8h_a1a06f53991962391009a128c6b4d6034}
+\hypertarget{fermiqcd__sse_8h_aca0ba24c0a2465df9af178793a1ca731}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-su3\_\-multiply@{\_\-sse\_\-double\_\-su3\_\-multiply}}
+\index{\_\-sse\_\-double\_\-su3\_\-multiply@{\_\-sse\_\-double\_\-su3\_\-multiply}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-su3\_\-multiply}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-su3\_\-multiply(u)}}
+\label{fermiqcd__sse_8h_aca0ba24c0a2465df9af178793a1ca731}
+\hypertarget{fermiqcd__sse_8h_af91333a50f2ad2e9919808fab1acb4a0}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-sub\_\-16@{\_\-sse\_\-double\_\-sub\_\-16}}
+\index{\_\-sse\_\-double\_\-sub\_\-16@{\_\-sse\_\-double\_\-sub\_\-16}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-sub\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-sub\_\-16(r, \/  s)}}
+\label{fermiqcd__sse_8h_af91333a50f2ad2e9919808fab1acb4a0}
+\hypertarget{fermiqcd__sse_8h_ab99b789bbd9a667b716f6bf93a7fac37}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-vector\_\-add@{\_\-sse\_\-double\_\-vector\_\-add}}
+\index{\_\-sse\_\-double\_\-vector\_\-add@{\_\-sse\_\-double\_\-vector\_\-add}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-vector\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-vector\_\-add()}}
+\label{fermiqcd__sse_8h_ab99b789bbd9a667b716f6bf93a7fac37}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("addpd %%xmm3, %%xmm0 \n\t" \
+      "addpd %%xmm4, %%xmm1 \n\t" \
+      "addpd %%xmm5, %%xmm2" \
+      : \
+      :)
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_aeab2b893d385826939a636fb6a63e9b7}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-vector\_\-i\_\-mul@{\_\-sse\_\-double\_\-vector\_\-i\_\-mul}}
+\index{\_\-sse\_\-double\_\-vector\_\-i\_\-mul@{\_\-sse\_\-double\_\-vector\_\-i\_\-mul}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-vector\_\-i\_\-mul}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-vector\_\-i\_\-mul()}}
+\label{fermiqcd__sse_8h_aeab2b893d385826939a636fb6a63e9b7}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("shufpd $0x1, %%xmm3, %%xmm3 \n\t" \
+      "shufpd $0x1, %%xmm4, %%xmm4 \n\t" \
+      "shufpd $0x1, %%xmm5, %%xmm5 \n\t" \
+      "xorpd %0, %%xmm3 \n\t" \
+      "xorpd %0, %%xmm4 \n\t" \
+      "xorpd %0, %%xmm5" \
+      : \
+      : \
+      "m" (_sse_double_sgn))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a83fef1318f4c4849deebf0fa61f3711b}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-vector\_\-minus\_\-i\_\-mul@{\_\-sse\_\-double\_\-vector\_\-minus\_\-i\_\-mul}}
+\index{\_\-sse\_\-double\_\-vector\_\-minus\_\-i\_\-mul@{\_\-sse\_\-double\_\-vector\_\-minus\_\-i\_\-mul}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-vector\_\-minus\_\-i\_\-mul}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-vector\_\-minus\_\-i\_\-mul()}}
+\label{fermiqcd__sse_8h_a83fef1318f4c4849deebf0fa61f3711b}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("xorpd %0, %%xmm3 \n\t" \
+      "xorpd %0, %%xmm4 \n\t" \
+      "xorpd %0, %%xmm5 \n\t" \
+      "shufpd $0x1, %%xmm3, %%xmm3 \n\t" \
+      "shufpd $0x1, %%xmm4, %%xmm4 \n\t" \
+      "shufpd $0x1, %%xmm5, %%xmm5" \
+      : \
+      : \
+      "m" (_sse_double_sgn))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_ada06a321870f503a6c57beb6de1cde95}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-vector\_\-mul@{\_\-sse\_\-double\_\-vector\_\-mul}}
+\index{\_\-sse\_\-double\_\-vector\_\-mul@{\_\-sse\_\-double\_\-vector\_\-mul}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-vector\_\-mul}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-vector\_\-mul(c)}}
+\label{fermiqcd__sse_8h_ada06a321870f503a6c57beb6de1cde95}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("mulpd %0, %%xmm0 \n\t" \
+      "mulpd %0, %%xmm1 \n\t" \
+      "mulpd %0, %%xmm2" \
+      : \
+      : \
+      "m" (c))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a7617c4568fd35f3a6b5e2db09997ef1a}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-vector\_\-mul\_\-complex@{\_\-sse\_\-double\_\-vector\_\-mul\_\-complex}}
+\index{\_\-sse\_\-double\_\-vector\_\-mul\_\-complex@{\_\-sse\_\-double\_\-vector\_\-mul\_\-complex}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-vector\_\-mul\_\-complex}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-vector\_\-mul\_\-complex(x, \/  y)}}
+\label{fermiqcd__sse_8h_a7617c4568fd35f3a6b5e2db09997ef1a}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movapd %%xmm0, %%xmm3 \n\t" \
+      "movapd %%xmm1, %%xmm4 \n\t" \
+      "movapd %%xmm2, %%xmm5 \n\t" \
+      "mulpd %1, %%xmm3 \n\t" \
+      "mulpd %1, %%xmm4 \n\t" \
+      "mulpd %1, %%xmm5 \n\t" \
+      "shufpd $0x1, %%xmm3, %%xmm3 \n\t" \
+      "shufpd $0x1, %%xmm4, %%xmm4 \n\t" \
+      "shufpd $0x1, %%xmm5, %%xmm5 \n\t" \
+      "xorpd %2, %%xmm3 \n\t" \
+      "xorpd %2, %%xmm4 \n\t" \
+      "xorpd %2, %%xmm5 \n\t" \
+      "mulpd %0, %%xmm0 \n\t" \
+      "mulpd %0, %%xmm1 \n\t" \
+      "mulpd %0, %%xmm2 \n\t" \
+      "addpd %%xmm0, %%xmm3 \n\t" \
+      "addpd %%xmm1, %%xmm4 \n\t" \
+      "addpd %%xmm2, %%xmm5" \
+      : \
+      : \
+      "m" (x), \
+      "m" (y), \
+      "m" (_sse_double_sgn))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a3cda2e2813b26ddd08a40a3490876e94}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-double\_\-vector\_\-sub@{\_\-sse\_\-double\_\-vector\_\-sub}}
+\index{\_\-sse\_\-double\_\-vector\_\-sub@{\_\-sse\_\-double\_\-vector\_\-sub}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-double\_\-vector\_\-sub}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-double\_\-vector\_\-sub()}}
+\label{fermiqcd__sse_8h_a3cda2e2813b26ddd08a40a3490876e94}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("subpd %%xmm3, %%xmm0 \n\t" \
+      "subpd %%xmm4, %%xmm1 \n\t" \
+      "subpd %%xmm5, %%xmm2" \
+      : \
+      :)
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a89ed9f8a929e083f075e650eac53ab6f}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-pair\_\-load@{\_\-sse\_\-float\_\-pair\_\-load}}
+\index{\_\-sse\_\-float\_\-pair\_\-load@{\_\-sse\_\-float\_\-pair\_\-load}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-pair\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-pair\_\-load(sl, \/  sh)}}
+\label{fermiqcd__sse_8h_a89ed9f8a929e083f075e650eac53ab6f}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movlps %0, %%xmm0 \n\t" \
+      "movlps %1, %%xmm1 \n\t" \
+      "movlps %2, %%xmm2 \n\t" \
+      "movhps %3, %%xmm0 \n\t" \
+      "movhps %4, %%xmm1 \n\t" \
+      "movhps %5, %%xmm2 " \
+       : \
+       : \
+       "m" ((sl).c1), \
+       "m" ((sl).c2), \
+       "m" ((sl).c3), \
+       "m" ((sh).c1), \
+       "m" ((sh).c2), \
+       "m" ((sh).c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a2626091d003f37722bc31f03920dcf2b}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-pair\_\-load\_\-up@{\_\-sse\_\-float\_\-pair\_\-load\_\-up}}
+\index{\_\-sse\_\-float\_\-pair\_\-load\_\-up@{\_\-sse\_\-float\_\-pair\_\-load\_\-up}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-pair\_\-load\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-pair\_\-load\_\-up(sl, \/  sh)}}
+\label{fermiqcd__sse_8h_a2626091d003f37722bc31f03920dcf2b}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movlps %0, %%xmm3 \n\t" \
+      "movlps %1, %%xmm4 \n\t" \
+      "movlps %2, %%xmm5 \n\t" \
+      "movhps %3, %%xmm3 \n\t" \
+      "movhps %4, %%xmm4 \n\t" \
+      "movhps %5, %%xmm5" \
+      : \
+      : \
+      "m" ((sl).c1), \
+      "m" ((sl).c2), \
+      "m" ((sl).c3), \
+      "m" ((sh).c1), \
+      "m" ((sh).c2), \
+      "m" ((sh).c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a4809deb0aea58c09bf15dc5e43e165a7}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-pair\_\-store@{\_\-sse\_\-float\_\-pair\_\-store}}
+\index{\_\-sse\_\-float\_\-pair\_\-store@{\_\-sse\_\-float\_\-pair\_\-store}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-pair\_\-store}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-pair\_\-store(rl, \/  rh)}}
+\label{fermiqcd__sse_8h_a4809deb0aea58c09bf15dc5e43e165a7}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movlps %%xmm0, %0 \n\t" \
+      "movlps %%xmm1, %1 \n\t" \
+      "movlps %%xmm2, %2 \n\t" \
+      "movhps %%xmm0, %3 \n\t" \
+      "movhps %%xmm1, %4 \n\t" \
+      "movhps %%xmm2, %5" \
+      : \
+      "=m" ((rl).c1), \
+      "=m" ((rl).c2), \
+      "=m" ((rl).c3), \
+      "=m" ((rh).c1), \
+      "=m" ((rh).c2), \
+      "=m" ((rh).c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a7522d8d99c9941d39cc4aabf1a79fc71}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-pair\_\-store\_\-up@{\_\-sse\_\-float\_\-pair\_\-store\_\-up}}
+\index{\_\-sse\_\-float\_\-pair\_\-store\_\-up@{\_\-sse\_\-float\_\-pair\_\-store\_\-up}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-pair\_\-store\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-pair\_\-store\_\-up(rl, \/  rh)}}
+\label{fermiqcd__sse_8h_a7522d8d99c9941d39cc4aabf1a79fc71}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movlps %%xmm3, %0 \n\t" \
+      "movlps %%xmm4, %1 \n\t" \
+      "movlps %%xmm5, %2 \n\t" \
+      "movhps %%xmm3, %3 \n\t" \
+      "movhps %%xmm4, %4 \n\t" \
+      "movhps %%xmm5, %5" \
+      : \
+      "=m" ((rl).c1), \
+      "=m" ((rl).c2), \
+      "=m" ((rl).c3), \
+      "=m" ((rh).c1), \
+      "=m" ((rh).c2), \
+      "=m" ((rh).c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a39d1019eefe518e8446337b8f6405ede}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-prefetch\_\-spinor@{\_\-sse\_\-float\_\-prefetch\_\-spinor}}
+\index{\_\-sse\_\-float\_\-prefetch\_\-spinor@{\_\-sse\_\-float\_\-prefetch\_\-spinor}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-prefetch\_\-spinor}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-prefetch\_\-spinor(addr)}}
+\label{fermiqcd__sse_8h_a39d1019eefe518e8446337b8f6405ede}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("prefetcht0 %0 \n\t" \
+      "prefetcht0 %1" \
+      : \
+      : \
+      "m" (*(((char*)(((unsigned int)(addr))&~0x7f)))), \
+      "m" (*(((char*)(((unsigned int)(addr))&~0x7f))+128)))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a47fca2509fdf4d9a38b8bdd008916fb9}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-prefetch\_\-su3@{\_\-sse\_\-float\_\-prefetch\_\-su3}}
+\index{\_\-sse\_\-float\_\-prefetch\_\-su3@{\_\-sse\_\-float\_\-prefetch\_\-su3}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-prefetch\_\-su3}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-prefetch\_\-su3(addr)}}
+\label{fermiqcd__sse_8h_a47fca2509fdf4d9a38b8bdd008916fb9}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("prefetcht0 %0 \n\t" \
+      "prefetcht0 %1" \
+      : \
+      : \
+      "m" (*(((char*)(((unsigned int)(addr))&~0x7f)))), \
+      "m" (*(((char*)(((unsigned int)(addr))&~0x7f))+128)))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_acb27af6a60dd94d7344f615d9cd11bf8}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-su3\_\-inverse\_\-multiply@{\_\-sse\_\-float\_\-su3\_\-inverse\_\-multiply}}
+\index{\_\-sse\_\-float\_\-su3\_\-inverse\_\-multiply@{\_\-sse\_\-float\_\-su3\_\-inverse\_\-multiply}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-su3\_\-inverse\_\-multiply}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-su3\_\-inverse\_\-multiply(u)}}
+\label{fermiqcd__sse_8h_acb27af6a60dd94d7344f615d9cd11bf8}
+\hypertarget{fermiqcd__sse_8h_a01ac7613cfdf4c8b65c16ea6129f1b36}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-su3\_\-multiply@{\_\-sse\_\-float\_\-su3\_\-multiply}}
+\index{\_\-sse\_\-float\_\-su3\_\-multiply@{\_\-sse\_\-float\_\-su3\_\-multiply}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-su3\_\-multiply}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-su3\_\-multiply(u)}}
+\label{fermiqcd__sse_8h_a01ac7613cfdf4c8b65c16ea6129f1b36}
+\hypertarget{fermiqcd__sse_8h_a3c1de6d35246e8401b3a020e2e7ad160}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-add@{\_\-sse\_\-float\_\-vector\_\-add}}
+\index{\_\-sse\_\-float\_\-vector\_\-add@{\_\-sse\_\-float\_\-vector\_\-add}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-add()}}
+\label{fermiqcd__sse_8h_a3c1de6d35246e8401b3a020e2e7ad160}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("addps %%xmm3, %%xmm0 \n\t" \
+      "addps %%xmm4, %%xmm1 \n\t" \
+      "addps %%xmm5, %%xmm2 \n\t" \
+      : \
+      : )
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a2599067790898b92f448d5707de8e89b}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-addsub@{\_\-sse\_\-float\_\-vector\_\-addsub}}
+\index{\_\-sse\_\-float\_\-vector\_\-addsub@{\_\-sse\_\-float\_\-vector\_\-addsub}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-addsub}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-addsub()}}
+\label{fermiqcd__sse_8h_a2599067790898b92f448d5707de8e89b}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("mulps %0, %%xmm3 \n\t" \
+      "mulps %0, %%xmm4 \n\t" \
+      "mulps %0, %%xmm5 \n\t" \
+      "addps %%xmm3, %%xmm0 \n\t" \
+      "addps %%xmm4, %%xmm1 \n\t" \
+      "addps %%xmm5, %%xmm2" \
+      : \
+      : \
+      "m" (_sse_float_sgn34))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_ae75c3979d999243c6ba2ce7984ace7cb}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-i\_\-add@{\_\-sse\_\-float\_\-vector\_\-i\_\-add}}
+\index{\_\-sse\_\-float\_\-vector\_\-i\_\-add@{\_\-sse\_\-float\_\-vector\_\-i\_\-add}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-i\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-i\_\-add()}}
+\label{fermiqcd__sse_8h_ae75c3979d999243c6ba2ce7984ace7cb}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("shufps $0xb1, %%xmm3, %%xmm3 \n\t" \
+      "shufps $0xb1, %%xmm4, %%xmm4 \n\t" \
+      "shufps $0xb1, %%xmm5, %%xmm5 \n\t" \
+      "mulps %0, %%xmm3 \n\t" \
+      "mulps %0, %%xmm4 \n\t" \
+      "mulps %0, %%xmm5 \n\t" \
+      "addps %%xmm3, %%xmm0 \n\t" \
+      "addps %%xmm4, %%xmm1 \n\t" \
+      "addps %%xmm5, %%xmm2" \
+      : \
+      : \
+      "m" (_sse_float_sgn13))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a4900c0520c3ed8d5c0946a1451b999bd}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-i\_\-addsub@{\_\-sse\_\-float\_\-vector\_\-i\_\-addsub}}
+\index{\_\-sse\_\-float\_\-vector\_\-i\_\-addsub@{\_\-sse\_\-float\_\-vector\_\-i\_\-addsub}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-i\_\-addsub}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-i\_\-addsub()}}
+\label{fermiqcd__sse_8h_a4900c0520c3ed8d5c0946a1451b999bd}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("shufps $0xb1, %%xmm3, %%xmm3 \n\t" \
+      "shufps $0xb1, %%xmm4, %%xmm4 \n\t" \
+      "shufps $0xb1, %%xmm5, %%xmm5 \n\t" \
+      "mulps %0, %%xmm3 \n\t" \
+      "mulps %0, %%xmm4 \n\t" \
+      "mulps %0, %%xmm5 \n\t" \
+      "addps %%xmm3, %%xmm0 \n\t" \
+      "addps %%xmm4, %%xmm1 \n\t" \
+      "addps %%xmm5, %%xmm2" \
+      : \
+      : \
+      "m" (_sse_float_sgn14))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a5d98ad185dd92a5e81078d07afea7491}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-i\_\-sub@{\_\-sse\_\-float\_\-vector\_\-i\_\-sub}}
+\index{\_\-sse\_\-float\_\-vector\_\-i\_\-sub@{\_\-sse\_\-float\_\-vector\_\-i\_\-sub}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-i\_\-sub}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-i\_\-sub()}}
+\label{fermiqcd__sse_8h_a5d98ad185dd92a5e81078d07afea7491}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("shufps $0xb1, %%xmm3, %%xmm3 \n\t" \
+      "shufps $0xb1, %%xmm4, %%xmm4 \n\t" \
+      "shufps $0xb1, %%xmm5, %%xmm5 \n\t" \
+      "mulps %0, %%xmm3 \n\t" \
+      "mulps %0, %%xmm4 \n\t" \
+      "mulps %0, %%xmm5 \n\t" \
+      "addps %%xmm3, %%xmm0 \n\t" \
+      "addps %%xmm4, %%xmm1 \n\t" \
+      "addps %%xmm5, %%xmm2" \
+      : \
+      : \
+      "m" (_sse_float_sgn24))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_ad802f660142988c9eac6485547879e8e}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-i\_\-subadd@{\_\-sse\_\-float\_\-vector\_\-i\_\-subadd}}
+\index{\_\-sse\_\-float\_\-vector\_\-i\_\-subadd@{\_\-sse\_\-float\_\-vector\_\-i\_\-subadd}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-i\_\-subadd}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-i\_\-subadd()}}
+\label{fermiqcd__sse_8h_ad802f660142988c9eac6485547879e8e}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("shufps $0xb1, %%xmm3, %%xmm3 \n\t" \
+      "shufps $0xb1, %%xmm4, %%xmm4 \n\t" \
+      "shufps $0xb1, %%xmm5, %%xmm5 \n\t" \
+      "mulps %0, %%xmm3 \n\t" \
+      "mulps %0, %%xmm4 \n\t" \
+      "mulps %0, %%xmm5 \n\t" \
+      "addps %%xmm3, %%xmm0 \n\t" \
+      "addps %%xmm4, %%xmm1 \n\t" \
+      "addps %%xmm5, %%xmm2" \
+      : \
+      : \
+      "m" (_sse_float_sgn23))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_ac6207c3693f04b271e0486e489c6c736}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-load@{\_\-sse\_\-float\_\-vector\_\-load}}
+\index{\_\-sse\_\-float\_\-vector\_\-load@{\_\-sse\_\-float\_\-vector\_\-load}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-load(s)}}
+\label{fermiqcd__sse_8h_ac6207c3693f04b271e0486e489c6c736}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movaps %0, %%xmm0 \n\t" \
+      "movaps %1, %%xmm1 \n\t" \
+      "movaps %2, %%xmm2" \
+      : \
+      : \
+      "m" ((s).c1), \
+      "m" ((s).c2), \
+      "m" ((s).c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a902ca73c17f3ad19ebe425eae3b9c284}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-load\_\-up@{\_\-sse\_\-float\_\-vector\_\-load\_\-up}}
+\index{\_\-sse\_\-float\_\-vector\_\-load\_\-up@{\_\-sse\_\-float\_\-vector\_\-load\_\-up}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-load\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-load\_\-up(s)}}
+\label{fermiqcd__sse_8h_a902ca73c17f3ad19ebe425eae3b9c284}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movaps %0, %%xmm3 \n\t" \
+      "movaps %1, %%xmm4 \n\t" \
+      "movaps %2, %%xmm5" \
+      : \
+      : \
+      "m" ((s).c1), \
+      "m" ((s).c2), \
+      "m" ((s).c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_ab6d58009e3bb551f890d0468ee26efd7}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-mul@{\_\-sse\_\-float\_\-vector\_\-mul}}
+\index{\_\-sse\_\-float\_\-vector\_\-mul@{\_\-sse\_\-float\_\-vector\_\-mul}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-mul}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-mul(c)}}
+\label{fermiqcd__sse_8h_ab6d58009e3bb551f890d0468ee26efd7}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("mulps %0, %%xmm0 \n\t" \
+      "mulps %0, %%xmm1 \n\t" \
+      "mulps %0, %%xmm2" \
+      : \
+      : \
+      "m" (c))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a3379bf0d56882b0aa71df5b392aa88cb}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-store@{\_\-sse\_\-float\_\-vector\_\-store}}
+\index{\_\-sse\_\-float\_\-vector\_\-store@{\_\-sse\_\-float\_\-vector\_\-store}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-store}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-store(r)}}
+\label{fermiqcd__sse_8h_a3379bf0d56882b0aa71df5b392aa88cb}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("movaps %%xmm0, %0 \n\t" \
+      "movaps %%xmm1, %1 \n\t" \
+      "movaps %%xmm2, %2" \
+      : \
+      "=m" ((r).c1), \
+      "=m" ((r).c2), \
+      "=m" ((r).c3))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a3841eaed406e1958bb15c1c772b86e02}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-sub@{\_\-sse\_\-float\_\-vector\_\-sub}}
+\index{\_\-sse\_\-float\_\-vector\_\-sub@{\_\-sse\_\-float\_\-vector\_\-sub}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-sub}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-sub()}}
+\label{fermiqcd__sse_8h_a3841eaed406e1958bb15c1c772b86e02}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("subps %%xmm3, %%xmm0 \n\t" \
+      "subps %%xmm4, %%xmm1 \n\t" \
+      "subps %%xmm5, %%xmm2" \
+      : \
+      :)
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a677ae42c7b8743e264fe73c1ff51e257}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-subadd@{\_\-sse\_\-float\_\-vector\_\-subadd}}
+\index{\_\-sse\_\-float\_\-vector\_\-subadd@{\_\-sse\_\-float\_\-vector\_\-subadd}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-subadd}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-subadd()}}
+\label{fermiqcd__sse_8h_a677ae42c7b8743e264fe73c1ff51e257}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("mulps %0, %%xmm3 \n\t" \
+      "mulps %0, %%xmm4 \n\t" \
+      "mulps %0, %%xmm5 \n\t" \
+      "addps %%xmm3, %%xmm0 \n\t" \
+      "addps %%xmm4, %%xmm1 \n\t" \
+      "addps %%xmm5, %%xmm2" \
+      : \
+      : \
+      "m" (_sse_float_sgn12))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_aa82913b3e8b3066c62a2c0415ee4b841}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-xch@{\_\-sse\_\-float\_\-vector\_\-xch}}
+\index{\_\-sse\_\-float\_\-vector\_\-xch@{\_\-sse\_\-float\_\-vector\_\-xch}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-xch}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-xch()}}
+\label{fermiqcd__sse_8h_aa82913b3e8b3066c62a2c0415ee4b841}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("shufps $0x4e, %%xmm3, %%xmm3 \n\t" \
+      "shufps $0x4e, %%xmm4, %%xmm4 \n\t" \
+      "shufps $0x4e, %%xmm5, %%xmm5" \
+      : \
+      :)
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_acdc6ddeaa1a171adaa72792d5b885fab}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-add@{\_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-add}}
+\index{\_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-add@{\_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-add}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-add()}}
+\label{fermiqcd__sse_8h_acdc6ddeaa1a171adaa72792d5b885fab}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("shufps $0x1b, %%xmm3, %%xmm3 \n\t" \
+      "shufps $0x1b, %%xmm4, %%xmm4 \n\t" \
+      "shufps $0x1b, %%xmm5, %%xmm5 \n\t" \
+      "mulps %0, %%xmm3 \n\t" \
+      "mulps %0, %%xmm4 \n\t" \
+      "mulps %0, %%xmm5 \n\t" \
+      "addps %%xmm3, %%xmm0 \n\t" \
+      "addps %%xmm4, %%xmm1 \n\t" \
+      "addps %%xmm5, %%xmm2" \
+      : \
+      : \
+      "m" (_sse_float_sgn13))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_a5cd831e5b224f2bd2f23b239e2b3fbba}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!\_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-sub@{\_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-sub}}
+\index{\_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-sub@{\_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-sub}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{\_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-sub}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-sse\_\-float\_\-vector\_\-xch\_\-i\_\-sub()}}
+\label{fermiqcd__sse_8h_a5cd831e5b224f2bd2f23b239e2b3fbba}
+{\bfseries Value:}
+\begin{DoxyCode}
+_ASM ("shufps $0x1b, %%xmm3, %%xmm3 \n\t" \
+      "shufps $0x1b, %%xmm4, %%xmm4 \n\t" \
+      "shufps $0x1b, %%xmm5, %%xmm5 \n\t" \
+      "mulps %0, %%xmm3 \n\t" \
+      "mulps %0, %%xmm4 \n\t" \
+      "mulps %0, %%xmm5 \n\t" \
+      "addps %%xmm3, %%xmm0 \n\t" \
+      "addps %%xmm4, %%xmm1 \n\t" \
+      "addps %%xmm5, %%xmm2" \
+      : \
+      : \
+      "m" (_sse_float_sgn24))
+\end{DoxyCode}
+\hypertarget{fermiqcd__sse_8h_af95298b7181f9b9484f4b76e794c8d25}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!ALIGN16@{ALIGN16}}
+\index{ALIGN16@{ALIGN16}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{ALIGN16}]{\setlength{\rightskip}{0pt plus 5cm}\#define ALIGN16~\_\-\_\-attribute\_\-\_\- ((aligned (16)))}}
+\label{fermiqcd__sse_8h_af95298b7181f9b9484f4b76e794c8d25}
+\hypertarget{fermiqcd__sse_8h_add0fe9c1d1861e48a984a16af397f794}{
+\index{fermiqcd\_\-sse.h@{fermiqcd\_\-sse.h}!ALIGN64@{ALIGN64}}
+\index{ALIGN64@{ALIGN64}!fermiqcd_sse.h@{fermiqcd\_\-sse.h}}
+\subsubsection[{ALIGN64}]{\setlength{\rightskip}{0pt plus 5cm}\#define ALIGN64~\_\-\_\-attribute\_\-\_\- ((aligned (64)))}}
+\label{fermiqcd__sse_8h_add0fe9c1d1861e48a984a16af397f794}

@@ -1,0 +1,712 @@
+
+\documentstyle[12pt,thmsa,sw20lart]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{TCIstyle=article/art4.lat,lart,article}
+
+%TCIDATA{Created=Sun Feb 13 20:08:19 2005}
+%TCIDATA{LastRevised=Mon Feb 14 00:46:15 2005}
+
+\input{tcilatex}
+\begin{document}
+
+
+\section{Introduction}
+
+FermiQCD is a software library for fast development of parallel Lattice QCD
+code. It includes examples and applications. The latest version of FermiQCD
+supports:
+
+\begin{itemize}
+\item  Fully Object Oriented design
+
+\item  Natural syntax
+
+\item  Supports Wilson, Staggered and Domain-wall fermions
+
+\item  Parallelization based on MPI is hidden to high level programmer
+
+\item  SU3 operations optimized for P4 (SSE and SSE2 instructions)
+
+\item  PSIM technology for emultaing parallel processes on a single
+processor machine and improving performance on multi-threaded processors
+
+\item  Compile and runs on multiple architectures including Linux, Mac and
+Windows (with cygwin).
+\end{itemize}
+
+\subsection{Installation}
+
+\begin{enumerate}
+\item  Download the file fermiqcd\_4.0.tar.gz
+
+\item  Execute: gunzip fermiqcd\_4.0.tar.gz
+
+\item  Execute: tar xvf fermiqcd\_4.0.tar.gz
+\end{enumerate}
+
+\subsection{Files}
+
+Upon installation fermiqcd creates the following directory structure
+\begin{verbatim}
+\FermiQCD
+\FermiQCD\Version_4.0
+\FermiQCD\Version_4.0\Libraries
+\FermiQCD\Version_4.0\Documentation
+\FermiQCD\Version_4.0\Examples
+\FermiQCD\Version_4.0\Converters
+\FermiQCD\Version_4.0\Tests
+\FermiQCD\Version_4.0\Other
+\end{verbatim}
+
+The folder ``Libraries'' contains the software libraries. There is no need
+to precompile anything since all the code is in the header files. This is
+done to simplify usage and allow the compiler to perform better template
+optimizations.
+
+The files starting with {\tt mdp\_} belong to the Matrix Distributed
+Processing (MDP) library, required by FermiQCD. The files starting with {\tt %
+fermiqcd\_} are the proper FermiQCD files. They are distrubuted together but
+are covered by different licenses. 
+
+The folder ``Documentation'' contains licenses and documentation for MDP and
+FermiQCD. MDP and FermiQCD cannot be redistributed without this folder.
+
+The folder ``Examples'' contains all of the examples described in these
+tutorial.
+
+The folder ``Converters'' contains converters for starndard QCD file formats
+into the MDP file format used by FermiQCD. 
+
+You may ask: why another file format? Technically FermiQCD itself does not
+specify a file format but it defines fields of objects defined on a lattice.
+Field objects inherit parallel load/save operations from the underlying MDP
+library which specifies a single file format for any generic field (any
+number of lattice dimensions, any structure at the site) optimized for
+parallel IO. None of the previous file formats was general enough since they
+are all specific for a type of field and usually for 4 dimensions.
+
+In any case FermiQCD can read UKQCD, MILC, CANOPY and many ASCII file
+formats. If you format is not supported email me and I will send you a
+converted in a week at no charge.
+
+The folder ``Tests'' contains programs and libraries that I consider a work
+in progress. They are included with the official distribution to allow
+people to contribute.
+
+The folder ``Other'' contains examples of applications in fields other than
+QCD, for example Cellular Authomata.
+
+\subsection{Compilation instructions}
+
+To compile all the example go into /FermiQCD/Version\_4.0/Examples and type
+\begin{verbatim}
+make all
+\end{verbatim}
+
+or compile any of the programs with
+\begin{verbatim}
+g++ prg.cpp -I../Libraries -o prg.exe -O3 [options]
+\end{verbatim}
+
+You may want to edit the first few lines of the Makefile in order to enable
+some specific compiler options:
+\begin{verbatim}
+g++ prg.cpp -I../Libraries -o prg.exe --O3 -DLINUX
+\end{verbatim}
+
+will compile for Linux and be able to measure running time
+\begin{verbatim}
+g++ prg.cpp -I../Libraries -o prg.exe -O3 -DUSE_DOUBLE_PRECISION
+\end{verbatim}
+
+will compile the algorithms to use double precision
+\begin{verbatim}
+g++ prg.cpp -I../Libraries -o prg.exe -O3 -DSSE2
+\end{verbatim}
+
+will compile the algorithms to use SSE/SSE2 optimizations (only on P4
+processors)
+\begin{verbatim}
+g++ prg.cpp -I../Libraries -o prg.exe -O3 -DPARALLEL
+\end{verbatim}
+
+will compile with MPI, otherwise it will compile with PSIM Parallel
+SIMulator (enables emulating parallel processing on a single processor PC,
+it is recommended on a multi-threaded processor where it will increase
+speed).
+
+Compiler options can be combined.
+
+\subsection{A first program}
+
+\subsection{General principles}
+
+More or less any FermiQCD the same structure:
+\begin{verbatim}
+#include ''fermiqcd.h''
+int main(int argc, char** argv) {
+   mdp.open_wormholes(argc,argv);
+   // declare conventions
+   // declare lattices
+   // declare fields
+   // declare variables
+   // run algorithms
+   mdp.close_wormholes();
+   return 0;
+}
+\end{verbatim}
+
+Where open\_wormholes and close\_wormholes respectively start and stop
+communications.
+
+Conventions are declared using the command
+\begin{verbatim}
+declare_base_matrices(''FERMIQCD'');
+\end{verbatim}
+
+which basically declares gamma matrices (Gamma[], Gamma5, and Gamma1). Other
+conventions supported include ``UKQCD''.
+
+A lattice, for examle a 4D lattice $16\times 8^3$ called {\tt mylattice} can
+be declared as follows
+\begin{verbatim}
+int box[]={16,8,8,8};
+mdp_lattice lattice(4,box);
+\end{verbatim}
+
+The constructor of the class can take optional parameters that are discussed
+in the next section. The optional parameters specify how the lattice object
+has to be partionioned over the parallel processes (default: by timeslices),
+specify the lattice topology (default: mesh) and the size of the buffer used
+for parallel communications (default: optimized for Wilson and Clover
+actuions).
+
+A {\bf lattice object} contains a parallel random number generator. To ask
+every site to print a uniform random number:
+\begin{verbatim}
+#include ''fermiqcd.h''
+int main(int argc, char** argv) {
+   mdp.open_wormholes(argc,argv);
+   declare_base_matrices(''FERMIQCD'');
+   int box[]={16,8,8,8}
+   mdp_lattice mylattice(4,box);
+   site x(mylattice);
+   forallsites(x) 
+      cout<<mylattice.random(x).plain()<<endl;
+   mdp.close_wormholes();
+   return 0;
+}
+\end{verbatim}
+
+Class {\bf site} represents a site of the lattice; {\tt forallsites(x)} is a
+parallel loop over all lattice sites using the site {\tt x} as looping
+variable and 
+\begin{verbatim}
+mylattice.random(x)
+\end{verbatim}
+
+is the {\bf random number generator} associated to the site {\tt x}. {\tt %
+plain()} is a method of the random generator that returns a uniform random
+number in (0,1). Other methods include
+\begin{verbatim}
+mylattice.random(x).SU(n)
+\end{verbatim}
+
+that generates a random SU(n) matrix using Cabibbo-Marinari.
+
+To declare a {\bf field} of floating point numbers in single precision
+called {\tt myfield} on our lattice
+\begin{verbatim}
+mdp_field<float> myfield(mylattice);
+\end{verbatim}
+
+To {\bf save} or {\bf load} a field\footnote{%
+This functions may crash if you there is not enough memory to allocate
+buffers for parallel IO. If this occurs pass a second {\tt int} argument to
+the load/save functions with a value below 1024. The smoller the value, the
+smaller the required buffer size.}
+\begin{verbatim}
+string filename;
+myfield.save(filename);
+myfield.load(filename);
+\end{verbatim}
+
+The following code creates a filed of floating point numbers, initialize
+them at random and saves them
+\begin{verbatim}
+#include ''fermiqcd.h''
+int main(int argc, char** argv) {
+   mdp.open_wormholes(argc,argv);
+   declare_base_matrices(''FERMIQCD'');
+   int box[]={16,8,8,8}
+   mdp_lattice mylattice(4,box);
+   mdp_field<float> myfield(mylattice);
+   site x(mylattice);
+   forallsites(x) 
+      myfield(x)=mylattice.random(x).plain();
+   myfield.update();
+   myfield.save(''myfield.mdp'');
+   mdp.close_wormholes();
+   return 0;
+}
+\end{verbatim}
+
+Note the function {\bf update()}. It is the single and most important
+function in MDP and FermiQCD. It must be called every time a field changes
+and before it is used. It instruct the parallel nodes to keep the copies of
+the lattice sites and field variables therein sinchronized.
+
+\subsection{Notes}
+
+To loop over all sites of a given parity (EVEN or ODD)
+\begin{verbatim}
+forallsitesofparity(x,EVEN)
+\end{verbatim}
+
+To loop over all local sites and local copies of sites stored on other
+processors
+\begin{verbatim}
+forallsitesandcopies(x)
+\end{verbatim}
+
+(This is used when looping to initialize a field with a local expression
+that does not require the parallel random number generator, in order to
+avoid a susequent call to the function update; if not sure, do not use it.)
+
+To loop over all local even sites and local copies of even sites stored on
+other processors:
+\begin{verbatim}
+forallsitesandcopiesofparity(x,EVEN)
+\end{verbatim}
+
+(Same as above.)
+
+To print the time components of a site variable x
+\begin{verbatim}
+for(int k=0;k<x.lattice().ndim;k++)
+   cout << x[k] << endl;
+\end{verbatim}
+
+Where {\tt x.lattice().ndim} reads as the number of dimensions ({\tt ndim})
+of the lattice on which the site {\tt x} was declared. All fields and site
+objects have a method lattice() to obtain a reference to the underlying
+lattice. {\tt x[k]} reads as the {\tt k}-th coordinate of the site {\tt x}.
+If the lattice was 4D x has four components 0,1,2, and 3.\ We adopt the
+convention of calling coordinate 0 the TIME\ coordinate and 1,2,3 the space
+coordinates.
+
+\subsection{Other fields}
+
+FermiQCD comes with a set of predefined fields
+\begin{verbatim}
+gauge_field
+fermi_field
+fermi_propagator
+staggered_field 
+staggered_propagator
+dw_fermi_field
+dw_fermi_propagator
+\end{verbatim}
+
+and algorithms to create and used them. All the FermiQCD algorithms work
+with any SU(n) gauge group although they are highly optimized for SU(3). The
+staggered algorithms also work for any even-dimensional space. Some other
+algorithms require a four dimensional space because of optimizations related
+to the gamma matrix conventions.
+
+\section{Matrix Distributed Processing}
+
+\section{Quantum Chromo Dynamics}
+
+\subsection{Pure gauge}
+
+A gauge field is defined as 
+\[
+U_\mu (x)=e^{iaA_\mu (x+\frac a2\widehat{\mu })}\simeq 1+iaA_\mu (x+\frac a2%
+\widehat{\mu })
+\]
+where $a$ is the lattice spacing and $A_\mu (x)$ is gauge field in $SU(n)$
+and $\widehat{\mu }$ is a unit versor in direction $\mu $.
+
+\subsubsection{Creating a hot gauge configuration}
+\begin{verbatim}
+#include ''fermiqcd.h''
+int main(int argc, char** argv) {
+   mdp.open_wormholes(argc,argv);
+   declare_base_matrices(''FERMIQCD'');
+   int box[]={16,8,8,8}
+   mdp_lattice mylattice(4,box);
+   int nc=3;
+   gauge_field U(mylattice,nc);
+   set_hot(U);
+   U.save(''gauge.0000.mdp'');
+   mdp.close_wormholes();
+   return 0;
+}
+\end{verbatim}
+
+the function set\_hot is already implemented but could have been implemented
+easily as 
+\begin{verbatim}
+void set_hot(gauge_field &U) {
+   site x(U.lattice());
+   forallsites(x)
+      for(int mu=0; mu<U.ndim; mu++)
+         U(x,mu)=U.lattice().random(x).SU(U.nc);
+   U.update();
+}
+\end{verbatim}
+
+\subsubsection{Creating a cold gauge configuration}
+\begin{verbatim}
+#include ''fermiqcd.h''
+int main(int argc, char** argv) {
+   mdp.open_wormholes(argc,argv);
+   declare_base_matrices(''FERMIQCD'');
+   int box[]={16,8,8,8}
+   mdp_lattice mylattice(4,box);
+   int nc=3;
+   gauge_field U(mylattice,nc);
+   set_cold(U);
+   U.save(''gauge.0000.mdp'');
+   mdp.close_wormholes();
+   return 0;
+}
+\end{verbatim}
+
+the function set\_hot is already implemented but could have been implemented
+easily as 
+\begin{verbatim}
+void set_cold(gauge_field &U) {
+   site x(U.lattice());
+   forallsites(x)
+      for(int mu=0; mu<U.ndim; mu++)
+         U(x,mu)=1;
+   U.update();
+} 
+\end{verbatim}
+
+Note how each site initializes {\tt U(x,mu)} with 1 (interpreted as $3\times
+3$ identity matrix). Since every site variable is initialized with a
+constant and it does not depend on the random number generator it would be
+more efficient to ask each process to initialize also the local copies of
+remote site variables and avoid calling update
+\begin{verbatim}
+void set_cold(gauge_field &U) {
+   site x(U.lattice());
+   forallsitesandcopies(x)
+      for(int mu=0; mu<U.ndim; mu++)
+         U(x,mu)=1;
+} 
+\end{verbatim}
+
+This is how set\_cold is implemented in practice and it requires no parallel
+communication.
+
+\subsubsection{Performing Wilson heatbath steps}
+
+The basic ingredient of any Lattice computation is the Markov Chain Monte
+Carlo that creates different gauge field configurations $U_\mu ^{[k]}(x)$
+randomly distributed with probability 
+\[
+P[U]=e^{-S_E[U]}
+\]
+where $S_E$ is the Euclidean gauge action expressed in terms of $U$.
+
+The $U_\mu ^{[k]}(x)$ are typically generated using an iterative procedure
+\[
+U_\mu ^{[k]}(x)\rightarrow U_\mu ^{[k+1]}(x)
+\]
+
+where $U_\mu ^{[0]}(x)$ is set either hot or cold and the algorithm to go
+from one to the next implements the action $S_E$. The most common algorithm
+is the heatbath and the simplest discretization of the gauge action is given
+by
+\begin{eqnarray*}
+S_E[U] &=&\beta \sum_{x,\mu ,\nu }[U_\mu (x)U_\nu (x+\widehat{\mu })U_\mu
+^H(x+\nu )U_\nu ^H(x)-1] \\
+&\simeq &\frac{a^4}{4g^2(a)}\sum_xG^{\mu \nu }(x)G_{\mu \nu }(x)
+\end{eqnarray*}
+where $\beta =g^{-2}(a)$ is the regularized coupling constants used as input
+to set the lattice scale $a$ and $G^{\mu \nu }(x)=\partial _\mu A_\nu
+-\partial _\nu A_\mu +[A_\mu ,A_\nu ]$ is the chromo-electro-magnetic field.
+
+Here is the code to generate 100 gauge configurations $U_\mu ^{[k]}(x)$ and
+save them.
+\begin{verbatim}
+#include ''fermiqcd.h''
+int main(int argc, char** argv) {
+   mdp.open_wormholes(argc,argv);
+   declare_base_matrices(''FERMIQCD'');
+   int box[]={16,8,8,8}
+   mdp_lattice mylattice(4,box);
+   int nc=3;
+   gauge_field U(mylattice,nc);
+   set_cold(U);
+   coefficients gauge;
+   gauge[''beta'']=6.0;
+   int niter=10;
+   for(int k=0; k<100; k++) {
+      WilsonGaugeAction::heatbath(U,gauge,niter);
+      U.save(string(''gauge.'')+tostring(k)+string(''.mdp''));
+   }
+   mdp.close_wormholes();
+   return 0;
+}
+\end{verbatim}
+
+Note that gauge is a variable of type {\bf coefficients}, basically a hash
+table that associates a floating point to any string. Variables of type
+coefficients are used to pass parameters (or coefficients) to algorithms
+that implement a physical action.
+
+{\tt WilsonGaugeAction::heatbath} is the {\bf hetbath} algorithm using the
+Wilson Gauge Action (who would have guessed?). It's first argument is the
+gauge field is acts upon (reads and writes it), the second argument is the
+set of coefficients (the only one it needs it ''beta'', i.e. the lattice
+spacing), the third argument is the number of iterations before returning.
+Noe that the number of interations technically is not a coefficient of the
+action therefore it not passed as a variable in the gauge object.
+
+The line 
+\begin{verbatim}
+string(''gauge.'')+tostring(k)+string(''.mdp'')
+\end{verbatim}
+
+simply builds a filename without messing around with pointers since they are
+unsafe.
+
+\subsubsection{Improved actions}
+
+All actions in FermiQCD are implemented as pure static classes (i.e. classes
+with no member variables and only static methods). All gauge actions have a
+static method heatbath that mush follow the same prototype.
+
+For the Wilson gauge action
+\begin{verbatim}
+coefficients gauge;
+gauge[''beta'']=6.0;      
+WilsonGaugeAction::heatbath(U,gauge,niter);
+\end{verbatim}
+
+For the MILC improved gauge action
+\begin{verbatim}
+coefficients gauge;
+gauge[''beta'']=6.0;      
+gauge[''zeta'']=1.0;      
+gauge[''u_t'']=1.0;      
+gauge[''u_s'']=1.0;      
+string model=''MILC'';
+ImprovedGaugeAction::heatbath(U,gauge,niter,model);
+\end{verbatim}
+
+For the Morningstar improved gauge action
+\begin{verbatim}
+coefficients gauge;
+gauge[''beta'']=6.0;      
+gauge[''zeta'']=1.0;      
+gauge[''u_t'']=1.0;      
+gauge[''u_s'']=1.0;      
+string model=''Morningstar'';
+ImprovedGaugeAction::heatbath(U,gauge,niter,model); 
+\end{verbatim}
+
+\subsubsection{Average plaquette}
+
+A plaquette is defined as
+\begin{eqnarray*}
+P_{\mu \nu }(x) &=&U_\mu (x)U_\nu (x+\widehat{\mu })U_\mu ^H(x+\nu )U_\nu
+^H(x) \\
+&\simeq &a^2G_{\mu \nu }
+\end{eqnarray*}
+here is the code to compute
+\[
+\frac 16\frac 1{N_V}\frac 1{N_c}\func{Re}Tr\sum_{x,\mu >\nu }P_{\mu \nu }(x)
+\]
+where $N_V$ is the lattice volume and $N_c$ is the number of colors.
+\begin{verbatim}
+#include ''fermiqcd.h''
+int main(int argc, char** argv) {
+   mdp.open_wormholes(argc,argv);
+   declare_base_matrices(''FERMIQCD'');
+   int box[]={16,8,8,8}
+   mdp_lattice mylattice(4,box);
+   int nc=3;
+   gauge_field U(mylattice,nc);
+   set_cold(U);
+   coefficients gauge;
+   gauge[''beta'']=6.0;
+   int niter=10;
+   for(int k=0; k<100; k++) {
+      WilsonGaugeAction::heatbath(U,gauge,niter);
+      U.save(string(''gauge.'')+tostring(k)+string(''.mdp''));
+      mdp << average_plaquette(U) << endl;
+   }
+   mdp.close_wormholes();
+   return 0;
+}
+\end{verbatim}
+
+The function average\_plaquette computes the average plaquette on the gauge
+field U. The output is a float number. Sending the output to mdp rather than
+cout makes sure only process 0 prints the average plaquette even if all
+processes contribute to the computation.
+
+There is a similar function
+\begin{verbatim}
+average_plaquette(U,mu,nu)
+\end{verbatim}
+
+that computes the average plaquette considering the mu-nu plane only where
+mu and nu are integers
+\[
+\frac 1{N_V}\frac 1{N_c}\func{Re}Tr\sum_xP_{\mu \nu }(x)
+\]
+
+The function average plaquette is already implemented as
+\begin{verbatim}
+myreal average_plaquette(gauge_field &U,int mu,int nu) {
+ myreal tmp=0;
+ site x(U.lattice());
+ forallsites(x)
+   tmp+=real(trace(plaquette(U,x,mu,nu)));
+ mdp.add(tmp);
+ return tmp/(U.lattice().nvol_gl*U.nc);
+}
+\end{verbatim}
+
+where {\tt plaquette(U,x,mu,nu)} is defined as
+\begin{verbatim}
+U(x,mu)*U(x+mu,nu)*hermitian(U(x,nu)*U(x+nu,mu)); 
+\end{verbatim}
+
+mdp.add(tmp) adds the values tmp computed by the parallel processes (always
+to be called after summing a variable inside a forallsites loop), and {\tt %
+U.lattice().nvol\_gl} reads as the total number of lattice sites ({\tt %
+nvol\_gl}) in the lattice for {\tt U}.
+
+\subsubsection{Average path}
+
+Note how the most general gauge observable has the form
+\[
+\oint_Ce^{iA_\mu dx^\mu }
+\]
+where $C$ is a generic path. Here we want to compute
+
+\[
+\frac 1{N_V}\frac 1{N_c}\func{Re}Tr\sum_x\oint_Ce^{iA_\mu dx^\mu }
+\]
+and here is the code:
+\begin{verbatim}
+#include ''fermiqcd.h''
+int main(int argc, char** argv) {
+   mdp.open_wormholes(argc,argv);
+   declare_base_matrices(''FERMIQCD'');
+   int box[]={16,8,8,8}
+   mdp_lattice mylattice(4,box);
+   int nc=3;
+   gauge_field U(mylattice,nc);
+   set_cold(U);
+   coefficients gauge;
+   gauge[''beta'']=6.0;
+   int niter=10;
+   int mu=0, nu=1;
+   int path[6][2]={{+1,mu},{+1,mu},{+1,nu},{-1,mu},{-1,nu},{-1,nu}};
+   for(int k=0; k<100; k++) {
+      WilsonGaugeAction::heatbath(U,gauge,niter);
+      U.save(string(''gauge.'')+tostring(k)+string(''.mdp''));
+      mdp << average_path(U,6,path) << endl;
+   }
+   mdp.close_wormholes();
+   return 0;
+}
+\end{verbatim}
+
+The function {\tt average\_path} is a computes the average path on the gauge
+field U. where the path $C$ is a spacified by a 2D array {\tt d} of links
+and each each link is a verse (+1 or -1) and a direction (mu,
+nu=0,1,2,3,...). Note that because a path may be highly non-local the
+implementation of the funciton average\_path requires, in general, quite
+some communication.
+
+This function is already implemented and looks like the following: 
+\begin{verbatim}
+mdp_complex average_path(gauge_field &U, int length, int d[][2]) {
+  mdp_matrix_field psi1(U.lattice(),U.nc,U.nc);
+  mdp_matrix_field psi2(U.lattice(),U.nc,U.nc);
+  mdp_site x(U.lattice());
+  mdp_complex sum=0;
+  for(int i=0; i<length; i++) {
+    if(i==0) 
+       forallsites(x) 
+          psi1(x)=U(x,d[i][0],d[i][1]);
+    else
+       forallsites(x) 
+          psi1(x)=psi1(x)*U(x,d[i][1],d[i][1]);
+    if(i<length-1) {
+       psi1.update();    
+       if(d[i][0]==+1)
+          forallsites(x) psi2(x)=psi1(x+d[i][1]);
+       else if(d[i][0]==-1)
+          forallsites(x) psi2(x)=psi1(x-d[i][1]);
+       psi1=psi2;
+    }
+  }
+  forallsites(x) sum+=trace(psi1(x));
+  return sum/(U.lattice().nvol_gl*U.nc);
+}
+\end{verbatim}
+
+\subsubsection{Chromo-electro-magnetic field}
+
+The Chromo-electro-magnetic field $P_{\mu \nu }=a^2G_{\mu \nu }$ has its own
+class as a field of vectors of matrices but one never really needs to
+declare it since it is uniquely associated to a aguge field. Given a gauge
+field {\tt U} just call:
+\begin{verbatim}
+compute_em_field(U);
+\end{verbatim}
+
+and to obtain the plaquette $P_{\mu \nu }(x)$ just call
+\begin{verbatim}
+U.em(x,mu,nu)
+\end{verbatim}
+
+Therefore the average plaquette could also have been computes as
+\begin{verbatim}
+mdp_real sum=0.0;
+compute_em_field(U);
+forallsites(x) 
+   for(int mu=0; mu<U.ndim; mu++)
+      for(int nu=mu+1; nu<U.ndim; nu++)
+         sum+=real(trace(U.em(x,mu,nu));
+retur sum/(U.lattice().nvol_gl*U.ndim*(U.ndim-1)/2*U.nc);
+\end{verbatim}
+
+\subsection{Fermions and inverters}
+
+\subsection{Wilson fermions}
+
+\subsection{Wilson mesons}
+
+\subsection{Staggered fermions}
+
+\subsection{Staggered mesons}
+
+\subsection{Domain-wall fermions}
+
+\subsection{Domain-wall mesons}
+
+\subsection{Gauge fixing}
+
+\subsection{Smearing}
+
+\subsection{All-to-all propagators}
+
+\subsection{Converting file formats}
+
+\subsection{Implementing a new type of field}
+
+\subsection{Implementing a new actions}
+
+\end{document}

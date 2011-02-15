@@ -1,0 +1,147 @@
+\hypertarget{classstaggered__field}{
+\section{staggered\_\-field Class Reference}
+\label{classstaggered__field}\index{staggered\_\-field@{staggered\_\-field}}
+}
+
+
+staggered fermionic field  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-staggered\_\-field.h$>$}Inheritance diagram for staggered\_\-field::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classstaggered__field}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstaggered__field_acc7d5a171caf8bda9d0a904c6672432d}{staggered\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int nc\_\-, int nspin\_\-=4)
+\item 
+\hyperlink{classstaggered__field_a22b5b7f7d050f6356451df02356f181d}{staggered\_\-field} (const \hyperlink{classstaggered__field}{staggered\_\-field} \&chi)
+\item 
+void \hyperlink{classstaggered__field_a5320371c9d4b87255c578e5b41684e48}{operator=} (const \hyperlink{classstaggered__field}{staggered\_\-field} \&chi)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classstaggered__field_aa881451872889aa0b6c716c01f3fabb7}{operator()} (site x)
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classstaggered__field_a32b4553845d0b7f92f99f07e0fbeb64a}{operator()} (site x, int i)
+\item 
+const \hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classstaggered__field_a8cee97da0e262753ab059ef553597a01}{operator()} (site x, int i) const 
+\item 
+void \hyperlink{classstaggered__field_ac3fee1898eaa4198744c5bc0cc969e2e}{operator=} (\hyperlink{classmdp__complex}{mdp\_\-complex} a)
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{classstaggered__field_a613e227e2cc092c103ce431000fd4b53}{component} (site x, int mu)
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{classstaggered__field_a2f865e7dbd982109e584d26687f5340d}{eta} (site x, int mu)
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{classstaggered__field_ae89b67366b3566c3c8a89d3303dc1d62}{eps} (site x)
+\item 
+\hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} \hyperlink{classstaggered__field_a5e53f3e9e5c268dde3e3f2eb9e64befa}{type} (site x)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classstaggered__field_a4ac408eebebb6b76ac209479df87459a}{nc}
+\item 
+int \hyperlink{classstaggered__field_a52eed99381c8e8649c6e79ec0fe7a4b8}{ndim}
+\item 
+int \hyperlink{classstaggered__field_aac06f4fadf069a57cda02bec2ecd8bda}{nspin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+staggered fermionic field Example: \begin{DoxyVerb}
+/// staggered_field psi(lattice,nc);
+/// mdp_site x(lattice);
+/// forallsites(x)
+///   for(int i=0; i<nc; i++)
+///     psi(x,i)=0.0+0.0*I;
+/// \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classstaggered__field_acc7d5a171caf8bda9d0a904c6672432d}{
+\index{staggered\_\-field@{staggered\_\-field}!staggered\_\-field@{staggered\_\-field}}
+\index{staggered\_\-field@{staggered\_\-field}!staggered_field@{staggered\_\-field}}
+\subsubsection[{staggered\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}staggered\_\-field::staggered\_\-field ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em nc\_\-}, \/  int {\em nspin\_\-} = {\ttfamily 4})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__field_acc7d5a171caf8bda9d0a904c6672432d}
+\hypertarget{classstaggered__field_a22b5b7f7d050f6356451df02356f181d}{
+\index{staggered\_\-field@{staggered\_\-field}!staggered\_\-field@{staggered\_\-field}}
+\index{staggered\_\-field@{staggered\_\-field}!staggered_field@{staggered\_\-field}}
+\subsubsection[{staggered\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}staggered\_\-field::staggered\_\-field (const {\bf staggered\_\-field} \& {\em chi})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__field_a22b5b7f7d050f6356451df02356f181d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classstaggered__field_a613e227e2cc092c103ce431000fd4b53}{
+\index{staggered\_\-field@{staggered\_\-field}!component@{component}}
+\index{component@{component}!staggered_field@{staggered\_\-field}}
+\subsubsection[{component}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-real} staggered\_\-field::component (site {\em x}, \/  int {\em mu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__field_a613e227e2cc092c103ce431000fd4b53}
+\hypertarget{classstaggered__field_ae89b67366b3566c3c8a89d3303dc1d62}{
+\index{staggered\_\-field@{staggered\_\-field}!eps@{eps}}
+\index{eps@{eps}!staggered_field@{staggered\_\-field}}
+\subsubsection[{eps}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-real} staggered\_\-field::eps (site {\em x})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__field_ae89b67366b3566c3c8a89d3303dc1d62}
+\hypertarget{classstaggered__field_a2f865e7dbd982109e584d26687f5340d}{
+\index{staggered\_\-field@{staggered\_\-field}!eta@{eta}}
+\index{eta@{eta}!staggered_field@{staggered\_\-field}}
+\subsubsection[{eta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-real} staggered\_\-field::eta (site {\em x}, \/  int {\em mu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__field_a2f865e7dbd982109e584d26687f5340d}
+\hypertarget{classstaggered__field_a8cee97da0e262753ab059ef553597a01}{
+\index{staggered\_\-field@{staggered\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!staggered_field@{staggered\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mdp\_\-complex}\& staggered\_\-field::operator() (site {\em x}, \/  int {\em i}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__field_a8cee97da0e262753ab059ef553597a01}
+\hypertarget{classstaggered__field_a32b4553845d0b7f92f99f07e0fbeb64a}{
+\index{staggered\_\-field@{staggered\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!staggered_field@{staggered\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex}\& staggered\_\-field::operator() (site {\em x}, \/  int {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__field_a32b4553845d0b7f92f99f07e0fbeb64a}
+\hypertarget{classstaggered__field_aa881451872889aa0b6c716c01f3fabb7}{
+\index{staggered\_\-field@{staggered\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!staggered_field@{staggered\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} staggered\_\-field::operator() (site {\em x})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__field_aa881451872889aa0b6c716c01f3fabb7}
+\hypertarget{classstaggered__field_ac3fee1898eaa4198744c5bc0cc969e2e}{
+\index{staggered\_\-field@{staggered\_\-field}!operator=@{operator=}}
+\index{operator=@{operator=}!staggered_field@{staggered\_\-field}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void staggered\_\-field::operator= ({\bf mdp\_\-complex} {\em a})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__field_ac3fee1898eaa4198744c5bc0cc969e2e}
+
+
+Reimplemented from \hyperlink{classmdp__field_a24364bce6444668661a0688632af87ec}{mdp\_\-field$<$ mdp\_\-complex $>$}.\hypertarget{classstaggered__field_a5320371c9d4b87255c578e5b41684e48}{
+\index{staggered\_\-field@{staggered\_\-field}!operator=@{operator=}}
+\index{operator=@{operator=}!staggered_field@{staggered\_\-field}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void staggered\_\-field::operator= (const {\bf staggered\_\-field} \& {\em chi})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__field_a5320371c9d4b87255c578e5b41684e48}
+
+
+Reimplemented from \hyperlink{classmdp__complex__field_ad2b736ae31e3ee1f955c10f6ad40928f}{mdp\_\-complex\_\-field}.\hypertarget{classstaggered__field_a5e53f3e9e5c268dde3e3f2eb9e64befa}{
+\index{staggered\_\-field@{staggered\_\-field}!type@{type}}
+\index{type@{type}!staggered_field@{staggered\_\-field}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-real} staggered\_\-field::type (site {\em x})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classstaggered__field_a5e53f3e9e5c268dde3e3f2eb9e64befa}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classstaggered__field_a4ac408eebebb6b76ac209479df87459a}{
+\index{staggered\_\-field@{staggered\_\-field}!nc@{nc}}
+\index{nc@{nc}!staggered_field@{staggered\_\-field}}
+\subsubsection[{nc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf staggered\_\-field::nc}}}
+\label{classstaggered__field_a4ac408eebebb6b76ac209479df87459a}
+\hypertarget{classstaggered__field_a52eed99381c8e8649c6e79ec0fe7a4b8}{
+\index{staggered\_\-field@{staggered\_\-field}!ndim@{ndim}}
+\index{ndim@{ndim}!staggered_field@{staggered\_\-field}}
+\subsubsection[{ndim}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf staggered\_\-field::ndim}}}
+\label{classstaggered__field_a52eed99381c8e8649c6e79ec0fe7a4b8}
+\hypertarget{classstaggered__field_aac06f4fadf069a57cda02bec2ecd8bda}{
+\index{staggered\_\-field@{staggered\_\-field}!nspin@{nspin}}
+\index{nspin@{nspin}!staggered_field@{staggered\_\-field}}
+\subsubsection[{nspin}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf staggered\_\-field::nspin}}}
+\label{classstaggered__field_aac06f4fadf069a57cda02bec2ecd8bda}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__staggered__field_8h}{fermiqcd\_\-staggered\_\-field.h}\end{DoxyCompactItemize}

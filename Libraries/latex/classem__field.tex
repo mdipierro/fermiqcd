@@ -1,0 +1,37 @@
+\hypertarget{classem__field}{
+\section{em\_\-field Class Reference}
+\label{classem__field}\index{em\_\-field@{em\_\-field}}
+}
+the chromo-electr-magnetic field for any SU(n)  
+
+
+{\tt \#include $<$fermiqcd\_\-gauge\_\-field.h$>$}
+
+Inherits \hyperlink{classmdp__complex__field}{mdp\_\-complex\_\-field}.
+
+Collaboration diagram for em\_\-field:
+
+\subsection{Detailed Description}
+the chromo-electr-magnetic field for any SU(n) 
+
+Example: 
+
+\footnotesize\begin{verbatim}
+///    int nc=3; 
+///    int box[]={10,8,8,8};
+///    mdp_lattice lattice(4,box);
+///    gauge_field U(lattice,nc);
+///    mdp_site x(lattice);
+///    U.load("myfield");
+///    compute_em_field(U);
+///    forallsites(x)
+///      for(int mu=0; mu<U.ndim; mu++)
+///        for(int nu=mu+1; nu<U.ndim; nu++)
+///          cout << U.em(x,mu,nu) << endl;
+/// \end{verbatim}
+\normalsize
+ Note that U.em(x,mu,nu) is $ a^2 G_{\mu\nu} $ and it is a color matrix in SU(nc). $a$ is the lattice spacing. 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{fermiqcd__gauge__field_8h}{fermiqcd\_\-gauge\_\-field.h}\end{CompactItemize}

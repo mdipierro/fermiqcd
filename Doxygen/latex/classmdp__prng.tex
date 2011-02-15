@@ -1,0 +1,97 @@
+\hypertarget{classmdp__prng}{
+\section{mdp\_\-prng Class Reference}
+\label{classmdp__prng}\index{mdp\_\-prng@{mdp\_\-prng}}
+}
+
+
+Marsaglia's random number generator (same as UKQCD).  
+
+
+{\ttfamily \#include $<$mdp\_\-prng.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classmdp__prng_a261360660403dcd1a76305a8644b6a2d}{plain} ()
+\begin{DoxyCompactList}\small\item\em return a uniform random number in (0,1) \item\end{DoxyCompactList}\item 
+void \hyperlink{classmdp__prng_a2a41d455e32ec21fce0c76f71bda801a}{initialize} (\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} ijkl)
+\item 
+\hyperlink{classmdp__prng_a57739df3a7629078ca66dbfd7ded1b86}{mdp\_\-prng} (\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} k=0)
+\item 
+float \hyperlink{classmdp__prng_adf372628df14ef01302472264a7f26d8}{gaussian} (float \hyperlink{fermiqcd__gamma__matrices_8h_ab20455955848cb6945fe37dda0a2ef40}{sigma}=1)
+\begin{DoxyCompactList}\small\item\em returns a gaussian random number \item\end{DoxyCompactList}\item 
+double \hyperlink{classmdp__prng_a2ba8807aa153b9b222d6d724da06dfdd}{distribution} (float($\ast$fp)(float, void $\ast$), void $\ast$a=0)
+\begin{DoxyCompactList}\small\item\em draws a random float in (0,1) from a distribution using accept-\/reject \item\end{DoxyCompactList}\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classmdp__prng_a348d0a778f0c1e3dd71e163bad950936}{SU} (int n)
+\begin{DoxyCompactList}\small\item\em returns a random SU(n) matrix using Cabibbo-\/Marinari \item\end{DoxyCompactList}\item 
+void \hyperlink{classmdp__prng_a6214a2e9ed4d3da1e61544501e710999}{skip} (int n)
+\begin{DoxyCompactList}\small\item\em skip n numbers from the sequence \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Marsaglia's random number generator (same as UKQCD). You should not instantiate this class because:
+\begin{DoxyItemize}
+\item there is a global object mdp\_\-random
+\item each field \char`\"{}lattice\char`\"{} has a parallel generator \char`\"{}lattice.random(x)\char`\"{} Example: \begin{DoxyVerb}
+///    // print a uniform number in (0,1)
+///    cout << mdp_random.plain() << endl;
+///    // print a gaussian number
+///    cout << mdp_random.gaussian() << endl;
+///    // print a random SU(10) matrix
+///    cout << mdp_random.SU(10) << endl;
+/// \end{DoxyVerb}
+ 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmdp__prng_a57739df3a7629078ca66dbfd7ded1b86}{
+\index{mdp\_\-prng@{mdp\_\-prng}!mdp\_\-prng@{mdp\_\-prng}}
+\index{mdp\_\-prng@{mdp\_\-prng}!mdp_prng@{mdp\_\-prng}}
+\subsubsection[{mdp\_\-prng}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-prng::mdp\_\-prng ({\bf mdp\_\-int} {\em k} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__prng_a57739df3a7629078ca66dbfd7ded1b86}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__prng_a2ba8807aa153b9b222d6d724da06dfdd}{
+\index{mdp\_\-prng@{mdp\_\-prng}!distribution@{distribution}}
+\index{distribution@{distribution}!mdp_prng@{mdp\_\-prng}}
+\subsubsection[{distribution}]{\setlength{\rightskip}{0pt plus 5cm}double mdp\_\-prng::distribution (float($\ast$)(float, void $\ast$) {\em fp}, \/  void $\ast$ {\em a} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__prng_a2ba8807aa153b9b222d6d724da06dfdd}
+
+
+draws a random float in (0,1) from a distribution using accept-\/reject \hypertarget{classmdp__prng_adf372628df14ef01302472264a7f26d8}{
+\index{mdp\_\-prng@{mdp\_\-prng}!gaussian@{gaussian}}
+\index{gaussian@{gaussian}!mdp_prng@{mdp\_\-prng}}
+\subsubsection[{gaussian}]{\setlength{\rightskip}{0pt plus 5cm}float mdp\_\-prng::gaussian (float {\em sigma} = {\ttfamily 1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__prng_adf372628df14ef01302472264a7f26d8}
+
+
+returns a gaussian random number \hypertarget{classmdp__prng_a2a41d455e32ec21fce0c76f71bda801a}{
+\index{mdp\_\-prng@{mdp\_\-prng}!initialize@{initialize}}
+\index{initialize@{initialize}!mdp_prng@{mdp\_\-prng}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-prng::initialize ({\bf mdp\_\-int} {\em ijkl})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__prng_a2a41d455e32ec21fce0c76f71bda801a}
+\hypertarget{classmdp__prng_a261360660403dcd1a76305a8644b6a2d}{
+\index{mdp\_\-prng@{mdp\_\-prng}!plain@{plain}}
+\index{plain@{plain}!mdp_prng@{mdp\_\-prng}}
+\subsubsection[{plain}]{\setlength{\rightskip}{0pt plus 5cm}float mdp\_\-prng::plain ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__prng_a261360660403dcd1a76305a8644b6a2d}
+
+
+return a uniform random number in (0,1) \hypertarget{classmdp__prng_a6214a2e9ed4d3da1e61544501e710999}{
+\index{mdp\_\-prng@{mdp\_\-prng}!skip@{skip}}
+\index{skip@{skip}!mdp_prng@{mdp\_\-prng}}
+\subsubsection[{skip}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-prng::skip (int {\em n})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__prng_a6214a2e9ed4d3da1e61544501e710999}
+
+
+skip n numbers from the sequence \hypertarget{classmdp__prng_a348d0a778f0c1e3dd71e163bad950936}{
+\index{mdp\_\-prng@{mdp\_\-prng}!SU@{SU}}
+\index{SU@{SU}!mdp_prng@{mdp\_\-prng}}
+\subsubsection[{SU}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} mdp\_\-prng::SU (int {\em n})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__prng_a348d0a778f0c1e3dd71e163bad950936}
+
+
+returns a random SU(n) matrix using Cabibbo-\/Marinari 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__prng_8h}{mdp\_\-prng.h}\end{DoxyCompactItemize}

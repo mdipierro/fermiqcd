@@ -1,0 +1,74 @@
+\hypertarget{class_gauge_fixing}{
+\section{GaugeFixing Class Reference}
+\label{class_gauge_fixing}\index{GaugeFixing@{GaugeFixing}}
+}
+
+
+the main gaugefixing algorithm  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-gauge\_\-fixing.h$>$}\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_gauge_fixing_a19a0c4aeaa7caa8468d702238d223e0a}{hit} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, int mu, int parity, int i, int j, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} overrelaxation\_\-boost=1)
+\item 
+static void \hyperlink{class_gauge_fixing_af3a79f5db7d5c4cef7074938578eff80}{z3\_\-fix} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, int mu)
+\item 
+static \hyperlink{classgaugefixing__stats}{gaugefixing\_\-stats} \hyperlink{class_gauge_fixing_a71359f7c7bd14c3c5d548cbf7e6793c5}{fix} (\hyperlink{classgauge__field}{gauge\_\-field} \&U, int mu=0, int max\_\-steps=1, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} target\_\-precision=1e-\/5, mdp\_\-real overrelaxation\_\-boost=1, bool z3=false)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_gauge_fixing_a8be5d99ab21951db104df17ffdd7362f}{Coulomb} = 0
+\item 
+static const int \hyperlink{class_gauge_fixing_a115e0b47731237fd9ff984c7f6881994}{Landau} = 10
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the main gaugefixing algorithm Example: \begin{DoxyVerb}
+///    gauge_field U(lattice,nc);
+///    gaugefixing_stats stats;
+///    U.load("myfield");
+///    stats=GaugeFixing::fix(U,GaugeFixing::Coulomb,100);
+///    U.save("myfield_gaugefixed");
+/// \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gauge_fixing_a71359f7c7bd14c3c5d548cbf7e6793c5}{
+\index{GaugeFixing@{GaugeFixing}!fix@{fix}}
+\index{fix@{fix}!GaugeFixing@{GaugeFixing}}
+\subsubsection[{fix}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf gaugefixing\_\-stats} GaugeFixing::fix ({\bf gauge\_\-field} \& {\em U}, \/  int {\em mu} = {\ttfamily 0}, \/  int {\em max\_\-steps} = {\ttfamily 1}, \/  {\bf mdp\_\-real} {\em target\_\-precision} = {\ttfamily 1e-\/5}, \/  {\bf mdp\_\-real} {\em overrelaxation\_\-boost} = {\ttfamily 1}, \/  bool {\em z3} = {\ttfamily false})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_gauge_fixing_a71359f7c7bd14c3c5d548cbf7e6793c5}
+performs the gauge fixing 
+\begin{DoxyParams}{Parameters}
+\item[{\em U}]the gauge field \item[{\em mu}]= \hyperlink{class_gauge_fixing_a8be5d99ab21951db104df17ffdd7362f}{GaugeFixing::Coulomb} or \hyperlink{class_gauge_fixing_a115e0b47731237fd9ff984c7f6881994}{GaugeFixing::Landau} or other direction \item[{\em max\_\-steps}]maximum number of gaugefixing steps \item[{\em parget\_\-precision}]precision in gaugefixing \item[{\em overrelaxation\_\-boost}]\item[{\em z3}]if set to true fixes residual Z(n) symmatry due to lattice torus topology \end{DoxyParams}
+\hypertarget{class_gauge_fixing_a19a0c4aeaa7caa8468d702238d223e0a}{
+\index{GaugeFixing@{GaugeFixing}!hit@{hit}}
+\index{hit@{hit}!GaugeFixing@{GaugeFixing}}
+\subsubsection[{hit}]{\setlength{\rightskip}{0pt plus 5cm}static void GaugeFixing::hit ({\bf gauge\_\-field} \& {\em U}, \/  int {\em mu}, \/  int {\em parity}, \/  int {\em i}, \/  int {\em j}, \/  {\bf mdp\_\-real} {\em overrelaxation\_\-boost} = {\ttfamily 1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_gauge_fixing_a19a0c4aeaa7caa8468d702238d223e0a}
+\hypertarget{class_gauge_fixing_af3a79f5db7d5c4cef7074938578eff80}{
+\index{GaugeFixing@{GaugeFixing}!z3\_\-fix@{z3\_\-fix}}
+\index{z3\_\-fix@{z3\_\-fix}!GaugeFixing@{GaugeFixing}}
+\subsubsection[{z3\_\-fix}]{\setlength{\rightskip}{0pt plus 5cm}static void GaugeFixing::z3\_\-fix ({\bf gauge\_\-field} \& {\em U}, \/  int {\em mu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_gauge_fixing_af3a79f5db7d5c4cef7074938578eff80}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_gauge_fixing_a8be5d99ab21951db104df17ffdd7362f}{
+\index{GaugeFixing@{GaugeFixing}!Coulomb@{Coulomb}}
+\index{Coulomb@{Coulomb}!GaugeFixing@{GaugeFixing}}
+\subsubsection[{Coulomb}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf GaugeFixing::Coulomb} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_gauge_fixing_a8be5d99ab21951db104df17ffdd7362f}
+\hypertarget{class_gauge_fixing_a115e0b47731237fd9ff984c7f6881994}{
+\index{GaugeFixing@{GaugeFixing}!Landau@{Landau}}
+\index{Landau@{Landau}!GaugeFixing@{GaugeFixing}}
+\subsubsection[{Landau}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf GaugeFixing::Landau} = 10\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_gauge_fixing_a115e0b47731237fd9ff984c7f6881994}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__gauge__fixing_8h}{fermiqcd\_\-gauge\_\-fixing.h}\end{DoxyCompactItemize}

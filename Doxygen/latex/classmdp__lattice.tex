@@ -1,0 +1,397 @@
+\hypertarget{classmdp__lattice}{
+\section{mdp\_\-lattice Class Reference}
+\label{classmdp__lattice}\index{mdp\_\-lattice@{mdp\_\-lattice}}
+}
+
+
+distributed lattice object  
+
+
+{\ttfamily \#include $<$mdp\_\-lattice.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_a672142cb946fc501ad8ffc7c0ea01c42}{global\_\-coordinate} (int $\ast$x)
+\item 
+void \hyperlink{classmdp__lattice_af6928ac02766a006f82f6a87eef1019a}{global\_\-coordinate} (\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} global\_\-idx, int $\ast$x)
+\item 
+int \hyperlink{classmdp__lattice_a3c949964a192c244a6f39df0aaceb1d2}{compute\_\-parity} (int $\ast$x)
+\item 
+\hyperlink{classmdp__lattice_a16771b478cc1e3a6bd70487de44e7a7a}{mdp\_\-lattice} ()
+\item 
+\hyperlink{classmdp__lattice_a90f0e67a6947ec2cab8065cef94d3ceb}{mdp\_\-lattice} (int ndim\_\-, int nx\_\-\mbox{[}$\,$\mbox{]}, int($\ast$where\_\-)(int $\ast$, int, int $\ast$)=default\_\-partitioning0, void($\ast$neighbour\_\-)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$)=torus\_\-topology, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} random\_\-seed\_\-=0, int next\_\-next\_\-=1, bool local\_\-random\_\-=true)
+\item 
+\hyperlink{classmdp__lattice_afe2d9427fc47225722c0ab3314246a88}{mdp\_\-lattice} (int ndim\_\-, int ndir\_\-, int nx\_\-\mbox{[}$\,$\mbox{]}, int($\ast$where\_\-)(int $\ast$, int, int $\ast$)=default\_\-partitioning0, void($\ast$neighbour\_\-)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$)=torus\_\-topology, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} random\_\-seed\_\-=0, int next\_\-next\_\-=1, bool local\_\-random\_\-=true)
+\begin{DoxyCompactList}\small\item\em for weird stuff \item\end{DoxyCompactList}\item 
+void \hyperlink{classmdp__lattice_a04f3271fe78a6f61f10c4151145f6db5}{allocate\_\-lattice} (int ndim\_\-, int nx\_\-\mbox{[}$\,$\mbox{]}, int($\ast$where\_\-)(int $\ast$, int, int $\ast$)=default\_\-partitioning0, void($\ast$neighbour\_\-)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$)=torus\_\-topology, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} random\_\-seed\_\-=0, int next\_\-next\_\-=1, bool local\_\-random\_\-=true)
+\item 
+void \hyperlink{classmdp__lattice_a8e5ed5d10679379892b46f3359d5971c}{allocate\_\-lattice} (int ndim\_\-, int ndir\_\-, int nx\_\-\mbox{[}$\,$\mbox{]}, int($\ast$where\_\-)(int $\ast$, int, int $\ast$)=default\_\-partitioning0, void($\ast$neighbour\_\-)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$)=torus\_\-topology, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} random\_\-seed\_\-=0, int next\_\-next\_\-=1, bool local\_\-random\_\-=true)
+\begin{DoxyCompactList}\small\item\em for weird stuff \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classmdp__lattice_a04eafca14369c88c7c469ffeb72e54ec}{$\sim$mdp\_\-lattice} ()
+\item 
+void \hyperlink{classmdp__lattice_af5407cf7f7d5eded3870abf0515e110d}{deallocate\_\-memory} ()
+\begin{DoxyCompactList}\small\item\em dynamically deallocate a lattice \item\end{DoxyCompactList}\item 
+void \hyperlink{classmdp__lattice_a1d9c9be3661c7e0ccd05d9c1ed620178}{initialize\_\-random} (\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} random\_\-seed\_\-=0)
+\item 
+\hyperlink{classmdp__prng}{mdp\_\-prng} \& \hyperlink{classmdp__lattice_a93f774075f5829c57009c644a74cfd4a}{random} (\hyperlink{classmdp__site}{mdp\_\-site})
+\begin{DoxyCompactList}\small\item\em Returns the local object \hyperlink{classmdp__prng}{mdp\_\-prng} at site x of the lattice. \item\end{DoxyCompactList}\item 
+int \hyperlink{classmdp__lattice_a7e99975b0536e5f46acc8b72778c077f}{n\_\-dimensions} () const 
+\begin{DoxyCompactList}\small\item\em number of dimensions of the lattice (deprecated\_\- \item\end{DoxyCompactList}\item 
+int \hyperlink{classmdp__lattice_aa8452324840f85cf188ce7fffe488d98}{n\_\-directions} () const 
+\begin{DoxyCompactList}\small\item\em number of directions one can move on the lattice; usually same as ndim \item\end{DoxyCompactList}\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_a903ec2c7d662743f8bc1e311d21f6c21}{size} () const 
+\begin{DoxyCompactList}\small\item\em number of sites of the lattice \item\end{DoxyCompactList}\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_a08612798e2f61d4e9d2ccdc8b8d7cf37}{size} (const int mu) const 
+\begin{DoxyCompactList}\small\item\em size of the lattice in direction mu \item\end{DoxyCompactList}\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_acc39e2cd011b6ebc5cc527fbdfc03ec6}{local\_\-volume} () const 
+\begin{DoxyCompactList}\small\item\em number of lattice sites stored locally by current process \item\end{DoxyCompactList}\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_ac1adc4b64acbf07588b58dd0de4dc021}{global\_\-volume} () const 
+\begin{DoxyCompactList}\small\item\em total lattice volume (deprecated) \item\end{DoxyCompactList}\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_a496a60d5988294a9d0da7b635005d410}{move\_\-up} (const \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} idx, const int mu) const 
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_a9304b6cc18f178e2fcec73c3b8b9d76d}{move\_\-down} (const \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} idx, const int mu) const 
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_a9b2c219bd0fb16482508b87839d02e9b}{local} (\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} idx) const 
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_a1d7f81c235e6f0259013399f01f98306}{global} (\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} idx) const 
+\item 
+int \hyperlink{classmdp__lattice_af8e8ea7660136dc3810b0a14a41b6505}{site\_\-parity} (const \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} idx) const 
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_a9cc8de7512a9ff465f22e4ddaf307e38}{start\_\-index} (const int process, int p=\hyperlink{mdp__global__vars_8h_a4c9de81f2de5a74b588107b6c0afb9ee}{EVENODD}) const 
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_ada0f943b50d6aeb302e4fc6cf2fcabb9}{stop\_\-index} (const int process, int p=\hyperlink{mdp__global__vars_8h_a4c9de81f2de5a74b588107b6c0afb9ee}{EVENODD}) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classmdp__lattice_a215127d8822ab086ff06fdbc815fae91}{ndim}
+\item 
+int \hyperlink{classmdp__lattice_ace466601bc3fb9815648d775793985eb}{ndir}
+\item 
+int \hyperlink{classmdp__lattice_afc7199a6a019e3bfdb40f1367baf36e4}{next\_\-next}
+\item 
+int $\ast$ \hyperlink{classmdp__lattice_a2cdf4a8e76d5677dbcf7c0030daa3e37}{nx}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_a602bacd9e2e1dd56819b118cf52672be}{nvol}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_a98aee146f9cea665a75ca70b78ee85fa}{nvol\_\-gl}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_ae8595ccbca06ce37aa14b56d27010b6b}{nvol\_\-in}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} $\ast$ \hyperlink{classmdp__lattice_aac1057478186764ece27e33d1a215a7d}{gl}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} $\ast$ \hyperlink{classmdp__lattice_a1f2238902be88b61a3cc677f912210ea}{lg}
+\item 
+FILE $\ast$ \hyperlink{classmdp__lattice_a3c0a480cd7f6bf31cd8dbffd87e57ac3}{lg\_\-file}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} $\ast$$\ast$ \hyperlink{classmdp__lattice_a14892e721f56e142037c511bf6543e8d}{up}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} $\ast$$\ast$ \hyperlink{classmdp__lattice_a5fb45161a272c08b81eafca224546673}{dw}
+\item 
+int $\ast$$\ast$ \hyperlink{classmdp__lattice_ad4cffbef2302b39176943a783c8f4ecc}{co}
+\item 
+int $\ast$ \hyperlink{classmdp__lattice_adeee5743b0c437ec58026c98a0a3229f}{wh}
+\item 
+int $\ast$ \hyperlink{classmdp__lattice_a1509bce18be50d1cdaf23bfb13161782}{parity}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_a63f2a78da171f663b3f038e83192c7e8}{start} \mbox{[}\hyperlink{mdp__global__vars_8h_a2572b6d40c218af44c1f7576ea598f98}{\_\-NprocMax\_\-}\mbox{]}\mbox{[}2\mbox{]}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_a34b18f8769d018df30110723799a078d}{stop} \mbox{[}\hyperlink{mdp__global__vars_8h_a2572b6d40c218af44c1f7576ea598f98}{\_\-NprocMax\_\-}\mbox{]}\mbox{[}2\mbox{]}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{classmdp__lattice_a493c53cf3e42ff9524ce36f07feb427e}{len\_\-to\_\-send} \mbox{[}\hyperlink{mdp__global__vars_8h_a2572b6d40c218af44c1f7576ea598f98}{\_\-NprocMax\_\-}\mbox{]}\mbox{[}2\mbox{]}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} $\ast$ \hyperlink{classmdp__lattice_ad3ad7c17679cd144673f6abb9b7201ec}{to\_\-send} \mbox{[}\hyperlink{mdp__global__vars_8h_a2572b6d40c218af44c1f7576ea598f98}{\_\-NprocMax\_\-}\mbox{]}
+\item 
+bool \hyperlink{classmdp__lattice_a7ff104adddc120fec711a17ae53fd6bf}{local\_\-random\_\-generator}
+\item 
+int($\ast$ \hyperlink{classmdp__lattice_ab19daaab7f6821237da906395d675707}{where} )(int $\ast$, int, int $\ast$)
+\item 
+void($\ast$ \hyperlink{classmdp__lattice_a70e86c99c7ff38cf408c4b0a303f2cf8}{neighbour} )(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+distributed lattice object Example: \begin{DoxyVerb}
+///    int box[]={3,3,3};
+///    int seed=0, border_width=1;
+///    mdp_lattice lattice(3,box,default_partitioning0,
+///                        torus_topology,seed,border_width);
+///    mdp_site x(lattice);
+///    forallsites(x)
+///      cout << lattice.random(x).plain() << endl;
+/// \end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmdp__lattice_a16771b478cc1e3a6bd70487de44e7a7a}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!mdp\_\-lattice@{mdp\_\-lattice}}
+\index{mdp\_\-lattice@{mdp\_\-lattice}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{mdp\_\-lattice}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-lattice::mdp\_\-lattice ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a16771b478cc1e3a6bd70487de44e7a7a}
+\hypertarget{classmdp__lattice_a90f0e67a6947ec2cab8065cef94d3ceb}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!mdp\_\-lattice@{mdp\_\-lattice}}
+\index{mdp\_\-lattice@{mdp\_\-lattice}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{mdp\_\-lattice}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-lattice::mdp\_\-lattice (int {\em ndim\_\-}, \/  int {\em nx\_\-}\mbox{[}$\,$\mbox{]}, \/  int($\ast$)(int $\ast$, int, int $\ast$) {\em where\_\-} = {\ttfamily default\_\-partitioning0}, \/  void($\ast$)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$) {\em neighbour\_\-} = {\ttfamily torus\_\-topology}, \/  {\bf mdp\_\-int} {\em random\_\-seed\_\-} = {\ttfamily 0}, \/  int {\em next\_\-next\_\-} = {\ttfamily 1}, \/  bool {\em local\_\-random\_\-} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a90f0e67a6947ec2cab8065cef94d3ceb}
+declares a lattice object 
+\begin{DoxyParams}{Parameters}
+\item[{\em ndim\_\-}]dimensions of the lattice \item[{\em nx\_\-}]size of the lattice \item[{\em where}]pointer to a partitioning function  neighbour\_\- pointer to a topology function. \item[{\em random\_\-seed\_\-}]seed to be used by the parallel prng \item[{\em next\_\-next\_\-}]size of the buffer between neighbour processes \item[{\em local\_\-random\_\-}]true is local random generator is required \end{DoxyParams}
+\hypertarget{classmdp__lattice_afe2d9427fc47225722c0ab3314246a88}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!mdp\_\-lattice@{mdp\_\-lattice}}
+\index{mdp\_\-lattice@{mdp\_\-lattice}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{mdp\_\-lattice}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-lattice::mdp\_\-lattice (int {\em ndim\_\-}, \/  int {\em ndir\_\-}, \/  int {\em nx\_\-}\mbox{[}$\,$\mbox{]}, \/  int($\ast$)(int $\ast$, int, int $\ast$) {\em where\_\-} = {\ttfamily default\_\-partitioning0}, \/  void($\ast$)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$) {\em neighbour\_\-} = {\ttfamily torus\_\-topology}, \/  {\bf mdp\_\-int} {\em random\_\-seed\_\-} = {\ttfamily 0}, \/  int {\em next\_\-next\_\-} = {\ttfamily 1}, \/  bool {\em local\_\-random\_\-} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_afe2d9427fc47225722c0ab3314246a88}
+
+
+for weird stuff \hypertarget{classmdp__lattice_a04eafca14369c88c7c469ffeb72e54ec}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!$\sim$mdp\_\-lattice@{$\sim$mdp\_\-lattice}}
+\index{$\sim$mdp\_\-lattice@{$\sim$mdp\_\-lattice}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{$\sim$mdp\_\-lattice}]{\setlength{\rightskip}{0pt plus 5cm}virtual mdp\_\-lattice::$\sim$mdp\_\-lattice ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmdp__lattice_a04eafca14369c88c7c469ffeb72e54ec}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__lattice_a8e5ed5d10679379892b46f3359d5971c}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!allocate\_\-lattice@{allocate\_\-lattice}}
+\index{allocate\_\-lattice@{allocate\_\-lattice}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{allocate\_\-lattice}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-lattice::allocate\_\-lattice (int {\em ndim\_\-}, \/  int {\em ndir\_\-}, \/  int {\em nx\_\-}\mbox{[}$\,$\mbox{]}, \/  int($\ast$)(int $\ast$, int, int $\ast$) {\em where\_\-} = {\ttfamily default\_\-partitioning0}, \/  void($\ast$)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$) {\em neighbour\_\-} = {\ttfamily torus\_\-topology}, \/  {\bf mdp\_\-int} {\em random\_\-seed\_\-} = {\ttfamily 0}, \/  int {\em next\_\-next\_\-} = {\ttfamily 1}, \/  bool {\em local\_\-random\_\-} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a8e5ed5d10679379892b46f3359d5971c}
+
+
+for weird stuff \hypertarget{classmdp__lattice_a04f3271fe78a6f61f10c4151145f6db5}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!allocate\_\-lattice@{allocate\_\-lattice}}
+\index{allocate\_\-lattice@{allocate\_\-lattice}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{allocate\_\-lattice}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-lattice::allocate\_\-lattice (int {\em ndim\_\-}, \/  int {\em nx\_\-}\mbox{[}$\,$\mbox{]}, \/  int($\ast$)(int $\ast$, int, int $\ast$) {\em where\_\-} = {\ttfamily default\_\-partitioning0}, \/  void($\ast$)(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$) {\em neighbour\_\-} = {\ttfamily torus\_\-topology}, \/  {\bf mdp\_\-int} {\em random\_\-seed\_\-} = {\ttfamily 0}, \/  int {\em next\_\-next\_\-} = {\ttfamily 1}, \/  bool {\em local\_\-random\_\-} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a04f3271fe78a6f61f10c4151145f6db5}
+reallocate a lattice dynamically 
+\begin{DoxyParams}{Parameters}
+\item[{\em ndim\_\-}]dimensions of the lattice \item[{\em nx\_\-}]size of the lattice \item[{\em where}]pointer to a partitioning function  neighbour\_\- pointer to a topology function. \item[{\em random\_\-seed\_\-}]seed to be used by the parallel prng \item[{\em next\_\-next\_\-}]size of the buffer between neighbour processes \item[{\em local\_\-random\_\-}]true is local random generator is required \end{DoxyParams}
+\hypertarget{classmdp__lattice_a3c949964a192c244a6f39df0aaceb1d2}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!compute\_\-parity@{compute\_\-parity}}
+\index{compute\_\-parity@{compute\_\-parity}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{compute\_\-parity}]{\setlength{\rightskip}{0pt plus 5cm}int mdp\_\-lattice::compute\_\-parity (int $\ast$ {\em x})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a3c949964a192c244a6f39df0aaceb1d2}
+\hypertarget{classmdp__lattice_af5407cf7f7d5eded3870abf0515e110d}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!deallocate\_\-memory@{deallocate\_\-memory}}
+\index{deallocate\_\-memory@{deallocate\_\-memory}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{deallocate\_\-memory}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-lattice::deallocate\_\-memory ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_af5407cf7f7d5eded3870abf0515e110d}
+
+
+dynamically deallocate a lattice \hypertarget{classmdp__lattice_a1d7f81c235e6f0259013399f01f98306}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!global@{global}}
+\index{global@{global}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{global}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} mdp\_\-lattice::global ({\bf mdp\_\-int} {\em idx}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a1d7f81c235e6f0259013399f01f98306}
+\hypertarget{classmdp__lattice_af6928ac02766a006f82f6a87eef1019a}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!global\_\-coordinate@{global\_\-coordinate}}
+\index{global\_\-coordinate@{global\_\-coordinate}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{global\_\-coordinate}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-lattice::global\_\-coordinate ({\bf mdp\_\-int} {\em global\_\-idx}, \/  int $\ast$ {\em x})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_af6928ac02766a006f82f6a87eef1019a}
+\hypertarget{classmdp__lattice_a672142cb946fc501ad8ffc7c0ea01c42}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!global\_\-coordinate@{global\_\-coordinate}}
+\index{global\_\-coordinate@{global\_\-coordinate}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{global\_\-coordinate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} mdp\_\-lattice::global\_\-coordinate (int $\ast$ {\em x})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a672142cb946fc501ad8ffc7c0ea01c42}
+\hypertarget{classmdp__lattice_ac1adc4b64acbf07588b58dd0de4dc021}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!global\_\-volume@{global\_\-volume}}
+\index{global\_\-volume@{global\_\-volume}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{global\_\-volume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} mdp\_\-lattice::global\_\-volume () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_ac1adc4b64acbf07588b58dd0de4dc021}
+
+
+total lattice volume (deprecated) \hypertarget{classmdp__lattice_a1d9c9be3661c7e0ccd05d9c1ed620178}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!initialize\_\-random@{initialize\_\-random}}
+\index{initialize\_\-random@{initialize\_\-random}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{initialize\_\-random}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-lattice::initialize\_\-random ({\bf mdp\_\-int} {\em random\_\-seed\_\-} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a1d9c9be3661c7e0ccd05d9c1ed620178}
+\hypertarget{classmdp__lattice_a9b2c219bd0fb16482508b87839d02e9b}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!local@{local}}
+\index{local@{local}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{local}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} mdp\_\-lattice::local ({\bf mdp\_\-int} {\em idx}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a9b2c219bd0fb16482508b87839d02e9b}
+\hypertarget{classmdp__lattice_acc39e2cd011b6ebc5cc527fbdfc03ec6}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!local\_\-volume@{local\_\-volume}}
+\index{local\_\-volume@{local\_\-volume}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{local\_\-volume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} mdp\_\-lattice::local\_\-volume () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_acc39e2cd011b6ebc5cc527fbdfc03ec6}
+
+
+number of lattice sites stored locally by current process \hypertarget{classmdp__lattice_a9304b6cc18f178e2fcec73c3b8b9d76d}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!move\_\-down@{move\_\-down}}
+\index{move\_\-down@{move\_\-down}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{move\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} mdp\_\-lattice::move\_\-down (const {\bf mdp\_\-int} {\em idx}, \/  const int {\em mu}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a9304b6cc18f178e2fcec73c3b8b9d76d}
+\hypertarget{classmdp__lattice_a496a60d5988294a9d0da7b635005d410}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!move\_\-up@{move\_\-up}}
+\index{move\_\-up@{move\_\-up}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{move\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} mdp\_\-lattice::move\_\-up (const {\bf mdp\_\-int} {\em idx}, \/  const int {\em mu}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a496a60d5988294a9d0da7b635005d410}
+\hypertarget{classmdp__lattice_a7e99975b0536e5f46acc8b72778c077f}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!n\_\-dimensions@{n\_\-dimensions}}
+\index{n\_\-dimensions@{n\_\-dimensions}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{n\_\-dimensions}]{\setlength{\rightskip}{0pt plus 5cm}int mdp\_\-lattice::n\_\-dimensions () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a7e99975b0536e5f46acc8b72778c077f}
+
+
+number of dimensions of the lattice (deprecated\_\- \hypertarget{classmdp__lattice_aa8452324840f85cf188ce7fffe488d98}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!n\_\-directions@{n\_\-directions}}
+\index{n\_\-directions@{n\_\-directions}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{n\_\-directions}]{\setlength{\rightskip}{0pt plus 5cm}int mdp\_\-lattice::n\_\-directions () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_aa8452324840f85cf188ce7fffe488d98}
+
+
+number of directions one can move on the lattice; usually same as ndim \hypertarget{classmdp__lattice_a93f774075f5829c57009c644a74cfd4a}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!random@{random}}
+\index{random@{random}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{random}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-prng} \& mdp\_\-lattice::random ({\bf mdp\_\-site} {\em x})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a93f774075f5829c57009c644a74cfd4a}
+
+
+Returns the local object \hyperlink{classmdp__prng}{mdp\_\-prng} at site x of the lattice. \hypertarget{classmdp__lattice_af8e8ea7660136dc3810b0a14a41b6505}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!site\_\-parity@{site\_\-parity}}
+\index{site\_\-parity@{site\_\-parity}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{site\_\-parity}]{\setlength{\rightskip}{0pt plus 5cm}int mdp\_\-lattice::site\_\-parity (const {\bf mdp\_\-int} {\em idx}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_af8e8ea7660136dc3810b0a14a41b6505}
+\hypertarget{classmdp__lattice_a08612798e2f61d4e9d2ccdc8b8d7cf37}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!size@{size}}
+\index{size@{size}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} mdp\_\-lattice::size (const int {\em mu}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a08612798e2f61d4e9d2ccdc8b8d7cf37}
+
+
+size of the lattice in direction mu \hypertarget{classmdp__lattice_a903ec2c7d662743f8bc1e311d21f6c21}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!size@{size}}
+\index{size@{size}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} mdp\_\-lattice::size () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a903ec2c7d662743f8bc1e311d21f6c21}
+
+
+number of sites of the lattice \hypertarget{classmdp__lattice_a9cc8de7512a9ff465f22e4ddaf307e38}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!start\_\-index@{start\_\-index}}
+\index{start\_\-index@{start\_\-index}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{start\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} mdp\_\-lattice::start\_\-index (const int {\em process}, \/  int {\em p} = {\ttfamily {\bf EVENODD}}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_a9cc8de7512a9ff465f22e4ddaf307e38}
+\hypertarget{classmdp__lattice_ada0f943b50d6aeb302e4fc6cf2fcabb9}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!stop\_\-index@{stop\_\-index}}
+\index{stop\_\-index@{stop\_\-index}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{stop\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} mdp\_\-lattice::stop\_\-index (const int {\em process}, \/  int {\em p} = {\ttfamily {\bf EVENODD}}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__lattice_ada0f943b50d6aeb302e4fc6cf2fcabb9}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmdp__lattice_ad4cffbef2302b39176943a783c8f4ecc}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!co@{co}}
+\index{co@{co}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{co}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$ {\bf mdp\_\-lattice::co}}}
+\label{classmdp__lattice_ad4cffbef2302b39176943a783c8f4ecc}
+\hypertarget{classmdp__lattice_a5fb45161a272c08b81eafca224546673}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!dw@{dw}}
+\index{dw@{dw}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{dw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int}$\ast$$\ast$ {\bf mdp\_\-lattice::dw}}}
+\label{classmdp__lattice_a5fb45161a272c08b81eafca224546673}
+\hypertarget{classmdp__lattice_aac1057478186764ece27e33d1a215a7d}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!gl@{gl}}
+\index{gl@{gl}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{gl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int}$\ast$ {\bf mdp\_\-lattice::gl}}}
+\label{classmdp__lattice_aac1057478186764ece27e33d1a215a7d}
+\hypertarget{classmdp__lattice_a493c53cf3e42ff9524ce36f07feb427e}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!len\_\-to\_\-send@{len\_\-to\_\-send}}
+\index{len\_\-to\_\-send@{len\_\-to\_\-send}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{len\_\-to\_\-send}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} {\bf mdp\_\-lattice::len\_\-to\_\-send}\mbox{[}{\bf \_\-NprocMax\_\-}\mbox{]}\mbox{[}2\mbox{]}}}
+\label{classmdp__lattice_a493c53cf3e42ff9524ce36f07feb427e}
+\hypertarget{classmdp__lattice_a1f2238902be88b61a3cc677f912210ea}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!lg@{lg}}
+\index{lg@{lg}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{lg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int}$\ast$ {\bf mdp\_\-lattice::lg}}}
+\label{classmdp__lattice_a1f2238902be88b61a3cc677f912210ea}
+\hypertarget{classmdp__lattice_a3c0a480cd7f6bf31cd8dbffd87e57ac3}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!lg\_\-file@{lg\_\-file}}
+\index{lg\_\-file@{lg\_\-file}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{lg\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}FILE$\ast$ {\bf mdp\_\-lattice::lg\_\-file}}}
+\label{classmdp__lattice_a3c0a480cd7f6bf31cd8dbffd87e57ac3}
+\hypertarget{classmdp__lattice_a7ff104adddc120fec711a17ae53fd6bf}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!local\_\-random\_\-generator@{local\_\-random\_\-generator}}
+\index{local\_\-random\_\-generator@{local\_\-random\_\-generator}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{local\_\-random\_\-generator}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf mdp\_\-lattice::local\_\-random\_\-generator}}}
+\label{classmdp__lattice_a7ff104adddc120fec711a17ae53fd6bf}
+\hypertarget{classmdp__lattice_a215127d8822ab086ff06fdbc815fae91}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!ndim@{ndim}}
+\index{ndim@{ndim}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{ndim}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mdp\_\-lattice::ndim}}}
+\label{classmdp__lattice_a215127d8822ab086ff06fdbc815fae91}
+\hypertarget{classmdp__lattice_ace466601bc3fb9815648d775793985eb}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!ndir@{ndir}}
+\index{ndir@{ndir}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{ndir}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mdp\_\-lattice::ndir}}}
+\label{classmdp__lattice_ace466601bc3fb9815648d775793985eb}
+\hypertarget{classmdp__lattice_a70e86c99c7ff38cf408c4b0a303f2cf8}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!neighbour@{neighbour}}
+\index{neighbour@{neighbour}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{neighbour}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf mdp\_\-lattice::neighbour})(int, int $\ast$, int $\ast$, int $\ast$, int, int $\ast$)}}
+\label{classmdp__lattice_a70e86c99c7ff38cf408c4b0a303f2cf8}
+\hypertarget{classmdp__lattice_afc7199a6a019e3bfdb40f1367baf36e4}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!next\_\-next@{next\_\-next}}
+\index{next\_\-next@{next\_\-next}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{next\_\-next}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf mdp\_\-lattice::next\_\-next}}}
+\label{classmdp__lattice_afc7199a6a019e3bfdb40f1367baf36e4}
+\hypertarget{classmdp__lattice_a602bacd9e2e1dd56819b118cf52672be}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!nvol@{nvol}}
+\index{nvol@{nvol}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{nvol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} {\bf mdp\_\-lattice::nvol}}}
+\label{classmdp__lattice_a602bacd9e2e1dd56819b118cf52672be}
+\hypertarget{classmdp__lattice_a98aee146f9cea665a75ca70b78ee85fa}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!nvol\_\-gl@{nvol\_\-gl}}
+\index{nvol\_\-gl@{nvol\_\-gl}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{nvol\_\-gl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} {\bf mdp\_\-lattice::nvol\_\-gl}}}
+\label{classmdp__lattice_a98aee146f9cea665a75ca70b78ee85fa}
+\hypertarget{classmdp__lattice_ae8595ccbca06ce37aa14b56d27010b6b}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!nvol\_\-in@{nvol\_\-in}}
+\index{nvol\_\-in@{nvol\_\-in}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{nvol\_\-in}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} {\bf mdp\_\-lattice::nvol\_\-in}}}
+\label{classmdp__lattice_ae8595ccbca06ce37aa14b56d27010b6b}
+\hypertarget{classmdp__lattice_a2cdf4a8e76d5677dbcf7c0030daa3e37}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!nx@{nx}}
+\index{nx@{nx}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{nx}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf mdp\_\-lattice::nx}}}
+\label{classmdp__lattice_a2cdf4a8e76d5677dbcf7c0030daa3e37}
+\hypertarget{classmdp__lattice_a1509bce18be50d1cdaf23bfb13161782}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!parity@{parity}}
+\index{parity@{parity}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{parity}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf mdp\_\-lattice::parity}}}
+\label{classmdp__lattice_a1509bce18be50d1cdaf23bfb13161782}
+\hypertarget{classmdp__lattice_a63f2a78da171f663b3f038e83192c7e8}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!start@{start}}
+\index{start@{start}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} {\bf mdp\_\-lattice::start}\mbox{[}{\bf \_\-NprocMax\_\-}\mbox{]}\mbox{[}2\mbox{]}}}
+\label{classmdp__lattice_a63f2a78da171f663b3f038e83192c7e8}
+\hypertarget{classmdp__lattice_a34b18f8769d018df30110723799a078d}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!stop@{stop}}
+\index{stop@{stop}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} {\bf mdp\_\-lattice::stop}\mbox{[}{\bf \_\-NprocMax\_\-}\mbox{]}\mbox{[}2\mbox{]}}}
+\label{classmdp__lattice_a34b18f8769d018df30110723799a078d}
+\hypertarget{classmdp__lattice_ad3ad7c17679cd144673f6abb9b7201ec}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!to\_\-send@{to\_\-send}}
+\index{to\_\-send@{to\_\-send}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{to\_\-send}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int}$\ast$ {\bf mdp\_\-lattice::to\_\-send}\mbox{[}{\bf \_\-NprocMax\_\-}\mbox{]}}}
+\label{classmdp__lattice_ad3ad7c17679cd144673f6abb9b7201ec}
+\hypertarget{classmdp__lattice_a14892e721f56e142037c511bf6543e8d}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!up@{up}}
+\index{up@{up}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int}$\ast$$\ast$ {\bf mdp\_\-lattice::up}}}
+\label{classmdp__lattice_a14892e721f56e142037c511bf6543e8d}
+\hypertarget{classmdp__lattice_adeee5743b0c437ec58026c98a0a3229f}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!wh@{wh}}
+\index{wh@{wh}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{wh}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf mdp\_\-lattice::wh}}}
+\label{classmdp__lattice_adeee5743b0c437ec58026c98a0a3229f}
+\hypertarget{classmdp__lattice_ab19daaab7f6821237da906395d675707}{
+\index{mdp\_\-lattice@{mdp\_\-lattice}!where@{where}}
+\index{where@{where}!mdp_lattice@{mdp\_\-lattice}}
+\subsubsection[{where}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ {\bf mdp\_\-lattice::where})(int $\ast$, int, int $\ast$)}}
+\label{classmdp__lattice_ab19daaab7f6821237da906395d675707}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__lattice_8h}{mdp\_\-lattice.h}\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__site_8h}{mdp\_\-site.h}\end{DoxyCompactItemize}

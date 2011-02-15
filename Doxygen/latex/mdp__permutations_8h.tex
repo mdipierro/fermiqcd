@@ -1,0 +1,42 @@
+\hypertarget{mdp__permutations_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-permutations.h File Reference}
+\label{mdp__permutations_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-permutations.h@{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-permutations.h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{mdp__permutations_8h_a0cdfcfdd6775b1f0e7909c8224b977ab}{mdp\_\-permutations} (int n)
+\item 
+void \hyperlink{mdp__permutations_8h_a404a96ad927576ba2656c689da43bbe2}{mdp\_\-permutation\_\-sort} (int map\mbox{[}$\,$\mbox{]}, int k)
+\item 
+int \hyperlink{mdp__permutations_8h_ab3ab614cea223eaddec0304e34adde9d}{mdp\_\-permutation} (int n, int k, int i)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+Functions to compute permutations
+
+Licensed under GPL2 license Read attached license in file mdp\_\-license.pdf This file cannot be distributed without file mdp\_\-license.pdf 
+
+\subsection{Function Documentation}
+\hypertarget{mdp__permutations_8h_ab3ab614cea223eaddec0304e34adde9d}{
+\index{mdp\_\-permutations.h@{mdp\_\-permutations.h}!mdp\_\-permutation@{mdp\_\-permutation}}
+\index{mdp\_\-permutation@{mdp\_\-permutation}!mdp_permutations.h@{mdp\_\-permutations.h}}
+\subsubsection[{mdp\_\-permutation}]{\setlength{\rightskip}{0pt plus 5cm}int mdp\_\-permutation (int {\em n}, \/  int {\em k}, \/  int {\em i})}}
+\label{mdp__permutations_8h_ab3ab614cea223eaddec0304e34adde9d}
+Returns j-\/th element of the k-\/th permutations of n numbers For example if n=4 \mbox{[}0123\mbox{]} k=0 \mbox{[}0132\mbox{]} k=1 ... \mbox{[}3210\mbox{]} k=23 Returns -\/1 on error when (i$>$n $|$$|$ k$>$n\_\-permutations(n)) \hypertarget{mdp__permutations_8h_a404a96ad927576ba2656c689da43bbe2}{
+\index{mdp\_\-permutations.h@{mdp\_\-permutations.h}!mdp\_\-permutation\_\-sort@{mdp\_\-permutation\_\-sort}}
+\index{mdp\_\-permutation\_\-sort@{mdp\_\-permutation\_\-sort}!mdp_permutations.h@{mdp\_\-permutations.h}}
+\subsubsection[{mdp\_\-permutation\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-permutation\_\-sort (int {\em map}\mbox{[}$\,$\mbox{]}, \/  int {\em k})}}
+\label{mdp__permutations_8h_a404a96ad927576ba2656c689da43bbe2}
+\hypertarget{mdp__permutations_8h_a0cdfcfdd6775b1f0e7909c8224b977ab}{
+\index{mdp\_\-permutations.h@{mdp\_\-permutations.h}!mdp\_\-permutations@{mdp\_\-permutations}}
+\index{mdp\_\-permutations@{mdp\_\-permutations}!mdp_permutations.h@{mdp\_\-permutations.h}}
+\subsubsection[{mdp\_\-permutations}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} mdp\_\-permutations (int {\em n})}}
+\label{mdp__permutations_8h_a0cdfcfdd6775b1f0e7909c8224b977ab}

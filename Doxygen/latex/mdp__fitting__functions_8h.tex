@@ -1,0 +1,75 @@
+\hypertarget{mdp__fitting__functions_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-fitting\_\-functions.h File Reference}
+\label{mdp__fitting__functions_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-fitting\_\-functions.h@{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-fitting\_\-functions.h}}
+}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef float($\ast$ \hyperlink{mdp__fitting__functions_8h_a50ce5399d85438108305114a65c0cdce}{BLM\_\-function} )(float, float $\ast$, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int}, void $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{mdp__fitting__functions_8h_a0ccd6c9631485fa274135e4fbc1f4483}{linear\_\-fit} (float $\ast$x, Measure $\ast$y, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} i0, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} in, Measure $\ast$a)
+\begin{DoxyCompactList}\small\item\em Fits y\mbox{[}i\mbox{]}, x\mbox{[}i\mbox{]} for i0$<$=i$<$in with y=a\mbox{[}0\mbox{]}$\ast$x+a\mbox{[}1\mbox{]}. \item\end{DoxyCompactList}\item 
+float \hyperlink{mdp__fitting__functions_8h_a7e5282e3754abb75e12cc8290e2ef147}{golden\_\-rule} (float($\ast$fp)(float $\ast$, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int}, void $\ast$), float \&xmin, float ax, float bx, float cx, float tol=0.001, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} niter=100, void $\ast$dummy=0)
+\item 
+float \hyperlink{mdp__fitting__functions_8h_a1d8f6e29750d10d5c970e9b639659eec}{BLMaux} (float $\ast$x, Measure $\ast$y, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} i\_\-min, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} i\_\-max, float $\ast$a, float $\ast$a0, \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&\hyperlink{fermiqcd__gamma__matrices_8h_ab20455955848cb6945fe37dda0a2ef40}{sigma}, int ma, \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&alpha, \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&beta, \hyperlink{mdp__fitting__functions_8h_a50ce5399d85438108305114a65c0cdce}{BLM\_\-function} func, float h, void $\ast$junk)
+\item 
+float \hyperlink{mdp__fitting__functions_8h_ac04ce37530bc18e6541badbc2d03ba64}{BaesyanLevenbergMarquardt} (float $\ast$x, Measure $\ast$y, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} i\_\-min, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} i\_\-max, float $\ast$a, int ma, \hyperlink{classmdp__matrix}{mdp\_\-matrix} \&covar, \hyperlink{mdp__fitting__functions_8h_a50ce5399d85438108305114a65c0cdce}{BLM\_\-function} func, float h=0.001, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} nmax=1000, void $\ast$junk=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+Contains \hyperlink{classmdp__field_a72b973da706841ea58dc728345d36795}{mdp\_\-field::update()}
+
+Licensed under GPL2 license Read attached license in file mdp\_\-license.pdf This file cannot be distributed without file mdp\_\-license.pdf 
+
+\subsection{Typedef Documentation}
+\hypertarget{mdp__fitting__functions_8h_a50ce5399d85438108305114a65c0cdce}{
+\index{mdp\_\-fitting\_\-functions.h@{mdp\_\-fitting\_\-functions.h}!BLM\_\-function@{BLM\_\-function}}
+\index{BLM\_\-function@{BLM\_\-function}!mdp_fitting_functions.h@{mdp\_\-fitting\_\-functions.h}}
+\subsubsection[{BLM\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}typedef float($\ast$ {\bf BLM\_\-function})(float, float $\ast$, {\bf mdp\_\-int}, void $\ast$)}}
+\label{mdp__fitting__functions_8h_a50ce5399d85438108305114a65c0cdce}
+
+
+\subsection{Function Documentation}
+\hypertarget{mdp__fitting__functions_8h_ac04ce37530bc18e6541badbc2d03ba64}{
+\index{mdp\_\-fitting\_\-functions.h@{mdp\_\-fitting\_\-functions.h}!BaesyanLevenbergMarquardt@{BaesyanLevenbergMarquardt}}
+\index{BaesyanLevenbergMarquardt@{BaesyanLevenbergMarquardt}!mdp_fitting_functions.h@{mdp\_\-fitting\_\-functions.h}}
+\subsubsection[{BaesyanLevenbergMarquardt}]{\setlength{\rightskip}{0pt plus 5cm}float BaesyanLevenbergMarquardt (float $\ast$ {\em x}, \/  Measure $\ast$ {\em y}, \/  {\bf mdp\_\-int} {\em i\_\-min}, \/  {\bf mdp\_\-int} {\em i\_\-max}, \/  float $\ast$ {\em a}, \/  int {\em ma}, \/  {\bf mdp\_\-matrix} \& {\em covar}, \/  {\bf BLM\_\-function} {\em func}, \/  float {\em h} = {\ttfamily 0.001}, \/  {\bf mdp\_\-int} {\em nmax} = {\ttfamily 1000}, \/  void $\ast$ {\em junk} = {\ttfamily 0})}}
+\label{mdp__fitting__functions_8h_ac04ce37530bc18e6541badbc2d03ba64}
+This implements the BaesyanLevenbergMarquardt It uses \hyperlink{classmdp__matrix}{mdp\_\-matrix}. Arguments are:
+
+x\mbox{[}i\mbox{]} : an array of float y\mbox{[}i\mbox{]} : an array of Measures i\_\-min, i\_\-max : range to be used in the fit points within the range that have y\mbox{[}i\mbox{]}.num=0 are ignored a\mbox{[}i\mbox{]}, ma : vector of paramters for the fit and number of parameters they are all used in the fit the initial values are used as preons covar(i,j) : covariance matrix for the preons func(x,a,ma,junk) : the function to be used in the fit h : a float used to evaluate derivatives nmax : max number of iterations junk : junk to be passed to func
+
+Return the Baesyan ChiSquare. To obtain the correct chi\_\-square rerun it with same ftting values and nmax=1; \hypertarget{mdp__fitting__functions_8h_a1d8f6e29750d10d5c970e9b639659eec}{
+\index{mdp\_\-fitting\_\-functions.h@{mdp\_\-fitting\_\-functions.h}!BLMaux@{BLMaux}}
+\index{BLMaux@{BLMaux}!mdp_fitting_functions.h@{mdp\_\-fitting\_\-functions.h}}
+\subsubsection[{BLMaux}]{\setlength{\rightskip}{0pt plus 5cm}float BLMaux (float $\ast$ {\em x}, \/  Measure $\ast$ {\em y}, \/  {\bf mdp\_\-int} {\em i\_\-min}, \/  {\bf mdp\_\-int} {\em i\_\-max}, \/  float $\ast$ {\em a}, \/  float $\ast$ {\em a0}, \/  {\bf mdp\_\-matrix} \& {\em sigma}, \/  int {\em ma}, \/  {\bf mdp\_\-matrix} \& {\em alpha}, \/  {\bf mdp\_\-matrix} \& {\em beta}, \/  {\bf BLM\_\-function} {\em func}, \/  float {\em h}, \/  void $\ast$ {\em junk})}}
+\label{mdp__fitting__functions_8h_a1d8f6e29750d10d5c970e9b639659eec}
+This function is used by the BayesianLevenbergMarquardt It computes the chi\_\-square (including the Baesyan term) and fills alpha and beta
+
+alpha(j,k)= (Dy(x\mbox{[}i\mbox{]},a)/Da\mbox{[}j\mbox{]})$\ast$(Dy(x\mbox{[}i\mbox{]},a)/Da\mbox{[}k\mbox{]})/dy\mbox{[}i\mbox{]}$^\wedge$2 beta(j)=sum\_\-i (y\mbox{[}i\mbox{]}-\/y(x\mbox{[}i\mbox{]},a))$\ast$(dy(x\mbox{[}i\mbox{]},a)/da\mbox{[}j\mbox{]})/dy\mbox{[}i\mbox{]}$^\wedge$2
+
+chi\_\-square= (y\mbox{[}i\mbox{]}-\/y(x\mbox{[}i\mbox{]},a))$\ast$(y\mbox{[}i\mbox{]}-\/y(x\mbox{[}i\mbox{]},a))/dy\mbox{[}i\mbox{]}$^\wedge$2 +\{j,k\} (a\mbox{[}j\mbox{]}-\/a0\mbox{[}j\mbox{]})$\ast$(a\mbox{[}k\mbox{]}-\/a0\mbox{[}k\mbox{]})$\ast$sigma(j,k)
+
+This function take into account multipliticty factors y\mbox{[}i\mbox{]}.num, i.e. the numbers of measures used to determine y\mbox{[}i\mbox{]}.mean This is used as a weight factor! \hypertarget{mdp__fitting__functions_8h_a7e5282e3754abb75e12cc8290e2ef147}{
+\index{mdp\_\-fitting\_\-functions.h@{mdp\_\-fitting\_\-functions.h}!golden\_\-rule@{golden\_\-rule}}
+\index{golden\_\-rule@{golden\_\-rule}!mdp_fitting_functions.h@{mdp\_\-fitting\_\-functions.h}}
+\subsubsection[{golden\_\-rule}]{\setlength{\rightskip}{0pt plus 5cm}float golden\_\-rule (float($\ast$)(float $\ast$, {\bf mdp\_\-int}, void $\ast$) {\em fp}, \/  float \& {\em xmin}, \/  float {\em ax}, \/  float {\em bx}, \/  float {\em cx}, \/  float {\em tol} = {\ttfamily 0.001}, \/  {\bf mdp\_\-int} {\em niter} = {\ttfamily 100}, \/  void $\ast$ {\em dummy} = {\ttfamily 0})}}
+\label{mdp__fitting__functions_8h_a7e5282e3754abb75e12cc8290e2ef147}
+finds x=xmin that minimizes ($\ast$fp)(\&x,1,dummy) must be: ($\ast$fp)(\&ax) $>$ ($\ast$fp)(\&bx) \&\& ($\ast$fp)(\&cx) $>$ ($\ast$fp)(\&bx) \hypertarget{mdp__fitting__functions_8h_a0ccd6c9631485fa274135e4fbc1f4483}{
+\index{mdp\_\-fitting\_\-functions.h@{mdp\_\-fitting\_\-functions.h}!linear\_\-fit@{linear\_\-fit}}
+\index{linear\_\-fit@{linear\_\-fit}!mdp_fitting_functions.h@{mdp\_\-fitting\_\-functions.h}}
+\subsubsection[{linear\_\-fit}]{\setlength{\rightskip}{0pt plus 5cm}void linear\_\-fit (float $\ast$ {\em x}, \/  Measure $\ast$ {\em y}, \/  {\bf mdp\_\-int} {\em i0}, \/  {\bf mdp\_\-int} {\em in}, \/  Measure $\ast$ {\em a})}}
+\label{mdp__fitting__functions_8h_a0ccd6c9631485fa274135e4fbc1f4483}
+
+
+Fits y\mbox{[}i\mbox{]}, x\mbox{[}i\mbox{]} for i0$<$=i$<$in with y=a\mbox{[}0\mbox{]}$\ast$x+a\mbox{[}1\mbox{]}. 

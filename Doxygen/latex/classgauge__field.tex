@@ -1,0 +1,180 @@
+\hypertarget{classgauge__field}{
+\section{gauge\_\-field Class Reference}
+\label{classgauge__field}\index{gauge\_\-field@{gauge\_\-field}}
+}
+
+
+the gauge field for any SU(n)  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-gauge\_\-field.h$>$}Inheritance diagram for gauge\_\-field::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classgauge__field}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgauge__field_abdb50dfc413d1c22904a0ea38fc72e34}{gauge\_\-field} ()
+\item 
+\hyperlink{classgauge__field_a0500e23c8bd48d78650235e6ae668ab0}{gauge\_\-field} (const \hyperlink{classgauge__field}{gauge\_\-field} \&U)
+\item 
+void \hyperlink{classgauge__field_a1006054965a512e4dd06ca8c0b5c5d28}{operator=} (const \hyperlink{classgauge__field}{gauge\_\-field} \&U)
+\item 
+\hyperlink{classgauge__field_adcfa1a4c412dc26688307e95f3ed42b5}{gauge\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int nc\_\-)
+\item 
+void \hyperlink{classgauge__field_ac7af990c989c01f0254a5454fc365dd7}{allocate\_\-gauge\_\-field} (\hyperlink{classmdp__lattice}{mdp\_\-lattice} \&a, int nc\_\-)
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classgauge__field_a765260519dece4a4ffafa338cbee22ae}{operator()} (site x, int mu)
+\item 
+const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classgauge__field_a8bbf9acb59886d8fcd08973476f224f6}{operator()} (site x, int mu) const 
+\item 
+\hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classgauge__field_a60a42ee4e59ad13f7bab46ba6f4ef2d9}{operator()} (site x, int mu, int i, int j)
+\item 
+const \hyperlink{classmdp__complex}{mdp\_\-complex} \& \hyperlink{classgauge__field_a3d76d90e8a6f39b0897cf463d6d8d049}{operator()} (site x, int mu, int i, int j) const 
+\item 
+\hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classgauge__field_a8d68963fa439cf58c3ac16c043523010}{operator()} (site x, int sign, int mu)
+\item 
+const \hyperlink{classmdp__matrix}{mdp\_\-matrix} \hyperlink{classgauge__field_afc4082b84abc10e1be05168c9898fddd}{operator()} (site x, int sign, int mu) const 
+\item 
+const \hyperlink{classmdp__complex}{mdp\_\-complex} \hyperlink{classgauge__field_a9dd484a3ca793d5e0376bbe2c2cd8995}{operator()} (site x, int sign, int mu, int i, int j) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classem__field}{em\_\-field} \hyperlink{classgauge__field_a8e12cc66b84dc51a33e0a942cc7c3f5c}{em}
+\item 
+\hyperlink{classmdp__nmatrix__field}{mdp\_\-nmatrix\_\-field} \hyperlink{classgauge__field_a2371b7cec512a57c18ba34269a5ba95a}{long\_\-links}
+\item 
+\hyperlink{classmdp__field}{mdp\_\-field}$<$ \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} $>$ \hyperlink{classgauge__field_a3914ca4c0b33e495a2c1d34f158d6ce2}{i\_\-jump}
+\item 
+\hyperlink{classmdp__matrix__field}{mdp\_\-matrix\_\-field} \hyperlink{classgauge__field_a8b62d947d9237b33c554f3490cd62335}{swirls}
+\item 
+int \hyperlink{classgauge__field_a6be2d71c62063374567046e00cfb0983}{ndim}
+\item 
+int \hyperlink{classgauge__field_ada7f51e4041a64c45f484fc0a734a464}{nc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the gauge field for any SU(n) Example: \begin{DoxyVerb}
+///    int nc=3; 
+///    int box[]={10,8,8,8};
+///    mdp_lattice lattice(4,box);
+///    gauge_field U(lattice,nc);
+///    mdp_site x(lattice);
+///    // set_cold(U);
+///    forallsites(x)
+///       for(int mu=0; mu<U.ndim; mu++)
+///          U(x,mu)=1;
+///    U.update(); // synchronization
+///    U.save("myfield");
+///    U.load("myfield");
+/// \end{DoxyVerb}
+ Note that U(x,mu) is $ \exp{iaA_{\mu}} $ and it is a color matrix in SU(nc). $a$ is the lattice spacing. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classgauge__field_abdb50dfc413d1c22904a0ea38fc72e34}{
+\index{gauge\_\-field@{gauge\_\-field}!gauge\_\-field@{gauge\_\-field}}
+\index{gauge\_\-field@{gauge\_\-field}!gauge_field@{gauge\_\-field}}
+\subsubsection[{gauge\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}gauge\_\-field::gauge\_\-field ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgauge__field_abdb50dfc413d1c22904a0ea38fc72e34}
+\hypertarget{classgauge__field_a0500e23c8bd48d78650235e6ae668ab0}{
+\index{gauge\_\-field@{gauge\_\-field}!gauge\_\-field@{gauge\_\-field}}
+\index{gauge\_\-field@{gauge\_\-field}!gauge_field@{gauge\_\-field}}
+\subsubsection[{gauge\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}gauge\_\-field::gauge\_\-field (const {\bf gauge\_\-field} \& {\em U})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgauge__field_a0500e23c8bd48d78650235e6ae668ab0}
+\hypertarget{classgauge__field_adcfa1a4c412dc26688307e95f3ed42b5}{
+\index{gauge\_\-field@{gauge\_\-field}!gauge\_\-field@{gauge\_\-field}}
+\index{gauge\_\-field@{gauge\_\-field}!gauge_field@{gauge\_\-field}}
+\subsubsection[{gauge\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}gauge\_\-field::gauge\_\-field ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em nc\_\-})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgauge__field_adcfa1a4c412dc26688307e95f3ed42b5}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classgauge__field_ac7af990c989c01f0254a5454fc365dd7}{
+\index{gauge\_\-field@{gauge\_\-field}!allocate\_\-gauge\_\-field@{allocate\_\-gauge\_\-field}}
+\index{allocate\_\-gauge\_\-field@{allocate\_\-gauge\_\-field}!gauge_field@{gauge\_\-field}}
+\subsubsection[{allocate\_\-gauge\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}void gauge\_\-field::allocate\_\-gauge\_\-field ({\bf mdp\_\-lattice} \& {\em a}, \/  int {\em nc\_\-})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgauge__field_ac7af990c989c01f0254a5454fc365dd7}
+\hypertarget{classgauge__field_a9dd484a3ca793d5e0376bbe2c2cd8995}{
+\index{gauge\_\-field@{gauge\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!gauge_field@{gauge\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mdp\_\-complex} gauge\_\-field::operator() (site {\em x}, \/  int {\em sign}, \/  int {\em mu}, \/  int {\em i}, \/  int {\em j}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgauge__field_a9dd484a3ca793d5e0376bbe2c2cd8995}
+\hypertarget{classgauge__field_afc4082b84abc10e1be05168c9898fddd}{
+\index{gauge\_\-field@{gauge\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!gauge_field@{gauge\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mdp\_\-matrix} gauge\_\-field::operator() (site {\em x}, \/  int {\em sign}, \/  int {\em mu}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgauge__field_afc4082b84abc10e1be05168c9898fddd}
+\hypertarget{classgauge__field_a8d68963fa439cf58c3ac16c043523010}{
+\index{gauge\_\-field@{gauge\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!gauge_field@{gauge\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} gauge\_\-field::operator() (site {\em x}, \/  int {\em sign}, \/  int {\em mu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgauge__field_a8d68963fa439cf58c3ac16c043523010}
+\hypertarget{classgauge__field_a3d76d90e8a6f39b0897cf463d6d8d049}{
+\index{gauge\_\-field@{gauge\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!gauge_field@{gauge\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mdp\_\-complex}\& gauge\_\-field::operator() (site {\em x}, \/  int {\em mu}, \/  int {\em i}, \/  int {\em j}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgauge__field_a3d76d90e8a6f39b0897cf463d6d8d049}
+\hypertarget{classgauge__field_a60a42ee4e59ad13f7bab46ba6f4ef2d9}{
+\index{gauge\_\-field@{gauge\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!gauge_field@{gauge\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-complex}\& gauge\_\-field::operator() (site {\em x}, \/  int {\em mu}, \/  int {\em i}, \/  int {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgauge__field_a60a42ee4e59ad13f7bab46ba6f4ef2d9}
+\hypertarget{classgauge__field_a8bbf9acb59886d8fcd08973476f224f6}{
+\index{gauge\_\-field@{gauge\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!gauge_field@{gauge\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf mdp\_\-matrix} gauge\_\-field::operator() (site {\em x}, \/  int {\em mu}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgauge__field_a8bbf9acb59886d8fcd08973476f224f6}
+\hypertarget{classgauge__field_a765260519dece4a4ffafa338cbee22ae}{
+\index{gauge\_\-field@{gauge\_\-field}!operator()@{operator()}}
+\index{operator()@{operator()}!gauge_field@{gauge\_\-field}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix} gauge\_\-field::operator() (site {\em x}, \/  int {\em mu})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgauge__field_a765260519dece4a4ffafa338cbee22ae}
+\hypertarget{classgauge__field_a1006054965a512e4dd06ca8c0b5c5d28}{
+\index{gauge\_\-field@{gauge\_\-field}!operator=@{operator=}}
+\index{operator=@{operator=}!gauge_field@{gauge\_\-field}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void gauge\_\-field::operator= (const {\bf gauge\_\-field} \& {\em U})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classgauge__field_a1006054965a512e4dd06ca8c0b5c5d28}
+
+
+Reimplemented from \hyperlink{classmdp__complex__field_ad2b736ae31e3ee1f955c10f6ad40928f}{mdp\_\-complex\_\-field}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classgauge__field_a8e12cc66b84dc51a33e0a942cc7c3f5c}{
+\index{gauge\_\-field@{gauge\_\-field}!em@{em}}
+\index{em@{em}!gauge_field@{gauge\_\-field}}
+\subsubsection[{em}]{\setlength{\rightskip}{0pt plus 5cm}{\bf em\_\-field} {\bf gauge\_\-field::em}}}
+\label{classgauge__field_a8e12cc66b84dc51a33e0a942cc7c3f5c}
+\hypertarget{classgauge__field_a3914ca4c0b33e495a2c1d34f158d6ce2}{
+\index{gauge\_\-field@{gauge\_\-field}!i\_\-jump@{i\_\-jump}}
+\index{i\_\-jump@{i\_\-jump}!gauge_field@{gauge\_\-field}}
+\subsubsection[{i\_\-jump}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-field}$<${\bf mdp\_\-int}$>$ {\bf gauge\_\-field::i\_\-jump}}}
+\label{classgauge__field_a3914ca4c0b33e495a2c1d34f158d6ce2}
+\hypertarget{classgauge__field_a2371b7cec512a57c18ba34269a5ba95a}{
+\index{gauge\_\-field@{gauge\_\-field}!long\_\-links@{long\_\-links}}
+\index{long\_\-links@{long\_\-links}!gauge_field@{gauge\_\-field}}
+\subsubsection[{long\_\-links}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-nmatrix\_\-field} {\bf gauge\_\-field::long\_\-links}}}
+\label{classgauge__field_a2371b7cec512a57c18ba34269a5ba95a}
+\hypertarget{classgauge__field_ada7f51e4041a64c45f484fc0a734a464}{
+\index{gauge\_\-field@{gauge\_\-field}!nc@{nc}}
+\index{nc@{nc}!gauge_field@{gauge\_\-field}}
+\subsubsection[{nc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf gauge\_\-field::nc}}}
+\label{classgauge__field_ada7f51e4041a64c45f484fc0a734a464}
+\hypertarget{classgauge__field_a6be2d71c62063374567046e00cfb0983}{
+\index{gauge\_\-field@{gauge\_\-field}!ndim@{ndim}}
+\index{ndim@{ndim}!gauge_field@{gauge\_\-field}}
+\subsubsection[{ndim}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf gauge\_\-field::ndim}}}
+\label{classgauge__field_a6be2d71c62063374567046e00cfb0983}
+\hypertarget{classgauge__field_a8b62d947d9237b33c554f3490cd62335}{
+\index{gauge\_\-field@{gauge\_\-field}!swirls@{swirls}}
+\index{swirls@{swirls}!gauge_field@{gauge\_\-field}}
+\subsubsection[{swirls}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-matrix\_\-field} {\bf gauge\_\-field::swirls}}}
+\label{classgauge__field_a8b62d947d9237b33c554f3490cd62335}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__gauge__field_8h}{fermiqcd\_\-gauge\_\-field.h}\end{DoxyCompactItemize}

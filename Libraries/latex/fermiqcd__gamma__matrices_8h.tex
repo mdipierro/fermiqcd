@@ -1,0 +1,42 @@
+\hypertarget{fermiqcd__gamma__matrices_8h}{
+\section{/Users/mdipierro/Desktop/SciDac/development/Libraries/fermiqcd\_\-gamma\_\-matrices.h File Reference}
+\label{fermiqcd__gamma__matrices_8h}\index{/Users/mdipierro/Desktop/SciDac/development/Libraries/fermiqcd\_\-gamma\_\-matrices.h@{/Users/mdipierro/Desktop/SciDac/development/Libraries/fermiqcd\_\-gamma\_\-matrices.h}}
+}
+
+
+This graph shows which files directly or indirectly include this file:\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{fermiqcd__gamma__matrices_8h_b360be1b81d283ae40b97eabcaa8b338}{define\_\-base\_\-matrices} (string convention=\char`\"{}FERMILAB\char`\"{})
+\begin{CompactList}\small\item\em define convetion for Gamma matrices and bases of SU(2) and SU(3) \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Version:]3-1-2005 \end{Desc}
+\begin{Desc}
+\item[Author:]Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$\end{Desc}
+Declares:\begin{itemize}
+\item GammaI = $ 1 $\item Gamma\mbox{[}mu\mbox{]} = $ \gamma^\mu $\item Gamma5 = $ \gamma^5 $\item Sigma\mbox{[}mu\mbox{]}\mbox{[}nu\mbox{]} = $ \sigma^{\mu\nu} $\item sigma\mbox{[}i\mbox{]} = $ \sigma^{i} $ (generators SU(2))\item Lambda\mbox{[}i\mbox{]} = $ \lambda^{i} $ (generators SU(3))\end{itemize}
+
+
+This file is copyrighted by Massimo Di Pierro Read attached license in file fermiqcd\_\-license.pdf This file cannot be distributed without file fermiqcd\_\-license.pdf 
+
+\subsection{Function Documentation}
+\hypertarget{fermiqcd__gamma__matrices_8h_b360be1b81d283ae40b97eabcaa8b338}{
+\index{fermiqcd\_\-gamma\_\-matrices.h@{fermiqcd\_\-gamma\_\-matrices.h}!define\_\-base\_\-matrices@{define\_\-base\_\-matrices}}
+\index{define\_\-base\_\-matrices@{define\_\-base\_\-matrices}!fermiqcd_gamma_matrices.h@{fermiqcd\_\-gamma\_\-matrices.h}}
+\subsubsection[{define\_\-base\_\-matrices}]{\setlength{\rightskip}{0pt plus 5cm}void define\_\-base\_\-matrices (string {\em convention} = {\tt \char`\"{}FERMILAB\char`\"{}})}}
+\label{fermiqcd__gamma__matrices_8h_b360be1b81d283ae40b97eabcaa8b338}
+
+
+define convetion for Gamma matrices and bases of SU(2) and SU(3) 
+
+At the beginning of any FermiQCD program you MUST call 
+
+\footnotesize\begin{verbatim}
+/// define_base_matrices("FERMILAB");
+/// \end{verbatim}
+\normalsize
+ Possible convections are:\begin{itemize}
+\item \char`\"{}FERMILAB\char`\"{} (ok for lattice qcd)\item \char`\"{}UKQCD\char`\"{} (ok for lattice qcd)\item \char`\"{}Minkowsy-Dirac\char`\"{} (not ok for lattice qcd)\item \char`\"{}Minkowsy-Chiral\char`\"{} (not ok for lattice qcd) Convention can be changed within the program. \end{itemize}

@@ -1,0 +1,30 @@
+\hypertarget{classmdp__measure}{
+\section{mdp\_\-measure Class Reference}
+\label{classmdp__measure}\index{mdp\_\-measure@{mdp\_\-measure}}
+}
+implements error propagation  
+
+
+{\tt \#include $<$mdp\_\-measure.h$>$}
+
+
+
+\subsection{Detailed Description}
+implements error propagation 
+
+Example: 
+
+\footnotesize\begin{verbatim}
+///    mdp_measure m;
+///    // store 10 measurements
+///    for(int i=0; i<10; i++) 
+///       m << 3.0+mdp_random.gaussian(2.0);
+///    m=sin(exp(m)+m);
+///    cout << m.getmean() << "+/-" << m.geterr() << endl;
+/// \end{verbatim}
+\normalsize
+ Assumes gaussian error propagation 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{mdp__measure_8h}{mdp\_\-measure.h}\end{CompactItemize}

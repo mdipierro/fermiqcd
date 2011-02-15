@@ -1,0 +1,68 @@
+\hypertarget{mdp__macros_8h}{
+\section{/Users/mdipierro/Desktop/SciDac/development/Libraries/mdp\_\-macros.h File Reference}
+\label{mdp__macros_8h}\index{/Users/mdipierro/Desktop/SciDac/development/Libraries/mdp\_\-macros.h@{/Users/mdipierro/Desktop/SciDac/development/Libraries/mdp\_\-macros.h}}
+}
+
+
+This graph shows which files directly or indirectly include this file:\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\hypertarget{mdp__macros_8h_3f4f0463b31fc7420af5bc8b56d17e08}{
+\#define \hyperlink{mdp__macros_8h_3f4f0463b31fc7420af5bc8b56d17e08}{forallsites}(x)~for(x.start(); x.is\_\-in(); x.next())}
+\label{mdp__macros_8h_3f4f0463b31fc7420af5bc8b56d17e08}
+
+\begin{CompactList}\small\item\em Loop on all local siltes of this process. \item\end{CompactList}\item 
+\#define \hyperlink{mdp__macros_8h_f21645df600a9601916fdafab34df9be}{forallsitesofparity}(x, pofx)
+\item 
+\hypertarget{mdp__macros_8h_1752b2da0837bc094a6e499e37a826e2}{
+\#define \hyperlink{mdp__macros_8h_1752b2da0837bc094a6e499e37a826e2}{forallsitesandcopies}(x)~for(x.start(), x.idx=0; x.idx$<$x.lattice().nvol; x.idx++)}
+\label{mdp__macros_8h_1752b2da0837bc094a6e499e37a826e2}
+
+\begin{CompactList}\small\item\em Loop on all sites stored by this process. \item\end{CompactList}\item 
+\hypertarget{mdp__macros_8h_8cc602b6c5ac7e1caa3cd476f83b3854}{
+\#define \hyperlink{mdp__macros_8h_8cc602b6c5ac7e1caa3cd476f83b3854}{forallsitesandcopiesofparity}(x, pofx)}
+\label{mdp__macros_8h_8cc602b6c5ac7e1caa3cd476f83b3854}
+
+\begin{CompactList}\small\item\em Loop on all sites stored by this process with given parity. \item\end{CompactList}\item 
+\hypertarget{mdp__macros_8h_df8d34f3be20164c292bccfeb72898e5}{
+\#define \hyperlink{mdp__macros_8h_df8d34f3be20164c292bccfeb72898e5}{ME}~mpi.me()}
+\label{mdp__macros_8h_df8d34f3be20164c292bccfeb72898e5}
+
+\begin{CompactList}\small\item\em Returns the unique id of this process. \item\end{CompactList}\item 
+\hypertarget{mdp__macros_8h_48b6a21a37d4fd876c95b4a45674bfcf}{
+\#define \hyperlink{mdp__macros_8h_48b6a21a37d4fd876c95b4a45674bfcf}{Nproc}~mpi.nproc()}
+\label{mdp__macros_8h_48b6a21a37d4fd876c95b4a45674bfcf}
+
+\begin{CompactList}\small\item\em Returns the total number of parallel processes for this job. \item\end{CompactList}\item 
+\hypertarget{mdp__macros_8h_ad98f1063a19a487b893f30ff375104e}{
+\#define \hyperlink{mdp__macros_8h_ad98f1063a19a487b893f30ff375104e}{error}(a)~\_\-mpi\_\-error\_\-message(a,\_\-\_\-FILE\_\-\_\-, \_\-\_\-LINE\_\-\_\-);}
+\label{mdp__macros_8h_ad98f1063a19a487b893f30ff375104e}
+
+\begin{CompactList}\small\item\em Reports a runtime error and the line that caused it. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Version:]3-1-2005 \end{Desc}
+\begin{Desc}
+\item[Author:]Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$\end{Desc}
+Contains class mdp\_\-macros
+
+Licensed under GPL2 license Read attached license in file mdp\_\-license.pdf This file cannot be distributed without file mdp\_\-license.pdf 
+
+\subsection{Define Documentation}
+\hypertarget{mdp__macros_8h_f21645df600a9601916fdafab34df9be}{
+\index{mdp\_\-macros.h@{mdp\_\-macros.h}!forallsitesofparity@{forallsitesofparity}}
+\index{forallsitesofparity@{forallsitesofparity}!mdp_macros.h@{mdp\_\-macros.h}}
+\subsubsection[{forallsitesofparity}]{\setlength{\rightskip}{0pt plus 5cm}\#define forallsitesofparity(x, \/  pofx)}}
+\label{mdp__macros_8h_f21645df600a9601916fdafab34df9be}
+
+
+\textbf{Value:}
+
+\begin{Code}\begin{verbatim}for(x.start(), x.idx=x.lattice().start[ME][pofx % 2];               \
+      x.idx<x.lattice().stop[ME][(pofx+(pofx % 2))/2];     \
+      x.idx++)
+\end{verbatim}
+\end{Code}
+Loop on all local sites of this process with given parity If pofx is EVENODD=2 then loops on even and odd sites 

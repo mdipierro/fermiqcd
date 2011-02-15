@@ -1,0 +1,40 @@
+\hypertarget{classstaggered__propagator}{
+\section{staggered\_\-propagator Class Reference}
+\label{classstaggered__propagator}\index{staggered\_\-propagator@{staggered\_\-propagator}}
+}
+staggared quark propagator  
+
+
+{\tt \#include $<$fermiqcd\_\-staggered\_\-propagator.h$>$}
+
+Inherits \hyperlink{classmdp__field}{mdp\_\-field$<$ mdp\_\-complex $>$}.
+
+Collaboration diagram for staggered\_\-propagator:
+
+\subsection{Detailed Description}
+staggared quark propagator 
+
+On a (2n) dimensional lattice this makes 3$\ast$(2$^\wedge$n) sources at the vertices of the hypercube at the origin of the lattice and inverts the Staggered/Asqtad action on them.
+
+Example: 
+
+\footnotesize\begin{verbatim}
+/// mdp_gauge U(lattice,nc);
+/// staggered_propagator S(lattice,nc);
+/// mdp_site x(lattice);
+/// mdp_site y(lattice);
+/// coefficients coeff;
+/// coeff["mass"]=1.0;
+/// generate(S,U,coeff);
+/// for(int i=0; i<(int) pow(2,lattice.ndim); i++) {
+///    x=binary2versor(a);
+///    cout << "source at:" << x << "\nprop:\n"; 
+///    forallsites(y) cout << S(x,a) << endl;
+/// }
+/// \end{verbatim}
+\normalsize
+ 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+/Users/mdipierro/Desktop/SciDac/development/Libraries/\hyperlink{fermiqcd__staggered__propagator_8h}{fermiqcd\_\-staggered\_\-propagator.h}\end{CompactItemize}

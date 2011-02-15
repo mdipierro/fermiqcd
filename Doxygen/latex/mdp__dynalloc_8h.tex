@@ -1,0 +1,50 @@
+\hypertarget{mdp__dynalloc_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-dynalloc.h File Reference}
+\label{mdp__dynalloc_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-dynalloc.h@{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-dynalloc.h}}
+}
+{\ttfamily \#include \char`\"{}malloc.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{mdp__dynalloc_8h_a205ed048fdf5259c2e8e0cb60ee8f719}{operator new} (size\_\-t size)
+\item 
+void \hyperlink{mdp__dynalloc_8h_a898fe16a35d180bf1dd4d55df6576d08}{operator delete} (void $\ast$pointer)
+\item 
+void $\ast$ \hyperlink{mdp__dynalloc_8h_a63ce4f64887b9307317aee5baae6b18f}{operator new\mbox{[}$\,$\mbox{]}} (size\_\-t size)
+\item 
+void \hyperlink{mdp__dynalloc_8h_a68d6173eacb62f3e746a04abc2cae1d9}{operator delete\mbox{[}$\,$\mbox{]}} (void $\ast$pointer)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+Declaration of overloaded new and delete operators to use memalign when compiled with define SSE2 Required for SSE/SSE2 assembly macros
+
+Licensed under GPL2 license Read attached license in file mdp\_\-license.pdf This file cannot be distributed without file mdp\_\-license.pdf 
+
+\subsection{Function Documentation}
+\hypertarget{mdp__dynalloc_8h_a898fe16a35d180bf1dd4d55df6576d08}{
+\index{mdp\_\-dynalloc.h@{mdp\_\-dynalloc.h}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!mdp_dynalloc.h@{mdp\_\-dynalloc.h}}
+\subsubsection[{operator delete}]{\setlength{\rightskip}{0pt plus 5cm}void operator delete (void $\ast$ {\em pointer})}}
+\label{mdp__dynalloc_8h_a898fe16a35d180bf1dd4d55df6576d08}
+\hypertarget{mdp__dynalloc_8h_a68d6173eacb62f3e746a04abc2cae1d9}{
+\index{mdp\_\-dynalloc.h@{mdp\_\-dynalloc.h}!operator delete\mbox{[}\mbox{]}@{operator delete[]}}
+\index{operator delete\mbox{[}\mbox{]}@{operator delete[]}!mdp_dynalloc.h@{mdp\_\-dynalloc.h}}
+\subsubsection[{operator delete[]}]{\setlength{\rightskip}{0pt plus 5cm}void operator delete\mbox{[}$\,$\mbox{]} (void $\ast$ {\em pointer})}}
+\label{mdp__dynalloc_8h_a68d6173eacb62f3e746a04abc2cae1d9}
+\hypertarget{mdp__dynalloc_8h_a205ed048fdf5259c2e8e0cb60ee8f719}{
+\index{mdp\_\-dynalloc.h@{mdp\_\-dynalloc.h}!operator new@{operator new}}
+\index{operator new@{operator new}!mdp_dynalloc.h@{mdp\_\-dynalloc.h}}
+\subsubsection[{operator new}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ operator new (size\_\-t {\em size})}}
+\label{mdp__dynalloc_8h_a205ed048fdf5259c2e8e0cb60ee8f719}
+\hypertarget{mdp__dynalloc_8h_a63ce4f64887b9307317aee5baae6b18f}{
+\index{mdp\_\-dynalloc.h@{mdp\_\-dynalloc.h}!operator new\mbox{[}\mbox{]}@{operator new[]}}
+\index{operator new\mbox{[}\mbox{]}@{operator new[]}!mdp_dynalloc.h@{mdp\_\-dynalloc.h}}
+\subsubsection[{operator new[]}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ operator new\mbox{[}$\,$\mbox{]} (size\_\-t {\em size})}}
+\label{mdp__dynalloc_8h_a63ce4f64887b9307317aee5baae6b18f}

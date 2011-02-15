@@ -1,0 +1,50 @@
+\hypertarget{mdp__prng_8h}{
+\section{/Users/mdipierro/Desktop/SciDac/development/Libraries/mdp\_\-prng.h File Reference}
+\label{mdp__prng_8h}\index{/Users/mdipierro/Desktop/SciDac/development/Libraries/mdp\_\-prng.h@{/Users/mdipierro/Desktop/SciDac/development/Libraries/mdp\_\-prng.h}}
+}
+
+
+This graph shows which files directly or indirectly include this file:\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{classmdp__prng}{mdp\_\-prng}
+\begin{CompactList}\small\item\em Marsaglia's random number generator (same as UKQCD). \item\end{CompactList}\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+class \hyperlink{classmdp__prng}{mdp\_\-prng} \hyperlink{mdp__prng_8h_0bd2c52246a79d9f13c70c7c9d794435}{mdp\_\-random}
+\begin{CompactList}\small\item\em Marsaglia's random number generator (same as UKQCD). \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Version:]3-1-2005 \end{Desc}
+\begin{Desc}
+\item[Author:]Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$\end{Desc}
+Class \hyperlink{classmdp__prng}{mdp\_\-prng} (the random number generator of MDP)
+
+Licensed under GPL2 license Read attached license in file mdp\_\-license.pdf This file cannot be distributed without file mdp\_\-license.pdf 
+
+\subsection{Variable Documentation}
+\hypertarget{mdp__prng_8h_0bd2c52246a79d9f13c70c7c9d794435}{
+\index{mdp\_\-prng.h@{mdp\_\-prng.h}!mdp\_\-random@{mdp\_\-random}}
+\index{mdp\_\-random@{mdp\_\-random}!mdp_prng.h@{mdp\_\-prng.h}}
+\subsubsection[{mdp\_\-random}]{\setlength{\rightskip}{0pt plus 5cm}class {\bf mdp\_\-prng}  {\bf mdp\_\-random}}}
+\label{mdp__prng_8h_0bd2c52246a79d9f13c70c7c9d794435}
+
+
+Marsaglia's random number generator (same as UKQCD). 
+
+You should not instantiate this class because:\begin{itemize}
+\item there is a global object mdp\_\-random\item each field \char`\"{}lattice\char`\"{} has a parallel generator \char`\"{}lattice.random(x)\char`\"{} Example: 
+
+\footnotesize\begin{verbatim}
+///    // print a uniform number in (0,1)
+///    cout << mdp_random.plain() << endl;
+///    // print a gaussian number
+///    cout << mdp_random.gaussian() << endl;
+///    // print a random SU(10) matrix
+///    cout << mdp_random.SU(10) << endl;
+/// \end{verbatim}
+\normalsize
+ \end{itemize}

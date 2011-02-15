@@ -1,0 +1,46 @@
+\hypertarget{class_fermi_clover_action_fast}{
+\section{FermiCloverActionFast Class Reference}
+\label{class_fermi_clover_action_fast}\index{FermiCloverActionFast@{FermiCloverActionFast}}
+}
+
+
+Wilson/Clover action.  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-fermi\_\-actions.h$>$}\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_fermi_clover_action_fast_a59f9e2ae136b1b0f490c9157db70c102}{mul\_\-Q} (\hyperlink{classfermi__field}{fermi\_\-field} \&psi\_\-out, \hyperlink{classfermi__field}{fermi\_\-field} \&psi\_\-in, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, int parity=\hyperlink{mdp__global__vars_8h_a4c9de81f2de5a74b588107b6c0afb9ee}{EVENODD})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wilson/Clover action. Example: \begin{DoxyVerb}
+/// gauge_field U(lattice,nc);
+/// fermi_field psi(lattice,nc);
+/// fermi_field chi(lattice,nc);
+/// coefficients coeff;
+/// coeff["kappa_s"]=0.11;
+/// coeff["kappa_t"]=0.11;
+/// coeff["r_s"]=1.0;
+/// coeff["r_t"]=1.0;
+/// coeff["c_{sw}"]=1.0;
+/// coeff["c_E"]=1.0;
+/// coeff["c_B"]=1.0;
+/// default_fermi_action=FermiCloverActionFast::mul_Q;
+/// if(coeff["c_{sw}"]!=0) compute_em_field(U);
+/// mul_Q(chi,psi,U,coeff);
+/// \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_fermi_clover_action_fast_a59f9e2ae136b1b0f490c9157db70c102}{
+\index{FermiCloverActionFast@{FermiCloverActionFast}!mul\_\-Q@{mul\_\-Q}}
+\index{mul\_\-Q@{mul\_\-Q}!FermiCloverActionFast@{FermiCloverActionFast}}
+\subsubsection[{mul\_\-Q}]{\setlength{\rightskip}{0pt plus 5cm}static void FermiCloverActionFast::mul\_\-Q ({\bf fermi\_\-field} \& {\em psi\_\-out}, \/  {\bf fermi\_\-field} \& {\em psi\_\-in}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  int {\em parity} = {\ttfamily {\bf EVENODD}})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_fermi_clover_action_fast_a59f9e2ae136b1b0f490c9157db70c102}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__fermi__actions_8h}{fermiqcd\_\-fermi\_\-actions.h}\end{DoxyCompactItemize}

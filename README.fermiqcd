@@ -1,0 +1,34 @@
+FermiQCD requires gcc 2.95.3 or 3.x.x
+
+FermiQCD files and MDP libraries are in Libraries/
+Documentation and licenses are in Documentation/
+Examples are in, guess what, Examples/
+Conversion programs for gauge configurations are in Converters/
+Other contains work in progress
+
+Compile with 
+
+   g++ -O3 -I[path to *.h files] [filename.cpp] -o [filename.exe]
+
+[path to *.h files] refers to the path where the mdp_*.h and fermiqcd_*.h files are located. It should be in Libraries/
+
+Under linux compile with -DLINUX
+
+To use SSE2 compile with -O3 -DSSE2
+
+For double precision compile with -DUSE_DOUBLE_PRECISION
+
+Note that in order to use the SSE2 action it is necessary to choose the proper action in the program
+
+   default_fermi_action=FermiCloverActionSSE2::mul_Q;
+   default_staggered_action=StaggeredAsqtadActionSSE2::mul_Q;
+
+Gauge actions are not yet optimized with SSE2. Fermions in double precision are better optimized than fermions in single precision. Wilson/Clover action is (with minor variations) M. Luscher's implementation. FermiQCD is based in M. Lusher's inline SSE2 macros.
+
+Wilson/Clover code was tested against Canopy (by J.Simone) and against UKQCD code (by J.Flynn). Staggered/Asqtad action was tested against MILC (by M.DiPierro and O.Masataka).
+
+Feel free to email the author for more examples and free support.
+
+mdipierro@cs.depaul.edu
+
+Enjoy.

@@ -1,0 +1,89 @@
+\hypertarget{fermiqcd__dwfermi__algorithms_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-dwfermi\_\-algorithms.h File Reference}
+\label{fermiqcd__dwfermi__algorithms_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-dwfermi\_\-algorithms.h@{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-dwfermi\_\-algorithms.h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fermiqcd__dwfermi__algorithms_8h_af09337a30c9ab6952056ececcdd50586}{project} (\hyperlink{classfermi__field}{fermi\_\-field} \&psi, \hyperlink{classdwfermi__field}{dwfermi\_\-field} \&chi)
+\begin{DoxyCompactList}\small\item\em Projects a domain wall fermion (chi) into a wilson fermion (psi). \item\end{DoxyCompactList}\item 
+void \hyperlink{fermiqcd__dwfermi__algorithms_8h_aef7c353f7abb7b290c85571a752a45a9}{project} (\hyperlink{classdwfermi__field}{dwfermi\_\-field} \&chi, \hyperlink{classfermi__field}{fermi\_\-field} \&psi)
+\begin{DoxyCompactList}\small\item\em Projects a will fermion (psi) into a domain wall fermion (chi). \item\end{DoxyCompactList}\item 
+void \hyperlink{fermiqcd__dwfermi__algorithms_8h_a6260f8bdaa2ef5ac52acc067c3970877}{mul\_\-Q} (\hyperlink{classdwfermi__field}{dwfermi\_\-field} \&psi\_\-out, \hyperlink{classdwfermi__field}{dwfermi\_\-field} \&psi\_\-in, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff)
+\begin{DoxyCompactList}\small\item\em Executes the current dwfermi action. \item\end{DoxyCompactList}\item 
+\hyperlink{classinversion__stats}{inversion\_\-stats} \hyperlink{fermiqcd__dwfermi__algorithms_8h_a726da8b698c9043b4d097cbcb07c26d8}{mul\_\-invQ} (\hyperlink{classdwfermi__field}{dwfermi\_\-field} \&psi\_\-out, \hyperlink{classdwfermi__field}{dwfermi\_\-field} \&psi\_\-in, \hyperlink{classgauge__field}{gauge\_\-field} \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} absolute\_\-precision=\hyperlink{fermiqcd__default__parameters_8h_aaf7afe8edf7318091c62707552c502ab}{dwfermi\_\-inversion\_\-precision}, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} relative\_\-precision=0, int max\_\-steps=2000)
+\begin{DoxyCompactList}\small\item\em Execute the default dwfermi inverter. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+void($\ast$ \hyperlink{fermiqcd__dwfermi__algorithms_8h_af088150be92b922295701f4bec9f620e}{default\_\-dwfermi\_\-action} )(\hyperlink{classdwfermi__field}{dwfermi\_\-field} \&, \hyperlink{classdwfermi__field}{dwfermi\_\-field} \&, \hyperlink{classgauge__field}{gauge\_\-field} \&, \hyperlink{classcoefficients}{coefficients} \&) = DWFermiActionFast::mul\_\-Q
+\begin{DoxyCompactList}\small\item\em Pointer to the current dwfermi action. \item\end{DoxyCompactList}\item 
+\hyperlink{classinversion__stats}{inversion\_\-stats}($\ast$ \hyperlink{fermiqcd__dwfermi__algorithms_8h_ac92f51728e6fa5115e74a60e810bbfad}{default\_\-dwfermi\_\-inverter} )(\hyperlink{classdwfermi__field}{dwfermi\_\-field} \&, \hyperlink{classdwfermi__field}{dwfermi\_\-field} \&, \hyperlink{classgauge__field}{gauge\_\-field} \&, \hyperlink{classcoefficients}{coefficients} \&, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real}, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real}, int)
+\begin{DoxyCompactList}\small\item\em Pointer to the current dwfermi inverter. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+More stuff for domain wall fermions
+
+Distributed under GPL2 License
+
+Created with support from the US Department of Energy 
+
+\subsection{Function Documentation}
+\hypertarget{fermiqcd__dwfermi__algorithms_8h_a726da8b698c9043b4d097cbcb07c26d8}{
+\index{fermiqcd\_\-dwfermi\_\-algorithms.h@{fermiqcd\_\-dwfermi\_\-algorithms.h}!mul\_\-invQ@{mul\_\-invQ}}
+\index{mul\_\-invQ@{mul\_\-invQ}!fermiqcd_dwfermi_algorithms.h@{fermiqcd\_\-dwfermi\_\-algorithms.h}}
+\subsubsection[{mul\_\-invQ}]{\setlength{\rightskip}{0pt plus 5cm}{\bf inversion\_\-stats} mul\_\-invQ ({\bf dwfermi\_\-field} \& {\em psi\_\-out}, \/  {\bf dwfermi\_\-field} \& {\em psi\_\-in}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  {\bf mdp\_\-real} {\em absolute\_\-precision} = {\ttfamily {\bf dwfermi\_\-inversion\_\-precision}}, \/  {\bf mdp\_\-real} {\em relative\_\-precision} = {\ttfamily 0}, \/  int {\em max\_\-steps} = {\ttfamily 2000})}}
+\label{fermiqcd__dwfermi__algorithms_8h_a726da8b698c9043b4d097cbcb07c26d8}
+
+
+Execute the default dwfermi inverter. \hypertarget{fermiqcd__dwfermi__algorithms_8h_a6260f8bdaa2ef5ac52acc067c3970877}{
+\index{fermiqcd\_\-dwfermi\_\-algorithms.h@{fermiqcd\_\-dwfermi\_\-algorithms.h}!mul\_\-Q@{mul\_\-Q}}
+\index{mul\_\-Q@{mul\_\-Q}!fermiqcd_dwfermi_algorithms.h@{fermiqcd\_\-dwfermi\_\-algorithms.h}}
+\subsubsection[{mul\_\-Q}]{\setlength{\rightskip}{0pt plus 5cm}void mul\_\-Q ({\bf dwfermi\_\-field} \& {\em psi\_\-out}, \/  {\bf dwfermi\_\-field} \& {\em psi\_\-in}, \/  {\bf gauge\_\-field} \& {\em U}, \/  {\bf coefficients} \& {\em coeff})}}
+\label{fermiqcd__dwfermi__algorithms_8h_a6260f8bdaa2ef5ac52acc067c3970877}
+
+
+Executes the current dwfermi action. \hypertarget{fermiqcd__dwfermi__algorithms_8h_aef7c353f7abb7b290c85571a752a45a9}{
+\index{fermiqcd\_\-dwfermi\_\-algorithms.h@{fermiqcd\_\-dwfermi\_\-algorithms.h}!project@{project}}
+\index{project@{project}!fermiqcd_dwfermi_algorithms.h@{fermiqcd\_\-dwfermi\_\-algorithms.h}}
+\subsubsection[{project}]{\setlength{\rightskip}{0pt plus 5cm}void project ({\bf dwfermi\_\-field} \& {\em chi}, \/  {\bf fermi\_\-field} \& {\em psi})}}
+\label{fermiqcd__dwfermi__algorithms_8h_aef7c353f7abb7b290c85571a752a45a9}
+
+
+Projects a will fermion (psi) into a domain wall fermion (chi). \hypertarget{fermiqcd__dwfermi__algorithms_8h_af09337a30c9ab6952056ececcdd50586}{
+\index{fermiqcd\_\-dwfermi\_\-algorithms.h@{fermiqcd\_\-dwfermi\_\-algorithms.h}!project@{project}}
+\index{project@{project}!fermiqcd_dwfermi_algorithms.h@{fermiqcd\_\-dwfermi\_\-algorithms.h}}
+\subsubsection[{project}]{\setlength{\rightskip}{0pt plus 5cm}void project ({\bf fermi\_\-field} \& {\em psi}, \/  {\bf dwfermi\_\-field} \& {\em chi})}}
+\label{fermiqcd__dwfermi__algorithms_8h_af09337a30c9ab6952056ececcdd50586}
+
+
+Projects a domain wall fermion (chi) into a wilson fermion (psi). 
+
+\subsection{Variable Documentation}
+\hypertarget{fermiqcd__dwfermi__algorithms_8h_af088150be92b922295701f4bec9f620e}{
+\index{fermiqcd\_\-dwfermi\_\-algorithms.h@{fermiqcd\_\-dwfermi\_\-algorithms.h}!default\_\-dwfermi\_\-action@{default\_\-dwfermi\_\-action}}
+\index{default\_\-dwfermi\_\-action@{default\_\-dwfermi\_\-action}!fermiqcd_dwfermi_algorithms.h@{fermiqcd\_\-dwfermi\_\-algorithms.h}}
+\subsubsection[{default\_\-dwfermi\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf default\_\-dwfermi\_\-action})({\bf dwfermi\_\-field} \&, {\bf dwfermi\_\-field} \&, {\bf gauge\_\-field} \&, {\bf coefficients} \&) = DWFermiActionFast::mul\_\-Q}}
+\label{fermiqcd__dwfermi__algorithms_8h_af088150be92b922295701f4bec9f620e}
+
+
+Pointer to the current dwfermi action. \hypertarget{fermiqcd__dwfermi__algorithms_8h_ac92f51728e6fa5115e74a60e810bbfad}{
+\index{fermiqcd\_\-dwfermi\_\-algorithms.h@{fermiqcd\_\-dwfermi\_\-algorithms.h}!default\_\-dwfermi\_\-inverter@{default\_\-dwfermi\_\-inverter}}
+\index{default\_\-dwfermi\_\-inverter@{default\_\-dwfermi\_\-inverter}!fermiqcd_dwfermi_algorithms.h@{fermiqcd\_\-dwfermi\_\-algorithms.h}}
+\subsubsection[{default\_\-dwfermi\_\-inverter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf inversion\_\-stats}($\ast$ {\bf default\_\-dwfermi\_\-inverter})({\bf dwfermi\_\-field} \&, {\bf dwfermi\_\-field} \&, {\bf gauge\_\-field} \&, {\bf coefficients} \&, {\bf mdp\_\-real}, {\bf mdp\_\-real}, int)}}
+\label{fermiqcd__dwfermi__algorithms_8h_ac92f51728e6fa5115e74a60e810bbfad}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+
+        &(MinRes::inverter<dwfermi_field,gauge_field>)
+\end{DoxyCode}
+
+
+Pointer to the current dwfermi inverter. 

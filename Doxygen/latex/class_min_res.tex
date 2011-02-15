@@ -1,0 +1,46 @@
+\hypertarget{class_min_res}{
+\section{MinRes Class Reference}
+\label{class_min_res}\index{MinRes@{MinRes}}
+}
+
+
+the minimum residure inverter  
+
+
+{\ttfamily \#include $<$fermiqcd\_\-minres\_\-inverter.h$>$}\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class fieldT , class fieldG $>$ }\\static \hyperlink{classinversion__stats}{inversion\_\-stats} \hyperlink{class_min_res_ac42d7344449126a5aa109222de0ef527}{inverter} (fieldT \&psi\_\-out, fieldT \&psi\_\-in, fieldG \&U, \hyperlink{classcoefficients}{coefficients} \&coeff, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} absolute\_\-precision=\hyperlink{mdp__global__vars_8h_a443a4ca745298420893e113a7ac926a9}{mdp\_\-precision}, \hyperlink{mdp__global__vars_8h_a049e4c1d4e74d644878a42f9909463e4}{mdp\_\-real} relative\_\-precision=0, int max\_\-steps=2000)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the minimum residure inverter It inverts mul\_\-Q(psi\_\-out,psi\_\-in,U,coeff) iteratively 
+\begin{DoxyParams}{Parameters}
+\item[{\em psi\_\-out}]the output field passed by reference \item[{\em psi\_\-in}]the input field passed by reference \item[{\em U}]the gauge field to be passed to mul\_\-Q \item[{\em coeff}]the gauge parameters to be passed to mul\_\-Q \item[{\em absolute\_\-precision}]the target absolute precision \item[{\em relative\_\-precision}]the target relative precision \item[{\em max\_\-steps}]the maximum number of steps\end{DoxyParams}
+Example: \begin{DoxyVerb}
+/// gauge_field U(lattice,nc);
+/// fermi_field psi(lattice,nc);
+/// fermi_field chi(lattice,nc);
+/// coefficinets coeff;
+/// coeff["kappa"]=1.12;
+/// U.load("myfield");
+/// psi.load("myfield_psi");
+/// default_fermi_inverter=MinRes::inverter<fermi_field,gauge_field>;
+/// default_fermi_action=FermiCloverActionSlow::mul_Q;
+/// mul_invQ(chi,psi,U,coeff);
+/// chi.save("myfield_chi");
+/// \end{DoxyVerb}
+ Note that mul\_\-invQ(chi,psi,U,coeff) reads $ \chi=(/\!\!\!D[U]+m)^{-1}\psi $ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_min_res_ac42d7344449126a5aa109222de0ef527}{
+\index{MinRes@{MinRes}!inverter@{inverter}}
+\index{inverter@{inverter}!MinRes@{MinRes}}
+\subsubsection[{inverter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class fieldT , class fieldG $>$ static {\bf inversion\_\-stats} MinRes::inverter (fieldT \& {\em psi\_\-out}, \/  fieldT \& {\em psi\_\-in}, \/  fieldG \& {\em U}, \/  {\bf coefficients} \& {\em coeff}, \/  {\bf mdp\_\-real} {\em absolute\_\-precision} = {\ttfamily {\bf mdp\_\-precision}}, \/  {\bf mdp\_\-real} {\em relative\_\-precision} = {\ttfamily 0}, \/  int {\em max\_\-steps} = {\ttfamily 2000})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{class_min_res_ac42d7344449126a5aa109222de0ef527}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{fermiqcd__minres__inverter_8h}{fermiqcd\_\-minres\_\-inverter.h}\end{DoxyCompactItemize}

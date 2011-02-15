@@ -1,0 +1,48 @@
+\hypertarget{mdp__prng_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-prng.h File Reference}
+\label{mdp__prng_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-prng.h@{/Users/mdipierro/fermiqcd/development/Libraries/mdp\_\-prng.h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classmdp__prng}{mdp\_\-prng}
+\begin{DoxyCompactList}\small\item\em Marsaglia's random number generator (same as UKQCD). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classmdp__prng}{mdp\_\-prng} \hyperlink{mdp__prng_8h_a0bd2c52246a79d9f13c70c7c9d794435}{mdp\_\-random}
+\begin{DoxyCompactList}\small\item\em Marsaglia's random number generator (same as UKQCD). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+Class \hyperlink{classmdp__prng}{mdp\_\-prng} (the random number generator of MDP)
+
+Licensed under GPL2 license Read attached license in file mdp\_\-license.pdf This file cannot be distributed without file mdp\_\-license.pdf 
+
+\subsection{Variable Documentation}
+\hypertarget{mdp__prng_8h_a0bd2c52246a79d9f13c70c7c9d794435}{
+\index{mdp\_\-prng.h@{mdp\_\-prng.h}!mdp\_\-random@{mdp\_\-random}}
+\index{mdp\_\-random@{mdp\_\-random}!mdp_prng.h@{mdp\_\-prng.h}}
+\subsubsection[{mdp\_\-random}]{\setlength{\rightskip}{0pt plus 5cm}class {\bf mdp\_\-prng}  {\bf mdp\_\-random}}}
+\label{mdp__prng_8h_a0bd2c52246a79d9f13c70c7c9d794435}
+
+
+Marsaglia's random number generator (same as UKQCD). You should not instantiate this class because:
+\begin{DoxyItemize}
+\item there is a global object mdp\_\-random
+\item each field \char`\"{}lattice\char`\"{} has a parallel generator \char`\"{}lattice.random(x)\char`\"{} Example: \begin{DoxyVerb}
+///    // print a uniform number in (0,1)
+///    cout << mdp_random.plain() << endl;
+///    // print a gaussian number
+///    cout << mdp_random.gaussian() << endl;
+///    // print a random SU(10) matrix
+///    cout << mdp_random.SU(10) << endl;
+/// \end{DoxyVerb}
+ 
+\end{DoxyItemize}

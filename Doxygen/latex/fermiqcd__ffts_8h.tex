@@ -1,0 +1,51 @@
+\hypertarget{fermiqcd__ffts_8h}{
+\section{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-ffts.h File Reference}
+\label{fermiqcd__ffts_8h}\index{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-ffts.h@{/Users/mdipierro/fermiqcd/development/Libraries/fermiqcd\_\-ffts.h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} \hyperlink{fermiqcd__ffts_8h_ab515049f2fa55081ae972a17afaa2956}{i2pow} (\hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} n)
+\item 
+void \hyperlink{fermiqcd__ffts_8h_a0a7bc08dfd21872b8513519f50ef2e82}{dft} (\hyperlink{classmdp__complex}{mdp\_\-complex} $\ast$fft\_\-f, \hyperlink{classmdp__complex}{mdp\_\-complex} $\ast$f, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} n, double sign, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} offset=0, \hyperlink{mdp__global__vars_8h_aaa1ad9d0dcd2124aa5af0120d9954174}{mdp\_\-int} coeff=1)
+\item 
+void \hyperlink{fermiqcd__ffts_8h_abef397601c3dec514364e47c6547922d}{fermi\_\-field\_\-fft} (int t, \hyperlink{classfermi__field}{fermi\_\-field} \&psi\_\-out, \hyperlink{classfermi__field}{fermi\_\-field} \&psi\_\-in, int sign)
+\item 
+void \hyperlink{fermiqcd__ffts_8h_a544dbea0f085ba2ee5a32c5a106f91d0}{fermi\_\-field\_\-fft} (\hyperlink{classfermi__field}{fermi\_\-field} \&psi\_\-out, \hyperlink{classfermi__field}{fermi\_\-field} \&psi\_\-in, int sign)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+2009-\/12-\/21 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Massimo Di Pierro $<$\href{mailto:mdipierro@cs.depaul.edu}{\tt mdipierro@cs.depaul.edu}$>$
+\end{DoxyAuthor}
+Discrete Fourier stransform (not FFT quote yet)
+
+Distributed under GPL2 License
+
+Created with support from the US Department of Energy 
+
+\subsection{Function Documentation}
+\hypertarget{fermiqcd__ffts_8h_a0a7bc08dfd21872b8513519f50ef2e82}{
+\index{fermiqcd\_\-ffts.h@{fermiqcd\_\-ffts.h}!dft@{dft}}
+\index{dft@{dft}!fermiqcd_ffts.h@{fermiqcd\_\-ffts.h}}
+\subsubsection[{dft}]{\setlength{\rightskip}{0pt plus 5cm}void dft ({\bf mdp\_\-complex} $\ast$ {\em fft\_\-f}, \/  {\bf mdp\_\-complex} $\ast$ {\em f}, \/  {\bf mdp\_\-int} {\em n}, \/  double {\em sign}, \/  {\bf mdp\_\-int} {\em offset} = {\ttfamily 0}, \/  {\bf mdp\_\-int} {\em coeff} = {\ttfamily 1})}}
+\label{fermiqcd__ffts_8h_a0a7bc08dfd21872b8513519f50ef2e82}
+\hypertarget{fermiqcd__ffts_8h_a544dbea0f085ba2ee5a32c5a106f91d0}{
+\index{fermiqcd\_\-ffts.h@{fermiqcd\_\-ffts.h}!fermi\_\-field\_\-fft@{fermi\_\-field\_\-fft}}
+\index{fermi\_\-field\_\-fft@{fermi\_\-field\_\-fft}!fermiqcd_ffts.h@{fermiqcd\_\-ffts.h}}
+\subsubsection[{fermi\_\-field\_\-fft}]{\setlength{\rightskip}{0pt plus 5cm}void fermi\_\-field\_\-fft ({\bf fermi\_\-field} \& {\em psi\_\-out}, \/  {\bf fermi\_\-field} \& {\em psi\_\-in}, \/  int {\em sign})}}
+\label{fermiqcd__ffts_8h_a544dbea0f085ba2ee5a32c5a106f91d0}
+\hypertarget{fermiqcd__ffts_8h_abef397601c3dec514364e47c6547922d}{
+\index{fermiqcd\_\-ffts.h@{fermiqcd\_\-ffts.h}!fermi\_\-field\_\-fft@{fermi\_\-field\_\-fft}}
+\index{fermi\_\-field\_\-fft@{fermi\_\-field\_\-fft}!fermiqcd_ffts.h@{fermiqcd\_\-ffts.h}}
+\subsubsection[{fermi\_\-field\_\-fft}]{\setlength{\rightskip}{0pt plus 5cm}void fermi\_\-field\_\-fft (int {\em t}, \/  {\bf fermi\_\-field} \& {\em psi\_\-out}, \/  {\bf fermi\_\-field} \& {\em psi\_\-in}, \/  int {\em sign})}}
+\label{fermiqcd__ffts_8h_abef397601c3dec514364e47c6547922d}
+\hypertarget{fermiqcd__ffts_8h_ab515049f2fa55081ae972a17afaa2956}{
+\index{fermiqcd\_\-ffts.h@{fermiqcd\_\-ffts.h}!i2pow@{i2pow}}
+\index{i2pow@{i2pow}!fermiqcd_ffts.h@{fermiqcd\_\-ffts.h}}
+\subsubsection[{i2pow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mdp\_\-int} i2pow ({\bf mdp\_\-int} {\em n})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{fermiqcd__ffts_8h_ab515049f2fa55081ae972a17afaa2956}

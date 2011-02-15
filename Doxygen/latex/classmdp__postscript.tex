@@ -1,0 +1,242 @@
+\hypertarget{classmdp__postscript}{
+\section{mdp\_\-postscript Class Reference}
+\label{classmdp__postscript}\index{mdp\_\-postscript@{mdp\_\-postscript}}
+}
+
+
+to output and draw in postscript  
+
+
+{\ttfamily \#include $<$mdp\_\-postscript.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classmdp__postscript_a9a7e58c0e001105f4fe6d86a0a11348fa8266db73d3c5c06b4c4e8fdb9c4c38c0}{BOLD} = 10
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmdp__postscript_a30a69ecea648f202d533b02c8f21f119}{mdp\_\-postscript} ()
+\item 
+\hyperlink{classmdp__postscript_a94b381b18ec3bce5ab2ac9f0f33dcb53}{mdp\_\-postscript} (char filename\mbox{[}$\,$\mbox{]})
+\item 
+virtual \hyperlink{classmdp__postscript_a3a46d2757dc2954f970987cb3bea2784}{$\sim$mdp\_\-postscript} ()
+\item 
+FILE $\ast$ \hyperlink{classmdp__postscript_a2c2ab911f52c386532b769dda793dcdc}{open} (char filename\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{classmdp__postscript_af41a3aa09549d5acb2b5e9a098f69089}{close} ()
+\item 
+void \hyperlink{classmdp__postscript_af62e32c26c084b83e1a6c318767f2192}{size} (float x0, float y0, float x1, float y1)
+\item 
+void \hyperlink{classmdp__postscript_a99a00f3641062e5beef501f07baa7785}{line} (float x0, float y0, float x1, float y1)
+\item 
+void \hyperlink{classmdp__postscript_aa44192cb071b678edb48adb39053a396}{box} (float x0, float y0, float x1, float y1, int fill=0)
+\item 
+void \hyperlink{classmdp__postscript_a56092f2141d3d1b0cc4afd333bed5e1e}{arc} (float x0, float y0, float r, float \hyperlink{classmdp__postscript_aca4cc1e7bee7fa702c643bdb1c69d6d0}{alpha}, float beta)
+\item 
+void \hyperlink{classmdp__postscript_abfa4c3e6cfd19b2ddb190ca9a5f2df02}{circle} (float x0, float y0, float r, int fill=0)
+\item 
+void \hyperlink{classmdp__postscript_a416d831d67bb6db2512f3e819eee8bf3}{pen} (float size)
+\item 
+void \hyperlink{classmdp__postscript_ae4c5ce5c229ad7cfef67a689c77acac3}{color} (float r, float g, float b)
+\item 
+void \hyperlink{classmdp__postscript_a296dff78ebec7c38e3c39d97d3743172}{font} (const char $\ast$text, int size)
+\item 
+void \hyperlink{classmdp__postscript_a0c67b14a365475f3b5b04d3d033cc4c4}{print} (float x0, float y0, char text\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+FILE $\ast$ \hyperlink{classmdp__postscript_a0d313085dea47b974fdd18ecb26622f1}{fp}
+\item 
+float \hyperlink{classmdp__postscript_a535f3c0036f5d89c139b003c0e909eed}{X0}
+\item 
+float \hyperlink{classmdp__postscript_acce7497a1e20c1c98708b95041faa274}{Y0}
+\item 
+float \hyperlink{classmdp__postscript_a5c27b031c6f79593b476dfa6a69e146f}{Z0}
+\item 
+float \hyperlink{classmdp__postscript_a71402d65d648f4c878dfe5eb74679efa}{X1}
+\item 
+float \hyperlink{classmdp__postscript_a812d1985306950bed3a2d858e8236b5b}{Y1}
+\item 
+float \hyperlink{classmdp__postscript_ac512287091dcecae1a549d005083554f}{Z1}
+\item 
+float \hyperlink{classmdp__postscript_a3160a1940a9fa4e99a0b138bc88769e9}{c0}
+\item 
+float \hyperlink{classmdp__postscript_a92dc6ce50f362fe93a1981b9a126073a}{c1}
+\item 
+float \hyperlink{classmdp__postscript_a26f42cf1f154707c463ecdd3f19f568f}{c2}
+\item 
+float \hyperlink{classmdp__postscript_ae0bd063ba78d27ad7ce541e78f512d3a}{scale}
+\item 
+float \hyperlink{classmdp__postscript_aca4cc1e7bee7fa702c643bdb1c69d6d0}{alpha}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+to output and draw in postscript Example: \begin{DoxyVerb}
+///    mdp_postscript ps("test.ps");
+///    ps.color(0.2,0.2,0.7);
+///    ps.line(0,0,  5,5);
+///    ps.print(5,5,"a line from (0,0) to here");
+/// \end{DoxyVerb}
+ 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classmdp__postscript_a9a7e58c0e001105f4fe6d86a0a11348f}{
+\subsubsection[{"@5}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{classmdp__postscript_a9a7e58c0e001105f4fe6d86a0a11348f}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{BOLD@{BOLD}!mdp\_\-postscript@{mdp\_\-postscript}}\index{mdp\_\-postscript@{mdp\_\-postscript}!BOLD@{BOLD}}\item[{\em 
+\hypertarget{classmdp__postscript_a9a7e58c0e001105f4fe6d86a0a11348fa8266db73d3c5c06b4c4e8fdb9c4c38c0}{
+BOLD}
+\label{classmdp__postscript_a9a7e58c0e001105f4fe6d86a0a11348fa8266db73d3c5c06b4c4e8fdb9c4c38c0}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmdp__postscript_a30a69ecea648f202d533b02c8f21f119}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!mdp\_\-postscript@{mdp\_\-postscript}}
+\index{mdp\_\-postscript@{mdp\_\-postscript}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{mdp\_\-postscript}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-postscript::mdp\_\-postscript ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__postscript_a30a69ecea648f202d533b02c8f21f119}
+\hypertarget{classmdp__postscript_a94b381b18ec3bce5ab2ac9f0f33dcb53}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!mdp\_\-postscript@{mdp\_\-postscript}}
+\index{mdp\_\-postscript@{mdp\_\-postscript}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{mdp\_\-postscript}]{\setlength{\rightskip}{0pt plus 5cm}mdp\_\-postscript::mdp\_\-postscript (char {\em filename}\mbox{[}$\,$\mbox{]})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__postscript_a94b381b18ec3bce5ab2ac9f0f33dcb53}
+\hypertarget{classmdp__postscript_a3a46d2757dc2954f970987cb3bea2784}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!$\sim$mdp\_\-postscript@{$\sim$mdp\_\-postscript}}
+\index{$\sim$mdp\_\-postscript@{$\sim$mdp\_\-postscript}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{$\sim$mdp\_\-postscript}]{\setlength{\rightskip}{0pt plus 5cm}virtual mdp\_\-postscript::$\sim$mdp\_\-postscript ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classmdp__postscript_a3a46d2757dc2954f970987cb3bea2784}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmdp__postscript_a56092f2141d3d1b0cc4afd333bed5e1e}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!arc@{arc}}
+\index{arc@{arc}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{arc}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-postscript::arc (float {\em x0}, \/  float {\em y0}, \/  float {\em r}, \/  float {\em alpha}, \/  float {\em beta})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__postscript_a56092f2141d3d1b0cc4afd333bed5e1e}
+\hypertarget{classmdp__postscript_aa44192cb071b678edb48adb39053a396}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!box@{box}}
+\index{box@{box}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{box}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-postscript::box (float {\em x0}, \/  float {\em y0}, \/  float {\em x1}, \/  float {\em y1}, \/  int {\em fill} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__postscript_aa44192cb071b678edb48adb39053a396}
+\hypertarget{classmdp__postscript_abfa4c3e6cfd19b2ddb190ca9a5f2df02}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!circle@{circle}}
+\index{circle@{circle}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{circle}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-postscript::circle (float {\em x0}, \/  float {\em y0}, \/  float {\em r}, \/  int {\em fill} = {\ttfamily 0})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__postscript_abfa4c3e6cfd19b2ddb190ca9a5f2df02}
+\hypertarget{classmdp__postscript_af41a3aa09549d5acb2b5e9a098f69089}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!close@{close}}
+\index{close@{close}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-postscript::close ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__postscript_af41a3aa09549d5acb2b5e9a098f69089}
+\hypertarget{classmdp__postscript_ae4c5ce5c229ad7cfef67a689c77acac3}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!color@{color}}
+\index{color@{color}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-postscript::color (float {\em r}, \/  float {\em g}, \/  float {\em b})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__postscript_ae4c5ce5c229ad7cfef67a689c77acac3}
+\hypertarget{classmdp__postscript_a296dff78ebec7c38e3c39d97d3743172}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!font@{font}}
+\index{font@{font}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{font}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-postscript::font (const char $\ast$ {\em text}, \/  int {\em size})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__postscript_a296dff78ebec7c38e3c39d97d3743172}
+\hypertarget{classmdp__postscript_a99a00f3641062e5beef501f07baa7785}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!line@{line}}
+\index{line@{line}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{line}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-postscript::line (float {\em x0}, \/  float {\em y0}, \/  float {\em x1}, \/  float {\em y1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__postscript_a99a00f3641062e5beef501f07baa7785}
+\hypertarget{classmdp__postscript_a2c2ab911f52c386532b769dda793dcdc}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!open@{open}}
+\index{open@{open}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}FILE$\ast$ mdp\_\-postscript::open (char {\em filename}\mbox{[}$\,$\mbox{]})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__postscript_a2c2ab911f52c386532b769dda793dcdc}
+\hypertarget{classmdp__postscript_a416d831d67bb6db2512f3e819eee8bf3}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!pen@{pen}}
+\index{pen@{pen}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{pen}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-postscript::pen (float {\em size})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__postscript_a416d831d67bb6db2512f3e819eee8bf3}
+\hypertarget{classmdp__postscript_a0c67b14a365475f3b5b04d3d033cc4c4}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!print@{print}}
+\index{print@{print}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-postscript::print (float {\em x0}, \/  float {\em y0}, \/  char {\em text}\mbox{[}$\,$\mbox{]})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__postscript_a0c67b14a365475f3b5b04d3d033cc4c4}
+\hypertarget{classmdp__postscript_af62e32c26c084b83e1a6c318767f2192}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!size@{size}}
+\index{size@{size}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}void mdp\_\-postscript::size (float {\em x0}, \/  float {\em y0}, \/  float {\em x1}, \/  float {\em y1})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmdp__postscript_af62e32c26c084b83e1a6c318767f2192}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmdp__postscript_aca4cc1e7bee7fa702c643bdb1c69d6d0}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!alpha@{alpha}}
+\index{alpha@{alpha}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{alpha}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf mdp\_\-postscript::alpha}}}
+\label{classmdp__postscript_aca4cc1e7bee7fa702c643bdb1c69d6d0}
+\hypertarget{classmdp__postscript_a3160a1940a9fa4e99a0b138bc88769e9}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!c0@{c0}}
+\index{c0@{c0}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{c0}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf mdp\_\-postscript::c0}}}
+\label{classmdp__postscript_a3160a1940a9fa4e99a0b138bc88769e9}
+\hypertarget{classmdp__postscript_a92dc6ce50f362fe93a1981b9a126073a}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!c1@{c1}}
+\index{c1@{c1}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{c1}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf mdp\_\-postscript::c1}}}
+\label{classmdp__postscript_a92dc6ce50f362fe93a1981b9a126073a}
+\hypertarget{classmdp__postscript_a26f42cf1f154707c463ecdd3f19f568f}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!c2@{c2}}
+\index{c2@{c2}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{c2}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf mdp\_\-postscript::c2}}}
+\label{classmdp__postscript_a26f42cf1f154707c463ecdd3f19f568f}
+\hypertarget{classmdp__postscript_a0d313085dea47b974fdd18ecb26622f1}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!fp@{fp}}
+\index{fp@{fp}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{fp}]{\setlength{\rightskip}{0pt plus 5cm}FILE$\ast$ {\bf mdp\_\-postscript::fp}}}
+\label{classmdp__postscript_a0d313085dea47b974fdd18ecb26622f1}
+\hypertarget{classmdp__postscript_ae0bd063ba78d27ad7ce541e78f512d3a}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!scale@{scale}}
+\index{scale@{scale}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf mdp\_\-postscript::scale}}}
+\label{classmdp__postscript_ae0bd063ba78d27ad7ce541e78f512d3a}
+\hypertarget{classmdp__postscript_a535f3c0036f5d89c139b003c0e909eed}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!X0@{X0}}
+\index{X0@{X0}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{X0}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf mdp\_\-postscript::X0}}}
+\label{classmdp__postscript_a535f3c0036f5d89c139b003c0e909eed}
+\hypertarget{classmdp__postscript_a71402d65d648f4c878dfe5eb74679efa}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!X1@{X1}}
+\index{X1@{X1}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{X1}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf mdp\_\-postscript::X1}}}
+\label{classmdp__postscript_a71402d65d648f4c878dfe5eb74679efa}
+\hypertarget{classmdp__postscript_acce7497a1e20c1c98708b95041faa274}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!Y0@{Y0}}
+\index{Y0@{Y0}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{Y0}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf mdp\_\-postscript::Y0}}}
+\label{classmdp__postscript_acce7497a1e20c1c98708b95041faa274}
+\hypertarget{classmdp__postscript_a812d1985306950bed3a2d858e8236b5b}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!Y1@{Y1}}
+\index{Y1@{Y1}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{Y1}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf mdp\_\-postscript::Y1}}}
+\label{classmdp__postscript_a812d1985306950bed3a2d858e8236b5b}
+\hypertarget{classmdp__postscript_a5c27b031c6f79593b476dfa6a69e146f}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!Z0@{Z0}}
+\index{Z0@{Z0}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{Z0}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf mdp\_\-postscript::Z0}}}
+\label{classmdp__postscript_a5c27b031c6f79593b476dfa6a69e146f}
+\hypertarget{classmdp__postscript_ac512287091dcecae1a549d005083554f}{
+\index{mdp\_\-postscript@{mdp\_\-postscript}!Z1@{Z1}}
+\index{Z1@{Z1}!mdp_postscript@{mdp\_\-postscript}}
+\subsubsection[{Z1}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf mdp\_\-postscript::Z1}}}
+\label{classmdp__postscript_ac512287091dcecae1a549d005083554f}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/mdipierro/fermiqcd/development/Libraries/\hyperlink{mdp__postscript_8h}{mdp\_\-postscript.h}\end{DoxyCompactItemize}
