@@ -315,9 +315,9 @@ class ILDGPropField:
         oheader_format='<60s60s60sLi10iii'
         if self.precision=='f': site_size=1152
         else: site_size=2304
-        spinor_format=self.precision*(12*2) # 2 for complex
-        spinor_format_out='<'+self.precision_target*(12*2) # 2 for complex
-        if self.precision=='f': spinor_size=12*8
+        spinor_format=self.precision*(16*9*2) # 2 for complex
+        spinor_format_out='<'+self.precision_target*(16*9*2) # 2 for complex
+        if self.precision=='f': spinor_size=16*9*8
         else: spinor_size=12*16
         nx=self.lattice_size[X]
         ny=self.lattice_size[Y]
@@ -336,9 +336,9 @@ class ILDGPropField:
         site=[0,0,0,0]        
         ifile.seek(offset)
         for p0 in range(n0):
-            ofile=open(filename[-4:]+'t%.4i.mdp' % p0,'wb')
+            ofile=open(filename[:-4]+'t%.4i.mdp' % p0,'wb')
             ofile.write(oheader)        
-            print 'timeslice',p0,'...'
+            print 'prop timeslice',p0,'...'
             for p1 in range(n1):
                 for p2 in range(n2):
                     for p3 in range(n3):
@@ -553,13 +553,13 @@ def universal_converter(path, formats):
     for file in files:
         print 'trying to convert '+file
         for format in formats:
-            try:
+            #try:
                 ofile=file+'.mdp'
                 format(open(file,'rb')).convert(ofile)
                 done=True
                 break
-            except Exception, e:
-                print e
+            #except Exception, e:
+            #    print e
         if not done:
             print 'ERROR... skipping!'
     if not done: raise RuntimeError, "failure to convert "+file
@@ -580,7 +580,7 @@ def main():
     parser.add_option("-f", "--format", dest="format", default="ALL",
                       help="any of the supported formats (%s)" % ','.join(f[0] for f in formats))
     (options, args) = parser.parse_args()
-    fomats = [f[1] for f in formats if options.format in ('ALL',f[0])]
-    universal_converter(args[0],formats)
+    myformats = [f[1] for f in formats if options.format in ('ALL',f[0])]
+    universal_converter(args[0],myformats)
 
 if __name__=='__main__': main()
