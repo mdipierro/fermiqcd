@@ -267,92 +267,6 @@ class ILDGField:
         print 'done'
 
 
-class ILDGPropField:
-    site_order=[T,Z,Y,X]
-    link_order=[X,Y,Z,T]
-    def __init__(self,file):
-        # should check for total file size
-        self.ifile=file
-        self.lattice_size=[0,0,0,0]
-        self.precision='f'
-        self.precision_target='f'
-        self.endianess='>'
-        self.offset=None
-    def get_header(self):
-        ifile=self.ifile
-        offset=0
-        while True:
-            header=ifile.read(144)
-            if not len(header)==144: break
-            lime_head=struct.unpack('!2i1q128s',header)
-            if not lime_head[0]==1164413355: raise SyntaxError
-            data=lime_head[2]
-            print 'Lime block:',data,lime_head[3]
-            padding=(8 - (data % 8)) % 8
-            if lime_head[3][:16]=='ildg-binary-data': self.offset=144+offset
-            if lime_head[3][:11]=='ildg-format':
-                 regex=re.compile('\<lx\>(?P<lx>\d+)\</lx\>\<ly\>(?P<ly>\d+)\</ly\>\<lz\>(?P<lz>\d+)\</lz\>\<lt\>(?P<lt>\d+)\</lt\>')
-                 ell=regex.search(ifile.read(data))
-                 self.lattice_size=[int(ell.group('lt')),int(ell.group('lx')),int(ell.group('ly')),int(ell.group('lz'))]
-                 print 'Lattice size from header:',self.lattice_size
-            if lime_head[3][:18]=='scidac-binary-data': self.offset=144+offset
-            if lime_head[3][:23]=='scidac-private-file-xml':
-                 regex=re.compile('\<dims\>\D*(?P<dims>\d+.*\d+)\D*\</dims\>')
-                 ell=regex.search(ifile.read(data))
-                 tt=re.split('\D+',ell.group('dims'))
-                 self.lattice_size=map(int,[tt[-1]]+tt[0:-1])
-                 print 'Lattice size from header:',self.lattice_size
-            offset+=144+data+padding
-            ifile.seek(offset)
-        return None
-    def detect(self):
-        try: self.get_header()
-        except: return false
-        else: return True
-    def convert(self,filename):
-        self.get_header()
-        ifile=self.ifile
-        oheader_format='<60s60s60sLi10iii'
-        if self.precision=='f': site_size=1152
-        else: site_size=2304
-        spinor_format=self.precision*(16*9*2) # 2 for complex
-        spinor_format_out='<'+self.precision_target*(16*9*2) # 2 for complex
-        if self.precision=='f': spinor_size=16*9*8
-        else: spinor_size=12*16
-        nx=self.lattice_size[X]
-        ny=self.lattice_size[Y]
-        nz=self.lattice_size[Z]
-        nt=self.lattice_size[T]
-        n0=self.lattice_size[self.site_order[0]] #T
-        n1=self.lattice_size[self.site_order[1]] #Z
-        n2=self.lattice_size[self.site_order[2]] #Y
-        n3=self.lattice_size[self.site_order[3]] #X
-        oheader=struct.pack(oheader_format,'File Type: MDP FIELD',
-                            filename,datetime.datetime.now().isoformat(),
-                            1325884739,4,1,nx,ny,nz,0,0,0,0,0,0,
-                            spinor_size,1*nx*ny*nz)
-        ooffset=struct.calcsize(oheader_format)
-        offset=self.offset
-        site=[0,0,0,0]        
-        ifile.seek(offset)
-        for p0 in range(n0):
-            ofile=open(filename[:-4]+'t%.4i.mdp' % p0,'wb')
-            ofile.write(oheader)        
-            print 'prop timeslice',p0,'...'
-            for p1 in range(n1):
-                for p2 in range(n2):
-                    for p3 in range(n3):
-                        p=[0,0,0,0]
-                        p[self.site_order[0]]=p0 #T
-                        p[self.site_order[1]]=p1 #Z
-                        p[self.site_order[2]]=p2 #Y
-                        p[self.site_order[3]]=p3 #X
-                        data=struct.unpack(self.endianess+spinor_format,
-                                           ifile.read(spinor_size))
-                        ofile.seek(ooffset+spinor_size*(p[Z]+nz*(p[Y]+ny*(p[X]))))
-                        ofile.write(struct.pack(spinor_format_out,*data))
-        print 'done'
-
 
 class Nersc3x3Field:
     site_order=[T,Z,Y,X]
@@ -564,6 +478,181 @@ def universal_converter(path, formats):
             print 'ERROR... skipping!'
     if not done: raise RuntimeError, "failure to convert "+file
 
+class ILDGPropField:
+    site_order=[T,Z,Y,X]
+    link_order=[X,Y,Z,T]
+    def __init__(self,file):
+        # should check for total file size
+        self.ifile=file
+        self.lattice_size=[0,0,0,0]
+        self.precision='f'
+        self.precision_target='f'
+        self.endianess='>'
+        self.offset=None
+    def get_header(self):
+        ifile=self.ifile
+        offset=0
+        while True:
+            header=ifile.read(144)
+            if not len(header)==144: break
+            lime_head=struct.unpack('!2i1q128s',header)
+            if not lime_head[0]==1164413355: raise SyntaxError
+            data=lime_head[2]
+            print 'Lime block:',data,lime_head[3]
+            padding=(8 - (data % 8)) % 8
+            if lime_head[3][:16]=='ildg-binary-data': self.offset=144+offset
+            if lime_head[3][:11]=='ildg-format':
+                 regex=re.compile('\<lx\>(?P<lx>\d+)\</lx\>\<ly\>(?P<ly>\d+)\</ly\>\<lz\>(?P<lz>\d+)\</lz\>\<lt\>(?P<lt>\d+)\</lt\>')
+                 ell=regex.search(ifile.read(data))
+                 self.lattice_size=[int(ell.group('lt')),int(ell.group('lx')),int(ell.group('ly')),int(ell.group('lz'))]
+                 print 'Lattice size from header:',self.lattice_size
+            if lime_head[3][:18]=='scidac-binary-data': self.offset=144+offset
+            if lime_head[3][:23]=='scidac-private-file-xml':
+                 regex=re.compile('\<dims\>\D*(?P<dims>\d+.*\d+)\D*\</dims\>')
+                 ell=regex.search(ifile.read(data))
+                 tt=re.split('\D+',ell.group('dims'))
+                 self.lattice_size=map(int,[tt[-1]]+tt[0:-1])
+                 print 'Lattice size from header:',self.lattice_size
+            offset+=144+data+padding
+            ifile.seek(offset)
+        return None
+    def detect(self):
+        try: self.get_header()
+        except: return false
+        else: return True
+    def convert(self,filename):
+        self.get_header()
+        ifile=self.ifile
+        oheader_format='<60s60s60sLi10iii'
+        if self.precision=='f': site_size=1152
+        else: site_size=2304
+        spinor_format=self.precision*(16*9*2) # 2 for complex
+        spinor_format_out='<'+self.precision_target*(16*9*2) # 2 for complex
+        if self.precision=='f': spinor_size=16*9*8
+        else: spinor_size=12*16
+        nx=self.lattice_size[X]
+        ny=self.lattice_size[Y]
+        nz=self.lattice_size[Z]
+        nt=self.lattice_size[T]
+        n0=self.lattice_size[self.site_order[0]] #T
+        n1=self.lattice_size[self.site_order[1]] #Z
+        n2=self.lattice_size[self.site_order[2]] #Y
+        n3=self.lattice_size[self.site_order[3]] #X
+        oheader=struct.pack(oheader_format,'File Type: MDP FIELD',
+                            filename,datetime.datetime.now().isoformat(),
+                            1325884739,4,nt,nx,ny,nz,0,0,0,0,0,0,
+                            spinor_size,nt*nx*ny*nz)
+        ooffset=struct.calcsize(oheader_format)
+        offset=self.offset
+        site=[0,0,0,0]        
+        ifile.seek(offset)
+        ofile=open(filename,'wb')
+        ofile.write(oheader)        
+        for p0 in range(n0):
+            print 'prop timeslice',p0,'...'
+            for p1 in range(n1):
+                for p2 in range(n2):
+                    for p3 in range(n3):
+                        p=[0,0,0,0]
+                        p[self.site_order[0]]=p0 #T
+                        p[self.site_order[1]]=p1 #Z
+                        p[self.site_order[2]]=p2 #Y
+                        p[self.site_order[3]]=p3 #X
+                        data=struct.unpack(self.endianess+spinor_format,
+                                           ifile.read(spinor_size))
+                        ofile.seek(ooffset+spinor_size*(p[0]+nt*(p[Z]+nz*(p[Y]+ny*(p[X])))))
+                        ofile.write(struct.pack(spinor_format_out,*data))
+        print 'done'
+
+
+class ILDGPropFieldSplit:
+    site_order=[T,Z,Y,X]
+    link_order=[X,Y,Z,T]
+    def __init__(self,file):
+        # should check for total file size
+        self.ifile=file
+        self.lattice_size=[0,0,0,0]
+        self.precision='f'
+        self.precision_target='f'
+        self.endianess='>'
+        self.offset=None
+    def get_header(self):
+        ifile=self.ifile
+        offset=0
+        while True:
+            header=ifile.read(144)
+            if not len(header)==144: break
+            lime_head=struct.unpack('!2i1q128s',header)
+            if not lime_head[0]==1164413355: raise SyntaxError
+            data=lime_head[2]
+            print 'Lime block:',data,lime_head[3]
+            padding=(8 - (data % 8)) % 8
+            if lime_head[3][:16]=='ildg-binary-data': self.offset=144+offset
+            if lime_head[3][:11]=='ildg-format':
+                 regex=re.compile('\<lx\>(?P<lx>\d+)\</lx\>\<ly\>(?P<ly>\d+)\</ly\>\<lz\>(?P<lz>\d+)\</lz\>\<lt\>(?P<lt>\d+)\</lt\>')
+                 ell=regex.search(ifile.read(data))
+                 self.lattice_size=[int(ell.group('lt')),int(ell.group('lx')),int(ell.group('ly')),int(ell.group('lz'))]
+                 print 'Lattice size from header:',self.lattice_size
+            if lime_head[3][:18]=='scidac-binary-data': self.offset=144+offset
+            if lime_head[3][:23]=='scidac-private-file-xml':
+                 regex=re.compile('\<dims\>\D*(?P<dims>\d+.*\d+)\D*\</dims\>')
+                 ell=regex.search(ifile.read(data))
+                 tt=re.split('\D+',ell.group('dims'))
+                 self.lattice_size=map(int,[tt[-1]]+tt[0:-1])
+                 print 'Lattice size from header:',self.lattice_size
+            offset+=144+data+padding
+            ifile.seek(offset)
+        return None
+    def detect(self):
+        try: self.get_header()
+        except: return false
+        else: return True
+    def convert(self,filename):
+        self.get_header()
+        ifile=self.ifile
+        oheader_format='<60s60s60sLi10iii'
+        if self.precision=='f': site_size=1152
+        else: site_size=2304
+        spinor_format=self.precision*(16*9*2) # 2 for complex
+        spinor_format_out='<'+self.precision_target*(16*9*2) # 2 for complex
+        if self.precision=='f': spinor_size=16*9*8
+        else: spinor_size=12*16
+        nx=self.lattice_size[X]
+        ny=self.lattice_size[Y]
+        nz=self.lattice_size[Z]
+        nt=self.lattice_size[T]
+        n0=self.lattice_size[self.site_order[0]] #T
+        n1=self.lattice_size[self.site_order[1]] #Z
+        n2=self.lattice_size[self.site_order[2]] #Y
+        n3=self.lattice_size[self.site_order[3]] #X
+        oheader=struct.pack(oheader_format,'File Type: MDP FIELD',
+                            filename,datetime.datetime.now().isoformat(),
+                            1325884739,4,1,nx,ny,nz,0,0,0,0,0,0,
+                            spinor_size,1*nx*ny*nz)
+        ooffset=struct.calcsize(oheader_format)
+        offset=self.offset
+        site=[0,0,0,0]        
+        ifile.seek(offset)
+        for p0 in range(n0):
+            ofile=open(filename[:-4]+'t%.4i.mdp' % p0,'wb')
+            ofile.write(oheader)        
+            print 'prop timeslice',p0,'...'
+            for p1 in range(n1):
+                for p2 in range(n2):
+                    for p3 in range(n3):
+                        p=[0,0,0,0]
+                        p[self.site_order[0]]=p0 #T
+                        p[self.site_order[1]]=p1 #Z
+                        p[self.site_order[2]]=p2 #Y
+                        p[self.site_order[3]]=p3 #X
+                        data=struct.unpack(self.endianess+spinor_format,
+                                           ifile.read(spinor_size))
+                        ofile.seek(ooffset+spinor_size*(p[Z]+nz*(p[Y]+ny*(p[X]))))
+                        ofile.write(struct.pack(spinor_format_out,*data))
+        print 'done'
+
+
+
 formats = (
     ('gauge-milc',MilcField),
     ('gauge-qio',MilcField),
@@ -572,6 +661,7 @@ formats = (
     ('gauge-nersc3x3',Nersc3x3Field),
     ('gauge-nersc3x2',Nersc3x2Field),
     ('prop-ildg',ILDGPropField),
+    ('prop-ildg-split',ILDGPropFieldSplit),
     )
 
 def main():
