@@ -10,6 +10,7 @@
 /// Created with support from the US Department of Energy
 //////////////////////////////////////////////////////////////////
 
+#define FERMIQCD 1
 #include "mdp.h"
 
 #include "fermiqcd_su_generators.h"

@@ -19,23 +19,23 @@ const int _NprocMax_=256;
 double PRECISION=3.0e-6;
 
 /// Each program should have a name
-char                 *mdp_program_name = "A generic test program";
+char *mdp_program_name = (char*) "A generic test program";
 
 /// Filename to store the random seed
-char                 *mdp_random_seed_filename=0;
+char *mdp_random_seed_filename=0;
 
 /// Used to determine the local endianess of this machine
 const unsigned int  mdp_local_endianess=0x87654321;
 
-const double         Pi = 3.1415926535897932384626433832795028841971;
+const double Pi = 3.1415926535897932384626433832795028841971;
 
 /// Set mdp_shutup=true to suppress default output from any part of
 /// The program
-bool                 mdp_shutup  = false;
+bool mdp_shutup  = false;
 
 /// Default precision used by iterative algorithms such as 
 /// mdp_matrix::sin(), mdp_matrix::cos() and mdp_matrix::exp()
-double               mdp_precision=1e-5;
+double mdp_precision=1e-5;
 
 
 #if defined(USE_DOUBLE_PRECISION) 

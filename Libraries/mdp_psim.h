@@ -12,18 +12,23 @@
 
 #include "cstdio"
 #include "cstdlib"
+#include "cmath"
+#include "cstring"
 #include "string"
 #include "iostream"
 #include "string"
 #include "vector"
 #include "map"
-#include <sys/file.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/socket.h>
 #include <sys/errno.h>
 #include <fcntl.h>
 using namespace std;
+
+#ifndef FERMIQCD
+typedef int mdp_int; // this in case this lib is used without fermiqcd
+#endif
 
 /// @brief Parallel SIMulator used by class mdp_communicator
 ///
@@ -353,7 +358,7 @@ private:
 
   void send_buffer(int destProcessID, 
 		   const void* pdataToSend, mdp_int dataSize) {
-    static long counter=0;
+    static int counter=0;
     char filename[512];
     counter++;
     int destIndex = get_dest_index(destProcessID);
@@ -481,8 +486,8 @@ private:
     char buffer[256];
     char* be;
     
-    if (begEnd == LOG_BEGIN) be = "BEGIN";
-    else  be = "END";
+    if (begEnd == LOG_BEGIN) be = (char*)"BEGIN";
+    else  be = (char*)"END";
     
     sprintf(buffer, "%i %s [%s]", _processID, be, method.c_str());
     log(buffer);
