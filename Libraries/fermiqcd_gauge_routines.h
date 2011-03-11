@@ -62,6 +62,23 @@ inline mdp_matrix staple_H(gauge_field &U, register site x, int mu) {
   }
   return tmp;
 }
+inline mdp_matrix staple_H_unisotropic(gauge_field &U, register site x, int mu, mdp_real zeta) {
+  mdp_matrix tmp(U.nc,U.nc);
+  site y(U.lattice());
+  int nu;
+  tmp=0;
+  for(nu=0; nu<U.ndim; nu++) if(nu!=mu) {
+      if(nu*mu==0) {
+	param = zeta;
+      } else {
+	param = 1.0/zeta;
+      }
+      tmp+=param*U(x+mu,nu)*hermitian(U(x+nu,mu))*hermitian(U(x,nu));
+      y=x-nu;
+      tmp+=param*hermitian(U(y+mu,nu))*hermitian(U(y,mu))*U(y,nu);
+    }
+  return tmp;
+}
 
 inline mdp_matrix staple_0i_H(gauge_field &U, register site x, int mu) {
   mdp_matrix tmp(U.nc,U.nc);
