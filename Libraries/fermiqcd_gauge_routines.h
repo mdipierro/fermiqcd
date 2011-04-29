@@ -66,6 +66,7 @@ inline mdp_matrix staple_H_unisotropic(gauge_field &U, register site x, int mu, 
   mdp_matrix tmp(U.nc,U.nc);
   site y(U.lattice());
   int nu;
+  mdp_real param;
   tmp=0;
   for(nu=0; nu<U.ndim; nu++) if(nu!=mu) {
       if(nu*mu==0) {
@@ -420,4 +421,5 @@ inline mdp_matrix plaquette(gauge_field &U, site x, int mu, int nu) {
   return tmp;
 }
 */
+
 

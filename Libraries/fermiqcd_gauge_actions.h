@@ -132,7 +132,7 @@ class WilsonGaugeAction {
 	    for(i=0; i<U.nc-1; i++)
 	      for(j=i+1; j<U.nc; j++) {
 		if(zeta==1)    M=U(x,mu)*staple_H(U,x,mu);
-		else           M=U(x,0)*staple_H_unisotropic(U,x,0,zeta);
+		else           M=U(x,mu)*staple_H_unisotropic(U,x,mu,zeta);
 		a[0]=M(i,i); 
 		a[1]=M(i,j);
 		a[2]=M(j,i);
@@ -446,4 +446,5 @@ class ImprovedGaugeAction : public WilsonGaugeAction {
     return stats;
   }
 };
+
 
