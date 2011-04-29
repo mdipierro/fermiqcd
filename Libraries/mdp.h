@@ -23,6 +23,7 @@
 #include <ctime>
 #include <cassert>
 #include <typeinfo>
+#include <stdint.h>
 #ifndef OSX
 #include <malloc.h>
 #endif
