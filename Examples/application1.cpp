@@ -12,13 +12,11 @@ int main(int argc, char **argv) {
   mdp_site x(vacuum);
   mdp_site A(vacuum);
   mdp_site B(vacuum);
-  A.set(3,3,3);
-  B.set(17,17,17);
   float precision, old_u;
   forallsitesandcopies(x) { 
     u(x)=0;
-    if(x==A)      q(x)=3;
-    else if(x==B) q(x)=-5;
+    if(x(0)==3 && x(1)==3 && x(2)==3) q(x)=3;
+    else if(x(0)==17 && x(1)==17 && x(2)==17) q(x)=3;
     else          q(x)=0;
   }
   do {
