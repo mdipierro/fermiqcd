@@ -467,13 +467,13 @@ def universal_converter(path, formats):
     for file in files:
         print 'trying to convert '+file
         for format in formats:
-            #try:
+            try:
                 ofile=file+'.mdp'
                 format(open(file,'rb')).convert(ofile)
                 done=True
                 break
-            #except Exception, e:
-            #    print e
+            except Exception, e:
+                print e
         if not done:
             print 'ERROR... skipping!'
     if not done: raise RuntimeError, "failure to convert "+file
