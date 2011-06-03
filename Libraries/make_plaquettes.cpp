@@ -3,8 +3,12 @@
 int main(int argc, char** argv) {
   mdp.open_wormholes(argc,argv);    
   int nc=3;
-  int nt,nx;
-  sscanf(argv[1],"%ix%i",&nt,&nx);
+  mdp_field_file_header header = get_info(argv[1]);
+  assert(header.ndim==4);
+  assert(header.box[2]==header.box[1]);
+  assert(header.box[3]==header.box[1]);
+  int nt = header.box[0];
+  int nx = header.box[1];
   int box[]={nt,nx,nx,nx};
   mdp_lattice lattice(4,box,default_partitioning0,torus_topology,0,2,false);
   gauge_field U(lattice,nc);
