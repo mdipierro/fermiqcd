@@ -33,6 +33,13 @@ MAXBYTES = 1000  # max number of bytes for buffered reading
 PRECISION = {'f':32,'d':64}
 (X,Y,Z,T) = (1,2,3,0) # the MDP index convetion, used intenrnally
 
+verbose = True
+
+def notify(*a):
+    global verbose
+    if verbose:
+        print ' '.join(str(x) for x in a)
+
 ##### class Lime #############################################################
 
 class Lime(object):
@@ -128,7 +135,7 @@ class Lime(object):
         return [name for (name,position,size) in self.records]
 
 def test_lime():
-    print 'making a dummy LIME file and writing junk in it...'
+    notify('making a dummy LIME file and writing junk in it...')
     lime = Lime('check.lime','w')
     lime.write('record1','01234567')
     lime.write('record2','012345678')
@@ -136,14 +143,14 @@ def test_lime():
     lime.write('record3',file,10) # write file content as record
     lime.close()
 
-    print 'reading the file back...'
+    notify('reading the file back...')
     lime = Lime('check.lime','r')
-    print 'file contans %s records' % len(lime)
-    print 'they have names: %s' % lime.keys()
+    notify('file contans %s records' % len(lime))
+    notify('they have names: %s' % lime.keys())
 
     for name,reader,size in lime:
-        print 'record name: %s\nrecord size: %s\nrecord data:' % (name, size),
-        print reader.read(size)
+        notify('record name: %s\nrecord size: %s\nrecord data:' % (name, size))
+        notify(reader.read(size))
     lime.close()
 
 class ILDGTest(object):
@@ -197,6 +204,9 @@ def unpack(data,endianess,precision):
     else:
         raise RuntimeError, "incorrect precision"
     items = struct.unpack(endianess+str(n)+precision,data)
+    errors = [x for x in items if x<-1 or x>+1]
+    if errors:
+        raise RuntimeError, "matrix is not unitary"
     return items
 
 def pack(items,endianess,precision):
@@ -251,7 +261,7 @@ class GaugeMDP(QCDFormat):
         header = self.file.read(self.header_size)
         items = struct.unpack(self.header_format,header)
         if items[3]!=1325884739:
-            print 'warning, this does not appear a MDP file, but could be wrong'
+            notify('warning, this does not appear a MDP file, but could be wrong')
         nt,nx,ny,nz = items[5:9]
         self.site_size = items[15]
         if self.site_size == self.base_size*4:
@@ -288,14 +298,14 @@ class GaugeMDP(QCDFormat):
         (precision,nt,nx,ny,nz) = other.read_header()
         self.write_header(target_precision or precision,nt,nx,ny,nz)
         for t in xrange(self.size[T]):
-            print '    timeslice %s' % t
+            notify('    timeslice %s' % t)
             for x in xrange(self.size[X]):
                 for y in xrange(self.size[Y]):
                     for z in xrange(self.size[Z]):
                         data = other.read_data(t,x,y,z,target_precision,
                                                self.link_order)
                         self.write_data(data)
-        print '    done!'
+        notify('    done!')
 
 class PropagatorMDP(QCDFormat):
     site_order = [T,X,Y,Z]
@@ -312,10 +322,8 @@ class PropagatorMDP(QCDFormat):
         header = self.file.read(self.header_size)
         items = struct.unpack(self.header_format,header)
         if items[3]!='1325884739':
-            print 'warning, this does not appear a MDP file, but could be wrong'
-        for i,item in enumerate(items): print i,item
+            notify('warning, this does not appear a MDP file, but could be wrong')
         nt,nx,ny,nz = items[5:9]
-        print nt,nx,ny,nz
         self.site_size = items[15]
         if self.site_size == self.base_size*4:
             self.precision = 'f'
@@ -384,7 +392,7 @@ class PropagatorMDPSplit(QCDFormat):
     def convert_from(self,other,target_precision=None):        
         (precision,nt,nx,ny,nz) = other.read_header()
         for t in xrange(self.size[T]):
-            print '    timeslice %s' % t
+            notify('    timeslice %s' % t)
             slice = PropagatorMDP(self.filename.replace('.mdp','.%s.mdp' % t))
             slice.write_header(target_precision or precision,1,nx,ny,nz)
             for x in xrange(self.size[X]):
@@ -393,7 +401,7 @@ class PropagatorMDPSplit(QCDFormat):
                         data = other.read_data(t,x,y,z,target_precision)
                         slice.write_data(data)
             slice.close()
-        print '    done!'
+        notify('    done!')
 
 
 
@@ -466,7 +474,7 @@ class GaugeILDG(QCDFormat):
         self.write_header(target_precision or precision,nt,nx,ny,nz)
         def reader():
             for t in xrange(self.size[T]):
-                print '    timeslice %s' % t
+                notify('    timeslice %s' % t)
                 for z in xrange(self.size[Z]):            
                     for y in xrange(self.size[Y]):
                         for x in xrange(self.size[X]):
@@ -476,7 +484,7 @@ class GaugeILDG(QCDFormat):
         self.lime.write('ildg-binary-data',reader(),nt*nx*ny*nz*self.site_size)
         self.lime.write('ildg-data-LFN',self.lfn)
         self.lime.close()
-        print '    done!'
+        notify('    done!')
 
 
 class PropagatorILDG(GaugeILDG):
@@ -598,7 +606,7 @@ def universal_converter(path,target):
             except Exception, e:
                 messages.append('unable to convert (%s)' % e)
         if not filename in processed:
-            print '\n'.join(messages)
+            notify('\n'.join(messages))
             sys.exit(1)
 
 ##### BEGIN PROGRESSBAR ######
@@ -917,7 +925,7 @@ def get_list(url):
         return None
 
 def download(files,target_folder,options):
-    print 'total files to download: %s' % len(files)
+    notify('total files to download: %s' % len(files))
     for k,f in enumerate(files):
         path = f['filename']
         basename = os.path.basename(path)
@@ -928,15 +936,15 @@ def download(files,target_folder,options):
             widgets = [basename, Percentage(), ' ', Bar(marker='>'),' ',
                        ETA(), ' ', FileTransferSpeed()]
             while not input:
-                print 'downloading %s' % basename
+                notify('downloading %s' % basename)
                 try:
                     input = urllib.urlopen(f['link'])
                 except IOError:
-                    print 'failure to download %s' % f['link']
+                    notify('failure to download %s' % f['link'])
                     sys.exit(1)
                 length = int(input.info().get('Content-Length',f['size']))
                 if not input:
-                    print 'unable to retrieve %s retrying in 5 minutes' % basename
+                    notify('unable to retrieve %s retrying in 5 minutes' % basename)
                     time.sleep(5*60)
             if not options.quiet:
                 pbar = ProgressBar(widgets=widgets, maxval=length).start()
@@ -951,9 +959,9 @@ def download(files,target_folder,options):
             input.close()
             output.close()
             if not options.quiet: pbar.finish()
-            print 'completed downloads: %s/%s' % (k,len(files))
+            notify('completed downloads: %s/%s' % (k,len(files)))
         else:
-            print 'skipping file %s (already present)' % basename
+            notify('skipping file %s (already present)' % basename)
 
 def main():
     usage = "usage: %prog [...] source"
@@ -983,19 +991,19 @@ def main():
     try:
         options.source = args[0]
     except IndexError:
-        print 'no input specified'
+        notify('no input specified')
         sys.exit(1)
 
     if options.source.split('://')[0].lower() in ('http','https'):
         files = get_list(options.source)
         if files==None:
-            print 'unable to connect'
+            notify('unable to connect')
             sys.exit(0)
         else:
             regex=re.compile('pattern\=(?P<pattern>[^\&]*)')
             pattern = regex.search(options.source).group('pattern')
             target_folder = options.destination or urllib.unquote(pattern)
-            print 'target folder:',target_folder
+            notify('target folder:',target_folder)
             if not os.path.exists(target_folder):
                 os.mkdir(target_folder)
             download(files,target_folder,options)
@@ -1004,29 +1012,35 @@ def main():
         conversion_path = options.source
 
     if options.format:
-        print 'converting: %s -> %s.%s' % (conversion_path, 
-                                          conversion_path, options.format)
+        notify('converting: %s -> %s.%s' % (conversion_path, 
+                                          conversion_path, options.format))
         universal_converter(conversion_path,options.format)
 
 def test_ildg():
-    print 'running tests'   
-    binary_data = cStringIO.StringIO('\0'*4*4*4*8*4*9*2*4)
-    ILDGTest('test.zzz.1.ildg',binary_data,nx=4,ny=4,nz=4,nt=8,lfn='unkown')
-    GaugeMDP('test.zzz.1.mdp').convert_from(GaugeILDG('test.zzz.1.ildg'))
-    GaugeILDG('test.zzz.2.ildg').convert_from(GaugeMDP('test.zzz.1.mdp'))
-    GaugeMDP('test.zzz.2.mdp').convert_from(GaugeILDG('test.zzz.2.ildg'))
-    GaugeMDP('test.zzz.3.mdp').convert_from(GaugeMDP('test.zzz.2.mdp'))
-    GaugeILDG('test.zzz.3.ildg').convert_from(GaugeILDG('test.zzz.2.ildg'))
-    assert open('test.zzz.1.mdp','rb').read()==open('test.zzz.2.mdp','rb').read()
-    assert open('test.zzz.1.mdp','rb').read()==open('test.zzz.3.mdp','rb').read()
-    assert open('test.zzz.1.ildg','rb').read()==open('test.zzz.2.ildg','rb').read()
-    assert open('test.zzz.1.ildg','rb').read()==open('test.zzz.3.ildg','rb').read()
-    GaugeMDP('test.zzz.4.mdp').convert_from(GaugeNERSC('demo.nersc'))
-    GaugeILDG('test.zzz.4.ildg').convert_from(GaugeNERSC('demo.nersc'))
-    GaugeMDP('test.zzz.5.mdp').convert_from(GaugeILDG('test.zzz.4.ildg'))
-    assert open('test.zzz.4.mdp','rb').read()==open('test.zzz.5.mdp','rb').read()    
-    os.system('rm test.zzz.?.*')
-    print 'tests passed'
+    global verbose
+    try:
+        verbose = False
+        binary_data = cStringIO.StringIO('\0'*4*4*4*8*4*9*2*4)
+        ILDGTest('test.zzz.1.ildg',binary_data,nx=4,ny=4,nz=4,nt=8,lfn='unkown')
+        GaugeMDP('test.zzz.1.mdp').convert_from(GaugeILDG('test.zzz.1.ildg'))
+        GaugeILDG('test.zzz.2.ildg').convert_from(GaugeMDP('test.zzz.1.mdp'))
+        GaugeMDP('test.zzz.2.mdp').convert_from(GaugeILDG('test.zzz.2.ildg'))
+        GaugeMDP('test.zzz.3.mdp').convert_from(GaugeMDP('test.zzz.2.mdp'))
+        GaugeILDG('test.zzz.3.ildg').convert_from(GaugeILDG('test.zzz.2.ildg'))
+        assert open('test.zzz.1.mdp','rb').read()==open('test.zzz.2.mdp','rb').read()
+        assert open('test.zzz.1.mdp','rb').read()==open('test.zzz.3.mdp','rb').read()
+        assert open('test.zzz.1.ildg','rb').read()==open('test.zzz.2.ildg','rb').read()
+        assert open('test.zzz.1.ildg','rb').read()==open('test.zzz.3.ildg','rb').read()
+        GaugeMDP('test.zzz.4.mdp').convert_from(GaugeNERSC('demo.nersc'))
+        GaugeILDG('test.zzz.4.ildg').convert_from(GaugeNERSC('demo.nersc'))
+        GaugeMDP('test.zzz.5.mdp').convert_from(GaugeILDG('test.zzz.4.ildg'))
+        assert open('test.zzz.4.mdp','rb').read()==open('test.zzz.5.mdp','rb').read()
+    except:
+        verbose = True
+        notify('tests failed')
+    finally:          
+        verbose = True
+        os.system('rm test.zzz.?.*')
     
 test_ildg()
 
