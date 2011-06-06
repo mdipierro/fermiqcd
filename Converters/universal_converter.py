@@ -673,4 +673,6 @@ def main():
     myformats = [f[1] for f in formats if options.format in ('ALL',f[0])]
     universal_converter(args[0],myformats)
 
-if __name__=='__main__': main()
+if __name__=='__main__':
+    print 'ATTENTION! This file is deprectade, you should use fermiqcd/Tools/qcdfetch.py'
+    main()

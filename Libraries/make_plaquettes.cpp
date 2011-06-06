@@ -12,7 +12,7 @@ int main(int argc, char** argv) {
   int box[]={nt,nx,nx,nx};
   mdp_lattice lattice(4,box,default_partitioning0,torus_topology,0,2,false);
   gauge_field U(lattice,nc);
-  U.load(argv[2]);
+  U.load(argv[1]);
   mdp_site x(lattice);
   x.set(0,0,0,0);
   cout << U(x,0) << endl;
