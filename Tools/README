@@ -1,8 +1,0 @@
-bugs
-
-mixed protocols
-
-\0 should be in cluded in string
-
-'<?xml version="1.0" encoding="UTF-8"?><ildgFormat xmlns="http://www.lqcd.org/ildg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.lqcd.org/ildg/filefmt.xsd"><version>1.0</version><field>su3gauge</field><precision>32</precision><lx>4</lx><ly>4</ly><lz>4</lz><lt>4</lt></ildgFormat>\x00'
-
