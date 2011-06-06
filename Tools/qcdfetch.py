@@ -1140,6 +1140,9 @@ def download(files,target_folder,options):
         else:
             notify('skipping file %s (already present)' % basename)
 
+def ftp_download(source,target_folder,username,password):
+    raise NotImplementedError   
+
 def test_conversions():
     try:
         passed = False        
