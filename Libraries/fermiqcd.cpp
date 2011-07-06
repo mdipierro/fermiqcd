@@ -53,17 +53,69 @@ float topcharge_vtk(gauge_field& U, string filename) {
 
 void usage() {
   mdp << 
-    "fermiqcd.exe -cold:nt=16:nx=4\n"
-    "fermiqcd.exe -hot:nt=16:nx=4\n"
-    "fermiqcd.exe -load:f=cold.mdp\n"
-    "fermiqcd.exe -load:f=cold.mdp -heatbath:steps=10:beta=5.7\n"
-    "fermiqcd.exe -load:f=cold.mdp -heatbath:steps=10:beta=5.7\n"
-    "fermiqcd.exe -load:f=*.mdp -plaquette\n"
-    "fermiqcd.exe -load:f=*.mdp -plaquette-vtk\n"
-    "fermiqcd.exe -load:f=*.mdp -polyaov-vtk\n"
-    "fermiqcd.exe -load:f=*.mdp -cool:steps=20 topcharge-vtk\n"
-    "fermiqcd.exe -load:f=*.mdp -quark:kappa=0.12:alg=minres-vtk\n"
-    "fermiqcd.exe -load:f=*.mdp -quark:kappa=0.12 -pion\n";
+    "For help:\n"
+    "  fermiqcd\n"
+    "\nExamples:\n:"
+    "  fermiqcd -cold:nt=16:nx=4\n"
+    "  fermiqcd -hot:nt=16:nx=4\n"
+    "  fermiqcd -load:f=cold.mdp\n"
+    "  fermiqcd -load:f=cold.mdp -heatbath:steps=10:beta=5.7\n"
+    "  fermiqcd -load:f=cold.mdp -heatbath:steps=10:beta=5.7\n"
+    "  fermiqcd -load:f=*.mdp -plaquette\n"
+    "  fermiqcd -load:f=*.mdp -plaquette-vtk\n"
+    "  fermiqcd -load:f=*.mdp -polyaov-vtk\n"
+    "  fermiqcd -load:f=*.mdp -cool:steps=20 topcharge-vtk\n"
+    "  fermiqcd -load:f=*.mdp -quark:kappa=0.12:alg=minres-vtk\n"
+    "  fermiqcd -load:f=*.mdp -quark:kappa=0.12 -pion\n"
+    "  fermiqcd -load:f=*.mdp -quark:kappa=0.12 -pion-vtk\n"
+    "\nOptions (key = default):\n"
+    "  -cold\n"
+    "       nt = 16\n"
+    "       nx = 4\n"
+    "       ny = nx\n"
+    "       nz = ny\n"
+    "  -cool\n"
+    "       alg = ape\n"
+    "       alpha = 0.7\n"
+    "       steps = 20\n"
+    "       cooling = 10\n"
+    "  -gauge\n"
+    "       steps = 1\n"
+    "       therm = 10\n"
+    "       beta = 0\n"
+    "       zeta = 1.0\n"
+    "       u_t = 1.0\n"
+    "       u_s = 1.0\n"
+    "       prefix = \n"
+    "       action = wilson or wilson_improved or wilson_sse2\n"
+    "  -hot\n"
+    "       nt = 16\n"
+    "       nx = 4\n"
+    "       ny = nx\n"
+    "       nz = ny\n"
+    "  -load\n"
+    "       f = *.mdp\n"
+    "  -pion\n"
+    "  -pion-vtk\n"
+    "  -plaquette\n"
+    "  -plaquette-vtk\n"
+    "  -polyakov-vtk\n"
+    "  -quark\n"
+    "       action = clover_fast or clover_losw or clover_sse2\n"
+    "       alg = bicgstab or minres or bictstab-vtk ot minres-vtk\n"
+    "       abs_precision = 1e-12\n"
+    "       rel_precision = 1e-12\n"
+    "       matrices = FERMILAB or MILC or UKQCD\n"
+    "                         or Minkowsy-Dirac or Minkowsy-Chiral\n"
+    "       kappa = 0.12\n"
+    "       kappa_t = quark.kappa\n"
+    "       kappa_s = quark.kappa\n"
+    "       r_t = 1.0\n"
+    "       r_s = 1.0\n"
+    "       c_sw = 0.0\n"
+    "       c_E = 0.0\n"
+    "       c_B = 0.0\n"
+    "  -topcharge-vtk\n"
     exit(0);
 }
 
@@ -204,7 +256,7 @@ int main(int argc, char** argv) {
   gauge["u_t"] = arguments.get("-gauge","u_t",1.0);
   gauge["u_s"] = arguments.get("-gauge","u_s",1.0);
   string prefix = arguments.get("-gauge","prefix","");
-  string gauge_action = arguments.get("-gauge","action","clover_fast");
+  string gauge_action = arguments.get("-gauge","action","wlson");
 
   quark1["kappa"] = arguments.get("-quark","kappa",0.12);
   quark1["kappa_t"] = arguments.get("-quark","kappa_t",quark1["kappa"]);
@@ -265,11 +317,11 @@ int main(int argc, char** argv) {
 	mdp << "plaquette = " << average_plaquette(U) << endl;
       }
       if (arguments.have("-cool")) {
-	if (arguments.get("cooling","alg","ape")=="ape")
+	if (arguments.get("-cool","alg","ape")=="ape")
 	  ApeSmearing::smear(U,
-			     arguments.get("cooling","alpha",0.7),
-			     arguments.get("cooling","steps",20),
-			     arguments.get("cooling","cooling",10));
+			     arguments.get("-cool","alpha",0.7),
+			     arguments.get("-cool","steps",20),
+			     arguments.get("-cool","cooling",10));
 	else
 	  mdp.error_message("cooling algorithm not supported");
       }      
