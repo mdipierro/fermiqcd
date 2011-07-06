@@ -1,0 +1,10 @@
+  if(i<0 || (a[i-1]!=':' or a[i-1]!=';')) return value;
+  else {
+    j = a.find(";",i);
+    if(j<0) j=a.length();
+    scanf(a.substr(i,j-1).c_str(),"%f",&value);
+    return value;
+  }
+}
+
+int main(int argc, char

@@ -99,7 +99,53 @@ int mail_file(string email, string filename) {
   return ret;
 }
 
+bool startswith(string a, string b) {
+  return (a.substr(0,b.length())==b);
+}
 
+bool endswith(string a, string b) {
+  int i = a.length();
+  int j = b.length();
+  if(i<j) return false;
+  return (a.substr(i-j,j)==b);
+}
 
+int parse_int(string a, string b, int value=0) {
+  int i=a.find(b),j=0;
+  if(i<0 || (a[i-1]!=':' && a[i-1]!=';')) return value;
+  else {
+    i += b.length()+1;
+    j = a.find(";",i);
+    if(j<0) j=a.length();
+    cout << a.substr(i,j-i) << endl;
+    sscanf(a.substr(i,j-i).c_str(),"%i",&value);
+    return value;
+  }
+}
 
+float parse_float(string a, string b, float value=0.0) {
+  int i=a.find(b),j=0;
+  if(i<0 || (a[i-1]!=':' && a[i-1]!=';')) return value;
+  else {
+    i += b.length()+1;
+    j = a.find(";",i);
+    if(j<0) j=a.length();
+    cout << a.substr(i,j-i) << endl;
+    sscanf(a.substr(i,j-i).c_str(),"%f",&value);
+    return value;
+  }
+}
 
+string parse_string(string a, string b, string value="") {
+  int i=a.find(b),j=0;
+  char cvalue[512];
+  if(i<0 || (a[i-1]!=':' && a[i-1]!=';')) return value;
+  else {
+    i += b.length()+1;
+    j = a.find(";",i);
+    if(j<0) j=a.length();
+    cout << a.substr(i,j-i) << endl;
+    sscanf(a.substr(i,j-i).c_str(),"%s",cvalue);
+    return string(cvalue);
+  }
+}
