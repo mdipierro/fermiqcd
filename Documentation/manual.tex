@@ -4,7 +4,7 @@
 %TCIDATA{TCIstyle=article/art4.lat,lart,article}
 
 %TCIDATA{Created=Sun Feb 13 20:08:19 2005}
-%TCIDATA{LastRevised=Mon Feb 14 00:46:15 2005}
+%TCIDATA{LastRevised=Wed Feb 23 00:24:08 2005}
 
 \input{tcilatex}
 \begin{document}
@@ -66,7 +66,7 @@ optimizations.
 The files starting with {\tt mdp\_} belong to the Matrix Distributed
 Processing (MDP) library, required by FermiQCD. The files starting with {\tt %
 fermiqcd\_} are the proper FermiQCD files. They are distrubuted together but
-are covered by different licenses. 
+are covered by different licenses.
 
 The folder ``Documentation'' contains licenses and documentation for MDP and
 FermiQCD. MDP and FermiQCD cannot be redistributed without this folder.
@@ -75,7 +75,7 @@ The folder ``Examples'' contains all of the examples described in these
 tutorial.
 
 The folder ``Converters'' contains converters for starndard QCD file formats
-into the MDP file format used by FermiQCD. 
+into the MDP file format used by FermiQCD.
 
 You may ask: why another file format? Technically FermiQCD itself does not
 specify a file format but it defines fields of objects defined on a lattice.
@@ -191,7 +191,7 @@ int main(int argc, char** argv) {
    int box[]={16,8,8,8}
    mdp_lattice mylattice(4,box);
    site x(mylattice);
-   forallsites(x) 
+   forallsites(x)
       cout<<mylattice.random(x).plain()<<endl;
    mdp.close_wormholes();
    return 0;
@@ -200,7 +200,7 @@ int main(int argc, char** argv) {
 
 Class {\bf site} represents a site of the lattice; {\tt forallsites(x)} is a
 parallel loop over all lattice sites using the site {\tt x} as looping
-variable and 
+variable and
 \begin{verbatim}
 mylattice.random(x)
 \end{verbatim}
@@ -242,7 +242,7 @@ int main(int argc, char** argv) {
    mdp_lattice mylattice(4,box);
    mdp_field<float> myfield(mylattice);
    site x(mylattice);
-   forallsites(x) 
+   forallsites(x)
       myfield(x)=mylattice.random(x).plain();
    myfield.update();
    myfield.save(''myfield.mdp'');
@@ -302,7 +302,7 @@ FermiQCD comes with a set of predefined fields
 gauge_field
 fermi_field
 fermi_propagator
-staggered_field 
+staggered_field
 staggered_propagator
 dw_fermi_field
 dw_fermi_propagator
@@ -316,17 +316,250 @@ to the gamma matrix conventions.
 
 \section{Matrix Distributed Processing}
 
+\section{Short Lattice QCD tutorial and Notation}
+
+\subsection{Modern Physics}
+
+Modern Physics states that:
+
+\begin{itemize}
+\item  Any system can be uniquely descrived by a set of variables ($\psi
+,A_\mu ,$ etc.) that represents its degrees of freedom and by a function of
+these variables called Action that we indicate with the symbol $S_W(...)$.
+
+\item  Any observable on the system can be associated to an expression,
+function of the variables, that we indicate with $O(...)$.
+
+\item  We cannot predict the outcome of every experiment but we can compute
+the expectation value of any observable by computing the path integral 
+\[
+E[O(...)]=\int [d\psi ][dA_\mu ]O(...)e^{iS(...)}
+\]
+where the integral covers the domain of all possible states of the system
+(i.e. one integral for each degree of freedom).
+
+\item  Because information travels at a finite speed, $S(...)$ must be local
+in space-time variables therefore it can be expressed as $S(...)=\int
+L(...)d^4x$ where $L$ is called Lagrangian density and it is also function
+of the degrees of freedom of the system.
+\end{itemize}
+
+\subsection{Quantum Chromo Dynamics}
+
+If the system we are describing is QCD, i.e. the model that describes quarks
+and gluons we have that:
+
+\begin{itemize}
+\item  $\psi _\alpha ^f(x)$ represent the degrees of freedom associated to
+quarks.
+
+\item  $A_\mu (x)$ represent the degrees of freedom associated to gluons
+
+\item  The Action for QCD is 
+\[
+S_{QCD}(\psi ,A)=\int d^4x\left[ -\frac 1{4g^2}G_{\mu \nu }G^{\mu \nu }+%
+\overline{\psi }_\alpha ^fD_f^{\alpha \beta }[A]\psi _\beta ^f\right] 
+\]
+where 
+\[
+G_{\mu \nu }=\partial _\mu A_\nu -\partial _\nu A_\mu +[A_\mu ,A_\nu ]
+\]
+\[
+D_f^{\alpha \beta }[A]=\gamma _\mu ^{\alpha \beta }(\partial _\mu +A_\mu
+)+1^{\alpha \beta }m_f
+\]
+Note that $A_\mu $ and $G_{\mu \nu }$ are $3\times 3$ complex matrices (i.e.
+in adjoint representation) while $\psi _\alpha ^f$ for every $f$ and $\alpha 
+$ is a $3$ components complex vector (i.e. fundamental representation).
+
+\item  The most general path integral looks like 
+\[
+E[O(...)]=\int [d\psi ][dA_\mu ]O(...\psi ...A_\mu )P_{QCD}[\psi ,A]
+\]
+with 
+\[
+P_M[\psi ,A]=e^{i\int d^4x\left[ -\frac 1{4g^2}G_{\mu \nu }G^{\mu \nu }+%
+\overline{\psi }_\alpha ^fD_f^{\alpha \beta }[A]\psi _\beta ^f\right] }
+\]
+\end{itemize}
+
+\subsection{From QCD to Lattice QCD}
+
+Lattice QCD provides a technique to define (i.e. regularize) the above
+integral and compute the path integral analytically. This is achieved in
+four steps:
+
+\begin{enumerate}
+\item  Perform a Wick rotation $x_0\rightarrow ix_0$ so that 
+\[
+P_{QCD}[\psi ,A]\rightarrow P[\psi ,A]=e^{-\int d^4x\left[ -\frac
+1{4g^2}G_{\mu \nu }G_{\mu \nu }+\overline{\psi }_\alpha ^fD_f^{\alpha \beta
+}[A]\psi _\beta ^f\right] }
+\]
+become real.
+
+\item  Perform a Wick contraction of all spinors in $O(...)$ and replace 
+\begin{eqnarray*}
+...\overline{\psi }_\alpha ^f(x)...\psi _\beta ^f(y)... &\rightarrow
+&S_{\alpha \beta }(A,x,y) \\
+...\psi _\alpha ^f(x)...\overline{\psi }_\beta ^f(y)... &\rightarrow
+&S_{\beta \alpha }(A,y,x)
+\end{eqnarray*}
+Note that $S=1/D[A]$ and it is called a propagator.
+
+\item  Integrate out $[d\psi ]$ and obtain 
+\[
+E[O(...)]=\int [dA_\mu ]O(...S_{\alpha \beta }...A_\mu )P[A]
+\]
+\[
+P[A]=e^{-\int d^4x\left[ -\frac 1{4g^2}G_{\mu \nu }G_{\mu \nu }\right]
+-\sum_f\log \det D_f[A]}
+\]
+
+\item  Change variable from $A_\mu (x)$ to $U_\mu (x)=e^{iaA_\mu (x)}$ and
+approximate the integral $[dA_\mu ]$ with a sum over $U_\mu ^{[k]}(x)$%
+\[
+E[O(...)]=\sum_kO(...S_{\alpha \beta }...U_\mu ^{[k]})P[U_\mu ^{[k]}]
+\]
+where 
+\begin{eqnarray*}
+P[U_\mu ^{[k]}] &=&e^{-S_{Gauge}-S_{Fermi}} \\
+S_{Gauge} &=&\beta \sum_x\left[ \sum_{\mu \nu }P_{\mu \nu }(x)\right]  \\
+S_{Fermi} &=&\sum_f\log \det D_f[U]
+\end{eqnarray*}
+$\beta =1/g^2$ is a regularized coupling 
+\[
+P_{\mu \nu }(x)=U_\mu (x)U_\nu (x+\mu )U_\mu ^H(x+\nu )U_\nu ^H(x)=-\frac{a^4%
+}4G_{\mu \nu }G_{\mu \nu }
+\]
+is called a plaquette.
+\end{enumerate}
+
+$\beta =1/g^2$ is the only physical parameter of any lattice computation
+other than quark masses. Because it sets the value of the regularized
+coupling constant $g$, by virtue dimensional transmutation, it sets the
+lattice scale in the computation.
+
+Remember that computer programs deal with dimensionless number and not
+dimensionful quantities. By chaning the value of $\beta $ one changes the
+resolution of the computation. Typically a choice of $\beta =5.7$ is
+equivalent to resolution of $1GeV^{-1}$. This relation is not linear and
+depends on the discretization of the action.
+
+\subsection{Lattice QCD computations}
+
+Any Lattice QCD computation proceeds in the following steps:
+
+\begin{itemize}
+\item  Identify the expression $O(...)$, in terms of $S_{\alpha \beta }$ and 
+$U$ that corresponds to the quantity to compute. In FermiQCD $S_{\alpha
+\beta }$ and $U$ are implemented as C++ objects.
+
+\item  Generate datasets $U_\mu ^{[k]}$ with probability given by $P[U_\mu
+^{[k]}]$. This is achieved by a Markov Chain Monte Carlo and the datasets
+(also called gauge configurations) are generated in succession starting from
+a random one. In FermiQCD the markov chain is created by the {\tt heatbath}
+algorithm.
+
+\item  Evaluate the integrand $O(...)$ on each configuration and average the
+results. Given a configuration $U$, $S_{\alpha \beta }$ is computed by
+inverting $D_f^{\alpha \beta }[U]$ numerically. In FermiQCD this is done by
+the {\tt generate} algorithm.
+
+\item  Study the distribution of the results to estimate the statistical
+error in the average. In FermiQCD this is done by the {\tt JackBoot} object.
+\end{itemize}
+
+Note that there are different ways to discretize the Action of QCD and they
+affect the corvence rate of the numerical algorithm. FermiQCD include
+various discretizations and it is easy to add more. There are also many
+numerical techniques to invert $D_f^{\alpha \beta }[U]$ and compute $%
+S_{\alpha \beta }$, FermiQCD implements the minimum residure and the
+stabilized biconjugate gradient.
+
+\subsection{On Fermions}
+
+Often the term $S_{Fermi}$ is ignored in the computation. In a perturbative
+language this is equivalent to ignore virtual quark loops. The effect of
+this approximaiton, called quanching, is unclear but certainly
+non-negligible.
+
+Whether Fermions are treated dynamically or not one has to discretize $%
+D_f^{\alpha \beta }[U]$ in order to invert it numerically. There are five
+general prescriptions to do it:
+
+\begin{itemize}
+\item  Naive fermions. They do not work because lattice artifacts introduce
+un-physical zeros in the propagator $S$.
+
+\item  Wilson fermions. The most common and natural prescription. The only
+problem is that it break the chiral symmetry and therefore Wilson fermions
+cannot be masseless.
+
+\item  Staggered (Kogut-Susskind) fermions. They do not break the chiral
+symmetry completely and are more efficient than Wilson fermions but
+introduce 15 additional quark flavors for each physical flavor. One can deal
+with them but it is tricky.
+
+\item  Domain-wall fermions. By introducing an unphysical extra-dimension
+one can recover chirality and have almost massless quarks. They are
+extreamly computationally expensive.
+
+\item  Overlap (Neuberger) fermions. Have similar properties as Domain-wall
+fermions but the extra dimension is integrated out analytically. They are
+also very computationally expensive.
+\end{itemize}
+
+At this time FermiQCD suppors all the above types of fermions but the
+Overlap. Domain-wall fermions have never been properly tested. Wilson and
+Naive are implemented for both isotropic and un-isotropic lattices.
+Staggered fermions are implemented for any even number of space-time
+dimensions. All fermions and fermionic algorithms work for any SU(n) gauge
+group.
+
+\subsection{On the observables}
+
+Because of the Wick rotation the numerical computation of expectation values
+of observables $E[O(...)]$ that require an analytical continuation is
+difficult. This makes difficult for example to compute scettering phases.
+
+Nevertheless some observable can be parametrized in terms of quantity that
+are not affected by the Wick rotation and can be computed numercally. They
+include masses of composite particle and the modulus of most matrix elements.
+
+Note that only gauge invariant quantities can be observable (remember the
+Aaronov-Bohm effect). In the Lattice QCD language this means that any
+observable $O(...)$ that is not gauge invariant will have a zero expectation
+value. Non-trivial observables $O(...)$ are function of closed loops of
+quark propagators $S$ and products of links $U$.
+
+We can classify observables $O(...)$ in the following typical categories:
+
+\begin{itemize}
+\item  Pure glue that does not contain a length scale. They measure
+topological properties of QCD vacuum.
+
+\item  Pure glue that does contain a length scale such as the correlation
+between two or more loops of links. They measure masses and matrix elements
+of glueballs
+
+\item  Product of two propagators $S$. They contain information about meson
+masses.
+
+\item  Product of three propagators $S$ contracted at the same two points.
+They contain information about baryon masses.
+
+\item  Other product of three or more propagators $S$ contracted in at least
+three points. They contain information about matrix elements between mesons,
+baryons or both.
+\end{itemize}
+
+Complete example programs in each category will be provided in the fourth
+chapter.
+
 \section{Quantum Chromo Dynamics}
 
 \subsection{Pure gauge}
-
-A gauge field is defined as 
-\[
-U_\mu (x)=e^{iaA_\mu (x+\frac a2\widehat{\mu })}\simeq 1+iaA_\mu (x+\frac a2%
-\widehat{\mu })
-\]
-where $a$ is the lattice spacing and $A_\mu (x)$ is gauge field in $SU(n)$
-and $\widehat{\mu }$ is a unit versor in direction $\mu $.
 
 \subsubsection{Creating a hot gauge configuration}
 \begin{verbatim}
@@ -346,7 +579,7 @@ int main(int argc, char** argv) {
 \end{verbatim}
 
 the function set\_hot is already implemented but could have been implemented
-easily as 
+easily as
 \begin{verbatim}
 void set_hot(gauge_field &U) {
    site x(U.lattice());
@@ -375,7 +608,7 @@ int main(int argc, char** argv) {
 \end{verbatim}
 
 the function set\_hot is already implemented but could have been implemented
-easily as 
+easily as
 \begin{verbatim}
 void set_cold(gauge_field &U) {
    site x(U.lattice());
@@ -383,7 +616,7 @@ void set_cold(gauge_field &U) {
       for(int mu=0; mu<U.ndim; mu++)
          U(x,mu)=1;
    U.update();
-} 
+}
 \end{verbatim}
 
 Note how each site initializes {\tt U(x,mu)} with 1 (interpreted as $3\times
@@ -397,7 +630,7 @@ void set_cold(gauge_field &U) {
    forallsitesandcopies(x)
       for(int mu=0; mu<U.ndim; mu++)
          U(x,mu)=1;
-} 
+}
 \end{verbatim}
 
 This is how set\_cold is implemented in practice and it requires no parallel
@@ -405,34 +638,7 @@ communication.
 
 \subsubsection{Performing Wilson heatbath steps}
 
-The basic ingredient of any Lattice computation is the Markov Chain Monte
-Carlo that creates different gauge field configurations $U_\mu ^{[k]}(x)$
-randomly distributed with probability 
-\[
-P[U]=e^{-S_E[U]}
-\]
-where $S_E$ is the Euclidean gauge action expressed in terms of $U$.
-
-The $U_\mu ^{[k]}(x)$ are typically generated using an iterative procedure
-\[
-U_\mu ^{[k]}(x)\rightarrow U_\mu ^{[k+1]}(x)
-\]
-
-where $U_\mu ^{[0]}(x)$ is set either hot or cold and the algorithm to go
-from one to the next implements the action $S_E$. The most common algorithm
-is the heatbath and the simplest discretization of the gauge action is given
-by
-\begin{eqnarray*}
-S_E[U] &=&\beta \sum_{x,\mu ,\nu }[U_\mu (x)U_\nu (x+\widehat{\mu })U_\mu
-^H(x+\nu )U_\nu ^H(x)-1] \\
-&\simeq &\frac{a^4}{4g^2(a)}\sum_xG^{\mu \nu }(x)G_{\mu \nu }(x)
-\end{eqnarray*}
-where $\beta =g^{-2}(a)$ is the regularized coupling constants used as input
-to set the lattice scale $a$ and $G^{\mu \nu }(x)=\partial _\mu A_\nu
--\partial _\nu A_\mu +[A_\mu ,A_\nu ]$ is the chromo-electro-magnetic field.
-
-Here is the code to generate 100 gauge configurations $U_\mu ^{[k]}(x)$ and
-save them.
+Code to generate 100 gauge configurations $U_\mu ^{[k]}(x)$ and save them.
 \begin{verbatim}
 #include ''fermiqcd.h''
 int main(int argc, char** argv) {
@@ -468,7 +674,7 @@ spacing), the third argument is the number of iterations before returning.
 Noe that the number of interations technically is not a coefficient of the
 action therefore it not passed as a variable in the gauge object.
 
-The line 
+The line
 \begin{verbatim}
 string(''gauge.'')+tostring(k)+string(''.mdp'')
 \end{verbatim}
@@ -485,17 +691,17 @@ static method heatbath that mush follow the same prototype.
 For the Wilson gauge action
 \begin{verbatim}
 coefficients gauge;
-gauge[''beta'']=6.0;      
+gauge[''beta'']=6.0;    
 WilsonGaugeAction::heatbath(U,gauge,niter);
 \end{verbatim}
 
 For the MILC improved gauge action
 \begin{verbatim}
 coefficients gauge;
-gauge[''beta'']=6.0;      
-gauge[''zeta'']=1.0;      
-gauge[''u_t'']=1.0;      
-gauge[''u_s'']=1.0;      
+gauge[''beta'']=6.0;    
+gauge[''zeta'']=1.0;    
+gauge[''u_t'']=1.0;    
+gauge[''u_s'']=1.0;    
 string model=''MILC'';
 ImprovedGaugeAction::heatbath(U,gauge,niter,model);
 \end{verbatim}
@@ -503,25 +709,19 @@ ImprovedGaugeAction::heatbath(U,gauge,niter,model);
 For the Morningstar improved gauge action
 \begin{verbatim}
 coefficients gauge;
-gauge[''beta'']=6.0;      
-gauge[''zeta'']=1.0;      
-gauge[''u_t'']=1.0;      
-gauge[''u_s'']=1.0;      
+gauge[''beta'']=6.0;    
+gauge[''zeta'']=1.0;    
+gauge[''u_t'']=1.0;    
+gauge[''u_s'']=1.0;    
 string model=''Morningstar'';
-ImprovedGaugeAction::heatbath(U,gauge,niter,model); 
+ImprovedGaugeAction::heatbath(U,gauge,niter,model);
 \end{verbatim}
 
 \subsubsection{Average plaquette}
 
-A plaquette is defined as
-\begin{eqnarray*}
-P_{\mu \nu }(x) &=&U_\mu (x)U_\nu (x+\widehat{\mu })U_\mu ^H(x+\nu )U_\nu
-^H(x) \\
-&\simeq &a^2G_{\mu \nu }
-\end{eqnarray*}
-here is the code to compute
+Code to compute 
 \[
-\frac 16\frac 1{N_V}\frac 1{N_c}\func{Re}Tr\sum_{x,\mu >\nu }P_{\mu \nu }(x)
+\frac 16\frac 1{N_V}\frac 1{N_c}\func{Re}Tr\sum_{x,\mu >\nu }P_{\mu \nu }(x) 
 \]
 where $N_V$ is the lattice volume and $N_c$ is the number of colors.
 \begin{verbatim}
@@ -558,9 +758,9 @@ average_plaquette(U,mu,nu)
 \end{verbatim}
 
 that computes the average plaquette considering the mu-nu plane only where
-mu and nu are integers
+mu and nu are integers 
 \[
-\frac 1{N_V}\frac 1{N_c}\func{Re}Tr\sum_xP_{\mu \nu }(x)
+\frac 1{N_V}\frac 1{N_c}\func{Re}Tr\sum_xP_{\mu \nu }(x) 
 \]
 
 The function average plaquette is already implemented as
@@ -577,7 +777,7 @@ myreal average_plaquette(gauge_field &U,int mu,int nu) {
 
 where {\tt plaquette(U,x,mu,nu)} is defined as
 \begin{verbatim}
-U(x,mu)*U(x+mu,nu)*hermitian(U(x,nu)*U(x+nu,mu)); 
+U(x,mu)*U(x+mu,nu)*hermitian(U(x,nu)*U(x+nu,mu));
 \end{verbatim}
 
 mdp.add(tmp) adds the values tmp computed by the parallel processes (always
@@ -587,16 +787,15 @@ nvol\_gl}) in the lattice for {\tt U}.
 
 \subsubsection{Average path}
 
-Note how the most general gauge observable has the form
+Note how the most general gluonic gauge invariant observable has the form 
 \[
-\oint_Ce^{iA_\mu dx^\mu }
+\oint_Ce^{iA_\mu dx^\mu } 
 \]
-where $C$ is a generic path. Here we want to compute
+where $C$ is a generic path. Here is the code to compute
 
 \[
-\frac 1{N_V}\frac 1{N_c}\func{Re}Tr\sum_x\oint_Ce^{iA_\mu dx^\mu }
+\frac 1{N_V}\frac 1{N_c}\func{Re}Tr\sum_x\oint_Ce^{iA_\mu dx^\mu } 
 \]
-and here is the code:
 \begin{verbatim}
 #include ''fermiqcd.h''
 int main(int argc, char** argv) {
@@ -629,35 +828,30 @@ nu=0,1,2,3,...). Note that because a path may be highly non-local the
 implementation of the funciton average\_path requires, in general, quite
 some communication.
 
-This function is already implemented and looks like the following: 
+This function is already implemented and looks like the following:
 \begin{verbatim}
 mdp_complex average_path(gauge_field &U, int length, int d[][2]) {
-  mdp_matrix_field psi1(U.lattice(),U.nc,U.nc);
-  mdp_matrix_field psi2(U.lattice(),U.nc,U.nc);
-  mdp_site x(U.lattice());
-  mdp_complex sum=0;
-  for(int i=0; i<length; i++) {
-    if(i==0) 
-       forallsites(x) 
-          psi1(x)=U(x,d[i][0],d[i][1]);
-    else
-       forallsites(x) 
-          psi1(x)=psi1(x)*U(x,d[i][1],d[i][1]);
-    if(i<length-1) {
-       psi1.update();    
-       if(d[i][0]==+1)
-          forallsites(x) psi2(x)=psi1(x+d[i][1]);
-       else if(d[i][0]==-1)
-          forallsites(x) psi2(x)=psi1(x-d[i][1]);
-       psi1=psi2;
-    }
-  }
-  forallsites(x) sum+=trace(psi1(x));
-  return sum/(U.lattice().nvol_gl*U.nc);
+   mdp_matrix_field psi(U.lattice(),U.nc,U.nc);
+   mdp_site x(U.lattice());
+   mdp_complex sum=0;
+   for(int i=0; i<length; i++) {
+     if(i==0) forallsites(x) psi(x)=U(x,d[i][0],d[i][1]);
+     else forallsites(x) psi(x)*=U(x,d[i][0],d[i][1]);
+     if(i<length-1) psi.shift(d[i][0],d[i][1]);
+     else forallsites(x) sum+=trace(psi(x));
+   }
+   return sum/(U.lattice().nvol_gl*U.nc);
 }
 \end{verbatim}
 
-\subsubsection{Chromo-electro-magnetic field}
+Note tha call to the shift operator defined so that
+\begin{verbatim}
+psi.shift(+1,mu)
+\end{verbatim}
+
+assignes $\psi (x-\mu )$ to $\psi (x)$.
+
+\subsection{Chromo-electro-magnetic field}
 
 The Chromo-electro-magnetic field $P_{\mu \nu }=a^2G_{\mu \nu }$ has its own
 class as a field of vectors of matrices but one never really needs to
@@ -676,7 +870,7 @@ Therefore the average plaquette could also have been computes as
 \begin{verbatim}
 mdp_real sum=0.0;
 compute_em_field(U);
-forallsites(x) 
+forallsites(x)
    for(int mu=0; mu<U.ndim; mu++)
       for(int nu=mu+1; nu<U.ndim; nu++)
          sum+=real(trace(U.em(x,mu,nu));
