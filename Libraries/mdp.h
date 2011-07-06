@@ -24,6 +24,9 @@
 #include <cassert>
 #include <typeinfo>
 #include <stdint.h>
+#ifdef __APPLE__
+#define OSX
+#endif
 #ifndef OSX
 #include <malloc.h>
 #endif

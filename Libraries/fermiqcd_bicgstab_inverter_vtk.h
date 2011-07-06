@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-/// @file fermiqcd_bicgstab_inverter.h
+/// @file fermiqcd_bicgstab_inverter_vtk.h
 /// @version 2009-12-21
 /// @author Massimo Di Pierro <mdipierro@cs.depaul.edu>
 ///
@@ -49,7 +49,7 @@ class BiCGStabVtk {
 				  mdp_real relative_precision=0,
 				  int max_steps=2000) {
     mpi.begin_function("BiConugateGradientStabilizedInverter");
-    const string filename_prefix="test";
+    const string filename_prefix=inversion_vtk_prefix;
     const int tc=0;
     string filename1, filename2;
     int             step=0;

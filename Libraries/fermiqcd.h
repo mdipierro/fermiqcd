@@ -31,8 +31,10 @@
 #include "fermiqcd_topological_charge.h"
 
 #include "fermiqcd_minres_inverter.h"
+#include "fermiqcd_minres_inverter_vtk.h"
 #include "fermiqcd_cg_inverter.h"
 #include "fermiqcd_bicgstab_inverter.h"
+#include "fermiqcd_bicgstab_inverter_vtk.h"
 
 #include "fermiqcd_fermi_field.h"
 #include "fermiqcd_fermi_actions.h"

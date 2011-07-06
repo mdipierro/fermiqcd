@@ -155,3 +155,4 @@ inversion_stats MinimumResidueInverter(fieldT &psi_out,
 			  relative_precision,
 			  max_steps);
 }
+

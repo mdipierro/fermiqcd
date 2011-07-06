@@ -38,7 +38,7 @@ public:
   void connect(ofstream &os2) {
     os=&os2; // is this correct? I think so!
   }
-  void error_message(string s, string file, int line) {
+  void error_message(string s, string file="unkown", int line=0) {
     if(print) {
       begin_function("error");
       *os << "In file \"" << file;

@@ -557,7 +557,7 @@ mdp_communicator mdp;
 /// alias for mdp
 mdp_communicator& mpi=mdp; 
 
-void _mpi_error_message(string a, string b, int c) {
+void _mpi_error_message(string a, string b="unkown", int c=0) {
   mpi.error_message(a,b,c);
 }
 

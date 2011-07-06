@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-/// @file fermiqcd_minres_inverter.h
+/// @file fermiqcd_minres_inverter_vtk.h
 /// @version 2009-12-21
 /// @author Massimo Di Pierro <mdipierro@cs.depaul.edu>
 ///
@@ -41,6 +41,9 @@
 /// @endverbatim
 /// Note that mul_invQ(chi,psi,U,coeff) reads 
 /// \f$ \chi=(/\!\!\!D[U]+m)^{-1}\psi \f$ 
+
+string inversion_vtk_prefix = "test";
+
 class MinResVtk {
  public:
   template <class fieldT, class fieldG>
@@ -54,7 +57,7 @@ class MinResVtk {
     
     mpi.begin_function("MinimumResidueInverter");
 
-    const string filename_prefix="test";
+    const string filename_prefix=inversion_vtk_prefix;
     const int tc=0;
 
     

@@ -10,9 +10,18 @@
 /// This file cannot be distributed without file mdp_license.pdf
 //////////////////////////////////////////////////////////////////
 
-string tostring(int k) {
+string tostring(int k, int length=5) {
   char buf[128];
-  sprintf(buf,"%.5i",k);
+  if(length>=5)
+    sprintf(buf,"%.5i",k);
+  else if(length==4)
+    sprintf(buf,"%.4i",k);
+  else if(length==3)
+    sprintf(buf,"%.3i",k);
+  else if(length==2)
+    sprintf(buf,"%.2i",k);
+  else if(length==1)
+    sprintf(buf,"%.1i",k);
   return string(buf);
 }
 
@@ -32,7 +41,6 @@ string latest_file(string pattern) {
   vector<string> v=glob(pattern);
   return v[v.size()-1];
 }
-
 
 string next_to_latest_file(string pattern) {
   int i=pattern.find("*");
@@ -112,10 +120,10 @@ bool endswith(string a, string b) {
 
 int parse_int(string a, string b, int value=0) {
   int i=a.find(b),j=0;
-  if(i<0 || (a[i-1]!=':' && a[i-1]!=';')) return value;
+  if(i<0 || a[i-1]!=':') return value;
   else {
     i += b.length()+1;
-    j = a.find(";",i);
+    j = a.find(":",i);
     if(j<0) j=a.length();
     cout << a.substr(i,j-i) << endl;
     sscanf(a.substr(i,j-i).c_str(),"%i",&value);
@@ -128,7 +136,7 @@ float parse_float(string a, string b, float value=0.0) {
   if(i<0 || (a[i-1]!=':' && a[i-1]!=';')) return value;
   else {
     i += b.length()+1;
-    j = a.find(";",i);
+    j = a.find(":",i);
     if(j<0) j=a.length();
     cout << a.substr(i,j-i) << endl;
     sscanf(a.substr(i,j-i).c_str(),"%f",&value);
@@ -142,10 +150,53 @@ string parse_string(string a, string b, string value="") {
   if(i<0 || (a[i-1]!=':' && a[i-1]!=';')) return value;
   else {
     i += b.length()+1;
-    j = a.find(";",i);
+    j = a.find(":",i);
     if(j<0) j=a.length();
     cout << a.substr(i,j-i) << endl;
     sscanf(a.substr(i,j-i).c_str(),"%s",cvalue);
     return string(cvalue);
   }
 }
+
+class mdp_args {
+ public:
+  vector<string> args;
+  mdp_args(int argc, char** argv) {
+    for(int i=1; i<argc; i++)
+      this->args.push_back(argv[i]);
+  }
+  int length() {
+    return args.size();
+  }
+  bool have(string name) {
+    for(int i=0; i<this->args.size(); i++)
+      if(this->args[i]==name || startswith(this->args[i],name+":"))
+	return true;
+    return false;
+  }
+  float get(string name, string key, float value=0.0) {
+    for(int i=0; i<this->args.size(); i++)
+      if(startswith(this->args[i],name+":"))
+	return parse_float(this->args[i],key,value);
+    return value;
+  }
+  float get(string name, string key, double value=0.0) {
+    for(int i=0; i<this->args.size(); i++)
+      if(startswith(this->args[i],name+":"))
+	return parse_float(this->args[i],key,value);
+    return value;
+  }
+  int get(string name, string key, int value=0) {
+    for(int i=0; i<this->args.size(); i++)
+      if(startswith(this->args[i],name+":"))
+	return parse_int(this->args[i],key,value);
+    return value;
+  }
+  string get(string name, string key, string value="") {
+    for(int i=0; i<this->args.size(); i++)
+      if(startswith(this->args[i],name+":"))
+	return parse_string(this->args[i],key,value);
+    return value;
+  }
+};  
+
