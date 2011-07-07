@@ -193,6 +193,9 @@ class mdp_args {
     return value;
   }
   string get(string name, string key, string value="") {
+    int i = value.find('|') ;
+    if (i>=0)
+      value = value.substr(0,i) 
     for(int i=0; i<this->args.size(); i++)
       if(startswith(this->args[i],name+":"))
 	return parse_string(this->args[i],key,value);

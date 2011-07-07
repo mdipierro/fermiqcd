@@ -1,5 +1,69 @@
 #include "fermiqcd.h"
 
+void usage() {
+  mdp << 
+    "For help:\n"
+    "  fermiqcd\n\n"
+    "Examples:\n"
+    "  fermiqcd -gauge:start=cold:nt=16:nx=4\n"
+    "  fermiqcd -gauge:start=hot:nt=16:nx=4\n"
+    "  fermiqcd -gauge:load=cold.mdp\n"
+    "  fermiqcd -gauge:load=cold.mdp:steps=10:beta=5.7\n"
+    "  fermiqcd -gauge:load=*.mdp -plaquette\n"
+    "  fermiqcd -gauge:load=*.mdp -plaquette-vtk\n"
+    "  fermiqcd -gauge:load=*.mdp -polyaov-vtk\n"
+    "  fermiqcd -gauge:load=*.mdp -cool:steps=20 topcharge-vtk\n"
+    "  fermiqcd -gauge:load=*.mdp -quark:kappa=0.12:alg=minres-vtk\n"
+    "  fermiqcd -gauge:load=*.mdp -quark:kappa=0.12 -pion\n"
+    "  fermiqcd -gauge:load=*.mdp -quark:kappa=0.12 -pion-vtk\n"
+    "Options (key = default):\n\n"
+    "  -gauge\n"
+    "       start = hot or cold or load\n"
+    "       load = *.mdp\n"
+    "       save = true\n"
+    "       nt = 16\n"
+    "       nx = 4\n"
+    "       ny = nx\n"
+    "       nz = ny\n"
+    "       steps = 1\n"
+    "       therm = 10\n"
+    "       beta = 0\n"
+    "       zeta = 1.0\n"
+    "       u_t = 1.0\n"
+    "       u_s = 1.0\n"
+    "       prefix = \n"
+    "       action = wilson or wilson_improved or wilson_sse2\n"
+    "  -cool\n"
+    "       alg = ape\n"
+    "       alpha = 0.7\n"
+    "       steps = 20\n"
+    "       cooling = 10\n"
+    "  -plaquette\n"
+    "  -plaquette-vtk\n"
+    "  -polyakov-vtk\n"
+    "  -topcharge-vtk\n"
+    "  -quark\n"
+    "       load = false\n"
+    "       save = true\n"
+    "       action = clover_fast or clover_losw or clover_sse2\n"
+    "       alg = bicgstab or minres or bictstab-vtk ot minres-vtk\n"
+    "       abs_precision = 1e-12\n"
+    "       rel_precision = 1e-12\n"
+    "       matrices = FERMILAB or MILC or UKQCD\n"
+    "                         or Minkowsy-Dirac or Minkowsy-Chiral\n"
+    "       kappa = 0.12\n"
+    "       kappa_t = quark.kappa\n"
+    "       kappa_s = quark.kappa\n"
+    "       r_t = 1.0\n"
+    "       r_s = 1.0\n"
+    "       c_sw = 0.0\n"
+    "       c_E = 0.0\n"
+    "       c_B = 0.0\n"
+    "  -pion\n"
+    "  -pion-vtk\n";
+    exit(0);
+}
+
 void plaquette_vtk(gauge_field& U, string filename) {
   mdp_field<mdp_real> q(U.lattice());
   mdp_site x(U.lattice());
@@ -51,74 +115,6 @@ float topcharge_vtk(gauge_field& U, string filename) {
 }
 
 
-void usage() {
-  mdp << 
-    "For help:\n"
-    "  fermiqcd\n"
-    "\nExamples:\n:"
-    "  fermiqcd -cold:nt=16:nx=4\n"
-    "  fermiqcd -hot:nt=16:nx=4\n"
-    "  fermiqcd -load:f=cold.mdp\n"
-    "  fermiqcd -load:f=cold.mdp -heatbath:steps=10:beta=5.7\n"
-    "  fermiqcd -load:f=cold.mdp -heatbath:steps=10:beta=5.7\n"
-    "  fermiqcd -load:f=*.mdp -plaquette\n"
-    "  fermiqcd -load:f=*.mdp -plaquette-vtk\n"
-    "  fermiqcd -load:f=*.mdp -polyaov-vtk\n"
-    "  fermiqcd -load:f=*.mdp -cool:steps=20 topcharge-vtk\n"
-    "  fermiqcd -load:f=*.mdp -quark:kappa=0.12:alg=minres-vtk\n"
-    "  fermiqcd -load:f=*.mdp -quark:kappa=0.12 -pion\n"
-    "  fermiqcd -load:f=*.mdp -quark:kappa=0.12 -pion-vtk\n"
-    "\nOptions (key = default):\n"
-    "  -cold\n"
-    "       nt = 16\n"
-    "       nx = 4\n"
-    "       ny = nx\n"
-    "       nz = ny\n"
-    "  -cool\n"
-    "       alg = ape\n"
-    "       alpha = 0.7\n"
-    "       steps = 20\n"
-    "       cooling = 10\n"
-    "  -gauge\n"
-    "       steps = 1\n"
-    "       therm = 10\n"
-    "       beta = 0\n"
-    "       zeta = 1.0\n"
-    "       u_t = 1.0\n"
-    "       u_s = 1.0\n"
-    "       prefix = \n"
-    "       action = wilson or wilson_improved or wilson_sse2\n"
-    "  -hot\n"
-    "       nt = 16\n"
-    "       nx = 4\n"
-    "       ny = nx\n"
-    "       nz = ny\n"
-    "  -load\n"
-    "       f = *.mdp\n"
-    "  -pion\n"
-    "  -pion-vtk\n"
-    "  -plaquette\n"
-    "  -plaquette-vtk\n"
-    "  -polyakov-vtk\n"
-    "  -quark\n"
-    "       action = clover_fast or clover_losw or clover_sse2\n"
-    "       alg = bicgstab or minres or bictstab-vtk ot minres-vtk\n"
-    "       abs_precision = 1e-12\n"
-    "       rel_precision = 1e-12\n"
-    "       matrices = FERMILAB or MILC or UKQCD\n"
-    "                         or Minkowsy-Dirac or Minkowsy-Chiral\n"
-    "       kappa = 0.12\n"
-    "       kappa_t = quark.kappa\n"
-    "       kappa_s = quark.kappa\n"
-    "       r_t = 1.0\n"
-    "       r_s = 1.0\n"
-    "       c_sw = 0.0\n"
-    "       c_E = 0.0\n"
-    "       c_B = 0.0\n"
-    "  -topcharge-vtk\n";
-    exit(0);
-}
-
 void pretty_print(string prefix, vector<mdp_real> data) {
   for(int t=0; t<data.size(); t++) {
     cout << prefix << "[" << t << "] = " << data[t] << endl;
@@ -128,8 +124,8 @@ void pretty_print(string prefix, vector<mdp_real> data) {
 void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark1,
 		mdp_args& arguments, string newfilename) {
 
-  string quark_action = arguments.get("-quark","action","clover_fast");
-  string inverter = arguments.get("-quark","alg","bicgstab");
+  string quark_action = arguments.get("-quark","action","clover_fast|clover_slow|clover_sse2");
+  string inverter = arguments.get("-quark","alg","bicgstab|minres|bicgstab-vtk|minres-vtk");
   float abs_precision = arguments.get("-quark","abs_precision",1e-12);
   float rel_precision = arguments.get("-quark","rel_precision",1e-12);
   
@@ -172,6 +168,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark1,
 		    0, 1,false);
   mdp_field<float> Q(space);
   mdp_site y(space);
+  string quarkfilename;
 
   for(int a=0; a<4; a++)
     for(int i=0; i<nc; i++) {	
@@ -181,8 +178,14 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark1,
       psi.update();
       
       inversion_vtk_prefix=newfilename+".s"+tostring(a,1)+".c"+tostring(i,1);
-      mul_invQ(phi,psi,U,quark1,abs_precision,rel_precision);
-      psi.save(inversion_vtk_prefix+".quark");
+      quarkfilename = inversion_vtk_prefix+".quark";
+      if (arguments.get("-quark","load","false|true")=="true") {
+	psi.save(inversion_vtk_prefix+".quark");
+      } else {
+	mul_invQ(phi,psi,U,quark1,abs_precision,rel_precision);
+	if (arguments.get("-quark","save","true|false")=="true")
+	  psi.save(inversion_vtk_prefix+".quark");
+      }
       if (arguments.have("-pion") || arguments.have("-pion-vtk")) {
 	if (a==0 && i==0)
 	  for(int t=0; t<U.lattice().size(0); t++)
@@ -205,36 +208,38 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark1,
 int main(int argc, char** argv) {
   mdp.open_wormholes(argc,argv);
   mdp_args arguments(argc,argv);
-  if(!arguments.length()) usage();
-  define_base_matrices(arguments.get("-quark","matrices","FERMILAB"));
+  if(!arguments.length())
+    usage();
+  define_base_matrices(arguments.get("-quark","matrices",
+    "FERMILAB|MILC|UKQCD|Minkowsy-Dirac|Minkowsy-Chiral"));
   coefficients gauge;
   coefficients quark1;
   int ndim = 4, nc=3;
   int size[4];
   string filename, newfilename, vtkfilename;
   vector<string> filenames;
-  if(arguments.have("-cold")) {
-    int nt = arguments.get("-cold","nt",16);
-    int nx = arguments.get("-cold","nx",4);
-    int ny = arguments.get("-cold","ny",nx);
-    int nz = arguments.get("-cold","nz",ny);
+  if (arguments.get("-gauge","start","load|cold|hot")=="cold") {
+    int nt = arguments.get("-gauge","nt",16);
+    int nx = arguments.get("-gauge","nx",4);
+    int ny = arguments.get("-gauge","ny",nx);
+    int nz = arguments.get("-gauge","nz",ny);
     size[0]=nt;
     size[1]=nx;
     size[2]=ny;
     size[3]=nz;
     filenames.push_back("cold.mdp");
-  } else if(arguments.have("-hot")) {
-    int nt = arguments.get("-hot","nt",16);
-    int nx = arguments.get("-hot","nx",4);
-    int ny = arguments.get("-hot","ny",nx);
-    int nz = arguments.get("-hot","nz",ny);
+  } if(arguments.get("-gauge","start","load|cold|hot")=="hot") {
+    int nt = arguments.get("-gauge","nt",16);
+    int nx = arguments.get("-gauge","nx",4);
+    int ny = arguments.get("-gauge","ny",nx);
+    int nz = arguments.get("-gauge","nz",ny);
     size[0]=nt;
     size[1]=nx;
     size[2]=ny;
     size[3]=nz;
     filenames.push_back("hot.mdp");
-  } else if(arguments.have("-load")) {
-    string pattern = arguments.get("-load","f","*.mdp");
+  } else if(arguments.get("-gauge","load","|filename.mdp|*.mdp")!="") {
+    string pattern = arguments.get("-gauge","load","");
     cout << pattern << endl;
     filenames = glob(pattern);    
     if (filenames.size()==0)
@@ -246,9 +251,10 @@ int main(int argc, char** argv) {
     size[2]=header.box[2];
     size[3]=header.box[3];
   } else {
-    mdp.error_message("no input specified");
+    mdp << "no input specified\n";
+    exit(0);
   }
-  int nconfigs = arguments.get("-gauge","n",arguments.have("-gauge")?10:0);
+  int nconfigs = arguments.get("-gauge","n",0);
   int nsteps = arguments.get("-gauge","steps",1);
   int ntherm = arguments.get("-gauge","therm",10);
   gauge["beta"] = arguments.get("-gauge","beta",0);
@@ -256,8 +262,8 @@ int main(int argc, char** argv) {
   gauge["u_t"] = arguments.get("-gauge","u_t",1.0);
   gauge["u_s"] = arguments.get("-gauge","u_s",1.0);
   string prefix = arguments.get("-gauge","prefix","");
-  string gauge_action = arguments.get("-gauge","action","wlson");
-
+  string gauge_action = arguments.get("-gauge","action",
+     "wilson|wilson_improved|wilson_sse2");
   quark1["kappa"] = arguments.get("-quark","kappa",0.12);
   quark1["kappa_t"] = arguments.get("-quark","kappa_t",quark1["kappa"]);
   quark1["kappa_s"] = arguments.get("-quark","kappa_s",quark1["kappa"]);
@@ -282,12 +288,15 @@ int main(int argc, char** argv) {
   gauge_field U(lattice,nc);
   for(int f=0; f<filenames.size(); f++) {
     filename = filenames[f];
-    if (arguments.have("-cold")) {
+    if (arguments.get("-gauge","load","load")=="cold") {
       set_cold(U);
-      U.save(filename);
-    } else if (arguments.have("-hot")) { 
-      U.save(filename);
-    } else if (arguments.have("-load")) { 
+      if (arguments.get("-gauge","save","true")=="true")
+	U.save(filename);
+    } else if (arguments.get("-gauge","load","load")=="hot") {
+      set_hot(U);
+      if (arguments.get("-gauge","save","true")=="true")
+	U.save(filename);
+    } else if (arguments.get("-gauge","load","")!="") {
       U.load(filename);
     }
     for(int n=-1; n<nconfigs; n++) {
@@ -309,7 +318,8 @@ int main(int argc, char** argv) {
 	  newfilename = filename.substr(0,filename.size()-4) + "." + tostring(n) +".mdp";
 	else
 	  newfilename = filename + "." + tostring(n) +".mdp";
-	U.save(newfilename);
+	if (arguments.get("-gauge","save","true")=="true")
+	  U.save(newfilename);
       } else {
 	newfilename = filename;
       }
@@ -336,10 +346,11 @@ int main(int argc, char** argv) {
 	mdp << "topcharge = " << tc << endl;
       }      
       if (arguments.have("-quark")) {
-	make_quark(U,gauge,quark1,arguments,newfilename);
+	make_quark(U,gauge,quark1,arguments,newfilename);	
       }
     }
   }
   mdp.close_wormholes();
   return 0;
 }
+
