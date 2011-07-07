@@ -13,6 +13,7 @@ void usage() {
     "  fermiqcd -gauge:load=*.mdp -plaquette-vtk\n"
     "  fermiqcd -gauge:load=*.mdp -polyaov-vtk\n"
     "  fermiqcd -gauge:load=*.mdp -cool:steps=20 topcharge-vtk\n"
+    "  fermiqcd -gauge:load=*.mdp -cool-vtk:steps=20\n"
     "  fermiqcd -gauge:load=*.mdp -quark:kappa=0.12:alg=minres-vtk\n"
     "  fermiqcd -gauge:load=*.mdp -quark:kappa=0.12 -pion\n"
     "  fermiqcd -gauge:load=*.mdp -quark:kappa=0.12 -pion-vtk\n"
@@ -62,6 +63,29 @@ void usage() {
     "  -pion\n"
     "  -pion-vtk\n";
     exit(0);
+}
+
+void cool(gauge_field& U, mdp_args& arguments) {
+  if (arguments.get("-cool","alg","ape")=="ape")
+    ApeSmearing::smear(U,
+		       arguments.get("-cool","alpha",0.7),
+		       arguments.get("-cool","steps",20),
+		       arguments.get("-cool","cooling",10));
+  else
+    mdp.error_message("cooling algorithm not supported");
+}
+
+void cool_vtk(gauge_field& U, mdp_args& arguments, string filename) {
+  if (arguments.get("-cool","alg","ape")=="ape")
+    for(int k=0; k<arguments.get("-cool-vtk","steps",20); k++) {
+      ApeSmearing::smear(U,
+			 arguments.get("-cool-vtk","alpha",0.7),
+			 arguments.get("-cool-vtk","steps",1),
+			 arguments.get("-cool-vtk","cooling",10));
+      topological_charge_vtk(U,filename+".cool"+tostring(k,2)+".vtk",0);
+    }
+  else
+    mdp.error_message("cooling algorithm not supported");
 }
 
 void plaquette_vtk(gauge_field& U, string filename) {
@@ -116,12 +140,14 @@ float topcharge_vtk(gauge_field& U, string filename) {
 
 
 void pretty_print(string prefix, vector<mdp_real> data) {
-  for(int t=0; t<data.size(); t++) {
-    cout << prefix << "[" << t << "] = " << data[t] << endl;
+  if (ME==0) {
+    for(int t=0; t<data.size(); t++) {
+      cout << prefix << "[" << t << "] = " << data[t] << endl;
+    }
   }
 }
 
-void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark1,
+void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 		mdp_args& arguments, string newfilename) {
 
   string quark_action = arguments.get("-quark","action","clover_fast|clover_slow|clover_sse2");
@@ -182,7 +208,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark1,
       if (arguments.get("-quark","load","false|true")=="true") {
 	psi.save(inversion_vtk_prefix+".quark");
       } else {
-	mul_invQ(phi,psi,U,quark1,abs_precision,rel_precision);
+	mul_invQ(phi,psi,U,quark,abs_precision,rel_precision);
 	if (arguments.get("-quark","save","true|false")=="true")
 	  psi.save(inversion_vtk_prefix+".quark");
       }
@@ -213,7 +239,7 @@ int main(int argc, char** argv) {
   define_base_matrices(arguments.get("-quark","matrices",
     "FERMILAB|MILC|UKQCD|Minkowsy-Dirac|Minkowsy-Chiral"));
   coefficients gauge;
-  coefficients quark1;
+  coefficients quark;
   int ndim = 4, nc=3;
   int size[4];
   string filename, newfilename, vtkfilename;
@@ -228,7 +254,7 @@ int main(int argc, char** argv) {
     size[2]=ny;
     size[3]=nz;
     filenames.push_back("cold.mdp");
-  } if(arguments.get("-gauge","start","load|cold|hot")=="hot") {
+  } else if (arguments.get("-gauge","start","load|cold|hot")=="hot") {
     int nt = arguments.get("-gauge","nt",16);
     int nx = arguments.get("-gauge","nx",4);
     int ny = arguments.get("-gauge","ny",nx);
@@ -238,9 +264,8 @@ int main(int argc, char** argv) {
     size[2]=ny;
     size[3]=nz;
     filenames.push_back("hot.mdp");
-  } else if(arguments.get("-gauge","load","|filename.mdp|*.mdp")!="") {
+  } else if(arguments.get("-gauge","start","load|cold|hot")=="load") {
     string pattern = arguments.get("-gauge","load","");
-    cout << pattern << endl;
     filenames = glob(pattern);    
     if (filenames.size()==0)
       mdp.error_message("No files to read");
@@ -264,35 +289,24 @@ int main(int argc, char** argv) {
   string prefix = arguments.get("-gauge","prefix","");
   string gauge_action = arguments.get("-gauge","action",
      "wilson|wilson_improved|wilson_sse2");
-  quark1["kappa"] = arguments.get("-quark","kappa",0.12);
-  quark1["kappa_t"] = arguments.get("-quark","kappa_t",quark1["kappa"]);
-  quark1["kappa_s"] = arguments.get("-quark","kappa_s",quark1["kappa"]);
-  quark1["r_t"] = arguments.get("-quark","r_t",1.0);
-  quark1["r_s"] = arguments.get("-quark","r_s",1.0);  
-  quark1["c_{sw}"] = arguments.get("-quark","c_sw",0.0);
-  quark1["c_E"] = arguments.get("-quark","c_E",0.0);
-  quark1["c_B"] = arguments.get("-quark","c_B",0.0);
-
-  /*
-  quark2["kappa"] = arguments.get("-quark2","kappa",quark1["kappa"]);
-  quark2["kappa_t"] = arguments.get("-quark2","kappa_t",quark1["happa_t"]);
-  quark2["kappa_s"] = arguments.get("-quark2","kappa_s",quark1["kappa_s"]);
-  quark2["r_t"] = arguments.get("-quark2","r_t",quark1["r_t"]);
-  quark2["r_s"] = arguments.get("-quark2","r_s",quark1["r_s"]);  
-  quark2["c_{sw}"] = arguments.get("-quark2","c_sw",quark1["c_{sw}"]);
-  quark2["c_E"] = arguments.get("-quark2","c_E",quark1["c_E"]);
-  quark2["c_B"] = arguments.get("-quark2","c_B",quark1["c_B"]);
-  */
+  quark["kappa"] = arguments.get("-quark","kappa",0.12);
+  quark["kappa_t"] = arguments.get("-quark","kappa_t",quark["kappa"]);
+  quark["kappa_s"] = arguments.get("-quark","kappa_s",quark["kappa"]);
+  quark["r_t"] = arguments.get("-quark","r_t",1.0);
+  quark["r_s"] = arguments.get("-quark","r_s",1.0);  
+  quark["c_{sw}"] = arguments.get("-quark","c_sw",0.0);
+  quark["c_E"] = arguments.get("-quark","c_E",0.0);
+  quark["c_B"] = arguments.get("-quark","c_B",0.0);
 
   mdp_lattice lattice(ndim,size);
   gauge_field U(lattice,nc);
   for(int f=0; f<filenames.size(); f++) {
     filename = filenames[f];
-    if (arguments.get("-gauge","load","load")=="cold") {
+    if (arguments.get("-gauge","start","load")=="cold") {
       set_cold(U);
       if (arguments.get("-gauge","save","true")=="true")
 	U.save(filename);
-    } else if (arguments.get("-gauge","load","load")=="hot") {
+    } else if (arguments.get("-gauge","start","load")=="hot") {
       set_hot(U);
       if (arguments.get("-gauge","save","true")=="true")
 	U.save(filename);
@@ -327,14 +341,11 @@ int main(int argc, char** argv) {
 	mdp << "plaquette = " << average_plaquette(U) << endl;
       }
       if (arguments.have("-cool")) {
-	if (arguments.get("-cool","alg","ape")=="ape")
-	  ApeSmearing::smear(U,
-			     arguments.get("-cool","alpha",0.7),
-			     arguments.get("-cool","steps",20),
-			     arguments.get("-cool","cooling",10));
-	else
-	  mdp.error_message("cooling algorithm not supported");
+	cool(U,arguments);
       }      
+      if (arguments.have("-cool-vtk")) {
+	cool_vtk(U,arguments,newfilename);
+      }
       if (arguments.have("-plaquette-vtk")) {
 	plaquette_vtk(U,newfilename+".plaquette.vtk");
       }      
@@ -346,7 +357,7 @@ int main(int argc, char** argv) {
 	mdp << "topcharge = " << tc << endl;
       }      
       if (arguments.have("-quark")) {
-	make_quark(U,gauge,quark1,arguments,newfilename);	
+	make_quark(U,gauge,quark,arguments,newfilename);	
       }
     }
   }
