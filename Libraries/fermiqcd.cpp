@@ -115,7 +115,7 @@ void usage() {
     "       c_sw = 0.0\n"
     "       c_E = 0.0\n"
     "       c_B = 0.0\n"
-    "  -topcharge-vtk\n"
+    "  -topcharge-vtk\n";
     exit(0);
 }
 
