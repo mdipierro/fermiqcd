@@ -1,0 +1,44 @@
+-quarkaction","clover_fast");
+  string inverter = arguments.get("-quark","alg","bicgstab");
+  float abs_precision = arguments.get("-quark","abs_precision",1e-12);
+  float rel_precision = arguments.get("-quark","rel_precision",1e-12);
+  define_base_matrices(arguments.get("-quark","matrices","FERMILAB"));
+    int nt = arguments.get("-cold","nt",16);
+    int nx = arguments.get("-cold","nx",4);
+    int ny = arguments.get("-cold","ny",nx);
+    int nz = arguments.get("-cold","nz",ny);
+    int nt = arguments.get("-hot","nt",16);
+    int nx = arguments.get("-hot","nx",4);
+    int ny = arguments.get("-hot","ny",nx);
+    int nz = arguments.get("-hot","nz",ny);
+    string pattern = arguments.get("-load","f","*.mdp");
+    mdp_field_file_header header = get_info(filenames[0].c_str());
+  int nconfigs = arguments.get("-gauge","n",arguments.have("-gauge")?10:0);
+  int nsteps = arguments.get("-gauge","steps",1);
+  int ntherm = arguments.get("-gauge","therm",10);
+  gauge["beta"] = arguments.get("-gauge","beta",0);
+  gauge["zeta"] = arguments.get("-gauge","zeta",1.0);
+  gauge["u_t"] = arguments.get("-gauge","u_t",1.0);
+  gauge["u_s"] = arguments.get("-gauge","u_s",1.0);
+  string prefix = arguments.get("-gauge","prefix","");
+  string gauge_action = arguments.get("-gauge","action","clover_fast");
+  quark1["kappa"] = arguments.get("-quark","kappa",0.12);
+  quark1["kappa_t"] = arguments.get("-quark","kappa_t",quark1["kappa"]);
+  quark1["kappa_s"] = arguments.get("-quark","kappa_s",quark1["kappa"]);
+  quark1["r_t"] = arguments.get("-quark","r_t",1.0);
+  quark1["r_s"] = arguments.get("-quark","r_s",1.0);  
+  quark1["c_{sw}"] = arguments.get("-quark","c_sw",0.0);
+  quark1["c_E"] = arguments.get("-quark","c_E",0.0);
+  quark1["c_B"] = arguments.get("-quark","c_B",0.0);
+  quark2["kappa"] = arguments.get("-quark2","kappa",quark1["kappa"]);
+  quark2["kappa_t"] = arguments.get("-quark2","kappa_t",quark1["happa_t"]);
+  quark2["kappa_s"] = arguments.get("-quark2","kappa_s",quark1["kappa_s"]);
+  quark2["r_t"] = arguments.get("-quark2","r_t",quark1["r_t"]);
+  quark2["r_s"] = arguments.get("-quark2","r_s",quark1["r_s"]);  
+  quark2["c_{sw}"] = arguments.get("-quark2","c_sw",quark1["c_{sw}"]);
+  quark2["c_E"] = arguments.get("-quark2","c_E",quark1["c_E"]);
+  quark2["c_B"] = arguments.get("-quark2","c_B",quark1["c_B"]);
+	if (arguments.get("cooling","alg","ape")=="ape")
+			     arguments.get("cooling","alpha",0.7),
+			     arguments.get("cooling","steps",20),
+			     arguments.get("cooling","cooling",10));
