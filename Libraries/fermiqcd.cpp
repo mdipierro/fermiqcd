@@ -46,7 +46,7 @@ void usage() {
     "  -quark\n"
     "       load = false\n"
     "       save = true\n"
-    "       action = clover_fast or clover_losw or clover_sse2\n"
+    "       action = clover_fast or clover_slow or clover_sse2\n"
     "       alg = bicgstab or minres or bictstab-vtk ot minres-vtk\n"
     "       abs_precision = 1e-12\n"
     "       rel_precision = 1e-12\n"
