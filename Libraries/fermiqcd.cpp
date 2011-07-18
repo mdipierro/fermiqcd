@@ -244,7 +244,7 @@ int main(int argc, char** argv) {
   int size[4];
   string filename, newfilename, vtkfilename;
   vector<string> filenames;
-  if (arguments.get("-gauge","start","load|cold|hot")=="cold") {
+  if (arguments.get("-gauge","start","cold|hot|load")=="cold") {
     int nt = arguments.get("-gauge","nt",16);
     int nx = arguments.get("-gauge","nx",4);
     int ny = arguments.get("-gauge","ny",nx);
@@ -254,7 +254,7 @@ int main(int argc, char** argv) {
     size[2]=ny;
     size[3]=nz;
     filenames.push_back("cold.mdp");
-  } else if (arguments.get("-gauge","start","load|cold|hot")=="hot") {
+  } else if (arguments.get("-gauge","start","cold|hot|load")=="hot") {
     int nt = arguments.get("-gauge","nt",16);
     int nx = arguments.get("-gauge","nx",4);
     int ny = arguments.get("-gauge","ny",nx);
@@ -264,7 +264,7 @@ int main(int argc, char** argv) {
     size[2]=ny;
     size[3]=nz;
     filenames.push_back("hot.mdp");
-  } else if(arguments.get("-gauge","start","load|cold|hot")=="load") {
+  } else if(arguments.get("-gauge","start","cold|hot|load")=="load") {
     string pattern = arguments.get("-gauge","load","");
     filenames = glob(pattern);    
     if (filenames.size()==0)
