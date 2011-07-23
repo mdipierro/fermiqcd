@@ -183,7 +183,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   fermi_field phi(U.lattice(),nc);
   mdp_site x(U.lattice());
   vector<mdp_real> pion(U.lattice().size(0));
-
+  int NT = U.lattice().size(0);
   int L[3];
   L[0]=U.lattice().size(1);
   L[1]=U.lattice().size(2);
@@ -195,7 +195,8 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   mdp_field<float> Q(space);
   mdp_site y(space);
   string quarkfilename;
-
+  mdp_complex open_prop[4][4][3][3][256];
+  
   for(int a=0; a<4; a++)
     for(int i=0; i<nc; i++) {	
       psi = 0;
@@ -214,21 +215,66 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
       }
       if (arguments.have("-pion") || arguments.have("-pion-vtk")) {
 	if (a==0 && i==0)
-	  for(int t=0; t<U.lattice().size(0); t++)
+	  for(int t=0; t<NT; t++)
 	    pion[t]=0.0;
 	forallsites(x) {
 	  y.set(x(1),x(2),x(3));
 	  for(int b=0; b<4; b++)
 	    for(int j=0; j<nc; j++)
-	      pion[x(0)]+=Q(y)=real(phi(x,b,j)*conj(phi(x,b,j)));
+	      pion[x(0)]+=Q(y)=real(phi(x,b,j)*conj(phi(x,b,j)));	  
 	}
-	mpi.add(&pion[0],U.lattice().size(0));	
+	mpi.add(&pion[0],NT);	
       }
+      if(arguments.have("-4quarks")) {
+	for(int t=0; t<NT; t++)
+	  for(int b=0; b<4; b++)
+	    for(int j=0; j<nc; j++)
+	      open_prop[a][b][i][j][t] = 0.0;
+	forallsites(x)
+	  for(int b=0; b<4; b++)
+	    for(int j=0; j<nc; j++)
+	      open_prop[a][b][i][j][x(0)]+=phi(x,b,j)*conj(phi(x,b,j));
+	mpi.add((mdp_complex*) &open_prop[0],NT*4*4*3*3);	      	
+      }
+    }  
+    if (arguments.have("-pion"))
+      pretty_print("C2",pion);      
+    if (arguments.have("-pion-vtk"))
+      Q.save_vtk(inversion_vtk_prefix+".pion.vtk");
+    if(arguments.have("-4quarks")) {
+      mdp_matrix G1, G2;
+      if(arguments.get("-4quarks","operator","5Ix5I")=="0Ix0I") {      
+	G1=Gamma[0]*Gamma5;
+	G2=Gamma[0]*Gamma5;
+      }
+      if(arguments.get("-4quarks","operator","5Ix5I")=="1Ix1I") {      
+	G1=Gamma[1]*Gamma5;
+	G2=Gamma[1]*Gamma5;
+      }
+      if(arguments.get("-4quarks","operator","5Ix5I")=="5Ix5I") {      
+	G1=Gamma5*Gamma5;
+	G2=Gamma5*Gamma5;
+      }
+      // others operators may be 0Tx0T,1Tx1T,5Tx5T,etc.
+      for(int t1=0;t1<NT;t1++)
+	for(int t2=0;t2<NT;t2++) {
+	  mdp_real c3 = 0;
+	  // manually add other contractions....
+	  for(int a=0; a<4; a++)
+	    for(int b=0; b<4; b++)
+	      for(int c=0; c<4; c++)
+		for(int d=0; d<4; d++) {
+		  mdp_complex g1 = G1(b,a);
+		  mdp_complex g2 = G2(d,c);
+		  if(g1!=0 && g2!=0) 
+		    for(int i=0; i<3; i++)
+		      for(int j=0; j<3; j++)
+			c3+=real(open_prop[a][b][i][i][NT-1-t1]*g1*
+				 open_prop[c][d][j][j][t2]*g2);
+		}
+	  mdp << "C3[" << t1 << "]["<< t2 << "] = " << c3 << endl;
+	}
     }
-  if (arguments.have("-pion"))
-    pretty_print("pion",pion);
-  if (arguments.have("-pion-vtk"))
-    Q.save_vtk(inversion_vtk_prefix+".pion.vtk");
 }
 
 int main(int argc, char** argv) {
