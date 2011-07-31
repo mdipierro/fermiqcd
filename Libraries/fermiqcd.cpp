@@ -77,7 +77,7 @@ void cool(gauge_field& U, mdp_args& arguments) {
 
 void cool_vtk(gauge_field& U, mdp_args& arguments, string filename) {
   if (arguments.get("-cool","alg","ape")=="ape")
-    for(int k=0; k<arguments.get("-cool-vtk","steps",20); k++) {
+    for(int k=0; k<arguments.get("-cool-vtk","n",20); k++) {
       ApeSmearing::smear(U,
 			 arguments.get("-cool-vtk","alpha",0.7),
 			 arguments.get("-cool-vtk","steps",1),
