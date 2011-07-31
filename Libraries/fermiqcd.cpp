@@ -290,7 +290,7 @@ int main(int argc, char** argv) {
   int size[4];
   string filename, newfilename, vtkfilename;
   vector<string> filenames;
-  if (arguments.get("-gauge","start","cold|hot|load")=="cold") {
+  if (arguments.get("-gauge","start","load|cold|hot")=="cold") {
     int nt = arguments.get("-gauge","nt",16);
     int nx = arguments.get("-gauge","nx",4);
     int ny = arguments.get("-gauge","ny",nx);
@@ -300,7 +300,7 @@ int main(int argc, char** argv) {
     size[2]=ny;
     size[3]=nz;
     filenames.push_back("cold.mdp");
-  } else if (arguments.get("-gauge","start","cold|hot|load")=="hot") {
+  } else if (arguments.get("-gauge","start","load|cold|hot")=="hot") {
     int nt = arguments.get("-gauge","nt",16);
     int nx = arguments.get("-gauge","nx",4);
     int ny = arguments.get("-gauge","ny",nx);
@@ -310,10 +310,11 @@ int main(int argc, char** argv) {
     size[2]=ny;
     size[3]=nz;
     filenames.push_back("hot.mdp");
-  } else if(arguments.get("-gauge","start","cold|hot|load")=="load") {
-    string pattern = arguments.get("-gauge","load","");
-    filenames = glob(pattern);    
-    if (filenames.size()==0)
+  } else if(arguments.get("-gauge","start","load|cold|hot")=="load") {
+    string pattern = arguments.get("-gauge","load","demo.mdp");
+    cout << "pattern=" << pattern << endl;
+    filenames = glob(pattern);
+    if (filenames.size()==0)      
       mdp.error_message("No files to read");
     mdp_field_file_header header = get_info(filenames[0].c_str());
     assert(header.ndim==4);
@@ -371,11 +372,11 @@ int main(int argc, char** argv) {
 	  ImprovedGaugeActionSSE2::heatbath(U,gauge,niter);
 #endif
 	else
-	  mdp.error_message("gauge action not supported");	
-	if (prefix!="")
-	  newfilename = prefix + "." + tostring(n) +".mdp";
-	else if(filename.substr(filename.size()-4,4)==".mdp")
+	  mdp.error_message("gauge action not supported");
+	if(filename.substr(filename.size()-4,4)==".mdp")
 	  newfilename = filename.substr(0,filename.size()-4) + "." + tostring(n) +".mdp";
+	else if (prefix!="")
+	  newfilename = prefix + "." + tostring(n) +".mdp";
 	else
 	  newfilename = filename + "." + tostring(n) +".mdp";
 	if (arguments.get("-gauge","save","true")=="true")
