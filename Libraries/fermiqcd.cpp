@@ -341,7 +341,7 @@ int main(int argc, char** argv) {
   quark["kappa_s"] = arguments.get("-quark","kappa_s",quark["kappa"]);
   quark["r_t"] = arguments.get("-quark","r_t",1.0);
   quark["r_s"] = arguments.get("-quark","r_s",1.0);  
-  quark["c_{sw}"] = arguments.get("-quark","c_sw",0.0);
+  quark["c_{SW}"] = arguments.get("-quark","c_sw",0.0);
   quark["c_E"] = arguments.get("-quark","c_E",0.0);
   quark["c_B"] = arguments.get("-quark","c_B",0.0);
 
