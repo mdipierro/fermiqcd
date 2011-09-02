@@ -272,10 +272,11 @@ mdp_complex average_path(gauge_field &U, int length, int d[][2]) {
 	psi1(x)=psi1(x)*U(x,d[i][0],d[i][1]);
     if(i<length-1) {
       psi1.update();    
+      // signs are correct this way, thanks J.Flynn
       if(d[i][0]==+1)
-	forallsites(x) psi2(x)=psi1(x+d[i][1]);
+	forallsites(x) psi2(x)=psi1(x-d[i][1]); 
       else if(d[i][0]==-1)
-	forallsites(x) psi2(x)=psi1(x-d[i][1]);
+	forallsites(x) psi2(x)=psi1(x+d[i][1]);
       psi1=psi2;
     }
   }
