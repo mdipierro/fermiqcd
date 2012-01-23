@@ -57,6 +57,7 @@
 #include "fermiqcd_dwfermi_actions.h"
 #include "fermiqcd_dwfermi_algorithms.h"
 #include "fermiqcd_hmc.h"
+#include "fermiqcd_instanton_generator_4d.h"
 
 // #include "fermiqcd_instanton4d.h"
 // #include "fermiqcd_ffts.h"
