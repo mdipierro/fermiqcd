@@ -243,18 +243,25 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
       Q.save_vtk(inversion_vtk_prefix+".pion.vtk");
     if(arguments.have("-4quarks")) {
       mdp_matrix G1, G2;
-      if(arguments.get("-4quarks","operator","5Ix5I")=="0Ix0I") {      
-	G1=Gamma[0]*Gamma5;
-	G2=Gamma[0]*Gamma5;
-      }
-      if(arguments.get("-4quarks","operator","5Ix5I")=="1Ix1I") {      
-	G1=Gamma[1]*Gamma5;
-	G2=Gamma[1]*Gamma5;
-      }
-      if(arguments.get("-4quarks","operator","5Ix5I")=="5Ix5I") {      
-	G1=Gamma5*Gamma5;
-	G2=Gamma5*Gamma5;
-      }
+      
+      string op4q = arguments.get("-4quarks","operator","5Ix5I|0Ix0I|1Ix1I|2Ix2I|3Ix3I|01Ix01I|02Ix02I|03Ix03I");
+      bool switch_color=false;
+      if(op4q=="5Ix5I") {   G1=Gamma5*Gamma5; G2=Gamma5*Gamma5; }
+      if(op4q=="0Ix0I") {   G1=Gamma[0]*Gamma5; G2=Gamma[0]*Gamma5; }
+      if(op4q=="1Ix1I") {   G1=Gamma[1]*Gamma5; G2=Gamma[1]*Gamma5; }
+      if(op4q=="2Ix2I") {   G1=Gamma[2]*Gamma5; G2=Gamma[2]*Gamma5; }
+      if(op4q=="3Ix3I") {   G1=Gamma[3]*Gamma5; G2=Gamma[3]*Gamma5; }
+      if(op4q=="01Ix01I") { G1=Gamma[0]*Gamma[1]*Gamma5; G2=Gamma[0]*Gamma[1]*Gamma5; }
+      if(op4q=="02Ix02I") { G1=Gamma[0]*Gamma[2]*Gamma5; G2=Gamma[0]*Gamma[2]*Gamma5; }
+      if(op4q=="03Ix03I") { G1=Gamma[0]*Gamma[3]*Gamma5; G2=Gamma[0]*Gamma[3]*Gamma5; }
+      if(op4q=="5Tx5T") {   G1=Gamma5*Gamma5; G2=Gamma5*Gamma5; switch_color=true; }
+      if(op4q=="0Tx0T") {   G1=Gamma[0]*Gamma5; G2=Gamma[0]*Gamma5; switch_color=true; }
+      if(op4q=="1Tx1T") {   G1=Gamma[1]*Gamma5; G2=Gamma[1]*Gamma5; switch_color=true; }
+      if(op4q=="2Tx2T") {   G1=Gamma[2]*Gamma5; G2=Gamma[2]*Gamma5; switch_color=true; }
+      if(op4q=="3Tx3T") {   G1=Gamma[3]*Gamma5; G2=Gamma[3]*Gamma5; switch_color=true; }
+      if(op4q=="01Tx01T") { G1=Gamma[0]*Gamma[1]*Gamma5; G2=Gamma[0]*Gamma[1]*Gamma5; switch_color=true; }
+      if(op4q=="02Tx02T") { G1=Gamma[0]*Gamma[2]*Gamma5; G2=Gamma[0]*Gamma[2]*Gamma5; switch_color=true; }
+      if(op4q=="03Tx03T") { G1=Gamma[0]*Gamma[3]*Gamma5; G2=Gamma[0]*Gamma[3]*Gamma5; switch_color=true; }
       // others operators may be 0Tx0T,1Tx1T,5Tx5T,etc.
       for(int t1=0;t1<NT;t1++)
 	for(int t2=0;t2<NT;t2++) {
@@ -269,8 +276,12 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 		  if(g1!=0 && g2!=0) 
 		    for(int i=0; i<3; i++)
 		      for(int j=0; j<3; j++)
-			c3+=real(open_prop[a][b][i][i][NT-1-t1]*g1*
-				 open_prop[c][d][j][j][t2]*g2);
+			if(!switch_color) 
+			  c3+=real(open_prop[a][b][i][i][NT-1-t1]*g1*
+				   open_prop[c][d][j][j][t2]*g2);
+			else
+			  c3+=real(open_prop[a][b][i][j][NT-1-t1]*g1*
+				   open_prop[c][d][j][i][t2]*g2);
 		}
 	  mdp << "C3[" << t1 << "]["<< t2 << "] = " << c3 << endl;
 	}
