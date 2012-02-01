@@ -283,11 +283,21 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 			  c3b+=real(open_prop[c][b][j][i][NT-1-t1]*g1*
 				    open_prop[a][d][i][j][t2]*g2);
 			} else
-			  throw String("not implemented yet")
-			}
+			  for(int z=1; z<9; z++)
+			    for(int k1=0; k1<3; k1++)
+			      for(int k2=0; k2<3; k2++) {
+				c3a+=real(open_prop[a][b][i][k1][NT-1-t1]*g1*
+					  Lambda[z](k1,i)*
+					  open_prop[c][d][j][k2][t2]*g2*
+					  Lambda[z](k2,j))/4;
+				c3b+=real(open_prop[c][b][j][k1][NT-1-t1]*g1*
+					  Lambda[z](k1,i)*
+					  open_prop[a][d][i][k2][t2]*g2*
+					  Lambda[z](k2,j))/4;
+			      }
 		}
-	  mdp << "C3a[" << t1 << "]["<< t2 << "] = " << c3 << endl;
-	  mdp << "C3b[" << t1 << "]["<< t2 << "] = " << c3 << endl;
+	  mdp << "C3a[" << t1 << "]["<< t2 << "] = " << c3a << endl;
+	  mdp << "C3b[" << t1 << "]["<< t2 << "] = " << c3b << endl;
 	}
     }
 }
