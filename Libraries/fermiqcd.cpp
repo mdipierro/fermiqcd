@@ -244,8 +244,8 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
     if(arguments.have("-4quarks")) {
       mdp_matrix G1, G2;
       
-      string op4q = arguments.get("-4quarks","operator","5Ix5I|0Ix0I|1Ix1I|2Ix2I|3Ix3I|01Ix01I|02Ix02I|03Ix03I");
-      bool switch_color=false;
+      string op4q = arguments.get("-4quarks","operator","5Ix5I|0Ix0I|1Ix1I|2Ix2I|3Ix3I|01Ix01I|02Ix02I|03Ix03I|5Tx5T|0Tx0T|1Tx1T|2Tx2T|3Tx3T|01Tx01T|02Tx02T|03Tx03T");
+      bool rotate=false;
       if(op4q=="5Ix5I") {   G1=Gamma5*Gamma5; G2=Gamma5*Gamma5; }
       if(op4q=="0Ix0I") {   G1=Gamma[0]*Gamma5; G2=Gamma[0]*Gamma5; }
       if(op4q=="1Ix1I") {   G1=Gamma[1]*Gamma5; G2=Gamma[1]*Gamma5; }
@@ -254,18 +254,19 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
       if(op4q=="01Ix01I") { G1=Gamma[0]*Gamma[1]*Gamma5; G2=Gamma[0]*Gamma[1]*Gamma5; }
       if(op4q=="02Ix02I") { G1=Gamma[0]*Gamma[2]*Gamma5; G2=Gamma[0]*Gamma[2]*Gamma5; }
       if(op4q=="03Ix03I") { G1=Gamma[0]*Gamma[3]*Gamma5; G2=Gamma[0]*Gamma[3]*Gamma5; }
-      if(op4q=="5Tx5T") {   G1=Gamma5*Gamma5; G2=Gamma5*Gamma5; switch_color=true; }
-      if(op4q=="0Tx0T") {   G1=Gamma[0]*Gamma5; G2=Gamma[0]*Gamma5; switch_color=true; }
-      if(op4q=="1Tx1T") {   G1=Gamma[1]*Gamma5; G2=Gamma[1]*Gamma5; switch_color=true; }
-      if(op4q=="2Tx2T") {   G1=Gamma[2]*Gamma5; G2=Gamma[2]*Gamma5; switch_color=true; }
-      if(op4q=="3Tx3T") {   G1=Gamma[3]*Gamma5; G2=Gamma[3]*Gamma5; switch_color=true; }
-      if(op4q=="01Tx01T") { G1=Gamma[0]*Gamma[1]*Gamma5; G2=Gamma[0]*Gamma[1]*Gamma5; switch_color=true; }
-      if(op4q=="02Tx02T") { G1=Gamma[0]*Gamma[2]*Gamma5; G2=Gamma[0]*Gamma[2]*Gamma5; switch_color=true; }
-      if(op4q=="03Tx03T") { G1=Gamma[0]*Gamma[3]*Gamma5; G2=Gamma[0]*Gamma[3]*Gamma5; switch_color=true; }
+      if(op4q=="5Tx5T") {   G1=Gamma5*Gamma5; G2=Gamma5*Gamma5; rotate=true; }
+      if(op4q=="0Tx0T") {   G1=Gamma[0]*Gamma5; G2=Gamma[0]*Gamma5; rotate=true; }
+      if(op4q=="1Tx1T") {   G1=Gamma[1]*Gamma5; G2=Gamma[1]*Gamma5; rotate=true; }
+      if(op4q=="2Tx2T") {   G1=Gamma[2]*Gamma5; G2=Gamma[2]*Gamma5; rotate=true; }
+      if(op4q=="3Tx3T") {   G1=Gamma[3]*Gamma5; G2=Gamma[3]*Gamma5; rotate=true; }
+      if(op4q=="01Tx01T") { G1=Gamma[0]*Gamma[1]*Gamma5; G2=Gamma[0]*Gamma[1]*Gamma5; rotate=true; }
+      if(op4q=="02Tx02T") { G1=Gamma[0]*Gamma[2]*Gamma5; G2=Gamma[0]*Gamma[2]*Gamma5; rotate=true; }
+      if(op4q=="03Tx03T") { G1=Gamma[0]*Gamma[3]*Gamma5; G2=Gamma[0]*Gamma[3]*Gamma5; rotate=true; }
       // others operators may be 0Tx0T,1Tx1T,5Tx5T,etc.
       for(int t1=0;t1<NT;t1++)
 	for(int t2=0;t2<NT;t2++) {
-	  mdp_real c3 = 0;
+	  mdp_real c3a = 0;
+	  mdp_real c3b = 0;
 	  // manually add other contractions....
 	  for(int a=0; a<4; a++)
 	    for(int b=0; b<4; b++)
@@ -276,14 +277,17 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 		  if(g1!=0 && g2!=0) 
 		    for(int i=0; i<3; i++)
 		      for(int j=0; j<3; j++)
-			if(!switch_color) 
-			  c3+=real(open_prop[a][b][i][i][NT-1-t1]*g1*
-				   open_prop[c][d][j][j][t2]*g2);
-			else
-			  c3+=real(open_prop[a][b][i][j][NT-1-t1]*g1*
-				   open_prop[c][d][j][i][t2]*g2);
+			if(!rotate) {
+			  c3a+=real(open_prop[a][b][i][i][NT-1-t1]*g1*
+				    open_prop[c][d][j][j][t2]*g2);
+			  c3b+=real(open_prop[c][b][j][i][NT-1-t1]*g1*
+				    open_prop[a][d][i][j][t2]*g2);
+			} else
+			  throw String("not implemented yet")
+			}
 		}
-	  mdp << "C3[" << t1 << "]["<< t2 << "] = " << c3 << endl;
+	  mdp << "C3a[" << t1 << "]["<< t2 << "] = " << c3 << endl;
+	  mdp << "C3b[" << t1 << "]["<< t2 << "] = " << c3 << endl;
 	}
     }
 }
@@ -293,8 +297,7 @@ int main(int argc, char** argv) {
   mdp_args arguments(argc,argv);
   if(!arguments.length())
     usage();
-  define_base_matrices(arguments.get("-quark","matrices",
-    "FERMILAB|MILC|UKQCD|Minkowsy-Dirac|Minkowsy-Chiral"));
+  define_base_matrices(arguments.get("-quark","matrices","FERMILAB|MILC|UKQCD|Minkowsy-Dirac|Minkowsy-Chiral"));
   coefficients gauge;
   coefficients quark;
   int ndim = 4, nc=3;
