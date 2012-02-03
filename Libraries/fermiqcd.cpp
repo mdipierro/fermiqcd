@@ -1,68 +1,8 @@
 #include "fermiqcd.h"
 
 void usage() {
-  mdp << 
-    "For help:\n"
-    "  fermiqcd\n\n"
-    "Examples:\n"
-    "  fermiqcd -gauge:start=cold:nt=16:nx=4\n"
-    "  fermiqcd -gauge:start=hot:nt=16:nx=4\n"
-    "  fermiqcd -gauge:load=cold.mdp\n"
-    "  fermiqcd -gauge:load=cold.mdp:steps=10:beta=5.7\n"
-    "  fermiqcd -gauge:load=*.mdp -plaquette\n"
-    "  fermiqcd -gauge:load=*.mdp -plaquette-vtk\n"
-    "  fermiqcd -gauge:load=*.mdp -polyaov-vtk\n"
-    "  fermiqcd -gauge:load=*.mdp -cool:steps=20 topcharge-vtk\n"
-    "  fermiqcd -gauge:load=*.mdp -cool-vtk:steps=20\n"
-    "  fermiqcd -gauge:load=*.mdp -quark:kappa=0.12:alg=minres-vtk\n"
-    "  fermiqcd -gauge:load=*.mdp -quark:kappa=0.12 -pion\n"
-    "  fermiqcd -gauge:load=*.mdp -quark:kappa=0.12 -pion-vtk\n"
-    "Options (key = default):\n\n"
-    "  -gauge\n"
-    "       start = hot or cold or load\n"
-    "       load = *.mdp\n"
-    "       save = true\n"
-    "       nt = 16\n"
-    "       nx = 4\n"
-    "       ny = nx\n"
-    "       nz = ny\n"
-    "       steps = 1\n"
-    "       therm = 10\n"
-    "       beta = 0\n"
-    "       zeta = 1.0\n"
-    "       u_t = 1.0\n"
-    "       u_s = 1.0\n"
-    "       prefix = \n"
-    "       action = wilson or wilson_improved or wilson_sse2\n"
-    "  -cool\n"
-    "       alg = ape\n"
-    "       alpha = 0.7\n"
-    "       steps = 20\n"
-    "       cooling = 10\n"
-    "  -plaquette\n"
-    "  -plaquette-vtk\n"
-    "  -polyakov-vtk\n"
-    "  -topcharge-vtk\n"
-    "  -quark\n"
-    "       load = false\n"
-    "       save = true\n"
-    "       action = clover_fast or clover_slow or clover_sse2\n"
-    "       alg = bicgstab or minres or bictstab-vtk ot minres-vtk\n"
-    "       abs_precision = 1e-12\n"
-    "       rel_precision = 1e-12\n"
-    "       matrices = FERMILAB or MILC or UKQCD\n"
-    "                         or Minkowsy-Dirac or Minkowsy-Chiral\n"
-    "       kappa = 0.12\n"
-    "       kappa_t = quark.kappa\n"
-    "       kappa_s = quark.kappa\n"
-    "       r_t = 1.0\n"
-    "       r_s = 1.0\n"
-    "       c_sw = 0.0\n"
-    "       c_E = 0.0\n"
-    "       c_B = 0.0\n"
-    "  -pion\n"
-    "  -pion-vtk\n";
-    exit(0);
+  mdp << "file file should be called by qcdutils_run.py (googlecode)";
+  exit(0);
 }
 
 void cool(gauge_field& U, mdp_args& arguments) {
@@ -91,11 +31,11 @@ void cool_vtk(gauge_field& U, mdp_args& arguments, string filename) {
 void plaquette_vtk(gauge_field& U, string filename) {
   mdp_field<mdp_real> q(U.lattice());
   mdp_site x(U.lattice());
-  forallsites(x) if(x(0)==0) {
+  forallsites(x) if(x(TIME)==0) {
     q(x)=0;
     for(int mu=0; mu<4; mu++)
       for(int nu=mu+1; nu<4; nu++)
-        q(x)+=real(trace(plaquette(U,x,mu,nu)));
+        q(x)+=abs(trace(plaquette(U,x,mu,nu)));
   }  
   q.save_vtk(filename,-1);
 }
@@ -121,7 +61,7 @@ void polyakov_vtk(gauge_field& U, string filename) {
     V(y)=1;
   for(int t=0; t<L[0]; t++) {
     forallsites(y) {
-      x.set(t,y(0),y(1),y(2));
+      x.set(t,y(TIME),y(1),y(2));
       V(y)=V(y)*U(x,0);
     }
   }
@@ -147,16 +87,31 @@ void pretty_print(string prefix, vector<mdp_real> data) {
   }
 }
 
-void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
-		mdp_args& arguments, string newfilename) {
+mdp_matrix parse_gamma(string g) {
+  if(g=="I") return Gamma1;
+  if(g=="0") return Gamma[0];
+  if(g=="1") return Gamma[1];
+  if(g=="2") return Gamma[2];
+  if(g=="3") return Gamma[3];
+  if(g=="5") return Gamma5;
+  if(g=="05") return Gamma[0]*Gamma5;
+  if(g=="15") return Gamma[1]*Gamma5;
+  if(g=="25") return Gamma[2]*Gamma5;
+  if(g=="35") return Gamma[3]*Gamma5;
+  if(g=="01") return Gamma[0]*Gamma[1];
+  if(g=="02") return Gamma[0]*Gamma[2];
+  if(g=="03") return Gamma[0]*Gamma[3];
+  if(g=="12") return Gamma[1]*Gamma[2];
+  if(g=="13") return Gamma[1]*Gamma[3];
+  if(g=="23") return Gamma[2]*Gamma[3];
+  throw string("undefined gamma structure");
+}
 
-  string quark_action = arguments.get("-quark","action","clover_fast|clover_slow|clover_sse2");
-  string inverter = arguments.get("-quark","alg","bicgstab|minres|bicgstab-vtk|minres-vtk");
-  float abs_precision = arguments.get("-quark","abs_precision",1e-12);
-  float rel_precision = arguments.get("-quark","rel_precision",1e-12);
-  
-  if(gauge["c_{SW}"]!=0)
-    compute_em_field(U);
+void choose_action_and_inverter(mdp_args& arguments) {
+  string quark_action = 
+    arguments.get("-quark","action","clover_fast|clover_slow|clover_sse2");
+  string inverter = 
+    arguments.get("-quark","alg","bicgstab|minres|bicgstab-vtk|minres-vtk");
   if (quark_action == "clover_fast")
     default_fermi_action=FermiCloverActionFast::mul_Q;
   else if (quark_action == "clover_slow")
@@ -177,13 +132,25 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
     default_fermi_inverter=BiCGStabVtk::inverter<fermi_field,gauge_field>;
   else
     mdp.error_message("quark inverter not supported");  
+}
+
+void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
+		mdp_args& arguments, string newfilename) {
+
+  float abs_precision = arguments.get("-quark","abs_precision",1e-12);
+  float rel_precision = arguments.get("-quark","rel_precision",1e-12);
+
+  choose_action_and_inverter(arguments);
+
+  if(gauge["c_{SW}"]!=0) compute_em_field(U);
   
   int nc = U.nc;
   fermi_field psi(U.lattice(),nc);
   fermi_field phi(U.lattice(),nc);
   mdp_site x(U.lattice());
-  vector<mdp_real> pion(U.lattice().size(0));
-  int NT = U.lattice().size(0);
+  vector<mdp_real> pion(U.lattice().size(TIME));
+  vector<mdp_real> meson(U.lattice().size(TIME));
+  int NT = U.lattice().size(TIME);
   int L[3];
   L[0]=U.lattice().size(1);
   L[1]=U.lattice().size(2);
@@ -195,12 +162,30 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   mdp_field<float> Q(space);
   mdp_site y(space);
   string quarkfilename;
+  mdp_real tmp;
+  mdp_complex s1,s2;
+  mdp_matrix G1,G2,G3;
+ 
+  // this is conditional because we need all S in some cases
+  fermi_propagator S;
   mdp_complex open_prop[4][4][3][3][256];
+  if(arguments.have("-quark")|
+     arguments.have("-meson")|
+     arguments.have("-baryon"))
+    S.allocate_fermi_propagator(U.lattice(),U.nc);
+
+  int t0 = arguments.get("-quark","source_t",0);
+  int x0 = arguments.get("-quark","source_x",0);
+  int y0 = arguments.get("-quark","source_y",0);
+  int z0 = arguments.get("-quark","source_z",0);
+  if(arguments.get("-quark","source_point","zero|center")=="center") {
+    t0 = NT/2; x0 = L[0]/2; y0 = L[1]/2; z0 = L[2]/2;    
+  }
   
   for(int a=0; a<4; a++)
     for(int i=0; i<nc; i++) {	
       psi = 0;
-      if (on_which_process(U.lattice(),0,0,0,0)==ME) x.set(0,0,0,0);
+      if (on_which_process(U.lattice(),t0,x0,y0,z0)==ME) x.set(t0,x0,y0,z0);
       psi(x,a,i)=1;
       psi.update();
       
@@ -213,93 +198,155 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 	if (arguments.get("-quark","save","true|false")=="true")
 	  psi.save(inversion_vtk_prefix+".quark");
       }
-      if (arguments.have("-pion") || arguments.have("-pion-vtk")) {
+      if (arguments.have("-pion")) {
 	if (a==0 && i==0)
 	  for(int t=0; t<NT; t++)
-	    pion[t]=0.0;
+	    pion[(t-t0+NT)%NT]=0.0;
+	Q=0;
 	forallsites(x) {
 	  y.set(x(1),x(2),x(3));
 	  for(int b=0; b<4; b++)
-	    for(int j=0; j<nc; j++)
-	      pion[x(0)]+=Q(y)=real(phi(x,b,j)*conj(phi(x,b,j)));	  
+	    for(int j=0; j<nc; j++) {
+	      tmp = abs(phi(x,b,j)*conj(phi(x,b,j)));	  
+	      pion[(x(TIME)-t0+NT)%NT] += tmp;
+	      Q(y) += tmp;
+	    }
 	}
-	mpi.add(&pion[0],NT);	
       }
-      if(arguments.have("-4quarks")) {
-	for(int t=0; t<NT; t++)
-	  for(int b=0; b<4; b++)
-	    for(int j=0; j<nc; j++)
-	      open_prop[a][b][i][j][t] = 0.0;
+      if(arguments.have("-4quarks"))
 	forallsites(x)
 	  for(int b=0; b<4; b++)
 	    for(int j=0; j<nc; j++)
-	      open_prop[a][b][i][j][x(0)]+=phi(x,b,j)*conj(phi(x,b,j));
-	mpi.add((mdp_complex*) &open_prop[0],NT*4*4*3*3);	      	
-      }
-    }  
-    if (arguments.have("-pion"))
-      pretty_print("C2",pion);      
+	      S(x,a,b,i,j) = phi(x,b,j);
+    }
+  if(arguments.have("-pion")) {  
+    mpi.add(&pion[0],NT);	
+    pretty_print("C2",pion);      
     if (arguments.have("-pion-vtk"))
       Q.save_vtk(inversion_vtk_prefix+".pion.vtk");
-    if(arguments.have("-4quarks")) {
-      mdp_matrix G1, G2;
-      
-      string op4q = arguments.get("-4quarks","operator","5Ix5I|0Ix0I|1Ix1I|2Ix2I|3Ix3I|01Ix01I|02Ix02I|03Ix03I|5Tx5T|0Tx0T|1Tx1T|2Tx2T|3Tx3T|01Tx01T|02Tx02T|03Tx03T");
-      bool rotate=false;
-      if(op4q=="5Ix5I") {   G1=Gamma5*Gamma5; G2=Gamma5*Gamma5; }
-      if(op4q=="0Ix0I") {   G1=Gamma[0]*Gamma5; G2=Gamma[0]*Gamma5; }
-      if(op4q=="1Ix1I") {   G1=Gamma[1]*Gamma5; G2=Gamma[1]*Gamma5; }
-      if(op4q=="2Ix2I") {   G1=Gamma[2]*Gamma5; G2=Gamma[2]*Gamma5; }
-      if(op4q=="3Ix3I") {   G1=Gamma[3]*Gamma5; G2=Gamma[3]*Gamma5; }
-      if(op4q=="01Ix01I") { G1=Gamma[0]*Gamma[1]*Gamma5; G2=Gamma[0]*Gamma[1]*Gamma5; }
-      if(op4q=="02Ix02I") { G1=Gamma[0]*Gamma[2]*Gamma5; G2=Gamma[0]*Gamma[2]*Gamma5; }
-      if(op4q=="03Ix03I") { G1=Gamma[0]*Gamma[3]*Gamma5; G2=Gamma[0]*Gamma[3]*Gamma5; }
-      if(op4q=="5Tx5T") {   G1=Gamma5*Gamma5; G2=Gamma5*Gamma5; rotate=true; }
-      if(op4q=="0Tx0T") {   G1=Gamma[0]*Gamma5; G2=Gamma[0]*Gamma5; rotate=true; }
-      if(op4q=="1Tx1T") {   G1=Gamma[1]*Gamma5; G2=Gamma[1]*Gamma5; rotate=true; }
-      if(op4q=="2Tx2T") {   G1=Gamma[2]*Gamma5; G2=Gamma[2]*Gamma5; rotate=true; }
-      if(op4q=="3Tx3T") {   G1=Gamma[3]*Gamma5; G2=Gamma[3]*Gamma5; rotate=true; }
-      if(op4q=="01Tx01T") { G1=Gamma[0]*Gamma[1]*Gamma5; G2=Gamma[0]*Gamma[1]*Gamma5; rotate=true; }
-      if(op4q=="02Tx02T") { G1=Gamma[0]*Gamma[2]*Gamma5; G2=Gamma[0]*Gamma[2]*Gamma5; rotate=true; }
-      if(op4q=="03Tx03T") { G1=Gamma[0]*Gamma[3]*Gamma5; G2=Gamma[0]*Gamma[3]*Gamma5; rotate=true; }
-      // others operators may be 0Tx0T,1Tx1T,5Tx5T,etc.
-      for(int t1=0;t1<NT;t1++)
-	for(int t2=0;t2<NT;t2++) {
-	  mdp_real c3a = 0;
-	  mdp_real c3b = 0;
-	  // manually add other contractions....
-	  for(int a=0; a<4; a++)
-	    for(int b=0; b<4; b++)
-	      for(int c=0; c<4; c++)
-		for(int d=0; d<4; d++) {
-		  mdp_complex g1 = G1(b,a);
-		  mdp_complex g2 = G2(d,c);
-		  if(g1!=0 && g2!=0) 
-		    for(int i=0; i<3; i++)
-		      for(int j=0; j<3; j++)
-			if(!rotate) {
-			  c3a+=real(open_prop[a][b][i][i][NT-1-t1]*g1*
-				    open_prop[c][d][j][j][t2]*g2);
-			  c3b+=real(open_prop[c][b][j][i][NT-1-t1]*g1*
-				    open_prop[a][d][i][j][t2]*g2);
-			} else
-			  for(int z=1; z<9; z++)
-			    for(int k1=0; k1<3; k1++)
-			      for(int k2=0; k2<3; k2++) {
-				c3a+=real(open_prop[a][b][i][k1][NT-1-t1]*g1*
-					  Lambda[z](k1,i)*
-					  open_prop[c][d][j][k2][t2]*g2*
-					  Lambda[z](k2,j))/4;
-				c3b+=real(open_prop[c][b][j][k1][NT-1-t1]*g1*
-					  Lambda[z](k1,i)*
-					  open_prop[a][d][i][k2][t2]*g2*
-					  Lambda[z](k2,j))/4;
-			      }
-		}
-	  mdp << "C3a[" << t1 << "]["<< t2 << "] = " << c3a << endl;
-	  mdp << "C3b[" << t1 << "]["<< t2 << "] = " << c3b << endl;
+  }
+  if(arguments.have("-meson")) {
+    Q=0;
+    for(int t=0; t<NT; t++) meson[t]=0;
+    G1 = parse_gamma(arguments.get("-meson","source","5"))*Gamma5;
+    G2 = Gamma5*parse_gamma(arguments.get("-meson","sink","5"));
+    forspincolor(a,i,U.nc) {
+      forspincolor(b,j,U.nc) {
+	s1=s2=0;
+	for(int k=0;k<U.nc;k++) {
+	  s1 += S(x,a,b,i,k)*G1(k,k);
+	  s2 += S(x,a,b,i,k)*G2(k,k);
 	}
+	tmp = abs(s1*conj(s2));
+	meson[(x(TIME)-t0+NT)%NT] += tmp;
+      }
     }
+    mpi.add(&meson[0],NT);	
+    pretty_print("C2_meson",meson);      
+    if (arguments.have("-meson-vtk"))
+      Q.save_vtk(inversion_vtk_prefix+".meson.vtk");
+  }
+  if(arguments.have("-current-static")) {
+    /// this part does not work in parallel (yet)
+    Q = 0;
+    G1 = parse_gamma(arguments.get("-meson","source","5"))*Gamma5;
+    G2 = parse_gamma(arguments.get("-meson","sink","5"));
+    G3 = Gamma5*parse_gamma(arguments.get("-meson","current","I"));
+    mdp_matrix_field Sh(U.lattice(),U.nc,U.nc);
+    for(int t=0; t<NT; t++) meson[t]=0;
+    for(int t=0; t<U.lattice().size(TIME)/2;t++)
+      if(t==0) {	
+	forallsites(x)
+	  if(x(TIME)==t) Sh(x)=1;
+      } else {
+	forallsites(x)
+	  if(x(TIME)==t) {
+	    y.set(U.lattice().size(TIME)-t,x(1),x(2),x(3));	  
+	    Sh(x)=U(y,0)*Sh(x-0)*U(x-0,0);
+	  }
+      }			     
+    forallsites(x) if(x(TIME)>=0) {
+      y.set(U.lattice().size(TIME)-x(TIME),x(1),x(2),x(3));
+      forspincolor(a,i,U.nc) { 
+	forspincolor(b,j,U.nc) {
+	  s1 = s2 = 0;
+	  for(int c=0; c<4; c++)
+	    s1 += S(y,a,c,i,j)*G3(c,b);
+	  for(int k=0; k<U.nc; k++)
+	    s2 += S(x,a,b,j,k)*conj(Sh(x,k,j)); // FIX (1+-Gamma[0])/2
+	  tmp = abs(s1*s2);
+	  meson[(x(TIME)-t0+NT)%NT] += tmp;
+	  Q(x) += tmp;
+	}
+      }
+    }
+    mpi.add(&pion[0],NT);	
+    pretty_print("C2_current",meson);      
+    if (arguments.have("-current-static-vtk"))
+      Q.save_vtk(inversion_vtk_prefix+".current-static.vtk");
+  }
+  if(arguments.have("-4quarks")) {
+    mdp_matrix G = 
+      parse_gamma(arguments.get("-4quark","source","5|I|0|1|2|3|05|15|25|35|01|02|03|12|13|23"))*Gamma5;
+    forspincolor(a,i,U.nc) {
+      forspincolor(b,j,U.nc) {
+	for(int t=0; t<U.lattice().size(TIME); t++)
+	  open_prop[a][b][i][j][t] = 0.0;	
+	for(int c=0; c<4; c++) 
+	  for(int d=0; d<4; d++) 
+	    if(G(c,d)!=0)
+	      forallsites(x)
+		for(int k=0; k<U.nc; k++)
+		  open_prop[a][b][i][j][(x(TIME)-t0+NT)%NT] +=
+		    S(x,a,c,i,k)*conj(S(x,b,d,j,k))*G(c,d);
+	mpi.add((mdp_complex*) &open_prop[0],NT*4*4*3*3);	      	
+      }
+    }
+    mdp_matrix G1, G2;
+    string op4q = arguments.get("-4quarks","operator","5Ix5I|0Ix0I|1Ix1I|2Ix2I|3Ix3I|05Ix05I|15Ix15I|25Ix25I|35Ix35I|01Ix01I|02Ix02I|03Ix03I|12Ix12I|13Ix13I|23Ix23I|5Tx5T|0Tx0T|1Tx1T|2Tx2T|3Tx3T|05Tx05T|15Tx15T|25Tx25T|35Tx35T|01Tx01T|02Tx02T|03Tx03T|12Tx12T|13Tx13T|23Tx23T");
+    bool rotate=false;
+    if(op4q[op4q.size()-1]=='T') rotate = true;
+    G1 = G2 = parse_gamma(op4q.substr(0,op4q.find("x")-1))*Gamma5;
+    // others operators may be 0Tx0T,1Tx1T,5Tx5T,etc.
+    for(int t1=0;t1<NT/2;t1++)
+      for(int t2=0;t2<NT/2;t2++) {
+	int t1s = (NT+t0-t1) % NT;
+	int t2s = (NT+t0+t2) % NT;
+	mdp_real c3a = 0;
+	mdp_real c3b = 0;
+	// manually add other contractions....
+	for(int a=0; a<4; a++)
+	  for(int b=0; b<4; b++)
+	    for(int c=0; c<4; c++)
+	      for(int d=0; d<4; d++) {
+		mdp_complex g1 = G1(b,a);
+		mdp_complex g2 = G2(d,c);
+		if(g1!=0 && g2!=0) 
+		  for(int i=0; i<3; i++)
+		    for(int j=0; j<3; j++)
+		      if(!rotate) {
+			c3a+=abs(open_prop[a][b][i][i][t1s]*g1*
+				 open_prop[c][d][j][j][t2s]*g2);
+			c3b+=abs(open_prop[c][b][j][i][t1s]*g1*
+				 open_prop[a][d][i][j][t2s]*g2);
+		      } else
+			for(int z=1; z<9; z++)
+			  for(int k1=0; k1<3; k1++)
+			    for(int k2=0; k2<3; k2++) {
+			      c3a+=abs(open_prop[a][b][i][k1][t1s]*g1*
+				       Lambda[z](k1,i)*
+				       open_prop[c][d][j][k2][t2s]*g2*
+				       Lambda[z](k2,j))/4;
+			      c3b+=abs(open_prop[c][b][j][k1][t1s]*g1*
+				       Lambda[z](k1,i)*
+				       open_prop[a][d][i][k2][t2s]*g2*
+				       Lambda[z](k2,j))/4;
+			    }
+	      }
+	mdp << "C3a[" << t1 << "]["<< t2 << "] = " << c3a << endl;
+	mdp << "C3b[" << t1 << "]["<< t2 << "] = " << c3b << endl;
+      }
+  }
 }
 
 int main(int argc, char** argv) {
@@ -314,27 +361,18 @@ int main(int argc, char** argv) {
   int size[4];
   string filename, newfilename, vtkfilename;
   vector<string> filenames;
-  if (arguments.get("-gauge","start","load|cold|hot")=="cold") {
-    int nt = arguments.get("-gauge","nt",16);
-    int nx = arguments.get("-gauge","nx",4);
-    int ny = arguments.get("-gauge","ny",nx);
-    int nz = arguments.get("-gauge","nz",ny);
-    size[0]=nt;
-    size[1]=nx;
-    size[2]=ny;
-    size[3]=nz;
-    filenames.push_back("cold.mdp");
-  } else if (arguments.get("-gauge","start","load|cold|hot")=="hot") {
-    int nt = arguments.get("-gauge","nt",16);
-    int nx = arguments.get("-gauge","nx",4);
-    int ny = arguments.get("-gauge","ny",nx);
-    int nz = arguments.get("-gauge","nz",ny);
-    size[0]=nt;
-    size[1]=nx;
-    size[2]=ny;
-    size[3]=nz;
+  int nt = arguments.get("-gauge","nt",16);
+  int nx = arguments.get("-gauge","nx",4);
+  int ny = arguments.get("-gauge","ny",nx);
+  int nz = arguments.get("-gauge","nz",ny);
+  size[0]=nt; size[1]=nx; size[2]=ny; size[3]=nz;
+  if (arguments.get("-gauge","start","load|cold|hot|instantons")=="cold") {
+    filenames.push_back("cold.mdp"); 
+  } else if (arguments.get("-gauge","start","load|cold|hot|instantons")=="hot") {
     filenames.push_back("hot.mdp");
-  } else if(arguments.get("-gauge","start","load|cold|hot")=="load") {
+  } else if (arguments.get("-gauge","start","load|cold|hot|instantons")=="instantons") {
+    filenames.push_back("custom.mdp");
+  } else if(arguments.get("-gauge","start","load|cold|hot|instantons")=="load") {
     string pattern = arguments.get("-gauge","load","demo.mdp");
     cout << "pattern=" << pattern << endl;
     filenames = glob(pattern);
@@ -348,8 +386,9 @@ int main(int argc, char** argv) {
     size[3]=header.box[3];
   } else {
     mdp << "no input specified\n";
-    exit(0);
+    exit(TIME);
   }
+
   int nconfigs = arguments.get("-gauge","n",0);
   int nsteps = arguments.get("-gauge","steps",1);
   int ntherm = arguments.get("-gauge","therm",10);
@@ -373,17 +412,34 @@ int main(int argc, char** argv) {
   gauge_field U(lattice,nc);
   for(int f=0; f<filenames.size(); f++) {
     filename = filenames[f];
-    if (arguments.get("-gauge","start","load")=="cold") {
+    if (arguments.get("-gauge","start","load|cold|hot|instantons")=="cold") {
       set_cold(U);
       if (arguments.get("-gauge","save","true")=="true")
 	U.save(filename);
-    } else if (arguments.get("-gauge","start","load")=="hot") {
+    } else if (arguments.get("-gauge","start","load|cold|hot|instantons")=="hot") {
       set_hot(U);
       if (arguments.get("-gauge","save","true")=="true")
 	U.save(filename);
+    } else if (arguments.get("-gauge","start","load|cold|hot|instantons")=="instantons") {
+      float t0 = arguments.get("-gauge","t0",0);
+      float x0 = arguments.get("-gauge","x0",0);
+      float y0 = arguments.get("-gauge","y0",0);
+      float z0 = arguments.get("-gauge","z0",0);
+      float r0 = arguments.get("-gauge","r0",1.0);
+      float t1 = arguments.get("-gauge","t1",1);
+      float x1 = arguments.get("-gauge","x1",1);
+      float y1 = arguments.get("-gauge","y1",1);
+      float z1 = arguments.get("-gauge","z1",1);
+      float r1 = arguments.get("-gauge","r1",0.0);
+      InstantonGenerator4D generator;      
+      vector<SingleInstanton4D> instantons;    
+      instantons.push_back(SingleInstanton4D(t0,x0,y0,z0,abs(r0),(r0>0)?+1:-1));
+      if(r1!=0) 
+	instantons.push_back(SingleInstanton4D(t1,x1,y1,z1,abs(r1),(r1>0)?+1:-1));
+      generator.generate(U,instantons);      
     } else if (arguments.get("-gauge","load","")!="") {
       U.load(filename);
-    }
+    } 
     for(int n=-1; n<nconfigs; n++) {
       if(n>=0) {
 	int niter =(n==0)?ntherm:nsteps;
