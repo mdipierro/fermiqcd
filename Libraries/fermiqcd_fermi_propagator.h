@@ -31,10 +31,27 @@
 /// \f$ \left<0|\bar q^i_\alpha(x), q^j_\beta(0)|\right> \f$ 
 class fermi_propagator: public mdp_complex_field {
 public:
-  int   nspin, nc;
+  int nspin, nc;
+  int gamma5_a[10][10]; 
+  int gamma5_b[10][10]; 
+  mdp_complex gamma5_val[10][10];
   fermi_propagator() {
     reset_field();
   };
+  void set_gamma5(mdp_matrix gamma5) {
+    mdp_matrix a(nspin,nspin);
+    for(int i=0; i<nspin; i++)
+      for(int j=0; j<nspin; j++)
+	a(i,j)=i*nspin+j+1;
+    a = gamma5 * a * gamma5;
+    for(int i=0; i<nspin; i++)
+      for(int j=0; j<nspin; j++) {
+	int k = int(abs(a(i,j)))-1;
+	gamma5_a[i][k]=k/nspin;
+	gamma5_b[i][k]=k%nspin;
+	gamma5_val[i][j] = a(i,j)/abs(a(i,j));
+      }
+  }
   fermi_propagator(mdp_lattice &mylattice, int nc_, int nspin_=4) {
     reset_field();
     nspin=nspin_;
@@ -48,11 +65,31 @@ public:
     nc=nc_;
     allocate_field(mylattice, nspin*nspin*nc*nc);
   };
+  
   inline mdp_matrix operator() (site x, int a, int b) {
     mdp_matrix tmp(address(x,(a*nspin+b)*nc*nc), nc, nc);
     return tmp;
   };
+  inline mdp_matrix operator() (int zero, site x, int a, int b) {
+    mdp_matrix tmp(address(x,(a*nspin+b)*nc*nc), nc, nc);
+    return tmp;
+  };
+  inline mdp_matrix operator() (site x, int zero, int a, int b) {
+    // this needs testing!
+    // S(x,zero) = gamma5 * S(zero,x)^h * gamma5
+    mdp_matrix tmp(nc,nc);
+    int c = gamma5_a[a][b];
+    int d = gamma5_b[a][b];
+    mdp_complex v = gamma5_val[a][b];
+    for(int i=0; i<nc; i++)
+      for(int j=0; j<nc; j++)
+	tmp(i,j)=v*conj((*this)(x,d,c,j,i));
+    return tmp;
+  };
   inline mdp_complex &operator() (site x, int a, int b, int i, int j) {
+    return *(address(x,((a*nspin+b)*nc+i)*nc+j));
+  };
+  const mdp_complex operator() (site x, int a, int b, int i, int j) const {
     return *(address(x,((a*nspin+b)*nc+i)*nc+j));
   };
   /// makes the quark propagator

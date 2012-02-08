@@ -372,8 +372,8 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 				       Lambda[z](k2,j))/4;
 			    }
 	      }
-	mdp << "C3a[" << t1 << "]["<< t2 << "] = " << c3a << endl;
-	mdp << "C3b[" << t1 << "]["<< t2 << "] = " << c3b << endl;
+	mdp << "C3[" << t1 << "]["<< t2 << "] = " << c3a << endl;
+	mdp << "C3x[" << t1 << "]["<< t2 << "] = " << c3b << endl;
       }
   }
 }

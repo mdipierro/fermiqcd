@@ -19,8 +19,6 @@
 
 // modified 20 Nov 2009 to include MILC convention
 
-
-
 #define GAMMA_MATRICES
 
 // ////////////////////////////////////////////////////////////////////
@@ -51,8 +49,8 @@ mdp_matrix Sigma[4][4], sigma[4];
 /// - "FERMILAB" (ok for lattice qcd)
 /// - "MILC" (ok for lattice qcd)
 /// - "UKQCD" (ok for lattice qcd)
-/// - "Minkowsy-Dirac" (not ok for lattice qcd)
-/// - "Minkowsy-Chiral" (not ok for lattice qcd)
+/// - "Minkowsky-Dirac" (not ok for lattice qcd)
+/// - "Minkowsky-Chiral" (not ok for lattice qcd)
 /// Convention can be changed within the program.
 void define_base_matrices(string convention="FERMILAB") {
   begin_function("define_base_matrices");
