@@ -372,8 +372,8 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 				       Lambda[z](k2,j))/4;
 			    }
 	      }
-	mdp << "C3[" << t1 << "]["<< t2 << "] = " << c3a << endl;
-	mdp << "C3x[" << t1 << "]["<< t2 << "] = " << c3b << endl;
+	mdp << "C3a[" << t1 << "]["<< t2 << "] = " << c3a << endl;
+	mdp << "C3b[" << t1 << "]["<< t2 << "] = " << c3b << endl;
       }
   }
 }
@@ -466,7 +466,8 @@ int main(int argc, char** argv) {
       if(r1!=0) 
 	instantons.push_back(SingleInstanton4D(t1,x1,y1,z1,abs(r1),(r1>0)?+1:-1));
       generator.generate(U,instantons);      
-    } else if (arguments.get("-gauge","load","")!="") {
+    } else if (arguments.get("-gauge","start","load|cold|hot|instantons")=="load") {
+      cout << filename << "\n";
       U.load(filename);
     } 
     for(int n=-1; n<nconfigs; n++) {

@@ -119,42 +119,38 @@ bool endswith(string a, string b) {
 }
 
 int parse_int(string a, string b, int value=0) {
-  int i=a.find(b),j=0;
-  if(i<0 || a[i-1]!=':') return value;
+  int i=a.find(string(":")+b),j=0;
+  if(i<0) return value;
   else {
-    i += b.length()+1;
+    i += b.length()+2;
     j = a.find(":",i);
     if(j<0) j=a.length();
-    cout << a.substr(i,j-i) << endl;
     sscanf(a.substr(i,j-i).c_str(),"%i",&value);
     return value;
   }
 }
 
 float parse_float(string a, string b, float value=0.0) {
-  int i=a.find(b),j=0;
-  if(i<0 || (a[i-1]!=':' && a[i-1]!=';')) return value;
+  int i=a.find(string(":")+b),j=0;
+  if(i<0) return value;
   else {
-    i += b.length()+1;
+    i += b.length()+2;
     j = a.find(":",i);
     if(j<0) j=a.length();
-    cout << a.substr(i,j-i) << endl;
     sscanf(a.substr(i,j-i).c_str(),"%f",&value);
     return value;
   }
 }
 
 string parse_string(string a, string b, string value="") {
-  int i=a.find(b),j=0;
+  int i=a.find(string(":")+b),j=0;
   char cvalue[512];
-  if(i<0 || (a[i-1]!=':' && a[i-1]!=';')) return value;
+  if(i<0) return value;
   else {
-    i += b.length()+1;
+    i += b.length()+2;
     j = a.find(":",i);
     if(j<0) j=a.length();
-    cout << a.substr(i,j-i) << endl;
-    sscanf(a.substr(i,j-i).c_str(),"%s",cvalue);
-    return string(cvalue);
+    return a.substr(i,j-i);
   }
 }
 
@@ -182,14 +178,20 @@ class mdp_args {
   }
   float get(string name, string key, double value=0.0) {
     for(int i=0; i<this->args.size(); i++)
-      if(startswith(this->args[i],name+":"))
-	return parse_float(this->args[i],key,value);
+      if(startswith(this->args[i],name+":")) {
+	value = parse_float(this->args[i],key,value);
+	break;
+      }
+    mdp << "INPUT " << name << ":" << key << "=" << value << endl;
     return value;
   }
   int get(string name, string key, int value=0) {
     for(int i=0; i<this->args.size(); i++)
-      if(startswith(this->args[i],name+":"))
-	return parse_int(this->args[i],key,value);
+      if(startswith(this->args[i],name+":")) {
+	value = parse_int(this->args[i],key,value);
+	break;
+      }
+    mdp << "INPUT " << name << ":" << key << "=" << value << endl;
     return value;
   }
   string get(string name, string key, string value="") {
@@ -197,8 +199,11 @@ class mdp_args {
     if (i>=0)
       value = value.substr(0,i);
     for(int i=0; i<this->args.size(); i++)
-      if(startswith(this->args[i],name+":"))
-	return parse_string(this->args[i],key,value);
+      if(startswith(this->args[i],name+":")) {
+	value = parse_string(this->args[i],key,value);
+	break;
+      }
+    mdp << "INPUT " << name << ":" << key << "=" << value << endl;
     return value;
   }
 };  
