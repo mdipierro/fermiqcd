@@ -1,6 +1,6 @@
 #include "fermiqcd.h"
 /*
-./a.out -gauge:start=cold:nt=32:nx=8 -quark:kappa=0.115:source_point=center:load=true -pion:vtk=true -meson:source_gamma=1:sink_gamma=1:vtk=true -current-static:vtk=true
+./a.out -gauge:start=cold:nt=32:nx=8 -quark:kappa=0.115:source_point=center:load=true -pion:vtk=true -meson:source_gamma=1:sink_gamma=1:vtk=true -current_static:vtk=true
 python qcdutils_vtk.py -u 0.5 -l 0.005 cold.mdp.point.at00016.00004.00004.00004.s3.c2.current-static.vtk
 open cold.mdp.point.at00016.00004.00004.00004.s3.c2.current-static.vtk.html
  */
@@ -21,7 +21,7 @@ void cool(gauge_field& U, mdp_args& arguments) {
 
 void cool_vtk(gauge_field& U, mdp_args& arguments, string filename) {
   if (arguments.get("-cool","alg","ape")=="ape")
-    for(int k=0; k<arguments.get("-cool-vtk","n",20); k++) {
+    for(int k=0; k<arguments.get("-cool_vtk","n",20); k++) {
       ApeSmearing::smear(U,
 			 arguments.get("-cool-vtk","alpha",0.7),
 			 arguments.get("-cool-vtk","steps",1),
@@ -50,7 +50,7 @@ void polyakov_vtk(gauge_field& U, string filename) {
   L[1]=U.lattice().size(2);
   L[2]=U.lattice().size(3);
   mdp_lattice space(3,L,
-                        default_partitioning<1>,
+                        default_partitioning<0>,
                         torus_topology,
                         0, 1,false);
   mdp_matrix_field V(space,U.nc,U.nc);
@@ -163,9 +163,9 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   L[1]=U.lattice().size(2);
   L[2]=U.lattice().size(3);
   mdp_lattice space(3,L,
-		    default_partitioning<1>,
+		    default_partitioning<0>,
 		    torus_topology,
-		    0, 1,false);
+		    0,1,false);
   mdp_field<float> Q(space);
   mdp_site y(space);
   string quarkfilename;
@@ -195,8 +195,10 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
       mdp << "quark source spin="<<a<<" color="<<i<<endl;
       if(source_type=="point") {
 	psi = 0;      
-	if (on_which_process(U.lattice(),t0,x0,y0,z0)==ME) x.set(t0,x0,y0,z0);
-	psi(x,a,i)=1;
+	if (on_which_process(U.lattice(),t0,x0,y0,z0)==ME) {
+	  x.set(t0,x0,y0,z0);
+	  psi(x,a,i)=1;
+	}
       } else if(source_type=="wall") {
 	forallsites(x) {
 	  forspincolor(b,j,U.nc) {
@@ -206,11 +208,10 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
       }
       // optional ... smer source here
       psi.update();
-      inversion_vtk_prefix=newfilename+"."+source_type;
+      inversion_vtk_prefix=newfilename+"."+source_type+".k"+tostring(quark["kappa"]);
       if (t0*t0+x0*x0+y0*y0+z0*z0)
 	inversion_vtk_prefix += ".at"+tostring(t0)+"."+tostring(x0)+"."+tostring(y0)+"."+tostring(z0);
-      inversion_vtk_prefix += ".s"+tostring(a,1)+".c"+tostring(i,1);
-      quarkfilename = inversion_vtk_prefix+".quark";
+      quarkfilename += ".s"+tostring(a,1)+".c"+tostring(i,1)+".quark";
       if (arguments.get("-quark","load","false|true")=="true") {
 	phi.load(quarkfilename);
       } else {
@@ -273,9 +274,9 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   if(arguments.have("-current-static")) {
     /// this part does not work in parallel (yet)
     Q = 0;
-    G1 = parse_gamma(arguments.get("-meson","source_gamma","5"))*Gamma5;
-    G2 = parse_gamma(arguments.get("-meson","sink_gamma","5"));
-    G3 = Gamma5*parse_gamma(arguments.get("-meson","current_gamma","I"));
+    G1 = parse_gamma(arguments.get("-current-static","source_gamma","5"))*Gamma5;
+    G2 = parse_gamma(arguments.get("-current-static","sink_gamma","5"));
+    G3 = Gamma5*parse_gamma(arguments.get("-current-static","current_gamma","I"));
     mdp_matrix_field Sh(U.lattice(),U.nc,U.nc);
     for(int t=0; t<NT; t++) meson[t]=0;
     for(int t=0; t<U.lattice().size(TIME)/2;t++)
@@ -437,7 +438,10 @@ int main(int argc, char** argv) {
   quark["c_E"] = arguments.get("-quark","c_E",0.0);
   quark["c_B"] = arguments.get("-quark","c_B",0.0);
 
-  mdp_lattice lattice(ndim,size);
+  mdp_lattice lattice(ndim,size,
+		      default_partitioning<1>,
+		      torus_topology,
+		      0,1,(arguments.get("-gauge","start","load|cold|hot|instantons")!="load" || nconfigs>0));
   gauge_field U(lattice,nc);
   for(int f=0; f<filenames.size(); f++) {
     filename = filenames[f];
