@@ -168,6 +168,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 		    0,1,false);
   mdp_field<float> Q(space);
   mdp_site y(space);
+  string prefix;
   string quarkfilename;
   mdp_real tmp;
   mdp_complex s1,s2;
@@ -208,10 +209,12 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
       }
       // optional ... smer source here
       psi.update();
-      inversion_vtk_prefix=newfilename+"."+source_type+".k"+tostring(quark["kappa"]);
-      if (t0*t0+x0*x0+y0*y0+z0*z0)
-	inversion_vtk_prefix += ".at"+tostring(t0)+"."+tostring(x0)+"."+tostring(y0)+"."+tostring(z0);
-      quarkfilename += ".s"+tostring(a,1)+".c"+tostring(i,1)+".quark";
+      prefix = newfilename+"."+source_type+".k"+tostring(quark["kappa"]);
+      if (t0*t0+x0*x0+y0*y0+z0*z0 > 0)
+	prefix = prefix + ".at"+tostring(t0) + "." + tostring(x0) + \
+	  "." + tostring(y0) + "." + tostring(z0);
+      inversion_vtk_prefix = prefix + ".s"+tostring(a,1)+".c"+tostring(i,1);
+      quarkfilename = inversion_vtk_prefix + ".quark";
       if (arguments.get("-quark","load","false|true")=="true") {
 	phi.load(quarkfilename);
       } else {
@@ -245,7 +248,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
     mpi.add(&pion[0],NT);	
     pretty_print("C2",pion);      
     if (arguments.get("-pion","vtk","false|true")=="true")
-      Q.save_vtk(inversion_vtk_prefix+".pion.vtk");
+      Q.save_vtk(prefix+".pion.vtk");
   }
   /// mind - before here Q ony to be used for pion
   if(arguments.have("-meson")) {
@@ -269,7 +272,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
     mpi.add(&meson[0],NT);	
     pretty_print("C2_meson",meson);      
     if (arguments.get("-meson","vtk","false|true")=="true")
-      Q.save_vtk(inversion_vtk_prefix+".meson.vtk");
+      Q.save_vtk(prefix+".meson.vtk");
   }
   if(arguments.have("-current-static")) {
     /// this part does not work in parallel (yet)
@@ -313,7 +316,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
     mpi.add(&current[0],NT);	
     pretty_print("C2_current",current);      
     if (arguments.get("-current-static","vtk","false|true")=="true")
-      Q.save_vtk(inversion_vtk_prefix+".current-static.vtk");
+      Q.save_vtk(prefix+".current-static.vtk");
   }
   if(arguments.have("-4quarks")) {
     mdp_matrix G = 
