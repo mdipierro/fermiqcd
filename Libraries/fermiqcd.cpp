@@ -1,9 +1,10 @@
 #include "fermiqcd.h"
 /*
-./a.out -gauge:start=cold:nt=32:nx=8 -quark:kappa=0.115:source_point=center:load=true -pion:vtk=true -meson:source_gamma=1:sink_gamma=1:vtk=true -current_static:vtk=true
+./a.out -gauge:start=cold:nt=32:nx=8 -quark:kappa=0.115:source_point=center:load=true -pion:vtk=true -current-static:source_gamma=1:sink_gamma=1:vtk=true
 python qcdutils_vtk.py -u 0.5 -l 0.005 cold.mdp.point.at00016.00004.00004.00004.s3.c2.current-static.vtk
 open cold.mdp.point.at00016.00004.00004.00004.s3.c2.current-static.vtk.html
  */
+
 void usage() {
   mdp << "file file should be called by qcdutils_run.py (googlecode)";
   exit(0);
@@ -264,7 +265,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 	    s1 += S(x,a,c,i,j)*G2(c,b);
 	    s2 += conj(S(x,c,b,i,j))*G1(c,a);
 	  }
-	  tmp = real(s1*s2);
+	  tmp = abs(s1*s2);
 	  meson[(x(TIME)-t0+NT)%NT] += tmp;
 	}
       }
@@ -306,7 +307,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 		s2 += S(x,b,c,j,k)*G2(c,a)*conj(Sh(x,k,i));
 	    }
 	    if(a>2) { // non-zero components of (1-gamma[0])/2
-	      tmp = real(s1*s2);
+	      tmp = abs(s1*s2);
 	      current[(x(TIME)-t0+NT)%NT] += tmp;
 	      Q(y) += tmp;
 	    }
@@ -358,22 +359,22 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 		  for(int i=0; i<U.nc; i++)
 		    for(int j=0; j<U.nc; j++)
 		      if(!rotate) {
-			c3a+=real(open_prop[a][b][i][i][t1s]*g1*
-				  open_prop[c][d][j][j][t2s]*g2);
-			c3b+=real(open_prop[c][b][j][i][t1s]*g1*
-				  open_prop[a][d][i][j][t2s]*g2);
+			c3a+=abs(open_prop[a][b][i][i][t1s]*g1*
+				 open_prop[c][d][j][j][t2s]*g2);
+			c3b+=abs(open_prop[c][b][j][i][t1s]*g1*
+				 open_prop[a][d][i][j][t2s]*g2);
 		      } else
 			for(int z=1; z<9; z++)
 			  for(int k1=0; k1<U.nc; k1++)
 			    for(int k2=0; k2<U.nc; k2++) {
-			      c3a+=real(open_prop[a][b][i][k1][t1s]*g1*
-					Lambda[z](k1,i)*
-					open_prop[c][d][j][k2][t2s]*g2*
-					Lambda[z](k2,j))/4;
-			      c3b+=real(open_prop[c][b][j][k1][t1s]*g1*
-					Lambda[z](k1,i)*
-					open_prop[a][d][i][k2][t2s]*g2*
-					Lambda[z](k2,j))/4;
+			      c3a+=abs(open_prop[a][b][i][k1][t1s]*g1*
+				       Lambda[z](k1,i)*
+				       open_prop[c][d][j][k2][t2s]*g2*
+				       Lambda[z](k2,j))/4;
+			      c3b+=abs(open_prop[c][b][j][k1][t1s]*g1*
+				       Lambda[z](k1,i)*
+				       open_prop[a][d][i][k2][t2s]*g2*
+				       Lambda[z](k2,j))/4;
 			    }
 	      }
 	mdp << "C3a[" << t1 << "]["<< t2 << "] = " << c3a << endl;
