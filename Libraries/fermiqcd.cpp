@@ -255,8 +255,8 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   if(arguments.have("-meson")) {
     Q=0;
     for(int t=0; t<NT; t++) meson[t]=0;
-    G1 = Gamma5*parse_gamma(arguments.get("-meson","source_gamma","5"));
-    G2 = parse_gamma(arguments.get("-meson","sink_gamma","5"))*Gamma5;
+    G1 = Gamma5*parse_gamma(arguments.get("-meson","source_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I"));
+    G2 = parse_gamma(arguments.get("-meson","sink_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I"))*Gamma5;
     forspincolor(a,i,U.nc) {
       forspincolor(b,j,U.nc) {
 	forallsites(x) {
@@ -278,9 +278,9 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   if(arguments.have("-current-static")) {
     /// this part does not work in parallel (yet)
     Q = 0;
-    G1 = parse_gamma(arguments.get("-current-static","source_gamma","5"))*Gamma5;
-    G2 = parse_gamma(arguments.get("-current-static","sink_gamma","5"));
-    G3 = Gamma5*parse_gamma(arguments.get("-current-static","current_gamma","I"));
+    G1 = parse_gamma(arguments.get("-current-static","source_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I"))*Gamma5;
+    G2 = parse_gamma(arguments.get("-current-static","sink_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I"));
+    G3 = Gamma5*parse_gamma(arguments.get("-current-static","current_gamma","I|0|1|2|3|5|01|02|03|12|13|05|15|25|35"));
     mdp_matrix_field Sh(U.lattice(),U.nc,U.nc);
     for(int t=0; t<NT; t++) meson[t]=0;
     for(int t=0; t<U.lattice().size(TIME)/2;t++)
