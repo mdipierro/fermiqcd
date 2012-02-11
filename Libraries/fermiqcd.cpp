@@ -260,6 +260,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
     forspincolor(a,i,U.nc) {
       forspincolor(b,j,U.nc) {
 	forallsites(x) {
+	  y.set(x(1),x(2),x(3));
 	  s1=s2=0;
 	  for(int c=0;c<4;c++) {
 	    s1 += S(x,a,c,i,j)*G2(c,b);
@@ -267,6 +268,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 	  }
 	  tmp = abs(s1*s2);
 	  meson[(x(TIME)-t0+NT)%NT] += tmp;
+	  Q(y) += tmp;
 	}
       }
     }
