@@ -33,6 +33,8 @@ bool mdp_field<T>::load(string filename,
 			bool (*user_read)(FILE*, void*, mdp_int, mdp_int, mdp_int, const mdp_lattice&),
 			bool try_swicth_endianess) {
 
+  if(!file_exists(filename))
+    throw string("file ")+filename+string(" does not exist");
   filename=latest_file(filename);
   if(filename=="?") return false;
   mdp_int header_size=0;

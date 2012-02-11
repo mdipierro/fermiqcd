@@ -25,6 +25,14 @@ string tostring(int k, int length=5) {
   return string(buf);
 }
 
+bool file_exists(string filename) {
+  if (FILE * file = fopen(filename.c_str(), "rb")) {
+    fclose(file);
+    return true;
+  }
+  return false;
+}
+
 vector<string> glob(string pattern) {
   vector<string> v;
   glob_t pglob;
