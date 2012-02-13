@@ -173,7 +173,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   string quarkfilename;
   mdp_real tmp;
   mdp_complex s1,s2;
-  mdp_matrix G1,G2,G3;
+  mdp_matrix G1,G2,G3,G4;
  
   // this is conditional because we need all S in some cases
   fermi_propagator S;
@@ -188,7 +188,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   int y0 = arguments.get("-quark","source_y",0);
   int z0 = arguments.get("-quark","source_z",0);
   if(arguments.get("-quark","source_point","zero|center")=="center") {
-    t0 = NT/2; x0 = L[0]/2; y0 = L[1]/2; z0 = L[2]/2;    
+    t0 = 0; x0 = L[0]/2; y0 = L[1]/2; z0 = L[2]/2;    
   }
 
   string source_type = arguments.get("-quark","source_type","point|wall");
@@ -283,6 +283,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
     G1 = parse_gamma(arguments.get("-current-static","source_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I"))*Gamma5;
     G2 = parse_gamma(arguments.get("-current-static","sink_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I"));
     G3 = Gamma5*parse_gamma(arguments.get("-current-static","current_gamma","I|0|1|2|3|5|01|02|03|12|13|05|15|25|35"));
+    G4 = G2*(1-Gamma[0])/2*G1; 
     mdp_matrix_field Sh(U.lattice(),U.nc,U.nc);
     for(int t=0; t<NT; t++) meson[t]=0;
     for(int t=0; t<U.lattice().size(TIME)/2;t++)
@@ -296,7 +297,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 	    Sh(x)=U(z,0)*Sh(x-0)*U(x-0,0);
 	  }
       }			     
-    forallsites(x) 
+    forallsites(x) // FIX G1 !!!!!!!!
       if(x(TIME)>=0) {
 	z.set((NT+2*t0-x(TIME))%NT,x(1),x(2),x(3));
 	y.set(x(1),x(2),x(3));
@@ -306,13 +307,11 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 	    for(int c=0; c<4; c++) {
 	      s1 += conj(S(z,c,a,j,i))*G3(c,b);
 	      for(int k=0; k<U.nc; k++)
-		s2 += S(x,b,c,j,k)*G2(c,a)*conj(Sh(x,k,i));
+		s2 += S(x,b,c,j,k)*G4(c,a)*conj(Sh(x,k,i));
 	    }
-	    if(a>2) { // non-zero components of (1-gamma[0])/2
-	      tmp = abs(s1*s2);
-	      current[(x(TIME)-t0+NT)%NT] += tmp;
-	      Q(y) += tmp;
-	    }
+	    tmp = abs(s1*s2);
+	    current[(x(TIME)-t0+NT)%NT] += tmp;
+	    Q(y) += tmp;
 	  }
 	}
       }
