@@ -173,3 +173,24 @@ void print_propagator(fermi_propagator &S) {
   } while(1);
   begin_function("print_propagator");
 };
+
+void smear_propagator(fermi_propagator& S, gauge_field &U, int smear_steps=10, float alpha=1.0) {
+  mdp_matrix_field V(U.lattice(),U.nc,U.nc);
+  mdp_site x(U.lattice());
+  for(int n=0; n<smear_steps; n++) {
+    for(int a=0; a<4; a++)
+      for(int b=0; b<4; b++) {
+        forallsites(x) {
+          V(x) = alpha*S(x,a,b);
+          for(int mu=0; mu<4;mu++)
+            V(x) += U(x,mu)*S(x+mu,a,b) + hermitian(U(x-mu,mu))*S(x-mu,a,b);
+        }
+        V.update();
+        forallsites(x) {
+          for(int i=0; i<U.nc; i++)
+            for(int j=0; j<U.nc; j++)
+              S(x,a,b,i,j) = V(x,i,j)/(alpha+8);
+        }
+      }
+  }
+}

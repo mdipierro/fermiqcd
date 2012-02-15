@@ -329,3 +329,23 @@ void define_base_matrices(string convention="FERMILAB") {
   }
   end_function("define_base_matrices");
 }
+
+mdp_matrix parse_gamma(string g) {
+  if(g=="I") return Gamma1;
+  if(g=="0") return Gamma[0];
+  if(g=="1") return Gamma[1];
+  if(g=="2") return Gamma[2];
+  if(g=="3") return Gamma[3];
+  if(g=="5") return Gamma5;
+  if(g=="05") return Gamma[0]*Gamma5;
+  if(g=="15") return Gamma[1]*Gamma5;
+  if(g=="25") return Gamma[2]*Gamma5;
+  if(g=="35") return Gamma[3]*Gamma5;
+  if(g=="01") return Gamma[0]*Gamma[1];
+  if(g=="02") return Gamma[0]*Gamma[2];
+  if(g=="03") return Gamma[0]*Gamma[3];
+  if(g=="12") return Gamma[1]*Gamma[2];
+  if(g=="13") return Gamma[1]*Gamma[3];
+  if(g=="23") return Gamma[2]*Gamma[3];
+  throw string("undefined gamma structure");
+}

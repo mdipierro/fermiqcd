@@ -71,7 +71,6 @@ void polyakov_vtk(gauge_field& U, string filename) {
       V(y)=V(y)*U(x,0);
     }
   }
-
   forallsites(y) {
     mdp_complex z=trace(V(y));
     q(y,0)=real(z);
@@ -79,11 +78,6 @@ void polyakov_vtk(gauge_field& U, string filename) {
   }
   q.save_vtk(filename,-1,0,0,false);
 }
-
-float topcharge_vtk(gauge_field& U, string filename) {
-  return topological_charge_vtk(U,filename,0);
-}
-
 
 void pretty_print(string prefix, vector<mdp_real> data) {
   if (ME==0) {
@@ -93,83 +87,18 @@ void pretty_print(string prefix, vector<mdp_real> data) {
   }
 }
 
-mdp_matrix parse_gamma(string g) {
-  if(g=="I") return Gamma1;
-  if(g=="0") return Gamma[0];
-  if(g=="1") return Gamma[1];
-  if(g=="2") return Gamma[2];
-  if(g=="3") return Gamma[3];
-  if(g=="5") return Gamma5;
-  if(g=="05") return Gamma[0]*Gamma5;
-  if(g=="15") return Gamma[1]*Gamma5;
-  if(g=="25") return Gamma[2]*Gamma5;
-  if(g=="35") return Gamma[3]*Gamma5;
-  if(g=="01") return Gamma[0]*Gamma[1];
-  if(g=="02") return Gamma[0]*Gamma[2];
-  if(g=="03") return Gamma[0]*Gamma[3];
-  if(g=="12") return Gamma[1]*Gamma[2];
-  if(g=="13") return Gamma[1]*Gamma[3];
-  if(g=="23") return Gamma[2]*Gamma[3];
-  throw string("undefined gamma structure");
-}
-
-void choose_action_and_inverter(mdp_args& arguments) {
-  string quark_action = 
-    arguments.get("-quark","action","clover_fast|clover_slow|clover_sse2");
-  string inverter = 
-    arguments.get("-quark","alg","bicgstab|minres|bicgstab-vtk|minres-vtk");
-  mdp << "using action=" << quark_action << " inverter=" << inverter << endl;
-  if (quark_action == "clover_fast")
-    default_fermi_action=FermiCloverActionFast::mul_Q;
-  else if (quark_action == "clover_slow")
-    default_fermi_action=FermiCloverActionSlow::mul_Q;
-#if defined(SSE2)
-  else if (quark_action == "clover_sse2")
-    default_fermi_action=FermiCloverActionSSE2::mul_Q;
-#endif	  
-  else
-    mdp.error_message("quark action not supported");
-  if (inverter == "minres")
-    default_fermi_inverter=MinRes::inverter<fermi_field,gauge_field>;
-  else if (inverter == "bicgstab")
-    default_fermi_inverter=BiCGStab::inverter<fermi_field,gauge_field>;
-  else if (inverter == "minres-vtk")
-    default_fermi_inverter=MinResVtk::inverter<fermi_field,gauge_field>;
-  else if (inverter == "bicgstab-vtk")
-    default_fermi_inverter=BiCGStabVtk::inverter<fermi_field,gauge_field>;
-  else
-    mdp.error_message("quark inverter not supported");  
-}
-
-void smear_propagator(fermi_propagator& S, gauge_field &U, int smear_steps=10,
-		      float alpha=1.0) {
-  mdp_matrix_field V(U.lattice(),U.nc,U.nc);
-  mdp_site x(U.lattice());
-  for(int n=0; n<smear_steps; n++) {
-    for(int a=0; a<4; a++)
-      for(int b=0; b<4; b++) {
-	forallsites(x) {
-	  V(x) = alpha*S(x,a,b);
-	  for(int mu=0; mu<4;mu++)
-	    V(x) += U(x,mu)*S(x+mu,a,b) + hermitian(U(x-mu,mu))*S(x-mu,a,b);
-	}
-	V.update();
-	forallsites(x) {
-	  for(int i=0; i<U.nc; i++)
-	    for(int j=0; j<U.nc; j++)
-	      S(x,a,b,i,j) = V(x,i,j)/(alpha+8);
-	}
-      }
-  }
-}
-
 void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 		mdp_args& arguments, string newfilename) {
 
   float abs_precision = arguments.get("-quark","abs_precision",1e-12);
   float rel_precision = arguments.get("-quark","rel_precision",1e-12);
+  string quark_action = 
+    arguments.get("-quark","action","clover_fast|clover_slow|clover_sse2");
+  string inverter = 
+    arguments.get("-quark","alg","bicgstab|minres|bicgstab-vtk|minres-vtk");
+  mdp << "using action=" << quark_action << " inverter=" << inverter << endl;
 
-  choose_action_and_inverter(arguments);
+  select_action_and_inverter(quark_action, inverter);
 
   if(gauge["c_{SW}"]!=0) compute_em_field(U);
   
@@ -196,11 +125,12 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   // this is conditional because we need all S in some cases
   fermi_propagator S;
   mdp_complex open_prop[4][4][10][10][512];
-  if(arguments.have("-current-static")||
-     arguments.have("-meson")||
-     arguments.have("-wave-static")||
-     arguments.have("-baryon"))
-    S.allocate_fermi_propagator(U.lattice(),U.nc);
+  bool use_propagator = 
+    arguments.have("-current-static")||
+    arguments.have("-meson")||
+    arguments.have("-wave-static")||
+    arguments.have("-baryon");
+  if(use_propagator) S.allocate_fermi_propagator(U.lattice(),U.nc);
 
   int t0 = arguments.get("-quark","source_t",0);
   int x0 = arguments.get("-quark","source_x",0);
@@ -257,15 +187,17 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 	    }
 	}
       }
-      if(arguments.have("-4quarks")||
-	 arguments.have("-meson")||
-	 arguments.have("-current-static")||
-	 arguments.have("-wave-static"))
+      if(use_propagator)
 	forallsites(x)
 	  for(int b=0; b<4; b++)
 	    for(int j=0; j<nc; j++)
 	      S(x,a,b,i,j) = phi(x,b,j);
     }
+  if(use_propagator) {
+    int smear_steps = arguments.get("-quark","smear_steps",0);
+    float smear_alpha = arguments.get("-quark","smear_alpha",1.0);
+    smear_propagator(S,U,smear_steps,smear_alpha);
+  }
   if(arguments.have("-pion")) {  
     mpi.add(&pion[0],NT);	
     pretty_print("C2",pion);      
@@ -402,6 +334,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
       }
   }
   if(arguments.have("-wave-static")) {
+    throw string("NotImplemented");
     // WORK IN PROGRESS - only works on cold - no paths
     string source_gamma = arguments.get("-wave-static","source_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I");
     int smear_steps = arguments.get("-wave-static","smear_steps",10);
@@ -436,13 +369,14 @@ int main(int argc, char** argv) {
   int nz = arguments.get("-gauge","nz",ny);
   int nc = arguments.get("-gauge","nc",3);
   size[0]=nt; size[1]=nx; size[2]=ny; size[3]=nz;
-  if (arguments.get("-gauge","start","load|cold|hot|instantons")=="cold") {
+  string gauge_start = arguments.get("-gauge","start","load|cold|hot|instantons");
+  if (gauge_start=="cold")
     filenames.push_back("cold.mdp"); 
-  } else if (arguments.get("-gauge","start","load|cold|hot|instantons")=="hot") {
+  else if (gauge_start=="hot")
     filenames.push_back("hot.mdp");
-  } else if (arguments.get("-gauge","start","load|cold|hot|instantons")=="instantons") {
+  else if (gauge_start=="instantons")
     filenames.push_back("custom.mdp");
-  } else if(arguments.get("-gauge","start","load|cold|hot|instantons")=="load") {
+  else if(gauge_start=="load") {
     string pattern = arguments.get("-gauge","load","demo.mdp");
     filenames = glob(pattern);
     if (filenames.size()==0)      
@@ -480,19 +414,19 @@ int main(int argc, char** argv) {
   mdp_lattice lattice(ndim,size,
 		      default_partitioning<1>,
 		      torus_topology,
-		      0,1,(arguments.get("-gauge","start","load|cold|hot|instantons")!="load" || nconfigs>0));
+		      0,1,(gauge_start!="load" || nconfigs>0));
   gauge_field U(lattice,nc);
   for(int f=0; f<filenames.size(); f++) {
     filename = filenames[f];
-    if (arguments.get("-gauge","start","load|cold|hot|instantons")=="cold") {
+    if (gauge_start=="cold") {
       set_cold(U);
       if (arguments.get("-gauge","save","true")=="true")
 	U.save(filename);
-    } else if (arguments.get("-gauge","start","load|cold|hot|instantons")=="hot") {
+    } else if (gauge_start=="hot") {
       set_hot(U);
       if (arguments.get("-gauge","save","true")=="true")
 	U.save(filename);
-    } else if (arguments.get("-gauge","start","load|cold|hot|instantons")=="instantons") {
+    } else if (gauge_start=="instantons") {
       float t0 = arguments.get("-gauge","t0",0);
       float x0 = arguments.get("-gauge","x0",0);
       float y0 = arguments.get("-gauge","y0",0);
@@ -509,7 +443,7 @@ int main(int argc, char** argv) {
       if(r1!=0) 
 	instantons.push_back(SingleInstanton4D(t1,x1,y1,z1,abs(r1),(r1>0)?+1:-1));
       generator.generate(U,instantons);      
-    } else if (arguments.get("-gauge","start","load|cold|hot|instantons")=="load") {
+    } else if (gauge_start=="load") {
       cout << filename << "\n";
       U.load(filename);
     } 
@@ -552,7 +486,7 @@ int main(int argc, char** argv) {
 	polyakov_vtk(U,newfilename+".polyakov.vtk");
       }      
       if (arguments.have("-topcharge-vtk")) {
-	float tc = topcharge_vtk(U,newfilename+".topcharge.vtk");
+	float tc = topological_charge_vtk(U,newfilename+".topcharge.vtk",-1);
 	mdp << "topcharge = " << tc << endl;
       }      
       if (arguments.have("-quark")) {

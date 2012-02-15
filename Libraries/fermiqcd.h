@@ -54,6 +54,8 @@
 #include "fermiqcd_staggered_propagator.h"
 #include "fermiqcd_staggered_mesons.h"
 
+#include "fermiqcd_selector.h"
+
 #include "fermiqcd_dwfermi_field.h"
 #include "fermiqcd_dwfermi_actions.h"
 #include "fermiqcd_dwfermi_algorithms.h"
