@@ -51,9 +51,9 @@ void polyakov_vtk(gauge_field& U, string filename) {
   L[1]=U.lattice().size(2);
   L[2]=U.lattice().size(3);
   mdp_lattice space(3,L,
-                        default_partitioning<0>,
-                        torus_topology,
-                        0, 1,false);
+		    default_partitioning<0>,
+		    torus_topology,
+		    0, 1,false);
   mdp_matrix_field V(space,U.nc,U.nc);
   mdp_field<mdp_real> q(space,2);
   mdp_site x(U.lattice());
@@ -163,12 +163,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   L[0]=U.lattice().size(1);
   L[1]=U.lattice().size(2);
   L[2]=U.lattice().size(3);
-  mdp_lattice space(3,L,
-		    default_partitioning<0>,
-		    torus_topology,
-		    0,1,false);
-  mdp_field<float> Q(space);
-  mdp_site y(space);
+  mdp_field<float> Q(U.lattice());
   string prefix;
   string quarkfilename;
   mdp_real tmp;
@@ -230,12 +225,11 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 	  Q=0;
 	}
 	forallsitesandcopies(x) {
-	  y.set(x(1),x(2),x(3));
 	  for(int b=0; b<4; b++)
 	    for(int j=0; j<nc; j++) {
 	      tmp = real(phi(x,b,j)*conj(phi(x,b,j)));	  
 	      pion[(x(TIME)-t0+NT)%NT] += tmp;
-	      Q(y) += tmp;
+	      Q(x) += tmp;
 	    }
 	}
       }
@@ -260,15 +254,14 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
     forspincolor(a,i,U.nc) {
       forspincolor(b,j,U.nc) {
 	forallsites(x) {
-	  y.set(x(1),x(2),x(3));
 	  s1=s2=0;
 	  for(int c=0;c<4;c++) {
 	    s1 += S(x,a,c,i,j)*G2(c,b);
 	    s2 += conj(S(x,c,b,i,j))*G1(c,a);
 	  }
-	  tmp = abs(s1*s2);
+	  tmp = real(s1*s2);
 	  meson[(x(TIME)-t0+NT)%NT] += tmp;
-	  Q(y) += tmp;
+	  Q(x) += tmp;
 	}
       }
     }
@@ -283,7 +276,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
     G1 = parse_gamma(arguments.get("-current-static","source_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I"))*Gamma5;
     G2 = parse_gamma(arguments.get("-current-static","sink_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I"));
     G3 = Gamma5*parse_gamma(arguments.get("-current-static","current_gamma","I|0|1|2|3|5|01|02|03|12|13|05|15|25|35"));
-    G4 = G2*(1-Gamma[0])/2*G1; 
+    G4 = G2*(1-Gamma[0])/2*G1;
     mdp_matrix_field Sh(U.lattice(),U.nc,U.nc);
     for(int t=0; t<NT; t++) meson[t]=0;
     for(int t=0; t<U.lattice().size(TIME)/2;t++)
@@ -300,18 +293,17 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
     forallsites(x) // FIX G1 !!!!!!!!
       if(x(TIME)>=0) {
 	z.set((NT+2*t0-x(TIME))%NT,x(1),x(2),x(3));
-	y.set(x(1),x(2),x(3));
 	forspincolor(a,i,U.nc) { 
 	  forspincolor(b,j,U.nc) {
 	    s1 = s2 = 0;
 	    for(int c=0; c<4; c++) {
 	      s1 += conj(S(z,c,a,j,i))*G3(c,b);
 	      for(int k=0; k<U.nc; k++)
-		s2 += S(x,b,c,j,k)*G4(c,a)*conj(Sh(x,k,i));
+		s2 += S(x,b,c,j,k)*G4(c,a)*conj(Sh(x,i,k));
 	    }
-	    tmp = abs(s1*s2);
+	    tmp = real(s1*s2);
 	    current[(x(TIME)-t0+NT)%NT] += tmp;
-	    Q(y) += tmp;
+	    Q(x) += tmp;
 	  }
 	}
       }
@@ -360,22 +352,22 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 		  for(int i=0; i<U.nc; i++)
 		    for(int j=0; j<U.nc; j++)
 		      if(!rotate) {
-			c3a+=abs(open_prop[a][b][i][i][t1s]*g1*
-				 open_prop[c][d][j][j][t2s]*g2);
-			c3b+=abs(open_prop[c][b][j][i][t1s]*g1*
-				 open_prop[a][d][i][j][t2s]*g2);
+			c3a+=real(open_prop[a][b][i][i][t1s]*g1*
+				  open_prop[c][d][j][j][t2s]*g2);
+			c3b+=real(open_prop[c][b][j][i][t1s]*g1*
+				  open_prop[a][d][i][j][t2s]*g2);
 		      } else
 			for(int z=1; z<9; z++)
 			  for(int k1=0; k1<U.nc; k1++)
 			    for(int k2=0; k2<U.nc; k2++) {
-			      c3a+=abs(open_prop[a][b][i][k1][t1s]*g1*
-				       Lambda[z](k1,i)*
-				       open_prop[c][d][j][k2][t2s]*g2*
-				       Lambda[z](k2,j))/4;
-			      c3b+=abs(open_prop[c][b][j][k1][t1s]*g1*
-				       Lambda[z](k1,i)*
-				       open_prop[a][d][i][k2][t2s]*g2*
-				       Lambda[z](k2,j))/4;
+			      c3a+=real(open_prop[a][b][i][k1][t1s]*g1*
+					Lambda[z](k1,i)*
+					open_prop[c][d][j][k2][t2s]*g2*
+					Lambda[z](k2,j))/4;
+			      c3b+=real(open_prop[c][b][j][k1][t1s]*g1*
+					Lambda[z](k1,i)*
+					open_prop[a][d][i][k2][t2s]*g2*
+					Lambda[z](k2,j))/4;
 			    }
 	      }
 	mdp << "C3a[" << t1 << "]["<< t2 << "] = " << c3a << endl;
