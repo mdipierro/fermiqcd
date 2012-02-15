@@ -10,6 +10,7 @@ void usage() {
   exit(0);
 }
 
+
 void cool(gauge_field& U, mdp_args& arguments) {
   if (arguments.get("-cool","alg","ape")=="ape")
     ApeSmearing::smear(U,
@@ -140,6 +141,28 @@ void choose_action_and_inverter(mdp_args& arguments) {
     mdp.error_message("quark inverter not supported");  
 }
 
+void smear_propagator(fermi_propagator& S, gauge_field &U, int smear_steps=10,
+		      float alpha=1.0) {
+  mdp_matrix_field V(U.lattice(),U.nc,U.nc);
+  mdp_site x(U.lattice());
+  for(int n=0; n<smear_steps; n++) {
+    for(int a=0; a<4; a++)
+      for(int b=0; b<4; b++) {
+	forallsites(x) {
+	  V(x) = alpha*S(x,a,b);
+	  for(int mu=0; mu<4;mu++)
+	    V(x) += U(x,mu)*S(x+mu,a,b) + hermitian(U(x-mu,mu))*S(x-mu,a,b);
+	}
+	V.update();
+	forallsites(x) {
+	  for(int i=0; i<U.nc; i++)
+	    for(int j=0; j<U.nc; j++)
+	      S(x,a,b,i,j) = V(x,i,j)/(alpha+8);
+	}
+      }
+  }
+}
+
 void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 		mdp_args& arguments, string newfilename) {
 
@@ -175,6 +198,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   mdp_complex open_prop[4][4][10][10][512];
   if(arguments.have("-current-static")||
      arguments.have("-meson")||
+     arguments.have("-wave-static")||
      arguments.have("-baryon"))
     S.allocate_fermi_propagator(U.lattice(),U.nc);
 
@@ -233,7 +257,10 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 	    }
 	}
       }
-      if(arguments.have("-4quarks")||arguments.have("-meson")||arguments.have("-current-static"))
+      if(arguments.have("-4quarks")||
+	 arguments.have("-meson")||
+	 arguments.have("-current-static")||
+	 arguments.have("-wave-static"))
 	forallsites(x)
 	  for(int b=0; b<4; b++)
 	    for(int j=0; j<nc; j++)
@@ -373,6 +400,21 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 	mdp << "C3a[" << t1 << "]["<< t2 << "] = " << c3a << endl;
 	mdp << "C3b[" << t1 << "]["<< t2 << "] = " << c3b << endl;
       }
+  }
+  if(arguments.have("-wave-static")) {
+    // WORK IN PROGRESS - only works on cold - no paths
+    string source_gamma = arguments.get("-wave-static","source_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I");
+    int smear_steps = arguments.get("-wave-static","smear_steps",10);
+    G1 = parse_gamma(source_gamma)*(1+Gamma[0])/2;
+    Q=0;
+    forallsites(x)
+      for(int a=0; a<4; a++)
+	for(int b=0; b<4; b++)
+	  if(G1(a,b)!=0)
+	    for(int i=0; i<U.nc; i++)
+	      Q(x) += pow(abs(S(x,b,a,i,i)*G1(a,b)),2);
+    // smear_propagator(S,U,smear_steps);
+    Q.save_vtk(prefix+string(".")+source_gamma+".wave.vtk");
   }
 }
 
