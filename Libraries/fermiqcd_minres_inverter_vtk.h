@@ -102,49 +102,15 @@ class MinResVtk {
       rresidue=relative_residue(r,psi_out);
 
       // make VTK files
-      forallsites(x) {
-	s(x)=0.0;
-	for(int a=0; a<4; a++) 
-	  for(int k=0; k<psi_in.nc; k++)
+      for(int a=0; a<4; a++) {
+        forallsites(x) {
+          s(x)=0.0;
+          for(int k=0; k<psi_in.nc; k++)
 	    s(x)+=sqrt(real(psi_out(x,a,k)*conj(psi_out(x,a,k))));
+        }
+        filename1=filename_prefix+".field"+tostring(a)+"."+tostring(step)+".vtk";
+        s.save_vtk(filename1,tc);
       }
-      filename1=filename_prefix+".field."+tostring(step)+".vtk";
-      s.save_vtk(filename1,tc);
-      /*
-      // make VTK files
-      forallsites(x) {
-	s(x)=0.0;
-	for(int a=0; a<1; a++) 
-	  for(int k=0; k<psi_in.nc; k++)
-	    s(x)+=sqrt(real(psi_out(x,a,k)*conj(psi_out(x,a,k))));
-      }
-      filename1=filename_prefix+".field0."+tostring(step)+".vtk";
-      s.save_vtk(filename1,tc);
-      forallsites(x) {
-	s(x)=0.0;
-	for(int a=0; a<1; a++) 
-	  for(int k=0; k<psi_in.nc; k++)
-	    s(x)+=sqrt(real(psi_out(x,a,k)*conj(psi_out(x,a,k))));
-      }
-      filename1=filename_prefix+".field1."+tostring(step)+".vtk";
-      s.save_vtk(filename1,tc);
-      forallsites(x) {
-	s(x)=0.0;
-	for(int a=1; a<2; a++) 
-	  for(int k=0; k<psi_in.nc; k++)
-	    s(x)+=sqrt(real(psi_out(x,a,k)*conj(psi_out(x,a,k))));
-      }
-      filename1=filename_prefix+".field2."+tostring(step)+".vtk";
-      s.save_vtk(filename1,tc);
-      forallsites(x) {
-	s(x)=0.0;
-	for(int a=2; a<3; a++) 
-	  for(int k=0; k<psi_in.nc; k++)
-	    s(x)+=sqrt(real(psi_out(x,a,k)*conj(psi_out(x,a,k))));
-      }
-      filename1=filename_prefix+".field3."+tostring(step)+".vtk";
-      s.save_vtk(filename1,tc);
-      */
       forallsites(x) {
 	s(x)=0.0;
 	for(int a=3; a<4; a++) 

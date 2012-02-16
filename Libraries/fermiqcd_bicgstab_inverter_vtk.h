@@ -116,20 +116,22 @@ class BiCGStabVtk {
       old_rresidue=rresidue;
       rresidue=relative_residue(r,psi_out);
 
-      // make VTK files                                                                  
-      forallsites(x) {
-        sv(x)=0.0;
-        for(int a=0; a<4; a++)
+      // make VTK files                                                                 
+      for(int a=0; a<4; a++) { 
+	forallsites(x) {
+	  sv(x)=0.0;
           for(int k=0; k<psi_in.nc; k++)
             sv(x)+=sqrt(real(psi_out(x,a,k)*conj(psi_out(x,a,k))));
+	}
+	filename1=filename_prefix+".field"+tostring(a)+"."+tostring(step)+".vtk";
+	sv.save_vtk(filename1,tc);
       }
-      filename1=filename_prefix+".field."+tostring(step)+".vtk";
-      sv.save_vtk(filename1,tc);
       forallsites(x) {
-        sv(x)=0.0;
-        for(int a=0; a<4; a++)
+	for(int a=0; a<4; a++) {
+	  sv(x)=0.0;
           for(int k=0; k<psi_in.nc; k++)
             sv(x)+=log(real(r(x,a,k)*conj(r(x,a,k)))+PRECISION);
+	}
       }
       filename2=filename_prefix+".residue."+tostring(step)+".vtk";
       sv.save_vtk(filename2,tc);

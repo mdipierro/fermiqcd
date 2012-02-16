@@ -172,6 +172,12 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 	// optional ... insert smearing here
 	phi.save(quarkfilename);
       }
+      if(arguments.get("-quark","vtk","false|true")=="true") {
+	forspincolor(b,j,nc) {
+	  forallsites(x) Q(x)=abs(phi(x,b,j));
+	  Q.save_vtk(inversion_vtk_prefix+".quark"+tostring(b,1)+tostring(j,1)+".vtk",-1);
+	}
+      }
       if (arguments.have("-pion")) {
 	if (a==0 && i==0) {
 	  for(int t=0; t<NT; t++)
@@ -179,19 +185,20 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 	  Q=0;
 	}
 	forallsitesandcopies(x) {
-	  for(int b=0; b<4; b++)
-	    for(int j=0; j<nc; j++) {
-	      tmp = real(phi(x,b,j)*conj(phi(x,b,j)));	  
-	      pion[(x(TIME)-t0+NT)%NT] += tmp;
-	      Q(x) += tmp;
-	    }
+	  forspincolor(b,j,nc) {
+	    tmp = real(phi(x,b,j)*conj(phi(x,b,j)));	  
+	    pion[(x(TIME)-t0+NT)%NT] += tmp;
+	    Q(x) += tmp;
+	  }
 	}
       }
-      if(use_propagator)
-	forallsites(x)
-	  for(int b=0; b<4; b++)
-	    for(int j=0; j<nc; j++)
-	      S(x,a,b,i,j) = phi(x,b,j);
+      if(use_propagator) {
+	forallsites(x) {
+	  forspincolor(b,j,nc) {
+	    S(x,a,b,i,j) = phi(x,b,j);
+	  }
+	}
+      }
     }
   if(use_propagator) {
     int smear_steps = arguments.get("-quark","smear_steps",0);
@@ -350,7 +357,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
     Q.save_vtk(prefix+string(".")+source_gamma+".wave.vtk");
   }
 }
-
+  
 int main(int argc, char** argv) {
   mdp.open_wormholes(argc,argv);
   mdp_args arguments(argc,argv);
