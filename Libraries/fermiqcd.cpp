@@ -278,7 +278,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
     if (arguments.get("-current_static","vtk","false|true")=="true")
       Q.save_vtk(prefix+".current_static.vtk");
   }
-  if(arguments.have("-4quarks")) {
+  if(arguments.have("-4quark")) {
     mdp_matrix G = 
       parse_gamma(arguments.get("-4quark","source","5|I|0|1|2|3|05|15|25|35|01|02|03|12|13|23"))*Gamma5;
     forspincolor(a,i,U.nc) {
@@ -296,7 +296,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
       }
     }
     mdp_matrix G1, G2;
-    string op4q = arguments.get("-4quarks","operator","5Ix5I|0Ix0I|1Ix1I|2Ix2I|3Ix3I|05Ix05I|15Ix15I|25Ix25I|35Ix35I|01Ix01I|02Ix02I|03Ix03I|12Ix12I|13Ix13I|23Ix23I|5Tx5T|0Tx0T|1Tx1T|2Tx2T|3Tx3T|05Tx05T|15Tx15T|25Tx25T|35Tx35T|01Tx01T|02Tx02T|03Tx03T|12Tx12T|13Tx13T|23Tx23T");
+    string op4q = arguments.get("-4quark","operator","5Ix5I|0Ix0I|1Ix1I|2Ix2I|3Ix3I|05Ix05I|15Ix15I|25Ix25I|35Ix35I|01Ix01I|02Ix02I|03Ix03I|12Ix12I|13Ix13I|23Ix23I|5Tx5T|0Tx0T|1Tx1T|2Tx2T|3Tx3T|05Tx05T|15Tx15T|25Tx25T|35Tx35T|01Tx01T|02Tx02T|03Tx03T|12Tx12T|13Tx13T|23Tx23T");
     bool rotate=false;
     if(op4q[op4q.size()-1]=='T') rotate = true;
     G1 = G2 = Gamma5*parse_gamma(op4q.substr(0,op4q.find("x")-1));
