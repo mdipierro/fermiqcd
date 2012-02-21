@@ -1,8 +1,8 @@
 #include "fermiqcd.h"
 /*
-./a.out -gauge:start=cold:nt=32:nx=8 -quark:kappa=0.115:source_point=center:load=true -pion:vtk=true -current-static:source_gamma=1:sink_gamma=1:vtk=true
-python qcdutils_vtk.py -u 0.5 -l 0.005 cold.mdp.point.at00016.00004.00004.00004.s3.c2.current-static.vtk
-open cold.mdp.point.at00016.00004.00004.00004.s3.c2.current-static.vtk.html
+./a.out -gauge:start=cold:nt=32:nx=8 -quark:kappa=0.115:source_point=center:load=true -pion:vtk=true -current_static:source_gamma=1:sink_gamma=1:vtk=true
+python qcdutils_vtk.py -u 0.5 -l 0.005 cold.mdp.point.at00016.00004.00004.00004.s3.c2.current_static.vtk
+open cold.mdp.point.at00016.00004.00004.00004.s3.c2.current_static.vtk.html
  */
 
 void usage() {
@@ -25,9 +25,9 @@ void cool_vtk(gauge_field& U, mdp_args& arguments, string filename) {
   if (arguments.get("-cool","alg","ape")=="ape")
     for(int k=0; k<arguments.get("-cool_vtk","n",20); k++) {
       ApeSmearing::smear(U,
-			 arguments.get("-cool-vtk","alpha",0.7),
-			 arguments.get("-cool-vtk","steps",1),
-			 arguments.get("-cool-vtk","cooling",10));
+			 arguments.get("-cool_vtk","alpha",0.7),
+			 arguments.get("-cool_vtk","steps",1),
+			 arguments.get("-cool_vtk","cooling",10));
       topological_charge_vtk(U,filename+".cool"+tostring(k,2)+".vtk",0);
     }
   else
@@ -95,7 +95,7 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   string quark_action = 
     arguments.get("-quark","action","clover_fast|clover_slow|clover_sse2");
   string inverter = 
-    arguments.get("-quark","alg","bicgstab|minres|bicgstab-vtk|minres-vtk");
+    arguments.get("-quark","alg","bicgstab|minres|bicgstabvtk|minresvtk");
   mdp << "using action=" << quark_action << " inverter=" << inverter << endl;
 
   select_action_and_inverter(quark_action, inverter);
@@ -126,9 +126,9 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
   fermi_propagator S;
   mdp_complex open_prop[4][4][10][10][512];
   bool use_propagator = 
-    arguments.have("-current-static")||
+    arguments.have("-current_static")||
     arguments.have("-meson")||
-    arguments.have("-wave-static")||
+    arguments.have("-wave_static")||
     arguments.have("-baryon");
   if(use_propagator) S.allocate_fermi_propagator(U.lattice(),U.nc);
 
@@ -236,12 +236,12 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
     if (arguments.get("-meson","vtk","false|true")=="true")
       Q.save_vtk(prefix+".meson.vtk");
   }
-  if(arguments.have("-current-static")) {
+  if(arguments.have("-current_static")) {
     /// this part does not work in parallel (yet)
     Q = 0;
-    G1 = parse_gamma(arguments.get("-current-static","source_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I"))*Gamma5;
-    G2 = parse_gamma(arguments.get("-current-static","sink_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I"));
-    G3 = Gamma5*parse_gamma(arguments.get("-current-static","current_gamma","I|0|1|2|3|5|01|02|03|12|13|05|15|25|35"));
+    G1 = parse_gamma(arguments.get("-current_static","source_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I"))*Gamma5;
+    G2 = parse_gamma(arguments.get("-current_static","sink_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I"));
+    G3 = Gamma5*parse_gamma(arguments.get("-current_static","current_gamma","I|0|1|2|3|5|01|02|03|12|13|05|15|25|35"));
     G4 = G2*(1-Gamma[0])/2*G1;
     mdp_matrix_field Sh(U.lattice(),U.nc,U.nc);
     for(int t=0; t<NT; t++) meson[t]=0;
@@ -275,8 +275,8 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
       }
     mpi.add(&current[0],NT);	
     pretty_print("C2_current",current);      
-    if (arguments.get("-current-static","vtk","false|true")=="true")
-      Q.save_vtk(prefix+".current-static.vtk");
+    if (arguments.get("-current_static","vtk","false|true")=="true")
+      Q.save_vtk(prefix+".current_static.vtk");
   }
   if(arguments.have("-4quarks")) {
     mdp_matrix G = 
@@ -340,11 +340,11 @@ void make_quark(gauge_field &U, coefficients &gauge, coefficients &quark,
 	mdp << "C3b[" << t1 << "]["<< t2 << "] = " << c3b << endl;
       }
   }
-  if(arguments.have("-wave-static")) {
+  if(arguments.have("-wave_static")) {
     throw string("NotImplemented");
     // WORK IN PROGRESS - only works on cold - no paths
-    string source_gamma = arguments.get("-wave-static","source_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I");
-    int smear_steps = arguments.get("-wave-static","smear_steps",10);
+    string source_gamma = arguments.get("-wave_static","source_gamma","5|0|1|2|3|01|02|03|12|13|05|15|25|35|I");
+    int smear_steps = arguments.get("-wave_static","smear_steps",10);
     G1 = parse_gamma(source_gamma)*(1+Gamma[0])/2;
     Q=0;
     forallsites(x)
@@ -481,18 +481,18 @@ int main(int argc, char** argv) {
       if (arguments.have("-plaquette")) {
 	mdp << "plaquette = " << average_plaquette(U) << endl;
       }
-      if (arguments.have("-cool-vtk")) {
+      if (arguments.have("-cool_vtk")) {
 	cool_vtk(U,arguments,newfilename);
       } else if (arguments.have("-cool")) {
 	cool(U,arguments);
       }
-      if (arguments.have("-plaquette-vtk")) {
+      if (arguments.have("-plaquette_vtk")) {
 	plaquette_vtk(U,newfilename+".plaquette.vtk");
       }      
-      if (arguments.have("-polyakov-vtk")) {
+      if (arguments.have("-polyakov_vtk")) {
 	polyakov_vtk(U,newfilename+".polyakov.vtk");
       }      
-      if (arguments.have("-topcharge-vtk")) {
+      if (arguments.have("-topcharge_vtk")) {
 	float tc = topological_charge_vtk(U,newfilename+".topcharge.vtk",-1);
 	mdp << "topcharge = " << tc << endl;
       }      
