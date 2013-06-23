@@ -56,8 +56,8 @@ class WilsonGaugeAction {
     dk=sqrt(e0*e0+e1*e1+e2*e2+e3*e3);
     p0=(dk*beta_eff);
     u0=mdp_complex(e0/dk,-e3/dk);
-    u2=mdp_complex(e2/dk,-e1/dk);
     u1=mdp_complex(-e2/dk,-e1/dk);
+    u2=mdp_complex(e2/dk,-e1/dk);
     u3=mdp_complex(e0/dk,e3/dk);
     
     if(beta_eff<=0.0) 
